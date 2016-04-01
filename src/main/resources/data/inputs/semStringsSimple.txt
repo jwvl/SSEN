@@ -1,0 +1,6 @@
+ADJ{Good}, N{Car.g=F n=SG}*	bɔnvwatyʁ	3
+ADJ{Good}, N{Husband.g=M n=SG}*	bɔ~maʁi	2
+ADJ{Good}, N{Actor.g=M n=SG}*	bɔnaktœʁ	3
+ADJ{Small}, N{Car.g=F n=SG}*	pətitvwatyʁ	3
+ADJ{Small}, N{Husband.g=M n=SG}*	pətimaʁi	2
+ADJ{Small}, N{Actor.g=M n=SG}*	pətitaktœʁ	3

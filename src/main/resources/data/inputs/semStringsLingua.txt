@@ -1,0 +1,3 @@
+ADJ{Good}, N{Car.g=F}*	bɔnvwatyʁ	1
+ADJ{Good}, N{Husband.g=M}*	bQmaʁi	1
+ADJ{Good}, N{Actor.g=M}*	bɔnaktœʁ	1

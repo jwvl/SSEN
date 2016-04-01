@@ -1,0 +1,127 @@
+/**
+ *
+ */
+package simulate.french.sixlevel.constraints;
+
+import forms.morphosyntax.*;
+import gen.rule.string.Side;
+import grammar.levels.predefined.BiPhonSix;
+import ranking.constraints.FormConstraint;
+
+import java.util.List;
+
+/**
+ * @author jwvl
+ * @date Jul 31, 2015
+ */
+public class MorphAlignConstraint extends FormConstraint<MForm> {
+
+    private final SyntacticCategory relevantCategory;
+    private final AttributeSet offendingAttributes;
+    private final Side side;
+    private final String name;
+
+    /**
+     * @param leftLevel
+     */
+    public MorphAlignConstraint(SyntacticCategory syntacticCategory,
+                                AttributeSet attributeSet, Side side) {
+        super(BiPhonSix.getMformLevel());
+        this.relevantCategory = syntacticCategory;
+        this.offendingAttributes = attributeSet;
+        this.side = side;
+        this.name = createNameString();
+    }
+
+    /**
+     * @return
+     */
+    private String createNameString() {
+        StringBuilder result = new StringBuilder("Align-");
+        result.append(side.abbreviation).append(" ").
+                append(relevantCategory.toString()).append("-").
+                append(offendingAttributes.toString());
+        return result.toString();
+    }
+
+    /**
+     * Returns the number of violations inflicted by affixes in this Form.
+     */
+    @Override
+    public int getNumViolations(MForm f) {
+        int result = 0;
+        for (MorphologicalWord morphologicalWord : f) {
+            result += getViolations(morphologicalWord);
+        }
+        //System.out.printf("DEBUG: %s violates %s %d times%n",f,this,result);
+        return result;
+    }
+
+    /**
+     * @param morphologicalWord
+     * @return
+     */
+    private int getViolations(MorphologicalWord morphologicalWord) {
+        int result = 0;
+        if (morphologicalWord.getCategory().equals(relevantCategory)) {
+            List<Morpheme> morphemes = morphologicalWord.elementsAsList();
+            for (int i = 0; i < morphologicalWord.size(); i++) {
+                Morpheme morpheme = morphemes.get(i);
+                AttributeSet offenders = morpheme.getAttributes();
+                if (offenders.equals(offendingAttributes)) {
+                    result += calculateViolations(i, morphemes.size());
+                }
+            }
+
+        }
+        return result;
+    }
+
+    /**
+     * @param i
+     * @param size
+     * @return
+     */
+    private int calculateViolations(int i, int size) {
+        if (side == Side.LEFT) {
+            return i;
+        } else if (side == Side.RIGHT) {
+            return size - (i + 1);
+        } else {
+            return 0;
+        }
+    }
+
+    /*
+     * (non-Javadoc)
+     *
+     * @see ranking.constraints.Constraint#toString()
+     */
+    @Override
+    public String toString() {
+        return name;
+    }
+
+    /*
+     * (non-Javadoc)
+     *
+     * @see ranking.constraints.Constraint#caches()
+     */
+    @Override
+    public boolean caches() {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    private int getIncrement(Side side) {
+        if (side == Side.LEFT) {
+            return -1;
+        } else if (side == Side.RIGHT) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+
+}

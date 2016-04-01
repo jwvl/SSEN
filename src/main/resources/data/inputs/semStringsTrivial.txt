@@ -1,0 +1,4 @@
+ADJ{Good}, N{Car.g=F}*	bɔnvwatyʁ	3
+ADJ{Good}, N{Husband.g=M}*	bQfis	2
+ADJ{Small}, N{Car.g=F}*	pətitvwatyʁ	3
+ADJ{Small}, N{Husband.g=M}*	pətifis	2

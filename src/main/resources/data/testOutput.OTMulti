@@ -1,0 +1,360 @@
+"ooTextFile"
+"OTMulti 2"
+<OptimalityTheory>
+0.0 ! leak
+56 constraints
+"*(GREAT+F+WAVE.F) --> (GREAT+F+WAVE.F)" 100 100 1.0
+"*(BAD+F+WAVE.F) --> (BAD+F+WAVE.F)" 100 100 1.0
+"*(BAD+F+CAR.F) --> (BAD+F+CAR.F)" 100 100 1.0
+"*(GREAT+F+CAR.F) --> (GREAT+F+CAR.F)" 100 100 1.0
+"*(WAVE.F) --> (WAVE.F)" 100 100 1.0
+"*(GOOD) --> (GOOD)" 100 100 1.0
+"*(GOOD) --> (GOOD)" 100 100 1.0
+"*(GOOD) --> (GOOD)" 100 100 1.0
+"*(GOOD) --> (GOOD)" 100 100 1.0
+"*(M) --> (M)" 100 100 1.0
+"*(M) --> (M)" 100 100 1.0
+"*(SMALL+F+WAVE.F) --> (SMALL+F+WAVE.F)" 100 100 1.0
+"*(M) --> (M)" 100 100 1.0
+"*(M) --> (M)" 100 100 1.0
+"*(SMALL+F) --> (SMALL+F)" 100 100 1.0
+"*(M) --> (M)" 100 100 1.0
+"*(M) --> (M)" 100 100 1.0
+"*(GOOD+M) --> (GOOD+M)" 100 100 1.0
+"*(GREAT+M+HUSBAND.M) --> (GREAT+M+HUSBAND.M)" 100 100 1.0
+"*(GREAT+M) --> (GREAT+M)" 100 100 1.0
+"*(GREAT+M) --> (GREAT+M)" 100 100 1.0
+"*(SMALL+F+CAR.F) --> (SMALL+F+CAR.F)" 100 100 1.0
+"*(BAD+M+HUSBAND.M) --> (BAD+M+HUSBAND.M)" 100 100 1.0
+"*(SMALL+M+HUSBAND.M) --> (SMALL+M+HUSBAND.M)" 100 100 1.0
+"*(GOOD+M) --> (GOOD+M)" 100 100 1.0
+"*(F+WAVE.F) --> (F+WAVE.F)" 100 100 1.0
+"*(GOOD+M+ACTOR.M) --> (GOOD+M+ACTOR.M)" 100 100 1.0
+"*(F+CAR.F) --> (F+CAR.F)" 100 100 1.0
+"*(M+ACTOR.M) --> (M+ACTOR.M)" 100 100 1.0
+"*(GREAT) --> (GREAT)" 100 100 1.0
+"*(GREAT) --> (GREAT)" 100 100 1.0
+"*(GREAT+M+ACTOR.M) --> (GREAT+M+ACTOR.M)" 100 100 1.0
+"*(BAD+F) --> (BAD+F)" 100 100 1.0
+"*(SMALL+M) --> (SMALL+M)" 100 100 1.0
+"*(SMALL+M) --> (SMALL+M)" 100 100 1.0
+"*(HUSBAND.M) --> (HUSBAND.M)" 100 100 1.0
+"*(ACTOR.M) --> (ACTOR.M)" 100 100 1.0
+"*(SMALL) --> (SMALL)" 100 100 1.0
+"*(SMALL) --> (SMALL)" 100 100 1.0
+"*(CAR.F) --> (CAR.F)" 100 100 1.0
+"*(SMALL+M+ACTOR.M) --> (SMALL+M+ACTOR.M)" 100 100 1.0
+"*(F) --> (F)" 100 100 1.0
+"*(GREAT+F) --> (GREAT+F)" 100 100 1.0
+"*(BAD+M) --> (BAD+M)" 100 100 1.0
+"*(GOOD+F) --> (GOOD+F)" 100 100 1.0
+"*(F) --> (F)" 100 100 1.0
+"*(F) --> (F)" 100 100 1.0
+"*(F) --> (F)" 100 100 1.0
+"*(F) --> (F)" 100 100 1.0
+"*(M+HUSBAND.M) --> (M+HUSBAND.M)" 100 100 1.0
+"*(BAD) --> (BAD)" 100 100 1.0
+"*(GOOD+F+WAVE.F) --> (GOOD+F+WAVE.F)" 100 100 1.0
+"*(BAD+M+ACTOR.M) --> (BAD+M+ACTOR.M)" 100 100 1.0
+"*(GOOD+M+HUSBAND.M) --> (GOOD+M+HUSBAND.M)" 100 100 1.0
+"*(BAD) --> (BAD)" 100 100 1.0
+"*(GOOD+F+CAR.F) --> (GOOD+F+CAR.F)" 100 100 1.0
+298 candidates
+" ""bad wave"" <(BAD) (F) (WAVE.F)> |mOvE d O~d| [mOvEdO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+" ""bad wave"" <(BAD) (F) (WAVE.F)> |mOvE n O~d| [mOvEnO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0
+" ""bad wave"" <(BAD) (F) (WAVE.F)> |mOvE t O~d| [mOvEtO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0
+" ""bad wave"" <(BAD) (F) (WAVE.F)> |mOvEz n O~d| [mOvEznO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0
+" ""bad wave"" <(BAD) (F) (WAVE.F)> |mOvEz t O~d| [mOvEztO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0
+" ""bad wave"" <(BAD) (F) (WAVE.F)> |mOvEz z O~d| [mOvEzzO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0
+" ""bad wave"" <(BAD) (F) (WAVE.F)> |mOvEz d O~d| [mOvEzdO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+" ""bad wave"" <(BAD) (F) (WAVE.F)> |mOvEz ∅ O~d| [mOvEzO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0
+" ""bad wave"" <(BAD+F+WAVE.F)> |mOvEzO~d| [mOvEzO~d]" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""bad wave"" <(BAD+F) (WAVE.F)> |mOvEz O~d| [mOvEzO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""bad wave"" <(BAD) (F+WAVE.F)> |mOvEz O~d| [mOvEzO~d]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+" ""bad wave"" <(BAD) (F) (WAVE.F)> |mOvE z O~d| [mOvEzO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0
+" ""bad wave"" <(BAD) (F+WAVE.F)> |mOvE O~d| [mOvEO~d]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+" ""bad wave"" <(BAD) (F) (WAVE.F)> |mOvE ∅ O~d| [mOvEO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0
+" ""good car"" <(GOOD) (F) (CAR.F)> |bO~ ∅ vwatyR| [bO~vwatyR]" 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0
+" ""good car"" <(GOOD) (F) (CAR.F)> |bOn n vwatyR| [bOnnvwatyR]" 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+" ""good car"" <(GOOD) (F) (CAR.F)> |bO~n t vwatyR| [bO~ntvwatyR]" 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0
+" ""good car"" <(GOOD) (F) (CAR.F)> |bO d vwatyR| [bOdvwatyR]" 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good car"" <(GOOD) (F) (CAR.F)> |bO z vwatyR| [bOzvwatyR]" 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+" ""good car"" <(GOOD) (F) (CAR.F)> |bO~ n vwatyR| [bO~nvwatyR]" 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+" ""good car"" <(GOOD) (F+CAR.F)> |bO~n vwatyR| [bO~nvwatyR]" 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good car"" <(GOOD) (F) (CAR.F)> |bO~n ∅ vwatyR| [bO~nvwatyR]" 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0
+" ""good car"" <(GOOD) (F) (CAR.F)> |bO~n z vwatyR| [bO~nzvwatyR]" 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+" ""good car"" <(GOOD) (F) (CAR.F)> |bO~n n vwatyR| [bO~nnvwatyR]" 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+" ""good car"" <(GOOD) (F+CAR.F)> |bO vwatyR| [bOvwatyR]" 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good car"" <(GOOD) (F) (CAR.F)> |bO ∅ vwatyR| [bOvwatyR]" 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0
+" ""good car"" <(GOOD) (F) (CAR.F)> |bO~ t vwatyR| [bO~tvwatyR]" 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0
+" ""good car"" <(GOOD) (F) (CAR.F)> |bO~ z vwatyR| [bO~zvwatyR]" 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+" ""good car"" <(GOOD) (F) (CAR.F)> |bO~n d vwatyR| [bO~ndvwatyR]" 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good car"" <(GOOD+F) (CAR.F)> |bOn vwatyR| [bOnvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+" ""good car"" <(GOOD) (F) (CAR.F)> |bO n vwatyR| [bOnvwatyR]" 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+" ""good car"" <(GOOD) (F) (CAR.F)> |bOn ∅ vwatyR| [bOnvwatyR]" 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0
+" ""good car"" <(GOOD+F+CAR.F)> |bOnvwatyR| [bOnvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+" ""good car"" <(GOOD) (F+CAR.F)> |bOn vwatyR| [bOnvwatyR]" 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good car"" <(GOOD) (F) (CAR.F)> |bO~ d vwatyR| [bO~dvwatyR]" 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good car"" <(GOOD) (F) (CAR.F)> |bOn t vwatyR| [bOntvwatyR]" 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0
+" ""good car"" <(GOOD) (F) (CAR.F)> |bOn z vwatyR| [bOnzvwatyR]" 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+" ""good car"" <(GOOD) (F) (CAR.F)> |bO t vwatyR| [bOtvwatyR]" 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0
+" ""good car"" <(GOOD) (F) (CAR.F)> |bOn d vwatyR| [bOndvwatyR]" 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good car"" <(GOOD) (F+CAR.F)> |bO~ vwatyR| [bO~vwatyR]" 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small wave"" <(SMALL) (F) (WAVE.F)> |p@ti z O~d| [p@tizO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+" ""small wave"" <(SMALL) (F) (WAVE.F)> |p@tit d O~d| [p@titdO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small wave"" <(SMALL) (F) (WAVE.F)> |p@ti d O~d| [p@tidO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small wave"" <(SMALL) (F) (WAVE.F)> |p@tit n O~d| [p@titnO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+" ""small wave"" <(SMALL) (F) (WAVE.F)> |p@tit z O~d| [p@titzO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+" ""small wave"" <(SMALL) (F) (WAVE.F)> |p@ti ∅ O~d| [p@tiO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0
+" ""small wave"" <(SMALL) (F+WAVE.F)> |p@ti O~d| [p@tiO~d]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small wave"" <(SMALL) (F) (WAVE.F)> |p@tit t O~d| [p@tittO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0
+" ""small wave"" <(SMALL) (F) (WAVE.F)> |p@ti n O~d| [p@tinO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+" ""small wave"" <(SMALL) (F) (WAVE.F)> |p@tit ∅ O~d| [p@titO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0
+" ""small wave"" <(SMALL+F+WAVE.F)> |p@titO~d| [p@titO~d]" 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small wave"" <(SMALL) (F+WAVE.F)> |p@tit O~d| [p@titO~d]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small wave"" <(SMALL+F) (WAVE.F)> |p@tit O~d| [p@titO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small wave"" <(SMALL) (F) (WAVE.F)> |p@ti t O~d| [p@titO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0
+" ""great actor"" <(GREAT) (M) (ACTOR.M)> |gRA~ t akt&R| [gRA~takt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great actor"" <(GREAT) (M) (ACTOR.M)> |gRA~d ~ akt&R| [gRA~d~akt&R]" 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great actor"" <(GREAT) (M) (ACTOR.M)> |gRA~d t akt&R| [gRA~dtakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great actor"" <(GREAT) (M) (ACTOR.M)> |gRA~ ∅ akt&R| [gRA~akt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great actor"" <(GREAT) (M+ACTOR.M)> |gRA~ akt&R| [gRA~akt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great actor"" <(GREAT+M) (ACTOR.M)> |gRA~ akt&R| [gRA~akt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great actor"" <(GREAT+M+ACTOR.M)> |gRA~akt&R| [gRA~akt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great actor"" <(GREAT) (M) (ACTOR.M)> |gRA~ ~ akt&R| [gRA~~akt&R]" 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great actor"" <(GREAT) (M) (ACTOR.M)> |gRA~d n akt&R| [gRA~dnakt&R]" 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great actor"" <(GREAT) (M) (ACTOR.M)> |gRA~d ~n akt&R| [gRA~d~nakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great actor"" <(GREAT+M) (ACTOR.M)> |gRA~d akt&R| [gRA~dakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great actor"" <(GREAT) (M) (ACTOR.M)> |gRA~ d akt&R| [gRA~dakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great actor"" <(GREAT) (M) (ACTOR.M)> |gRA~d ∅ akt&R| [gRA~dakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great actor"" <(GREAT) (M+ACTOR.M)> |gRA~d akt&R| [gRA~dakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great actor"" <(GREAT) (M) (ACTOR.M)> |gRA~d d akt&R| [gRA~ddakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great actor"" <(GREAT) (M) (ACTOR.M)> |gRA~ n akt&R| [gRA~nakt&R]" 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great actor"" <(GREAT) (M) (ACTOR.M)> |gRA~ ~n akt&R| [gRA~~nakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small car"" <(SMALL) (F) (CAR.F)> |p@ti n vwatyR| [p@tinvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+" ""small car"" <(SMALL) (F) (CAR.F)> |p@tit d vwatyR| [p@titdvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small car"" <(SMALL) (F) (CAR.F)> |p@tit z vwatyR| [p@titzvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+" ""small car"" <(SMALL) (F) (CAR.F)> |p@tit t vwatyR| [p@tittvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0
+" ""small car"" <(SMALL) (F) (CAR.F)> |p@ti t vwatyR| [p@titvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0
+" ""small car"" <(SMALL) (F+CAR.F)> |p@tit vwatyR| [p@titvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small car"" <(SMALL+F) (CAR.F)> |p@tit vwatyR| [p@titvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small car"" <(SMALL+F+CAR.F)> |p@titvwatyR| [p@titvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small car"" <(SMALL) (F) (CAR.F)> |p@tit ∅ vwatyR| [p@titvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0
+" ""small car"" <(SMALL) (F+CAR.F)> |p@ti vwatyR| [p@tivwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small car"" <(SMALL) (F) (CAR.F)> |p@ti ∅ vwatyR| [p@tivwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0
+" ""small car"" <(SMALL) (F) (CAR.F)> |p@ti z vwatyR| [p@tizvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+" ""small car"" <(SMALL) (F) (CAR.F)> |p@ti d vwatyR| [p@tidvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small car"" <(SMALL) (F) (CAR.F)> |p@tit n vwatyR| [p@titnvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+" ""great car"" <(GREAT) (F) (CAR.F)> |gRA~d n vwatyR| [gRA~dnvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+" ""great car"" <(GREAT) (F+CAR.F)> |gRA~ vwatyR| [gRA~vwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great car"" <(GREAT) (F) (CAR.F)> |gRA~ ∅ vwatyR| [gRA~vwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0
+" ""great car"" <(GREAT) (F) (CAR.F)> |gRA~ t vwatyR| [gRA~tvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0
+" ""great car"" <(GREAT) (F) (CAR.F)> |gRA~d z vwatyR| [gRA~dzvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+" ""great car"" <(GREAT) (F) (CAR.F)> |gRA~ n vwatyR| [gRA~nvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+" ""great car"" <(GREAT) (F) (CAR.F)> |gRA~d t vwatyR| [gRA~dtvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0
+" ""great car"" <(GREAT) (F) (CAR.F)> |gRA~d d vwatyR| [gRA~ddvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great car"" <(GREAT) (F) (CAR.F)> |gRA~ d vwatyR| [gRA~dvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great car"" <(GREAT+F) (CAR.F)> |gRA~d vwatyR| [gRA~dvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great car"" <(GREAT) (F+CAR.F)> |gRA~d vwatyR| [gRA~dvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great car"" <(GREAT) (F) (CAR.F)> |gRA~d ∅ vwatyR| [gRA~dvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0
+" ""great car"" <(GREAT+F+CAR.F)> |gRA~dvwatyR| [gRA~dvwatyR]" 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great car"" <(GREAT) (F) (CAR.F)> |gRA~ z vwatyR| [gRA~zvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+" ""small actor"" <(SMALL) (M) (ACTOR.M)> |p@ti n akt&R| [p@tinakt&R]" 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small actor"" <(SMALL) (M) (ACTOR.M)> |p@tit ~n akt&R| [p@tit~nakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small actor"" <(SMALL) (M) (ACTOR.M)> |p@tit t akt&R| [p@tittakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small actor"" <(SMALL+M) (ACTOR.M)> |p@tit akt&R| [p@titakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small actor"" <(SMALL) (M+ACTOR.M)> |p@tit akt&R| [p@titakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small actor"" <(SMALL+M+ACTOR.M)> |p@titakt&R| [p@titakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small actor"" <(SMALL) (M) (ACTOR.M)> |p@tit ∅ akt&R| [p@titakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small actor"" <(SMALL) (M) (ACTOR.M)> |p@ti t akt&R| [p@titakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small actor"" <(SMALL) (M) (ACTOR.M)> |p@tit n akt&R| [p@titnakt&R]" 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small actor"" <(SMALL) (M) (ACTOR.M)> |p@ti d akt&R| [p@tidakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small actor"" <(SMALL) (M) (ACTOR.M)> |p@ti ~ akt&R| [p@ti~akt&R]" 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small actor"" <(SMALL+M) (ACTOR.M)> |p@ti akt&R| [p@tiakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small actor"" <(SMALL) (M+ACTOR.M)> |p@ti akt&R| [p@tiakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small actor"" <(SMALL) (M) (ACTOR.M)> |p@ti ∅ akt&R| [p@tiakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small actor"" <(SMALL) (M) (ACTOR.M)> |p@tit ~ akt&R| [p@tit~akt&R]" 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small actor"" <(SMALL) (M) (ACTOR.M)> |p@ti ~n akt&R| [p@ti~nakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small actor"" <(SMALL) (M) (ACTOR.M)> |p@tit d akt&R| [p@titdakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great husband"" <(GREAT) (M) (HUSBAND.M)> |gRA~ ∅ maRi| [gRA~maRi]" 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great husband"" <(GREAT) (M) (HUSBAND.M)> |gRA~d ~n maRi| [gRA~d~nmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great husband"" <(GREAT) (M) (HUSBAND.M)> |gRA~ t maRi| [gRA~tmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great husband"" <(GREAT+M) (HUSBAND.M)> |gRA~d maRi| [gRA~dmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great husband"" <(GREAT) (M+HUSBAND.M)> |gRA~d maRi| [gRA~dmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0
+" ""great husband"" <(GREAT) (M) (HUSBAND.M)> |gRA~ d maRi| [gRA~dmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great husband"" <(GREAT+M+HUSBAND.M)> |gRA~dmaRi| [gRA~dmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great husband"" <(GREAT) (M) (HUSBAND.M)> |gRA~d ∅ maRi| [gRA~dmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great husband"" <(GREAT) (M) (HUSBAND.M)> |gRA~d ~ maRi| [gRA~d~maRi]" 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great husband"" <(GREAT) (M) (HUSBAND.M)> |gRA~d t maRi| [gRA~dtmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great husband"" <(GREAT) (M) (HUSBAND.M)> |gRA~ n maRi| [gRA~nmaRi]" 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great husband"" <(GREAT) (M) (HUSBAND.M)> |gRA~d n maRi| [gRA~dnmaRi]" 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great husband"" <(GREAT) (M) (HUSBAND.M)> |gRA~d d maRi| [gRA~ddmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great husband"" <(GREAT) (M) (HUSBAND.M)> |gRA~ ~ maRi| [gRA~~maRi]" 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great husband"" <(GREAT) (M) (HUSBAND.M)> |gRA~ ~n maRi| [gRA~~nmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great husband"" <(GREAT) (M+HUSBAND.M)> |gRA~ maRi| [gRA~maRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0
+" ""great husband"" <(GREAT+M) (HUSBAND.M)> |gRA~ maRi| [gRA~maRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M) (HUSBAND.M)> |bO t maRi| [bOtmaRi]" 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M) (HUSBAND.M)> |bO~n ~ maRi| [bO~n~maRi]" 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M) (HUSBAND.M)> |bO d maRi| [bOdmaRi]" 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M) (HUSBAND.M)> |bO~n t maRi| [bO~ntmaRi]" 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M) (HUSBAND.M)> |bOn ~n maRi| [bOn~nmaRi]" 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M) (HUSBAND.M)> |bOn n maRi| [bOnnmaRi]" 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M+HUSBAND.M)> |bO maRi| [bOmaRi]" 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M) (HUSBAND.M)> |bO ∅ maRi| [bOmaRi]" 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M) (HUSBAND.M)> |bOn t maRi| [bOntmaRi]" 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M) (HUSBAND.M)> |bOn ∅ maRi| [bOnmaRi]" 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M+HUSBAND.M)> |bOn maRi| [bOnmaRi]" 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M) (HUSBAND.M)> |bO n maRi| [bOnmaRi]" 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good husband"" <(GOOD+M) (HUSBAND.M)> |bO~n maRi| [bO~nmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M) (HUSBAND.M)> |bO~n ∅ maRi| [bO~nmaRi]" 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M) (HUSBAND.M)> |bO~ n maRi| [bO~nmaRi]" 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M) (HUSBAND.M)> |bO ~n maRi| [bO~nmaRi]" 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M+HUSBAND.M)> |bO~n maRi| [bO~nmaRi]" 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M) (HUSBAND.M)> |bOn d maRi| [bOndmaRi]" 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M) (HUSBAND.M)> |bO~ ~ maRi| [bO~~maRi]" 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M) (HUSBAND.M)> |bO~ d maRi| [bO~dmaRi]" 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good husband"" <(GOOD+M) (HUSBAND.M)> |bO~ maRi| [bO~maRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M) (HUSBAND.M)> |bO ~ maRi| [bO~maRi]" 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M) (HUSBAND.M)> |bO~ ∅ maRi| [bO~maRi]" 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good husband"" <(GOOD+M+HUSBAND.M)> |bO~maRi| [bO~maRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0
+" ""good husband"" <(GOOD) (M+HUSBAND.M)> |bO~ maRi| [bO~maRi]" 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M) (HUSBAND.M)> |bO~n n maRi| [bO~nnmaRi]" 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M) (HUSBAND.M)> |bOn ~ maRi| [bOn~maRi]" 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M) (HUSBAND.M)> |bO~n d maRi| [bO~ndmaRi]" 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M) (HUSBAND.M)> |bO~ ~n maRi| [bO~~nmaRi]" 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M) (HUSBAND.M)> |bO~n ~n maRi| [bO~n~nmaRi]" 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good husband"" <(GOOD) (M) (HUSBAND.M)> |bO~ t maRi| [bO~tmaRi]" 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M) (ACTOR.M)> |bOn d akt&R| [bOndakt&R]" 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M) (ACTOR.M)> |bOn ~n akt&R| [bOn~nakt&R]" 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M) (ACTOR.M)> |bO~n d akt&R| [bO~ndakt&R]" 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M) (ACTOR.M)> |bO d akt&R| [bOdakt&R]" 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M) (ACTOR.M)> |bO~n ~n akt&R| [bO~n~nakt&R]" 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M+ACTOR.M)> |bO akt&R| [bOakt&R]" 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M) (ACTOR.M)> |bO ∅ akt&R| [bOakt&R]" 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M) (ACTOR.M)> |bO t akt&R| [bOtakt&R]" 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M) (ACTOR.M)> |bOn t akt&R| [bOntakt&R]" 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M) (ACTOR.M)> |bOn ~ akt&R| [bOn~akt&R]" 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M) (ACTOR.M)> |bO~ t akt&R| [bO~takt&R]" 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD+M+ACTOR.M)> |bO~nakt&R| [bO~nakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M+ACTOR.M)> |bO~n akt&R| [bO~nakt&R]" 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD+M) (ACTOR.M)> |bO~n akt&R| [bO~nakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M) (ACTOR.M)> |bO~ n akt&R| [bO~nakt&R]" 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M) (ACTOR.M)> |bO ~n akt&R| [bO~nakt&R]" 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M) (ACTOR.M)> |bO~n ∅ akt&R| [bO~nakt&R]" 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M) (ACTOR.M)> |bO~n ~ akt&R| [bO~n~akt&R]" 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M) (ACTOR.M)> |bOn n akt&R| [bOnnakt&R]" 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M) (ACTOR.M)> |bO~n t akt&R| [bO~ntakt&R]" 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M) (ACTOR.M)> |bO~ ~n akt&R| [bO~~nakt&R]" 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M) (ACTOR.M)> |bO n akt&R| [bOnakt&R]" 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M) (ACTOR.M)> |bOn ∅ akt&R| [bOnakt&R]" 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M+ACTOR.M)> |bOn akt&R| [bOnakt&R]" 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M) (ACTOR.M)> |bO~ d akt&R| [bO~dakt&R]" 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD+M) (ACTOR.M)> |bO~ akt&R| [bO~akt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M) (ACTOR.M)> |bO~ ∅ akt&R| [bO~akt&R]" 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M) (ACTOR.M)> |bO ~ akt&R| [bO~akt&R]" 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M+ACTOR.M)> |bO~ akt&R| [bO~akt&R]" 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M) (ACTOR.M)> |bO~ ~ akt&R| [bO~~akt&R]" 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good actor"" <(GOOD) (M) (ACTOR.M)> |bO~n n akt&R| [bO~nnakt&R]" 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good wave"" <(GOOD) (F) (WAVE.F)> |bO~ z O~d| [bO~zO~d]" 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+" ""good wave"" <(GOOD) (F) (WAVE.F)> |bO~ n O~d| [bO~nO~d]" 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+" ""good wave"" <(GOOD) (F+WAVE.F)> |bO~n O~d| [bO~nO~d]" 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good wave"" <(GOOD) (F) (WAVE.F)> |bO~n ∅ O~d| [bO~nO~d]" 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0
+" ""good wave"" <(GOOD) (F) (WAVE.F)> |bO~n n O~d| [bO~nnO~d]" 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+" ""good wave"" <(GOOD) (F) (WAVE.F)> |bO z O~d| [bOzO~d]" 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+" ""good wave"" <(GOOD+F) (WAVE.F)> |bOn O~d| [bOnO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+" ""good wave"" <(GOOD) (F) (WAVE.F)> |bO n O~d| [bOnO~d]" 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+" ""good wave"" <(GOOD) (F) (WAVE.F)> |bOn ∅ O~d| [bOnO~d]" 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0
+" ""good wave"" <(GOOD+F+WAVE.F)> |bOnO~d| [bOnO~d]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+" ""good wave"" <(GOOD) (F+WAVE.F)> |bOn O~d| [bOnO~d]" 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good wave"" <(GOOD) (F) (WAVE.F)> |bO~ d O~d| [bO~dO~d]" 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good wave"" <(GOOD) (F) (WAVE.F)> |bO~ t O~d| [bO~tO~d]" 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0
+" ""good wave"" <(GOOD) (F+WAVE.F)> |bO O~d| [bOO~d]" 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good wave"" <(GOOD) (F) (WAVE.F)> |bO ∅ O~d| [bOO~d]" 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0
+" ""good wave"" <(GOOD) (F) (WAVE.F)> |bO~n d O~d| [bO~ndO~d]" 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good wave"" <(GOOD) (F) (WAVE.F)> |bO~n t O~d| [bO~ntO~d]" 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0
+" ""good wave"" <(GOOD) (F) (WAVE.F)> |bO t O~d| [bOtO~d]" 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0
+" ""good wave"" <(GOOD) (F) (WAVE.F)> |bO d O~d| [bOdO~d]" 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good wave"" <(GOOD) (F) (WAVE.F)> |bOn d O~d| [bOndO~d]" 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good wave"" <(GOOD) (F) (WAVE.F)> |bO~n z O~d| [bO~nzO~d]" 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+" ""good wave"" <(GOOD) (F) (WAVE.F)> |bOn t O~d| [bOntO~d]" 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0
+" ""good wave"" <(GOOD) (F) (WAVE.F)> |bO~ ∅ O~d| [bO~O~d]" 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0
+" ""good wave"" <(GOOD) (F+WAVE.F)> |bO~ O~d| [bO~O~d]" 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""good wave"" <(GOOD) (F) (WAVE.F)> |bOn z O~d| [bOnzO~d]" 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+" ""good wave"" <(GOOD) (F) (WAVE.F)> |bOn n O~d| [bOnnO~d]" 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+" ""bad actor"" <(BAD) (M+ACTOR.M)> |mOvEz akt&R| [mOvEzakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+" ""bad actor"" <(BAD) (M) (ACTOR.M)> |mOvE d akt&R| [mOvEdakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+" ""bad actor"" <(BAD) (M) (ACTOR.M)> |mOvE n akt&R| [mOvEnakt&R]" 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+" ""bad actor"" <(BAD+M) (ACTOR.M)> |mOvE akt&R| [mOvEakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0
+" ""bad actor"" <(BAD+M+ACTOR.M)> |mOvEakt&R| [mOvEakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0
+" ""bad actor"" <(BAD) (M) (ACTOR.M)> |mOvE ∅ akt&R| [mOvEakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+" ""bad actor"" <(BAD) (M+ACTOR.M)> |mOvE akt&R| [mOvEakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+" ""bad actor"" <(BAD) (M) (ACTOR.M)> |mOvEz n akt&R| [mOvEznakt&R]" 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+" ""bad actor"" <(BAD) (M) (ACTOR.M)> |mOvEz ~ akt&R| [mOvEz~akt&R]" 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+" ""bad actor"" <(BAD) (M) (ACTOR.M)> |mOvEz t akt&R| [mOvEztakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+" ""bad actor"" <(BAD) (M) (ACTOR.M)> |mOvE ~ akt&R| [mOvE~akt&R]" 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+" ""bad actor"" <(BAD) (M) (ACTOR.M)> |mOvE ~n akt&R| [mOvE~nakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+" ""bad actor"" <(BAD) (M) (ACTOR.M)> |mOvE t akt&R| [mOvEtakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+" ""bad actor"" <(BAD) (M) (ACTOR.M)> |mOvEz d akt&R| [mOvEzdakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+" ""bad actor"" <(BAD) (M) (ACTOR.M)> |mOvEz ~n akt&R| [mOvEz~nakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+" ""bad actor"" <(BAD) (M) (ACTOR.M)> |mOvEz ∅ akt&R| [mOvEzakt&R]" 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+" ""great wave"" <(GREAT) (F+WAVE.F)> |gRA~ O~d| [gRA~O~d]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great wave"" <(GREAT) (F) (WAVE.F)> |gRA~d d O~d| [gRA~ddO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great wave"" <(GREAT+F+WAVE.F)> |gRA~dO~d| [gRA~dO~d]" 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great wave"" <(GREAT) (F) (WAVE.F)> |gRA~d ∅ O~d| [gRA~dO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0
+" ""great wave"" <(GREAT+F) (WAVE.F)> |gRA~d O~d| [gRA~dO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great wave"" <(GREAT) (F+WAVE.F)> |gRA~d O~d| [gRA~dO~d]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great wave"" <(GREAT) (F) (WAVE.F)> |gRA~ d O~d| [gRA~dO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""great wave"" <(GREAT) (F) (WAVE.F)> |gRA~d n O~d| [gRA~dnO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+" ""great wave"" <(GREAT) (F) (WAVE.F)> |gRA~ t O~d| [gRA~tO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0
+" ""great wave"" <(GREAT) (F) (WAVE.F)> |gRA~d z O~d| [gRA~dzO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+" ""great wave"" <(GREAT) (F) (WAVE.F)> |gRA~ n O~d| [gRA~nO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+" ""great wave"" <(GREAT) (F) (WAVE.F)> |gRA~d t O~d| [gRA~dtO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0
+" ""great wave"" <(GREAT) (F) (WAVE.F)> |gRA~ z O~d| [gRA~zO~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+" ""great wave"" <(GREAT) (F) (WAVE.F)> |gRA~ ∅ O~d| [gRA~O~d]" 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0
+" ""bad husband"" <(BAD) (M) (HUSBAND.M)> |mOvEz t maRi| [mOvEztmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+" ""bad husband"" <(BAD) (M) (HUSBAND.M)> |mOvE t maRi| [mOvEtmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+" ""bad husband"" <(BAD) (M) (HUSBAND.M)> |mOvE d maRi| [mOvEdmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+" ""bad husband"" <(BAD) (M+HUSBAND.M)> |mOvEz maRi| [mOvEzmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0
+" ""bad husband"" <(BAD) (M) (HUSBAND.M)> |mOvEz ∅ maRi| [mOvEzmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+" ""bad husband"" <(BAD) (M) (HUSBAND.M)> |mOvE ~ maRi| [mOvE~maRi]" 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+" ""bad husband"" <(BAD) (M) (HUSBAND.M)> |mOvE ~n maRi| [mOvE~nmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+" ""bad husband"" <(BAD) (M) (HUSBAND.M)> |mOvE n maRi| [mOvEnmaRi]" 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+" ""bad husband"" <(BAD) (M) (HUSBAND.M)> |mOvEz d maRi| [mOvEzdmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+" ""bad husband"" <(BAD) (M) (HUSBAND.M)> |mOvEz ~ maRi| [mOvEz~maRi]" 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+" ""bad husband"" <(BAD) (M) (HUSBAND.M)> |mOvE ∅ maRi| [mOvEmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+" ""bad husband"" <(BAD) (M+HUSBAND.M)> |mOvE maRi| [mOvEmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0
+" ""bad husband"" <(BAD+M) (HUSBAND.M)> |mOvE maRi| [mOvEmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0
+" ""bad husband"" <(BAD+M+HUSBAND.M)> |mOvEmaRi| [mOvEmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""bad husband"" <(BAD) (M) (HUSBAND.M)> |mOvEz ~n maRi| [mOvEz~nmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+" ""bad husband"" <(BAD) (M) (HUSBAND.M)> |mOvEz n maRi| [mOvEznmaRi]" 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+" ""small husband"" <(SMALL) (M) (HUSBAND.M)> |p@ti ~n maRi| [p@ti~nmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small husband"" <(SMALL) (M) (HUSBAND.M)> |p@ti d maRi| [p@tidmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small husband"" <(SMALL) (M) (HUSBAND.M)> |p@tit t maRi| [p@tittmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small husband"" <(SMALL) (M) (HUSBAND.M)> |p@tit d maRi| [p@titdmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small husband"" <(SMALL) (M) (HUSBAND.M)> |p@ti n maRi| [p@tinmaRi]" 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small husband"" <(SMALL) (M) (HUSBAND.M)> |p@tit ~ maRi| [p@tit~maRi]" 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small husband"" <(SMALL) (M) (HUSBAND.M)> |p@tit ~n maRi| [p@tit~nmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small husband"" <(SMALL) (M) (HUSBAND.M)> |p@tit n maRi| [p@titnmaRi]" 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small husband"" <(SMALL) (M) (HUSBAND.M)> |p@ti ~ maRi| [p@ti~maRi]" 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small husband"" <(SMALL) (M+HUSBAND.M)> |p@ti maRi| [p@timaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0
+" ""small husband"" <(SMALL+M+HUSBAND.M)> |p@timaRi| [p@timaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small husband"" <(SMALL) (M) (HUSBAND.M)> |p@ti ∅ maRi| [p@timaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small husband"" <(SMALL+M) (HUSBAND.M)> |p@ti maRi| [p@timaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small husband"" <(SMALL) (M) (HUSBAND.M)> |p@tit ∅ maRi| [p@titmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small husband"" <(SMALL+M) (HUSBAND.M)> |p@tit maRi| [p@titmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""small husband"" <(SMALL) (M+HUSBAND.M)> |p@tit maRi| [p@titmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0
+" ""small husband"" <(SMALL) (M) (HUSBAND.M)> |p@ti t maRi| [p@titmaRi]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""bad car"" <(BAD) (F) (CAR.F)> |mOvE t vwatyR| [mOvEtvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0
+" ""bad car"" <(BAD) (F) (CAR.F)> |mOvE n vwatyR| [mOvEnvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0
+" ""bad car"" <(BAD) (F+CAR.F)> |mOvE vwatyR| [mOvEvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+" ""bad car"" <(BAD) (F) (CAR.F)> |mOvE ∅ vwatyR| [mOvEvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0
+" ""bad car"" <(BAD) (F) (CAR.F)> |mOvE z vwatyR| [mOvEzvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0
+" ""bad car"" <(BAD+F+CAR.F)> |mOvEzvwatyR| [mOvEzvwatyR]" 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""bad car"" <(BAD+F) (CAR.F)> |mOvEz vwatyR| [mOvEzvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+" ""bad car"" <(BAD) (F+CAR.F)> |mOvEz vwatyR| [mOvEzvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+" ""bad car"" <(BAD) (F) (CAR.F)> |mOvEz ∅ vwatyR| [mOvEzvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0
+" ""bad car"" <(BAD) (F) (CAR.F)> |mOvEz z vwatyR| [mOvEzzvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0
+" ""bad car"" <(BAD) (F) (CAR.F)> |mOvE d vwatyR| [mOvEdvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+" ""bad car"" <(BAD) (F) (CAR.F)> |mOvEz n vwatyR| [mOvEznvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0
+" ""bad car"" <(BAD) (F) (CAR.F)> |mOvEz d vwatyR| [mOvEzdvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+" ""bad car"" <(BAD) (F) (CAR.F)> |mOvEz t vwatyR| [mOvEztvwatyR]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0
