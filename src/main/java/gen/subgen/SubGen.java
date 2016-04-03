@@ -154,7 +154,6 @@ public abstract class SubGen<F extends Form, G extends Form> {
                 return getRightFunction().apply(f);
             }
         };
-        System.out.println("Added loading cache with max size " + maxSize);
         mappingCache = CacheBuilder.newBuilder().maximumSize(maxSize).build(candidateLoader);
         CacheLoader<FormMapping, ConstraintArrayList> constraintLoader = new CacheLoader<FormMapping, ConstraintArrayList>() {
             @Override

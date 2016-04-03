@@ -55,9 +55,7 @@ public class ByteVector extends ViolationVector {
     @Override
     protected ViolationVector copy() {
         ByteVector copy = new ByteVector(size());
-        for (int i = leftmostNonZero; i < size(); i++) {
-            copy.contents[i] = contents[i];
-        }
+        System.arraycopy(contents, leftmostNonZero, copy.contents, leftmostNonZero, size() - leftmostNonZero);
         copy.leftmostNonZero = leftmostNonZero;
         return copy;
     }

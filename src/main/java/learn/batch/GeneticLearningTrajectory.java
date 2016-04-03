@@ -11,7 +11,7 @@ import learn.genetic.CandidatePool;
 import learn.genetic.ConHypothesis;
 import ranking.GrammarHierarchy;
 import ranking.Hierarchy;
-import ranking.SampledHierarchy;
+import ranking.DynamicSampledHierarchy;
 
 import java.util.List;
 import java.util.concurrent.*;
@@ -59,7 +59,7 @@ public class GeneticLearningTrajectory extends AbstractLearningTrajectory {
             for (int i = 0; i < triesPerPool; i++) {
                 ConHypothesis nextHypothesis = hypothesisList.get(i % poolSize);
                 GrammarHierarchy hierarchy = nextHypothesis.getCon();
-                SampledHierarchy sampled = new SampledHierarchy(hierarchy, GaussianXORSampler.createInstance(evaluationNoise));
+                DynamicSampledHierarchy sampled = new DynamicSampledHierarchy(hierarchy, GaussianXORSampler.createInstance(evaluationNoise));
                 FormPair randomPair = getData().next();
                 SingleEvaluationStep singleEvaluationStep = SingleEvaluationStep.getInstance(learningProperties, grammar, sampled, randomPair);
                 completionService.submit(singleEvaluationStep);

@@ -118,9 +118,7 @@ public class Morpheme extends Subform implements ElementCollection<MElement> {
         if (this.isNull()) {
             return "∅";
         } else {
-            StringBuilder result = new StringBuilder(CollectionPrinter.collectionToString(features, "."));
-            result.append("_" + syntacticCategory);
-            return result.toString();
+            return CollectionPrinter.collectionToString(features, ".") + "_" + syntacticCategory;
         }
     }
 

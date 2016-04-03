@@ -9,7 +9,6 @@ import grammar.Grammar;
 import learn.ViolatedCandidate;
 import learn.update.UpdateAction;
 import learn.update.UpdateAlgorithm;
-import util.debug.Timer;
 
 import java.util.concurrent.Callable;
 
@@ -41,7 +40,6 @@ public class LearningStep implements Callable<Boolean> {
     }
 
     public Boolean call() throws Exception {
-        Timer timer = new Timer();
         FormPair testPair = learningDatum.getUnlabeled(properties.getDirection());
         Evaluation freeEvaluation = grammar.evaluate(testPair, true,
                 properties.getEvaluationNoise());

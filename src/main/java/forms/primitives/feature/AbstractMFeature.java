@@ -18,7 +18,7 @@ public abstract class AbstractMFeature extends Feature<String> {
      */
     protected AbstractMFeature(String attribute, String value) {
         super(attribute, value);
-        System.out.printf("Created abstract m-feature %s:%s%n", attribute, value.toString());
+        System.out.printf("Created abstract m-feature %s:%s%n", attribute, value);
     }
 
     public boolean valueEquals(AbstractMFeature other) {

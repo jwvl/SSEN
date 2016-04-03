@@ -103,7 +103,7 @@ public class SortedValuesList extends AutoSortedList<SortingValues> {
      */
     @Override
     public SortingValues getMax() {
-        if (!isEmpty() && maxCached == false) {
+        if (!isEmpty() && !maxCached) {
             lazySort();
             setCachedMax(contents.get(0));
         }

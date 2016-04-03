@@ -2,6 +2,7 @@ package graph.dynamic;
 
 import com.google.common.collect.ListMultimap;
 import forms.Form;
+import org.graphstream.graph.Edge;
 import org.graphstream.graph.Graph;
 import org.graphstream.graph.Node;
 import org.graphstream.graph.implementations.SingleGraph;
@@ -36,13 +37,16 @@ public class SimpleDynamicGraph {
             Node aNode = graph.addNode(aString);
             aNode.setAttribute("x", a.getLevel().myIndex());
             aNode.setAttribute("ui.label", aString);
+
             for (Form b : map.get(a)) {
                 String bString = b.toString();
                 Node bNode = graph.addNode(bString);
                 bNode.setAttribute("x", b.getLevel().myIndex());
                 bNode.setAttribute("ui.label", bString);
                 String edgeString = aString + "->" + bString;
-                graph.addEdge(edgeString, aString, bString);
+                Edge edge = graph.addEdge(edgeString, aString, bString);
+                edge.setAttribute("stroke-mode","plain");
+                edge.addAttribute("ui.style","stroke-width: 5;");
             }
         }
         for (Form a : map.keySet()) {

@@ -3,7 +3,6 @@
  */
 package forms.phon.flat;
 
-import com.google.common.collect.Lists;
 import forms.primitives.Subform;
 import forms.primitives.boundary.Edge;
 import forms.primitives.boundary.EdgeIndex;
@@ -30,45 +29,6 @@ public class UnderlyingForm extends PhoneSequence {
         super(concatenatedContents, boundaries);
     }
 
-    public static UnderlyingForm createInstanceOld(List<PhoneSubForm> originalList, int[] wordBoundariesAtMorphemes) {
-        int numPhonemes = 0;
-        int wordBoundaryCounter = 0;
-        List<PhoneSubForm> subForms = Lists.newArrayList(originalList);
-        for (int iSubForm = subForms.size() - 1; iSubForm >= 0; iSubForm--) {
-            PhoneSubForm phoneSubForm = subForms.get(iSubForm);
-            numPhonemes += phoneSubForm.size();
-            if (phoneSubForm.size() == 0) {
-                for (int i = 0; i < wordBoundariesAtMorphemes.length; i++) {
-                    wordBoundariesAtMorphemes[i] -= 1;
-                }
-                subForms.remove(iSubForm);
-            }
-        }
-        int numSubForms = subForms.size();
-
-        EdgeIndex edgeIndex = EdgeIndexBuilder.getEmpty(numPhonemes + 1);
-        ByteBuilder builder = new ByteBuilder();
-        int cumulativeLength = 0;
-        for (int i = 0; i < numSubForms; i++) {
-            PhoneSubForm phoneSubForm = subForms.get(i);
-
-            if (wordBoundaryCounter < wordBoundariesAtMorphemes.length
-                    && wordBoundariesAtMorphemes[wordBoundaryCounter] == i) {
-                edgeIndex.set(Edge.WORD, cumulativeLength);
-            }
-            cumulativeLength += phoneSubForm.size();
-
-            builder.append(phoneSubForm.getContents());
-            if (i < numSubForms - 1) {
-                edgeIndex.set(Edge.MORPHEME, cumulativeLength);
-            }
-        }
-
-        byte[] result = builder.build();
-        PhoneSubForm concatenatedPhones = PhoneSubForm.createFromByteArray(result);
-        UnderlyingForm underlyingForm = new UnderlyingForm(concatenatedPhones, edgeIndex);
-        return underlyingForm;
-    }
 
     public static UnderlyingForm createInstance(List<PhoneSubForm> subForms, int[] wordBoundariesAtMorphemes) {
         int numPhonemes = 0;
@@ -89,11 +49,13 @@ public class UnderlyingForm extends PhoneSequence {
                 edgeIndex.set(Edge.WORD, cumulativeLength);
                 wordBoundaryCounter++;
             }
-            cumulativeLength += phoneSubForm.size();
+            if (!phoneSubForm.isNull()) {
 
-            builder.append(phoneSubForm.getContents());
-            if (i < numSubForms - 1) {
-                edgeIndex.set(Edge.MORPHEME, cumulativeLength);
+                cumulativeLength += phoneSubForm.size();
+                builder.append(phoneSubForm.getContents());
+                if (i < numSubForms - 1) {
+                    edgeIndex.set(Edge.MORPHEME, cumulativeLength);
+                }
             }
         }
 

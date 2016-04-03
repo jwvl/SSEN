@@ -1,6 +1,5 @@
 package eval.harmony;
 
-import com.google.common.collect.Multiset;
 import com.typesafe.config.ConfigFactory;
 import eval.harmony.autosort.SimplestDoubleArray;
 import ranking.Hierarchy;
@@ -9,7 +8,6 @@ import ranking.constraints.helper.ConstraintArrayList;
 
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.List;
 
 /**
  * Created by janwillem on 29/03/16.
@@ -56,44 +54,7 @@ public class CostFactory {
         return new SimplestDoubleArray(values);
     }
 
-
-    public double[] getDoubleArray(List<Constraint> constraints) {
-        double[] values = new double[constraints.size()];
-        int nConstraints = constraints.size();
-        int i = 0;
-        for (Constraint c : constraints) {
-            double rankingValue = ranking.getRanking(c);
-            int stratum = c.getStratum();
-            double warpedRankingValue = rankingValue + (stratumMultiplier * stratum);
-            values[i++] = warpedRankingValue;
-        }
-        Arrays.sort(values);
-        double[] reversedValues = new double[nConstraints];
-        for (int j = 0; j < nConstraints; j++) {
-            reversedValues[nConstraints - (j + 1)] = values[j];
-        }
-        return reversedValues;
-    }
-
     public double[] getDoubleArray(ConstraintArrayList constraints) {
-        double[] values = new double[constraints.size()];
-        int nConstraints = constraints.size();
-        int i = 0;
-        for (Constraint c : constraints) {
-            double rankingValue = ranking.getRanking(c);
-            int stratum = c.getStratum();
-            double warpedRankingValue = rankingValue + (stratumMultiplier * stratum);
-            values[i++] = warpedRankingValue;
-        }
-        Arrays.sort(values);
-        double[] reversedValues = new double[nConstraints];
-        for (int j = 0; j < nConstraints; j++) {
-            reversedValues[nConstraints - (j + 1)] = values[j];
-        }
-        return reversedValues;
-    }
-
-    public double[] getDoubleArray(Multiset<Constraint> constraints) {
         double[] values = new double[constraints.size()];
         int nConstraints = constraints.size();
         int i = 0;

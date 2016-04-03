@@ -8,6 +8,7 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
+import com.typesafe.config.ConfigFactory;
 import forms.phon.flat.PhoneticForm;
 import forms.phon.flat.SurfaceForm;
 import forms.phon.syllable.CachingSimpleSyllabifier;
@@ -92,8 +93,10 @@ public class SFtoPF extends SubGen<SurfaceForm, PhoneticForm> implements
      */
     private static List<EdgeBasedRule> createSchwaRules() {
         List<EdgeBasedRule> result = Lists.newArrayList();
-        result.addAll(EdgeBasedRuleBuilder.fromString("ə. → ∅ / __|V", Edge.SYLLABLE));
-        result.addAll(EdgeBasedRuleBuilder.fromString("∅. → ə / __|C", Edge.SYLLABLE));
+        if (ConfigFactory.load().getBoolean("gen.schwaRulesOnSF")) {
+            result.addAll(EdgeBasedRuleBuilder.fromString("ə. → ∅ / __", Edge.SYLLABLE));
+            result.addAll(EdgeBasedRuleBuilder.fromString("∅. → ə / __|C", Edge.SYLLABLE));
+        }
         return result;
     }
 

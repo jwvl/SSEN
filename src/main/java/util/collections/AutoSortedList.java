@@ -59,7 +59,7 @@ public abstract class AutoSortedList<O extends Orderable<O>> implements Iterable
 
     public O getMaxCachedMax(AutoSortedList<O> other) {
         // If either is not cached, we cannot determine max
-        if (this.maxCached == false || other.maxCached == false)
+        if (!this.maxCached || !other.maxCached)
             return null;
         return elementOrdering.max(cachedMax, other.cachedMax);
     }

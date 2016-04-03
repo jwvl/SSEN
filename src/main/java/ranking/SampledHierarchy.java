@@ -1,36 +1,20 @@
 package ranking;
 
-import eval.sample.AbstractSampler;
 import ranking.constraints.Constraint;
 
 /**
- * Created by janwillem on 29/03/16.
+ * Created by janwillem on 02/04/16.
  */
-public class SampledHierarchy extends Hierarchy {
-    private final GrammarHierarchy original;
-    private final AbstractSampler sampler;
+public abstract class SampledHierarchy extends Hierarchy {
+    private final GrammarHierarchy template;
 
-    public SampledHierarchy(GrammarHierarchy original, AbstractSampler sampler) {
-        super(false);
-        this.original = original;
-        this.sampler = sampler;
+    public SampledHierarchy(GrammarHierarchy template) {
+        this.template = template;
     }
 
-    @Override
-    public double getRanking(Constraint c) {
-        if (!contains(c)) {
-            if (!original.contains(c)) {
-                original.addNewConstraint(c);
-            }
-            double disharmony = original.getRanking(c);
-            double rankingValue = sampler.sampleDouble(disharmony);
-            addConstraint(c, rankingValue);
+    protected void addToOriginalIfNecessary(Constraint c) {
+        if (!template.contains(c)) {
+            template.addNewConstraint(c);
         }
-        return getRankingValue(c);
-    }
-
-    @Override
-    public void addConstraint(Constraint c, double value) {
-        put(c, value);
     }
 }

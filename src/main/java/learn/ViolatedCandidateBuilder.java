@@ -56,9 +56,7 @@ public class ViolatedCandidateBuilder {
     }
 
     public void addConstraints(Constraint... constraints) {
-        for (Constraint rc : constraints) {
-            violated.add(rc);
-        }
+        Collections.addAll(violated, constraints);
     }
 
     public void addConstraintsFromList(ConstraintArrayList constraints) {

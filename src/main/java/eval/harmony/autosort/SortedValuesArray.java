@@ -46,9 +46,7 @@ public class SortedValuesArray extends AutoSortedList<SortingValues> {
     @Override
     public void add(SortingValues o) {
         SortingValues[] newContents = new SortingValues[size() + 1];
-        for (int i = 0; i < size(); i++) {
-            newContents[i] = contents[i];
-        }
+        System.arraycopy(contents, 0, newContents, 0, size());
         newContents[size()] = o;
         contents = newContents;
         clearCachedMax();
@@ -63,16 +61,14 @@ public class SortedValuesArray extends AutoSortedList<SortingValues> {
     @Override
     public void addAll(Collection<SortingValues> toAdd) {
         SortingValues[] newContents = new SortingValues[size() + toAdd.size()];
-        for (int i = 0; i < size(); i++) {
-            newContents[i] = contents[i];
-        }
+        System.arraycopy(contents, 0, newContents, 0, size());
         int count = 0;
         for (SortingValues sv : toAdd) {
             newContents[size() + count] = sv;
         }
         cachedMax = null;
         sorted = false;
-
+        this.contents = newContents;
     }
 
     /*
@@ -160,9 +156,7 @@ public class SortedValuesArray extends AutoSortedList<SortingValues> {
             AutoSortedList<SortingValues> other) {
         SortedValuesArray result = new SortedValuesArray(this.size()
                 + other.size());
-        for (int i = 0; i < size(); i++) {
-            result.contents[i] = contents[i];
-        }
+        System.arraycopy(contents, 0, result.contents, 0, size());
         SortedValuesArray o = (SortedValuesArray) other;
         for (int i = 0; i < other.size(); i++) {
             result.contents[size() + i] = o.contents[i];

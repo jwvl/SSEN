@@ -52,6 +52,10 @@ public abstract class Constraint {
         this(rightLevel, 0.0);
     }
 
+    public static int getNumberCreated() {
+        return idCounter;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj)

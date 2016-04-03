@@ -18,9 +18,9 @@ import java.util.Map;
  * Created by janwillem on 30/03/16.
  */
 public class CandidateSpaces {
-    private final Map<FormPair, CandidateSpace> spaces;
+    private final Map<FormPair, CandidateGraph> spaces;
 
-    public CandidateSpaces(Map<FormPair, CandidateSpace> spaces) {
+    public CandidateSpaces(Map<FormPair, CandidateGraph> spaces) {
         this.spaces = spaces;
     }
 
@@ -28,7 +28,7 @@ public class CandidateSpaces {
         this(new HashMap<>());
     }
 
-    public void add(CandidateSpace space) {
+    public void add(CandidateGraph space) {
         spaces.put(space.getFormPair(), space);
     }
 
@@ -37,19 +37,19 @@ public class CandidateSpaces {
     }
 
     public SubCandidateSet filterSet(FormPair formPair, SubCandidateSet toFilter) {
-        CandidateSpace candidateSpace = spaces.get(formPair);
-        List<FormMapping> result = candidateSpace.filter(toFilter.getContents());
+        CandidateGraph candidateGraph = spaces.get(formPair);
+        List<FormMapping> result = candidateGraph.filter(toFilter.getContents());
         return SubCandidateSet.of(result);
     }
 
     public static CandidateSpaces fromDistribution(PairDistribution pairDistribution, DynamicNetworkGrammar grammar) {
 
         Collection<FormPair> allPairs = pairDistribution.getKeys();
-        Map<FormPair, CandidateSpace> map = new HashMap<>();
+        Map<FormPair, CandidateGraph> map = new HashMap<>();
         for (FormPair fp : allPairs) {
             ListMultimap<Form, Form> greenMap = CorrectCandidateFinder.generateCandidateSpace(grammar, fp);
-            CandidateSpace candidateSpace = new CandidateSpace(fp, greenMap);
-            map.put(fp, candidateSpace);
+            CandidateGraph candidateGraph = new CandidateGraph(fp, greenMap);
+            map.put(fp, candidateGraph);
         }
         return new CandidateSpaces(map);
     }

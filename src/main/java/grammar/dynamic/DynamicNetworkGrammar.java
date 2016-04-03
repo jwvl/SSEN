@@ -15,7 +15,7 @@ import grammar.levels.Level;
 import grammar.levels.LevelSpace;
 import learn.batch.LearningProperties;
 import ranking.GrammarHierarchy;
-import ranking.SampledHierarchy;
+import ranking.DynamicSampledHierarchy;
 import ranking.constraints.helper.ConstraintArrayList;
 
 import java.util.ArrayList;
@@ -29,7 +29,7 @@ import java.util.List;
 public class DynamicNetworkGrammar extends Grammar {
 
     private SubGen<?, ?>[] subGensByLevel;
-    private SampledHierarchy lastSampledHierarchy;
+    private DynamicSampledHierarchy lastSampledHierarchy;
     private GrammarHierarchy con;
 
 
@@ -40,7 +40,7 @@ public class DynamicNetworkGrammar extends Grammar {
     }
 
     public static DynamicNetworkGrammar createInstance(LevelSpace levels, String name) {
-        GrammarHierarchy con = new GrammarHierarchy(true);
+        GrammarHierarchy con = new GrammarHierarchy();
         return new DynamicNetworkGrammar(levels, "Grammar", con, LearningProperties.fromConfiguration());
     }
 

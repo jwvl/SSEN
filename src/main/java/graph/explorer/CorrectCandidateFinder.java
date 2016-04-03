@@ -2,11 +2,13 @@ package graph.explorer;
 
 import com.google.common.collect.ListMultimap;
 import com.google.common.collect.Multimap;
+import com.typesafe.config.ConfigFactory;
 import forms.Form;
 import forms.FormPair;
 import gen.mapping.PairMapping;
 import grammar.dynamic.DynamicNetworkGrammar;
 import graph.LayeredGraph;
+import graph.dynamic.SimpleDynamicGraph;
 
 import java.util.Collection;
 
@@ -35,7 +37,9 @@ public class CorrectCandidateFinder {
         CorrectCandidateFinder finder = new CorrectCandidateFinder(grammar, dataPair);
         finder.run();
         ListMultimap<Form, Form> result = finder.getGreenGraph();
-        //SimpleDynamicGraph.showResult(result);
+        if (ConfigFactory.load().getBoolean("stats.showCandidateGraphs")) {
+            SimpleDynamicGraph.showResult(result);
+        }
         return result;
     }
 

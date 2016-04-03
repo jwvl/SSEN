@@ -29,6 +29,11 @@ public class CachingSimpleSyllabifier extends SimpleSyllabifier {
         return retrieveOrCalculateSyllabifications(asByteArray);
     }
 
+    @Override
+    public SyllabifierType getType() {
+        return SyllabifierType.SIMPLE;
+    }
+
     private List<EdgeIndex> retrieveOrCalculateSyllabifications(byte[] asByteArray) {
         SonorityProfile profile = SonorityProfile.fromBytes(asByteArray);
         List<EdgeIndex> result = cached.get(profile);

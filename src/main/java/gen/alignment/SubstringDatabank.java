@@ -53,7 +53,7 @@ public class SubstringDatabank {
     }
 
     public List<String> getLongestSubstrings(Morpheme m) {
-        if (done == false) {
+        if (!done) {
             System.err
                     .println("Wait! Longest substrings have not been calculated yet.");
             return Lists.newArrayList();

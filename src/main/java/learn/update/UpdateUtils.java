@@ -33,7 +33,7 @@ public class UpdateUtils {
         double valMax = Double.MIN_VALUE;
         Constraint argMax = null;
         for (Constraint constraint : multiSet.elementSet()) {
-            double thisVal = con.getStratifiedRanking(constraint).getValue();
+            double thisVal = con.getRanking(constraint);
             if (thisVal > valMax) {
                 valMax = thisVal;
                 argMax = constraint;
@@ -41,6 +41,9 @@ public class UpdateUtils {
         }
         if (argMax == null) {
             System.err.println("Argmax is still null??");
+            if (multiSet.isEmpty()) {
+                System.err.println("Searched set is empty!");
+            }
         }
         return argMax;
     }
@@ -48,7 +51,7 @@ public class UpdateUtils {
     public static Multiset<Constraint> getWhereValueIsHigherThan(Multiset<Constraint> multiSet, GrammarHierarchy con, double threshold) {
         Multiset<Constraint> result = HashMultiset.create();
         for (Constraint constraint : multiSet.elementSet()) {
-            double thisVal = con.getStratifiedRanking(constraint).getValue();
+            double thisVal = con.getRanking(constraint);
             if (thisVal > threshold) {
                 result.add(constraint, multiSet.count(constraint));
             }

@@ -80,9 +80,7 @@ public class LongestSubstring {
             }
 
         }
-        if (!foundLongest) {
-            longest.add("");
-        }
+        longest.add("");
 
     }
 

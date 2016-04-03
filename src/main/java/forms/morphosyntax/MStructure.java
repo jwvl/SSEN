@@ -58,7 +58,7 @@ public class MStructure extends LinearArrayForm<Lexeme> {
 
     public void printContents() {
         System.out.println("Lexemes in this structure:");
-        Arrays.toString(contents);
+        System.out.println(Arrays.toString(contents));
 
         System.out.println("Agreements:");
         for (Agreement agr : agreements) {

@@ -11,11 +11,11 @@ import java.util.*;
 /**
  * Created by janwillem on 29/03/16.
  */
-public class CandidateSpace {
+public class CandidateGraph {
     private final FormPair formPair;
     private Map<Form, List<Form>> myMap;
 
-    public CandidateSpace(FormPair formPair, ListMultimap<Form, Form> mappings) {
+    public CandidateGraph(FormPair formPair, ListMultimap<Form, Form> mappings) {
         this.formPair = formPair;
         myMap = new HashMap<Form, List<Form>>();
         int count = 0;

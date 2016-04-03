@@ -54,5 +54,23 @@ public abstract class EdgeIndex {
      */
     public abstract int getNumSubsequences(Edge edgeType);
 
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("BooleanEdgeIndex{");
+        for (int i=0; i < sequenceLength()+1; i++) {
+            for (Edge edge: Edge.values()) {
+                if (hasBoundaryAt(edge,i)) {
+                    sb.append(edge);
+                }
+            }
+            if (i <sequenceLength()) {
+                sb.append("_");
+            }
+
+        }
+        sb.append('}');
+        return sb.toString();
+    }
+
 
 }

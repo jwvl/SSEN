@@ -1,6 +1,6 @@
 package ranking;
 
-import com.google.common.collect.Maps;
+import com.typesafe.config.ConfigFactory;
 import ranking.constraints.Constraint;
 import ranking.constraints.RankedConstraint;
 
@@ -10,48 +10,46 @@ import java.util.*;
  * Created by janwillem on 29/03/16.
  */
 public abstract class Hierarchy implements Con {
-    private Map<Constraint, Double> map;
-    private boolean isConcurrent;
+    private double[] map;
 
     public abstract double getRanking(Constraint c);
 
-    public abstract void addConstraint(Constraint c, double value);
-
-    public Hierarchy(boolean isConcurrent) {
-        Map<Constraint, Double> identityMap = Maps.newIdentityHashMap();
-        if (isConcurrent) {
-            map = Collections.synchronizedMap(identityMap);
-        } else {
-            map = identityMap;
-        }
-        this.isConcurrent = isConcurrent;
+    public void addConstraint(Constraint c, double value) {
+        put(c,value);
     }
 
-    public boolean isConcurrent() {
-        return isConcurrent;
+    public Hierarchy(double[] contents) {
+        map = contents;
     }
 
-    /* (non-Javadoc)
- * @see java.lang.Iterable#iterator()
- */
-    public Iterator<Constraint> iterator() {
-        return map.keySet().iterator();
+    public Hierarchy(int expectedSize) {
+        map = new double[expectedSize];
+        Arrays.fill(map,Double.NEGATIVE_INFINITY);
     }
+
+    public Hierarchy() {
+        this(ConfigFactory.load().getInt("implementation.expectedNumConstraints"));
+    }
+
+
 
     /* (non-Javadoc)
      * @see ranking.Con#contains(ranking.constraints.Constraint)
      */
     public boolean contains(Constraint constraint) {
-        return map.containsKey(constraint);
+        if (map == null) {
+            System.err.println("Map is null!!");
+        } else if (constraint == null) {
+            System.err.println("Constraint is null!");
+        }
+        return map[constraint.getId()] != Double.NEGATIVE_INFINITY;
     }
 
     public void put(Constraint constraint, double value) {
-        map.put(constraint, value);
+        map[constraint.getId()] = value;
     }
 
-    public int size() {
-        return map.size();
-    }
+    public abstract int size();
 
     /**
      *
@@ -62,24 +60,12 @@ public abstract class Hierarchy implements Con {
         }
     }
 
-    public List<RankedConstraint> toRankedConstraintList() {
-        List<RankedConstraint> rankedList = new ArrayList<>(size());
-        for (Constraint constraint : this) {
-            rankedList.add(RankedConstraint.of(constraint, getRankingValue(constraint)));
-        }
-        Collections.sort(rankedList);
-        Collections.reverse(rankedList);
-        return rankedList;
-    }
+    public abstract List<RankedConstraint> toRankedConstraintList();
 
-    /**
-     * @return
-     */
-    public Map<Constraint, Double> getMap() {
-        return map;
-    }
 
     protected double getRankingValue(Constraint c) {
-        return map.get(c);
+        return map[c.getId()];
     }
+
+
 }

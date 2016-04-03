@@ -23,7 +23,7 @@ import java.util.concurrent.*;
 public class LearningTrajectory extends AbstractLearningTrajectory {
 
     private int numEvaluations;
-    private static boolean TEST_RESULTS = true;
+    private static boolean TEST_RESULTS = false;
     private final int resetCounterEvery;
 
 
@@ -35,7 +35,6 @@ public class LearningTrajectory extends AbstractLearningTrajectory {
 
 
     public void run(ExecutorService executorService) {
-        System.out.println("Starting " + numEvaluations + " evaluations!");
         Timer totalTimer = new Timer();
         double plasticity = getLearningProperties().getInitialPlasticity();
         ErrorCounter shortCounter = new ErrorCounter();
@@ -67,14 +66,12 @@ public class LearningTrajectory extends AbstractLearningTrajectory {
             }
 
             if (shortCounter.getTotal() >= resetCounterEvery) {
-                String intermediateResult = String.format("Current error rate: %s (%s pct)%n", shortCounter.getErrorAsRatio(), shortCounter.getErrorAsPercentage());
+                String intermediateResult = String.format("Current error rate: %s (%s pct)", shortCounter.getErrorAsRatio(), shortCounter.getErrorAsPercentage());
                 System.out.println(intermediateResult);
                 shortCounter.reset();
             }
         }
 
-
-        totalTimer.reportElapsedTime("Total time for evaluation:", true);
 
         if (TEST_RESULTS) {
             printTestResults();
@@ -83,12 +80,10 @@ public class LearningTrajectory extends AbstractLearningTrajectory {
 
         try {
             if (!executorService.awaitTermination(100, TimeUnit.MICROSECONDS)) {
-                System.out.println("Still waiting...");
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("Done? " + executorService.isTerminated());
     }
 
     /**
@@ -112,7 +107,7 @@ public class LearningTrajectory extends AbstractLearningTrajectory {
         } else if (asNumber > 0) {
             return (int) (asNumber * numEvaluations);
         } else {
-            return numEvaluations;
+            return numEvaluations+1;
         }
     }
 

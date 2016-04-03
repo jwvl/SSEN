@@ -50,4 +50,12 @@ public class RankedConstraint implements Comparable<RankedConstraint> {
         sb.append(String.format("%.2f", ranking));
         return sb.toString();
     }
+
+    public Constraint getConstraint() {
+        return constraint;
+    }
+
+    public double getRanking() {
+        return ranking;
+    }
 }

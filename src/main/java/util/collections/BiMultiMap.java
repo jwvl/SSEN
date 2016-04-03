@@ -14,7 +14,7 @@ import java.util.Collection;
  * @author jwvl
  * @date May 24, 2015
  */
-public class BiMultiMap<O extends Object, P extends Object> {
+public class BiMultiMap<O, P> {
     Multimap<O, P> rightward;
     Multimap<P, O> leftward;
 

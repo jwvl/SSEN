@@ -5,11 +5,12 @@ package simulate.french.sixlevel.subgens;
 
 import com.google.common.base.Function;
 import com.google.common.collect.Sets;
+import com.typesafe.config.Config;
+import com.typesafe.config.ConfigFactory;
 import forms.phon.Sonority;
 import forms.phon.flat.SurfaceForm;
 import forms.phon.flat.UnderlyingForm;
-import forms.phon.syllable.CachingSimpleSyllabifier;
-import forms.phon.syllable.ISyllabifier;
+import forms.phon.syllable.*;
 import forms.primitives.boundary.Edge;
 import forms.primitives.boundary.EdgeIndex;
 import gen.mapping.FormMapping;
@@ -43,10 +44,24 @@ public class PredefinedUFToSF extends SubGen<UnderlyingForm, SurfaceForm> {
         super(BiPhonSix.getUnderlyingFormLevel(), BiPhonSix
                 .getSurfaceFormLevel());
         edgeRuleTransformer = EdgeRuleTransformer.createFromRules(PredefinedLiaisonRules.edgeRules);
-        syllabifier = new CachingSimpleSyllabifier();
+        syllabifier = getSyllabifier();
         addConstraintFactory(new FaithfulnessConstraintFactory());
         addConstraintFactory(new SyllableStructureConstraintFactory());
         //addConstraintFactory(new OnsetCodaConstraintFactory());
+    }
+
+    private static ISyllabifier getSyllabifier() {
+        Config config = ConfigFactory.load();
+        String propertyString = config.getString("implementation.syllabifier");
+        SyllabifierType type = SyllabifierType.valueOf(propertyString);
+        switch (type) {
+            case SIMPLE:
+                return new CachingSimpleSyllabifier();
+            case MAX_ONSET:
+                OnsetSet onsetSet = OnsetSet.fromFile(config.getString("files.onsets"));
+                return new MaxOnsetSyllabifier(onsetSet);
+            default: return new CachingSimpleSyllabifier();
+        }
     }
 
 

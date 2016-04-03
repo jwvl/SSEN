@@ -93,4 +93,6 @@ public class BooleanEdgeIndex extends EdgeIndex {
     public int hashCode() {
         return Arrays.deepHashCode(edgeIndices);
     }
+
+
 }

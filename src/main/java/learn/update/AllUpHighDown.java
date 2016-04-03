@@ -44,7 +44,7 @@ public class AllUpHighDown implements UpdateAlgorithm {
         }
 
         for (Constraint constraint : learnerPreferringView.elementSet()) {
-            double thisRanking = con.getStratifiedRanking(constraint).getValue();
+            double thisRanking = con.getRanking(constraint);
             if (thisRanking > maxTPreferringRanking) {
                 int count = learnerPreferringView.count(constraint);
                 learnerPreferringHigh.add(constraint, count);
@@ -77,7 +77,7 @@ public class AllUpHighDown implements UpdateAlgorithm {
         Multiset<Constraint> toPromote = violatedByLearner.isEmpty() ? lCandidate.getConstraints() : violatedByLearner;
         UpdateUtils.multisetToUpdateAction(toPromote, delta, result);
         Constraint maxViolatedByLearner = UpdateUtils.getMax(lCandidate.getConstraints(), con);
-        double maxVblValue = con.getStratifiedRanking(maxViolatedByLearner).getValue();
+        double maxVblValue = con.getRanking(maxViolatedByLearner);
 
         Multiset<Constraint> toDemote = getRankedAbove(maxVblValue, violatedByTarget, con);
         UpdateUtils.multisetToUpdateAction(toDemote, -delta, result);
@@ -93,7 +93,7 @@ public class AllUpHighDown implements UpdateAlgorithm {
                                                 Multiset<Constraint> violatedByTarget, GrammarHierarchy con) {
         Multiset<Constraint> result = HashMultiset.create();
         for (Constraint constraint : violatedByTarget) {
-            double value = con.getStratifiedRanking(constraint).getValue();
+            double value = con.getRanking(constraint);
             if (value > maxViolatedByLearner) {
                 result.add(constraint);
             }

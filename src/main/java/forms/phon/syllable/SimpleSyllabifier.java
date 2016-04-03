@@ -75,6 +75,11 @@ public class SimpleSyllabifier implements ISyllabifier {
 
     }
 
+    @Override
+    public SyllabifierType getType() {
+        return SyllabifierType.SIMPLE;
+    }
+
     /**
      * @param asByteArray
      * @return

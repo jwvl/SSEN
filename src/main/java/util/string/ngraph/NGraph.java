@@ -58,7 +58,7 @@ public class NGraph {
 
     @Override
     public String toString() {
-        return contents.toString();
+        return contents;
     }
 
     @Override

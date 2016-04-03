@@ -3,6 +3,8 @@
  */
 package forms.phon;
 
+import com.google.common.collect.HashBasedTable;
+import com.google.common.collect.Table;
 import forms.morphosyntax.Morpheme;
 import forms.primitives.Submapping;
 import forms.primitives.segment.PhoneSubForm;
@@ -12,9 +14,10 @@ import java.util.List;
 /**
  * @author jwvl
  * @date Aug 2, 2015
+ * Caches since there are a lot of these...
  */
 public class LexicalMapping extends Submapping<Morpheme, PhoneSubForm> {
-
+    private static Table<Morpheme,PhoneSubForm,LexicalMapping> instances = HashBasedTable.create();
     /**
      * @param s
      * @param t
@@ -23,8 +26,18 @@ public class LexicalMapping extends Submapping<Morpheme, PhoneSubForm> {
         super(s, t);
     }
 
+    private static LexicalMapping createNew(Morpheme morpheme, PhoneSubForm phoneSubForm) {
+        LexicalMapping result = new LexicalMapping(morpheme,phoneSubForm);
+        instances.put(morpheme,phoneSubForm,result);
+        return result;
+    }
+
     public static LexicalMapping of(Morpheme morpheme, PhoneSubForm phoneSubForm) {
-        return new LexicalMapping(morpheme, phoneSubForm);
+        LexicalMapping instance = instances.get (morpheme,phoneSubForm);
+        if (instance == null) {
+            instance = createNew(morpheme,phoneSubForm);
+        }
+        return instance;
     }
 
     public String toString() {

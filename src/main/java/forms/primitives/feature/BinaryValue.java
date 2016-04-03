@@ -26,7 +26,7 @@ public class BinaryValue extends Value<BinaryValue> {
     public String toString() {
         if (this == NULL) {
             return "0";
-        } else if (val == true) {
+        } else if (val) {
             return "+";
         } else {
             return "-";

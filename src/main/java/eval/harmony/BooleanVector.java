@@ -59,9 +59,7 @@ public class BooleanVector extends ViolationVector {
     @Override
     protected ViolationVector copy() {
         BooleanVector copy = new BooleanVector(size());
-        for (int i = leftmostNonZero; i < size(); i++) {
-            copy.contents[i] = contents[i];
-        }
+        System.arraycopy(contents, leftmostNonZero, copy.contents, leftmostNonZero, size() - leftmostNonZero);
         return copy;
     }
 
@@ -101,7 +99,7 @@ public class BooleanVector extends ViolationVector {
      */
     @Override
     protected int valueAsInt(int index) {
-        return contents[index] == false ? 0 : 1;
+        return !contents[index] ? 0 : 1;
     }
 
     @Override

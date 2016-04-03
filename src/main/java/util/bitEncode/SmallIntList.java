@@ -1,8 +1,8 @@
 package util.bitEncode;
 
+import cern.colt.bitvector.BitVector;
 import util.debug.Stopwatch;
 
-import java.util.BitSet;
 import java.util.Random;
 
 /**
@@ -10,13 +10,13 @@ import java.util.Random;
  */
 public class SmallIntList {
     private final int bitsNeeded;
-    private final BitSet bitset;
+    private final BitVector bitset;
     private final int length;
 
     public SmallIntList(int numElements, int maxValue) {
         length = numElements;
         bitsNeeded = findBitsNeeded(maxValue);
-        bitset = new BitSet(numElements * bitsNeeded);
+        bitset = new BitVector(numElements*bitsNeeded);
     }
 
     public int get(int index) {
@@ -32,8 +32,9 @@ public class SmallIntList {
         int firstBitIndex = index * bitsNeeded;
         for (int i = 0; i < bitsNeeded; i++) {
             int setAt = firstBitIndex + (bitsNeeded - 1 - i);
-            boolean bool = ((1 << i & value) != 0);
-            bitset.set(setAt, bool);
+            if (((1 << i & value) != 0)) {
+                bitset.set(setAt);
+            }
         }
     }
 

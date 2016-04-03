@@ -15,4 +15,6 @@ public interface ISyllabifier {
     int[] findNuclei(byte[] asByteArray);
 
     List<EdgeIndex> getSyllabifications(byte[] asByteArray);
+
+    SyllabifierType getType();
 }

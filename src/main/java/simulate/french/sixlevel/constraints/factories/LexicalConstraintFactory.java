@@ -12,6 +12,7 @@ import simulate.french.sixlevel.constraints.LexicalConstraint;
 import simulate.french.sixlevel.helpers.LexicalHypothesisRepository;
 
 import java.util.Collection;
+import java.util.Collections;
 
 /**
  * @author jwvl
@@ -70,9 +71,7 @@ public class LexicalConstraintFactory extends
     @Override
     public Collection<LexicalMapping> getOffenders(MfUfMapping transgressor) {
         Collection<LexicalMapping> result = Lists.newArrayList();
-        for (LexicalMapping mapping : transgressor.getLexicalMappings()) {
-            result.add(mapping);
-        }
+        Collections.addAll(result, transgressor.getLexicalMappings());
         return result;
     }
 

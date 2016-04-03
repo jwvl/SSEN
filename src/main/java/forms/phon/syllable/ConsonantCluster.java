@@ -35,9 +35,7 @@ public class ConsonantCluster {
     public static ConsonantCluster getOnset(SonorityProfile profile) {
         int peakLocation = profile.peakLocation();
         Sonority[] subSequence = new Sonority[peakLocation];
-        for (int i = 0; i < peakLocation; i++) {
-            subSequence[i] = profile.getSonorities()[i];
-        }
+        System.arraycopy(profile.getSonorities(), 0, subSequence, 0, peakLocation);
         return getInstance(subSequence, Side.LEFT);
     }
 
@@ -55,9 +53,7 @@ public class ConsonantCluster {
         int peakLocation = profile.peakLocation();
         Sonority[] fullSonorities = profile.getSonorities();
         Sonority[] onsetSequence = new Sonority[peakLocation];
-        for (int i = 0; i < peakLocation; i++) {
-            onsetSequence[i] = fullSonorities[i];
-        }
+        System.arraycopy(fullSonorities, 0, onsetSequence, 0, peakLocation);
         result[0] = getInstance(onsetSequence, Side.LEFT);
         Sonority[] codaSequence = new Sonority[profile.size() - (peakLocation + 1)];
         for (int i = 0; i < codaSequence.length; i++) {

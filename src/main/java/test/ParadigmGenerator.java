@@ -32,15 +32,15 @@ public class ParadigmGenerator {
                     } else {
                         mrf.append(" M");
                     }
-                    mrf.append(" " + adjAffixMorphs[k]);
+                    mrf.append(" ").append(adjAffixMorphs[k]);
 
-                    str.append(" " + nouns[j]);
-                    mrf.append(" " + nMorphs[j]);
+                    str.append(" ").append(nouns[j]);
+                    mrf.append(" ").append(nMorphs[j]);
 
-                    str.append("" + affixes[k]);
-                    mrf.append(" " + nounAffixMorphs[k]);
+                    str.append("").append(affixes[k]);
+                    mrf.append(" ").append(nounAffixMorphs[k]);
                     if (printMorph)
-                        str.append("\t" + mrf.toString());
+                        str.append("\t").append(mrf.toString());
                     System.out.println(str.toString());
 
                 }

@@ -46,7 +46,6 @@ public class ByteArrayUtils {
     }
 
     /**
-     * @param beforeString
      * @return
      */
     public static byte[] fromString(String string) {
@@ -64,19 +63,6 @@ public class ByteArrayUtils {
         return result;
     }
 
-    /**
-     * @param beforeString
-     * @param maxLength
-     * @return
-     */
-    public static byte[] fromStringPadded(String string, int maxLength) {
-        byte[] result = new byte[maxLength];
-        for (int i = 0; i < maxLength; i++) {
-            byte toPut = i >= string.length() ? Phone.NULL.getId() : Phone.getInstance(string.charAt(i)).getId();
-            result[i] = toPut;
-        }
-        return null;
-    }
 
     public static byte[] padToLength(byte[] original, int newLength, Side padOnSide, byte padByte) {
         byte[] result = new byte[newLength];

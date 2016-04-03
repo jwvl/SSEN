@@ -15,11 +15,11 @@ import java.util.Map;
  */
 public class CollectionPrinter {
 
-    public static <O extends Object> String collectionToStringlines(Collection<O> l) {
+    public static <O> String collectionToStringlines(Collection<O> l) {
         return collectionToStringlines(l, l.size());
     }
 
-    public static <O extends Object> String collectionToStringlines(Collection<O> l, int stopAt) {
+    public static <O> String collectionToStringlines(Collection<O> l, int stopAt) {
         StringBuffer result = new StringBuffer();
         int nItems = l.size();
         int numberLength = String.valueOf(nItems).length();
@@ -36,15 +36,15 @@ public class CollectionPrinter {
         return result.toString();
     }
 
-    public static <O extends Object> void print(Collection<O> c, int stopAt) {
+    public static <O> void print(Collection<O> c, int stopAt) {
         System.out.println(collectionToStringlines(c, stopAt));
     }
 
-    public static <O extends Object> void print(Collection<O> c) {
+    public static <O> void print(Collection<O> c) {
         System.out.println(collectionToStringlines(c));
     }
 
-    public static <O extends Object> String collectionToString(Collection<O> l, String sep) {
+    public static <O> String collectionToString(Collection<O> l, String sep) {
         if (l.isEmpty())
             return ("<empty collection>");
         StringBuffer result = new StringBuffer();
@@ -61,7 +61,7 @@ public class CollectionPrinter {
     /**
      * @param Map to print
      */
-    public static <O extends Object, P extends Object> void printMap(Map<O, P> map) {
+    public static <O, P> void printMap(Map<O, P> map) {
         for (O o : map.keySet()) {
             System.out.println(o + " :: " + map.get(o));
         }

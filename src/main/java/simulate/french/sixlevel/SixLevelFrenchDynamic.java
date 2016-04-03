@@ -15,6 +15,7 @@ import forms.primitives.segment.Phone;
 import gen.alignment.MorphemePhoneAligner;
 import gen.alignment.MorphemePhoneAlignment;
 import gen.alignment.SubstringDatabank;
+import gen.constrain.UfConstrainer;
 import gen.mapping.FormMapping;
 import gen.mapping.SubCandidateSet;
 import gen.subgen.SubGen;
@@ -134,6 +135,7 @@ public class SixLevelFrenchDynamic {
 
         repository.printContents();
         MFormToUF mf_uf_gen = new MFormToUF(repository);
+        mf_uf_gen.addConstrainer(new UfConstrainer(bigraphs, 2));
 
         DynamicNetworkGrammar grammar = DynamicNetworkGrammar.createInstance(BiPhonSix.getLevelSpace(),
                 "DynamicNetworkGrammar");
@@ -156,12 +158,11 @@ public class SixLevelFrenchDynamic {
         System.out.println("Testing grammar on learning data...");
         GrammarTester.testGrammarOnLearningData(grammar, pairDistribution, 20, 1.0);
         timer.reportElapsedTime("Did tests in ", false);
-        System.exit(0);
 
         LearningTrajectory trajectory = new LearningTrajectory(grammar, pairDistribution, numEvaluations);
         trajectory.launch(numThreads);
 
-        GrammarTester.testGrammarOnLearningData(grammar, pairDistribution, 5000, 1.0);
+
 
         // SF <-- AudF
         // UF <-- SF

@@ -42,6 +42,9 @@ public class EdgeIndexBuilder {
             case BOOLEAN:
                 result = new BooleanEdgeIndex(length);
                 break;
+            case SINGLE_ARRAY:
+                result = new SingleArrayEdgeIndex(length);
+                break;
         }
         return result;
     }

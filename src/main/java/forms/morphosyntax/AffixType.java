@@ -33,7 +33,7 @@ public class AffixType {
     @Override
     public String toString() {
 
-        return syntacticCategory.toString() + "-" + attribute.toString();
+        return syntacticCategory.toString() + "-" + attribute;
     }
 
     @Override
