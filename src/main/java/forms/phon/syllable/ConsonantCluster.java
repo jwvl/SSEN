@@ -15,8 +15,9 @@ import java.util.Arrays;
 public class ConsonantCluster {
     private final Side side;
     private final Sonority[] cluster;
-    private final static int ONSET = 0, CODA = 1;
-    private final static ConsonantCluster EMPTY = new ConsonantCluster(new Sonority[0], Side.NEITHER);
+    public final static ConsonantCluster EMPTY_ONSET = new ConsonantCluster(new Sonority[0],Side.LEFT);
+    public final static ConsonantCluster EMPTY_CODA = new ConsonantCluster(new Sonority[0],Side.RIGHT);
+
 
     /**
      * @param side
@@ -27,9 +28,15 @@ public class ConsonantCluster {
     }
 
     public static ConsonantCluster getInstance(Sonority[] sonorities, Side side) {
-        if (sonorities.length < 1)
-            return EMPTY;
-        else return new ConsonantCluster(sonorities, side);
+        if (sonorities.length == 0) {
+            switch (side) {
+                case LEFT:
+                    return EMPTY_ONSET;
+                case RIGHT:
+                    return EMPTY_CODA;
+            }
+        }
+        return new ConsonantCluster(sonorities, side);
     }
 
     public static ConsonantCluster getOnset(SonorityProfile profile) {
@@ -110,7 +117,7 @@ public class ConsonantCluster {
      * @return
      */
     public boolean isEmpty() {
-        return this == EMPTY;
+        return cluster.length == 0;
     }
 
 

@@ -20,9 +20,10 @@ import gen.rule.edgebased.EdgeBasedRewrite;
 import gen.rule.edgebased.EdgeRuleTransformer;
 import gen.subgen.SubGen;
 import grammar.levels.predefined.BiPhonSix;
+import simulate.french.sixlevel.constraints.StructuralConstraintType;
 import simulate.french.sixlevel.constraints.factories.FaithfulnessConstraintFactory;
+import simulate.french.sixlevel.constraints.factories.ClusterConstraintFactory;
 import simulate.french.sixlevel.constraints.factories.SyllableStructureConstraintFactory;
-import simulate.french.sixlevel.helpers.LexicalHypothesisRepository;
 import simulate.french.sixlevel.helpers.PredefinedLiaisonRules;
 
 import java.util.Collection;
@@ -39,15 +40,24 @@ public class PredefinedUFToSF extends SubGen<UnderlyingForm, SurfaceForm> {
     private EdgeRuleTransformer edgeRuleTransformer;
     private final int MAX_CONSECUTIVE_C = 3;
 
-    public PredefinedUFToSF(LexicalHypothesisRepository repository) {
+    public PredefinedUFToSF() {
 
         super(BiPhonSix.getUnderlyingFormLevel(), BiPhonSix
                 .getSurfaceFormLevel());
         edgeRuleTransformer = EdgeRuleTransformer.createFromRules(PredefinedLiaisonRules.edgeRules);
         syllabifier = getSyllabifier();
+        Config config = ConfigFactory.load();
+        StructuralConstraintType structuralConstraintType = StructuralConstraintType.valueOf(config.getString("implementation.structuralConstraintType"));
+        switch (structuralConstraintType) {
+            case CLUSTER:
+                addConstraintFactory(new ClusterConstraintFactory());
+                break;
+            case SYLLABLE:
+                addConstraintFactory(new SyllableStructureConstraintFactory());
+                break;
+        }
+
         addConstraintFactory(new FaithfulnessConstraintFactory());
-        addConstraintFactory(new SyllableStructureConstraintFactory());
-        //addConstraintFactory(new OnsetCodaConstraintFactory());
     }
 
     private static ISyllabifier getSyllabifier() {

@@ -5,7 +5,6 @@ package forms.morphosyntax;
 
 import com.google.common.collect.Lists;
 import forms.LinearArrayForm;
-import forms.MorphemeCollection;
 import grammar.levels.Level;
 import grammar.levels.predefined.BiPhonSix;
 import util.string.CollectionPrinter;
@@ -48,7 +47,9 @@ public class MForm extends LinearArrayForm<MorphologicalWord> {
     public List<Morpheme> getMorphemes() {
         List<Morpheme> allMorphemes = Lists.newArrayList();
         for (MorphologicalWord morphologicalWord : this) {
-            allMorphemes.addAll(morphologicalWord.elementsAsList());
+            for (Morpheme m: morphologicalWord) {
+                allMorphemes.add(m);
+            }
         }
         return allMorphemes;
 

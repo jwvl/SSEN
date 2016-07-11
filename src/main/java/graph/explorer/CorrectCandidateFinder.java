@@ -14,6 +14,8 @@ import java.util.Collection;
 
 /**
  * Created by janwillem on 29/03/16.
+ * This class serves to pre-generate the candidate spaces for pairs [SemF,AudF] of learning data.
+ * When finished, it will return the "green graph", the subgraph containing all nodes that may connect SemF to AudF.
  */
 public class CorrectCandidateFinder {
     private final DynamicNetworkGrammar grammar;

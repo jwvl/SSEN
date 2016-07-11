@@ -3,7 +3,6 @@
  */
 package grammar;
 
-import com.typesafe.config.ConfigFactory;
 import eval.Evaluation;
 import forms.FormPair;
 import grammar.levels.Level;
@@ -25,7 +24,6 @@ public abstract class Grammar {
     private final String name;
     private final Con con;
     private final LearningProperties defaultLearningProperties;
-    private final double stratumMultiplier;
     private CandidateSpaces candidateSpaces;
 
     /**
@@ -38,7 +36,6 @@ public abstract class Grammar {
         this.name = name;
         this.con = con;
         this.defaultLearningProperties = learningProperties;
-        this.stratumMultiplier = ConfigFactory.load().getDouble("system.stratumMultiplier");
     }
 
 
@@ -100,4 +97,5 @@ public abstract class Grammar {
     }
 
 
+    public abstract void resetConstraints();
 }

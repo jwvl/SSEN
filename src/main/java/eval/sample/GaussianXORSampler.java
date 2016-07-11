@@ -4,7 +4,7 @@
 package eval.sample;
 
 import org.uncommons.maths.random.GaussianGenerator;
-import org.uncommons.maths.random.MersenneTwisterRNG;
+import org.uncommons.maths.random.XORShiftRNG;
 
 import java.util.Random;
 
@@ -16,7 +16,7 @@ import java.util.Random;
  */
 public class GaussianXORSampler extends AbstractSampler {
     private GaussianGenerator gg;
-    private static Random defaultRandom = new MersenneTwisterRNG();
+    private static Random defaultRandom = new XORShiftRNG();
 
     private GaussianXORSampler(double mu, double sigma, Random r) {
         this.gg = new GaussianGenerator(mu, sigma, r);

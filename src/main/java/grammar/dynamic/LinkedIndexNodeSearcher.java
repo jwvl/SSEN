@@ -25,17 +25,17 @@ public class LinkedIndexNodeSearcher extends AbstractNodeSearcher<LinkedIndexNod
     }
 
     @Override
-    public void init(Form initialForm) {
+    public LinkedIndexNode getInitial(Form initialForm) {
         FormMapping newMapping = PairMapping.createInstance(null, initialForm);
         BitViolationVector emptyVector = new BitViolationVector(expectedNumConstraints,maxConstraintViolations);
-        getQueue().add(new LinkedIndexNode(null, newMapping,emptyVector));
+        return new LinkedIndexNode(null, newMapping,emptyVector);
 
     }
 
     @Override
-    public void addSuccessor(LinkedIndexNode parent, FormMapping formMapping, ConstraintArrayList constraintList) {
+    public LinkedIndexNode getSuccessor(LinkedIndexNode parent, FormMapping formMapping, ConstraintArrayList constraintList) {
         BitViolationVector emptyVector = new BitViolationVector(expectedNumConstraints,maxConstraintViolations);
         emptyVector.addConstraints(constraintList,hierarchy);
-        getQueue().add(new LinkedIndexNode(parent, formMapping, emptyVector));
+        return new LinkedIndexNode(parent, formMapping, emptyVector);
     }
 }

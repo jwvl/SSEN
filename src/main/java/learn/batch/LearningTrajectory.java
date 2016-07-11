@@ -10,6 +10,7 @@ import grammar.Grammar;
 import learn.ViolatedCandidate;
 import learn.data.LearningData;
 import learn.stats.ErrorCounter;
+import learn.update.UpdateAction;
 import ranking.GrammarHierarchy;
 import util.debug.Timer;
 
@@ -25,6 +26,7 @@ public class LearningTrajectory extends AbstractLearningTrajectory {
     private int numEvaluations;
     private static boolean TEST_RESULTS = false;
     private final int resetCounterEvery;
+    private UpdateAction lastUpdate = UpdateAction.NO_UPDATE;
 
 
     public LearningTrajectory(Grammar grammar, LearningData data, int numEvaluations) {
@@ -39,8 +41,8 @@ public class LearningTrajectory extends AbstractLearningTrajectory {
         double plasticity = getLearningProperties().getInitialPlasticity();
         ErrorCounter shortCounter = new ErrorCounter();
         int numEvaluated = 0;
-        ExecutorCompletionService<Boolean> completionService =
-                new ExecutorCompletionService<Boolean>(executorService);
+        ExecutorCompletionService<UpdateAction> completionService =
+                new ExecutorCompletionService<UpdateAction>(executorService);
         int counter = 0;
         int epochSize = numEvaluations / getLearningProperties().getPlasticityEpochs();
         while (counter < numEvaluations && getData().hasNext()) {
@@ -55,11 +57,14 @@ public class LearningTrajectory extends AbstractLearningTrajectory {
 
         while (numEvaluated < numEvaluations) {
             try {
-                Future<Boolean> resultFuture = completionService.take();
-                Boolean success = resultFuture.get();
+                Future<UpdateAction> resultFuture = completionService.take();
+                UpdateAction updateAction = resultFuture.get();
                 numEvaluated++;
-                boolean error = !success;
+                boolean error = updateAction != UpdateAction.NO_UPDATE;
                 shortCounter.increaseCount(error);
+                if (error) {
+                    lastUpdate = updateAction;
+                }
             } catch (InterruptedException | ExecutionException e) {
                 e.printStackTrace();
                 numEvaluated = numEvaluations;
@@ -68,6 +73,7 @@ public class LearningTrajectory extends AbstractLearningTrajectory {
             if (shortCounter.getTotal() >= resetCounterEvery) {
                 String intermediateResult = String.format("Current error rate: %s (%s pct)", shortCounter.getErrorAsRatio(), shortCounter.getErrorAsPercentage());
                 System.out.println(intermediateResult);
+//                System.out.println(lastUpdate.toPrettyString());
                 shortCounter.reset();
             }
         }

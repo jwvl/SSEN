@@ -5,7 +5,7 @@ package gen.alignment;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableList.Builder;
-import forms.MorphemeCollection;
+import forms.morphosyntax.MorphemeCollection;
 import forms.morphosyntax.MForm;
 import forms.morphosyntax.Morpheme;
 import forms.phon.LexicalMapping;
@@ -73,4 +73,12 @@ public class MorphemePhoneAlignment {
 
     }
 
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("MorphemePhoneAlignment{");
+        sb.append("index=").append(index);
+        sb.append(", lexicalMappings=").append(lexicalMappings);
+        sb.append('}');
+        return sb.toString();
+    }
 }

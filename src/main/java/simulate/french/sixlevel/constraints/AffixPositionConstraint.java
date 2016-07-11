@@ -61,11 +61,11 @@ public class AffixPositionConstraint extends FormConstraint<MForm> {
     private int getViolations(MorphologicalWord morphologicalWord) {
         int result = 0;
         if (morphologicalWord.getCategory().equals(relevantCategory)) {
-            List<Morpheme> morphemes = morphologicalWord.elementsAsList();
+            Morpheme[] morphemes = morphologicalWord.elementsAsArray();
             int increment = getIncrement(side);
             int conceptIndex = morphologicalWord.getConceptMorphemeIndex();
             for (int i = conceptIndex + increment; i >= 0 && i < morphologicalWord.size(); i += increment) {
-                Morpheme toCheck = morphemes.get(i);
+                Morpheme toCheck = morphemes[i];
                 if (toCheck.getAttributes().equals(offendingAttributes))
                     result += (Math.abs(conceptIndex - i)) - 1;
             }

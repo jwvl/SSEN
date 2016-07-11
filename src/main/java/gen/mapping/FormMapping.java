@@ -15,10 +15,12 @@ public abstract class FormMapping {
     private final Form left;
     private final Form right;
     private final static String arrow = " > ";
+    private final int hashCode;
 
     public FormMapping(Form f, Form g) {
         this.left = f;
         this.right = g;
+        this.hashCode = computeHashCode();
     }
 
     public FormPair getFormPair() {
@@ -59,6 +61,11 @@ public abstract class FormMapping {
 
     @Override
     public int hashCode() {
+        return hashCode;
+    }
+
+
+    public int computeHashCode() {
         int result = left != null ? left.hashCode() : 0;
         result = 31 * result + (right != null ? right.hashCode() : 0);
         return result;

@@ -4,7 +4,7 @@
 package io.phoneticdata;
 
 import io.MyStringTable;
-import phonetics.FeatureScale;
+import phonetics.DiscretizedScale;
 import util.arrays.ArrayTricks;
 
 import java.util.HashMap;
@@ -17,17 +17,17 @@ import java.util.Map;
  */
 public class PhoneticDataReader {
     private final MyStringTable stringTable;
-    private Map<String, FeatureScale> columnsToScales;
+    private Map<String, DiscretizedScale> columnsToScales;
 
     /**
      * @param stringTable
      */
     private PhoneticDataReader(MyStringTable stringTable) {
         this.stringTable = stringTable;
-        this.columnsToScales = new HashMap<String, FeatureScale>();
+        this.columnsToScales = new HashMap<String, DiscretizedScale>();
     }
 
-    public void addScale(String columnName, FeatureScale scale) {
+    public void addScale(String columnName, DiscretizedScale scale) {
         if (stringTable.hasColumn(columnName)) {
             columnsToScales.put(columnName, scale);
         }

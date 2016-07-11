@@ -1,38 +1,41 @@
-Phone	Consonantal	Sonority	String
-m	C	N	m
-n	C	N	n
-ɲ	C	N	ɲ
-ŋ	C	N	ŋ
-p	C	P	p
-t	C	P	t
-k	C	P	k
-b	C	P	b
-d	C	P	d
-g	C	P	g
-f	C	F	f
-s	C	F	s
-ʃ	C	F	ʃ
-v	C	F	v
-z	C	F	z
-ʒ	C	F	ʒ
-l	C	L	l
-ʁ	C	L	ʁ
-j	C	J	j
-ɥ	C	J	ɥ
-w	C	J	w
-i	V	V	i
-y	V	V	y
-u	V	V	u
-e	V	V	e
-ø	V	V	ø
-ɛ	V	V	ɛ
-ɔ	V	V	ɔ
-ə	V	V	ə
-œ	V	V	œ
-o	V	V	o
-a	V	V	a
-a	V	V	a
-&	V	V	ɑ̃
-3	V	V	ɛ̃
-Q	V	V	ɔ̃
-Y	V	V	œ̃
+Phone,Consonantal,Sonority,String
+m,C,N,m
+n,C,N,n
+ɲ,C,N,ɲ
+ŋ,C,N,ŋ
+p,C,P,p
+t,C,P,t
+k,C,P,k
+b,C,P,b
+d,C,P,d
+g,C,P,g
+f,C,F,f
+s,C,F,s
+ʃ,C,F,ʃ
+v,C,F,v
+z,C,F,z
+ʒ,C,F,ʒ
+l,C,L,l
+ʁ,C,L,ʁ
+j,C,J,j
+ɥ,C,J,ɥ
+w,C,J,w
+i,V,V,i
+y,V,V,y
+u,V,V,u
+e,V,V,e
+ø,V,V,ø
+ɛ,V,V,ɛ
+ɔ,V,V,ɔ
+ə,V,V,ə
+œ,V,V,œ
+o,V,V,o
+a,V,V,a
+a,V,V,a
+&,V,V,ɑ̃
+3,V,V,ɛ̃
+Q,V,V,ɔ̃
+Y,V,V,œ̃
+ɪ,V,V,ɪ
+ʊ,V,V,ʊ
+æ,V,V,æ

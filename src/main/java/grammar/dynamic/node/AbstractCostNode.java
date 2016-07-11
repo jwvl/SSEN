@@ -45,4 +45,5 @@ public abstract class AbstractCostNode<C extends AbstractCostNode> {
         result = 31 * result + (formMapping != null ? formMapping.hashCode() : 0);
         return result;
     }
+
 }

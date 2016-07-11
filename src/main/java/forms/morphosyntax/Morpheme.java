@@ -10,16 +10,13 @@ import forms.ElementCollection;
 import forms.primitives.Subform;
 import util.string.CollectionPrinter;
 
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author jwvl
  * @date Dec 9, 2014
  */
-public class Morpheme extends Subform implements ElementCollection<MElement> {
+public class Morpheme implements Subform, ElementCollection<MElement> {
 
     private final ImmutableSortedSet<MElement> features;
     private final AttributeSet attributes;
@@ -39,9 +36,6 @@ public class Morpheme extends Subform implements ElementCollection<MElement> {
      * @return
      */
     private AttributeSet getAttributeSet(ImmutableSortedSet<MElement> features) {
-        if (this.hasConceptFeature()) {
-            return AttributeSet.STEM;
-        }
         Set<String> attributes = Sets.newHashSet();
         for (MElement mElement : features) {
             attributes.add(mElement.getFeature().getAttribute());
@@ -71,28 +65,21 @@ public class Morpheme extends Subform implements ElementCollection<MElement> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
-        Morpheme mElements = (Morpheme) o;
-
-        if (features != null ? !features.equals(mElements.features) : mElements.features != null) return false;
-        if (attributes != null ? !attributes.equals(mElements.attributes) : mElements.attributes != null) return false;
-        return syntacticCategory == mElements.syntacticCategory;
-
+        Morpheme morpheme = (Morpheme) o;
+        return Objects.equals(features, morpheme.features) &&
+                syntacticCategory == morpheme.syntacticCategory;
     }
 
     @Override
     public int hashCode() {
-        int result = features != null ? features.hashCode() : 0;
-        result = 31 * result + (attributes != null ? attributes.hashCode() : 0);
-        result = 31 * result + (syntacticCategory != null ? syntacticCategory.hashCode() : 0);
-        return result;
+        return Objects.hash(features, syntacticCategory);
     }
 
     /*
-         * (non-Javadoc)
-         *
-         * @see forms.primitives.SubForm#isNullElement()
-         */
+             * (non-Javadoc)
+             *
+             * @see forms.primitives.SubForm#isNullElement()
+             */
     @Override
     public boolean isNull() {
         return this.equals(NULL_MORPHEME);
@@ -101,7 +88,7 @@ public class Morpheme extends Subform implements ElementCollection<MElement> {
     /*
      * (non-Javadoc)
      *
-     * @see forms.primitives.SubForm#size()
+     * @see forms.primitives.SubForm#getNumSteps()
      */
     @Override
     public int size() {
@@ -207,9 +194,9 @@ public class Morpheme extends Subform implements ElementCollection<MElement> {
      */
     @Override
     public int getIndexOf(MElement subform, int startAt) {
-        List<MElement> listToSearch = elementsAsList();
-        for (int i = startAt; i < listToSearch.size(); i++) {
-            if (listToSearch.get(i).equals(subform)) {
+        MElement[] listToSearch =elementsAsArray();;
+        for (int i = startAt; i < listToSearch.length; i++) {
+            if (listToSearch[i].equals(subform)) {
                 return i;
             }
         }

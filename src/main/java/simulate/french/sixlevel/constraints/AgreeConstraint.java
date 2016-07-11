@@ -19,9 +19,6 @@ public class AgreeConstraint extends FormConstraint<MStructure> {
 
     private final AffixType affixType;
 
-    /**
-     * @param leftLevel
-     */
     public AgreeConstraint(AffixType affixType) {
         super(BiPhonSix.getMstructureLevel());
         this.affixType = affixType;

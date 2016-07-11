@@ -22,13 +22,12 @@ import java.util.Map;
  * @author jwvl
  * @date 15/11/2014
  */
-public class Phone extends Subform implements Comparable<Phone> {
+public class Phone implements Subform, Comparable<Phone> {
 
     private Sonority sonority;
     private final byte id;
     private final char contentAsChar;
     private String stringAlias;
-
     private static final byte idOffset = 127;
     private static byte idCounter = 0 - idOffset;
     private static Phone[] byteMap = new Phone[256];
@@ -75,6 +74,10 @@ public class Phone extends Subform implements Comparable<Phone> {
     @Override
     public String toString() {
         return this == NULL ? "∅" : String.valueOf(contentAsChar);
+    }
+
+    public String toPrettyString() {
+        return toString();
     }
 
     public char getCharValue() {

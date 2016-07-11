@@ -20,6 +20,7 @@ import java.util.List;
 public class MfUfMapping extends FormMapping {
 
     private final LexicalMapping[] lexicalMappings;
+    private final int hashCode;
 
     /**
      * @param f
@@ -28,6 +29,7 @@ public class MfUfMapping extends FormMapping {
     private MfUfMapping(MForm f, UnderlyingForm g, LexicalMapping[] mappings) {
         super(f, g);
         this.lexicalMappings = mappings;
+        this.hashCode = computeHashCode();
     }
 
 
@@ -86,10 +88,14 @@ public class MfUfMapping extends FormMapping {
 
     }
 
-    @Override
-    public int hashCode() {
+    public int computeHashCode() {
         int result = super.hashCode();
         result = 31 * result + Arrays.deepHashCode(lexicalMappings);
         return result;
+    }
+
+    @Override
+    public int hashCode() {
+        return hashCode;
     }
 }

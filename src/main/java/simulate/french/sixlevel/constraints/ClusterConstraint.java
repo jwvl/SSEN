@@ -14,11 +14,11 @@ import ranking.constraints.FormConstraint;
  * @author jwvl
  * @date Jul 26, 2015
  */
-public class OnsetCodaConstraint extends FormConstraint<SurfaceForm> {
+public class ClusterConstraint extends FormConstraint<SurfaceForm> {
 
     private final ConsonantCluster forbiddenCluster;
 
-    private OnsetCodaConstraint(ConsonantCluster forbiddenCluster) {
+    private ClusterConstraint(ConsonantCluster forbiddenCluster) {
         super(BiPhonSix.getSurfaceFormLevel());
         this.forbiddenCluster = forbiddenCluster;
     }
@@ -53,7 +53,12 @@ public class OnsetCodaConstraint extends FormConstraint<SurfaceForm> {
      */
     @Override
     public String toString() {
-        return "*" + forbiddenCluster.toString();
+        if (forbiddenCluster == ConsonantCluster.EMPTY_ONSET) {
+            return ("NoOnset");
+        } else if (forbiddenCluster == ConsonantCluster.EMPTY_CODA) {
+            return ("NoCoda");
+
+        } else return "*" + forbiddenCluster.toString();
     }
 
     /*
@@ -69,9 +74,9 @@ public class OnsetCodaConstraint extends FormConstraint<SurfaceForm> {
     /**
      * @return
      */
-    public static OnsetCodaConstraint createInstance(
+    public static ClusterConstraint createInstance(
             ConsonantCluster forbiddenProfile) {
-        return new OnsetCodaConstraint(forbiddenProfile);
+        return new ClusterConstraint(forbiddenProfile);
     }
 
 }

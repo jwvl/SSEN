@@ -42,7 +42,7 @@ public class Combinatorics {
     }
 
     /**
-     * Returns size two int with index and value of 'leftmost nonzero' value
+     * Returns getNumSteps two int with index and value of 'leftmost nonzero' value
      * of an int array. Returns {-1,-1} is nothing can be found.
      *
      * @param input

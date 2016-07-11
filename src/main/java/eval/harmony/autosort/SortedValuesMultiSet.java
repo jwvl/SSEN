@@ -136,7 +136,7 @@ public class SortedValuesMultiSet extends AutoSortedList<SortingValues> {
     }
 
     /* (non-Javadoc)
-     * @see util.collections.AutoSortedList#size()
+     * @see util.collections.AutoSortedList#getNumSteps()
      */
     @Override
     public int size() {

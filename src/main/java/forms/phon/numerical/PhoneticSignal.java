@@ -16,7 +16,7 @@ import java.util.Set;
  * @author jwvl
  * @date 03/12/2015
  */
-public class PhoneticSignal extends Subform implements ElementCollection<PhoneticElement> {
+public class PhoneticSignal implements Subform, ElementCollection<PhoneticElement> {
 
     private final ImmutableSortedSet<PhoneticElement> elements;
 
@@ -138,7 +138,7 @@ public class PhoneticSignal extends Subform implements ElementCollection<Phoneti
     }
 
     /* (non-Javadoc)
-     * @see forms.primitives.Subform#size()
+     * @see forms.primitives.Subform#getNumSteps()
      */
     @Override
     public int size() {

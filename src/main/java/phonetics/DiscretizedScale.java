@@ -4,6 +4,8 @@
 package phonetics;
 
 
+import forms.primitives.feature.ScaleFeature;
+
 /**
  * @author jwvl
  * @date 04/10/2015
@@ -15,20 +17,24 @@ public class DiscretizedScale {
     private final double stepSize;
     private final double scaleLength;
     private final int numSteps;
+    private final ScaleFeature[] values;
 
 
     /**
      * @param minValue
-     * @param unitSize
-     * @param numUnits
+
      */
-    DiscretizedScale(Measure measure, double minValue, double stepSize, int numSteps) {
+    public DiscretizedScale(Measure measure, double minValue, double stepSize, int numSteps) {
         this.measure = measure;
         this.minValue = minValue;
         this.stepSize = stepSize;
         this.numSteps = numSteps;
         this.maxValue = minValue + (stepSize * (numSteps - 1));
         this.scaleLength = maxValue - minValue;
+        this.values = new ScaleFeature[numSteps];
+        for (int i=0; i < numSteps; i++) {
+            values[i] = ScaleFeature.createInstance(this,i);
+        }
 
     }
 
@@ -58,8 +64,18 @@ public class DiscretizedScale {
     /**
      * @return
      */
-    public int size() {
+    public int getNumSteps() {
         return numSteps;
+    }
+
+    public ScaleFeature getFeatureForValue(int step) {
+        step = Math.max(0,step);
+        step = Math.min(numSteps-1,step);
+        return values[step];
+    }
+
+    public ScaleFeature[] getValues() {
+        return values;
     }
 
 

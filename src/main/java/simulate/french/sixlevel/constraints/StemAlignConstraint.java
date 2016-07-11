@@ -11,6 +11,7 @@ import java.util.Objects;
 
 /**
  * Created by janwillem on 31/03/16.
+ * TODO investigate whether this really works or results in harmonically bound forms.
  */
 public class StemAlignConstraint extends FormConstraint<MForm> {
     private final Side side;

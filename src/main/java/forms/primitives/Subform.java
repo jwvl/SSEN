@@ -9,22 +9,18 @@ package forms.primitives;
  *
  * @author Jan-Willem van Leussen, Nov 12, 2014
  */
-public abstract class Subform {
+public interface Subform {
+    
+     boolean equals(Object o);
 
-    public static Subform getNull() {
-        return NullSubform.getInstance();
-    }
+     int hashCode();
 
-    public abstract boolean equals(Object o);
+     boolean isNull();
 
-    public abstract int hashCode();
-
-    public abstract boolean isNull();
-
-    public abstract int size();
+     int size();
 
     @Override
-    public abstract String toString();
+     String toString();
 
 
 }

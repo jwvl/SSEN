@@ -30,6 +30,7 @@ import learn.PairDistribution;
 import learn.batch.LearningTrajectory;
 import simulate.french.sixlevel.helpers.LexicalHypothesisRepository;
 import simulate.french.sixlevel.subgens.*;
+import util.debug.Stopwatch;
 import util.debug.Timer;
 import util.string.ngraph.NGraphMap;
 
@@ -44,8 +45,6 @@ import java.util.Set;
  */
 public class SixLevelFrenchDynamic {
 
-    private static String propertiesFileName = "data/properties/test.properties";
-    private static String grammarPropertiesFileName = "data/properties/grammar.properties";
     private static SubstringDatabank lcsData;
     private static NGraphMap bigraphs;
 
@@ -61,8 +60,9 @@ public class SixLevelFrenchDynamic {
         String phoneInfoFileName = config.getString("files.phoneInfo");
         String dataFileName = config.getString("files.learningData");
 
-        MyStringTable phonesTable = MyStringTable.fromFile(phoneInfoFileName, true, "\t");
-        Phone.getFromStringTable(phonesTable, "Phone", "String", "Consonantal");
+        MyStringTable phonesTable = MyStringTable.fromFile(phoneInfoFileName, true, ",");
+        String sonorityColumn = config.getString("implementation.sonorityType");
+        Phone.getFromStringTable(phonesTable, "Phone", "String", sonorityColumn);
 
         // String testString = "ptitom";
         // PhoneticForm form = PhoneticForm.createFromString(testString);
@@ -143,30 +143,37 @@ public class SixLevelFrenchDynamic {
         grammar.addSubGen(ms_mf_gen);
         grammar.addSubGen(mf_uf_gen);
         // UF gen;
-        PredefinedUFToSF uf_sf_gen = new PredefinedUFToSF(repository);
+        PredefinedUFToSF uf_sf_gen = new PredefinedUFToSF();
         grammar.addSubGen(uf_sf_gen);
         SFtoPF sf_pf_gen = new SFtoPF();
         grammar.addSubGen(sf_pf_gen);
 
         setCaching(grammar, mappingCacheSize);
 
-        System.out.println("Creating candidate spaces!");
-        CandidateSpaces candidateSpaces = CandidateSpaces.fromDistribution(pairDistribution, grammar);
-        grammar.addCandidateSpaces(candidateSpaces);
+        if (ConfigFactory.load().getBoolean("grammar.useCandidateSpaces")) {
+            System.out.println("Creating candidate spaces!");
+            CandidateSpaces candidateSpaces = CandidateSpaces.fromDistribution(pairDistribution, grammar);
+            grammar.addCandidateSpaces(candidateSpaces);
+        }
 
         Timer timer = new Timer();
         System.out.println("Testing grammar on learning data...");
         GrammarTester.testGrammarOnLearningData(grammar, pairDistribution, 20, 1.0);
         timer.reportElapsedTime("Did tests in ", false);
 
-        LearningTrajectory trajectory = new LearningTrajectory(grammar, pairDistribution, numEvaluations);
-        trajectory.launch(numThreads);
 
+        int numTests = 20;
+        Stopwatch.start();
+        for (int i=0; i < numTests; i++) {
+            LearningTrajectory trajectory = new LearningTrajectory(grammar, pairDistribution, numEvaluations);
+            trajectory.launch(numThreads);
+            Stopwatch.reportElapsedTime("Finished testing in ", true);
+            System.out.println("Final ranking:");
+            grammar.getRankedCon().printContents();
+            GrammarTester.testGrammarOnLearningData(grammar, pairDistribution,200,1.0);
+            grammar.resetConstraints();
+        }
 
-
-        // SF <-- AudF
-        // UF <-- SF
-        // MForm --> SFe
 
     }
 

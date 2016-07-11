@@ -26,17 +26,18 @@ public class IndexedNodeSearcher extends AbstractNodeSearcher<IndexedCostNode> {
     }
 
     @Override
-    public void init(Form initialForm) {
+    public IndexedCostNode getInitial(Form initialForm) {
         FormMapping newMapping = PairMapping.createInstance(null, initialForm);
+     //   ViolationVector emptyVector = MinMaxViolationVector.create(maxConstraintViolations,expectedNumConstraints);
         ViolationVector emptyVector = ShortViolationVector.create();
-        getQueue().add(new IndexedCostNode(null, newMapping,emptyVector));
+        return new IndexedCostNode(null, newMapping,emptyVector);
 
     }
 
     @Override
-    public void addSuccessor(IndexedCostNode parent, FormMapping formMapping, ConstraintArrayList constraintList) {
+    public IndexedCostNode getSuccessor(IndexedCostNode parent, FormMapping formMapping, ConstraintArrayList constraintList) {
         ViolationVector copiedVector = parent.getCost().copy();
         copiedVector.addConstraints(constraintList,hierarchy);
-        getQueue().add(new IndexedCostNode(parent, formMapping, copiedVector));
+        return new IndexedCostNode(parent, formMapping, copiedVector);
     }
 }

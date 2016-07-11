@@ -20,15 +20,14 @@ public class SimpleNodeSearcher extends AbstractNodeSearcher<SimpleCostNode> {
         this.costFactory = costFactory;
     }
 
-    public void init(Form initialForm) {
-        getQueue().add(SimpleCostNode.createNew(initialForm));
+    public SimpleCostNode getInitial(Form initialForm) {
+        return SimpleCostNode.createNew(initialForm);
     }
 
-    public void addSuccessor(SimpleCostNode parent, FormMapping formMapping, ConstraintArrayList constraintList) {
+    public SimpleCostNode getSuccessor(SimpleCostNode parent, FormMapping formMapping, ConstraintArrayList constraintList) {
         double[] cost = costFactory.getDoubleArray(constraintList);
         double[] mergedCost = DoubleArraySorter.mergeWithSorted(parent.getCost(), cost);
-        SimpleCostNode successor = new SimpleCostNode(parent, mergedCost, formMapping);
-        getQueue().add(successor);
+        return new SimpleCostNode(parent, mergedCost, formMapping);
     }
 
 

@@ -40,7 +40,7 @@ public abstract class PhoneSequence implements LinearForm<Phone> {
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < contents.size(); i++) {
             appendPossibleBoundary(i, builder);
-            builder.append(contents.getElementAt(i));
+            builder.append(contents.getElementAt(i).toPrettyString());
         }
         appendPossibleBoundary(contents.size(), builder);
         return builder.toString();

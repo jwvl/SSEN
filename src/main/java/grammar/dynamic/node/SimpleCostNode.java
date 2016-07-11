@@ -9,7 +9,7 @@ import util.arrays.DoubleArraySorter;
  * Created by janwillem on 29/03/16.
  */
 public class SimpleCostNode extends AbstractCostNode<SimpleCostNode> implements Comparable<SimpleCostNode> {
-    private final double[] cost;
+    private double[] cost;
 
     public SimpleCostNode(SimpleCostNode parent, double[] cost, FormMapping formMapping) {
         super(parent, formMapping);
@@ -19,6 +19,7 @@ public class SimpleCostNode extends AbstractCostNode<SimpleCostNode> implements 
     public SimpleCostNode createSuccessor(FormMapping mapping, double[] newCost) {
         double[] mergedCost = DoubleArraySorter.mergeWithSorted(cost, newCost);
         SimpleCostNode successor = new SimpleCostNode(this, mergedCost, mapping);
+        cost = null;
         return successor;
     }
 

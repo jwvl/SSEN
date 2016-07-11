@@ -8,8 +8,6 @@ import gen.rule.string.Side;
 import grammar.levels.predefined.BiPhonSix;
 import ranking.constraints.FormConstraint;
 
-import java.util.List;
-
 /**
  * @author jwvl
  * @date Jul 31, 2015
@@ -21,9 +19,6 @@ public class MorphAlignConstraint extends FormConstraint<MForm> {
     private final Side side;
     private final String name;
 
-    /**
-     * @param leftLevel
-     */
     public MorphAlignConstraint(SyntacticCategory syntacticCategory,
                                 AttributeSet attributeSet, Side side) {
         super(BiPhonSix.getMformLevel());
@@ -64,12 +59,12 @@ public class MorphAlignConstraint extends FormConstraint<MForm> {
     private int getViolations(MorphologicalWord morphologicalWord) {
         int result = 0;
         if (morphologicalWord.getCategory().equals(relevantCategory)) {
-            List<Morpheme> morphemes = morphologicalWord.elementsAsList();
+            Morpheme[] morphemes = morphologicalWord.elementsAsArray();
             for (int i = 0; i < morphologicalWord.size(); i++) {
-                Morpheme morpheme = morphemes.get(i);
+                Morpheme morpheme = morphemes[i];
                 AttributeSet offenders = morpheme.getAttributes();
                 if (offenders.equals(offendingAttributes)) {
-                    result += calculateViolations(i, morphemes.size());
+                    result += calculateViolations(i, morphemes.length);
                 }
             }
 

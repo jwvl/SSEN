@@ -18,7 +18,7 @@ public class IndexedSampledHierarchy extends SampledHierarchy {
         super(original);
         this.original = original;
         for (RankedConstraint rankedConstraint: rankedConstraints) {
-            put(rankedConstraint.getConstraint(), rankedConstraint.getRanking());
+            addConstraint(rankedConstraint.getConstraint(),rankedConstraint.getRanking());
         }
         indexedRanking = new IndexedRanking(rankedConstraints);
     }

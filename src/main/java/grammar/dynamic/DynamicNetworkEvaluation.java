@@ -8,7 +8,7 @@ import com.typesafe.config.ConfigFactory;
 import eval.Evaluation;
 import eval.harmony.CostFactory;
 import eval.harmony.CostType;
-import eval.sample.UniformRandomSampler;
+import eval.sample.GaussianXORSampler;
 import forms.Form;
 import forms.FormPair;
 import forms.GraphForm;
@@ -42,7 +42,7 @@ public class DynamicNetworkEvaluation implements Evaluation {
 
     public DynamicNetworkEvaluation(DynamicNetworkGrammar dynamicNetworkGrammar, double evaluationNoise) {
         this(dynamicNetworkGrammar,
-                new DynamicSampledHierarchy(dynamicNetworkGrammar.getRankedCon(), UniformRandomSampler.createInstance(evaluationNoise)));
+                new DynamicSampledHierarchy(dynamicNetworkGrammar.getRankedCon(), GaussianXORSampler.createInstance(evaluationNoise)));
     }
 
     public DynamicNetworkEvaluation(DynamicNetworkGrammar dynamicNetworkGrammar,
@@ -111,7 +111,7 @@ public class DynamicNetworkEvaluation implements Evaluation {
 
                 for (FormMapping formMapping : subCandidateSet) {
                     ConstraintArrayList constraints = getConstraintsForMapping(formMapping);
-                    nodeSearcher.addSuccessor(nodeToExpand, formMapping, constraints);
+                    nodeSearcher.generateSuccessor(nodeToExpand, formMapping, constraints);
                 }
             }
         }
@@ -128,6 +128,7 @@ public class DynamicNetworkEvaluation implements Evaluation {
         }
 
         winner = backtrackedCandidate;
+        nodeSearcher.clearQueue();
 
     }
 
@@ -194,7 +195,7 @@ public class DynamicNetworkEvaluation implements Evaluation {
     /**
      * @return
      */
-    public DynamicSampledHierarchy getSampledGrammar() {
+    public DynamicSampledHierarchy getSampledHierarchy() {
         return sampledHierarchy;
     }
 

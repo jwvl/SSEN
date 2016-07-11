@@ -1,6 +1,6 @@
 package ranking.constraints.helper;
 
-import cern.colt.list.IntArrayList;
+import cern.colt.list.ShortArrayList;
 import com.typesafe.config.ConfigFactory;
 import ranking.constraints.Constraint;
 
@@ -11,17 +11,17 @@ import java.util.Iterator;
  * Created by janwillem on 31/03/16.
  */
 public class ConstraintArrayList implements Iterable<Constraint> {
-    private final IntArrayList list;
+    private final ShortArrayList list;
     private final static int DEFAULT_INITIAL_SIZE = ConfigFactory.load().getInt("implementation.standardConstraintListSize");
     public final static ConstraintArrayList EMPTY = create(0);
 
-    private ConstraintArrayList(IntArrayList list) {
+    private ConstraintArrayList(ShortArrayList list) {
         this.list = list;
     }
 
 
     public static ConstraintArrayList create(int initialSize) {
-        IntArrayList newList = new IntArrayList(initialSize);
+        ShortArrayList newList = new ShortArrayList(initialSize);
         return new ConstraintArrayList(newList);
     }
 
@@ -39,7 +39,7 @@ public class ConstraintArrayList implements Iterable<Constraint> {
     }
 
     public void addMultiple(Constraint constraint, int numToAdd) {
-        int id = constraint.getId();
+        short id = constraint.getId();
         for (int i = 0; i < numToAdd; i++) {
             list.add(id);
         }
@@ -83,6 +83,6 @@ public class ConstraintArrayList implements Iterable<Constraint> {
     }
 
     public void append(ConstraintArrayList other) {
-        list.addAllOf(other.list);
+        list.beforeInsertAllOfFromTo(list.size(),other.list,0,other.list.size()-1);
     }
 }

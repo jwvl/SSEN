@@ -57,8 +57,6 @@ public class LexicalConstraint extends MappingConstraint<MfUfMapping> {
     }
 
     /**
-     * @param morpheme
-     * @param phoneSubForm
      * @return
      */
     public static LexicalConstraint createInstance(LexicalMapping mapping) {
@@ -66,8 +64,6 @@ public class LexicalConstraint extends MappingConstraint<MfUfMapping> {
     }
 
     /**
-     * @param morpheme
-     * @param phoneSubForm
      * @return
      */
     public static LexicalConstraint createInstance(LexicalMapping mapping, double initialBias) {

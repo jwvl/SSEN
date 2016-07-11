@@ -19,8 +19,8 @@ public class MinMaxViolationVector implements ViolationVector {
 
 
     public static MinMaxViolationVector create(int max, int length) {
-        MinMaxNumberList list = new MinMaxNumberList(0,max,maxExpectedSize);
-        list.addAllOfFromTo(zeroes,0,maxExpectedSize-1);
+        MinMaxNumberList list = new MinMaxNumberList(0,max,length);
+   //     list.addAllOfFromTo(zeroes,0,maxExpectedSize-1);
         return new MinMaxViolationVector(list,max,length);
     }
 
@@ -38,7 +38,7 @@ public class MinMaxViolationVector implements ViolationVector {
 
     @Override
     public int size() {
-        return length;
+        return list.size();
     }
 
     @Override
@@ -48,29 +48,42 @@ public class MinMaxViolationVector implements ViolationVector {
 
     @Override
     public void set(int index, int value) {
-        list.setQuick(index,(long) value);
-        if (value < leftmostNonZero) {
-            leftmostNonZero = value;
-        }
+        setLong(index,value);
     }
 
     private void setLong(int index, long value) {
-        list.setQuick(index,value);
         if (index < leftmostNonZero) {
             leftmostNonZero = index;
         }
+        else {
+            appendZeroesIfNecessary(index);
+        }
+        list.setQuick(index,value);
+
     }
 
     @Override
     public void add(int index, int value) {
+        if (index < leftmostNonZero) {
+            leftmostNonZero = index;
+        }
+        else {
+            appendZeroesIfNecessary(index);
+        }
         list.setQuick(index,list.get(index)+value);
     }
 
     @Override
     public void increase(int index) {
-        list.setQuick(index,list.get(index)+1L);
-        if (index < leftmostNonZero) {
-            leftmostNonZero = index;
+        add(index, 1);
+
+    }
+
+    private void appendZeroesIfNecessary(int index) {
+        if (index > size()) {
+            for (int i= size(); i <= index;i++) {
+                list.add(0L);
+            }
         }
     }
 
@@ -108,7 +121,7 @@ public class MinMaxViolationVector implements ViolationVector {
         int firstResult = o.leftmostNonZero()-leftmostNonZero;
         if (firstResult!=0)
             return  firstResult;
-        for (int i=0; i < size() && i < o.size(); i++) {
+        for (int i=leftmostNonZero; i < size() && i < o.size(); i++) {
             int difference = get(i) - o.get(i);
             if (difference != 0) {
                 return difference;

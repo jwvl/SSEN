@@ -67,7 +67,7 @@ public class ListMap<K, V> implements Iterable<K> {
     }
 
     public void printAll() {
-        System.out.printf("ListMap, size: %d\n", contents.size());
+        System.out.printf("ListMap, getNumSteps: %d\n", contents.size());
         for (K k : this) {
             System.out.printf("%s has %d entries\n", k.toString(), contents.get(k).size());
         }

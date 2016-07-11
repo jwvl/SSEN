@@ -20,6 +20,17 @@ public class PartitionGenerator<O extends Object> {
     private List<O> inputsAsList;
     private List<Superset<O>> partitions;
 
+    public static void main(String[] args) {
+        String[] strings = {"AL","INAL","ADP","Sa","Sp","A","P"};
+        List<String> asList = Lists.newArrayList(strings);
+        PartitionGenerator<String> generator = new PartitionGenerator<String>(asList);
+        List<Superset<String>> result = generator.getPartitions();
+        int counter = 0;
+        for (Superset<String> family: result) {
+            System.out.println((++counter) + "\t" + family.toString());
+        }
+    }
+
 
     public PartitionGenerator(List<O> inputsAsList) {
         this.inputsAsList = inputsAsList;

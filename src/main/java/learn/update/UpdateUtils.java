@@ -10,6 +10,8 @@ import learn.ViolatedCandidate;
 import ranking.GrammarHierarchy;
 import ranking.constraints.Constraint;
 
+import java.util.Iterator;
+
 /**
  * @author jwvl
  * @date 19/09/2015
@@ -30,9 +32,11 @@ public class UpdateUtils {
     }
 
     public static Constraint getMax(Multiset<Constraint> multiSet, GrammarHierarchy con) {
-        double valMax = Double.MIN_VALUE;
-        Constraint argMax = null;
-        for (Constraint constraint : multiSet.elementSet()) {
+        Iterator<Constraint> iter = multiSet.iterator();
+        Constraint argMax = iter.next();
+        double valMax = con.getRanking(argMax);
+        while (iter.hasNext()) {
+            Constraint constraint = iter.next();
             double thisVal = con.getRanking(constraint);
             if (thisVal > valMax) {
                 valMax = thisVal;

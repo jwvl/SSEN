@@ -17,7 +17,7 @@ import java.util.*;
  * @author jwvl
  * @date Dec 16, 2014
  */
-public class PhoneSubForm extends Subform implements ElementCollection<Phone> {
+public class PhoneSubForm implements Subform, ElementCollection<Phone> {
     private final byte[] contents;
     public final static PhoneSubForm NULL_FORM = createNullForm();
 
@@ -39,7 +39,7 @@ public class PhoneSubForm extends Subform implements ElementCollection<Phone> {
     public String contentsAsString() {
         StringBuilder forStringRepresentation = new StringBuilder();
         for (byte b : contents) {
-            forStringRepresentation.append(Phone.getByCode(b).getCharValue());
+            forStringRepresentation.append(Phone.getByCode(b).toPrettyString());
         }
         return forStringRepresentation.toString();
     }
@@ -62,7 +62,6 @@ public class PhoneSubForm extends Subform implements ElementCollection<Phone> {
     }
 
     /**
-     * @param phoneString
      * @return
      */
     public static PhoneSubForm createFromCollection(Collection<Phone> segments) {
@@ -71,11 +70,6 @@ public class PhoneSubForm extends Subform implements ElementCollection<Phone> {
         return new PhoneSubForm(segments);
     }
 
-    /**
-     * @param p
-     * @param eDGE
-     * @return
-     */
     public static PhoneSubForm createFromPhones(Phone... phones) {
         return new PhoneSubForm(phones);
     }
@@ -110,7 +104,7 @@ public class PhoneSubForm extends Subform implements ElementCollection<Phone> {
     /*
      * (non-Javadoc)
      *
-     * @see forms.primitives.SubForm#size()
+     * @see forms.primitives.SubForm#getNumSteps()
      */
     @Override
     public int size() {
@@ -220,7 +214,7 @@ public class PhoneSubForm extends Subform implements ElementCollection<Phone> {
      */
     @Override
     public int getIndexOf(Phone element) {
-        return elementsAsList().indexOf(element);
+        return ByteArrayUtils.indexOf(contents, element.getId());
     }
 
     public Phone getEdgemost(Side side) {
@@ -264,10 +258,6 @@ public class PhoneSubForm extends Subform implements ElementCollection<Phone> {
         return result.toString();
     }
 
-    /**
-     * @param eDGE
-     * @return
-     */
     public PhoneSubForm edgeAppend(Phone toAppend, Side side) {
         byte[] appendByte = {toAppend.getId()};
         byte[] result;

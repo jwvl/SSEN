@@ -17,13 +17,11 @@ import ranking.constraints.helper.ConstraintArrayList;
  * @author Jan-Willem van Leussen, Jan 15, 2015
  */
 public abstract class Constraint {
-    private final int id;
+    private final short id;
+    protected static short idCounter = 0;
     private static int DEFAULT_STRATUM = 0;
     private int stratum;
     private static Constraint[] map = new Constraint[ConfigFactory.load().getInt("implementation.expectedNumConstraints")];
-
-
-    protected static int idCounter = 0;
     private final double initialBias;
     protected final Level rightLevel;
 
@@ -98,7 +96,7 @@ public abstract class Constraint {
     /**
      * @return the id
      */
-    public int getId() {
+    public short getId() {
         return id;
     }
 

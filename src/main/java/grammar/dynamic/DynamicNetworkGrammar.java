@@ -14,8 +14,9 @@ import grammar.Grammar;
 import grammar.levels.Level;
 import grammar.levels.LevelSpace;
 import learn.batch.LearningProperties;
-import ranking.GrammarHierarchy;
 import ranking.DynamicSampledHierarchy;
+import ranking.GrammarHierarchy;
+import ranking.constraints.Constraint;
 import ranking.constraints.helper.ConstraintArrayList;
 
 import java.util.ArrayList;
@@ -54,22 +55,6 @@ public class DynamicNetworkGrammar extends Grammar {
         }
     }
 
-    /**
-     *
-     */
-    public void printRanking() {
-
-        con.printContents();
-
-    }
-
-    public void printStats() {
-        for (SubGen<?, ?> subGen : subGensByLevel) {
-            if (subGen != null) {
-                //subGen.printStats();
-            }
-        }
-    }
 
     /**
      * @param formLevel
@@ -97,6 +82,13 @@ public class DynamicNetworkGrammar extends Grammar {
         return con;
     }
 
+    @Override
+    public void resetConstraints() {
+        for (Constraint c: con) {
+            con.put(c,100.0);
+        }
+    }
+
 
     public SubGen<?, ?>[] getSubGensByLevel() {
         return subGensByLevel;
@@ -115,13 +107,10 @@ public class DynamicNetworkGrammar extends Grammar {
         }
         result.setStartAndEndForm(formPair);
         result.run();
-        lastSampledHierarchy = result.getSampledGrammar();
+        lastSampledHierarchy = result.getSampledHierarchy();
         return result;
     }
 
-    private boolean containsEndForms(FormPair formPair) {
-        return (formPair.left() == GraphForm.getSourceInstance() || formPair.right() == GraphForm.getSinkInstance());
-    }
 
     public List<Form> getSuccessors(Form form) {
         Level level = form.getLevel();
@@ -138,6 +127,9 @@ public class DynamicNetworkGrammar extends Grammar {
     }
 
     public ConstraintArrayList getViolators(FormMapping formMapping) {
+        if (formMapping.left() == null) {
+            return ConstraintArrayList.EMPTY;
+        }
         Level level = formMapping.left().getLevel();
         SubGen<?, ?> subGen = getSubGenForLevel(level);
         return subGen.getAssociatedConstraints(formMapping);

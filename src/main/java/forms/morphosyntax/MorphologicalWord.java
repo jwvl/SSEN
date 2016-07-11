@@ -16,7 +16,7 @@ import java.util.Set;
  * @author jwvl
  * @date Jul 31, 2015
  */
-public class MorphologicalWord extends Subform implements ElementCollection<Morpheme> {
+public class MorphologicalWord implements Subform, ElementCollection<Morpheme> {
 
     private final SyntacticCategory category;
     private final List<Morpheme> morphemes;
@@ -111,7 +111,7 @@ public class MorphologicalWord extends Subform implements ElementCollection<Morp
     }
 
     /* (non-Javadoc)
-     * @see forms.primitives.Subform#size()
+     * @see forms.primitives.Subform#getNumSteps()
      */
     @Override
     public int size() {

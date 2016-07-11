@@ -41,6 +41,7 @@ public abstract class Hierarchy implements Con {
             System.err.println("Map is null!!");
         } else if (constraint == null) {
             System.err.println("Constraint is null!");
+            return false;
         }
         return map[constraint.getId()] != Double.NEGATIVE_INFINITY;
     }

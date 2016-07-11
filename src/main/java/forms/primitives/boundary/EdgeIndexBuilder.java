@@ -29,7 +29,7 @@ public class EdgeIndexBuilder {
 
     private static IndexRepresentation loadRepresentationFromConfig() {
         Config config = ConfigFactory.load();
-        String stringRead = config.getString("system.edgeIndexRepresentation");
+        String stringRead = config.getString("implementation.edgeIndexRepresentation");
         return IndexRepresentation.valueOf(stringRead);
     }
 

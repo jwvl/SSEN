@@ -41,7 +41,7 @@ public class MStructureFactory {
 
     public static MStructureFactory createInstance(SemSynForm input) {
         List<Lexeme> copiedLexemes = new ArrayList<Lexeme>(input.size());
-        for (Lexeme l : input.elementsAsList()) {
+        for (Lexeme l : input) {
             copiedLexemes.add(l.copy());
         }
         MStructureFactory result = new MStructureFactory(copiedLexemes);

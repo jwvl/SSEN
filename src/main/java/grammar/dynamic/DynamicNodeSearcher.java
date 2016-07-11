@@ -20,13 +20,13 @@ public class DynamicNodeSearcher extends AbstractNodeSearcher<DynamicCostNode> {
     }
 
     @Override
-    public void init(Form initialForm) {
-        getQueue().add(new DynamicCostNode(null, PairMapping.createInstance(null, initialForm)));
+    public DynamicCostNode getInitial(Form initialForm) {
+        return new DynamicCostNode(null, PairMapping.createInstance(null, initialForm));
     }
 
 
     @Override
-    public void addSuccessor(DynamicCostNode parent, FormMapping formMapping, ConstraintArrayList constraintList) {
-        getQueue().add(new DynamicCostNode(parent, formMapping));
+    public DynamicCostNode getSuccessor(DynamicCostNode parent, FormMapping formMapping, ConstraintArrayList constraintList) {
+        return new DynamicCostNode(parent, formMapping);
     }
 }

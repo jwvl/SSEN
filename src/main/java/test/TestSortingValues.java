@@ -79,7 +79,7 @@ public class TestSortingValues {
         Stopwatch.reportElapsedTime("Re-sorting of array:", true);
         set.lazySort();
         Stopwatch.reportElapsedTime("Re-sorting of set:", true);
-        System.out.println(String.format("Size of list: %d, size of array: %d, size of set: %d", list.size(), array.size(), set.size()));
+        System.out.println(String.format("Size of list: %d, getNumSteps of array: %d, getNumSteps of set: %d", list.size(), array.size(), set.size()));
 
         list.printFirstN("List: ", 10);
         array.printFirstN("Array: ", 10);

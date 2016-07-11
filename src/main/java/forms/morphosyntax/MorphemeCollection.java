@@ -1,9 +1,9 @@
-package forms;
+package forms.morphosyntax;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Iterators;
-import forms.morphosyntax.Morpheme;
+import forms.ElementCollection;
 import util.string.CollectionPrinter;
 
 import java.util.Iterator;
@@ -65,7 +65,7 @@ public class MorphemeCollection implements ElementCollection<Morpheme> {
     /*
      * (non-Javadoc)
      *
-     * @see forms.ElementCollection#size()
+     * @see forms.ElementCollection#getNumSteps()
      */
     @Override
     public int size() {

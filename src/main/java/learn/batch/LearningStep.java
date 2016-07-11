@@ -16,7 +16,7 @@ import java.util.concurrent.Callable;
  * @author jwvl
  * @date 25/03/2016
  */
-public class LearningStep implements Callable<Boolean> {
+public class LearningStep implements Callable<UpdateAction> {
     private Grammar grammar;
     private final FormPair learningDatum;
     private final double plasticity;
@@ -39,7 +39,7 @@ public class LearningStep implements Callable<Boolean> {
         return new LearningStep(learningProperties, grammar, learningDatum, plasticity);
     }
 
-    public Boolean call() throws Exception {
+    public UpdateAction call() throws Exception {
         FormPair testPair = learningDatum.getUnlabeled(properties.getDirection());
         Evaluation freeEvaluation = grammar.evaluate(testPair, true,
                 properties.getEvaluationNoise());
@@ -47,7 +47,7 @@ public class LearningStep implements Callable<Boolean> {
         // timer.reportElapsedTime(String.format("Time to get first winner - %s",lCandidate.getCandidate()), true);
 
         if (correspondsWithLearningDatum(lCandidate)) {
-            return true;
+            return UpdateAction.NO_UPDATE;
         }
 
         Evaluation parsedEvaluation = grammar.evaluate(learningDatum, properties.isResample(),
@@ -59,7 +59,7 @@ public class LearningStep implements Callable<Boolean> {
         action.updateRanking(grammar.getRankedCon());
         //System.out.println(action.toPrettyString());
 
-        return false;
+        return action;
     }
 
     /**

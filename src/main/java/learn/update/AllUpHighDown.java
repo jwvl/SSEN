@@ -76,8 +76,13 @@ public class AllUpHighDown implements UpdateAlgorithm {
         Multiset<Constraint> violatedByTarget = UpdateUtils.getViolatedByTarget(lCandidate, tCandidate);
         Multiset<Constraint> toPromote = violatedByLearner.isEmpty() ? lCandidate.getConstraints() : violatedByLearner;
         UpdateUtils.multisetToUpdateAction(toPromote, delta, result);
-        Constraint maxViolatedByLearner = UpdateUtils.getMax(lCandidate.getConstraints(), con);
-        double maxVblValue = con.getRanking(maxViolatedByLearner);
+
+        Multiset<Constraint> toSearch = violatedByTarget.isEmpty() ? tCandidate.getConstraints() : violatedByTarget;
+        Constraint maxViolatedByTarget = UpdateUtils.getMax(toSearch, con);
+        if (maxViolatedByTarget == null) {
+            System.err.println("How can this?");
+        }
+        double maxVblValue = con.getRanking(maxViolatedByTarget);
 
         Multiset<Constraint> toDemote = getRankedAbove(maxVblValue, violatedByTarget, con);
         UpdateUtils.multisetToUpdateAction(toDemote, -delta, result);
@@ -86,6 +91,8 @@ public class AllUpHighDown implements UpdateAlgorithm {
                 System.err.println("This constraint is null?");
             }
         }
+
+
         return result;
     }
 

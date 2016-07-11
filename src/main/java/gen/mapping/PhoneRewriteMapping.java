@@ -16,7 +16,8 @@ import java.util.List;
  * @date Jul 23, 2015
  */
 public abstract class PhoneRewriteMapping<F extends Form, G extends Form> extends FormMapping {
-    private final List<PhoneTransform> rewrites;
+    private final ArrayList<PhoneTransform> rewrites;
+    private final int hashCode;
 
     public PhoneRewriteMapping(F before, G after, Collection<RewriteRule> rules) {
         super(before, after);
@@ -24,6 +25,8 @@ public abstract class PhoneRewriteMapping<F extends Form, G extends Form> extend
         for (RewriteRule rule : rules) {
             rewrites.addAll(rule.getTransforms());
         }
+        rewrites.trimToSize();
+        this.hashCode = computeHashCode();
     }
 
     public List<PhoneTransform> getRewrites() {
@@ -43,9 +46,14 @@ public abstract class PhoneRewriteMapping<F extends Form, G extends Form> extend
     }
 
     @Override
-    public int hashCode() {
+    public int computeHashCode() {
         int result = super.hashCode();
         result = 31 * result + (rewrites != null ? rewrites.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public int hashCode() {
+        return hashCode;
     }
 }

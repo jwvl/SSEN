@@ -22,7 +22,7 @@ import java.util.*;
  * @author jwvl
  * @date Dec 9, 2014
  */
-public class Lexeme extends Subform implements ElementCollection<MElement> {
+public class Lexeme implements Subform, ElementCollection<MElement> {
 
     private final SyntacticCategory category;
     private AgreementType type;
@@ -141,7 +141,7 @@ public class Lexeme extends Subform implements ElementCollection<MElement> {
     /*
      * (non-Javadoc)
      *
-     * @see forms.primitives.SubForm#size()
+     * @see forms.primitives.SubForm#getNumSteps()
      */
     @Override
     public int size() {

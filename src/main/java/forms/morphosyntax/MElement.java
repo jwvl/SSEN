@@ -21,7 +21,7 @@ import java.util.Set;
  * @author jwvl
  * @date Dec 24, 2014
  */
-public class MElement extends Subform {
+public class MElement implements Subform {
     private static int SERIAL_COUNTER = 0;
     private static Table<AbstractMFeature, MFeatureType, MElement> cache = HashBasedTable.create();
     private final int serialNumber;
@@ -107,7 +107,7 @@ public class MElement extends Subform {
     /*
      * (non-Javadoc)
      *
-     * @see forms.primitives.Subform#size()
+     * @see forms.primitives.Subform#getNumSteps()
      */
     @Override
     public int size() {
