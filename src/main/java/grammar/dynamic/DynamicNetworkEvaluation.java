@@ -82,14 +82,21 @@ public class DynamicNetworkEvaluation implements Evaluation {
     }
 
     public void run() {
+        int counter = 0;
 
         nodeSearcher.init(formPair.left());
 
         AbstractCostNode winnerNode = null;
         boolean winnerFound = false;
         while (!winnerFound && nodeSearcher.canExpand()) {
+            counter++;
+
             AbstractCostNode nodeToExpand = nodeSearcher.nextNode();
             Form formToExpand = nodeToExpand.getMappedForm();
+
+            if (counter % 5000 == 0) {
+                System.out.println("Expanded node # "+counter +": "+ formToExpand);
+            }
 
             if (formToExpand.getLevel() == getEndForm().getLevel()) {
 

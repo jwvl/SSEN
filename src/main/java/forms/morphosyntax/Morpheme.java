@@ -211,4 +211,15 @@ public class Morpheme implements Subform, ElementCollection<MElement> {
         return features.toArray(new MElement[size()]);
     }
 
+    public boolean containsAffixType(AffixType type) {
+        if (type.getSyntacticCategory() == syntacticCategory) {
+             for (MElement mElement: features) {
+                 if (mElement.getFeature().getAttribute().equals(type.getAttribute())) {
+                     return true;
+                 }
+             }
+        }
+        return false;
+    }
+
 }

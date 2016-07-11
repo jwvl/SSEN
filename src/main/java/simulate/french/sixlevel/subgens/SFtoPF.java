@@ -95,7 +95,7 @@ public class SFtoPF extends SubGen<SurfaceForm, PhoneticForm> implements
         List<EdgeBasedRule> result = Lists.newArrayList();
         if (ConfigFactory.load().getBoolean("gen.schwaRulesOnSF")) {
             result.addAll(EdgeBasedRuleBuilder.fromString("ə. → ∅ / __", Edge.SYLLABLE));
-            result.addAll(EdgeBasedRuleBuilder.fromString("∅. → ə / __|C", Edge.SYLLABLE));
+       //     result.addAll(EdgeBasedRuleBuilder.fromString("∅. → ə / __|C", Edge.SYLLABLE));
         }
         return result;
     }

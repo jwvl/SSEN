@@ -13,7 +13,7 @@ import gen.mapping.PairMapping;
 import gen.mapping.SubCandidateSet;
 import gen.subgen.SubGen;
 import grammar.levels.Level;
-import simulate.french.sixlevel.constraints.factories.AnalyzeConstraintFactory;
+import simulate.french.sixlevel.constraints.factories.MorphemeConstraintFactory;
 import simulate.french.sixlevel.constraints.factories.StemAlignConstraintFactory;
 
 import java.util.ArrayList;
@@ -35,7 +35,9 @@ public class MStructureToMForm extends SubGen<MStructure, MForm> {
         myFactory = MFormFactory.createInstance();
         //addConstraintFactory(new MorphAlignConstraintFactory());
         addConstraintFactory(new StemAlignConstraintFactory());
-        addConstraintFactory(new AnalyzeConstraintFactory());
+        //addConstraintFactory(new AnalyzeConstraintFactory());
+        addConstraintFactory(new MorphemeConstraintFactory());
+        //addConstraintFactory(new TypedAnalyzeConstraintFactory());
         addConstrainer(new MFormConstrainer());
     }
 
