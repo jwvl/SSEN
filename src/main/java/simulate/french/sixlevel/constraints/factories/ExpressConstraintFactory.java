@@ -39,9 +39,9 @@ public class ExpressConstraintFactory extends
     @Override
     public Collection<AffixType> findOffenders(MStructure transgressor) {
         Collection<AffixType> result = Sets.newHashSet();
-        for (Lexeme lexeme : transgressor) {
-            SyntacticCategory category = lexeme.getSyntacticCategory();
-            for (MElement element : lexeme) {
+        for (SyntacticWord syntacticWord : transgressor) {
+            SyntacticCategory category = syntacticWord.getSyntacticCategory();
+            for (MElement element : syntacticWord) {
                 // Only add constraints for non-concept features that do not express value
                 if (!element.isConcept()) {
                     AbstractMFeature feature = element.getFeature();

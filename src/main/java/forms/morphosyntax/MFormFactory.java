@@ -36,7 +36,7 @@ public class MFormFactory {
         List<MForm> result = Lists.newArrayList();
         ArrayList<Set<MBuilder>> orderingsPerLexeme = new ArrayList<Set<MBuilder>>(
                 input.size());
-        for (Lexeme l : input.getLexemes()) {
+        for (SyntacticWord l : input.getLexemes()) {
             List<MElement> lElements = l.getNonNullFeatures();
             Set<MElement> prePartitioned = new HashSet<MElement>(
                     lElements.size());
@@ -79,7 +79,7 @@ public class MFormFactory {
      * @return
      */
     private Set<MBuilder> makeMorphemePermutations(
-            List<Superset<MElement>> supersets, Lexeme l) {
+            List<Superset<MElement>> supersets, SyntacticWord l) {
         Set<MBuilder> result = Sets.newHashSet();
         for (Superset<MElement> superset : supersets) {
             Collection<List<Set<MElement>>> allPermutations = superset

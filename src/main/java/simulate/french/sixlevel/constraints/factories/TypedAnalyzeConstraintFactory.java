@@ -25,10 +25,10 @@ import java.util.Map;
  * @author jwvl
  * @date Aug 1, 2015
  */
-public class TypedAlignConstraintFactory extends FormConstraintFactory<MForm> {
+public class TypedAnalyzeConstraintFactory extends FormConstraintFactory<MForm> {
     private Map<AffixType, TypedAnalyzeConstraint> constraintCache;
 
-    public TypedAlignConstraintFactory() {
+    public TypedAnalyzeConstraintFactory() {
         constraintCache = Maps.newHashMap();
     }
 

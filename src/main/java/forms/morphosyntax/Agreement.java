@@ -17,7 +17,7 @@ public class Agreement {
     private final Couple<String> featureValues;
     private final AffixType affixType;
 
-    private Agreement(Couple<MElement> features, Couple<Lexeme> lexemes) {
+    private Agreement(Couple<MElement> features, Couple<SyntacticWord> lexemes) {
         SyntacticCategory dependentCat;
         String attributeString = features.getLeft().getFeature().getAttribute();
 
@@ -36,12 +36,12 @@ public class Agreement {
 
     }
 
-    public static Agreement between(MElement a, MElement b, Lexeme l, Lexeme r) {
+    public static Agreement between(MElement a, MElement b, SyntacticWord l, SyntacticWord r) {
         return new Agreement(Couple.of(a, b), Couple.of(l, r));
     }
 
     public static Agreement createInstance(Couple<MElement> couple,
-                                           Couple<Lexeme> lexemes) {
+                                           Couple<SyntacticWord> lexemes) {
         return new Agreement(couple, lexemes);
     }
 

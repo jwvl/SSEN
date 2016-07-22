@@ -38,17 +38,17 @@ public class ExpressConstraint extends FormConstraint<MStructure> {
     @Override
     public int getNumViolations(MStructure mStructure) {
         int result = 0;
-        for (Lexeme lexeme : mStructure) {
-            if (containsTransgressiveFeature(lexeme)) {
+        for (SyntacticWord syntacticWord : mStructure) {
+            if (containsTransgressiveFeature(syntacticWord)) {
                 result += 1;
             }
         }
         return result;
     }
 
-    private boolean containsTransgressiveFeature(Lexeme lexeme) {
-        if (lexeme.getSyntacticCategory().equals(syntacticCategory)) {
-            for (MElement element : lexeme) {
+    private boolean containsTransgressiveFeature(SyntacticWord syntacticWord) {
+        if (syntacticWord.getSyntacticCategory().equals(syntacticCategory)) {
+            for (MElement element : syntacticWord) {
                 AbstractMFeature feature = element.getFeature();
                 if (feature.equals(prohibitedFeature)) {
                     return true;

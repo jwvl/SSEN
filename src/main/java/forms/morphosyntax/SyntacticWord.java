@@ -15,14 +15,14 @@ import util.string.CollectionPrinter;
 import java.util.*;
 
 /**
- * A Lexeme represents a 'concept' plus a set of semantic and morphosyntactic
+ * A Syntactic Word (S-word) represents a 'concept' plus a set of semantic and morphosyntactic
  * features (MFeatures). It must belong to a Syntactic Category and is either a
  * head or a dependent within a phrase.
  *
  * @author jwvl
  * @date Dec 9, 2014
  */
-public class Lexeme implements Subform, ElementCollection<MElement> {
+public class SyntacticWord implements Subform, ElementCollection<MElement> {
 
     private final SyntacticCategory category;
     private AgreementType type;
@@ -32,18 +32,18 @@ public class Lexeme implements Subform, ElementCollection<MElement> {
     /**
      * Private constructor.
      */
-    private Lexeme(SyntacticCategory category) {
+    private SyntacticWord(SyntacticCategory category) {
         this.category = category;
         morphologicalElements = new HashSet<MElement>();
     }
 
     /**
-     * Adds both inherent and optional features of this Lexeme as CONTEXTUAL
+     * Adds both inherent and optional features of this S-word as CONTEXTUAL
      * features to a receiving Lexeme.
      *
      * @param receiver
      */
-    public void imposeAllFeatures(Lexeme receiver) {
+    public void imposeAllFeatures(SyntacticWord receiver) {
         for (MElement f : morphologicalElements) {
             MElement copiedElement = f.contextualCopy();
             receiver.morphologicalElements.add(copiedElement);
@@ -51,19 +51,19 @@ public class Lexeme implements Subform, ElementCollection<MElement> {
     }
 
     /**
-     * Creates a Lexeme from a String representation. See inside method for
+     * Creates a S-word from a String representation. See inside method for
      * details on the syntax of these representations. TODO Make more robust to
      * errors in string.
      *
      * @param s String to parse
      * @return A new Lexeme object parsed from this String.
      */
-    public static Lexeme parseFromString(String s) {
-        Lexeme result;
+    public static SyntacticWord parseFromString(String s) {
+        SyntacticWord result;
         List<String> firstSplit = Splitter.on("{").splitToList(s);
         // Category is everything before bracket
         String categoryString = firstSplit.get(0);
-        result = new Lexeme(SyntacticCategory.getInstance(categoryString));
+        result = new SyntacticWord(SyntacticCategory.getInstance(categoryString));
         String rest = firstSplit.get(1);
         // If closing bracket is followed by star, it's a head
         if (rest.endsWith("*"))
@@ -99,7 +99,7 @@ public class Lexeme implements Subform, ElementCollection<MElement> {
      * Prints some details of this Lexeme.
      */
     private void printOverview() {
-        System.out.println("*Lexeme*");
+        System.out.println("*S-Word*");
         System.out.println("Agreement type: " + type);
         System.out.println("Category: " + category);
         System.out.println("Concept: " + concept);
@@ -174,8 +174,8 @@ public class Lexeme implements Subform, ElementCollection<MElement> {
         return result.toString();
     }
 
-    public Lexeme featurelessCopy() {
-        Lexeme result = new Lexeme(this.category);
+    public SyntacticWord featurelessCopy() {
+        SyntacticWord result = new SyntacticWord(this.category);
         result.concept = this.concept;
         result.type = this.type;
         return result;
@@ -226,7 +226,7 @@ public class Lexeme implements Subform, ElementCollection<MElement> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Lexeme mElements = (Lexeme) o;
+        SyntacticWord mElements = (SyntacticWord) o;
         return category == mElements.category &&
                 type == mElements.type &&
                 Objects.equals(concept, mElements.concept) &&
@@ -327,8 +327,8 @@ public class Lexeme implements Subform, ElementCollection<MElement> {
     /**
      * @return A Copy of this Lexeme.
      */
-    public Lexeme copy() {
-        Lexeme result = new Lexeme(this.category);
+    public SyntacticWord copy() {
+        SyntacticWord result = new SyntacticWord(this.category);
         result.concept = this.concept;
         result.type = this.type;
         result.morphologicalElements = Sets.newHashSet(this.morphologicalElements);

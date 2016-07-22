@@ -13,21 +13,21 @@ import java.util.*;
  * @author jwvl
  * @date Dec 11, 2014
  */
-public class MStructure extends LinearArrayForm<Lexeme> {
+public class MStructure extends LinearArrayForm<SyntacticWord> {
     final Set<Agreement> agreements;
 
-    private MStructure(Lexeme[] contents) {
+    private MStructure(SyntacticWord[] contents) {
         super(contents);
         agreements = new HashSet<Agreement>();
         findAgreements();
     }
 
-    public static MStructure createInstance(List<Lexeme> contents) {
-        MStructure result = new MStructure(contents.toArray(new Lexeme[contents.size()]));
+    public static MStructure createInstance(List<SyntacticWord> contents) {
+        MStructure result = new MStructure(contents.toArray(new SyntacticWord[contents.size()]));
         return result;
     }
 
-    private void addAgreement(Lexeme a, Lexeme b, MElement aFeature,
+    private void addAgreement(SyntacticWord a, SyntacticWord b, MElement aFeature,
                               MElement bFeature) {
         agreements.add(Agreement.between(aFeature, bFeature, a, b));
 
@@ -35,17 +35,17 @@ public class MStructure extends LinearArrayForm<Lexeme> {
 
     private void findAgreements() {
         for (int i = 0; i < getNumSubForms(); i++) {
-            Lexeme iLexeme = contents[i];
-            Set<MElement> iSet = iLexeme.getAllNonConceptFeatures();
+            SyntacticWord iSyntacticWord = contents[i];
+            Set<MElement> iSet = iSyntacticWord.getAllNonConceptFeatures();
             for (int j = i + 1; j < getNumSubForms(); j++) {
-                Lexeme jLexeme = contents[j];
-                Set<MElement> jSet = jLexeme.getAllNonConceptFeatures();
+                SyntacticWord jSyntacticWord = contents[j];
+                Set<MElement> jSet = jSyntacticWord.getAllNonConceptFeatures();
                 for (MElement aFeature : iSet) {
                     for (MElement bFeature : jSet) {
                         if (aFeature.attributeEquals(bFeature)) {
                             if (aFeature.expressesValue()
                                     && bFeature.expressesValue()) {
-                                addAgreement(iLexeme, jLexeme, aFeature,
+                                addAgreement(iSyntacticWord, jSyntacticWord, aFeature,
                                         bFeature);
                             }
                         }
@@ -66,7 +66,7 @@ public class MStructure extends LinearArrayForm<Lexeme> {
         }
     }
 
-    protected Lexeme[] getLexemes() {
+    protected SyntacticWord[] getLexemes() {
         return contents;
     }
 

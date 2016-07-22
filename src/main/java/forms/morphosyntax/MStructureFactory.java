@@ -17,67 +17,67 @@ import java.util.*;
  * @date Dec 15, 2014
  */
 public class MStructureFactory {
-    private final ImmutableList<Lexeme> lexemeTemplates;
+    private final ImmutableList<SyntacticWord> syntacticWordTemplates;
 
-    private MStructureFactory(Collection<Lexeme> input) {
-        lexemeTemplates = ImmutableList.copyOf(input);
+    private MStructureFactory(Collection<SyntacticWord> input) {
+        syntacticWordTemplates = ImmutableList.copyOf(input);
         setHead();
     }
 
     public void setHead() {
         // Find head
-        Lexeme result = null;
-        for (Lexeme l : lexemeTemplates) {
+        SyntacticWord result = null;
+        for (SyntacticWord l : syntacticWordTemplates) {
             if (l.isHead())
                 result = l;
         }
 
         // Impose head features unto dependent templates
-        for (Lexeme l : lexemeTemplates) {
+        for (SyntacticWord l : syntacticWordTemplates) {
             if (!l.isHead())
                 result.imposeAllFeatures(l);
         }
     }
 
     public static MStructureFactory createInstance(SemSynForm input) {
-        List<Lexeme> copiedLexemes = new ArrayList<Lexeme>(input.size());
-        for (Lexeme l : input) {
-            copiedLexemes.add(l.copy());
+        List<SyntacticWord> copiedSyntacticWords = new ArrayList<SyntacticWord>(input.size());
+        for (SyntacticWord l : input) {
+            copiedSyntacticWords.add(l.copy());
         }
-        MStructureFactory result = new MStructureFactory(copiedLexemes);
+        MStructureFactory result = new MStructureFactory(copiedSyntacticWords);
         return result;
     }
 
-    public static List<MStructure> lexemesToStructure(List<Lexeme> inputLexemes) {
-        MStructureFactory factoryObject = new MStructureFactory(inputLexemes);
+    public static List<MStructure> lexemesToStructure(List<SyntacticWord> inputSyntacticWords) {
+        MStructureFactory factoryObject = new MStructureFactory(inputSyntacticWords);
         return factoryObject.generateAllStructures();
     }
 
     public List<MStructure> generateAllStructures() {
-        List<Set<Lexeme>> lexemeSet = Lists.newArrayList();
+        List<Set<SyntacticWord>> lexemeSet = Lists.newArrayList();
         List<MStructure> result = Lists.newArrayList();
 
         // Create possible realisations for all templates using cartesian
         // product
-        for (Lexeme l : lexemeTemplates) {
-            Set<Lexeme> cartesianLexemeSet = new HashSet<Lexeme>(
-                    lexemeTemplates.size());
+        for (SyntacticWord l : syntacticWordTemplates) {
+            Set<SyntacticWord> cartesianSyntacticWordSet = new HashSet<SyntacticWord>(
+                    syntacticWordTemplates.size());
             List<Set<MElement>> featureSets = getPossibleRealisations(l);
             Set<List<MElement>> cartesianFeatureSet = Sets
                     .cartesianProduct(featureSets);
             for (List<MElement> ls : cartesianFeatureSet) {
-                Lexeme current = l.featurelessCopy();
+                SyntacticWord current = l.featurelessCopy();
                 for (MElement mf : ls) {
                     current.addElement(mf);
                 }
-                cartesianLexemeSet.add(current);
+                cartesianSyntacticWordSet.add(current);
             }
-            lexemeSet.add(cartesianLexemeSet);
+            lexemeSet.add(cartesianSyntacticWordSet);
         }
         // Create possible combinations of templates using cartesian product
 
-        Set<List<Lexeme>> combinations = Sets.cartesianProduct(lexemeSet);
-        for (List<Lexeme> ll : combinations) {
+        Set<List<SyntacticWord>> combinations = Sets.cartesianProduct(lexemeSet);
+        for (List<SyntacticWord> ll : combinations) {
             MStructure toAdd = MStructure.createInstance(ll);
             result.add(toAdd);
         }
@@ -89,7 +89,7 @@ public class MStructureFactory {
      * @param l Lexeme (template) for which to extract feature values
      * @return
      */
-    private List<Set<MElement>> getPossibleRealisations(Lexeme l) {
+    private List<Set<MElement>> getPossibleRealisations(SyntacticWord l) {
         ArrayList<Set<MElement>> result = Lists.newArrayList();
         for (MElement mf : l.getAllNonConceptFeatures()) {
             if (mf.getType() == MFeatureType.FIXED) {

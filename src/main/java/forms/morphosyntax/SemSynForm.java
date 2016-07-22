@@ -14,15 +14,15 @@ import java.util.List;
  * @author jwvl
  * @date Dec 13, 2014
  */
-public class SemSynForm extends LinearArrayForm<Lexeme> {
+public class SemSynForm extends LinearArrayForm<SyntacticWord> {
     SyntacticCategory headCategory;
 
     /**
      * @param contents
      */
-    private SemSynForm(Lexeme[] contents) {
+    private SemSynForm(SyntacticWord[] contents) {
         super(contents);
-        for (Lexeme l : contents) {
+        for (SyntacticWord l : contents) {
             if (l.isHead()) {
                 headCategory = l.getSyntacticCategory();
             }
@@ -32,18 +32,18 @@ public class SemSynForm extends LinearArrayForm<Lexeme> {
     public static SemSynForm createFromString(String input, Level myLevel) {
         System.out.println("Creating from input: " + input);
         List<String> lexemeStrings = Splitter.on(',').trimResults().omitEmptyStrings().splitToList(input);
-        Lexeme[] inputLexemes = new Lexeme[lexemeStrings.size()];
+        SyntacticWord[] inputSyntacticWords = new SyntacticWord[lexemeStrings.size()];
         for (int i = 0; i < lexemeStrings.size(); i++) {
-            inputLexemes[i] = Lexeme.parseFromString(lexemeStrings.get(i));
+            inputSyntacticWords[i] = SyntacticWord.parseFromString(lexemeStrings.get(i));
         }
-        return new SemSynForm(inputLexemes);
+        return new SemSynForm(inputSyntacticWords);
     }
 
 
     @Override
     public String toString() {
         StringBuilder result = new StringBuilder();
-        for (Lexeme l : contents) {
+        for (SyntacticWord l : contents) {
             result.append(l.toString());
             result.append(' ');
         }
