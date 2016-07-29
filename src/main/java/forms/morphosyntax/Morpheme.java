@@ -222,4 +222,14 @@ public class Morpheme implements Subform, ElementCollection<MElement> {
         return false;
     }
 
+    public AffixType[] getAffixTypes() {
+        SyntacticCategory syntacticCategory = this.syntacticCategory;
+        AffixType[] result = new AffixType[this.size()];
+        int count = 0;
+        for (MElement mElement: this) {
+            result[count++] = AffixType.createInstance(syntacticCategory,mElement.getFeature().getAttribute());
+        }
+        return result;
+    }
+
 }

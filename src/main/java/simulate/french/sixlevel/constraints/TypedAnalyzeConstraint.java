@@ -13,7 +13,8 @@ import ranking.constraints.FormConstraint;
 /**
  * @author jwvl
  * @date Sep 19, 2015
- * First version. Universal over all syntactic categories. Punishes
+ * First version. Universal over all syntactic categories. Punishes synthesis (coalescence) of
+ * M-features within Morphemes.
  */
 public class TypedAnalyzeConstraint extends FormConstraint<MForm> {
     private final AffixType affixType;

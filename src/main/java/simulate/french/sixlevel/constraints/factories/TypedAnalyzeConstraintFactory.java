@@ -11,8 +11,6 @@ import gen.mapping.FormMapping;
 import ranking.constraints.Constraint;
 import ranking.constraints.factories.FormConstraintFactory;
 import ranking.constraints.helper.ConstraintArrayList;
-import simulate.french.sixlevel.constraints.MorphAlignConstraint;
-import simulate.french.sixlevel.constraints.MorphemeConstraint;
 import simulate.french.sixlevel.constraints.TypedAnalyzeConstraint;
 import util.collections.Pair;
 
@@ -43,10 +41,18 @@ public class TypedAnalyzeConstraintFactory extends FormConstraintFactory<MForm> 
     public void addForm(MForm mForm) {
 
         for (MorphologicalWord morphologicalWord : mForm) {
+            SyntacticCategory syntacticCategory = morphologicalWord.getCategory();
             for (Morpheme morpheme: morphologicalWord) {
-                if (!constraintCache.containsKey(null)) { //TODO dit kan niet
-                    createConstraint(morpheme);
+                for (MElement mElement: morpheme) {
+                    if (!mElement.isConcept()) {
+                        String attribute = mElement.getFeature().getAttribute();
+                        AffixType affixType = AffixType.createInstance(syntacticCategory,attribute);
+                        if (!constraintCache.containsKey(affixType)) { //TODO dit kan niet
+                            createConstraint(affixType);
+                        }
+                    }
                 }
+
             }
         }
 
@@ -66,11 +72,11 @@ public class TypedAnalyzeConstraintFactory extends FormConstraintFactory<MForm> 
         return result;
     }
 
-    private MorphemeConstraint createConstraint(
-            Morpheme offendingPair) {
-        MorphemeConstraint morphemeConstraint = new MorphemeConstraint(offendingPair);
-        //constraintCache.put(offendingPair, morphemeConstraint);
-        return morphemeConstraint;
+    private TypedAnalyzeConstraint createConstraint(
+            AffixType offendingAffix) {
+        TypedAnalyzeConstraint constraint = new TypedAnalyzeConstraint(offendingAffix);
+        constraintCache.put(offendingAffix, constraint);
+        return constraint;
     }
 
     /*
@@ -82,16 +88,19 @@ public class TypedAnalyzeConstraintFactory extends FormConstraintFactory<MForm> 
      */
     @Override
     public List<Constraint> getConstraintsForForm(MForm transgressor) {
-        List<MorphAlignConstraint> possibleOffenders = Lists.newArrayList();
         List<Constraint> result = Lists.newArrayList();
 
         for (MorphologicalWord morphologicalWord : transgressor) {
             for (Morpheme morpheme: morphologicalWord) {
-                TypedAnalyzeConstraint morphemeConstraint = constraintCache.get(morpheme);
-                if (morphemeConstraint == null) {
-                 //   morphemeConstraint = createConstraint(morpheme);
+                if (morpheme.size() > 1) {
+                    for (AffixType affixType : morpheme.getAffixTypes()) {
+                        TypedAnalyzeConstraint morphemeConstraint = constraintCache.get(affixType);
+                        if (morphemeConstraint == null) {
+                            morphemeConstraint = createConstraint(affixType);
+                        }
+                        result.add(morphemeConstraint);
+                    }
                 }
-                result.add(morphemeConstraint);
             }
         }
         return result;

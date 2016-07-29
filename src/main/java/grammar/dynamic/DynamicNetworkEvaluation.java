@@ -94,8 +94,6 @@ public class DynamicNetworkEvaluation implements Evaluation {
             AbstractCostNode nodeToExpand = nodeSearcher.nextNode();
             Form formToExpand = nodeToExpand.getMappedForm();
 
-                System.out.println("Expanded node # "+counter +": "+ formToExpand);
-
             if (formToExpand.getLevel() == getEndForm().getLevel()) {
 
                 if (formToExpand.equals(getEndForm())) {
