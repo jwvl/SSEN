@@ -95,4 +95,17 @@ public class LearningProperties {
         return new LearningPropertiesBuilder();
     }
 
+    public LearningPropertiesBuilder toBuilder() {
+        LearningPropertiesBuilder result = builder();
+        result.setDirection(direction);
+        result.setEvaluationNoise(evaluationNoise);
+        result.setInitialPlasticity(initialPlasticity);
+        result.setPlasticityDecay(plasticityDecay);
+        result.setPlasticityEpochs(plasticityEpochs);
+        result.setResample(resample);
+        result.setUpdateAlgorithm(updateAlgorithm);
+        result.setVariablePlasticity(variablePlasticity);
+        return result;
+    }
+
 }

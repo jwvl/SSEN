@@ -18,10 +18,10 @@ public class FrequencyMap<O extends Object> {
     /**
      * Creates an empty frequency map.
      *
-     * @param contents
      */
-    protected FrequencyMap() {
+    public FrequencyMap() {
         contents = LinkedHashMultiset.create();
+        r = new Random();
     }
 
     public void addOne(O o) {
@@ -52,4 +52,8 @@ public class FrequencyMap<O extends Object> {
         return null;
     }
 
+    @Override
+    public String toString() {
+        return contents.toString();
+    }
 }

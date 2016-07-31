@@ -112,4 +112,8 @@ public class AllUpHighDown implements UpdateAlgorithm {
 
     }
 
+    @Override
+    public String toString() {
+        return "AllUpHighDown";
+    }
 }

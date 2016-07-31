@@ -15,6 +15,7 @@ import java.util.Collection;
 /**
  * @author jwvl
  * @date Jul 25, 2015
+ * Have to rethink if I'm still gonna use this...
  */
 public class UfSfRuleInducer {
 

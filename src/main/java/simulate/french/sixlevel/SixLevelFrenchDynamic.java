@@ -27,10 +27,11 @@ import grammar.tools.GrammarTester;
 import graph.Direction;
 import io.MyStringTable;
 import learn.PairDistribution;
-import learn.batch.LearningTrajectory;
+import learn.batch.combination.LearningPropertyCombinations;
+import learn.batch.combination.TrajectoriesTester;
 import simulate.french.sixlevel.helpers.LexicalHypothesisRepository;
+import simulate.french.sixlevel.helpers.SettingsMap;
 import simulate.french.sixlevel.subgens.*;
-import util.debug.Stopwatch;
 import util.debug.Timer;
 import util.string.ngraph.NGraphMap;
 
@@ -42,6 +43,9 @@ import java.util.Set;
 /**
  * @author jwvl
  * @date Dec 17, 2014
+ *
+ * The main class for performing the simulations described in Chapter 5 of my thesis.
+ * It has grown a bit messy and could do with some refactoring.
  */
 public class SixLevelFrenchDynamic {
 
@@ -64,15 +68,8 @@ public class SixLevelFrenchDynamic {
         String sonorityColumn = config.getString("implementation.sonorityType");
         Phone.getFromStringTable(phonesTable, "Phone", "String", sonorityColumn);
 
-        // String testString = "ptitom";
-        // PhoneticForm form = PhoneticForm.createFromString(testString);
-        // SFtoPF sFtoPF = new SFtoPF();
-        // for (SurfaceForm surfaceForm: sFtoPF.generateLeft(form)) {
-        // System.out.println(surfaceForm);
-        // }
 
         // 1 Create grammar with levels.
-
         Level semF_level = BiPhonSix.getSemSynFormLevel();
         Level msf_level = BiPhonSix.getMstructureLevel();
         Level mff_level = BiPhonSix.getMformLevel();
@@ -162,17 +159,11 @@ public class SixLevelFrenchDynamic {
         timer.reportElapsedTime("Did tests in ", false);
 
 
-        int numTests = 20;
-        Stopwatch.start();
-        for (int i=0; i < numTests; i++) {
-            LearningTrajectory trajectory = new LearningTrajectory(grammar, pairDistribution, numEvaluations);
-            trajectory.launch(numThreads);
-            Stopwatch.reportElapsedTime("Finished testing in ", true);
-            System.out.println("Final ranking:");
-            grammar.getRankedCon().printContents();
-            GrammarTester.testGrammarOnLearningData(grammar, pairDistribution,200,1.0);
-            grammar.resetConstraints();
-        }
+        SettingsMap settingsMap = new SettingsMap();
+        LearningPropertyCombinations learningPropertyCombinations = LearningPropertyCombinations.fromMultimap(settingsMap.getMap(), grammar.getLearningProperties());
+
+        TrajectoriesTester trajectoriesTester = new TrajectoriesTester(learningPropertyCombinations, grammar, pairDistribution);
+        trajectoriesTester.testAndWrite("combinations",numEvaluations,10,numThreads);
 
 
     }

@@ -23,7 +23,9 @@ public abstract class Grammar {
     private final LevelSpace levelSpace;
     private final String name;
     private final Con con;
-    private final LearningProperties defaultLearningProperties;
+    private LearningProperties learningProperties;
+
+
     private CandidateSpaces candidateSpaces;
 
     /**
@@ -35,7 +37,7 @@ public abstract class Grammar {
         this.levelSpace = levelSpace;
         this.name = name;
         this.con = con;
-        this.defaultLearningProperties = learningProperties;
+        this.learningProperties = learningProperties;
     }
 
 
@@ -52,7 +54,7 @@ public abstract class Grammar {
     public abstract Evaluation evaluate(FormPair formPair, boolean newEvaluation, double evaluationNoise);
 
     public Evaluation evaluate(FormPair formPair, boolean newEvaluation) {
-        return evaluate(formPair, newEvaluation, defaultLearningProperties.getEvaluationNoise());
+        return evaluate(formPair, newEvaluation, learningProperties.getEvaluationNoise());
     }
 
     public ViolatedCandidate getWinner(FormPair formPair, boolean newEvaluation, double evaluationNoise) {
@@ -83,8 +85,8 @@ public abstract class Grammar {
 
     public abstract GrammarHierarchy getRankedCon();
 
-    public LearningProperties getDefaultLearningProperties() {
-        return defaultLearningProperties;
+    public LearningProperties getLearningProperties() {
+        return learningProperties;
     }
 
 
@@ -94,6 +96,11 @@ public abstract class Grammar {
 
     public void addCandidateSpaces(CandidateSpaces candidateSpaces) {
         this.candidateSpaces = candidateSpaces;
+    }
+
+
+    public void setLearningProperties(LearningProperties learningProperties) {
+        this.learningProperties = learningProperties;
     }
 
 

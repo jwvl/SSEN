@@ -93,7 +93,6 @@ public class FormChain {
         final int prime = 31;
         int result = 1;
         result = prime * result + Arrays.deepHashCode(contents);
-        result = prime * result + Arrays.deepHashCode(pairs);
         return result;
     }
 

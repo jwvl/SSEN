@@ -29,7 +29,7 @@ public class TypedAnalyzeConstraint extends FormConstraint<MForm> {
 
     @Override
     public String toString() {
-        return "Analyze";
+        return "Analyze " + affixType;
     }
 
     /* (non-Javadoc)

@@ -40,7 +40,7 @@ public abstract class AbstractLearningTrajectory {
     public AbstractLearningTrajectory(Grammar grammar, LearningData data) {
         this.grammar = grammar;
         this.data = data;
-        this.learningProperties = grammar.getDefaultLearningProperties();
+        this.learningProperties = grammar.getLearningProperties();
     }
 
     public void launch(int numThreads) {

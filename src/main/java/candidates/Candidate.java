@@ -5,6 +5,8 @@ import forms.Form;
 import forms.FormChain;
 import gen.mapping.FormMapping;
 
+import java.util.Objects;
+
 /**
  * A Candidate in the MLCG framework is a tuple of Forms resulting from some
  * Input. The object saves both, and can be used to iterate over the forms and
@@ -99,4 +101,17 @@ public class Candidate {
         }
     };
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Candidate candidate = (Candidate) o;
+        return Objects.equals(input, candidate.input) &&
+                Objects.equals(output, candidate.output);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(input, output);
+    }
 }

@@ -54,5 +54,9 @@ public class WeightedUncancelled implements UpdateAlgorithm {
         return updateAction;
     }
 
+    @Override
+    public String toString() {
+        return "WeightedAll";
+    }
 
 }

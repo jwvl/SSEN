@@ -15,6 +15,7 @@ import java.util.List;
 /**
  * @author jwvl
  * @date 25/09/2015
+ * Contains the predefined UF->SF phonological rules for the simulations of Chapter 5.
  */
 public class PredefinedLiaisonRules {
     public static List<EdgeBasedRule> edgeRules = createEdgeRules();

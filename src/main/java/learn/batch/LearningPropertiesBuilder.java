@@ -58,5 +58,34 @@ public class LearningPropertiesBuilder {
         return new LearningProperties(updateAlgorithm, initialPlasticity, plasticityDecay, plasticityEpochs, variablePlasticity, resample, evaluationNoise, direction);
     }
 
-
+    public void setFromStrings(String parameter, String value) {
+        switch (parameter) {
+            case "updateAlgorithm":
+                setUpdateAlgorithm(UpdateAlgorithms.createFromString(value));
+                break;
+            case "initialPlasticity":
+                setInitialPlasticity(Double.parseDouble(value));
+                break;
+            case "plasticityDecay":
+                setPlasticityDecay(Double.parseDouble(value));
+                break;
+            case "plasticityEpochs":
+                setPlasticityEpochs(Integer.parseInt(value));
+                break;
+            case "variablePlasticity":
+                setVariablePlasticity(Boolean.parseBoolean(value));
+                break;
+            case "resample":
+                setResample(Boolean.parseBoolean(value));
+                break;
+            case "evaluationNoise":
+                setEvaluationNoise(Double.parseDouble(value));
+                break;
+            case "direction":
+                setDirection(Direction.valueOf(value));
+                break;
+            default:
+                throw new IllegalArgumentException("Parameter "+parameter+" not found!");
+        }
+    }
 }

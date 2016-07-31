@@ -3,6 +3,7 @@
  */
 package graph;
 
+import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Ordering;
@@ -10,6 +11,7 @@ import forms.Form;
 import grammar.levels.Level;
 
 import java.util.Collection;
+import java.util.Map;
 
 /**
  * @author jwvl
@@ -36,6 +38,18 @@ public class LevelwiseFormMap {
         return new LevelwiseFormMap(initContents);
     }
 
+    public static LevelwiseFormMap createFromMultimap(Map<Form,Collection<Form>> map) {
+        Multimap<Level, Form> multimap = HashMultimap.create();
+
+        for (Form in: map.keySet()) {
+            multimap.put(in.getLevel(),in);
+            for (Form out: map.get(in)) {
+                multimap.put(out.getLevel(),out);
+            }
+        }
+        return new LevelwiseFormMap(multimap);
+    }
+
     public void add(Form f) {
         contents.put(f.getLevel(), f);
     }
@@ -47,7 +61,6 @@ public class LevelwiseFormMap {
     }
 
     /**
-     * @param nullLevel
      * @return
      */
     public boolean hasLevel(Level l) {
@@ -69,4 +82,17 @@ public class LevelwiseFormMap {
         contents.get(f.getLevel()).remove(f);
     }
 
+    public int size() {
+        return contents.keySet().size();
+    }
+
+    public ArrayListMultimap<Level,Form> toArrayMultimap() {
+        ArrayListMultimap<Level, Form> result = ArrayListMultimap.create();
+        for (Level level: contents.keySet()) {
+            for (Form form: contents.get(level)) {
+                result.put(level,form);
+            }
+        }
+        return result;
+    }
 }
