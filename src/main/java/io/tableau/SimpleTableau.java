@@ -5,10 +5,10 @@ package io.tableau;
 
 import candidates.Candidate;
 import com.google.common.collect.Lists;
+import constraints.hierarchy.reimpl.Hierarchy;
 import learn.ViolatedCandidate;
-import ranking.GrammarHierarchy;
-import ranking.constraints.Constraint;
-import ranking.violations.ConstraintViolation;
+import constraints.Constraint;
+import constraints.hierarchy.violations.ConstraintViolation;
 
 import java.util.List;
 import java.util.Set;
@@ -54,7 +54,7 @@ public class SimpleTableau implements Tableau {
         return result;
     }
 
-    public static SimpleTableau createPairTableau(ViolatedCandidate winner, ViolatedCandidate loser, GrammarHierarchy conmap) {
+    public static SimpleTableau createPairTableau(ViolatedCandidate winner, ViolatedCandidate loser, Hierarchy conmap) {
         Set<ConstraintViolation> allConstraints = new TreeSet<ConstraintViolation>();
         for (Constraint c : winner.getConstraints().elementSet()) {
             ConstraintViolation toAdd = conmap.toConstraintViolation(c);

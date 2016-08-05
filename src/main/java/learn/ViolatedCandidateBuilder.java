@@ -12,8 +12,8 @@ import com.google.common.collect.Multiset;
 import forms.Form;
 import forms.FormChain;
 import forms.GraphForm;
-import ranking.constraints.Constraint;
-import ranking.constraints.helper.ConstraintArrayList;
+import constraints.Constraint;
+import constraints.helper.ConstraintArrayList;
 
 import java.util.Collection;
 import java.util.Collections;

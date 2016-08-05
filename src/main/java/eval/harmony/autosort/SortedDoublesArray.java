@@ -3,7 +3,7 @@
  */
 package eval.harmony.autosort;
 
-import ranking.OldRankedConstraint;
+import constraints.hierarchy.OldRankedConstraint;
 
 import java.util.Arrays;
 import java.util.Collection;

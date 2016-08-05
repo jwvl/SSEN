@@ -4,6 +4,7 @@
 package learn.batch;
 
 import com.typesafe.config.ConfigFactory;
+import constraints.hierarchy.reimpl.Hierarchy;
 import eval.Evaluation;
 import forms.FormPair;
 import grammar.Grammar;
@@ -11,7 +12,6 @@ import learn.ViolatedCandidate;
 import learn.data.LearningData;
 import learn.stats.ErrorCounter;
 import learn.update.UpdateAction;
-import ranking.GrammarHierarchy;
 import util.debug.Timer;
 
 import java.util.Set;
@@ -102,7 +102,7 @@ public class LearningTrajectory extends AbstractLearningTrajectory {
             ViolatedCandidate lCandidate = evaluation.getWinner();
             System.out.println(lCandidate.toString());
         }
-        GrammarHierarchy grammarHierarchy = getGrammar().getRankedCon();
+        Hierarchy grammarHierarchy = getGrammar().getHierarchy();
         grammarHierarchy.printContents();
     }
 

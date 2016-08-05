@@ -6,7 +6,7 @@ package simulate.french.sixlevel.constraints;
 import forms.primitives.segment.Phone;
 import grammar.levels.Level;
 import grammar.levels.predefined.BiPhonSix;
-import ranking.constraints.SubformCountingConstraint;
+import constraints.SubformCountingConstraint;
 
 /**
  * @author jwvl

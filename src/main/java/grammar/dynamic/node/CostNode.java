@@ -6,8 +6,8 @@ package grammar.dynamic.node;
 import eval.harmony.SimpleOTHarmony;
 import eval.harmony.autosort.StratifiedDouble;
 import forms.Form;
-import ranking.OldRankedConstraint;
-import ranking.constraints.Constraint;
+import constraints.hierarchy.OldRankedConstraint;
+import constraints.Constraint;
 
 import java.util.Collection;
 import java.util.List;

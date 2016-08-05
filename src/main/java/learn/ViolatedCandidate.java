@@ -5,7 +5,7 @@ package learn;
 
 import candidates.Candidate;
 import com.google.common.collect.Multiset;
-import ranking.constraints.Constraint;
+import constraints.Constraint;
 
 /**
  * @author jwvl

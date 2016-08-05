@@ -4,7 +4,7 @@
 package eval.harmony;
 
 import com.google.common.collect.Ordering;
-import ranking.OldRankedConstraint;
+import constraints.hierarchy.OldRankedConstraint;
 
 /**
  * @author jwvl

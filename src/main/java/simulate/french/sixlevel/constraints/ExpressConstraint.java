@@ -7,7 +7,7 @@ import forms.morphosyntax.*;
 import forms.primitives.feature.AbstractMFeature;
 import forms.primitives.feature.MorphologicalFeature;
 import grammar.levels.predefined.BiPhonSix;
-import ranking.constraints.FormConstraint;
+import constraints.FormConstraint;
 
 /**
  * @author jwvl
@@ -33,7 +33,7 @@ public class ExpressConstraint extends FormConstraint<MStructure> {
     /*
      * (non-Javadoc)
      *
-     * @see ranking.constraints.FormConstraint#getNumViolations(forms.Form)
+     * @see constraints.FormConstraint#getNumViolations(forms.Form)
      */
     @Override
     public int getNumViolations(MStructure mStructure) {
@@ -61,7 +61,7 @@ public class ExpressConstraint extends FormConstraint<MStructure> {
     /*
      * (non-Javadoc)
      *
-     * @see ranking.constraints.Constraint#toString()
+     * @see constraints.Constraint#toString()
      */
     @Override
     public String toString() {
@@ -74,7 +74,7 @@ public class ExpressConstraint extends FormConstraint<MStructure> {
     /*
      * (non-Javadoc)
      *
-     * @see ranking.constraints.Constraint#caches()
+     * @see constraints.Constraint#caches()
      */
     @Override
     public boolean caches() {

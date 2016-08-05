@@ -4,9 +4,9 @@
 package learn.update;
 
 import com.google.common.collect.Multiset;
+import constraints.Constraint;
+import constraints.hierarchy.reimpl.Hierarchy;
 import learn.ViolatedCandidate;
-import ranking.GrammarHierarchy;
-import ranking.constraints.Constraint;
 
 import java.util.Collection;
 
@@ -20,7 +20,7 @@ public class WeightedUncancelled implements UpdateAlgorithm {
      * @see learn.update.UpdateAlgorithm#update(java.util.Collection, java.util.Collection, double)
      */
     @Override
-    public void update(GrammarHierarchy con, Collection<ViolatedCandidate> violatedByL,
+    public void update(Hierarchy con, Collection<ViolatedCandidate> violatedByL,
                        Collection<ViolatedCandidate> violatedByT, double delta) {
         ViolatedCandidate vblFirst = violatedByL.iterator().next();
         ViolatedCandidate vbtFirst = violatedByT.iterator().next();
@@ -38,13 +38,13 @@ public class WeightedUncancelled implements UpdateAlgorithm {
     }
 
     /* (non-Javadoc)
-     * @see learn.update.UpdateAlgorithm#getUpdate(ranking.ConRankingMap, java.util.Collection, java.util.Collection, double)
+     * @see learn.update.UpdateAlgorithm#getUpdate(constraints.ranking.ConRankingMap, java.util.Collection, java.util.Collection, double)
      */
     /* (non-Javadoc)
-     * @see learn.update.UpdateAlgorithm#getUpdate(ranking.ConRankingMap, java.util.Collection, java.util.Collection, double)
+     * @see learn.update.UpdateAlgorithm#getUpdate(constraints.ranking.ConRankingMap, java.util.Collection, java.util.Collection, double)
 	 */
     @Override
-    public UpdateAction getUpdate(GrammarHierarchy con, ViolatedCandidate lCandidate,
+    public UpdateAction getUpdate(Hierarchy con, ViolatedCandidate lCandidate,
                                   ViolatedCandidate tCandidate, double delta) {
         UpdateAction updateAction = UpdateAction.create();
         Multiset<Constraint> tPreferring = UpdateUtils.getViolatedByLearner(lCandidate, tCandidate);
@@ -56,7 +56,7 @@ public class WeightedUncancelled implements UpdateAlgorithm {
 
     @Override
     public String toString() {
-        return "WeightedAll";
+        return "WeightedUncancelled";
     }
 
 }

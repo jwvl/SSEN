@@ -10,7 +10,7 @@ import com.google.common.base.Objects;
  * @date Aug 1, 2015
  * TODO think of a better name.
  * Basically a Pair of SyntacticCategory and (MFeature) Attribute.
- * Since this pairing re-occurs often I conveniently put them into a single
+ * Since this pairing re-occurs often I conveniently putValue them into a single
  * struct-like object.
  */
 public class AffixType {

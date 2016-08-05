@@ -5,6 +5,7 @@ package grammar.dynamic;
 
 import candidates.FormInput;
 import com.typesafe.config.ConfigFactory;
+import constraints.hierarchy.reimpl.Hierarchy;
 import eval.Evaluation;
 import eval.harmony.CostFactory;
 import eval.harmony.CostType;
@@ -20,9 +21,7 @@ import grammar.dynamic.node.SearchMode;
 import grammar.levels.Level;
 import learn.ViolatedCandidate;
 import learn.ViolatedCandidateBuilder;
-import ranking.DynamicSampledHierarchy;
-import ranking.IndexedSampledHierarchy;
-import ranking.constraints.helper.ConstraintArrayList;
+import constraints.helper.ConstraintArrayList;
 
 /**
  * @author jwvl
@@ -34,7 +33,7 @@ public class DynamicNetworkEvaluation implements Evaluation {
     private static long idCounter = 0;
     private FormPair formPair;
     private ViolatedCandidate winner;
-    private DynamicSampledHierarchy sampledHierarchy;
+    private Hierarchy sampledHierarchy;
     private boolean endFormIsSink = false;
     private boolean useCandidateSpaces = ConfigFactory.load().getBoolean("grammar.useCandidateSpaces");
     private final CostFactory costFactory;
@@ -42,11 +41,11 @@ public class DynamicNetworkEvaluation implements Evaluation {
 
     public DynamicNetworkEvaluation(DynamicNetworkGrammar dynamicNetworkGrammar, double evaluationNoise) {
         this(dynamicNetworkGrammar,
-                new DynamicSampledHierarchy(dynamicNetworkGrammar.getRankedCon(), GaussianXORSampler.createInstance(evaluationNoise)));
+                dynamicNetworkGrammar.getHierarchy().sample(GaussianXORSampler.createInstance(evaluationNoise)));
     }
 
     public DynamicNetworkEvaluation(DynamicNetworkGrammar dynamicNetworkGrammar,
-                                    DynamicSampledHierarchy sampledHierarchy) {
+                                    Hierarchy sampledHierarchy) {
         this.id = idCounter++;
         this.grammar = dynamicNetworkGrammar;
         this.sampledHierarchy = sampledHierarchy;
@@ -62,13 +61,8 @@ public class DynamicNetworkEvaluation implements Evaluation {
             case SIMPLE:
                 nodeSearcher = new SimpleNodeSearcher(costFactory);
                 break;
-            case INDEXED:
-                IndexedSampledHierarchy indexed = sampledHierarchy.toIndexedSampledHierarchy();
-                nodeSearcher = new IndexedNodeSearcher(indexed);
-                break;
-            case LINKED_INDEXED:
-                indexed = sampledHierarchy.toIndexedSampledHierarchy();
-                nodeSearcher = new LinkedIndexNodeSearcher(indexed);
+            case LINKED_NODE:
+                nodeSearcher = new LinkedNodeSearcher(sampledHierarchy);
                 break;
             default:
                 nodeSearcher = new SimpleNodeSearcher(costFactory);
@@ -198,7 +192,7 @@ public class DynamicNetworkEvaluation implements Evaluation {
     /**
      * @return
      */
-    public DynamicSampledHierarchy getSampledHierarchy() {
+    public Hierarchy getSampledHierarchy() {
         return sampledHierarchy;
     }
 

@@ -6,7 +6,7 @@ package eval.harmony;
 import eval.harmony.autosort.SortedValuesArray;
 import eval.harmony.autosort.SortedValuesList;
 import eval.harmony.autosort.SortedValuesMultiSet;
-import ranking.SortingValues;
+import constraints.hierarchy.SortingValues;
 import util.collections.AutoSortedList;
 
 import java.util.Collections;

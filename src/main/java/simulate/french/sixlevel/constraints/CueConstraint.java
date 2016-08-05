@@ -7,7 +7,7 @@ import forms.phon.PhoneTransform;
 import gen.mapping.FormMapping;
 import gen.mapping.specific.SfPfMapping;
 import grammar.levels.predefined.BiPhonSix;
-import ranking.constraints.MappingConstraint;
+import constraints.MappingConstraint;
 
 /**
  * @author jwvl
@@ -49,7 +49,7 @@ public class CueConstraint extends MappingConstraint<SfPfMapping> {
     /*
      * (non-Javadoc)
      *
-     * @see ranking.constraints.Constraint#caches()
+     * @see constraints.Constraint#caches()
      */
     @Override
     public boolean caches() {
@@ -60,7 +60,7 @@ public class CueConstraint extends MappingConstraint<SfPfMapping> {
      * (non-Javadoc)
      *
      * @see
-     * ranking.constraints.MappingConstraint#getNumViolations(gen.mapping.FormMapping
+     * constraints.MappingConstraint#getNumViolations(gen.mapping.FormMapping
      * )
      */
     @Override
@@ -75,7 +75,7 @@ public class CueConstraint extends MappingConstraint<SfPfMapping> {
     /*
      * (non-Javadoc)
      *
-     * @see ranking.constraints.Constraint#toString()
+     * @see constraints.Constraint#toString()
      */
     @Override
     public String toString() {

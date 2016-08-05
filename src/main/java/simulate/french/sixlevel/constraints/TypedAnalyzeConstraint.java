@@ -8,7 +8,7 @@ import forms.morphosyntax.MForm;
 import forms.morphosyntax.Morpheme;
 import forms.morphosyntax.MorphologicalWord;
 import grammar.levels.predefined.BiPhonSix;
-import ranking.constraints.FormConstraint;
+import constraints.FormConstraint;
 
 /**
  * @author jwvl
@@ -33,7 +33,7 @@ public class TypedAnalyzeConstraint extends FormConstraint<MForm> {
     }
 
     /* (non-Javadoc)
-     * @see ranking.constraints.FormConstraint#getNumViolations(forms.Form)
+     * @see constraints.FormConstraint#getNumViolations(forms.Form)
      */
     @Override
     public int getNumViolations(MForm f) {
@@ -50,7 +50,7 @@ public class TypedAnalyzeConstraint extends FormConstraint<MForm> {
     }
 
     /* (non-Javadoc)
-     * @see ranking.constraints.Constraint#caches()
+     * @see constraints.Constraint#caches()
      */
     @Override
     public boolean caches() {

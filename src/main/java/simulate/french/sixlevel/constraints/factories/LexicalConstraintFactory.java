@@ -76,7 +76,7 @@ public class LexicalConstraintFactory extends
     }
 
     /* (non-Javadoc)
-     * @see ranking.constraints.factories.ConstraintFactory#addFormMapping(gen.mapping.FormMapping)
+     * @see constraints.factories.ConstraintFactory#addFormMapping(gen.mapping.FormMapping)
      */
     @Override
     public void addFormMapping(FormMapping fm) {

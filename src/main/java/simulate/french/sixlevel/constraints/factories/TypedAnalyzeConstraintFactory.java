@@ -8,9 +8,9 @@ import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 import forms.morphosyntax.*;
 import gen.mapping.FormMapping;
-import ranking.constraints.Constraint;
-import ranking.constraints.factories.FormConstraintFactory;
-import ranking.constraints.helper.ConstraintArrayList;
+import constraints.Constraint;
+import constraints.factories.FormConstraintFactory;
+import constraints.helper.ConstraintArrayList;
 import simulate.french.sixlevel.constraints.TypedAnalyzeConstraint;
 import util.collections.Pair;
 
@@ -34,7 +34,7 @@ public class TypedAnalyzeConstraintFactory extends FormConstraintFactory<MForm> 
      * (non-Javadoc)
      *
      * @see
-     * ranking.constraints.factories.ConstraintFactory#addTransgressors(java
+     * constraints.factories.ConstraintFactory#addTransgressors(java
      * .util.Collection)
      */
     @Override
@@ -83,7 +83,7 @@ public class TypedAnalyzeConstraintFactory extends FormConstraintFactory<MForm> 
      * (non-Javadoc)
      *
      * @see
-     * ranking.constraints.factories.ConstraintFactory#computeSpecific(graph
+     * constraints.factories.ConstraintFactory#computeSpecific(graph
      * .Transgressor)
      */
     @Override
@@ -116,7 +116,7 @@ public class TypedAnalyzeConstraintFactory extends FormConstraintFactory<MForm> 
     /*
      * (non-Javadoc)
      *
-     * @see ranking.constraints.factories.ConstraintFactory#createAll()
+     * @see constraints.factories.ConstraintFactory#createAll()
      */
     @Override
     public Collection<Constraint> getAll() {
@@ -128,7 +128,7 @@ public class TypedAnalyzeConstraintFactory extends FormConstraintFactory<MForm> 
     }
 
     /* (non-Javadoc)
-     * @see ranking.constraints.factories.ConstraintFactory#addFormMapping(gen.mapping.FormMapping)
+     * @see constraints.factories.ConstraintFactory#addFormMapping(gen.mapping.FormMapping)
      */
     @Override
     public void addFormMapping(FormMapping fm) {

@@ -2,7 +2,7 @@ package grammar.dynamic.node;
 
 import eval.harmony.CostFactory;
 import gen.mapping.FormMapping;
-import ranking.constraints.Constraint;
+import constraints.Constraint;
 
 import java.util.List;
 

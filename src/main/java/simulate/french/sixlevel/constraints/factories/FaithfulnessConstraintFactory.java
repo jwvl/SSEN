@@ -4,11 +4,9 @@
 package simulate.french.sixlevel.constraints.factories;
 
 import forms.phon.PhoneTransform;
-import forms.phon.flat.SurfaceForm;
-import forms.phon.flat.UnderlyingForm;
 import gen.mapping.FormMapping;
 import gen.mapping.specific.UfSfMapping;
-import ranking.constraints.factories.PhoneTransformConstraintFactory;
+import constraints.factories.PhoneTransformConstraintFactory;
 import simulate.french.sixlevel.constraints.FaithfulnessConstraint;
 
 /**
@@ -16,7 +14,7 @@ import simulate.french.sixlevel.constraints.FaithfulnessConstraint;
  * @date Jul 26, 2015
  */
 public class FaithfulnessConstraintFactory extends
-        PhoneTransformConstraintFactory<UnderlyingForm, SurfaceForm> {
+        PhoneTransformConstraintFactory {
 
     /* (non-Javadoc)
      * @see simulate.french.sixlevel.constraints.factories.SubformConstraintFactory#createConstraint(java.lang.Object)
@@ -28,7 +26,7 @@ public class FaithfulnessConstraintFactory extends
 
 
     /* (non-Javadoc)
-     * @see ranking.constraints.factories.ConstraintFactory#addFormMapping(gen.mapping.FormMapping)
+     * @see constraints.factories.ConstraintFactory#addFormMapping(gen.mapping.FormMapping)
      */
     @Override
     public void addFormMapping(FormMapping fm) {

@@ -14,7 +14,7 @@ import java.util.Collection;
  * @author jwvl
  * @date Sep 1, 2015
  */
-public class UfSfMapping extends PhoneRewriteMapping<UnderlyingForm, SurfaceForm> {
+public class UfSfMapping extends PhoneRewriteMapping {
 
     /**
      * @param before

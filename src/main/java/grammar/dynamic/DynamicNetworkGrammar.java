@@ -3,6 +3,8 @@
  */
 package grammar.dynamic;
 
+import constraints.helper.ConstraintArrayList;
+import constraints.hierarchy.reimpl.Hierarchy;
 import eval.Evaluation;
 import forms.Form;
 import forms.FormPair;
@@ -14,10 +16,6 @@ import grammar.Grammar;
 import grammar.levels.Level;
 import grammar.levels.LevelSpace;
 import learn.batch.LearningProperties;
-import ranking.DynamicSampledHierarchy;
-import ranking.GrammarHierarchy;
-import ranking.constraints.Constraint;
-import ranking.constraints.helper.ConstraintArrayList;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -30,19 +28,18 @@ import java.util.List;
 public class DynamicNetworkGrammar extends Grammar {
 
     private SubGen<?, ?>[] subGensByLevel;
-    private DynamicSampledHierarchy lastSampledHierarchy;
-    private GrammarHierarchy con;
+    private Hierarchy lastSampledHierarchy;
 
 
-    private DynamicNetworkGrammar(LevelSpace levels, String name, GrammarHierarchy con, LearningProperties learningProperties) {
-        super(levels, name, con, learningProperties);
+    private DynamicNetworkGrammar(LevelSpace levels, String name, Hierarchy hierarchy, LearningProperties learningProperties) {
+        super(levels, name, hierarchy, learningProperties);
         this.subGensByLevel = new SubGen<?, ?>[getLevelSpace().getSize()];
-        this.con = con;
+        this.lastSampledHierarchy = null;
     }
 
     public static DynamicNetworkGrammar createInstance(LevelSpace levels, String name) {
-        GrammarHierarchy con = new GrammarHierarchy();
-        return new DynamicNetworkGrammar(levels, "Grammar", con, LearningProperties.fromConfiguration());
+        Hierarchy hierarchy = Hierarchy.createNew();
+        return new DynamicNetworkGrammar(levels, name, hierarchy, LearningProperties.fromConfiguration());
     }
 
     public void addSubGen(SubGen<?, ?> toAdd) {
@@ -69,25 +66,6 @@ public class DynamicNetworkGrammar extends Grammar {
         }
     }
 
-    /**
-     * @return
-     */
-    public GrammarHierarchy getCon() {
-        return con;
-    }
-
-
-    @Override
-    public GrammarHierarchy getRankedCon() {
-        return con;
-    }
-
-    @Override
-    public void resetConstraints() {
-        for (Constraint c: con) {
-            con.put(c,100.0);
-        }
-    }
 
 
     public SubGen<?, ?>[] getSubGensByLevel() {

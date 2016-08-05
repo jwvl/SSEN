@@ -5,9 +5,9 @@ package learn.update;
 
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
+import constraints.Constraint;
+import constraints.hierarchy.reimpl.Hierarchy;
 import learn.ViolatedCandidate;
-import ranking.GrammarHierarchy;
-import ranking.constraints.Constraint;
 
 import java.util.Collection;
 
@@ -18,7 +18,7 @@ import java.util.Collection;
 public class AllUpHighDown implements UpdateAlgorithm {
 
 
-    public void update(GrammarHierarchy con, Collection<ViolatedCandidate> lCandidates,
+    public void update(Hierarchy con, Collection<ViolatedCandidate> lCandidates,
                        Collection<ViolatedCandidate> tCandidates, double delta) {
         if (lCandidates.size() == 1 && tCandidates.size() == 1) {
             updateSingles(con, lCandidates.iterator().next(), tCandidates.iterator().next(), delta);
@@ -29,7 +29,7 @@ public class AllUpHighDown implements UpdateAlgorithm {
         }
     }
 
-    private void updateSingles(GrammarHierarchy con, ViolatedCandidate lCandidate, ViolatedCandidate tCandidate,
+    private void updateSingles(Hierarchy con, ViolatedCandidate lCandidate, ViolatedCandidate tCandidate,
                                double delta) {
         // TODO stratify this strategy!
         Multiset<Constraint> targetPreferringView = UpdateUtils.getViolatedByLearner(lCandidate, tCandidate);
@@ -38,7 +38,7 @@ public class AllUpHighDown implements UpdateAlgorithm {
         double promoteWeightedDelta = delta / targetPreferringView.size();
         double maxTPreferringRanking = Double.MIN_VALUE;
         for (Constraint constraint : targetPreferringView.elementSet()) {
-            maxTPreferringRanking = Math.max(maxTPreferringRanking, con.getStratifiedRanking(constraint).getValue());
+            maxTPreferringRanking = Math.max(maxTPreferringRanking, con.getRanking(constraint));
             double multipliedDelta = (targetPreferringView.count(constraint) * promoteWeightedDelta);
             con.updateConstraintRanking(constraint, multipliedDelta);
         }
@@ -68,7 +68,7 @@ public class AllUpHighDown implements UpdateAlgorithm {
     }
 
 
-    public UpdateAction getUpdate(GrammarHierarchy con, ViolatedCandidate lCandidate,
+    public UpdateAction getUpdate(Hierarchy con, ViolatedCandidate lCandidate,
                                   ViolatedCandidate tCandidate, double delta) {
         UpdateAction result = UpdateAction.create();
         Multiset<Constraint> violatedByLearner = UpdateUtils
@@ -97,7 +97,7 @@ public class AllUpHighDown implements UpdateAlgorithm {
     }
 
     private Multiset<Constraint> getRankedAbove(double maxViolatedByLearner,
-                                                Multiset<Constraint> violatedByTarget, GrammarHierarchy con) {
+                                                Multiset<Constraint> violatedByTarget, Hierarchy con) {
         Multiset<Constraint> result = HashMultiset.create();
         for (Constraint constraint : violatedByTarget) {
             double value = con.getRanking(constraint);

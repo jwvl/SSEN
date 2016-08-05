@@ -6,7 +6,7 @@ package simulate.french.sixlevel.constraints;
 import forms.phon.flat.SurfaceForm;
 import forms.phon.syllable.SonorityProfile;
 import grammar.levels.predefined.BiPhonSix;
-import ranking.constraints.FormConstraint;
+import constraints.FormConstraint;
 
 /**
  * @author jwvl
@@ -24,7 +24,7 @@ public class SyllableStructureConstraint extends FormConstraint<SurfaceForm> {
     /*
      * (non-Javadoc)
      *
-     * @see ranking.constraints.FormConstraint#getNumViolations(forms.Form)
+     * @see constraints.FormConstraint#getNumViolations(forms.Form)
      */
     @Override
     public int getNumViolations(SurfaceForm f) {
@@ -40,7 +40,7 @@ public class SyllableStructureConstraint extends FormConstraint<SurfaceForm> {
     /*
      * (non-Javadoc)
      *
-     * @see ranking.constraints.Constraint#toString()
+     * @see constraints.Constraint#toString()
      */
     @Override
     public String toString() {
@@ -50,7 +50,7 @@ public class SyllableStructureConstraint extends FormConstraint<SurfaceForm> {
     /*
      * (non-Javadoc)
      *
-     * @see ranking.constraints.Constraint#caches()
+     * @see constraints.Constraint#caches()
      */
     @Override
     public boolean caches() {

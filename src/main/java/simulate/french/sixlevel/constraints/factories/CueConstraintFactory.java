@@ -4,18 +4,16 @@
 package simulate.french.sixlevel.constraints.factories;
 
 import forms.phon.PhoneTransform;
-import forms.phon.flat.PhoneticForm;
-import forms.phon.flat.SurfaceForm;
 import gen.mapping.FormMapping;
 import gen.mapping.specific.SfPfMapping;
-import ranking.constraints.factories.PhoneTransformConstraintFactory;
+import constraints.factories.PhoneTransformConstraintFactory;
 import simulate.french.sixlevel.constraints.CueConstraint;
 
 /**
  * @author jwvl
  * @date Jul 26, 2015
  */
-public class CueConstraintFactory extends PhoneTransformConstraintFactory<SurfaceForm, PhoneticForm> {
+public class CueConstraintFactory extends PhoneTransformConstraintFactory {
 
     public static CueConstraintFactory createInstance() {
         return new CueConstraintFactory();
@@ -37,7 +35,7 @@ public class CueConstraintFactory extends PhoneTransformConstraintFactory<Surfac
      * (non-Javadoc)
      *
      * @see
-     * ranking.constraints.factories.ConstraintFactory#addFormMapping(gen.mapping
+     * constraints.factories.ConstraintFactory#addFormMapping(gen.mapping
      * .FormMapping)
      */
     @Override

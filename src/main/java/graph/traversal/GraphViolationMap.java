@@ -9,8 +9,8 @@ import com.google.common.collect.Lists;
 import forms.Form;
 import gen.mapping.FormMapping;
 import graph.LayeredGraph;
-import ranking.OldHierarchy;
-import ranking.OldRankedConstraint;
+import constraints.hierarchy.OldHierarchy;
+import constraints.hierarchy.OldRankedConstraint;
 
 import java.util.ArrayList;
 import java.util.Collection;

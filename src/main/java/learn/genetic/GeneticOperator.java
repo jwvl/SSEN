@@ -3,8 +3,8 @@
  */
 package learn.genetic;
 
+import constraints.hierarchy.reimpl.Hierarchy;
 import eval.sample.AbstractSampler;
-import ranking.GrammarHierarchy;
 
 import java.util.Random;
 
@@ -30,25 +30,25 @@ public class GeneticOperator {
     }
 
     public ConHypothesis crossOver(ConHypothesis a, ConHypothesis b, double aWeight, double noise) {
-        GrammarHierarchy child = crossover(a.getCon(), b.getCon(), aWeight);
+        Hierarchy child = crossover(a.getCon(), b.getCon(), aWeight);
         addNoise(child, noise);
         ConHypothesis newCon = ConHypothesis.createInstance(child);
         return newCon;
     }
 
-    private void addNoise(GrammarHierarchy unNoised, double noise) {
+    private void addNoise(Hierarchy unNoised, double noise) {
         // TODO ever fix?
     }
 
     public ConHypothesis mutate(ConHypothesis original, double noise) {
-        GrammarHierarchy newMap = original.getCon().deepCopy();
+        Hierarchy newMap = original.getCon();
         addNoise(newMap, noise);
         return ConHypothesis.createInstance(newMap);
     }
 
-    private GrammarHierarchy crossover(GrammarHierarchy aCon, GrammarHierarchy bCon, double aWeight) {
+    private Hierarchy crossover(Hierarchy aCon, Hierarchy bCon, double aWeight) {
         double bWeight = 1 - aWeight;
-        GrammarHierarchy result = new GrammarHierarchy();
+        Hierarchy result = Hierarchy.createNew();
 //        Map<Constraint, Double> aMap = aCon.getMap();
 //        Map<Constraint, Double> bMap = bCon.getMap();
 //        for (Constraint constraint : aMap.keySet()) {

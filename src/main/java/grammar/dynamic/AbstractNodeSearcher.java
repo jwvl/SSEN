@@ -4,7 +4,7 @@ import forms.Form;
 import gen.mapping.FormMapping;
 import grammar.dynamic.node.AbstractCostNode;
 import grammar.levels.predefined.BiPhonSix;
-import ranking.constraints.helper.ConstraintArrayList;
+import constraints.helper.ConstraintArrayList;
 
 import java.util.ArrayDeque;
 import java.util.PriorityQueue;
@@ -12,6 +12,8 @@ import java.util.Queue;
 
 /**
  * Created by janwillem on 29/03/16.
+ * Different implementations of this node searcher exist. They all use
+ * a priority queue to keep the current lowest-cost path at the front of the queue.
  */
 public abstract class AbstractNodeSearcher<N extends AbstractCostNode> {
     private int counter = 0;

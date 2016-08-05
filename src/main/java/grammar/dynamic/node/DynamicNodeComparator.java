@@ -6,7 +6,7 @@ import com.google.common.cache.LoadingCache;
 import eval.harmony.CostFactory;
 import gen.mapping.FormMapping;
 import grammar.dynamic.DynamicNetworkGrammar;
-import ranking.constraints.helper.ConstraintArrayList;
+import constraints.helper.ConstraintArrayList;
 import util.arrays.DoubleArraySorter;
 
 import java.util.Comparator;

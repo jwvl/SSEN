@@ -3,8 +3,8 @@
  */
 package learn.update;
 
+import constraints.hierarchy.reimpl.Hierarchy;
 import learn.ViolatedCandidate;
-import ranking.GrammarHierarchy;
 
 import java.util.Collection;
 
@@ -14,9 +14,9 @@ import java.util.Collection;
  */
 public interface UpdateAlgorithm {
 
-    void update(GrammarHierarchy con, Collection<ViolatedCandidate> lCandidates, Collection<ViolatedCandidate> tCandidates, double delta);
+    void update(Hierarchy con, Collection<ViolatedCandidate> lCandidates, Collection<ViolatedCandidate> tCandidates, double delta);
 
-    UpdateAction getUpdate(GrammarHierarchy con, ViolatedCandidate lCandidate, ViolatedCandidate tCandidate, double delta);
+    UpdateAction getUpdate(Hierarchy con, ViolatedCandidate lCandidate, ViolatedCandidate tCandidate, double delta);
 
 
 }

@@ -155,12 +155,12 @@ public class SixLevelFrenchDynamic {
 
         Timer timer = new Timer();
         System.out.println("Testing grammar on learning data...");
-        GrammarTester.testGrammarOnLearningData(grammar, pairDistribution, 20, 1.0);
+        GrammarTester.testGrammarOnLearningData(grammar, pairDistribution, 100, 1.0);
         timer.reportElapsedTime("Did tests in ", false);
 
 
         SettingsMap settingsMap = new SettingsMap();
-        LearningPropertyCombinations learningPropertyCombinations = LearningPropertyCombinations.fromMultimap(settingsMap.getMap(), grammar.getLearningProperties());
+        LearningPropertyCombinations learningPropertyCombinations = LearningPropertyCombinations.fromMultimap(settingsMap.getMap(), grammar.getDefaultLearningProperties());
 
         TrajectoriesTester trajectoriesTester = new TrajectoriesTester(learningPropertyCombinations, grammar, pairDistribution);
         trajectoriesTester.testAndWrite("combinations",numEvaluations,10,numThreads);

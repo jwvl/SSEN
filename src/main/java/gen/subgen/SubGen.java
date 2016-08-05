@@ -15,9 +15,9 @@ import gen.constrain.GenConstrainer;
 import gen.mapping.FormMapping;
 import gen.mapping.SubCandidateSet;
 import grammar.levels.Level;
-import ranking.constraints.Constraint;
-import ranking.constraints.factories.ConstraintFactory;
-import ranking.constraints.helper.ConstraintArrayList;
+import constraints.Constraint;
+import constraints.factories.ConstraintFactory;
+import constraints.helper.ConstraintArrayList;
 import util.collections.Couple;
 
 import java.util.Collection;

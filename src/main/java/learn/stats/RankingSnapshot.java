@@ -3,8 +3,8 @@
  */
 package learn.stats;
 
-import ranking.GrammarHierarchy;
-import ranking.constraints.Constraint;
+import constraints.Constraint;
+import constraints.hierarchy.reimpl.Hierarchy;
 
 import java.util.IdentityHashMap;
 import java.util.Map;
@@ -18,7 +18,6 @@ public class RankingSnapshot {
     private final Map<Constraint, Double> snapshot;
 
     /**
-     * @param snapshot
      */
     private RankingSnapshot(int atLearningStep) {
         this.atLearningStep = atLearningStep;
@@ -29,10 +28,10 @@ public class RankingSnapshot {
         snapshot.put(constraint, value);
     }
 
-    public static RankingSnapshot create(int learningStep, GrammarHierarchy ranking) {
+    public static RankingSnapshot create(int learningStep, Hierarchy hierarchy) {
         RankingSnapshot result = new RankingSnapshot(learningStep);
-        for (Constraint constraint : ranking) {
-            double rankingValue = ranking.getStratifiedRanking(constraint).getValue();
+        for (Constraint constraint : hierarchy) {
+            double rankingValue = hierarchy.getRanking(constraint);
             result.add(constraint, rankingValue);
         }
         return result;

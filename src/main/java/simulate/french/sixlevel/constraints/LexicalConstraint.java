@@ -10,7 +10,7 @@ import gen.mapping.FormMapping;
 import gen.mapping.specific.MfUfMapping;
 import grammar.levels.Level;
 import grammar.levels.predefined.BiPhonSix;
-import ranking.constraints.MappingConstraint;
+import constraints.MappingConstraint;
 
 /**
  * @author jwvl
@@ -40,7 +40,7 @@ public class LexicalConstraint extends MappingConstraint<MfUfMapping> {
     /*
      * (non-Javadoc)
      *
-     * @see ranking.constraints.Constraint#caches()
+     * @see constraints.Constraint#caches()
      */
     @Override
     public boolean caches() {
@@ -74,7 +74,7 @@ public class LexicalConstraint extends MappingConstraint<MfUfMapping> {
      * (non-Javadoc)
      *
      * @see
-     * ranking.constraints.MappingConstraint#getNumViolations(gen.mapping.FormMapping
+     * constraints.MappingConstraint#getNumViolations(gen.mapping.FormMapping
      * )
      */
     @Override
@@ -101,7 +101,7 @@ public class LexicalConstraint extends MappingConstraint<MfUfMapping> {
     /*
      * (non-Javadoc)
      *
-     * @see ranking.constraints.Constraint#toString()
+     * @see constraints.Constraint#toString()
      */
     @Override
     public String toString() {

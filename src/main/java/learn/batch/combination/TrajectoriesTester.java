@@ -42,7 +42,8 @@ public class TrajectoriesTester {
             resultsTable.appendDatum("numEpochs",""+learningProperties.getPlasticityEpochs());
             resultsTable.appendDatum("updateAlgorithm",""+learningProperties.getUpdateAlgorithm().toString());
             resultsTable.appendDatum("errorRate",""+error);
-            grammar.resetConstraints();
+            grammar.getHierarchy().printContents();
+            grammar.resetConstraints(100.0);
         }}
 
         resultsTable.saveToFile("outputs/simulationResults-"+ DateString.getShortDateString());

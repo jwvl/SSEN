@@ -44,7 +44,7 @@ public class LearningStep implements Callable<UpdateAction> {
         Evaluation freeEvaluation = grammar.evaluate(testPair, true,
                 properties.getEvaluationNoise());
         ViolatedCandidate lCandidate = freeEvaluation.getWinner();
-        // timer.reportElapsedTime(String.format("Time to get first winner - %s",lCandidate.getCandidate()), true);
+        //System.out.println("First winner: "+lCandidate.getCandidate());
 
         if (correspondsWithLearningDatum(lCandidate)) {
             return UpdateAction.NO_UPDATE;
@@ -53,10 +53,10 @@ public class LearningStep implements Callable<UpdateAction> {
         Evaluation parsedEvaluation = grammar.evaluate(learningDatum, properties.isResample(),
                 properties.getEvaluationNoise());
         ViolatedCandidate tCandidate = parsedEvaluation.getWinner();
-        // timer.reportElapsedTime(String.format("Time to get second winner - %s",tCandidate.getCandidate()), true);
+        //System.out.println("Second winner: "+tCandidate.getCandidate());
         UpdateAlgorithm updateAlgorithm = properties.getUpdateAlgorithm();
-        UpdateAction action = updateAlgorithm.getUpdate(grammar.getRankedCon(), lCandidate, tCandidate, plasticity);
-        action.updateRanking(grammar.getRankedCon());
+        UpdateAction action = updateAlgorithm.getUpdate(grammar.getHierarchy(), lCandidate, tCandidate, plasticity);
+        action.updateRanking(grammar.getHierarchy());
         //System.out.println(action.toPrettyString());
 
         return action;

@@ -4,7 +4,7 @@
 package learn.genetic;
 
 import com.google.common.collect.Ordering;
-import ranking.Hierarchy;
+import constraints.hierarchy.reimpl.Hierarchy;
 import util.collections.Distribution;
 
 import java.util.ArrayList;

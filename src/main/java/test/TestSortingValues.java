@@ -4,7 +4,7 @@
 package test;
 
 import eval.harmony.SortedListFactory;
-import ranking.SortingValues;
+import constraints.hierarchy.SortingValues;
 import util.collections.AutoSortedList;
 import util.debug.Stopwatch;
 

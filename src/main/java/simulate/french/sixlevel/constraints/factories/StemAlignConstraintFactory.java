@@ -4,9 +4,9 @@ import com.google.common.collect.ImmutableList;
 import forms.morphosyntax.MForm;
 import gen.mapping.FormMapping;
 import gen.rule.string.Side;
-import ranking.constraints.Constraint;
-import ranking.constraints.factories.FormConstraintFactory;
-import ranking.constraints.helper.ConstraintArrayList;
+import constraints.Constraint;
+import constraints.factories.FormConstraintFactory;
+import constraints.helper.ConstraintArrayList;
 import simulate.french.sixlevel.constraints.StemAlignConstraint;
 
 import java.util.ArrayList;

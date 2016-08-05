@@ -5,7 +5,7 @@ package eval.harmony;
 
 import eval.harmony.autosort.SortedDoublesArray;
 import eval.harmony.autosort.StratifiedDouble;
-import ranking.OldRankedConstraint;
+import constraints.hierarchy.OldRankedConstraint;
 
 import java.util.Collection;
 

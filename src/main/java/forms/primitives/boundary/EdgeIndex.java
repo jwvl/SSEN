@@ -14,6 +14,7 @@ import java.util.Arrays;
  */
 public abstract class EdgeIndex {
 
+
     public void setBoundaryAtLimit(Edge edgeType, Side side) {
         if (side == Side.LEFT || side == Side.EITHER) {
             set(edgeType, 0);

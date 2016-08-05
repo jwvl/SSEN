@@ -5,7 +5,7 @@ package eval.harmony.autosort;
 
 import com.google.common.collect.Ordering;
 import org.apache.commons.collections4.iterators.ArrayIterator;
-import ranking.SortingValues;
+import constraints.hierarchy.SortingValues;
 import util.collections.AutoSortedList;
 
 import java.util.Arrays;

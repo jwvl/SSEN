@@ -19,7 +19,7 @@ import grammar.levels.predefined.BiPhonSix;
  * @date 20/02/2016
  */
 public class SurfaceForm extends PhoneSequence {
-    private Sonority[] sonorities;
+
 
     /**
      * @param contents
@@ -27,12 +27,8 @@ public class SurfaceForm extends PhoneSequence {
      */
     private SurfaceForm(PhoneSubForm contents, EdgeIndex boundaries) {
         super(contents, boundaries);
-        sonorities = new Sonority[contents.size()];
-        for (int i = 0; i < contents.size(); i++) {
-            sonorities[i] = contents.getElementAt(i).getSonority();
-        }
-    }
 
+    }
 
     /**
      * @param contentsAsBytes
@@ -139,13 +135,22 @@ public class SurfaceForm extends PhoneSequence {
 
         SonorityProfile[] result = new SonorityProfile[numSubSequences];
         for (int i = 0; i < numSubSequences; i++) {
-            result[i] = SonorityProfile.getInstance(getSubArray(sonorities, startAt, endAt));
+            result[i] = SonorityProfile.getInstance(getSonorities(startAt, endAt));
             startAt = endAt;
             endAt = edgeIndex.nextSetBit(edgeType, endAt + 1);
             if (endAt < 0) {
                 endAt = size();
             }
 
+        }
+        return result;
+    }
+
+    public Sonority[] getSonorities(int from, int to) {
+        byte[] contents = getByteArray();
+        Sonority[] result = new Sonority[to-from];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = Sonority.of(contents[from+i]);
         }
         return result;
     }

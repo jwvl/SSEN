@@ -3,18 +3,14 @@
  */
 package learn.batch;
 
-import eval.sample.GaussianXORSampler;
-import forms.FormPair;
+import constraints.hierarchy.reimpl.Hierarchy;
 import grammar.dynamic.DynamicNetworkGrammar;
 import learn.data.LearningData;
 import learn.genetic.CandidatePool;
-import learn.genetic.ConHypothesis;
-import ranking.GrammarHierarchy;
-import ranking.Hierarchy;
-import ranking.DynamicSampledHierarchy;
 
-import java.util.List;
-import java.util.concurrent.*;
+import java.util.concurrent.CompletionService;
+import java.util.concurrent.ExecutorCompletionService;
+import java.util.concurrent.ExecutorService;
 
 /**
  * @author jwvl
@@ -55,30 +51,30 @@ public class GeneticLearningTrajectory extends AbstractLearningTrajectory {
             CompletionService<Boolean> completionService =
                     new ExecutorCompletionService<Boolean>(executorService);
             int poolSize = candidatePool.size();
-            List<ConHypothesis> hypothesisList = candidatePool.getMembers();
-            for (int i = 0; i < triesPerPool; i++) {
-                ConHypothesis nextHypothesis = hypothesisList.get(i % poolSize);
-                GrammarHierarchy hierarchy = nextHypothesis.getCon();
-                DynamicSampledHierarchy sampled = new DynamicSampledHierarchy(hierarchy, GaussianXORSampler.createInstance(evaluationNoise));
-                FormPair randomPair = getData().next();
-                SingleEvaluationStep singleEvaluationStep = SingleEvaluationStep.getInstance(learningProperties, grammar, sampled, randomPair);
-                completionService.submit(singleEvaluationStep);
-            }
-
-            for (int i = 0; i < triesPerPool; i++) {
-                try {
-                    Future<Boolean> resultFuture = completionService.take();
-                    boolean success = resultFuture.get();
-                    hypothesisList.get(i % poolSize).addEvaluation(success);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                }
-                numEvaluated++;
-            }
-
-            updateCandidatePool(grammar.getRankedCon());
+//            List<ConHypothesis> hypothesisList = candidatePool.getMembers();
+//            for (int i = 0; i < triesPerPool; i++) {
+//                ConHypothesis nextHypothesis = hypothesisList.get(i % poolSize);
+//                GrammarHierarchy hierarchy = nextHypothesis.getCon();
+//                DynamicSampledHierarchy sampled = new DynamicSampledHierarchy(hierarchy, GaussianXORSampler.createInstance(evaluationNoise));
+//                FormPair randomPair = getData().next();
+//                SingleEvaluationStep singleEvaluationStep = SingleEvaluationStep.getInstance(learningProperties, grammar, sampled, randomPair);
+//                completionService.submit(singleEvaluationStep);
+//            }
+//
+//            for (int i = 0; i < triesPerPool; i++) {
+//                try {
+//                    Future<Boolean> resultFuture = completionService.take();
+//                    boolean success = resultFuture.get();
+//                    hypothesisList.get(i % poolSize).addEvaluation(success);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                } catch (ExecutionException e) {
+//                    e.printStackTrace();
+//                }
+//                numEvaluated++;
+//            }
+//
+//            updateCandidatePool(grammar.getRankedCon());
 
         }
         executorService.shutdown();

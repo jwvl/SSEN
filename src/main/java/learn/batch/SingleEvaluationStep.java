@@ -3,13 +3,13 @@
  */
 package learn.batch;
 
+import constraints.hierarchy.reimpl.Hierarchy;
 import forms.FormPair;
 import forms.GraphForm;
 import grammar.dynamic.DynamicNetworkEvaluation;
 import grammar.dynamic.DynamicNetworkGrammar;
 import graph.Direction;
 import learn.ViolatedCandidate;
-import ranking.DynamicSampledHierarchy;
 
 import java.util.concurrent.Callable;
 
@@ -18,7 +18,7 @@ import java.util.concurrent.Callable;
  * @date 25/03/2016
  */
 public class SingleEvaluationStep implements Callable<Boolean> {
-    private final DynamicSampledHierarchy sampledHierarchy;
+    private final Hierarchy sampledHierarchy;
     private final FormPair learningDatum;
     private final LearningProperties properties;
     private final DynamicNetworkGrammar grammar;
@@ -28,14 +28,14 @@ public class SingleEvaluationStep implements Callable<Boolean> {
      * @param grammar
      * @param learningDatum
      */
-    private SingleEvaluationStep(LearningProperties properties, DynamicNetworkGrammar grammar, DynamicSampledHierarchy sampledHierarchy, FormPair learningDatum) {
+    private SingleEvaluationStep(LearningProperties properties, DynamicNetworkGrammar grammar, Hierarchy sampledHierarchy, FormPair learningDatum) {
         this.sampledHierarchy = sampledHierarchy;
         this.learningDatum = learningDatum;
         this.properties = properties;
         this.grammar = grammar;
     }
 
-    public static SingleEvaluationStep getInstance(LearningProperties learningProperties, DynamicNetworkGrammar grammar, DynamicSampledHierarchy sampledHierarchy, FormPair learningDatum) {
+    public static SingleEvaluationStep getInstance(LearningProperties learningProperties, DynamicNetworkGrammar grammar, Hierarchy sampledHierarchy, FormPair learningDatum) {
         return new SingleEvaluationStep(learningProperties, grammar, sampledHierarchy, learningDatum);
     }
 

@@ -1,18 +1,16 @@
 package eval.sample;
 
-import eval.Evaluation;
+import constraints.hierarchy.reimpl.Hierarchy;
 import eval.harmony.autosort.StratifiedDouble;
-import ranking.GrammarHierarchy;
-import ranking.OldRankedConstraint;
-import ranking.constraints.Constraint;
-import ranking.constraints.RankedConstraint;
+import constraints.Constraint;
+import constraints.RankedConstraint;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 /**
- * A Sampler object creates a stochastic ranking from a Hierarchy. In standard
+ * A Sampler object creates a stochastic constraints.ranking from a Hierarchy. In standard
  * GLA this is implemented with a Gaussian random number generator,
  * but other variants are thinkable as well (e.g. uniform random numbers)
  *
@@ -29,21 +27,6 @@ public abstract class AbstractSampler {
 
     public abstract double sampleDouble();
 
-    public void sampleConstraints(Iterable<OldRankedConstraint> rcs, Evaluation e) {
-        for (OldRankedConstraint rc : rcs) {
-            sampleConstraint(rc, e);
-        }
-    }
-
-    public void sampleConstraint(OldRankedConstraint rc, Evaluation e) {
-        rc.conflateWithNoise(sampleDouble(), e.getId(), lazy);
-    }
-
-    public void sampleConstraints(Iterable<OldRankedConstraint> rcs) {
-        for (OldRankedConstraint rc : rcs) {
-            rc.conflateWithNoise(sampleDouble(), 0L, false);
-        }
-    }
 
     public boolean isLazy() {
         return lazy;
@@ -66,7 +49,7 @@ public abstract class AbstractSampler {
         return old + sampleDouble();
     }
 
-    public List<RankedConstraint> sampleHierarchy(GrammarHierarchy hierarchy) {
+    public List<RankedConstraint> sampleHierarchy(Hierarchy hierarchy) {
         List<RankedConstraint> result = new ArrayList<>(hierarchy.size());
         for (Constraint constraint: hierarchy) {
             double oldValue = hierarchy.getRanking(constraint);

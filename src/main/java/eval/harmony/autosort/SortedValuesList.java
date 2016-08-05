@@ -4,7 +4,7 @@
 package eval.harmony.autosort;
 
 import com.google.common.collect.Ordering;
-import ranking.SortingValues;
+import constraints.hierarchy.SortingValues;
 import util.collections.AutoSortedList;
 
 import java.util.*;

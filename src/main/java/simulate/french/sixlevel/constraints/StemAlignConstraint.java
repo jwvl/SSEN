@@ -5,7 +5,7 @@ import forms.morphosyntax.Morpheme;
 import forms.morphosyntax.MorphologicalWord;
 import gen.rule.string.Side;
 import grammar.levels.predefined.BiPhonSix;
-import ranking.constraints.FormConstraint;
+import constraints.FormConstraint;
 
 import java.util.Objects;
 

@@ -6,9 +6,7 @@ package simulate.french.sixlevel.constraints;
 import forms.morphosyntax.*;
 import gen.rule.string.Side;
 import grammar.levels.predefined.BiPhonSix;
-import ranking.constraints.FormConstraint;
-
-import java.util.List;
+import constraints.FormConstraint;
 
 /**
  * @author jwvl
@@ -76,7 +74,7 @@ public class AffixPositionConstraint extends FormConstraint<MForm> {
     /*
      * (non-Javadoc)
      *
-     * @see ranking.constraints.Constraint#toString()
+     * @see constraints.Constraint#toString()
      */
     @Override
     public String toString() {
@@ -86,7 +84,7 @@ public class AffixPositionConstraint extends FormConstraint<MForm> {
     /*
      * (non-Javadoc)
      *
-     * @see ranking.constraints.Constraint#caches()
+     * @see constraints.Constraint#caches()
      */
     @Override
     public boolean caches() {

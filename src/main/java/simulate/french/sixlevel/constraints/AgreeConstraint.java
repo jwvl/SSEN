@@ -7,7 +7,7 @@ import forms.morphosyntax.AffixType;
 import forms.morphosyntax.Agreement;
 import forms.morphosyntax.MStructure;
 import grammar.levels.predefined.BiPhonSix;
-import ranking.constraints.FormConstraint;
+import constraints.FormConstraint;
 
 import java.util.Collection;
 
@@ -27,7 +27,7 @@ public class AgreeConstraint extends FormConstraint<MStructure> {
     /*
      * (non-Javadoc)
      *
-     * @see ranking.constraints.FormConstraint#getNumViolations(forms.Form)
+     * @see constraints.FormConstraint#getNumViolations(forms.Form)
      */
     @Override
     public int getNumViolations(MStructure mStructure) {
@@ -52,7 +52,7 @@ public class AgreeConstraint extends FormConstraint<MStructure> {
     /*
      * (non-Javadoc)
      *
-     * @see ranking.constraints.Constraint#toString()
+     * @see constraints.Constraint#toString()
      */
     @Override
     public String toString() {
@@ -62,7 +62,7 @@ public class AgreeConstraint extends FormConstraint<MStructure> {
     /*
      * (non-Javadoc)
      *
-     * @see ranking.constraints.Constraint#caches()
+     * @see constraints.Constraint#caches()
      */
     @Override
     public boolean caches() {

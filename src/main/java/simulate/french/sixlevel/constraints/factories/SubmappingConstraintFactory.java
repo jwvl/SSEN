@@ -7,9 +7,9 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import forms.primitives.ISubmapping;
 import gen.mapping.FormMapping;
-import ranking.constraints.Constraint;
-import ranking.constraints.factories.MappingConstraintFactory;
-import ranking.constraints.helper.ConstraintArrayList;
+import constraints.Constraint;
+import constraints.factories.MappingConstraintFactory;
+import constraints.helper.ConstraintArrayList;
 import util.string.CollectionPrinter;
 
 import java.util.Collection;

@@ -2,9 +2,9 @@ package eval.harmony;
 
 import com.typesafe.config.ConfigFactory;
 import eval.harmony.autosort.SimplestDoubleArray;
-import ranking.Hierarchy;
-import ranking.constraints.Constraint;
-import ranking.constraints.helper.ConstraintArrayList;
+import constraints.hierarchy.reimpl.Hierarchy;
+import constraints.Constraint;
+import constraints.helper.ConstraintArrayList;
 
 import java.util.Arrays;
 import java.util.Collection;

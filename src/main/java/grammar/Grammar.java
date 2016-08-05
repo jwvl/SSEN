@@ -3,6 +3,8 @@
  */
 package grammar;
 
+import constraints.Constraint;
+import constraints.hierarchy.reimpl.Hierarchy;
 import eval.Evaluation;
 import forms.FormPair;
 import grammar.levels.Level;
@@ -10,8 +12,6 @@ import grammar.levels.LevelSpace;
 import grammar.subgraph.CandidateSpaces;
 import learn.ViolatedCandidate;
 import learn.batch.LearningProperties;
-import ranking.Con;
-import ranking.GrammarHierarchy;
 
 /**
  * @author jwvl
@@ -22,8 +22,8 @@ public abstract class Grammar {
 
     private final LevelSpace levelSpace;
     private final String name;
-    private final Con con;
-    private LearningProperties learningProperties;
+    private final Hierarchy con;
+    private LearningProperties defaultLearningProperties;
 
 
     private CandidateSpaces candidateSpaces;
@@ -33,11 +33,11 @@ public abstract class Grammar {
      * @param name
      * @param learningProperties
      */
-    protected Grammar(LevelSpace levelSpace, String name, Con con, LearningProperties learningProperties) {
+    protected Grammar(LevelSpace levelSpace, String name, Hierarchy con, LearningProperties learningProperties) {
         this.levelSpace = levelSpace;
         this.name = name;
         this.con = con;
-        this.learningProperties = learningProperties;
+        this.defaultLearningProperties = learningProperties;
     }
 
 
@@ -54,7 +54,7 @@ public abstract class Grammar {
     public abstract Evaluation evaluate(FormPair formPair, boolean newEvaluation, double evaluationNoise);
 
     public Evaluation evaluate(FormPair formPair, boolean newEvaluation) {
-        return evaluate(formPair, newEvaluation, learningProperties.getEvaluationNoise());
+        return evaluate(formPair, newEvaluation, defaultLearningProperties.getEvaluationNoise());
     }
 
     public ViolatedCandidate getWinner(FormPair formPair, boolean newEvaluation, double evaluationNoise) {
@@ -79,14 +79,12 @@ public abstract class Grammar {
     /**
      * @return the con
      */
-    public Con getCon() {
+    public Hierarchy getHierarchy() {
         return con;
     }
 
-    public abstract GrammarHierarchy getRankedCon();
-
-    public LearningProperties getLearningProperties() {
-        return learningProperties;
+    public LearningProperties getDefaultLearningProperties() {
+        return defaultLearningProperties;
     }
 
 
@@ -99,10 +97,15 @@ public abstract class Grammar {
     }
 
 
-    public void setLearningProperties(LearningProperties learningProperties) {
-        this.learningProperties = learningProperties;
+    public void setDefaultLearningProperties(LearningProperties defaultLearningProperties) {
+        this.defaultLearningProperties = defaultLearningProperties;
     }
 
 
-    public abstract void resetConstraints();
+    public void resetConstraints(double value) {
+        Hierarchy h = getHierarchy();
+        for (Constraint c: getHierarchy()) {
+            h.putValue(c,value);
+        }
+    }
 }

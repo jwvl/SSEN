@@ -6,7 +6,7 @@ import gen.mapping.FormMapping;
 import gen.mapping.PairMapping;
 import grammar.dynamic.node.DynamicCostNode;
 import grammar.dynamic.node.DynamicNodeComparator;
-import ranking.constraints.helper.ConstraintArrayList;
+import constraints.helper.ConstraintArrayList;
 
 import java.util.PriorityQueue;
 

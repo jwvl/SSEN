@@ -4,7 +4,7 @@ import eval.harmony.CostFactory;
 import forms.Form;
 import gen.mapping.FormMapping;
 import grammar.dynamic.node.SimpleCostNode;
-import ranking.constraints.helper.ConstraintArrayList;
+import constraints.helper.ConstraintArrayList;
 import util.arrays.DoubleArraySorter;
 
 import java.util.PriorityQueue;

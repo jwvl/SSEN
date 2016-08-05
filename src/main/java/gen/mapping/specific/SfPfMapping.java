@@ -16,7 +16,7 @@ import java.util.Collection;
  * @author jwvl
  * @date Jul 25, 2015
  */
-public class SfPfMapping extends PhoneRewriteMapping<SurfaceForm, PhoneticForm> {
+public class SfPfMapping extends PhoneRewriteMapping {
 
     public SfPfMapping(SurfaceForm before, PhoneticForm after, Collection<RewriteRule> rules) {
         super(before, after, rules);

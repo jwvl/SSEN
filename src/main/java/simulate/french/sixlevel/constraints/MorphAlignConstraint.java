@@ -6,7 +6,7 @@ package simulate.french.sixlevel.constraints;
 import forms.morphosyntax.*;
 import gen.rule.string.Side;
 import grammar.levels.predefined.BiPhonSix;
-import ranking.constraints.FormConstraint;
+import constraints.FormConstraint;
 
 /**
  * @author jwvl
@@ -90,7 +90,7 @@ public class MorphAlignConstraint extends FormConstraint<MForm> {
     /*
      * (non-Javadoc)
      *
-     * @see ranking.constraints.Constraint#toString()
+     * @see constraints.Constraint#toString()
      */
     @Override
     public String toString() {
@@ -100,7 +100,7 @@ public class MorphAlignConstraint extends FormConstraint<MForm> {
     /*
      * (non-Javadoc)
      *
-     * @see ranking.constraints.Constraint#caches()
+     * @see constraints.Constraint#caches()
      */
     @Override
     public boolean caches() {

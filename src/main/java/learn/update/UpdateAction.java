@@ -3,8 +3,8 @@
  */
 package learn.update;
 
-import ranking.GrammarHierarchy;
-import ranking.constraints.Constraint;
+import constraints.Constraint;
+import constraints.hierarchy.reimpl.Hierarchy;
 
 import java.util.Collections;
 import java.util.IdentityHashMap;
@@ -44,10 +44,10 @@ public class UpdateAction {
         put(constraint, oldValue + delta);
     }
 
-    public void updateRanking(GrammarHierarchy grammarHierarchy) {
+    public void updateRanking(Hierarchy Hierarchy) {
         for (Constraint constraint : rankingDeltas.keySet()) {
             double delta = rankingDeltas.get(constraint);
-            grammarHierarchy.updateConstraintRanking(constraint, delta);
+            Hierarchy.updateConstraintRanking(constraint, delta);
         }
     }
 

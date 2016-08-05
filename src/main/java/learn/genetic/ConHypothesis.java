@@ -3,15 +3,15 @@
  */
 package learn.genetic;
 
+import constraints.hierarchy.reimpl.Hierarchy;
 import learn.stats.ErrorCounter;
-import ranking.GrammarHierarchy;
 
 /**
  * @author jwvl
  * @date 30/09/2015
  */
 public class ConHypothesis {
-    private final GrammarHierarchy con;
+    private final Hierarchy con;
     private final int identifier;
     private static int ID_COUNTER;
     private ErrorCounter errorCounter;
@@ -19,14 +19,14 @@ public class ConHypothesis {
     /**
      * @param con
      */
-    private ConHypothesis(GrammarHierarchy con) {
+    private ConHypothesis(Hierarchy con) {
         this.con = con;
         this.identifier = ID_COUNTER++;
         errorCounter = new ErrorCounter();
     }
 
 
-    public GrammarHierarchy getCon() {
+    public Hierarchy getCon() {
         return con;
     }
 
@@ -38,7 +38,7 @@ public class ConHypothesis {
      * @param child
      * @return
      */
-    public static ConHypothesis createInstance(GrammarHierarchy child) {
+    public static ConHypothesis createInstance(Hierarchy child) {
         return new ConHypothesis(child);
     }
 

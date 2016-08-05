@@ -6,9 +6,9 @@ package learn.update;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 import com.google.common.collect.Multisets;
+import constraints.Constraint;
+import constraints.hierarchy.reimpl.Hierarchy;
 import learn.ViolatedCandidate;
-import ranking.GrammarHierarchy;
-import ranking.constraints.Constraint;
 
 import java.util.Iterator;
 
@@ -31,7 +31,7 @@ public class UpdateUtils {
         return Multisets.difference(target.getConstraints(), learner.getConstraints());
     }
 
-    public static Constraint getMax(Multiset<Constraint> multiSet, GrammarHierarchy con) {
+    public static Constraint getMax(Multiset<Constraint> multiSet, Hierarchy con) {
         Iterator<Constraint> iter = multiSet.iterator();
         Constraint argMax = iter.next();
         double valMax = con.getRanking(argMax);
@@ -52,7 +52,7 @@ public class UpdateUtils {
         return argMax;
     }
 
-    public static Multiset<Constraint> getWhereValueIsHigherThan(Multiset<Constraint> multiSet, GrammarHierarchy con, double threshold) {
+    public static Multiset<Constraint> getWhereValueIsHigherThan(Multiset<Constraint> multiSet, Hierarchy con, double threshold) {
         Multiset<Constraint> result = HashMultiset.create();
         for (Constraint constraint : multiSet.elementSet()) {
             double thisVal = con.getRanking(constraint);

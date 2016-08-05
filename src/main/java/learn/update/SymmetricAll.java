@@ -4,9 +4,9 @@
 package learn.update;
 
 import com.google.common.collect.Multiset;
+import constraints.Constraint;
+import constraints.hierarchy.reimpl.Hierarchy;
 import learn.ViolatedCandidate;
-import ranking.GrammarHierarchy;
-import ranking.constraints.Constraint;
 
 import java.util.Collection;
 
@@ -17,7 +17,7 @@ import java.util.Collection;
 public class SymmetricAll implements UpdateAlgorithm {
 
 
-    public void update(GrammarHierarchy con, Collection<ViolatedCandidate> lCandidates,
+    public void update(Hierarchy con, Collection<ViolatedCandidate> lCandidates,
                        Collection<ViolatedCandidate> tCandidates, double delta) {
         for (ViolatedCandidate lCandidate : lCandidates) {
             Multiset<Constraint> constraintMultiset = lCandidate.getConstraints();
@@ -40,7 +40,7 @@ public class SymmetricAll implements UpdateAlgorithm {
     }
 
 
-    public UpdateAction getUpdate(GrammarHierarchy con, ViolatedCandidate lCandidate,
+    public UpdateAction getUpdate(Hierarchy con, ViolatedCandidate lCandidate,
                                   ViolatedCandidate tCandidate, double delta) {
         UpdateAction updateAction = UpdateAction.create();
 
