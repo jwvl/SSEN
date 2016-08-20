@@ -73,7 +73,7 @@ public class LearningTrajectory extends AbstractLearningTrajectory {
             if (shortCounter.getTotal() >= resetCounterEvery) {
                 String intermediateResult = String.format("Current error rate: %s (%s pct)", shortCounter.getErrorAsRatio(), shortCounter.getErrorAsPercentage());
                 System.out.println(intermediateResult);
-//                System.out.println(lastUpdate.toPrettyString());
+                System.out.println(getGrammar().getHierarchy().printRankedConstraints());
                 shortCounter.reset();
             }
         }

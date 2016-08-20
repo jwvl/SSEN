@@ -1,13 +1,13 @@
 package grammar.dynamic;
 
+import constraints.SparseViolationProfile;
+import constraints.helper.ConstraintArrayList;
 import constraints.hierarchy.reimpl.Hierarchy;
 import forms.Form;
 import gen.mapping.FormMapping;
 import gen.mapping.PairMapping;
 import grammar.dynamic.node.LinkedNodeComparator;
 import grammar.dynamic.persistent.LinkedNode;
-import constraints.SparseViolationProfile;
-import constraints.helper.ConstraintArrayList;
 
 import java.util.PriorityQueue;
 
@@ -30,6 +30,6 @@ public class LinkedNodeSearcher extends AbstractNodeSearcher<LinkedNode> {
 
     @Override
     public LinkedNode getSuccessor(LinkedNode parent, FormMapping formMapping, ConstraintArrayList constraintArrayList) {
-        return new LinkedNode(parent, formMapping, SparseViolationProfile.createFromConstraintArrayList(constraintArrayList,hierarchy.getIndexedRanking()));
+        return new LinkedNode(parent, formMapping, SparseViolationProfile.createFromConstraintArrayList(constraintArrayList,hierarchy));
     }
 }

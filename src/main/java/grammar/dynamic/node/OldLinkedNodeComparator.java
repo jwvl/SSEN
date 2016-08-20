@@ -8,9 +8,9 @@ import java.util.Comparator;
  * Created by janwillem on 05/08/16.
  * Some explanation: the short[] ints act as a pair (ranking of leftmost smaller constraint, compare
  */
-public class LinkedNodeComparator implements Comparator<LinkedNode> {
+public class OldLinkedNodeComparator implements Comparator<LinkedNode> {
 
-    public LinkedNodeComparator() {
+    public OldLinkedNodeComparator() {
     }
 
     @Override

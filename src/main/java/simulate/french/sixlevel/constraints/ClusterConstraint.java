@@ -10,6 +10,8 @@ import gen.rule.string.Side;
 import grammar.levels.predefined.BiPhonSix;
 import constraints.FormConstraint;
 
+import java.util.Objects;
+
 /**
  * @author jwvl
  * @date Jul 26, 2015
@@ -79,4 +81,17 @@ public class ClusterConstraint extends FormConstraint<SurfaceForm> {
         return new ClusterConstraint(forbiddenProfile);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        ClusterConstraint that = (ClusterConstraint) o;
+        return Objects.equals(forbiddenCluster, that.forbiddenCluster);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), forbiddenCluster);
+    }
 }

@@ -40,7 +40,7 @@ public class AllUpHighDown implements UpdateAlgorithm {
         for (Constraint constraint : targetPreferringView.elementSet()) {
             maxTPreferringRanking = Math.max(maxTPreferringRanking, con.getRanking(constraint));
             double multipliedDelta = (targetPreferringView.count(constraint) * promoteWeightedDelta);
-            con.updateConstraintRanking(constraint, multipliedDelta);
+            con.changeConstraintRanking(constraint, multipliedDelta);
         }
 
         for (Constraint constraint : learnerPreferringView.elementSet()) {
@@ -61,7 +61,7 @@ public class AllUpHighDown implements UpdateAlgorithm {
         double demoteWeightedDelta = -(delta / toIterateOver.size());
         for (Constraint constraint : toIterateOver.elementSet()) {
             double multipliedDelta = toIterateOver.count(constraint) * demoteWeightedDelta;
-            con.updateConstraintRanking(constraint, multipliedDelta);
+            con.changeConstraintRanking(constraint, multipliedDelta);
             // System.out.println("↓ Updating " + constraint +" by " +
             // multipliedDelta);
         }

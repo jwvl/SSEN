@@ -47,7 +47,7 @@ public class UpdateAction {
     public void updateRanking(Hierarchy Hierarchy) {
         for (Constraint constraint : rankingDeltas.keySet()) {
             double delta = rankingDeltas.get(constraint);
-            Hierarchy.updateConstraintRanking(constraint, delta);
+            Hierarchy.changeConstraintRanking(constraint, delta);
         }
     }
 

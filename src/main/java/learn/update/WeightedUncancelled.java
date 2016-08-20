@@ -28,11 +28,11 @@ public class WeightedUncancelled implements UpdateAlgorithm {
         Multiset<Constraint> lPreferring = UpdateUtils.getViolatedByTarget(vblFirst, vbtFirst);
         double weightedPromotionDelta = delta / tPreferring.size();
         for (Constraint constraint : tPreferring) {
-            con.updateConstraintRanking(constraint, weightedPromotionDelta);
+            con.changeConstraintRanking(constraint, weightedPromotionDelta);
         }
         double weightedDemotionDelta = -delta / lPreferring.size();
         for (Constraint constraint : lPreferring) {
-            con.updateConstraintRanking(constraint, weightedDemotionDelta);
+            con.changeConstraintRanking(constraint, weightedDemotionDelta);
         }
 
     }

@@ -24,7 +24,7 @@ public class SymmetricAll implements UpdateAlgorithm {
 
             for (Constraint rc : constraintMultiset.elementSet()) {
                 double multipliedDelta = constraintMultiset.count(rc) * delta;
-                con.updateConstraintRanking(rc, multipliedDelta);
+                con.changeConstraintRanking(rc, multipliedDelta);
                 System.out.println("Updating " + rc + " by " + multipliedDelta);
             }
         }
@@ -33,7 +33,7 @@ public class SymmetricAll implements UpdateAlgorithm {
             Multiset<Constraint> constraintMultiset = tCandidate.getConstraints();
             for (Constraint rc : constraintMultiset.elementSet()) {
                 double multipliedDelta = constraintMultiset.count(rc) * delta;
-                con.updateConstraintRanking(rc, -multipliedDelta);
+                con.changeConstraintRanking(rc, -multipliedDelta);
                 System.out.println("Updating " + rc + " by " + multipliedDelta);
             }
         }

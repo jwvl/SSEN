@@ -41,4 +41,13 @@ public class ViolatedCandidate {
     }
 
 
+    public String toPrettyString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(candidate).append("\n");
+        for (Constraint c: violated.elementSet()) {
+            stringBuilder.append("  ");
+            stringBuilder.append(c).append(" x ").append(violated.count(c)).append("\n");
+        }
+        return stringBuilder.toString();
+    }
 }

@@ -1,7 +1,7 @@
 package constraints;
 
-import constraints.hierarchy.reimpl.IndexedRanking;
 import constraints.helper.ConstraintArrayList;
+import constraints.hierarchy.reimpl.Hierarchy;
 
 import java.util.Arrays;
 
@@ -17,10 +17,10 @@ public class SparseViolationProfile {
         this.indices = violationIndices;
     }
 
-    public static SparseViolationProfile createFromConstraintArrayList(ConstraintArrayList constraintArrayList, IndexedRanking indexedRanking) {
+    public static SparseViolationProfile createFromConstraintArrayList(ConstraintArrayList constraintArrayList, Hierarchy hierarchy) {
         short[] rankedIndices = new short[constraintArrayList.size()];
         for (int i=0; i < constraintArrayList.size(); i++) {
-            rankedIndices[i] = indexedRanking.getRankingIndex(constraintArrayList.get(i));
+            rankedIndices[i] = hierarchy.getRankingIndex(constraintArrayList.get(i));
         }
         Arrays.sort(rankedIndices);
         return new SparseViolationProfile(rankedIndices);

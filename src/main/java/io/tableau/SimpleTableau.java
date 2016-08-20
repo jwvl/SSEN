@@ -4,15 +4,11 @@
 package io.tableau;
 
 import candidates.Candidate;
-import com.google.common.collect.Lists;
-import constraints.hierarchy.reimpl.Hierarchy;
-import learn.ViolatedCandidate;
 import constraints.Constraint;
 import constraints.hierarchy.violations.ConstraintViolation;
+import learn.ViolatedCandidate;
 
 import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
 
 /**
  * @author jwvl
@@ -54,21 +50,6 @@ public class SimpleTableau implements Tableau {
         return result;
     }
 
-    public static SimpleTableau createPairTableau(ViolatedCandidate winner, ViolatedCandidate loser, Hierarchy conmap) {
-        Set<ConstraintViolation> allConstraints = new TreeSet<ConstraintViolation>();
-        for (Constraint c : winner.getConstraints().elementSet()) {
-            ConstraintViolation toAdd = conmap.toConstraintViolation(c);
-            allConstraints.add(toAdd);
-        }
-        for (Constraint c : loser.getConstraints().elementSet()) {
-            ConstraintViolation toAdd = conmap.toConstraintViolation(c);
-            allConstraints.add(toAdd);
-        }
-        Candidate[] candidates = new Candidate[]{winner.getCandidate(), loser.getCandidate()};
-        ConstraintViolation[] constraints = allConstraints.toArray(new ConstraintViolation[allConstraints.size()]);
-        int[][] violations = fillViolationProfiles(Lists.newArrayList(winner, loser), constraints);
-        return new SimpleTableau(candidates, constraints, winner.getCandidate(), violations);
-    }
 
     /*
      * (non-Javadoc)

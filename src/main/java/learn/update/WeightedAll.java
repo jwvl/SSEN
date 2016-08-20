@@ -26,11 +26,11 @@ public class WeightedAll implements UpdateAlgorithm {
         Multiset<Constraint> lPreferring = violatedByT.iterator().next().getConstraints();
         double weightedPromotionDelta = delta / tPreferring.size();
         for (Constraint constraint : tPreferring) {
-            con.updateConstraintRanking(constraint, weightedPromotionDelta);
+            con.changeConstraintRanking(constraint, weightedPromotionDelta);
         }
         double weightedDemotionDelta = -delta / lPreferring.size();
         for (Constraint constraint : lPreferring) {
-            con.updateConstraintRanking(constraint, weightedDemotionDelta);
+            con.changeConstraintRanking(constraint, weightedDemotionDelta);
         }
 
     }
