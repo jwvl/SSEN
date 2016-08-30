@@ -8,6 +8,8 @@ import gen.rule.string.Side;
 import grammar.levels.predefined.BiPhonSix;
 import constraints.FormConstraint;
 
+import java.util.Objects;
+
 /**
  * @author jwvl
  * @date Jul 31, 2015
@@ -102,4 +104,19 @@ public class AffixPositionConstraint extends FormConstraint<MForm> {
         }
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        AffixPositionConstraint that = (AffixPositionConstraint) o;
+        return relevantCategory == that.relevantCategory &&
+                Objects.equals(offendingAttributes, that.offendingAttributes) &&
+                side == that.side;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), relevantCategory, offendingAttributes, side);
+    }
 }

@@ -1,5 +1,6 @@
 package grammar.dynamic.node;
 
+import constraints.SparseViolationProfile;
 import grammar.dynamic.persistent.LinkedNode;
 
 import java.util.Comparator;
@@ -9,58 +10,45 @@ import java.util.Comparator;
  * Some explanation: the short[] ints act as a pair (ranking of leftmost smaller constraint, compare
  */
 public class LinkedNodeComparator implements Comparator<LinkedNode> {
+    private static short[] EMPTY_ARRAY = new short[0];
 
     public LinkedNodeComparator() {
     }
 
     @Override
     public int compare(LinkedNode o1, LinkedNode o2) {
-        System.out.println("Comparing:");
-        System.out.println(o1);
-        System.out.println(o2);
-        short[] currentLeftmost = compareRecursively(o1,o2, new short[]{Short.MAX_VALUE,0});
-        System.out.println("Winner: "+currentLeftmost[1]);
-        return currentLeftmost[1];
+        int result;
+        if (o1.getWorstViolator() == o2.getWorstViolator()) {
+            result = compareRecursively(o1, o2, EMPTY_ARRAY, EMPTY_ARRAY);
+        } else {
+            result = o2.getWorstViolator() - o1.getWorstViolator();
+        }
+//        System.out.println("Comparing:");
+//        System.out.println(o1.toStringRecursive());
+//        System.out.println(o2.toStringRecursive());
+//        System.out.println("Result: " + result);
+        return result;
 
     }
 
-    private short[] compareRecursively(LinkedNode o1, LinkedNode o2, short[] currentLeftmostNonZero) {
-
+    private int compareRecursively(LinkedNode o1, LinkedNode o2, short[] o1Profile, short[] o2Profile) {
 
         if (o1 == o2) {
-          //  System.out.println("These two are equal!");
-            return currentLeftmostNonZero;
+            return SparseViolationProfile.compareProfiles(o1Profile,o2Profile);
         }
-        int o1Depth = o1.getDepth();
-        if (o2 == null) {
-            System.out.println("Huh?");
-        }
-        int o2Depth = o2.getDepth();
 
-        if (o1Depth > o2Depth) {
-                currentLeftmostNonZero = compareAndKeepLeftmost(o1,o2, currentLeftmostNonZero);
-                return compareRecursively(o1.getParent(),o2, currentLeftmostNonZero);
+        if (o1.depth > o2.depth) {
+                o1Profile = SparseViolationProfile.mergeSorted(o1.getViolationProfile(),o1Profile);
+                return compareRecursively(o1.getParent(),o2, o1Profile,o2Profile);
 
-        } else if (o1Depth < o2Depth) {
-            currentLeftmostNonZero = compareAndKeepLeftmost(o1,o2, currentLeftmostNonZero);
-            return compareRecursively(o1,o2.getParent(), currentLeftmostNonZero);
+        } else if (o1.depth < o2.depth) {
+            o2Profile = SparseViolationProfile.mergeSorted(o2.getViolationProfile(),o2Profile);;
+            return compareRecursively(o1,o2.getParent(),o1Profile,o2Profile);
         } else {
-            currentLeftmostNonZero = compareAndKeepLeftmost(o1,o2,currentLeftmostNonZero);
-            return compareRecursively(o1.getParent(),o2.getParent(), currentLeftmostNonZero);
+            o1Profile = SparseViolationProfile.mergeSorted(o1.getViolationProfile(),o1Profile);
+            o2Profile = SparseViolationProfile.mergeSorted(o2.getViolationProfile(),o2Profile);;
+            return compareRecursively(o1.getParent(),o2.getParent(), o1Profile, o2Profile);
         }
 
-    }
-
-    private short[] compareAndKeepLeftmost(LinkedNode o1, LinkedNode o2, short[] currentLeftmost) {
-
-        short[] thisComparison = o1.getLeftmostDifference(o2);
-        if (thisComparison[0] < currentLeftmost[0]) {
-            System.out.println("Leftmost difference is " +thisComparison[0] +" at " + thisComparison[1]);
-            return thisComparison;
-        } else {
-
-            System.out.println("Leftmost difference is " +currentLeftmost[0] +" at " + currentLeftmost[1]);
-            return currentLeftmost;
-        }
     }
 }

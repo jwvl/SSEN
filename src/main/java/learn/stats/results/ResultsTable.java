@@ -16,7 +16,7 @@ public class ResultsTable {
     }
 
     private MyStringTable initializeStringTable() {
-        String[] columns = {"name","numData","evaluationNoise","initPlasticity","plasticityDecay","numEpochs","updateAlgorithm","errorRate","timeTaken"};
+        String[] columns = {"name","uuid","numData","evaluationNoise","initPlasticity","plasticityDecay","numEpochs","updateAlgorithm","atDatum","errorRate","timeTaken"};
         return MyStringTable.fromColumnArray(columns);
     }
 

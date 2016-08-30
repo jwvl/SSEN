@@ -10,6 +10,8 @@ import forms.morphosyntax.MorphologicalWord;
 import grammar.levels.predefined.BiPhonSix;
 import constraints.FormConstraint;
 
+import java.util.Objects;
+
 /**
  * @author jwvl
  * @date Sep 19, 2015
@@ -58,5 +60,17 @@ public class TypedAnalyzeConstraint extends FormConstraint<MForm> {
         return false;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        TypedAnalyzeConstraint that = (TypedAnalyzeConstraint) o;
+        return Objects.equals(affixType, that.affixType);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), affixType);
+    }
 }

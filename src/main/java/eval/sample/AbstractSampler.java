@@ -1,13 +1,6 @@
 package eval.sample;
 
-import constraints.hierarchy.reimpl.Hierarchy;
 import eval.harmony.autosort.StratifiedDouble;
-import constraints.Constraint;
-import constraints.RankedConstraint;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 /**
  * A Sampler object creates a stochastic constraints.ranking from a Hierarchy. In standard
@@ -49,16 +42,5 @@ public abstract class AbstractSampler {
         return old + sampleDouble();
     }
 
-    public List<RankedConstraint> sampleHierarchy(Hierarchy hierarchy) {
-        List<RankedConstraint> result = new ArrayList<>(hierarchy.size());
-        for (Constraint constraint: hierarchy) {
-            double oldValue = hierarchy.getRanking(constraint);
-            RankedConstraint toPut = RankedConstraint.of(constraint, sampleDouble(oldValue));
-            result.add(toPut);
-        }
-        Collections.sort(result);
-        Collections.reverse(result);
-        return result;
-    }
 
 }

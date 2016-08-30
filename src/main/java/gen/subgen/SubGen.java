@@ -10,14 +10,15 @@ import com.google.common.cache.CacheStats;
 import com.google.common.cache.LoadingCache;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
+import com.typesafe.config.ConfigFactory;
+import constraints.Constraint;
+import constraints.factories.ConstraintFactory;
+import constraints.helper.ConstraintArrayList;
 import forms.Form;
 import gen.constrain.GenConstrainer;
 import gen.mapping.FormMapping;
 import gen.mapping.SubCandidateSet;
 import grammar.levels.Level;
-import constraints.Constraint;
-import constraints.factories.ConstraintFactory;
-import constraints.helper.ConstraintArrayList;
 import util.collections.Couple;
 
 import java.util.Collection;
@@ -37,6 +38,7 @@ public abstract class SubGen<F extends Form, G extends Form> {
     protected LoadingCache<FormMapping, ConstraintArrayList> constraintCache;
     // Test method
     private static boolean PRINT_CONSTRAINTS = false;
+    private static boolean CONSTRAINERS_ENABLED = ConfigFactory.load().getBoolean("gen.constrainers.enabled");
 
     protected SubGen(Level leftLevel, Level rightLevel) {
         this.leftLevel = leftLevel;
@@ -53,6 +55,7 @@ public abstract class SubGen<F extends Form, G extends Form> {
 
     public void addConstrainer(GenConstrainer<G> constrainer) {
         constrainers.add(constrainer);
+        System.out.println("Added constrainer "+constrainer +" to subGen " +this);
     }
 
     public void addConstraintFactory(ConstraintFactory factory) {
@@ -60,6 +63,7 @@ public abstract class SubGen<F extends Form, G extends Form> {
     }
 
     public SubCandidateSet generateRight(Form f) {
+
         F form = (F) f;
         if (cachesPairs()) {
             try {
@@ -70,7 +74,12 @@ public abstract class SubGen<F extends Form, G extends Form> {
             }
         }
         SubCandidateSet result = getRightFunction().apply(form);
-        removeConstrainedMappings(result);
+
+        if (CONSTRAINERS_ENABLED || constrainers.size() > 0) {
+            System.out.println("Removing mappings from " +this);
+            result = removeConstrainedMappings(result);
+        }
+
         for (FormMapping g : result) {
 
             if (PRINT_CONSTRAINTS) {
@@ -118,14 +127,13 @@ public abstract class SubGen<F extends Form, G extends Form> {
     }
 
     /**
-     * @param result
+     * @param input
      */
-    private void removeConstrainedMappings(SubCandidateSet result) {
+    private SubCandidateSet removeConstrainedMappings(SubCandidateSet input) {
         Collection<FormMapping> retain = Sets.newHashSet();
-        for (FormMapping formMapping : result) {
+        for (FormMapping formMapping : input) {
             boolean isLegal = true;
             Form rightForm = formMapping.right();
-            @SuppressWarnings("unchecked")
             G g = (G) rightForm;
             for (GenConstrainer<G> constrainer : constrainers) {
                 if (!constrainer.canGenerate(g)) {
@@ -136,7 +144,7 @@ public abstract class SubGen<F extends Form, G extends Form> {
                 retain.add(formMapping);
             }
         }
-        result = SubCandidateSet.of(retain);
+        return SubCandidateSet.of(retain);
     }
 
     protected boolean cachesPairs() {
@@ -151,7 +159,11 @@ public abstract class SubGen<F extends Form, G extends Form> {
         CacheLoader<F, SubCandidateSet> candidateLoader = new CacheLoader<F, SubCandidateSet>() {
             @Override
             public SubCandidateSet load(F f) throws Exception {
-                return getRightFunction().apply(f);
+                SubCandidateSet result = getRightFunction().apply(f);
+                if (constrainers.size() > 0) {
+                    result = removeConstrainedMappings(result);
+                }
+                return result;
             }
         };
         mappingCache = CacheBuilder.newBuilder().maximumSize(maxSize).build(candidateLoader);

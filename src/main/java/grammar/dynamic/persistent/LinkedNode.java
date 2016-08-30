@@ -1,10 +1,9 @@
 package grammar.dynamic.persistent;
 
-import forms.Form;
+import constraints.SparseViolationProfile;
 import forms.FormChain;
 import gen.mapping.FormMapping;
 import grammar.dynamic.node.AbstractCostNode;
-import constraints.SparseViolationProfile;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,24 +13,31 @@ import java.util.List;
  * Created by janwillem on 05/08/16.
  */
 public class LinkedNode extends AbstractCostNode<LinkedNode> {
-    private final SparseViolationProfile sparseViolationProfile;
+    private final short[] sparseViolationProfile;
+    private final short worstViolator;
+    public final byte depth;
 
-    public LinkedNode(LinkedNode parent, FormMapping formMapping, SparseViolationProfile sparseViolationProfile) {
+    public short getWorstViolator() {
+        return worstViolator;
+    }
+
+    public short[] getViolationProfile() {
+        return sparseViolationProfile;
+    }
+
+    public LinkedNode(LinkedNode parent, FormMapping formMapping, short[] sparseViolationProfile, short previousHighestViolator) {
         super(parent, formMapping);
         this.sparseViolationProfile = sparseViolationProfile;
-    }
-
-    public int getDepth() {
-        Form rightForm = getFormMapping().right();
-        if (rightForm == null) {
-            System.err.println("This is not right!");
+        if (parent == null) {
+            this.depth = 0;
         }
-        return getFormMapping().right().getLevel().myIndex();
+        else {
+            this.depth = (byte) (parent.depth + 1);
+        }
+        short thisHighestViolator = sparseViolationProfile.length > 0 ? sparseViolationProfile[0] : Short.MAX_VALUE;
+        this.worstViolator = previousHighestViolator < thisHighestViolator ? previousHighestViolator : thisHighestViolator;
     }
 
-    public short[] getLeftmostDifference(LinkedNode other) {
-        return sparseViolationProfile.getLeftmostDifference(other.sparseViolationProfile);
-    }
 
     @Override
     public String toString() {
@@ -57,6 +63,18 @@ public class LinkedNode extends AbstractCostNode<LinkedNode> {
             return getParent().addUntilRoot(list);
         }
     }
+
+    public String toStringRecursive() {
+        short[] builder = new short[0];
+        LinkedNode current = this;
+        while (current.getParent() != null) {
+            builder = SparseViolationProfile.mergeSorted(builder,current.sparseViolationProfile);
+            current = current.getParent();
+        }
+        return printFull()+"\n  "+builder.toString();
+    }
+
+
 
 
 }

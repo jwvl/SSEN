@@ -29,6 +29,7 @@ public class LearningTrajectory extends AbstractLearningTrajectory {
     private UpdateAction lastUpdate = UpdateAction.NO_UPDATE;
 
 
+
     public LearningTrajectory(Grammar grammar, LearningData data, int numEvaluations) {
         super(grammar, data);
         this.numEvaluations = numEvaluations;
@@ -72,8 +73,9 @@ public class LearningTrajectory extends AbstractLearningTrajectory {
 
             if (shortCounter.getTotal() >= resetCounterEvery) {
                 String intermediateResult = String.format("Current error rate: %s (%s pct)", shortCounter.getErrorAsRatio(), shortCounter.getErrorAsPercentage());
+                addErrorRate(numEvaluated, shortCounter.getErrorRate());
                 System.out.println(intermediateResult);
-                System.out.println(getGrammar().getHierarchy().printRankedConstraints());
+                //System.out.println(getGrammar().getHierarchy().printRankedConstraints());
                 shortCounter.reset();
             }
         }

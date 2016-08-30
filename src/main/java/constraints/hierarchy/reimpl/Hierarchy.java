@@ -25,7 +25,6 @@ public class Hierarchy implements Con {
         this.size = size;
         this.parentHierarchy = parentHierarchy;
         updateRankingInfo();
-        rankingChanged = false;
     }
 
     // Updates both the list of RankedConstraints and the
@@ -135,7 +134,9 @@ public class Hierarchy implements Con {
                 sampledRankings[i] = sampler.sampleDouble(value);
             }
         }
-        return new Hierarchy(sampledRankings,this.size(),this);
+        Hierarchy result = new Hierarchy(sampledRankings, this.size(),this);
+ //       result.rankingChanged = true;
+        return result;
     }
 
     private IndexedRanking createIndexedRanking() {

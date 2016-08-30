@@ -33,7 +33,7 @@ import simulate.french.sixlevel.helpers.LexicalHypothesisRepository;
 import simulate.french.sixlevel.helpers.SettingsMap;
 import simulate.french.sixlevel.subgens.*;
 import util.debug.Timer;
-import util.string.ngraph.NGraphMap;
+import util.string.ngraph.ByteNGraphMap;
 
 import java.io.IOException;
 import java.util.Collection;
@@ -50,7 +50,7 @@ import java.util.Set;
 public class SixLevelFrenchDynamic {
 
     private static SubstringDatabank lcsData;
-    private static NGraphMap bigraphs;
+    private static ByteNGraphMap bigraphs;
 
     public static void main(String[] args) throws IOException {
 
@@ -83,11 +83,15 @@ public class SixLevelFrenchDynamic {
                 dataFileName, semF_level, pF_level);
 
         lcsData = SubstringDatabank.createInstance();
-
-        bigraphs = NGraphMap.createInstance(2);
-        for (Form f : pairDistribution.getRightForms()) {
-            bigraphs.addAll(f.toString());
+        int maxUnfoundNgraph = config.getInt("gen.constrainers.maxUnfoundNgraph");
+        int nGraphSize = config.getInt("gen.constrainers.ngraphSize");
+        if (maxUnfoundNgraph > 0) {
+            bigraphs = new ByteNGraphMap(nGraphSize);
+            for (Form f : pairDistribution.getRightForms()) {
+                bigraphs.addFromString(f.toString());
+            }
         }
+
 
         // 3. Build forms outside-in:
         // SemF-->MStruc, MStruc --> MForm; save associations
@@ -132,8 +136,11 @@ public class SixLevelFrenchDynamic {
 
         repository.printContents();
         MFormToUF mf_uf_gen = new MFormToUF(repository);
-        mf_uf_gen.addConstrainer(new UfConstrainer(bigraphs, 2));
-
+        if (maxUnfoundNgraph > 0) {
+            mf_uf_gen.addConstrainer(new UfConstrainer(bigraphs, nGraphSize));
+        }
+        System.out.println(mf_uf_gen.getLevels().getLeft());
+        System.out.println(mf_uf_gen.getLevels().getRight());
         DynamicNetworkGrammar grammar = DynamicNetworkGrammar.createInstance(BiPhonSix.getLevelSpace(),
                 "DynamicNetworkGrammar");
         grammar.addSubGen(sem_morph_gen);
@@ -163,7 +170,7 @@ public class SixLevelFrenchDynamic {
         LearningPropertyCombinations learningPropertyCombinations = LearningPropertyCombinations.fromMultimap(settingsMap.getMap(), grammar.getDefaultLearningProperties());
 
         TrajectoriesTester trajectoriesTester = new TrajectoriesTester(learningPropertyCombinations, grammar, pairDistribution);
-        trajectoriesTester.testAndWrite("combinations",numEvaluations,10,numThreads);
+        trajectoriesTester.testAndWrite("combinations",numEvaluations,1,numThreads);
 
 
     }

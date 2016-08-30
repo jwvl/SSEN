@@ -4,6 +4,7 @@
 package simulate.french.sixlevel.subgens;
 
 import com.google.common.base.Function;
+import com.typesafe.config.ConfigFactory;
 import forms.morphosyntax.MForm;
 import forms.morphosyntax.MFormFactory;
 import forms.morphosyntax.MStructure;
@@ -38,7 +39,9 @@ public class MStructureToMForm extends SubGen<MStructure, MForm> {
         //addConstraintFactory(new AnalyzeConstraintFactory());
         //addConstraintFactory(new MorphemeConstraintFactory());
         addConstraintFactory(new TypedAnalyzeConstraintFactory());
-        addConstrainer(new MFormConstrainer());
+        if (ConfigFactory.load().getBoolean("gen.constrainers.stemAtEdgeConstrainer") == true) {
+            addConstrainer(new MFormConstrainer());
+        }
     }
 
 

@@ -8,7 +8,7 @@ import graph.Direction;
 import learn.ViolatedCandidate;
 import learn.data.LearningData;
 import learn.stats.ErrorCounter;
-import util.collections.Distribution;
+import simulate.analysis.CandidateMappingTable;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -42,15 +42,29 @@ public class GrammarTester {
         return totalCounter.getErrorRate();
     }
 
-    public static Distribution<String> getCandidateFrequencies(Grammar grammar, LearningData learningData, int numTests, double evaluationNoise) {
-        Distribution<String> result = new Distribution<>("Test");
+    public static CandidateMappingTable getCandidateMappingTable(Grammar grammar, LearningData learningData, int numTests, double evaluationNoise) {
+        CandidateMappingTable result = CandidateMappingTable.createNew();
         int count = 0;
         while (count < numTests && learningData.hasNext()) {
             FormPair test = learningData.next();
             Evaluation evaluation = grammar.evaluate(test.getUnlabeled(Direction.RIGHT), true, evaluationNoise);
             ViolatedCandidate violatedCandidate = evaluation.getWinner();
             Candidate candidate = violatedCandidate.getCandidate();
-            result.addOne(candidate.toString());
+            result.addCandidate(candidate,1);
+            count++;
+        }
+        return result;
+    }
+
+    public static CandidateMappingTable getCandidateMappingTable(Grammar grammar, FormPair formPair, int numTests, double evaluationNoise) {
+        CandidateMappingTable result = CandidateMappingTable.createNew();
+        int count = 0;
+        while (count < numTests) {
+            FormPair test = formPair;
+            Evaluation evaluation = grammar.evaluate(test.getUnlabeled(Direction.RIGHT), true, evaluationNoise);
+            ViolatedCandidate violatedCandidate = evaluation.getWinner();
+            Candidate candidate = violatedCandidate.getCandidate();
+            result.addCandidate(candidate,1);
             count++;
         }
         return result;

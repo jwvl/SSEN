@@ -5,6 +5,7 @@ package simulate.french.sixlevel.helpers;
 
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
+import com.typesafe.config.ConfigFactory;
 import forms.morphosyntax.Morpheme;
 import forms.phon.LexicalMapping;
 import forms.primitives.segment.PhoneSubForm;
@@ -19,7 +20,8 @@ import java.util.*;
  */
 public class LexicalHypothesisRepository implements Iterable<Morpheme> {
     private final SubstringDatabank longestCommonSubstrings;
-    private int MAX_AFFIX_LENGTH = 1;
+   // private int MAX_AFFIX_LENGTH = 1;
+    private int MAX_LCS_DIFFERENCE = ConfigFactory.load().getInt("lexicon.maxLcsDifference");
     private Table<Morpheme, PhoneSubForm, LexicalMapping> repository = HashBasedTable
             .create();
     private Set<LexicalMapping> minimalMappings;
@@ -57,7 +59,13 @@ public class LexicalHypothesisRepository implements Iterable<Morpheme> {
      * @return
      */
     private boolean allowedAffixMapping(Morpheme currentM, PhoneSubForm currentP) {
-        return (currentM.hasConceptFeature() || currentP.size() <= MAX_AFFIX_LENGTH);
+        int lcsLength = 0;
+        List<String> substringList = longestCommonSubstrings.getLongestSubstrings(currentM);
+        if (!substringList.isEmpty()) {
+            lcsLength = substringList.get(0).length();
+        }
+        return currentP.size() - lcsLength <= MAX_LCS_DIFFERENCE;
+        //return (currentM.hasConceptFeature() || currentP.size() <= MAX_AFFIX_LENGTH);
 
     }
 

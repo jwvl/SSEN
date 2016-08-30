@@ -5,6 +5,7 @@ package grammar.dynamic;
 
 import candidates.FormInput;
 import com.typesafe.config.ConfigFactory;
+import constraints.helper.ConstraintArrayList;
 import constraints.hierarchy.reimpl.Hierarchy;
 import eval.Evaluation;
 import eval.harmony.CostFactory;
@@ -21,7 +22,6 @@ import grammar.dynamic.node.SearchMode;
 import grammar.levels.Level;
 import learn.ViolatedCandidate;
 import learn.ViolatedCandidateBuilder;
-import constraints.helper.ConstraintArrayList;
 
 /**
  * @author jwvl
@@ -76,14 +76,12 @@ public class DynamicNetworkEvaluation implements Evaluation {
     }
 
     public void run() {
-        int counter = 0;
 
         nodeSearcher.init(formPair.left());
 
         AbstractCostNode winnerNode = null;
         boolean winnerFound = false;
         while (!winnerFound && nodeSearcher.canExpand()) {
-            counter++;
 
             AbstractCostNode nodeToExpand = nodeSearcher.nextNode();
             Form formToExpand = nodeToExpand.getMappedForm();
@@ -123,8 +121,11 @@ public class DynamicNetworkEvaluation implements Evaluation {
             System.err.println("This should not happen!");
             System.exit(0);
         }
-
+       // System.out.printf("%d nodes in queue \n",nodeSearcher.getQueueSize());
         winner = backtrackedCandidate;
+//        if (nodeSearcher instanceof  LinkedNodeSearcher) {
+//            System.out.println("Total number of nodes opened: " +((LinkedNodeSearcher) nodeSearcher).getSize());
+//        }
         nodeSearcher.clearQueue();
 
     }

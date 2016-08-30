@@ -58,8 +58,6 @@ public class SyllableStructureConstraint extends FormConstraint<SurfaceForm> {
     }
 
     /**
-     * @param offender
-     * @return
      */
     public static SyllableStructureConstraint createInstance(
             SonorityProfile forbiddenProfile) {

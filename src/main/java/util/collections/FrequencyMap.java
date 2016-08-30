@@ -5,13 +5,14 @@ package util.collections;
 
 import com.google.common.collect.LinkedHashMultiset;
 
+import java.util.Iterator;
 import java.util.Random;
 
 /**
  * @author jwvl
  * @date Dec 17, 2014
  */
-public class FrequencyMap<O extends Object> {
+public class FrequencyMap<O extends Object> implements Iterable<O> {
     LinkedHashMultiset<O> contents;
     private Random r;
 
@@ -55,5 +56,10 @@ public class FrequencyMap<O extends Object> {
     @Override
     public String toString() {
         return contents.toString();
+    }
+
+    @Override
+    public Iterator<O> iterator() {
+        return contents.elementSet().iterator();
     }
 }
