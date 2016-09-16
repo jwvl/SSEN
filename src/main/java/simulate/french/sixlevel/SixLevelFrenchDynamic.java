@@ -27,6 +27,7 @@ import grammar.tools.GrammarTester;
 import graph.Direction;
 import io.MyStringTable;
 import learn.PairDistribution;
+import learn.batch.RandomLearnerTester;
 import learn.batch.combination.LearningPropertyCombinations;
 import learn.batch.combination.TrajectoriesTester;
 import simulate.french.sixlevel.helpers.LexicalHypothesisRepository;
@@ -51,6 +52,7 @@ public class SixLevelFrenchDynamic {
 
     private static SubstringDatabank lcsData;
     private static ByteNGraphMap bigraphs;
+    private static int numTests = 10;
 
     public static void main(String[] args) throws IOException {
 
@@ -167,10 +169,25 @@ public class SixLevelFrenchDynamic {
 
 
         SettingsMap settingsMap = new SettingsMap();
-        LearningPropertyCombinations learningPropertyCombinations = LearningPropertyCombinations.fromMultimap(settingsMap.getMap(), grammar.getDefaultLearningProperties());
+        boolean randomLearner = false;
+        for (String s: settingsMap.getMap().get("updateAlgorithm")) {
+            if (s.equalsIgnoreCase("RandomBaseline")) {
+                System.out.println("Doing random learning");
+                randomLearner = true;
+            }
+        }
+        if (randomLearner) {
+            RandomLearnerTester randomLearnerTester = new RandomLearnerTester(grammar,pairDistribution, numEvaluations);
+            randomLearnerTester.testAndPrint(numTests);
+        }
+        else {
+            LearningPropertyCombinations learningPropertyCombinations = LearningPropertyCombinations.fromMultimap(settingsMap.getMap(), grammar.getDefaultLearningProperties());
 
-        TrajectoriesTester trajectoriesTester = new TrajectoriesTester(learningPropertyCombinations, grammar, pairDistribution);
-        trajectoriesTester.testAndWrite("combinations",numEvaluations,1,numThreads);
+            // TODO Handle this better?
+
+            TrajectoriesTester trajectoriesTester = new TrajectoriesTester(learningPropertyCombinations, grammar, pairDistribution);
+            trajectoriesTester.testAndWrite("combinations", numEvaluations, numTests, numThreads);
+        }
 
 
     }

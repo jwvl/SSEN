@@ -30,7 +30,6 @@ public class DynamicNetworkGrammar extends Grammar {
     private SubGen<?, ?>[] subGensByLevel;
     private Hierarchy lastSampledHierarchy;
 
-
     private DynamicNetworkGrammar(LevelSpace levels, String name, Hierarchy hierarchy, LearningProperties learningProperties) {
         super(levels, name, hierarchy, learningProperties);
         this.subGensByLevel = new SubGen<?, ?>[getLevelSpace().getSize()];
@@ -121,5 +120,10 @@ public class DynamicNetworkGrammar extends Grammar {
         return constraints;
 
     }
+
+    public Hierarchy getLastSampledHierarchy() {
+        return lastSampledHierarchy;
+    }
+
 
 }
