@@ -3,6 +3,8 @@
  */
 package gen.alignment;
 
+import java.util.Arrays;
+
 /**
  * @author jwvl
  * @date Aug 29, 2015
@@ -15,7 +17,6 @@ public class NonCrossingAlignmentIndex implements IAlignmentIndex {
 
 
     /**
-     * @param result
      */
     public NonCrossingAlignmentIndex(int[] lengths) {
         this.lengthPerGroup = lengths;
@@ -57,5 +58,13 @@ public class NonCrossingAlignmentIndex implements IAlignmentIndex {
         return lengthPerGroup;
     }
 
+    @Override
+    public String toString() {
 
+        final StringBuilder sb = new StringBuilder("NonCrossingAlignmentIndex{");
+        sb.append("lengthPerGroup=").append(Arrays.toString(lengthPerGroup));
+        sb.append(", numBottom=").append(numBottom);
+        sb.append('}');
+        return sb.toString();
+    }
 }

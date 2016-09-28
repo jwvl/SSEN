@@ -53,4 +53,13 @@ public class FrequencyTable<O extends Object, P extends Object> {
     public Set<P> getRowsForColumn(O o) {
         return counts.row(o).keySet();
     }
+
+    public void addAll(FrequencyTable<O,P> table) {
+        for (O o: table.getColumnSet()) {
+            for (P p: table.getRowsForColumn(o)) {
+                int count = table.getCount(o,p);
+                this.add(o,p,count);
+            }
+        }
+    }
 }

@@ -7,6 +7,7 @@ import forms.phon.Sonority;
 import forms.primitives.boundary.Edge;
 import forms.primitives.boundary.EdgeIndex;
 import forms.primitives.boundary.EdgeIndexBuilder;
+import forms.primitives.segment.Phone;
 import gen.rule.string.Side;
 import util.arrays.Range;
 
@@ -53,7 +54,7 @@ public class SimpleSyllabifier implements ISyllabifier {
         int[] nucleusIndices = findNuclei(asByteArray);
         int numNuclei = nucleusIndices.length;
         if (numNuclei < 1) {
-            System.out.println("Huh?");
+            System.out.println("Huh?" + Phone.decode(asByteArray));
         }
         Range[] ranges = new Range[numNuclei - 1];
         int size = 1;

@@ -4,6 +4,7 @@
 package simulate.french.sixlevel.constraints.factories;
 
 import com.google.common.collect.Lists;
+import com.typesafe.config.ConfigFactory;
 import forms.morphosyntax.Morpheme;
 import forms.phon.LexicalMapping;
 import gen.mapping.FormMapping;
@@ -20,7 +21,7 @@ import java.util.Collections;
  */
 public class LexicalConstraintFactory extends
         SubmappingConstraintFactory<MfUfMapping, LexicalMapping> {
-    public static double SHORTEST_FORM_BIAS = 0;
+    public static double SHORTEST_FORM_BIAS = ConfigFactory.load().getDouble("constraints.shortestFormBias");
     private LexicalHypothesisRepository lexicalHypotheses;
 
     public LexicalConstraintFactory(
@@ -44,7 +45,7 @@ public class LexicalConstraintFactory extends
      */
     @Override
     public LexicalConstraint createConstraint(LexicalMapping lexicalMapping) {
-        if (isMinimalZeroMapping(lexicalMapping)) {
+        if (isMinimalMapping(lexicalMapping)) {
             return LexicalConstraint.createInstance(lexicalMapping, SHORTEST_FORM_BIAS);
         }
 
@@ -55,9 +56,9 @@ public class LexicalConstraintFactory extends
      * @param lexicalMapping
      * @return
      */
-    private boolean isMinimalZeroMapping(LexicalMapping lexicalMapping) {
+    private boolean isMinimalMapping(LexicalMapping lexicalMapping) {
 
-        return lexicalHypotheses.getMinimalMappings().contains(lexicalMapping) && lexicalMapping.right().size() == 0;
+        return lexicalHypotheses.getMinimalMappings().contains(lexicalMapping);
 
     }
 

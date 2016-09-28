@@ -22,7 +22,7 @@ public abstract class Grammar {
 
     private final LevelSpace levelSpace;
     private final String name;
-    private final Hierarchy con;
+    private Hierarchy con;
     private LearningProperties defaultLearningProperties;
 
 
@@ -81,6 +81,10 @@ public abstract class Grammar {
      */
     public Hierarchy getHierarchy() {
         return con;
+    }
+
+    public void setHierarchy(Hierarchy hierarchy) {
+        this.con = hierarchy;
     }
 
     public LearningProperties getDefaultLearningProperties() {

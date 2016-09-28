@@ -19,6 +19,7 @@ import gen.mapping.SubCandidateSet;
 import gen.subgen.SubGen;
 import grammar.dynamic.node.AbstractCostNode;
 import grammar.dynamic.node.SearchMode;
+import grammar.dynamic.node.hg.HarmonicNodeSearcher;
 import grammar.levels.Level;
 import learn.ViolatedCandidate;
 import learn.ViolatedCandidateBuilder;
@@ -63,6 +64,9 @@ public class DynamicNetworkEvaluation implements Evaluation {
                 break;
             case LINKED_NODE:
                 nodeSearcher = new LinkedNodeSearcher(sampledHierarchy);
+                break;
+            case HARMONIC_GRAMMAR:
+                nodeSearcher = new HarmonicNodeSearcher(sampledHierarchy);
                 break;
             default:
                 nodeSearcher = new SimpleNodeSearcher(costFactory);

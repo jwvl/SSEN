@@ -8,6 +8,7 @@ import forms.Form;
 import forms.FormPair;
 import grammar.Grammar;
 import grammar.dynamic.DynamicNetworkGrammar;
+import graph.Direction;
 import learn.PairDistribution;
 import learn.ViolatedCandidate;
 import learn.data.LearningData;
@@ -24,6 +25,7 @@ public class RandomLearningTrajectory extends AbstractLearningTrajectory {
     private int counter;
     private boolean winningHierarchyFound;
     private Hierarchy lastHierarchy;
+    private static final int ERROR_EVERY = 1000;
 
     public RandomLearningTrajectory(Grammar grammar, LearningData data, LearningProperties learningProperties, int numEvaluations) {
         super(grammar, data, learningProperties);
@@ -39,33 +41,46 @@ public class RandomLearningTrajectory extends AbstractLearningTrajectory {
         PairDistribution learningPairs = (PairDistribution) getData();
         Collection<FormPair> allPairs = learningPairs.getKeys();
         Grammar grammar = getGrammar();
+        int recordCorrect = 0;
 
         while (counter < numEvaluations && errorEncountered == true) {
             errorEncountered = false;
+            int numCorrect = 0;
             boolean first = true;
             for (FormPair formPair: allPairs) {
-                Evaluation eval = getGrammar().evaluate(formPair,first,1.0);
+                Evaluation eval = getGrammar().evaluate(formPair.getUnlabeled(Direction.RIGHT),first,1.0);
                 first = false;
                 if (!winnerMatches(formPair,eval)) {
                     errorEncountered = true;
                     break;
+                } else {
+                    numCorrect++;
+                    if (numCorrect > recordCorrect) {
+                        recordCorrect = numCorrect;
+                    }
                 }
 
             }
             counter++;
+            if (counter % ERROR_EVERY == 0) {
+                System.out.println(counter+"\t"+recordCorrect);
+            }
         }
         this.winningHierarchyFound = !errorEncountered;
         DynamicNetworkGrammar dynamicNetworkGrammar = (DynamicNetworkGrammar) getGrammar();
         this.lastHierarchy = dynamicNetworkGrammar.getLastSampledHierarchy();
         if (winningHierarchyFound) {
-            System.out.println("This hierarchy gets all forms correct!");
+            System.out.println("The hierarchy at try " +counter + " gets all forms correct!");
+        } else {
+            System.out.println(counter +"\t"+recordCorrect);
         }
     }
 
     private static boolean winnerMatches(FormPair originalPair, Evaluation eval) {
         Form right = originalPair.right();
         ViolatedCandidate violatedCandidate = eval.getWinner();
-        return violatedCandidate.getCandidate().containsForm(right);
+        boolean result = violatedCandidate.getCandidate().containsForm(right);
+        return result;
     }
 
     public boolean isWinningHierarchyFound() {

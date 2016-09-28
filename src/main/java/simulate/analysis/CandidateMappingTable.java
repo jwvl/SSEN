@@ -48,4 +48,12 @@ public class CandidateMappingTable {
         stringBuilder.append("]");
         return stringBuilder.toString();
     }
+
+    public CandidateMappingTable mergeWith(CandidateMappingTable toMerge) {
+        FrequencyTable<Form,Form> mappings = new FrequencyTable<>();
+        mappings.addAll(this.getFrequencyTable());
+        mappings.addAll(toMerge.getFrequencyTable());
+        return new CandidateMappingTable(mappings);
+
+    }
 }

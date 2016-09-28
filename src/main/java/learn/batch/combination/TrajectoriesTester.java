@@ -1,5 +1,6 @@
 package learn.batch.combination;
 
+import com.google.common.collect.Lists;
 import constraints.Constraint;
 import constraints.hierarchy.analysis.ConstraintOrderMap;
 import constraints.hierarchy.analysis.Poset;
@@ -10,18 +11,21 @@ import eval.sample.GaussianXORSampler;
 import forms.FormPair;
 import grammar.Grammar;
 import grammar.tools.GrammarTester;
+import graph.Direction;
 import learn.PairDistribution;
 import learn.batch.LearningProperties;
 import learn.batch.LearningTrajectory;
 import learn.stats.results.ResultsTable;
 import simulate.analysis.CandidateMappingTable;
+import simulate.analysis.statistics.HierarchyComparer;
 import simulate.analysis.visualize.GoogleSankey;
 import util.debug.Stopwatch;
 import util.time.DateString;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 /**
  * Created by janwillem on 31/07/16.
@@ -31,18 +35,23 @@ public class TrajectoriesTester {
     private final Grammar grammar;
     private final PairDistribution pairDistribution;
     private final ResultsTable resultsTable;
-    private final List<Hierarchy> resultingHierarchies;
+    private final Map<UUID,Hierarchy> successfulHierarchies;
+    private final static boolean printSankeyDiagrams = true;
+    private final static boolean calculateSimilarities = false;
+    private final static double successThreshold = 0.05;
 
     public TrajectoriesTester(LearningPropertyCombinations combinations, Grammar grammar, PairDistribution pairDistribution) {
         this.combinations = combinations;
         this.grammar = grammar;
         this.pairDistribution = pairDistribution;
         resultsTable = new ResultsTable();
-        resultingHierarchies = new ArrayList<>();
+        successfulHierarchies = new HashMap<UUID,Hierarchy>();
     }
 
     public void testAndWrite(String name, int numEvaluations, int numTests, int numThreads) {
         AbstractSampler nearZeroSampler = GaussianXORSampler.createInstance(0.00000001);
+        String dateString = DateString.getShortDateString();
+
         for (LearningProperties learningProperties : combinations) {
             for (int i = 0; i < numTests; i++) {
                 LearningTrajectory trajectory = new LearningTrajectory(grammar, pairDistribution, numEvaluations);
@@ -67,30 +76,57 @@ public class TrajectoriesTester {
                 }
 
 
-                if (error < 0.05) {
-                    resultingHierarchies.add(grammar.getHierarchy().sample(nearZeroSampler));
+
+
+                if (error < successThreshold) {
+                    successfulHierarchies.put(trajectory.getUuid(),grammar.getHierarchy().copy());
                 }
-                CandidateMappingTable[] tables = new CandidateMappingTable[pairDistribution.getNumPairs()];
-                int count = 0;
-                for (FormPair formPair: pairDistribution.getKeys()) {
-                    tables[count] = GrammarTester.getCandidateMappingTable(grammar, formPair, 100, 1.0);
-                    System.out.println("Candidate mappings for pair " + formPair);
-                    System.out.println(GoogleSankey.toHtml(tables[count++]));
-                    System.out.println();
-                }
+
                 grammar.resetConstraints(100.0);
             }
         }
-        printPoset();
+        //printPoset();
+        if (successfulHierarchies.size() > 2 && calculateSimilarities) {
+            HierarchyComparer comparer = HierarchyComparer.build(successfulHierarchies,grammar,pairDistribution, Direction.RIGHT);
+            comparer.writeToFile("outputs/hierarchyDistances-"+dateString+".txt");
+        }
 
-        resultsTable.saveToFile("outputs/simulationResults-" + DateString.getShortDateString());
+        resultsTable.saveToFile("outputs/simulationResults-" + dateString+".txt");
+
+        if (printSankeyDiagrams) {
+            createSankeyDiagrams(grammar);
+        }
     }
 
     private void printPoset() {
-        if (resultingHierarchies.size() > 0) {
-            ConstraintOrderMap constraintOrderMap = new ConstraintOrderMap(resultingHierarchies);
-            Poset<Constraint> poset = PosetBuilder.buildPoset(resultingHierarchies.get(0), constraintOrderMap);
+        if (successfulHierarchies.size() > 0) {
+            ConstraintOrderMap constraintOrderMap = new ConstraintOrderMap(successfulHierarchies.values());
+            Poset<Constraint> poset = PosetBuilder.buildPoset(successfulHierarchies.get(0), constraintOrderMap);
             System.out.println(poset);
+        }
+    }
+
+    public Map<UUID,Hierarchy> getSuccessfulHierarchies() {
+        return successfulHierarchies;
+    }
+
+    private void createSankeyDiagrams(Grammar grammar) {
+        CandidateMappingTable[] tables = new CandidateMappingTable[pairDistribution.getNumPairs()];
+        List<FormPair> formPairs = Lists.newArrayList(pairDistribution.getKeys());
+        for (int i=0; i < formPairs.size(); i++) {
+            FormPair formPair = formPairs.get(i);
+            tables[i] = CandidateMappingTable.createNew();
+            for (Hierarchy hierarchy : successfulHierarchies.values()) {
+                grammar.setHierarchy(hierarchy);
+                tables[i] = tables[i].mergeWith(GrammarTester.getCandidateMappingTable(grammar, formPair, 100, 1.0));
+            }
+        }
+
+        for (int i=0; i < formPairs.size(); i++) {
+            FormPair formPair = formPairs.get(i);
+            System.out.println("Candidate mappings for pair " + formPair);
+            System.out.println(GoogleSankey.toHtml(tables[i]));
+            System.out.println();
         }
     }
 

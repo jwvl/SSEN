@@ -42,8 +42,13 @@ public abstract class Constraint {
         this.initialBias = initialBias;
         this.id = idCounter++;
         this.rightLevel = rightLevel;
+        if (idCounter >= map.length) {
+            System.err.println("Max number of expected constraints exceeded!");
+            System.exit(0);
+        }
         map[this.id] = this;
         System.out.println("Created constraint #" + id);
+
     }
 
     protected Constraint(Level rightLevel) {

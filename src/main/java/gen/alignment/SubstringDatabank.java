@@ -12,7 +12,6 @@ import util.string.LongestSubstring;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.Map;
 
 /**
  * A helper class that first extracts Morphemes and Strings from all MForms with
@@ -24,13 +23,13 @@ import java.util.Map;
  * @date May 9, 2015
  */
 public class SubstringDatabank {
-    private Map<MForm, PhoneticForm> mfToPf;
+    private Multimap<MForm, PhoneticForm> mfToPf;
     private SetMultimap<Morpheme, PhoneticForm> pfsPerMorpheme;
     private ListMultimap<Morpheme, String> longestSubstrings;
     private boolean done = false;
 
     private SubstringDatabank() {
-        mfToPf = Maps.newHashMap();
+        mfToPf = HashMultimap.create();
         pfsPerMorpheme = HashMultimap.create();
         longestSubstrings = ArrayListMultimap.create();
     }
@@ -101,7 +100,7 @@ public class SubstringDatabank {
         return pfsPerMorpheme.keySet();
     }
 
-    public Map<MForm, PhoneticForm> getMfToPf() {
+    public Multimap<MForm, PhoneticForm> getMfToPf() {
         return mfToPf;
     }
 

@@ -16,6 +16,7 @@ import java.util.Collection;
  * @date 19/09/2015
  */
 public class AllUpHighDown implements UpdateAlgorithm {
+    private final double CALIBRATION_AMOUNT = 0;
 
 
     public void update(Hierarchy con, Collection<ViolatedCandidate> lCandidates,
@@ -75,7 +76,9 @@ public class AllUpHighDown implements UpdateAlgorithm {
                 .getViolatedByLearner(lCandidate, tCandidate);
         Multiset<Constraint> violatedByTarget = UpdateUtils.getViolatedByTarget(lCandidate, tCandidate);
         Multiset<Constraint> toPromote = violatedByLearner.isEmpty() ? lCandidate.getConstraints() : violatedByLearner;
-        UpdateUtils.multisetToUpdateAction(toPromote, delta, result);
+        double promotionDelta = calculatePromotionDelta(delta, toPromote.size());
+
+        UpdateUtils.multisetToUpdateAction(toPromote, promotionDelta, result);
 
         Multiset<Constraint> toSearch = violatedByTarget.isEmpty() ? tCandidate.getConstraints() : violatedByTarget;
         Constraint maxViolatedByTarget = UpdateUtils.getMax(toSearch, con);
@@ -94,6 +97,11 @@ public class AllUpHighDown implements UpdateAlgorithm {
 
 
         return result;
+    }
+
+    private double calculatePromotionDelta(double delta, int size) {
+        double dividedDelta = (delta / (size+CALIBRATION_AMOUNT));
+        return dividedDelta*size;
     }
 
     private Multiset<Constraint> getRankedAbove(double maxViolatedByLearner,

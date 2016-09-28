@@ -8,7 +8,7 @@ import com.typesafe.config.ConfigFactory;
 import forms.morphosyntax.MForm;
 import forms.morphosyntax.MFormFactory;
 import forms.morphosyntax.MStructure;
-import gen.constrain.MFormConstrainer;
+import gen.constrain.MFormEdgeConstrainer;
 import gen.mapping.FormMapping;
 import gen.mapping.PairMapping;
 import gen.mapping.SubCandidateSet;
@@ -34,13 +34,13 @@ public class MStructureToMForm extends SubGen<MStructure, MForm> {
     public MStructureToMForm(Level leftLevel, Level rightLevel) {
         super(leftLevel, rightLevel);
         myFactory = MFormFactory.createInstance();
-        addConstraintFactory(new MorphAlignConstraintFactory());
         //addConstraintFactory(new StemAlignConstraintFactory());
         //addConstraintFactory(new AnalyzeConstraintFactory());
         //addConstraintFactory(new MorphemeConstraintFactory());
+        addConstraintFactory(new MorphAlignConstraintFactory());
         addConstraintFactory(new TypedAnalyzeConstraintFactory());
         if (ConfigFactory.load().getBoolean("gen.constrainers.stemAtEdgeConstrainer") == true) {
-            addConstrainer(new MFormConstrainer());
+            addConstrainer(new MFormEdgeConstrainer());
         }
     }
 

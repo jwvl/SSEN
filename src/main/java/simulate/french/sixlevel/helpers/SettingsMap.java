@@ -10,12 +10,14 @@ import com.google.common.collect.Multimap;
  */
 public class SettingsMap {
     private final Multimap<String,String> settings;
-//    private static String[] updateAlgorithms = {"WeightedUncancelled","AllUpHighDown"};
-//    private static String[] initialPlasticities = {"0.5","1.0","1.5","2.0","2.5"};
-//    private static String[] plasticityDecays = {"0.8","0.5"};
-    private static String[] updateAlgorithms = {"RandomBaseline"};
-    private static String[] initialPlasticities = {"1.0"};
+//    private static String[] updateAlgorithms = {"AllUpHighDown","WeightedUncancelled"};
+//    private static String[] initialPlasticities = {"2.0"};
+//    private static String[] plasticityDecays = {"0.5"};
+    private static String[] initialPlasticities = {"5.0"};
     private static String[] plasticityDecays = {"0.5"};
+      private static String[] updateAlgorithms = {"WeightedUncancelled"};
+//    private static String[] initialPlasticities = {"2.0"};
+//    private static String[] plasticityDecays = {"0.5"};
 
     public SettingsMap() {
         settings = HashMultimap.create();

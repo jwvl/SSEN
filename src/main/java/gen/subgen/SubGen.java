@@ -76,7 +76,6 @@ public abstract class SubGen<F extends Form, G extends Form> {
         SubCandidateSet result = getRightFunction().apply(form);
 
         if (CONSTRAINERS_ENABLED || constrainers.size() > 0) {
-            System.out.println("Removing mappings from " +this);
             result = removeConstrainedMappings(result);
         }
 

@@ -1,0 +1,462 @@
+W1	W2	P1	P2	Liaison	Nasalization	Linking consonant	Phonetic realization	Frequency	SSF1	SSF2
+grand	émoi	ADJ	NC	TRUE	FALSE	t	ɡʁɑ̃temwa	17	ADJ{Big}	N{Agitation.g=M num=SG}*
+grand	émoi	ADJ	NC	FALSE	FALSE		ɡʁɑ̃emwa	4	ADJ{Big}	N{Agitation.g=M num=SG}*
+grand	émoi	ADJ	NC	TRUE	FALSE	h	ɡʁɑ̃hemwa	1	ADJ{Big}	N{Agitation.g=M num=SG}*
+autre	banque	ADJ	NC	FALSE	FALSE		otʁbɑ̃k	2	ADJ{Other}	N{Bank.g=F num=SG}*
+pauvre	bête	ADJ	N	FALSE	FALSE		povʁbɛt	3	ADJ{Poor}	N{Beast.g=F num=SG}*
+seul	coup	ADJ	N	FALSE	FALSE		sœlku	2	ADJ{Only}	N{Blow.g=M num=SG}*
+autre	boite	ADJ	NC	FALSE	FALSE		otʁbwat	2	ADJ{Other}	N{Box.g=F num=SG}*
+pauvre	garçon	ADJ	N	FALSE	FALSE		povʁɡaʁsɔ̃	2	ADJ{Poor}	N{Boy.g=M num=SG}*
+autres	enfants	ADJ	NC	TRUE	FALSE	z	otʁzɑ̃fɑ̃	1	ADJ{Other}	N{Child.g=M num=PL}*
+petits	enfants	ADJ	NC	FALSE	FALSE		pətiɑ̃fɑ̃	2	ADJ{Small}	N{Child.g=M num=PL}*
+moyen	orient	ADJ	N	TRUE	FALSE	nV0	mwajɛnV0ɔʁjɑ̃	1	ADJ{Middle}	N{East.g=M num=SG}*
+petites	escapades	ADJ	NC	TRUE	FALSE	z	pətitzɛskapad	1	ADJ{Small}	N{Escapade.g=F num=PL}*
+bon	exemple	ADJ	NC	TRUE	FALSE	nVO	bɔnVOɛɡzɑ̃pl	1	ADJ{Good}	N{Example.g=M num=SG}*
+belle	fille	ADJ	NC	FALSE	FALSE		bɛlfij	6	ADJ{Beautiful}	N{Girl.g=F num=SG}*
+petite	fille	ADJ	NC	FALSE	FALSE		pətitfij	2	ADJ{Small}	N{Girl.g=F num=SG}*
+grand	honneur	ADJ	NC	TRUE	FALSE	t	ɡʁɑ̃tɔnœʁ	14	ADJ{Big}	N{Honor.g=M num=SG}*
+grand	honneur	ADJ	NC	TRUE	FALSE	d	ɡʁɑ̃dɔnœʁ	1	ADJ{Big}	N{Honor.g=M num=SG}*
+petit	bout	ADJ	NC	FALSE	FALSE		pətibu	3	ADJ{Small}	N{Job.g=M num=SG}*
+bon	niveau	ADJ	NC	FALSE	FALSE		bɔ̃nivo	3	ADJ{Good}	N{Level.g=M num=SG}*
+certain	niveau	ADJ	NC	FALSE	FALSE		sɛʁtɛ̃nivo	2	ADJ{Certain}	N{Level.g=M num=SG}*
+même	niveau	ADJ	NC	FALSE	FALSE		mɛmnivo	2	ADJ{Same}	N{Level.g=M num=SG}*
+petit	déjeuner	ADJ	NC	FALSE	FALSE		pətideʒœne	2	ADJ{Small}	N{Lunch.g=M num=SG}*
+jeune	homme	ADJ	NC	FALSE	FALSE		ʒœnɔm	3	ADJ{Young}	N{Man.g=M num=SG}*
+toutes	façons	ADJ	NC	FALSE	FALSE		tutfasɔ̃	2	ADJ{All}	N{Manner.g=F num=PL}*
+même	façon	ADJ	NC	FALSE	FALSE		mɛmfasɔ̃	3	ADJ{Same}	N{Manner.g=F num=SG}*
+jeune	membre	ADJ	NC	FALSE	FALSE		ʒœnmɑ̃bʁ	20	ADJ{Young}	N{Member.g=M num=SG}*
+premier	ministre	ADJ	NC	FALSE	FALSE		pʁəmjeministʁ	92	ADJ{First}	N{Minister.g=M num=SG}*
+six	mois	ADJ	NC	FALSE	FALSE		sismwa	2	NUM{Six}	N{Month.g=M num=PL}*
+double	nationalité	ADJ	NC	FALSE	FALSE		dublnasjɔnalite	2	ADJ{Double}	N{Nationality.g=F num=SG}*
+premier	objectif	ADJ	NC	TRUE	FALSE	r	pʁəmjerɔbʒɛktif	1	ADJ{First}	N{Objective.g=M num=SG}*
+nouvel	observateur	ADJ	N	FALSE	FALSE		nuvɛlɔpsɛʁvatœʁ	9	ADJ{New}	N{Observer.g=M num=SG}*
+petites	occupations	ADJ	NC	TRUE	FALSE	z	pətitzɔkypasjɔ̃	1	ADJ{Small}	N{Occupation.g=F num=PL}*
+quelque	part	ADJ	N	FALSE	FALSE		kɛlkpaʁ	2	ADJ{Which}	N{Part.g=F num=SG}*
+autre	personne	ADJ	NC	FALSE	FALSE		otʁpɛʁsɔn	2	ADJ{Other}	N{Person.g=F num=SG}*
+demi	pointe	ADJ	NC	FALSE	FALSE		dəmipwɛ̃t	2	ADJ{Half}	N{Point.g=F num=SG}*
+gros	problème	ADJ	NC	FALSE	FALSE		ɡʁopʁɔblɛm	3	ADJ{Fat}	N{Problem.g=F num=SG}*
+bonnes	relations	ADJ	NC	FALSE	FALSE		bɔnʁəlasjɔ̃	2	ADJ{Good}	N{Relation.g=F num=PL}*
+meilleur	rendement	ADJ	NC	FALSE	FALSE		mɛjœʁʁɑ̃dmɑ̃	2	ADJ{Best}	N{Rendement.g=M num=SG}*
+autre	côté	ADJ	NC	FALSE	FALSE		otʁkote	21	ADJ{Other}	N{Side.g=M num=SG}*
+grande	soeur	ADJ	NC	FALSE	FALSE		ɡʁɑ̃dsɔœʁ	2	ADJ{Big}	N{Sister.g=F num=SG}*
+nouveau	système	ADJ	NC	FALSE	FALSE		nuvosistɛm	2	ADJ{New}	N{System.g=M num=SG}*
+certaines	choses	ADJ	NC	FALSE	FALSE		sɛʁtɛnʃoz	3	ADJ{Certain}	N{Thing.g=M num=PL}*
+autre	chose	ADJ	N	FALSE	FALSE		otʁʃoz	3	ADJ{Other}	N{Thing.g=M num=SG}*
+grand	chose	ADJ	NC	FALSE	FALSE		ɡʁɑ̃ʃoz	4	ADJ{Big}	N{Thing.g=M num=SG}*
+même	chose	ADJ	NC	FALSE	FALSE		mɛmʃoz	2	ADJ{Same}	N{Thing.g=M num=SG}*
+première	fois	ADJ	NC	FALSE	FALSE		pʁəmjɛʁfwa	3	ADJ{First}	N{Time.g=F num=SG}*
+même	temps	ADJ	NC	FALSE	FALSE		mɛmtɑ̃	3	ADJ{Same}	N{Time.g=M num=SG}*
+même	temps	ADJ	N	FALSE	FALSE		mɛmtɑ̃	6	ADJ{Same}	N{Time.g=M num=SG}*
+seuls	titres	ADJ	NC	FALSE	FALSE		sœltitʁ	21	ADJ{Only}	N{Title.g=M num=PL}*
+mêmes	villes	ADJ	NC	FALSE	FALSE		mɛmvil	5	ADJ{Same}	N{Town.g=F num=PL}*
+certains	oncles	ADJ	NC	TRUE	FALSE	z	sɛʁtɛ̃zɔ̃kl	1	ADJ{Certain}	N{Uncle.g=M num=PL}*
+beau	monde	ADJ	NC	FALSE	FALSE		bomɔ̃d	2	ADJ{Beautiful}	N{World.g=M num=SG}*
+dernières	années	ADJ	NC	TRUE	FALSE	z	dɛʁnjɛʁzane	1	ADJ{Last}	N{Year2.g=F num=PL}*
+premières	années	ADJ	NC	TRUE	FALSE	z	pʁəmjɛʁzane	1	ADJ{First}	N{Year2.g=F num=PL}*
+sympathique	maire	ADJ	NC	FALSE	FALSE		sɛ̃patikmɛʁ	20	ADJ{Sympathetic}	N{Mayor.g=M num=SG}*
+mon	accent	DET	NC	TRUE	FALSE	n	mɔnaksɑ̃	1	DET{My}	N{Accent.g=M num=SG}*
+des	accidents	DET	NC	TRUE	FALSE	z	dezaksidɑ̃	1	DET{Ind}	N{Accident.g=M num=PL}*
+les	actions	DET	NC	TRUE	FALSE	z	lezaksjɔ̃	3	DET{The}	N{Action.g=F num=PL}*
+des	activistes	DET	NC	TRUE	FALSE	z	dezaktivist	13	DET{Ind}	N{Activist.g=M num=PL}*
+les	activistes	DET	NC	TRUE	FALSE	z	lezaktivist	1	DET{The}	N{Activist.g=M num=PL}*
+des	activités	DET	NC	TRUE	FALSE	z	dezaktivite	2	DET{Ind}	N{Activity.g=F num=PL}*
+mes	activités	DET	NC	TRUE	FALSE	z	mezaktivite	1	DET{My}	N{Activity.g=F num=PL}*
+les	adresses	DET	NC	TRUE	FALSE	z	lezadʁɛs	1	DET{The}	N{Address.g=F num=PL}*
+son	adjoint	DET	NC	TRUE	TRUE	nVN	sɔ̃nadʒwɛ̃	1	DET{His}	N{Adjunct.g=M num=SG}*
+mes	âges	DET	NC	TRUE	FALSE	z	mezaʒ	1	DET{My}	N{Age.g=M num=PL}*
+mon	âge	DET	NC	FALSE	FALSE		mɔ̃aʒ	2	DET{My}	N{Age.g=M num=SG}*
+tout	âge	DET	NC	TRUE	FALSE	t	tutaʒ	1	DET{All}	N{Age.g=M num=SG}*
+votre	âge	DET	NC	FALSE	FALSE		vɔtʁaʒ	3	DET{Your}	N{Age.g=M num=SG}*
+des	amateurs	DET	NC	TRUE	FALSE	z	dezamatœʁ	1	DET{Ind}	N{Amateur.g=M num=PL}*
+les	amateurs	DET	NC	TRUE	FALSE	z	lezamatœʁ	1	DET{The}	N{Amateur.g=M num=PL}*
+les	américains	DET	NC	FALSE	FALSE		leameʁikɛ̃	2	DET{The}	N{American.g=M num=PL}*
+les	américains	DET	NC	TRUE	FALSE	z	lezameʁikɛ̃	1	DET{The}	N{American.g=M num=PL}*
+leur	colère	DET	NC	FALSE	FALSE		lœʁkɔlɛʁ	19	DET{Their}	N{Anger.g=F num=SG}*
+les	animaux	DET	NC	TRUE	FALSE	z	lezanimo	2	DET{The}	N{Animal.g=M num=PL}*
+un	appartement	DET	NC	TRUE	TRUE	nVN	ɛ̃napaʁtəmɑ̃	3	DET{Ind}	N{Apartment1.g=M num=SG}*
+un	appartement	DET	NC	TRUE	FALSE	n	ɛ̃napaʁtəmɑ̃	2	DET{Ind}	N{Apartment1.g=M num=SG}*
+un	appart	DET	NC	TRUE	TRUE	nVN	ɛ̃napaʁ	1	DET{Ind}	N{Apartment2.g=M num=SG}*
+un	appel	DET	NC	TRUE	TRUE	nVN	ɛ̃napɛl	1	DET{Ind}	N{Appeal.g=M num=SG}*
+les	articles	DET	NC	TRUE	FALSE	z	lezaʁtikl	1	DET{The}	N{Article.g=M num=PL}*
+quelques	articles	DET	NC	TRUE	FALSE	z	kɛlkzaʁtikl	1	DET{Some}	N{Article.g=M num=PL}*
+un	aspect	DET	NC	TRUE	FALSE	n	ɛ̃naspɛ	1	DET{Ind}	N{Aspect.g=M num=SG}*
+une	association	DET	NC	FALSE	FALSE		ynasɔsjasjɔ̃	2	DET{Ind}	N{Association.g=F num=SG}*
+son	autorité	DET	NC	TRUE	TRUE	nVN	sɔ̃nɔtɔʁite	1	DET{His}	N{Authority.g=M num=SG}*
+des	automatismes	DET	NC	TRUE	FALSE	z	dezɔtɔmatism	1	DET{Ind}	N{Automatism.g=M num=PL}*
+les	automatismes	DET	NC	TRUE	FALSE	z	lezɔtɔmatism	1	DET{The}	N{Automatism.g=M num=PL}*
+les	aveyronnais	DET	NC	FALSE	FALSE		leaveʁɔnɛ	3	DET{The}	N{Aveyron.g=M num=PL}*
+ton	aveyron	DET	NPP	TRUE	FALSE	n	tɔnaveʁɔ̃	1	DET{Thy}	N{Aveyron.g=M num=SG}*
+un	bébé	DET	NC	FALSE	FALSE		ɛ̃bebe	2	DET{Ind}	N{Baby.g=M num=SG}*
+des	ours	DET	NC	TRUE	FALSE	z	dezuʁs	1	DET{Ind}	N{Bear.g=M num=PL}*
+les	débuts	DET	NC	FALSE	FALSE		ledeby	2	DET{The}	N{Beginning.g=M num=SG}*
+des	bicyclettes	DET	NC	FALSE	FALSE		debisiklɛt	2	DET{Ind}	N{Bike.g=F num=PL}*
+un	bac	DET	NC	FALSE	FALSE		ɛ̃bak	2	DET{Ind}	N{Bin.g=M num=SG}*
+des	oiseaux	DET	NC	TRUE	FALSE	z	dezwazo	1	DET{Ind}	N{Bird.g=M num=PL}*
+les	oiseaux	DET	NC	TRUE	FALSE	z	lezwazo	2	DET{The}	N{Bird.g=M num=PL}*
+ses	oiseaux	DET	NC	TRUE	FALSE	z	sezwazo	1	DET{His}	N{Bird.g=M num=PL}*
+des	livres	DET	NC	FALSE	FALSE		delivʁ	2	DET{Ind}	N{Book.g=M num=SG}*
+les	bords	DET	NC	FALSE	FALSE		lebɔʁ	20	DET{The}	N{Border.g=M num=PL}*
+un	fond	DET	NC	FALSE	FALSE		ɛ̃fɔ̃	2	DET{Ind}	N{Bottom.g=M num=SG}*
+une	bouloire	DET	NC	FALSE	FALSE		ynbulwaʁ	2	DET{Ind}	N{Bouloire.g=F num=SG}*
+les	garçons	DET	NC	FALSE	FALSE		leɡaʁsɔ̃	3	DET{The}	N{Boy.g=M num=PL}*
+le	pont	DET	NC	FALSE	FALSE		ləpɔ̃	7	DET{The}	N{Bridge.g=M num=SG}*
+mon	frère	DET	NC	FALSE	FALSE		mɔ̃fʁɛʁ	4	DET{My}	N{Brother.g=M num=SG}*
+un	frère	DET	NC	FALSE	FALSE		ɛ̃fʁɛʁ	2	DET{Ind}	N{Brother.g=M num=SG}*
+des	immeubles	DET	NC	TRUE	FALSE	z	dezimœbl	2	DET{Ind}	N{Building.g=M num=PL}*
+les	immeubles	DET	NC	TRUE	FALSE	z	lezimœbl	1	DET{The}	N{Building.g=M num=PL}*
+des	choux	DET	NC	FALSE	FALSE		deʃu	2	DET{Ind}	N{Cabbage.g=M num=PL}*
+un	chou	DET	NC	FALSE	FALSE		ɛ̃ʃu	2	DET{Ind}	N{Cabbage.g=M num=SG}*
+la	cabriolet	DET	NC	FALSE	FALSE		lakabʁijɔlɛ	2	DET{The}	N{Cabriolet.g=F num=SG}*
+des	voitures	DET	NC	FALSE	FALSE		devwatyʁ	2	DET{Ind}	N{Car.g=F num=PL}*
+une	voiture	DET	NC	FALSE	FALSE		ynvwatyʁ	3	DET{Ind}	N{Car.g=F num=SG}*
+une	carte	DET	NC	FALSE	FALSE		ynkaʁt	3	DET{Ind}	N{Card.g=F num=SG}*
+les	carpettes	DET	NPP	FALSE	FALSE		lekaʁpɛt	3	DET{The}	N{Carpet.g=F num=PL}*
+les	catherinettes	DET	N	FALSE	FALSE		lekatʁinɛt	2	DET{The}	N{Catherinette.g=F num=PL}*
+ses	certificats	DET	NC	FALSE	FALSE		sesɛʁtifika	2	DET{His}	N{Certificate.g=M num=PL}*
+un	certificat	DET	NC	FALSE	FALSE		ɛ̃sɛʁtifika	3	DET{Ind}	N{Certificate.g=M num=SG}*
+un	champion	DET	NC	FALSE	FALSE		ɛ̃ʃɑ̃pjɔ̃	12	DET{Ind}	N{Champion.g=M num=SG}*
+la	chance	DET	NC	FALSE	FALSE		laʃɑ̃s	3	DET{The}	N{Chance.g=F num=SG}*
+des	enfants	DET	NC	FALSE	FALSE		deɑ̃fɑ̃	4	DET{Ind}	N{Child.g=M num=PL}*
+des	enfants	DET	NC	TRUE	FALSE	z	dezɑ̃fɑ̃	2	DET{Ind}	N{Child.g=M num=PL}*
+les	enfants	DET	NC	FALSE	FALSE		leɑ̃fɑ̃	6	DET{The}	N{Child.g=M num=PL}*
+les	enfants	DET	NC	TRUE	FALSE	z	lezɑ̃fɑ̃	2	DET{The}	N{Child.g=M num=PL}*
+ses	enfants	DET	NC	FALSE	FALSE		seɑ̃fɑ̃	3	DET{His}	N{Child.g=M num=PL}*
+trois	enfants	NUM	NC	TRUE	FALSE	z	tʁwazɑ̃fɑ̃	1	NUM{Three}	N{Child.g=M num=PL}*
+vos	enfants	DET	NC	FALSE	FALSE		voɑ̃fɑ̃	3	DET{Your}	N{Child.g=M num=PL}*
+un	enfant	DET	NC	FALSE	FALSE		ɛ̃ɑ̃fɑ̃	5	DET{Ind}	N{Child.g=M num=SG}*
+un	enfant	DET	NC	TRUE	TRUE	nVN	ɛ̃nɑ̃fɑ̃	1	DET{Ind}	N{Child.g=M num=SG}*
+le	choix	DET	NC	FALSE	FALSE		ləʃwa	3	DET{The}	N{Choice.g=M num=SG}*
+le	cinéma	DET	NC	FALSE	FALSE		ləsinema	2	DET{The}	N{Cinema.g=M num=SG}*
+la	cité	DET	NC	FALSE	FALSE		lasite	2	DET{The}	N{City.g=F num=SG}*
+la	cléta	DET	NPP	FALSE	FALSE		lakleta	4	DET{The}	N{Cleta.g=F num=SG}*
+cette	commune	DET	NC	FALSE	FALSE		sɛtkɔmyn	22	DET{This}	N{Commune.g=F num=SG}*
+les	concours	DET	NC	FALSE	FALSE		lekɔ̃kuʁ	2	DET{The}	N{Competition.g=M num=PL}*
+le	concours	DET	NC	FALSE	FALSE		ləkɔ̃kuʁ	2	DET{The}	N{Competition.g=M num=SG}*
+des	ordinateurs	DET	NC	TRUE	FALSE	z	dezɔʁdinatœʁ	1	DET{Ind}	N{Computer.g=M num=PL}*
+les	ordinateurs	DET	NC	TRUE	FALSE	z	lezɔʁdinatœʁ	1	DET{The}	N{Computer.g=M num=PL}*
+le	coin	DET	NC	FALSE	FALSE		ləkwɛ̃	22	DET{The}	N{Corner.g=M num=SG}*
+la	cote	DET	NC	FALSE	FALSE		lakɔt	22	DET{The}	N{Cote.g=F num=SG}*
+des	pays	DET	NC	FALSE	FALSE		depei	2	DET{Ind}	N{Country.g=M num=PL}*
+la	campagne	DET	NC	FALSE	FALSE		lakɑ̃paɲ	3	DET{The}	N{Countryside.g=F num=SG}*
+plusieurs	carrières	DET	NC	FALSE	FALSE		plyzjœʁkaʁjɛʁ	2	DET{Multiple}	N{Course.g=F num=PL}*
+des	cours	DET	NC	FALSE	FALSE		dekuʁ	2	DET{Ind}	N{Court.g=F num=PL}*
+des	barrages	DET	NC	FALSE	FALSE		debaʁaʒ	21	DET{Ind}	N{Dam.g=M num=PL}*
+la	danse	DET	NC	FALSE	FALSE		ladɑ̃s	2	DET{The}	N{Dance.g=F num=SG}*
+les	jours	DET	NC	FALSE	FALSE		leʒuʁ	3	DET{The}	N{Day.g=M num=PL}*
+un	jour	DET	NC	FALSE	FALSE		ɛ̃ʒuʁ	9	DET{Ind}	N{Day.g=M num=SG}*
+la	journée	DET	NC	FALSE	FALSE		laʒuʁne	5	DET{The}	N{Day2.g=F num=SG}*
+une	journée	DET	NC	FALSE	FALSE		ynʒuʁne	17	DET{Ind}	N{Day2.g=F num=SG}*
+mes	envies	DET	NC	TRUE	FALSE	z	mezɑ̃vi	1	DET{My}	N{Desire.g=F num=PL}*
+un	bureau	DET	NC	FALSE	FALSE		ɛ̃byʁo	3	DET{Ind}	N{Desk.g=M num=SG}*
+des	dictées	DET	NC	FALSE	FALSE		dedikte	3	DET{Ind}	N{Dication.g=F num=PL}*
+la	direction	DET	NC	FALSE	FALSE		ladiʁɛksjɔ̃	2	DET{The}	N{Direction.g=F num=SG}*
+la	directrice	DET	NC	FALSE	FALSE		ladiʁɛktʁis	2	DET{The}	N{Director.g=F num=SG}*
+ce	chien	DET	NC	FALSE	FALSE		səʃjɛ̃	2	DET{This}	N{Dog.g=M num=SG}*
+les	portes	DET	NC	FALSE	FALSE		lepɔʁt	2	DET{The}	N{Door.g=F num=PL}*
+une	porte	DET	NC	FALSE	FALSE		ynpɔʁt	2	DET{Ind}	N{Door.g=F num=SG}*
+un	dessin	DET	NC	FALSE	FALSE		ɛ̃desɛ̃	3	DET{Ind}	N{Drawing.g=M num=SG}*
+la	peine	DET	NC	FALSE	FALSE		lapɛn	3	DET{The}	N{Effort.g=F num=SG}*
+un	oeuf	DET	NC	TRUE	TRUE	nVN	ɛ̃nɔœf	2	DET{Ind}	N{Egg.g=M num=SG}*
+les	élections	DET	NC	TRUE	FALSE	z	lezelɛksjɔ̃	17	DET{The}	N{Election.g=F num=PL}*
+la	fin	DET	NC	FALSE	FALSE		lafɛ̃	7	DET{The}	N{End.g=F num=SG}*
+ton	entrée	DET	NC	TRUE	FALSE	n	tɔnɑ̃tʁe	1	DET{Thy}	N{entrance.g=F num=SG}*
+le	milieu	DET	NC	FALSE	FALSE		ləmiljø	2	DET{The}	N{Environment.g=M num=SG}*
+cette	époque	DET	NC	FALSE	FALSE		sɛtepɔk	6	DET{This}	N{Epoch.g=F num=SG}*
+un	ergothérapeute	DET	NC	TRUE	FALSE	n	ɛ̃nɛʁɡɔteʁapøt	1	DET{Ind}	N{Ergotherapist.g=M num=SG}*
+ce	soir	DET	NC	FALSE	FALSE		səswaʁ	2	DET{This}	N{Evening.g=M num=SG}*
+le	soir	DET	NC	FALSE	FALSE		ləswaʁ	5	DET{The}	N{Evening.g=M num=SG}*
+du	mal	DET	NC	FALSE	FALSE		dymal	3	DET{Of-The}	N{Evil.g=M num=SG}*
+une	expérience	DET	NC	FALSE	FALSE		ynɛkspeʁjɑ̃s	2	DET{Ind}	N{Experience.g=F num=SG}*
+une	explosion	DET	NC	FALSE	FALSE		ynɛksplozjɔ̃	10	DET{Ind}	N{Explosion.g=F num=SG}*
+le	fait	DET	NC	FALSE	FALSE		ləfɛ	4	DET{The}	N{Fact.g=M num=SG}*
+la	fac	DET	N	FALSE	FALSE		lafak	2	DET{The}	N{Faculty.g=F num=SG}*
+la	famille	DET	NC	FALSE	FALSE		lafamij	11	DET{The}	N{Family.g=F num=SG}*
+une	famille	DET	NC	FALSE	FALSE		ynfamij	3	DET{Ind}	N{Family.g=F num=SG}*
+votre	famille	DET	NC	FALSE	FALSE		vɔtʁfamij	3	DET{Your}	N{Family.g=F num=SG}*
+quelques	fanatiques	DET	NC	FALSE	FALSE		kɛlkfanatik	22	DET{Some}	N{Fanatic.g=M num=SG}*
+les	jeunes	DET	NC	FALSE	FALSE		leʒœn	5	DET{The}	N{Fast.g=M num=PL}*
+un	jeûne	DET	NC	FALSE	FALSE		ɛ̃ʒøn	23	DET{Ind}	N{Fast.g=M num=SG}*
+le	père	DET	NC	FALSE	FALSE		ləpɛʁ	5	DET{The}	N{Father.g=M num=SG}*
+mon	père	DET	NC	FALSE	FALSE		mɔ̃pɛʁ	20	DET{My}	N{Father.g=M num=SG}*
+mon	beau-père	DET	NC	FALSE	FALSE		mɔ̃bopɛʁ	3	DET{My}	N{FatherInLaw.g=M num=SG}*
+le	sentiment	DET	NC	FALSE	FALSE		ləsɑ̃timɑ̃	21	DET{The}	N{Feeling.g=M num=SG}*
+la	ferme	DET	NC	FALSE	FALSE		lafɛʁm	2	DET{The}	N{Ferme.g=F num=SG}*
+des	étrangers	DET	NC	TRUE	FALSE	z	dezetʁɑ̃ʒe	1	DET{Ind}	N{Foreigner.g=M num=PL}*
+une	formation	DET	NC	FALSE	FALSE		ynfɔʁmasjɔ̃	2	DET{Ind}	N{Formation.g=F num=SG}*
+la	france	DET	NPP	FALSE	FALSE		lafʁɑ̃s	4	DET{The}	N{France.g=F num=SG}*
+des	français	DET	NC	FALSE	FALSE		defʁɑ̃sɛ	2	DET{Ind}	N{French.g=M num=PL}*
+les	français	DET	NC	FALSE	FALSE		lefʁɑ̃sɛ	3	DET{The}	N{French.g=M num=PL}*
+le	français	DET	NC	FALSE	FALSE		ləfʁɑ̃sɛ	5	DET{The}	N{French.g=M num=SG}*
+une	amie	DET	NC	FALSE	FALSE		ynami	2	DET{Ind}	N{Friend.g=F num=SG}*
+les	amis	DET	NC	TRUE	FALSE	z	lezami	1	DET{The}	N{Friend.g=M num=PL}*
+mes	amis	DET	NC	TRUE	FALSE	z	mezami	1	DET{My}	N{Friend.g=M num=PL}*
+un	ami	DET	NC	TRUE	TRUE	nVN	ɛ̃nami	1	DET{Ind}	N{Friend.g=M num=SG}*
+un	fruit	DET	NC	FALSE	FALSE		ɛ̃fʁɥi	2	DET{Ind}	N{Fruit.g=M num=SG}*
+les	gamins	DET	NC	FALSE	FALSE		leɡamɛ̃	2	DET{The}	N{Gamin.g=M num=PL}*
+le	jardin	DET	NC	FALSE	FALSE		ləʒaʁdɛ̃	4	DET{The}	N{Garden.g=M num=SG}*
+les	genres	DET	NC	FALSE	FALSE		leʒɑ̃ʁ	2	DET{The}	N{Genre.g=F num=PL}*
+les	allemands	DET	NC	FALSE	FALSE		lealmɑ̃	2	DET{The}	N{German.g=M num=PL}*
+les	allemands	DET	NC	TRUE	FALSE	z	lezalmɑ̃	1	DET{The}	N{German.g=M num=PL}*
+ma	fille	DET	NC	FALSE	FALSE		mafij	10	DET{My}	N{Girl.g=F num=SG}*
+une	fille	DET	NC	FALSE	FALSE		ynfij	2	DET{Ind}	N{Girl.g=F num=SG}*
+une	copine	DET	NC	FALSE	FALSE		ynkɔpin	3	DET{Ind}	N{Girlfriend.g=F num=SG}*
+le	but	DET	NC	FALSE	FALSE		ləby	2	DET{The}	N{Goal.g=M num=SG}*
+le	gouvernement	DET	NC	FALSE	FALSE		ləɡuvɛʁnəmɑ̃	10	DET{The}	N{Government.g=M num=SG}*
+mes	grands-parents	DET	NC	FALSE	FALSE		meɡʁɑ̃dspaʁɑ̃	3	DET{My}	N{Grandparent.g=M num=SG}*
+un	groupe	DET	NC	FALSE	FALSE		ɛ̃ɡʁup	2	DET{Ind}	N{Group.g=M num=SG}*
+un	mec	DET	NC	FALSE	FALSE		ɛ̃mɛk	2	DET{Ind}	N{Guy.g=M num=SG}*
+le	hasard	DET	NC	FALSE	FALSE		ləazaʁ	24	DET{The}	N{Hasard.g=M num=SG}*
+une	baffe	DET	NC	FALSE	FALSE		ynbaf	2	DET{Ind}	N{Hit.g=M num=SG}*
+trois	heures	DET	NC	TRUE	FALSE	z	tʁwazœʁ	1	NUM{Three}	N{Hour.g=F num=PL}*
+une	heure	DET	NC	FALSE	FALSE		ynœʁ	3	DET{Ind}	N{Hour.g=F num=SG}*
+des	maisons	DET	NC	FALSE	FALSE		demɛzɔ̃	2	DET{Ind}	N{House.g=M num=PL}*
+la	maison	DET	NC	FALSE	FALSE		lamɛzɔ̃	6	DET{The}	N{House.g=M num=SG}*
+ma	maison	DET	NC	FALSE	FALSE		mamɛzɔ̃	2	DET{My}	N{House.g=M num=SG}*
+une	maison	DET	NC	FALSE	FALSE		ynmɛzɔ̃	6	DET{Ind}	N{House.g=M num=SG}*
+mon	mari	DET	NC	FALSE	FALSE		mɔ̃maʁi	3	DET{My}	N{Husband.g=M num=SG}*
+ses	idées	DET	NC	TRUE	FALSE	z	sezide	1	DET{His}	N{Idea.g=F num=PL}*
+une	impasse	DET	N	FALSE	FALSE		ynɛ̃pas	18	DET{Ind}	N{Impasse.g=F num=SG}*
+des	invitations	DET	NC	TRUE	FALSE	z	dezɛ̃vitasjɔ̃	1	DET{Ind}	N{Invitation.g=F num=PL}*
+un	boulot	DET	NC	FALSE	FALSE		ɛ̃bulo	2	DET{Ind}	N{Job.g=M num=SG}*
+les	gosses	DET	NC	FALSE	FALSE		leɡɔs	2	DET{The}	N{Kid.g=M num=PL}*
+notre	kinou	DET	NPP	FALSE	FALSE		nɔtʁkinu	2	DET{Our}	N{Kinou.g=M num=SG}*
+les	langues	DET	NC	FALSE	FALSE		lelɑ̃ɡ	5	DET{The}	N{Language.g=F num=PL}*
+la	langue	DET	NC	FALSE	FALSE		lalɑ̃ɡ	10	DET{The}	N{Language.g=F num=SG}*
+une	langue	DET	NC	FALSE	FALSE		ynlɑ̃ɡ	2	DET{Ind}	N{Language.g=F num=SG}*
+le	cuir	DET	NC	FALSE	FALSE		ləkɥiʁ	2	DET{The}	N{Leather.g=M num=SG}*
+la	libération	DET	NC	FALSE	FALSE		lalibeʁasjɔ̃	2	DET{The}	N{Liberation.g=F num=SG}*
+une	licence	DET	NC	FALSE	FALSE		ynlisɑ̃s	2	DET{Ind}	N{Licence.g=F num=SG}*
+la	vie	DET	NC	FALSE	FALSE		lavi	6	DET{The}	N{Life.g=F num=SG}*
+ma	vie	DET	NC	FALSE	FALSE		mavi	2	DET{My}	N{Life.g=F num=SG}*
+une	vie	DET	NC	FALSE	FALSE		ynvi	2	DET{Ind}	N{Life.g=F num=SG}*
+la	limite	DET	NC	FALSE	FALSE		lalimit	2	DET{The}	N{Limit.g=F num=SG}*
+un	lockoute	DET	NC	FALSE	FALSE		ɛ̃lɔkut	2	DET{Ind}	N{Lockoute.g=M num=SG}*
+le	seigneur	DET	N	FALSE	FALSE		ləsɛɲœʁ	2	DET{The}	N{Lord.g=M num=SG}*
+la	machine	DET	NC	FALSE	FALSE		lamaʃin	2	DET{The}	N{Machine.g=F num=SG}*
+la	plupart	DET	NC	FALSE	FALSE		laplypaʁ	5	DET{The}	N{Majority.g=F num=SG}*
+les	hommes	DET	NC	TRUE	FALSE	z	lezɔm	1	DET{The}	N{Man.g=M num=PL}*
+toute	façon	DET	NC	FALSE	FALSE		tutfasɔ̃	3	DET{All}	N{Manner.g=F num=SG}*
+notre	mariage	DET	NC	FALSE	FALSE		nɔtʁmaʁjaʒ	2	DET{Our}	N{Marriage.g=M num=SG}*
+le	maire	DET	NC	FALSE	FALSE		ləmɛʁ	22	DET{The}	N{Mayor.g=M num=SG}*
+la	moyenne	DET	NC	FALSE	FALSE		lamwajɛn	3	DET{The}	N{Mean.g=F num=SG}*
+les	moyens	DET	NC	FALSE	FALSE		lemwajɛ̃	3	DET{The}	N{Mean.g=M num=PL}*
+un	membre	DET	NC	FALSE	FALSE		ɛ̃mɑ̃bʁ	2	DET{Ind}	N{Member.g=M num=SG}*
+des	souvenirs	DET	NC	FALSE	FALSE		desuvəniʁ	2	DET{Ind}	N{Memory.g=M num=PL}*
+le	métro	DET	NC	FALSE	FALSE		ləmetʁo	7	DET{The}	N{Metro.g=M num=SG}*
+le	minimum	DET	NC	FALSE	FALSE		ləminimɔm	2	DET{The}	N{Minimum.g=M num=SG}*
+la	misère	DET	NC	FALSE	FALSE		lamizɛʁ	2	DET{The}	N{Misery.g=F num=SG}*
+ce	moment	DET	NC	FALSE	FALSE		səmɔmɑ̃	11	DET{This}	N{Moment.g=M num=SG}*
+un	moment	DET	NC	FALSE	FALSE		ɛ̃mɔmɑ̃	9	DET{Ind}	N{Moment.g=M num=SG}*
+trois	mois	DET	NC	FALSE	FALSE		tʁwamwa	6	NUM{Three}	N{Month.g=M num=PL}*
+un	mois	DET	NC	FALSE	FALSE		ɛ̃mwa	2	DET{Ind}	N{Month.g=M num=SG}*
+le	matin	DET	NC	FALSE	FALSE		ləmatɛ̃	3	DET{The}	N{Morning.g=M num=SG}*
+ma	mère	DET	NC	FALSE	FALSE		mamɛʁ	26	DET{My}	N{Mother.g=F num=SG}*
+sa	mère	DET	NC	FALSE	FALSE		samɛʁ	2	DET{His}	N{Mother.g=F num=SG}*
+une	mère	DET	NC	FALSE	FALSE		ynmɛʁ	2	DET{Ind}	N{Mother.g=F num=SG}*
+votre	mère	DET	NC	FALSE	FALSE		vɔtʁmɛʁ	2	DET{Your}	N{Mother.g=F num=SG}*
+ma	belle-mère	DET	NC	FALSE	FALSE		mabɛlmɛʁ	2	DET{My}	N{MotherInLaw.g=F num=SG}*
+des	mouvements	DET	NC	FALSE	FALSE		demuvmɑ̃	2	DET{Ind}	N{Movement.g=M num=PL}*
+un	film	DET	NC	FALSE	FALSE		ɛ̃film	3	DET{Ind}	N{Movie.g=M num=SG}*
+la	maman	DET	NC	FALSE	FALSE		lamamɑ̃	3	DET{The}	N{Mum.g=F num=SG}*
+ma	maman	DET	NC	FALSE	FALSE		mamamɑ̃	3	DET{My}	N{Mum.g=F num=SG}*
+la	nuit	DET	NC	FALSE	FALSE		lanɥi	6	DET{The}	N{Night.g=F num=SG}*
+les	notes	DET	NC	FALSE	FALSE		lenɔt	3	DET{The}	N{Note.g=M num=PL}*
+les	occupants	DET	NC	TRUE	FALSE	z	lezɔkypɑ̃	1	DET{The}	N{Occupant.g=M num=PL}*
+mon	avis	DET	NC	FALSE	FALSE		mɔ̃avi	4	DET{My}	N{Opinion.g=M num=SG}*
+les	opposants	DET	NC	TRUE	FALSE	z	lezɔpozɑ̃	20	DET{The}	N{Opposant.g=M num=PL}*
+des	ordres	DET	NC	TRUE	FALSE	z	dezɔʁdʁ	1	DET{Ind}	N{Order.g=M num=PL}*
+un	ordre	DET	N	TRUE	TRUE	nVN	ɛ̃nɔʁdʁ	1	DET{Ind}	N{Order.g=M num=SG}*
+les	orphelinats	DET	NC	TRUE	FALSE	z	lezɔʁfəlina	1	DET{The}	N{Orphelinat.g=M num=PL}*
+les	parents	DET	NC	FALSE	FALSE		lepaʁɑ̃	11	DET{The}	N{Parent.g=M num=PL}*
+mes	parents	DET	NC	FALSE	FALSE		mepaʁɑ̃	7	DET{My}	N{Parent.g=M num=PL}*
+tes	parents	DET	NC	FALSE	FALSE		tepaʁɑ̃	3	DET{Thy}	N{Parent.g=M num=PL}*
+vos	parents	DET	NC	FALSE	FALSE		vopaʁɑ̃	6	DET{Your}	N{Parent.g=M num=PL}*
+la	paris	DET	NPP	FALSE	FALSE		lapaʁi	2	DET{The}	N{Paris.g=F num=SG}*
+les	parisiens	DET	NC	FALSE	FALSE		lepaʁizjɛ̃	4	DET{The}	N{Parisian.g=M num=PL}*
+la	fête	DET	NC	FALSE	FALSE		lafɛt	4	DET{The}	N{Party.g=F num=SG}*
+une	pause	DET	NC	FALSE	FALSE		ynpoz	4	DET{Ind}	N{Pause.g=F num=SG}*
+des	gens	DET	NC	FALSE	FALSE		deʒɑ̃	27	DET{Ind}	N{People.g=M num=PL}*
+les	gens	DET	NC	FALSE	FALSE		leʒɑ̃	40	DET{The}	N{People.g=M num=PL}*
+ces	gens	DET	NC	FALSE	FALSE		seʒɑ̃	2	DET{This}	N{People.g=M num=PL}*
+une	période	DET	NC	FALSE	FALSE		ynpeʁjɔd	2	DET{Ind}	N{Period.g=F num=SG}*
+des	photos	DET	NC	FALSE	FALSE		defɔto	6	DET{Ind}	N{Photo.g=F num=PL}*
+des	pigeons	DET	NC	FALSE	FALSE		depiʒɔ̃	2	DET{Ind}	N{Pigeon.g=M num=PL}*
+son	lieu	DET	NC	FALSE	FALSE		sɔ̃ljø	2	DET{His}	N{Place.g=M num=SG}*
+le	plaisir	DET	NC	FALSE	FALSE		ləpleziʁ	3	DET{The}	N{Pleasure.g=F num=SG}*
+un	poème	DET	NC	FALSE	FALSE		ɛ̃pɔɛm	2	DET{Ind}	N{Poem.g=M num=SG}*
+quel	point	DET	NC	FALSE	FALSE		kɛlpwɛ̃	2	DET{Which}	N{Point.g=M num=SG}*
+la	politique	DET	NC	FALSE	FALSE		lapɔlitik	2	DET{The}	N{Politics.g=F num=SG}*
+le	porche	DET	NC	FALSE	FALSE		ləpɔʁʃ	2	DET{The}	N{Porch.g=M num=SG}*
+le	pot	DET	N	FALSE	FALSE		ləpo	2	DET{The}	N{Pot.g=M num=SG}*
+le	pouvoir	DET	NC	FALSE	FALSE		ləpuvwaʁ	2	DET{The}	N{Power.g=M num=SG}*
+la	préfecture	DET	NC	FALSE	FALSE		lapʁefɛktyʁ	10	DET{The}	N{Prefecture.g=F num=SG}*
+les	prépas	DET	NC	FALSE	FALSE		lepʁepa	2	DET{The}	N{Prépa.g=F num=PL}*
+une	prépa	DET	NC	FALSE	FALSE		ynpʁepa	2	DET{Ind}	N{Prépa.g=F num=SG}*
+la	primaube	DET	NPP	FALSE	FALSE		lapʁimob	4	DET{The}	N{Primaube.g=F num=SG}*
+les	prix	DET	NC	FALSE	FALSE		lepʁi	4	DET{The}	N{Prize.g=M num=PL}*
+des	problèmes	DET	NC	FALSE	FALSE		depʁɔblɛm	3	DET{Ind}	N{Problem.g=F num=PL}*
+le	problème	DET	NC	FALSE	FALSE		ləpʁɔblɛm	10	DET{The}	N{Problem.g=F num=SG}*
+un	problème	DET	NC	FALSE	FALSE		ɛ̃pʁɔblɛm	2	DET{Ind}	N{Problem.g=F num=SG}*
+mon	métier	DET	NC	FALSE	FALSE		mɔ̃metje	3	DET{My}	N{Profession.g=M num=SG}*
+sa	profession	DET	NC	FALSE	FALSE		sapʁɔfesjɔ̃	2	DET{His}	N{Profession2.g=F num=SG}*
+des	professionnels	DET	NC	FALSE	FALSE		depʁɔfesjɔnɛl	2	DET{Ind}	N{Professional.g=M num=SG}*
+le	professeur	DET	NC	FALSE	FALSE		ləpʁɔfesœʁ	2	DET{The}	N{Professor.g=M num=SG}*
+les	élèves	DET	NC	TRUE	FALSE	z	lezelɛv	1	DET{The}	N{Pupil.g=M num=PL}*
+le	quartier	DET	NC	FALSE	FALSE		ləkaʁtje	2	DET{The}	N{Quarter.g=M num=SG}*
+les	questions	DET	NC	FALSE	FALSE		lekɛstjɔ̃	3	DET{The}	N{Question.g=F num=PL}*
+la	question	DET	NC	FALSE	FALSE		lakɛstjɔ̃	4	DET{The}	N{Question.g=F num=SG}*
+une	question	DET	NC	FALSE	FALSE		ynkɛstjɔ̃	3	DET{Ind}	N{Question.g=F num=SG}*
+des	lapins	DET	NC	FALSE	FALSE		delapɛ̃	2	DET{Ind}	N{Rabbit.g=M num=PL}*
+la	radio	DET	NC	FALSE	FALSE		laʁadjo	4	DET{The}	N{Radio.g=F num=SG}*
+le	ravitaillement	DET	NC	FALSE	FALSE		ləʁavitajmɑ̃	4	DET{The}	N{Ravitaillement.g=M num=SG}*
+la	réaction	DET	NC	FALSE	FALSE		laʁeaksjɔ̃	3	DET{The}	N{Reaction.g=F num=SG}*
+la	région	DET	NC	FALSE	FALSE		laʁeʒjɔ̃	23	DET{The}	N{Region.g=F num=SG}*
+la	retraite	DET	NC	FALSE	FALSE		laʁətʁɛt	2	DET{The}	N{Retreat.g=F num=SG}*
+le	réveillon	DET	NC	FALSE	FALSE		ləʁevɛjɔ̃	2	DET{The}	N{Reveillon.g=M num=SG}*
+la	côte	DET	NC	FALSE	FALSE		lakot	21	DET{The}	N{Rib.g=F num=SG}*
+les	droits	DET	NC	FALSE	FALSE		ledʁwa	2	DET{The}	N{Right.g=M num=PL}*
+le	droit	DET	NC	FALSE	FALSE		lədʁwa	5	DET{The}	N{Right.g=M num=SG}*
+le	chemin	DET	NC	FALSE	FALSE		ləʃəmɛ̃	2	DET{The}	N{Road.g=M num=SG}*
+un	rôle	DET	NC	FALSE	FALSE		ɛ̃ʁol	2	DET{Ind}	N{Role.g=M num=SG}*
+les	chambres	DET	NC	FALSE	FALSE		leʃɑ̃bʁ	2	DET{The}	N{Room.g=F num=PL}*
+les	écoles	DET	NC	TRUE	FALSE	z	lezekɔl	1	DET{The}	N{School.g=F num=PL}*
+une	école	DET	NC	FALSE	FALSE		ynekɔl	4	DET{Ind}	N{School.g=F num=SG}*
+la	mer	DET	NC	FALSE	FALSE		lamɛʁ	5	DET{The}	N{Sea.g=F num=SG}*
+la	recherche	DET	NC	FALSE	FALSE		laʁəʃɛʁʃ	3	DET{The}	N{Search.g=F num=SG}*
+la	seine	DET	N	FALSE	FALSE		lasɛn	2	DET{The}	N{Seine.g=F num=SG}*
+le	sénégal	DET	NPP	FALSE	FALSE		ləseneɡal	2	DET{The}	N{Senegal.g=M num=SG}*
+un	service	DET	NC	FALSE	FALSE		ɛ̃sɛʁvis	3	DET{Ind}	N{Service.g=M num=SG}*
+ses	chemises	DET	NC	FALSE	FALSE		seʃəmiz	10	DET{His}	N{Shirt.g=F num=PL}*
+la	liquette	DET	NC	FALSE	FALSE		lalikɛt	2	DET{The}	N{Shirt2.g=F num=SG}*
+des	chaussures	DET	NC	FALSE	FALSE		deʃosyʁ	2	DET{Ind}	N{Shoe.g=F num=PL}*
+les	chaussures	DET	NC	FALSE	FALSE		leʃosyʁ	4	DET{The}	N{Shoe.g=F num=PL}*
+la	douche	DET	NC	FALSE	FALSE		laduʃ	2	DET{The}	N{Shower.g=F num=SG}*
+des	chanteurs	DET	NC	FALSE	FALSE		deʃɑ̃tœʁ	3	DET{Ind}	N{Singer.g=M num=PL}*
+ma	soeur	DET	NC	FALSE	FALSE		masɔœʁ	2	DET{My}	N{Sister.g=F num=SG}*
+la	situation	DET	NC	FALSE	FALSE		lasitɥasjɔ̃	2	DET{The}	N{Situation.g=F num=SG}*
+la	claque	DET	NC	FALSE	FALSE		laklak	2	DET{The}	N{Slap.g=F num=SG}*
+des	sociétés	DET	NC	FALSE	FALSE		desɔsjete	2	DET{Ind}	N{Society.g=F num=PL}*
+une	prise	DET	N	FALSE	FALSE		ynpʁiz	3	DET{Ind}	N{Socket.g=F num=SG}*
+toutes	sortes	DET	NC	FALSE	FALSE		tutsɔʁt	2	DET{All}	N{Sort.g=F num=PL}*
+le	sud	DET	NC	FALSE	FALSE		ləsyd	2	DET{The}	N{South.g=M num=SG}*
+les	spécialistes	DET	NC	FALSE	FALSE		lespesjalist	4	DET{The}	N{Specialist.g=M num=PL}*
+un	spectacle	DET	NC	FALSE	FALSE		ɛ̃spɛktakl	3	DET{Ind}	N{Spectacle.g=M num=SG}*
+une	étape	DET	NC	FALSE	FALSE		ynetap	7	DET{Ind}	N{Stage.g=F num=SG}*
+la	rue	DET	NC	FALSE	FALSE		laʁy	4	DET{The}	N{Street.g=F num=SG}*
+des	étudiants	DET	NC	TRUE	FALSE	z	dezetydjɑ̃	1	DET{Ind}	N{Student.g=M num=PL}*
+un	studio	DET	NC	FALSE	FALSE		ɛ̃stydjo	2	DET{Ind}	N{Studio.g=M num=SG}*
+ces	études	DET	NC	TRUE	FALSE	z	sezetyd	1	DET{This}	N{Study.g=F num=PL}*
+des	études	DET	NC	FALSE	FALSE		deetyd	2	DET{Ind}	N{Study.g=F num=PL}*
+des	études	DET	NC	TRUE	FALSE	z	dezetyd	5	DET{Ind}	N{Study.g=F num=PL}*
+les	études	DET	NC	FALSE	FALSE		leetyd	2	DET{The}	N{Study.g=F num=PL}*
+les	études	DET	NC	TRUE	FALSE	z	lezetyd	2	DET{The}	N{Study.g=F num=PL}*
+leurs	études	DET	NC	TRUE	FALSE	z	lœʁzetyd	1	DET{Their}	N{Study.g=F num=PL}*
+mes	études	DET	NC	TRUE	FALSE	z	mezetyd	5	DET{My}	N{Study.g=F num=PL}*
+une	filiale	DET	NC	FALSE	FALSE		ynfiljal	2	DET{Ind}	N{Subsidiary.g=F num=SG}*
+cet	été	DET	NC	TRUE	FALSE	t	sɛttete	1	DET{This}	N{Summer.g=M num=SG}*
+le	soutien	DET	NC	FALSE	FALSE		ləsutjɛ̃	11	DET{The}	N{Support.g=M num=SG}*
+des	suisses	DET	NC	FALSE	FALSE		desɥis	2	DET{Ind}	N{Swiss.g=M num=PL}*
+le	thé	DET	NC	FALSE	FALSE		ləte	2	DET{The}	N{Tea.g=M num=SG}*
+des	enseignants	DET	NC	TRUE	FALSE	z	dezɑ̃sɛɲɑ̃	1	DET{Ind}	N{Teacher.g=M num=PL}*
+la	technologie	DET	NC	FALSE	FALSE		latɛknɔlɔʒi	2	DET{The}	N{Technology.g=F num=SG}*
+la	télévision	DET	NC	FALSE	FALSE		latelevizjɔ̃	4	DET{The}	N{Television.g=F num=SG}*
+le	terme	DET	NC	FALSE	FALSE		lətɛʁm	2	DET{The}	N{Term.g=M num=SG}*
+des	choses	DET	NC	FALSE	FALSE		deʃoz	10	DET{Ind}	N{Thing.g=M num=PL}*
+les	choses	DET	NC	FALSE	FALSE		leʃoz	2	DET{The}	N{Thing.g=M num=PL}*
+quelque	chose	DET	NC	FALSE	FALSE		kɛlkʃoz	13	DET{Some}	N{Thing.g=M num=SG}*
+des	milliers	DET	NC	FALSE	FALSE		demilje	2	DET{Ind}	N{Thousant.g=M num=PL}*
+le	jeudi	DET	NC	FALSE	FALSE		ləʒødi	2	DET{The}	N{Thursday.g=M num=SG}*
+des	tickets	DET	NC	FALSE	FALSE		detikɛ	2	DET{Ind}	N{Ticket.g=M num=PL}*
+les	tickets	DET	NC	FALSE	FALSE		letikɛ	2	DET{The}	N{Ticket.g=M num=PL}*
+ton	ticket	DET	NC	FALSE	FALSE		tɔ̃tikɛ	2	DET{Thy}	N{Ticket.g=M num=SG}*
+plusieurs	fois	DET	NC	FALSE	FALSE		plyzjœʁfwa	2	DET{Multiple}	N{Time.g=F num=PL}*
+quelques	fois	DET	NC	FALSE	FALSE		kɛlkfwa	4	DET{Some}	N{Time.g=F num=PL}*
+trois	fois	DET	NC	FALSE	FALSE		tʁwafwa	2	NUM{Three}	N{Time.g=F num=PL}*
+chaque	fois	DET	NC	FALSE	FALSE		ʃakfwa	25	ADJ{Every}	N{Time.g=F num=SG}*
+des	fois	DET	NC	FALSE	FALSE		defwa	9	DET{Ind}	N{Time.g=F num=SG}*
+autre	fois	DET	NC	FALSE	FALSE		lotʁfwa	2	DET{Other}	N{Time.g=F num=SG}*
+une	fois	DET	NC	FALSE	FALSE		ynfwa	11	DET{Ind}	N{Time.g=F num=SG}*
+le	temps	DET	NC	FALSE	FALSE		lətɑ̃	10	DET{The}	N{Time.g=M num=SG}*
+son	temps	DET	NC	FALSE	FALSE		sɔ̃tɑ̃	2	DET{His}	N{Time.g=M num=SG}*
+les	toilettes	DET	NC	FALSE	FALSE		letwalɛt	3	DET{The}	N{Toilet.g=M num=PL}*
+la	tournée	DET	NC	FALSE	FALSE		latuʁne	7	DET{The}	N{Tour.g=F num=SG}*
+sa	tournée	DET	NC	FALSE	FALSE		satuʁne	22	DET{His}	N{Tour.g=F num=SG}*
+des	villes	DET	NC	FALSE	FALSE		devil	2	DET{Ind}	N{Town.g=F num=PL}*
+la	ville	DET	NC	FALSE	FALSE		lavil	4	DET{The}	N{Town.g=F num=SG}*
+ces	arbres	DET	NC	TRUE	FALSE	z	sezaʁbʁ	1	DET{This}	N{Tree.g=M num=PL}*
+un	arbre	DET	NC	TRUE	TRUE	nVN	ɛ̃naʁbʁ	3	DET{Ind}	N{Tree.g=M num=SG}*
+des	trucs	DET	NC	FALSE	FALSE		detʁyk	4	DET{Ind}	N{Truc.g=M num=PL}*
+le	truc	DET	NC	FALSE	FALSE		lətʁyk	2	DET{The}	N{Truc.g=M num=SG}*
+un	truc	DET	NC	FALSE	FALSE		ɛ̃tʁyk	4	DET{Ind}	N{Truc.g=M num=SG}*
+les	camions	DET	NC	FALSE	FALSE		lekamjɔ̃	2	DET{The}	N{Truck.g=M num=SG}*
+le	dimanche	DET	NC	FALSE	FALSE		lədimɑ̃ʃ	2	DET{The}	N{Tuesday.g=M num=SG}*
+le	tour	DET	NC	FALSE	FALSE		lətuʁ	2	DET{The}	N{Turn.g=M num=SG}*
+la	télé	DET	NC	FALSE	FALSE		latele	3	DET{The}	N{TV.g=F num=SG}*
+des	espèces	DET	N	FALSE	FALSE		deɛspɛs	2	DET{Ind}	N{Type.g=F num=PL}*
+le	chômage	DET	NC	FALSE	FALSE		ləʃomaʒ	3	DET{The}	N{Unemployment.g=M num=SG}*
+des	légumes	DET	NC	FALSE	FALSE		deleɡym	2	DET{Ind}	N{Vegetable.g=M num=SG}*
+le	verbe	DET	NC	FALSE	FALSE		ləvɛʁb	2	DET{The}	N{Verb.g=M num=SG}*
+des	vérifications	DET	NC	FALSE	FALSE		deveʁifikasjɔ̃	10	DET{Ind}	N{Verification.g=F num=PL}*
+la	version	DET	NC	FALSE	FALSE		lavɛʁsjɔ̃	2	DET{The}	N{Version.g=F num=SG}*
+le	village	DET	NC	FALSE	FALSE		ləvilaʒ	28	DET{The}	N{Village.g=M num=SG}*
+son	village	DET	NC	FALSE	FALSE		sɔ̃vilaʒ	7	DET{His}	N{Village.g=M num=SG}*
+des	visites	DET	NC	FALSE	FALSE		devizit	2	DET{Ind}	N{Visit.g=F num=PL}*
+la	voix	DET	NC	FALSE	FALSE		lavwa)	2	DET{The}	N{Voice.g=F num=SG}*
+sa	voix	DET	NC	FALSE	FALSE		savwa	2	DET{His}	N{Voice.g=F num=SG}*
+le	volume	DET	NC	FALSE	FALSE		ləvɔlym	2	DET{The}	N{Volume.g=M num=SG}*
+les	démarches	DET	NC	FALSE	FALSE		ledemaʁʃ	2	DET{The}	N{Walk.g=F num=PL}*
+la	démarche	DET	NC	FALSE	FALSE		lademaʁʃ	2	DET{The}	N{Walk.g=F num=SG}*
+la	guerre	DET	NC	FALSE	FALSE		laɡɛʁ	16	DET{The}	N{War.g=F num=SG}*
+le	week-end	DET	NC	FALSE	FALSE		ləwikɑ̃	2	DET{The}	N{Weekend.g=M num=SG}*
+son	vin	DET	N	FALSE	FALSE		sɔ̃vɛ̃	20	DET{His}	N{Wine.g=M num=SG}*
+les	hivers	DET	NC	TRUE	FALSE	z	lezivɛʁ	1	DET{The}	N{Winter.g=M num=SG}*
+les	femmes	DET	NC	FALSE	FALSE		lefam	2	DET{The}	N{Woman.g=F num=PL}*
+une	femme	DET	NC	FALSE	FALSE		ynfam	2	DET{Ind}	N{Woman.g=F num=SG}*
+un	travail	DET	NC	FALSE	FALSE		ɛ̃tʁavaj	4	DET{Ind}	N{Work.g=M num=SG}*
+le	monde	DET	NC	FALSE	FALSE		ləmɔ̃d	25	DET{The}	N{World.g=M num=SG}*
+les	ans	DET	NC	TRUE	FALSE	z	lezɑ̃	3	DET{The}	N{Year.g=M num=PL}*
+trois	ans	DET	NC	TRUE	FALSE	z	tʁwazɑ̃	8	NUM{Three}	N{Year.g=M num=PL}*
+un	an	DET	NC	TRUE	TRUE	nVN	ɛ̃nɑ̃	7	DET{Ind}	N{Year.g=M num=SG}*
+un	an	DET	NC	FALSE	FALSE		ɛ̃ɑ̃	2	DET{Ind}	N{Year.g=M num=SG}*
+des	années	DET	NC	TRUE	FALSE	z	dezane	2	DET{Ind}	N{Year2.g=F num=PL}*
+quelques	années	DET	NC	TRUE	FALSE	z	kɛlkzane	1	DET{Some}	N{Year2.g=F num=PL}*
+cette	année	DET	NC	FALSE	FALSE		sɛtane	5	DET{This}	N{Year2.g=F num=SG}*
+les	habitudes	DET	NC	TRUE	FALSE	z	lezabityd	1	DET{The}	N{Habit.g=F num=PL}*
+chaque	voyage	DET	NC	FALSE	FALSE		ʃakvwajaʒ	3	ADJ{Every}	N{Voyage.g=M num=SG}*
+quinze	ponts	NUM	NC	FALSE	FALSE		kɛ̃zpɔ̃	2	NUM{Fifteen}	N{Bridge.g=M num=PL}*
+sept	centimètres	NUM	NC	FALSE	FALSE		sɛtsɑ̃timɛtʁ	2	NUM{Seven}	N{Centimeter.g=M num=PL}*
+deux	centimètres	NUM	NC	FALSE	FALSE		døsɑ̃timɛtʁ	2	NUM{Two}	N{Centimeter.g=M num=PL}*
+dix	enfants	NUM	NC	TRUE	FALSE	z	dizɑ̃fɑ̃	1	NUM{Ten}	N{Child.g=M num=PL}*
+douze	jours	NUM	NC	FALSE	FALSE		duzʒuʁ	2	NUM{Twelve}	N{Day.g=M num=PL}*
+deux	étages	NUM	NC	TRUE	FALSE	z	døzetaʒ	1	NUM{Two}	N{Floor.g=M num=PL}*
+cents	francs	NUM	NC	FALSE	FALSE		sɑ̃fʁɑ̃	3	NUM{Hundred}	N{Franc.g=M num=PL}*
+trente	francs	NUM	NC	FALSE	FALSE		tʁɑ̃tfʁɑ̃	2	NUM{Thirty}	N{Franc.g=M num=PL}*
+dix	heures	NUM	NC	TRUE	FALSE	z	dizœʁ	1	NUM{Ten}	N{Hour.g=F num=PL}*
+cents	habitants	NUM	NC	TRUE	FALSE	z	sɑ̃zabitɑ̃	1	NUM{Hundred}	N{Inhabitant.g=M num=PL}*
+deux	mois	NUM	NC	FALSE	FALSE		dømwa	2	NUM{Two}	N{Month.g=M num=PL}*
+huit	mois	NUM	NC	FALSE	FALSE		ɥitmwa	2	NUM{Eight}	N{Month.g=M num=PL}*
+six	mois	NUM	NC	FALSE	FALSE		sismwa	2	NUM{Six}	N{Month.g=M num=PL}*
+deux	aiguilles	NUM	NC	TRUE	FALSE	z	døzeɡɥij	1	NUM{Two}	N{Needle.g=F num=PL}*
+quatre	registres	NUM	NC	FALSE	FALSE		katʁʁəʒistʁ	2	NUM{Four}	N{Register.g=M num=PL}*
+quatre	fils	NUM	NC	FALSE	FALSE		katʁfis	2	NUM{Four}	N{Son.g=M num=PL}*
+deux	fois	NUM	NC	FALSE	FALSE		døfwa	2	NUM{Two}	N{Time.g=F num=SG}*
+cinq	ans	NUM	NC	FALSE	FALSE		sɛ̃kɑ̃	5	NUM{Five}	N{Year.g=M num=PL}*
+cinquante	ans	NUM	NC	FALSE	FALSE		sɛ̃kɑ̃tɑ̃	3	NUM{Fifty}	N{Year.g=M num=PL}*
+deux	ans	NUM	NC	TRUE	FALSE	z	døzɑ̃	8	NUM{Two}	N{Year.g=M num=PL}*
+deux	ans	NUM	NC	FALSE	FALSE		døɑ̃	2	NUM{Two}	N{Year.g=M num=PL}*
+dix	ans	NUM	NC	TRUE	FALSE	z	dizɑ̃	1	NUM{Ten}	N{Year.g=M num=PL}*
+huit	ans	NUM	NC	FALSE	FALSE		ɥitɑ̃	7	NUM{Eight}	N{Year.g=M num=PL}*
+quarante	ans	NUM	NC	FALSE	FALSE		kaʁɑ̃tɑ̃	2	NUM{Forty}	N{Year.g=M num=PL}*
+quatorze	ans	NUM	NC	FALSE	FALSE		katɔʁzɑ̃	2	NUM{Forty}	N{Year.g=M num=PL}*
+quatre	ans	NUM	NC	FALSE	FALSE		katʁɑ̃	5	NUM{Four}	N{Year.g=M num=PL}*
+quinze	ans	NUM	NC	FALSE	FALSE		kɛ̃zɑ̃	3	NUM{Fifteen}	N{Year.g=M num=PL}*
+seize	ans	NUM	NC	FALSE	FALSE		sɛzɑ̃	2	NUM{Sixteen}	N{Year.g=M num=PL}*
+sept	ans	NUM	NC	FALSE	FALSE		sɛtɑ̃	2	NUM{Seven}	N{Year.g=M num=PL}*
+six	ans	NUM	NC	FALSE	FALSE		sisɑ̃	3	NUM{Six}	N{Year.g=M num=PL}*
+six	ans	NUM	NC	TRUE	FALSE	z	sizɑ̃	3	NUM{Six}	N{Year.g=M num=PL}*
+vingt	ans	NUM	NC	FALSE	FALSE		vɛ̃ɑ̃	2	NUM{Twenty}	N{Year.g=M num=PL}*
+vingt	ans	NUM	NC	TRUE	FALSE	t	vɛ̃tɑ̃	4	NUM{Twenty}	N{Year.g=M num=PL}*
+vingt-cinq	ans	NUM	NC	FALSE	FALSE		vɛ̃tsɛ̃kɑ̃	3	NUM{Twenty-five}	N{Year.g=M num=PL}*
+vingt-et-un	ans	NUM	NC	TRUE	TRUE	nVN	vɛ̃teɛ̃nɑ̃	2	NUM{Twenty-one}	N{Year.g=M num=PL}*
+cinq	années	NUM	NC	FALSE	FALSE		sɛ̃kane	2	NUM{Five}	N{Year2.g=F num=PL}*
+deux	années	NUM	NC	TRUE	FALSE	z	døzane	1	NUM{Two}	N{Year2.g=F num=PL}*

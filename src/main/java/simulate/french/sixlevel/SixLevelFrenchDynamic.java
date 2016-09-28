@@ -3,9 +3,11 @@
  */
 package simulate.french.sixlevel;
 
+import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
+import constraints.hierarchy.reimpl.Hierarchy;
 import forms.Form;
 import forms.FormPair;
 import forms.morphosyntax.MForm;
@@ -26,6 +28,7 @@ import grammar.subgraph.CandidateSpaces;
 import grammar.tools.GrammarTester;
 import graph.Direction;
 import io.MyStringTable;
+import io.utils.PathUtils;
 import learn.PairDistribution;
 import learn.batch.RandomLearnerTester;
 import learn.batch.combination.LearningPropertyCombinations;
@@ -40,6 +43,7 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.Map;
 import java.util.Set;
+import java.util.UUID;
 
 /**
  * @author jwvl
@@ -52,7 +56,7 @@ public class SixLevelFrenchDynamic {
 
     private static SubstringDatabank lcsData;
     private static ByteNGraphMap bigraphs;
-    private static int numTests = 10;
+    private static int numTests = 50;
 
     public static void main(String[] args) throws IOException {
 
@@ -64,7 +68,8 @@ public class SixLevelFrenchDynamic {
         int numEvaluations = config.getInt("learning.numEvaluations");
 
         String phoneInfoFileName = config.getString("files.phoneInfo");
-        String dataFileName = config.getString("files.learningData");
+        String dataFilePath = config.getString("files.learningData");
+        String dataFileName = PathUtils.getFilenameFromPath(dataFilePath);
 
         MyStringTable phonesTable = MyStringTable.fromFile(phoneInfoFileName, true, ",");
         String sonorityColumn = config.getString("implementation.sonorityType");
@@ -82,7 +87,7 @@ public class SixLevelFrenchDynamic {
         // 2. Read in data pairs of SemFs and AudFs. Instantiate databank object
         // to keep track of longest common substrings.
         PairDistribution pairDistribution = createPairDistribution(
-                dataFileName, semF_level, pF_level);
+                dataFilePath, semF_level, pF_level);
 
         lcsData = SubstringDatabank.createInstance();
         int maxUnfoundNgraph = config.getInt("gen.constrainers.maxUnfoundNgraph");
@@ -121,22 +126,26 @@ public class SixLevelFrenchDynamic {
 
         lcsData.init();
 
+
         // 4. Generate UFs from MFs with the help of longest-common substring
         // data
-        Map<MForm, PhoneticForm> MF_PF_mappings = lcsData.getMfToPf();
+        Multimap<MForm, PhoneticForm> MF_PF_mappings = lcsData.getMfToPf();
         Collection<MForm> allMforms = MF_PF_mappings.keySet();
 
         LexicalHypothesisRepository repository = new LexicalHypothesisRepository(lcsData);
         for (MForm mf : allMforms) {
-            PhoneticForm pf = MF_PF_mappings.get(mf);
-            MorphemePhoneAligner mpa = new MorphemePhoneAligner(mf, pf.getContents(), lcsData);
-            Collection<MorphemePhoneAlignment> alignments = mpa.getAlignments();
-            for (MorphemePhoneAlignment alignment : alignments) {
-                repository.addAlignment(alignment);
+            Collection<PhoneticForm> pfs = MF_PF_mappings.get(mf);
+            for (PhoneticForm pf: pfs) {
+                MorphemePhoneAligner mpa = new MorphemePhoneAligner(mf, pf.getContents(), lcsData);
+                Collection<MorphemePhoneAlignment> alignments = mpa.getAlignments();
+                for (MorphemePhoneAlignment alignment : alignments) {
+                    repository.addAlignment(alignment);
+                }
             }
         }
 
         repository.printContents();
+        //System.exit(0);
         MFormToUF mf_uf_gen = new MFormToUF(repository);
         if (maxUnfoundNgraph > 0) {
             mf_uf_gen.addConstrainer(new UfConstrainer(bigraphs, nGraphSize));
@@ -186,7 +195,9 @@ public class SixLevelFrenchDynamic {
             // TODO Handle this better?
 
             TrajectoriesTester trajectoriesTester = new TrajectoriesTester(learningPropertyCombinations, grammar, pairDistribution);
-            trajectoriesTester.testAndWrite("combinations", numEvaluations, numTests, numThreads);
+            trajectoriesTester.testAndWrite(dataFileName, numEvaluations, numTests, numThreads);
+            Map<UUID,Hierarchy> successfulHierarchies = trajectoriesTester.getSuccessfulHierarchies();
+
         }
 
 

@@ -40,11 +40,11 @@ public class MorphemePhoneAligner {
         List<Morpheme> mFormList = mForm.getMorphemes();
         for (int i = 0; i < mFormList.size(); i++) {
             Morpheme m = mFormList.get(i);
-            String longestSubstring;
+            String longestSubstring = "";
             if (m != null) {
-                longestSubstring = lss.getLongestSubstrings(m).get(0);
-            } else {
-                longestSubstring = "";
+                if (lss.getLongestSubstrings(m).size() == 1) {
+                    longestSubstring = lss.getLongestSubstrings(m).get(0);
+                }
             }
             // TODO Think of solution for > 1 string
             result[i] = longestSubstring;
@@ -53,6 +53,7 @@ public class MorphemePhoneAligner {
     }
 
     public List<AlignmentIndex> createAllIndices() {
+        System.out.println("Longest substrings: " +Arrays.toString(longestSubstrings));
         List<AlignmentIndex> result = Lists.newArrayList();
         preAligned = new int[phoneSubForm.size()];
         Arrays.fill(preAligned, -1);

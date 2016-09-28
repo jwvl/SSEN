@@ -21,12 +21,10 @@ import java.util.List;
  */
 public class MorphemePhoneAlignment {
 
-    NonCrossingAlignmentIndex index;
+    private NonCrossingAlignmentIndex index;
     private final List<LexicalMapping> lexicalMappings;
 
     /**
-     * @param topForm
-     * @param bottomForm
      */
     private MorphemePhoneAlignment(MorphemeCollection morphemes, PhoneSubForm phoneSubForm,
                                    NonCrossingAlignmentIndex index) {
@@ -43,9 +41,6 @@ public class MorphemePhoneAlignment {
     }
 
     /**
-     * @param alignmentArray
-     * @param phoneSubForm
-     * @param mWord
      * @return
      */
     private List<LexicalMapping> getDownGroupings(MorphemeCollection morphemeCollection,

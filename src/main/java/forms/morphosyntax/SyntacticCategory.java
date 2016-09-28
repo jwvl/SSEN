@@ -11,7 +11,7 @@ package forms.morphosyntax;
  * @date Dec 15, 2014
  */
 public enum SyntacticCategory {
-    N, ADJ, DET;
+    N, ADJ, DET, NUM;
 
     public static SyntacticCategory getInstance(String name) {
         return valueOf(name);

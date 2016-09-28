@@ -189,5 +189,27 @@ public class Hierarchy implements Con {
         }
         return stringBuilder.toString();
     }
+
+    public Hierarchy copy() {
+        double[] copiedRankings = Arrays.copyOf(rankings, rankings.length);
+        return new Hierarchy(copiedRankings,copiedRankings.length,parentHierarchy);
+    }
+
+    public void normalize(double meanAt) {
+        double sum = 0;
+        int numConstraints = 0;
+        for (double ranking: rankings) {
+            if (ranking > Double.NEGATIVE_INFINITY) {
+                numConstraints++;
+                sum+=ranking;
+            }
+        }
+        double mean = sum / numConstraints;
+        for (int i=0; i < rankings.length; i++) {
+            if (rankings[i] != Double.NEGATIVE_INFINITY) {
+                rankings[i] = rankings[i] - mean + meanAt;
+            }
+        }
+    }
 }
 

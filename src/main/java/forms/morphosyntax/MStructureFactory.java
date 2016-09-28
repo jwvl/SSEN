@@ -6,6 +6,7 @@ package forms.morphosyntax;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
+import com.typesafe.config.ConfigFactory;
 
 import java.util.*;
 
@@ -18,6 +19,9 @@ import java.util.*;
  */
 public class MStructureFactory {
     private final ImmutableList<SyntacticWord> syntacticWordTemplates;
+    private final boolean addNullValues = ConfigFactory.load().getBoolean("gen.nullValuesMSF");
+    private final boolean addDisagreement = ConfigFactory.load().getBoolean("gen.disagreementMSF");
+
 
     private MStructureFactory(Collection<SyntacticWord> input) {
         syntacticWordTemplates = ImmutableList.copyOf(input);
@@ -28,8 +32,13 @@ public class MStructureFactory {
         // Find head
         SyntacticWord result = null;
         for (SyntacticWord l : syntacticWordTemplates) {
-            if (l.isHead())
+            if (l.isHead()) {
                 result = l;
+            }
+        }
+
+        if (result == null) {
+            System.out.println("Couldn't find head in " + syntacticWordTemplates);
         }
 
         // Impose head features unto dependent templates
@@ -95,7 +104,17 @@ public class MStructureFactory {
             if (mf.getType() == MFeatureType.FIXED) {
                 result.add(Collections.singleton(mf));
             } else {
-                result.add(mf.getRealizationSet());
+                Set<MElement> resultingSet = Sets.newHashSet();
+                for (MElement mElement: mf.getRealizationSet()) {
+                    if (!mElement.expressesValue()) {
+                        if (addNullValues) {
+                            resultingSet.add(mElement);
+                        }
+                    } else if (mElement.getFeature().valueEquals(mf.getFeature()) || addDisagreement) {
+                        resultingSet.add(mElement);
+                    }
+                }
+                result.add(resultingSet);
             }
         }
         result.trimToSize();

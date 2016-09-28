@@ -26,20 +26,25 @@ public class PredefinedLiaisonRules {
     private static List<EdgeBasedRule> createEdgeRules() {
         Config config = ConfigFactory.load();
         List<EdgeBasedRule> result = new ArrayList<EdgeBasedRule>();
-        result.addAll(EdgeBasedRuleBuilder.fromString("#z → ∅ / |C__", Edge.WORD));
-        result.addAll(EdgeBasedRuleBuilder.fromString("z# → ∅ / __|C", Edge.WORD));
-        result.addAll(EdgeBasedRuleBuilder.fromString("#n → ∅ / |C__", Edge.WORD));
-        result.addAll(EdgeBasedRuleBuilder.fromString("n# → ∅ / __|C", Edge.WORD));
-        result.addAll(EdgeBasedRuleBuilder.fromString("#t → ∅ / |C__", Edge.WORD));
-        result.addAll(EdgeBasedRuleBuilder.fromString("t# → ∅ / __|C", Edge.WORD));
-        result.addAll(EdgeBasedRuleBuilder.fromString("#∅ → n / |V__", Edge.WORD));
-        result.addAll(EdgeBasedRuleBuilder.fromString("∅# → n / __|V", Edge.WORD));
-        result.addAll(EdgeBasedRuleBuilder.fromString("#∅ → z / |V__", Edge.WORD));
-        result.addAll(EdgeBasedRuleBuilder.fromString("∅# → z / __|V", Edge.WORD));
-        result.addAll(EdgeBasedRuleBuilder.fromString("#∅ → t / |V__", Edge.WORD));
-        result.addAll(EdgeBasedRuleBuilder.fromString("∅# → t / __|V", Edge.WORD));
+        if (config.getBoolean("gen.deletionRulesOnUF")) {
+            result.addAll(EdgeBasedRuleBuilder.fromString("#z → ∅ / |C__", Edge.WORD));
+            result.addAll(EdgeBasedRuleBuilder.fromString("z# → ∅ / __|C", Edge.WORD));
+            result.addAll(EdgeBasedRuleBuilder.fromString("#n → ∅ / |C__", Edge.WORD));
+            result.addAll(EdgeBasedRuleBuilder.fromString("n# → ∅ / __|C", Edge.WORD));
+            result.addAll(EdgeBasedRuleBuilder.fromString("#t → ∅ / |C__", Edge.WORD));
+            result.addAll(EdgeBasedRuleBuilder.fromString("t# → ∅ / __|C", Edge.WORD));
+        }
+        if (config.getBoolean("gen.insertionRulesOnUF")) {
+            result.addAll(EdgeBasedRuleBuilder.fromString("#∅ → n / |V__", Edge.WORD));
+            result.addAll(EdgeBasedRuleBuilder.fromString("∅# → n / __|V", Edge.WORD));
+            result.addAll(EdgeBasedRuleBuilder.fromString("#∅ → z / |V__", Edge.WORD));
+            result.addAll(EdgeBasedRuleBuilder.fromString("∅# → z / __|V", Edge.WORD));
+            result.addAll(EdgeBasedRuleBuilder.fromString("#∅ → t / |V__", Edge.WORD));
+            result.addAll(EdgeBasedRuleBuilder.fromString("∅# → t / __|V", Edge.WORD));
+        }
         result.addAll(EdgeBasedRuleBuilder.fromString("Q# → ɔn / __|V", Edge.WORD));
         result.addAll(EdgeBasedRuleBuilder.fromString("ɔn# → Q / __|C", Edge.WORD));
+
         if (config.getBoolean("gen.schwaRulesOnUF")) {
             result.addAll(EdgeBasedRuleBuilder.fromString("ə# → ∅ / __", Edge.MORPHEME));
             result.addAll(EdgeBasedRuleBuilder.fromString("∅# → ə / |C__|C", Edge.MORPHEME));

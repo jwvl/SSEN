@@ -1,8 +1,10 @@
 package constraints.hierarchy.analysis;
 
+import com.google.common.collect.Lists;
 import constraints.Constraint;
 import constraints.hierarchy.reimpl.Hierarchy;
 
+import java.util.Collection;
 import java.util.Comparator;
 import java.util.List;
 
@@ -14,8 +16,8 @@ public class ConstraintOrderMap {
     private int[][] sortingTable;
     private final Comparator<Constraint> constraintComparator;
 
-    public ConstraintOrderMap(List<Hierarchy> hierarchies) {
-        this.hierarchies = hierarchies;
+    public ConstraintOrderMap(Collection<Hierarchy> hierarchies) {
+        this.hierarchies = Lists.newArrayList(hierarchies);
         int totalNumConstraints = Constraint.getNumberCreated();
         this.sortingTable = new int[totalNumConstraints][totalNumConstraints];
         fillTable(totalNumConstraints);
