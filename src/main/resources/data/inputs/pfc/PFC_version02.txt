@@ -31,7 +31,7 @@ double	nationalité	ADJ	NC	FALSE	FALSE		dublnasjɔnalite	2	ADJ{Double}	N{Nationa
 premier	objectif	ADJ	NC	TRUE	FALSE	r	pʁəmjerɔbʒɛktif	1	ADJ{First}	N{Objective.g=M num=SG}*
 nouvel	observateur	ADJ	N	FALSE	FALSE		nuvɛlɔpsɛʁvatœʁ	9	ADJ{New}	N{Observer.g=M num=SG}*
 petites	occupations	ADJ	NC	TRUE	FALSE	z	pətitzɔkypasjɔ̃	1	ADJ{Small}	N{Occupation.g=F num=PL}*
-quelque	part	ADJ	N	FALSE	FALSE		kɛlkpaʁ	2	ADJ{Which}	N{Part.g=F num=SG}*
+quelque	part	ADJ	N	FALSE	FALSE		kɛlkpaʁ	2	DET{Some}	N{Part.g=F num=SG}*
 autre	personne	ADJ	NC	FALSE	FALSE		otʁpɛʁsɔn	2	ADJ{Other}	N{Person.g=F num=SG}*
 demi	pointe	ADJ	NC	FALSE	FALSE		dəmipwɛ̃t	2	ADJ{Half}	N{Point.g=F num=SG}*
 gros	problème	ADJ	NC	FALSE	FALSE		ɡʁopʁɔblɛm	3	ADJ{Fat}	N{Problem.g=F num=SG}*
@@ -44,9 +44,9 @@ certaines	choses	ADJ	NC	FALSE	FALSE		sɛʁtɛnʃoz	3	ADJ{Certain}	N{Thing.g=M nu
 autre	chose	ADJ	N	FALSE	FALSE		otʁʃoz	3	ADJ{Other}	N{Thing.g=M num=SG}*
 grand	chose	ADJ	NC	FALSE	FALSE		ɡʁɑ̃ʃoz	4	ADJ{Big}	N{Thing.g=M num=SG}*
 même	chose	ADJ	NC	FALSE	FALSE		mɛmʃoz	2	ADJ{Same}	N{Thing.g=M num=SG}*
-première	fois	ADJ	NC	FALSE	FALSE		pʁəmjɛʁfwa	3	ADJ{First}	N{Time.g=F num=SG}*
-même	temps	ADJ	NC	FALSE	FALSE		mɛmtɑ̃	3	ADJ{Same}	N{Time.g=M num=SG}*
-même	temps	ADJ	N	FALSE	FALSE		mɛmtɑ̃	6	ADJ{Same}	N{Time.g=M num=SG}*
+première	fois	ADJ	NC	FALSE	FALSE		pʁəmjɛʁfwa	3	ADJ{First}	N{Time2.g=F num=SG}*
+même	temps	ADJ	NC	FALSE	FALSE		mɛmtɑ̃	3	ADJ{Same}	N{Time1.g=M num=SG}*
+même	temps	ADJ	N	FALSE	FALSE		mɛmtɑ̃	6	ADJ{Same}	N{Time1.g=M num=SG}*
 seuls	titres	ADJ	NC	FALSE	FALSE		sœltitʁ	21	ADJ{Only}	N{Title.g=M num=PL}*
 mêmes	villes	ADJ	NC	FALSE	FALSE		mɛmvil	5	ADJ{Same}	N{Town.g=F num=PL}*
 certains	oncles	ADJ	NC	TRUE	FALSE	z	sɛʁtɛ̃zɔ̃kl	1	ADJ{Certain}	N{Uncle.g=M num=PL}*
@@ -364,20 +364,20 @@ le	terme	DET	NC	FALSE	FALSE		lətɛʁm	2	DET{The}	N{Term.g=M num=SG}*
 des	choses	DET	NC	FALSE	FALSE		deʃoz	10	DET{Ind}	N{Thing.g=M num=PL}*
 les	choses	DET	NC	FALSE	FALSE		leʃoz	2	DET{The}	N{Thing.g=M num=PL}*
 quelque	chose	DET	NC	FALSE	FALSE		kɛlkʃoz	13	DET{Some}	N{Thing.g=M num=SG}*
-des	milliers	DET	NC	FALSE	FALSE		demilje	2	DET{Ind}	N{Thousant.g=M num=PL}*
+des	milliers	DET	NC	FALSE	FALSE		demilje	2	DET{Ind}	N{Thousand.g=M num=PL}*
 le	jeudi	DET	NC	FALSE	FALSE		ləʒødi	2	DET{The}	N{Thursday.g=M num=SG}*
 des	tickets	DET	NC	FALSE	FALSE		detikɛ	2	DET{Ind}	N{Ticket.g=M num=PL}*
 les	tickets	DET	NC	FALSE	FALSE		letikɛ	2	DET{The}	N{Ticket.g=M num=PL}*
 ton	ticket	DET	NC	FALSE	FALSE		tɔ̃tikɛ	2	DET{Thy}	N{Ticket.g=M num=SG}*
-plusieurs	fois	DET	NC	FALSE	FALSE		plyzjœʁfwa	2	DET{Multiple}	N{Time.g=F num=PL}*
-quelques	fois	DET	NC	FALSE	FALSE		kɛlkfwa	4	DET{Some}	N{Time.g=F num=PL}*
-trois	fois	DET	NC	FALSE	FALSE		tʁwafwa	2	NUM{Three}	N{Time.g=F num=PL}*
-chaque	fois	DET	NC	FALSE	FALSE		ʃakfwa	25	ADJ{Every}	N{Time.g=F num=SG}*
-des	fois	DET	NC	FALSE	FALSE		defwa	9	DET{Ind}	N{Time.g=F num=SG}*
-autre	fois	DET	NC	FALSE	FALSE		lotʁfwa	2	DET{Other}	N{Time.g=F num=SG}*
-une	fois	DET	NC	FALSE	FALSE		ynfwa	11	DET{Ind}	N{Time.g=F num=SG}*
-le	temps	DET	NC	FALSE	FALSE		lətɑ̃	10	DET{The}	N{Time.g=M num=SG}*
-son	temps	DET	NC	FALSE	FALSE		sɔ̃tɑ̃	2	DET{His}	N{Time.g=M num=SG}*
+plusieurs	fois	DET	NC	FALSE	FALSE		plyzjœʁfwa	2	DET{Multiple}	N{Time2.g=F num=PL}*
+quelques	fois	DET	NC	FALSE	FALSE		kɛlkfwa	4	DET{Some}	N{Time2.g=F num=PL}*
+trois	fois	DET	NC	FALSE	FALSE		tʁwafwa	2	NUM{Three}	N{Time2.g=F num=PL}*
+chaque	fois	DET	NC	FALSE	FALSE		ʃakfwa	25	ADJ{Every}	N{Time2.g=F num=SG}*
+des	fois	DET	NC	FALSE	FALSE		defwa	9	DET{Ind}	N{Time2.g=F num=SG}*
+autre	fois	DET	NC	FALSE	FALSE		lotʁfwa	2	DET{Other}	N{Time2.g=F num=SG}*
+une	fois	DET	NC	FALSE	FALSE		ynfwa	11	DET{Ind}	N{Time2.g=F num=SG}*
+le	temps	DET	NC	FALSE	FALSE		lətɑ̃	10	DET{The}	N{Time1.g=M num=SG}*
+son	temps	DET	NC	FALSE	FALSE		sɔ̃tɑ̃	2	DET{His}	N{Time1.g=M num=SG}*
 les	toilettes	DET	NC	FALSE	FALSE		letwalɛt	3	DET{The}	N{Toilet.g=M num=PL}*
 la	tournée	DET	NC	FALSE	FALSE		latuʁne	7	DET{The}	N{Tour.g=F num=SG}*
 sa	tournée	DET	NC	FALSE	FALSE		satuʁne	22	DET{His}	N{Tour.g=F num=SG}*
@@ -439,7 +439,7 @@ six	mois	NUM	NC	FALSE	FALSE		sismwa	2	NUM{Six}	N{Month.g=M num=PL}*
 deux	aiguilles	NUM	NC	TRUE	FALSE	z	døzeɡɥij	1	NUM{Two}	N{Needle.g=F num=PL}*
 quatre	registres	NUM	NC	FALSE	FALSE		katʁʁəʒistʁ	2	NUM{Four}	N{Register.g=M num=PL}*
 quatre	fils	NUM	NC	FALSE	FALSE		katʁfis	2	NUM{Four}	N{Son.g=M num=PL}*
-deux	fois	NUM	NC	FALSE	FALSE		døfwa	2	NUM{Two}	N{Time.g=F num=SG}*
+deux	fois	NUM	NC	FALSE	FALSE		døfwa	2	NUM{Two}	N{Time2.g=F num=SG}*
 cinq	ans	NUM	NC	FALSE	FALSE		sɛ̃kɑ̃	5	NUM{Five}	N{Year.g=M num=PL}*
 cinquante	ans	NUM	NC	FALSE	FALSE		sɛ̃kɑ̃tɑ̃	3	NUM{Fifty}	N{Year.g=M num=PL}*
 deux	ans	NUM	NC	TRUE	FALSE	z	døzɑ̃	8	NUM{Two}	N{Year.g=M num=PL}*
@@ -447,7 +447,7 @@ deux	ans	NUM	NC	FALSE	FALSE		døɑ̃	2	NUM{Two}	N{Year.g=M num=PL}*
 dix	ans	NUM	NC	TRUE	FALSE	z	dizɑ̃	1	NUM{Ten}	N{Year.g=M num=PL}*
 huit	ans	NUM	NC	FALSE	FALSE		ɥitɑ̃	7	NUM{Eight}	N{Year.g=M num=PL}*
 quarante	ans	NUM	NC	FALSE	FALSE		kaʁɑ̃tɑ̃	2	NUM{Forty}	N{Year.g=M num=PL}*
-quatorze	ans	NUM	NC	FALSE	FALSE		katɔʁzɑ̃	2	NUM{Forty}	N{Year.g=M num=PL}*
+quatorze	ans	NUM	NC	FALSE	FALSE		katɔʁzɑ̃	2	NUM{Fourteen}	N{Year.g=M num=PL}*
 quatre	ans	NUM	NC	FALSE	FALSE		katʁɑ̃	5	NUM{Four}	N{Year.g=M num=PL}*
 quinze	ans	NUM	NC	FALSE	FALSE		kɛ̃zɑ̃	3	NUM{Fifteen}	N{Year.g=M num=PL}*
 seize	ans	NUM	NC	FALSE	FALSE		sɛzɑ̃	2	NUM{Sixteen}	N{Year.g=M num=PL}*

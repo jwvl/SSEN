@@ -7,7 +7,7 @@ import gen.mapping.FormMapping;
 import gen.mapping.SubCandidateSet;
 import grammar.dynamic.DynamicNetworkGrammar;
 import graph.explorer.CorrectCandidateFinder;
-import learn.PairDistribution;
+import learn.data.PairDistribution;
 
 import java.util.Collection;
 import java.util.HashMap;

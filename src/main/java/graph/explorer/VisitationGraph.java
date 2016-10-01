@@ -66,4 +66,6 @@ public class VisitationGraph {
     public ListMultimap<Form, Form> getGreenGraph() {
         return greenNodes;
     }
+
+    public ListMultimap<Form, Form> getNodes() {return nodes;}
 }

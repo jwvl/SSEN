@@ -9,7 +9,7 @@ import forms.Form;
 import forms.FormPair;
 import grammar.Grammar;
 import graph.Direction;
-import learn.PairDistribution;
+import learn.data.PairDistribution;
 import learn.ViolatedCandidate;
 
 import java.io.BufferedWriter;

@@ -1,13 +1,13 @@
 /**
  *
  */
-package learn;
+package learn.data;
 
+import com.google.common.base.Predicate;
 import com.google.common.collect.Sets;
 import forms.Form;
 import forms.FormPair;
 import graph.Direction;
-import learn.data.LearningData;
 import util.collections.Distribution;
 
 import java.util.Collection;
@@ -96,6 +96,20 @@ public class PairDistribution extends
         Set<FormPair> result = new HashSet<FormPair>();
         for (FormPair learning : getKeySet()) {
             result.add(learning);
+        }
+        return result;
+    }
+
+    public PairDistribution filter(Predicate<FormPair> predicate) {
+        PairDistribution result = new PairDistribution(this.getName()+"-filtered");
+        for (FormPair formPair: getKeys()) {
+            if (predicate.apply(formPair)) {
+                int frequency = getFrequency(formPair);
+                result.add(formPair, frequency);
+            }
+            else {
+                System.out.println("Removing formpair " +formPair);
+            }
         }
         return result;
     }

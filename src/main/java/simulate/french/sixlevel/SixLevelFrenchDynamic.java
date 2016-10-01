@@ -12,6 +12,8 @@ import forms.Form;
 import forms.FormPair;
 import forms.morphosyntax.MForm;
 import forms.morphosyntax.MStructure;
+import forms.morphosyntax.Morpheme;
+import forms.morphosyntax.MorphologicalWord;
 import forms.phon.flat.PhoneticForm;
 import forms.primitives.segment.Phone;
 import gen.alignment.MorphemePhoneAligner;
@@ -29,13 +31,15 @@ import grammar.tools.GrammarTester;
 import graph.Direction;
 import io.MyStringTable;
 import io.utils.PathUtils;
-import learn.PairDistribution;
 import learn.batch.RandomLearnerTester;
 import learn.batch.combination.LearningPropertyCombinations;
 import learn.batch.combination.TrajectoriesTester;
+import learn.data.PairDistribution;
+import learn.data.SinglesFilter;
 import simulate.french.sixlevel.helpers.LexicalHypothesisRepository;
 import simulate.french.sixlevel.helpers.SettingsMap;
 import simulate.french.sixlevel.subgens.*;
+import util.collections.StringMultimap;
 import util.debug.Timer;
 import util.string.ngraph.ByteNGraphMap;
 
@@ -56,7 +60,10 @@ public class SixLevelFrenchDynamic {
 
     private static SubstringDatabank lcsData;
     private static ByteNGraphMap bigraphs;
-    private static int numTests = 50;
+    private static Config config = ConfigFactory.load();
+    private static int numRuns = config.getInt("learning.numRuns");
+    private static boolean saveLexiconToFile = config.getBoolean("lexicon.saveToFile");
+    private static boolean getLexiconFromFile = config.getBoolean("lexicon.constructFromFile");
 
     public static void main(String[] args) throws IOException {
 
@@ -128,24 +135,51 @@ public class SixLevelFrenchDynamic {
 
 
         // 4. Generate UFs from MFs with the help of longest-common substring
-        // data
+        // data (or, alternatively, read from file)
         Multimap<MForm, PhoneticForm> MF_PF_mappings = lcsData.getMfToPf();
         Collection<MForm> allMforms = MF_PF_mappings.keySet();
 
         LexicalHypothesisRepository repository = new LexicalHypothesisRepository(lcsData);
-        for (MForm mf : allMforms) {
-            Collection<PhoneticForm> pfs = MF_PF_mappings.get(mf);
-            for (PhoneticForm pf: pfs) {
-                MorphemePhoneAligner mpa = new MorphemePhoneAligner(mf, pf.getContents(), lcsData);
-                Collection<MorphemePhoneAlignment> alignments = mpa.getAlignments();
-                for (MorphemePhoneAlignment alignment : alignments) {
-                    repository.addAlignment(alignment);
+
+            if (getLexiconFromFile) {
+                String filename = dataFilePath.replace(".txt",".lex");
+                StringMultimap stringMultimap = StringMultimap.readFromFile(filename);
+                for (MForm mf : allMforms) {
+                    for (MorphologicalWord mWord: mf) {
+                        for (Morpheme morpheme: mWord) {
+                            String mString = morpheme.toString();
+                            Collection<String> pStrings = stringMultimap.get(mString);
+                            for (String pString: pStrings) {
+                                if (pString.equals("∅")) {
+                                    repository.addFromString(morpheme, "");
+                                }
+                                else {
+                                    repository.addFromString(morpheme, pString);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else {
+                for (MForm mf : allMforms) {
+                Collection<PhoneticForm> pfs = MF_PF_mappings.get(mf);
+                for (PhoneticForm pf : pfs) {
+                    MorphemePhoneAligner mpa = new MorphemePhoneAligner(mf, pf.getContents(), lcsData);
+                    Collection<MorphemePhoneAlignment> alignments = mpa.getAlignments();
+                    for (MorphemePhoneAlignment alignment : alignments) {
+                        repository.addAlignment(alignment);
+                    }
                 }
             }
         }
 
         repository.printContents();
-        //System.exit(0);
+        if (saveLexiconToFile) {
+            String filename = dataFileName.replace(".txt",".lex");
+            StringMultimap stringMultimap = repository.toStringMultimap();
+            stringMultimap.writeToFile("outputs/"+filename);
+        }
         MFormToUF mf_uf_gen = new MFormToUF(repository);
         if (maxUnfoundNgraph > 0) {
             mf_uf_gen.addConstrainer(new UfConstrainer(bigraphs, nGraphSize));
@@ -171,6 +205,8 @@ public class SixLevelFrenchDynamic {
             grammar.addCandidateSpaces(candidateSpaces);
         }
 
+        pairDistribution = pairDistribution.filter(new SinglesFilter());
+
         Timer timer = new Timer();
         System.out.println("Testing grammar on learning data...");
         GrammarTester.testGrammarOnLearningData(grammar, pairDistribution, 100, 1.0);
@@ -187,7 +223,7 @@ public class SixLevelFrenchDynamic {
         }
         if (randomLearner) {
             RandomLearnerTester randomLearnerTester = new RandomLearnerTester(grammar,pairDistribution, numEvaluations);
-            randomLearnerTester.testAndPrint(numTests);
+            randomLearnerTester.testAndPrint(numRuns);
         }
         else {
             LearningPropertyCombinations learningPropertyCombinations = LearningPropertyCombinations.fromMultimap(settingsMap.getMap(), grammar.getDefaultLearningProperties());
@@ -195,7 +231,7 @@ public class SixLevelFrenchDynamic {
             // TODO Handle this better?
 
             TrajectoriesTester trajectoriesTester = new TrajectoriesTester(learningPropertyCombinations, grammar, pairDistribution);
-            trajectoriesTester.testAndWrite(dataFileName, numEvaluations, numTests, numThreads);
+            trajectoriesTester.testAndWrite(dataFileName, numEvaluations, numRuns, numThreads);
             Map<UUID,Hierarchy> successfulHierarchies = trajectoriesTester.getSuccessfulHierarchies();
 
         }

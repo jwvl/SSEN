@@ -60,9 +60,9 @@ public class Hierarchy implements Con {
         }
         if (!contains(c)) {
             putValue(c, value);
-            System.out.println("Added constraint " +c +" to map");
+           // System.out.println("Added constraint " +c +" to map");
             size++;
-            System.out.println("Size of hierarchy is now" + size());
+           // System.out.println("Size of hierarchy is now" + size());
             rankingChanged = true;
         }
     }
@@ -71,7 +71,7 @@ public class Hierarchy implements Con {
     public boolean contains(Constraint constraint) {
         boolean result = rankings[constraint.getId()] != Double.NEGATIVE_INFINITY;
         if (!result) {
-            System.out.println("Constraint "+constraint+" not found!");
+        //    System.out.println("Constraint "+constraint+" not found!");
         }
         return result;
     }

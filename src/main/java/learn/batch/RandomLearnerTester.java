@@ -2,7 +2,7 @@ package learn.batch;
 
 import constraints.hierarchy.reimpl.Hierarchy;
 import grammar.Grammar;
-import learn.PairDistribution;
+import learn.data.PairDistribution;
 
 import java.util.ArrayList;
 import java.util.List;

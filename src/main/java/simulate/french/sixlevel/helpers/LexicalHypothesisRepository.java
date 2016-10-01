@@ -11,6 +11,7 @@ import forms.phon.LexicalMapping;
 import forms.primitives.segment.PhoneSubForm;
 import gen.alignment.MorphemePhoneAlignment;
 import gen.alignment.SubstringDatabank;
+import util.collections.StringMultimap;
 
 import java.util.*;
 
@@ -41,6 +42,11 @@ public class LexicalHypothesisRepository implements Iterable<Morpheme> {
             }
 
         }
+    }
+
+    public void addFromString(Morpheme morpheme, String pString) {
+        PhoneSubForm psf = PhoneSubForm.createFromString(pString);
+        addMapping(morpheme,psf);
     }
 
 
@@ -133,4 +139,15 @@ public class LexicalHypothesisRepository implements Iterable<Morpheme> {
         return minimalMappings;
     }
 
+    public StringMultimap toStringMultimap() {
+        StringMultimap stringMultimap = StringMultimap.createNew();
+        for (Morpheme m: this) {
+            String mString = m.toString();
+            for (PhoneSubForm psf: getCandidates(m)) {
+                String pString = psf.toString();
+                stringMultimap.put(mString, pString);
+            }
+        }
+        return stringMultimap;
+    }
 }

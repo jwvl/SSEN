@@ -5,6 +5,8 @@ package candidates;
 
 import forms.Form;
 
+import java.util.Objects;
+
 /**
  * An Input containing a Form. Traditional two-level OT candidates
  * would be an example (the Form being an |underlying form|).
@@ -43,5 +45,16 @@ public class FormInput extends AbstractInput {
         return myForm.toBracketedString();
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        FormInput formInput = (FormInput) o;
+        return Objects.equals(myForm, formInput.myForm);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(myForm);
+    }
 }

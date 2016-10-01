@@ -31,12 +31,10 @@ public class GoogleSankey {
     private final static String getSecondPart() {
         return  ");\n" +
                 "\n" +
-                "        // Sets chart options.\n" +
                 "        var options = {\n" +
                 "          width: 900,\n" +
                 "        };\n" +
                 "\n" +
-                "        // Instantiates and draws our chart, passing in some options.\n" +
                 "        var chart = new google.visualization.Sankey(document.getElementById('sankey_basic'));\n" +
                 "        chart.draw(data, options);\n" +
                 "      }\n" +

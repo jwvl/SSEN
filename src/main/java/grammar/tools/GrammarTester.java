@@ -1,10 +1,13 @@
 package grammar.tools;
 
 import candidates.Candidate;
+import com.google.common.collect.Sets;
 import eval.Evaluation;
+import forms.Form;
 import forms.FormPair;
 import grammar.Grammar;
 import graph.Direction;
+import learn.data.PairDistribution;
 import learn.ViolatedCandidate;
 import learn.data.LearningData;
 import learn.stats.ErrorCounter;
@@ -12,6 +15,8 @@ import simulate.analysis.CandidateMappingTable;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
+import java.util.UUID;
 
 /**
  * Created by janwillem on 30/03/16.
@@ -68,5 +73,29 @@ public class GrammarTester {
             count++;
         }
         return result;
+    }
+
+    public static PairDistribution toPairDistribution(Grammar grammar, LearningData learningData, int testsPerInput, double evaluationNoise) {
+        Set<FormPair> unlabeledPairs = Sets.newHashSet();
+        PairDistribution result = new PairDistribution(UUID.randomUUID().toString());
+        for (FormPair labeled: learningData.getKeys()) {
+            unlabeledPairs.add(labeled.getUnlabeled(Direction.RIGHT));
+        }
+        for (FormPair unlabeled: unlabeledPairs) {
+            for (int i = 0; i < testsPerInput; i++) {
+                Candidate winncandidate = evaluateToCandidate(grammar,unlabeled,true,evaluationNoise);
+                Form[] winningForms = winncandidate.getForms();
+                Form rightmost = winningForms[winningForms.length-1];
+                result.addOne(unlabeled.left(),rightmost);
+            }
+        }
+        return result;
+
+    }
+
+    private static Candidate evaluateToCandidate(Grammar grammar, FormPair formPair, boolean resample, double evaluationNoise) {
+        Evaluation evaluation = grammar.evaluate(formPair, resample, evaluationNoise);
+        ViolatedCandidate violatedCandidate = evaluation.getWinner();
+        return violatedCandidate.getCandidate();
     }
 }

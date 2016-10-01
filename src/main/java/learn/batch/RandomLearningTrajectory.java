@@ -9,7 +9,7 @@ import forms.FormPair;
 import grammar.Grammar;
 import grammar.dynamic.DynamicNetworkGrammar;
 import graph.Direction;
-import learn.PairDistribution;
+import learn.data.PairDistribution;
 import learn.ViolatedCandidate;
 import learn.data.LearningData;
 

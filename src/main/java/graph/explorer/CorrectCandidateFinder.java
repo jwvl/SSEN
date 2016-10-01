@@ -32,6 +32,11 @@ public class CorrectCandidateFinder {
         Visitor visitor = new Visitor(graph, formsToSeek.right());
         visitor.init(formsToSeek.left());
         greenGraph = graph.getGreenGraph();
+        if (greenGraph.size() < 1) {
+            SimpleDynamicGraph.showResult(graph.getNodes());
+            System.err.print("No forms found for " +formsToSeek);
+            System.err.println("??");
+        }
         System.out.println(greenGraph.size() + " forms found for " + formsToSeek);
     }
 

@@ -7,7 +7,7 @@ import forms.morphosyntax.SemSynForm;
 import forms.phon.flat.PhoneticForm;
 import grammar.levels.Level;
 import io.MyStringTable;
-import learn.PairDistribution;
+import learn.data.PairDistribution;
 import util.collections.Couple;
 
 import java.util.List;

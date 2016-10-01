@@ -7,6 +7,7 @@ import com.google.common.collect.LinkedHashMultiset;
 
 import java.util.Iterator;
 import java.util.Random;
+import java.util.Set;
 
 /**
  * @author jwvl
@@ -61,5 +62,9 @@ public class FrequencyMap<O extends Object> implements Iterable<O> {
     @Override
     public Iterator<O> iterator() {
         return contents.elementSet().iterator();
+    }
+
+    public Set<O> getKeys() {
+        return contents.elementSet();
     }
 }
