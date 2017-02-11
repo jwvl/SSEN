@@ -1,7 +1,6 @@
 package grammar.dynamic.node;
 
 import constraints.SparseViolationProfile;
-import grammar.dynamic.persistent.LinkedNode;
 
 import java.util.Comparator;
 

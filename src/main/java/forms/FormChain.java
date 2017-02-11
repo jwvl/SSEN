@@ -101,6 +101,9 @@ public class FormChain {
     }
 
     private Form[] calculateContents(FormMapping[] mappings) {
+        if (mappings.length < 1) {
+            return new Form[0];
+        }
         Form[] result = new Form[mappings.length + 1];
         result[0] = mappings[0].left();
         for (int i = 0; i < mappings.length; i++) {

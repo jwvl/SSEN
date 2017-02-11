@@ -9,8 +9,10 @@ import org.graphstream.graph.Edge;
 import org.graphstream.graph.Graph;
 import org.graphstream.graph.Node;
 import org.graphstream.graph.implementations.SingleGraph;
+import org.graphstream.stream.file.FileSinkImages;
 import org.graphstream.ui.view.Viewer;
 
+import java.io.IOException;
 import java.util.Collection;
 import java.util.Map;
 
@@ -20,6 +22,7 @@ import java.util.Map;
 public class SimpleDynamicGraph {
     private final Map<Form, Collection<Form>> map;
     private final Graph graph;
+    private static int counter = 0;
 
     public SimpleDynamicGraph(Map<Form, Collection<Form>> map, boolean displayRightAway) {
         this.map = map;
@@ -31,6 +34,17 @@ public class SimpleDynamicGraph {
             viewer.disableAutoLayout();
         }
         addNodes();
+        FileSinkImages pic = new FileSinkImages(FileSinkImages.OutputType.PNG, FileSinkImages.Resolutions.SXGA);
+        pic.setLayoutPolicy(FileSinkImages.LayoutPolicy.COMPUTED_ONCE_AT_NEW_IMAGE);
+        pic.setStyleSheet(
+                "graph { padding: 50px; fill-color: white; }" +
+                        "node { fill-color: #3d5689; }" +
+                        "edge { fill-color: black; }");
+        try {
+            pic.writeAll(graph, "outputs/graph-"+(counter++)+".png");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public SimpleDynamicGraph(ListMultimap<Form, Form> map, boolean b) {

@@ -32,20 +32,19 @@ DET{Ind}, N{Association.g=F num=SG}*	ynasɔsjasjQ	2	0
 DET{His}, N{Authority.g=M num=SG}*	sQnɔtɔʁite	1	1
 DET{Ind}, N{Automatism.g=M num=PL}*	dezɔtɔmatism	1	1
 DET{The}, N{Automatism.g=M num=PL}*	lezɔtɔmatism	1	1
-DET{The}, N{Aveyron.g=M num=PL}*	leaveʁɔnɛ	3	0
 DET{Thy}, N{Aveyron.g=M num=SG}*	tɔnaveʁQ	1	1
 DET{Ind}, N{Baby.g=M num=SG}*	3bebe	2	0
 ADJ{Other}, N{Bank.g=F num=SG}*	otʁb&k	2	0
 DET{Ind}, N{Bear.g=M num=PL}*	dezuʁs	1	1
 ADJ{Poor}, N{Beast.g=F num=SG}*	povʁbɛt	3	0
-DET{The}, N{Beginning.g=M num=SG}*	ledeby	2	0
+DET{The}, N{Beginning.g=M num=PL}*	ledeby	2	0
 DET{Ind}, N{Bike.g=F num=PL}*	debisiklɛt	2	0
 DET{Ind}, N{Bin.g=M num=SG}*	3bak	2	0
 DET{Ind}, N{Bird.g=M num=PL}*	dezwazo	1	1
 DET{The}, N{Bird.g=M num=PL}*	lezwazo	2	1
 DET{His}, N{Bird.g=M num=PL}*	sezwazo	1	1
 ADJ{Only}, N{Blow.g=M num=SG}*	sœlku	2	0
-DET{Ind}, N{Book.g=M num=SG}*	delivʁ	2	0
+DET{Ind}, N{Book.g=M num=PL}*	delivʁ	2	0
 DET{The}, N{Border.g=M num=PL}*	lebɔʁ	20	0
 DET{Ind}, N{Bottom.g=M num=SG}*	3fQ	2	0
 DET{Ind}, N{Bouloire.g=F num=SG}*	ynbulwaʁ	2	0
@@ -115,7 +114,7 @@ DET{This}, N{Dog.g=M num=SG}*	səʃj3	2	0
 DET{The}, N{Door.g=F num=PL}*	lepɔʁt	2	0
 DET{Ind}, N{Door.g=F num=SG}*	ynpɔʁt	2	0
 DET{Ind}, N{Drawing.g=M num=SG}*	3des3	3	0
-ADJ{Middle}, N{East.g=M num=SG}*	mwajɛnV0ɔʁj&	1	1
+ADJ{Middle}, N{East.g=M num=SG}*	mwajɛnɔʁj&	1	1
 DET{The}, N{Effort.g=F num=SG}*	lapɛn	3	0
 DET{Ind}, N{Egg.g=M num=SG}*	3nɔœf	2	1
 DET{The}, N{Election.g=F num=PL}*	lezelɛksjQ	17	1
@@ -128,16 +127,15 @@ ADJ{Small}, N{Escapade.g=F num=PL}*	pətitzɛskapad	1	1
 DET{This}, N{Evening.g=M num=SG}*	səswaʁ	2	0
 DET{The}, N{Evening.g=M num=SG}*	ləswaʁ	5	0
 DET{Of-The}, N{Evil.g=M num=SG}*	dymal	3	0
-ADJ{Good}, N{Example.g=M num=SG}*	bɔnVOɛɡz&pl	1	1
+ADJ{Good}, N{Example.g=M num=SG}*	bɔnɛɡz&pl	1	1
 DET{Ind}, N{Experience.g=F num=SG}*	ynɛkspeʁj&s	2	0
-DET{Ind}, N{Explosion.g=F num=SG}*	ynɛksplozjQ	10	0
 DET{The}, N{Fact.g=M num=SG}*	ləfɛ	4	0
 DET{The}, N{Faculty.g=F num=SG}*	lafak	2	0
 DET{The}, N{Family.g=F num=SG}*	lafamij	11	0
 DET{Ind}, N{Family.g=F num=SG}*	ynfamij	3	0
 DET{Your}, N{Family.g=F num=SG}*	vɔtʁfamij	3	0
 DET{Some}, N{Fanatic.g=M num=SG}*	kɛlkfanatik	22	0
-DET{The}, N{Fast.g=M num=PL}*	leʒœn	5	0
+DET{The}, N{Fast.g=M num=PL}*	leʒøn	5	0
 DET{Ind}, N{Fast.g=M num=SG}*	3ʒøn	23	0
 DET{The}, N{Father.g=M num=SG}*	ləpɛʁ	5	0
 DET{My}, N{Father.g=M num=SG}*	mQpɛʁ	20	0
@@ -170,7 +168,7 @@ DET{Ind}, N{Girl.g=F num=SG}*	ynfij	2	0
 DET{Ind}, N{Girlfriend.g=F num=SG}*	ynkɔpin	3	0
 DET{The}, N{Goal.g=M num=SG}*	ləby	2	0
 DET{The}, N{Government.g=M num=SG}*	ləɡuvɛʁnəm&	10	0
-DET{My}, N{Grandparent.g=M num=SG}*	meɡʁ&dspaʁ&	3	0
+DET{My}, N{Grandparent.g=M num=PL}*	meɡʁ&dspaʁ&	3	0
 DET{Ind}, N{Group.g=M num=SG}*	3ɡʁup	2	0
 DET{Ind}, N{Guy.g=M num=SG}*	3mɛk	2	0
 DET{The}, N{Hasard.g=M num=SG}*	ləazaʁ	24	0
@@ -180,17 +178,17 @@ ADJ{Big}, N{Honor.g=M num=SG}*	ɡʁ&dɔnœʁ	1	1
 NUM{Ten}, N{Hour.g=F num=PL}*	dizœʁ	1	1
 NUM{Three}, N{Hour.g=F num=PL}*	tʁwazœʁ	1	1
 DET{Ind}, N{Hour.g=F num=SG}*	ynœʁ	3	0
-DET{Ind}, N{House.g=M num=PL}*	demɛzQ	2	0
-DET{The}, N{House.g=M num=SG}*	lamɛzQ	6	0
-DET{My}, N{House.g=M num=SG}*	mamɛzQ	2	0
-DET{Ind}, N{House.g=M num=SG}*	ynmɛzQ	6	0
+DET{Ind}, N{House.g=F num=PL}*	demɛzQ	2	0
+DET{The}, N{House.g=F num=SG}*	lamɛzQ	6	0
+DET{My}, N{House.g=F num=SG}*	mamɛzQ	2	0
+DET{Ind}, N{House.g=F num=SG}*	ynmɛzQ	6	0
 DET{My}, N{Husband.g=M num=SG}*	mQmaʁi	3	0
 DET{His}, N{Idea.g=F num=PL}*	sezide	1	1
 DET{Ind}, N{Impasse.g=F num=SG}*	yn3pas	18	0
 NUM{Hundred}, N{Inhabitant.g=M num=PL}*	s&zabit&	1	1
 DET{Ind}, N{Invitation.g=F num=PL}*	dez3vitasjQ	1	1
 DET{Ind}, N{Job.g=M num=SG}*	3bulo	2	0
-ADJ{Small}, N{Job.g=M num=SG}*	pətibu	3	0
+ADJ{Small}, N{Job.g=M num=SG}*	pətibulo	3	0
 DET{The}, N{Kid.g=M num=PL}*	leɡɔs	2	0
 DET{Our}, N{Kinou.g=M num=SG}*	nɔtʁkinu	2	0
 DET{The}, N{Language.g=F num=PL}*	lel&ɡ	5	0
@@ -249,7 +247,7 @@ ADJ{Double}, N{Nationality.g=F num=SG}*	dublnasjɔnalite	2	0
 NUM{Two}, N{Needle.g=F num=PL}*	døzeɡɥij	1	1
 DET{The}, N{Night.g=F num=SG}*	lanɥi	6	0
 DET{The}, N{Note.g=M num=PL}*	lenɔt	3	0
-ADJ{First}, N{Objective.g=M num=SG}*	pʁəmjerɔbʒɛktif	1	1
+ADJ{First}, N{Objective.g=M num=SG}*	pʁəmjeʁɔbʒɛktif	1	1
 ADJ{New}, N{Observer.g=M num=SG}*	nuvɛlɔpsɛʁvatœʁ	9	0
 DET{The}, N{Occupant.g=M num=PL}*	lezɔkyp&	1	1
 ADJ{Small}, N{Occupation.g=F num=PL}*	pətitzɔkypasjQ	1	1
@@ -264,7 +262,7 @@ DET{Thy}, N{Parent.g=M num=PL}*	tepaʁ&	3	0
 DET{Your}, N{Parent.g=M num=PL}*	vopaʁ&	6	0
 DET{The}, N{Paris.g=F num=SG}*	lapaʁi	2	0
 DET{The}, N{Parisian.g=M num=PL}*	lepaʁizj3	4	0
-ADJ{Which}, N{Part.g=F num=SG}*	kɛlkpaʁ	2	0
+DET{Some}, N{Part.g=F num=SG}*	kɛlkpaʁ	2	0
 DET{The}, N{Party.g=F num=SG}*	lafɛt	4	0
 DET{Ind}, N{Pause.g=F num=SG}*	ynpoz	4	0
 DET{Ind}, N{People.g=M num=PL}*	deʒ&	27	0
@@ -288,13 +286,13 @@ DET{The}, N{Prépa.g=F num=PL}*	lepʁepa	2	0
 DET{Ind}, N{Prépa.g=F num=SG}*	ynpʁepa	2	0
 DET{The}, N{Primaube.g=F num=SG}*	lapʁimob	4	0
 DET{The}, N{Prize.g=M num=PL}*	lepʁi	4	0
-DET{Ind}, N{Problem.g=F num=PL}*	depʁɔblɛm	3	0
-ADJ{Fat}, N{Problem.g=F num=SG}*	ɡʁopʁɔblɛm	3	0
-DET{The}, N{Problem.g=F num=SG}*	ləpʁɔblɛm	10	0
-DET{Ind}, N{Problem.g=F num=SG}*	3pʁɔblɛm	2	0
+DET{Ind}, N{Problem.g=M num=PL}*	depʁɔblɛm	3	0
+ADJ{Fat}, N{Problem.g=M num=SG}*	ɡʁopʁɔblɛm	3	0
+DET{The}, N{Problem.g=M num=SG}*	ləpʁɔblɛm	10	0
+DET{Ind}, N{Problem.g=M num=SG}*	3pʁɔblɛm	2	0
 DET{My}, N{Profession.g=M num=SG}*	mQmetje	3	0
 DET{His}, N{Profession2.g=F num=SG}*	sapʁɔfesjQ	2	0
-DET{Ind}, N{Professional.g=M num=SG}*	depʁɔfesjɔnɛl	2	0
+DET{Ind}, N{Professional.g=M num=PL}*	depʁɔfesjɔnɛl	2	0
 DET{The}, N{Professor.g=M num=SG}*	ləpʁɔfesœʁ	2	0
 DET{The}, N{Pupil.g=M num=PL}*	lezelɛv	1	1
 DET{The}, N{Quarter.g=M num=SG}*	ləkaʁtje	2	0
@@ -354,7 +352,7 @@ DET{The}, N{Study.g=F num=PL}*	lezetyd	2	1
 DET{Their}, N{Study.g=F num=PL}*	lœʁzetyd	1	1
 DET{My}, N{Study.g=F num=PL}*	mezetyd	5	1
 DET{Ind}, N{Subsidiary.g=F num=SG}*	ynfiljal	2	0
-DET{This}, N{Summer.g=M num=SG}*	sɛttete	1	1
+DET{This}, N{Summer.g=M num=SG}*	sɛtete	1	1
 DET{The}, N{Support.g=M num=SG}*	ləsutj3	11	0
 DET{Ind}, N{Swiss.g=M num=PL}*	desɥis	2	0
 ADJ{New}, N{System.g=M num=SG}*	nuvosistɛm	2	0
@@ -370,7 +368,7 @@ ADJ{Other}, N{Thing.g=M num=SG}*	otʁʃoz	3	0
 ADJ{Big}, N{Thing.g=M num=SG}*	ɡʁ&ʃoz	4	0
 ADJ{Same}, N{Thing.g=M num=SG}*	mɛmʃoz	2	0
 DET{Some}, N{Thing.g=M num=SG}*	kɛlkʃoz	13	0
-DET{Ind}, N{Thousant.g=M num=PL}*	demilje	2	0
+DET{Ind}, N{Thousand.g=M num=PL}*	demilje	2	0
 DET{The}, N{Thursday.g=M num=SG}*	ləʒødi	2	0
 DET{Ind}, N{Ticket.g=M num=PL}*	detikɛ	2	0
 DET{The}, N{Ticket.g=M num=PL}*	letikɛ	2	0
@@ -380,9 +378,9 @@ DET{Some}, N{Time2.g=F num=PL}*	kɛlkfwa	4	0
 NUM{Three}, N{Time2.g=F num=PL}*	tʁwafwa	2	0
 ADJ{First}, N{Time2.g=F num=SG}*	pʁəmjɛʁfwa	3	0
 ADJ{Every}, N{Time2.g=F num=SG}*	ʃakfwa	25	0
-DET{Ind}, N{Time2.g=F num=SG}*	defwa	9	0
+DET{Ind}, N{Time2.g=F num=PL}*	defwa	9	0
 NUM{Two}, N{Time2.g=F num=SG}*	døfwa	2	0
-DET{Other}, N{Time2.g=F num=SG}*	lotʁfwa	2	0
+ADJ{Other}, N{Time2.g=F num=SG}*	otʁfwa	2	0
 DET{Ind}, N{Time2.g=F num=SG}*	ynfwa	11	0
 ADJ{Same}, N{Time.g=M num=SG}*	mɛmt&	3	0
 ADJ{Same}, N{Time.g=M num=SG}*	mɛmt&	6	0
@@ -400,21 +398,21 @@ DET{Ind}, N{Tree.g=M num=SG}*	3naʁbʁ	3	1
 DET{Ind}, N{Truc.g=M num=PL}*	detʁyk	4	0
 DET{The}, N{Truc.g=M num=SG}*	lətʁyk	2	0
 DET{Ind}, N{Truc.g=M num=SG}*	3tʁyk	4	0
-DET{The}, N{Truck.g=M num=SG}*	lekamjQ	2	0
+DET{The}, N{Truck.g=M num=PL}*	lekamjQ	2	0
 DET{The}, N{Tuesday.g=M num=SG}*	lədim&ʃ	2	0
 DET{The}, N{Turn.g=M num=SG}*	lətuʁ	2	0
 DET{The}, N{TV.g=F num=SG}*	latele	3	0
 DET{Ind}, N{Type.g=F num=PL}*	deɛspɛs	2	0
 ADJ{Certain}, N{Uncle.g=M num=PL}*	sɛʁt3zQkl	1	1
 DET{The}, N{Unemployment.g=M num=SG}*	ləʃomaʒ	3	0
-DET{Ind}, N{Vegetable.g=M num=SG}*	deleɡym	2	0
+DET{Ind}, N{Vegetable.g=M num=PL}*	deleɡym	2	0
 DET{The}, N{Verb.g=M num=SG}*	ləvɛʁb	2	0
 DET{Ind}, N{Verification.g=F num=PL}*	deveʁifikasjQ	10	0
 DET{The}, N{Version.g=F num=SG}*	lavɛʁsjQ	2	0
 DET{The}, N{Village.g=M num=SG}*	ləvilaʒ	28	0
 DET{His}, N{Village.g=M num=SG}*	sQvilaʒ	7	0
 DET{Ind}, N{Visit.g=F num=PL}*	devizit	2	0
-DET{The}, N{Voice.g=F num=SG}*	lavwa)	2	0
+DET{The}, N{Voice.g=F num=SG}*	lavwa	2	0
 DET{His}, N{Voice.g=F num=SG}*	savwa	2	0
 DET{The}, N{Volume.g=M num=SG}*	ləvɔlym	2	0
 DET{The}, N{Walk.g=F num=PL}*	ledemaʁʃ	2	0
@@ -422,7 +420,7 @@ DET{The}, N{Walk.g=F num=SG}*	lademaʁʃ	2	0
 DET{The}, N{War.g=F num=SG}*	laɡɛʁ	16	0
 DET{The}, N{Weekend.g=M num=SG}*	ləwik&	2	0
 DET{His}, N{Wine.g=M num=SG}*	sQv3	20	0
-DET{The}, N{Winter.g=M num=SG}*	lezivɛʁ	1	1
+DET{The}, N{Winter.g=M num=PL}*	lezivɛʁ	1	1
 DET{The}, N{Woman.g=F num=PL}*	lefam	2	0
 DET{Ind}, N{Woman.g=F num=SG}*	ynfam	2	0
 DET{Ind}, N{Work.g=M num=SG}*	3tʁavaj	4	0
@@ -436,7 +434,7 @@ NUM{Ten}, N{Year.g=M num=PL}*	diz&	1	1
 NUM{Eight}, N{Year.g=M num=PL}*	ɥit&	7	0
 DET{The}, N{Year.g=M num=PL}*	lez&	3	1
 NUM{Forty}, N{Year.g=M num=PL}*	kaʁ&t&	2	0
-NUM{Forty}, N{Year.g=M num=PL}*	katɔʁz&	2	0
+NUM{Fourteen}, N{Year.g=M num=PL}*	katɔʁz&	2	0
 NUM{Four}, N{Year.g=M num=PL}*	katʁ&	5	0
 NUM{Fifteen}, N{Year.g=M num=PL}*	k3z&	3	0
 NUM{Sixteen}, N{Year.g=M num=PL}*	sɛz&	2	0
@@ -466,7 +464,7 @@ N{Shirt2.g=F num=SG}*	likɛt	0	0
 N{Aveyron.g=M num=PL}*	aveʁɔnɛ	0	0
 NUM{Hundred}*	sɑ̃	0	0
 N{Order.g=M num=SG}*	ɔʁdʁ	0	0
-N{Time.g=F num=PL}*	fwa	0	0
+N{Time2.g=F num=PL}*	fwa	0	0
 ADJ{Big}*	ɡʁɑ̃	0	0
 N{Lord.g=M num=SG}*	sɛɲœʁ	0	0
 DET{Some}*	kɛlk	0	0
@@ -524,7 +522,7 @@ N{Man.g=M num=SG}*	ɔm	0	0
 N{MotherInLaw.g=F num=SG}*	bɛlmɛʁ	0	0
 N{Invitation.g=F num=PL}*	ɛ̃vitasjɔ̃	0	0
 N{Movement.g=M num=PL}*	muvmɑ̃	0	0
-N{Problem.g=F num=PL}*	pʁɔblɛm	0	0
+N{Problem.g=M num=PL}*	pʁɔblɛm	0	0
 N{Room.g=F num=PL}*	ʃɑ̃bʁ	0	0
 N{Child.g=M num=PL}*	ɑ̃fɑ̃	0	0
 N{Time.g=M num=SG}*	tɑ̃	0	0
@@ -700,7 +698,7 @@ N{Hasard.g=M num=SG}*	azaʁ	0	0
 N{Gamin.g=M num=PL}*	ɡamɛ̃	0	0
 N{Government.g=M num=SG}*	ɡuvɛʁnəmɑ̃	0	0
 ADJ{Hot}*	ʃod	0	0
-N{House.g=M num=PL}*	mɛzɔ̃	0	0
+N{House.g=F num=PL}*	mɛzɔ̃	0	0
 N{Stage.g=F num=SG}*	etap	0	0
 N{Note.g=M num=PL}*	nɔt	0	0
 N{Commune.g=F num=SG}*	kɔmyn	0	0
@@ -746,7 +744,7 @@ N{Dication.g=F num=PL}*	dikte	0	0
 NUM{Twenty-five}*	vɛ̃t-sɛ̃k	0	0
 N{Catherinette.g=F num=PL}*	katʁinɛt	0	0
 N{Friend.g=M num=PL}*	ami	0	0
-N{Problem.g=F num=SG}*	pʁɔblɛm	0	0
+N{Problem.g=M num=SG}*	pʁɔblɛm	0	0
 N{Carpet.g=F num=PL}*	kaʁpɛt	0	0
 N{Service.g=M num=SG}*	sɛʁvis	0	0
 N{Bouloire.g=F num=SG}*	bulwaʁ	0	0
@@ -859,12 +857,12 @@ N{Retreat.g=F num=SG}*	ʁətʁɛt	0	0
 N{Adjunct.g=M num=SG}*	adʒwɛ̃	0	0
 NUM{Twenty-one}*	vɛ̃t-e-ɛ̃	0	0
 N{Man.g=M num=PL}*	ɔm	0	0
-N{House.g=M num=SG}*	mɛzɔ̃	0	0
+N{House.g=F num=SG}*	mɛzɔ̃	0	0
 N{Girl.g=F num=SG}*	fij	0	0
 N{Truc.g=M num=PL}*	tʁyk	0	0
 ADJ{Beautiful}*	bo	0	0
 N{Thursday.g=M num=SG}*	ʒødi	0	0
-N{Fast.g=M num=PL}*	ʒœn	0	0
+N{Fast.g=M num=PL}*	ʒøn	0	0
 N{Road.g=M num=SG}*	ʃəmɛ̃	0	0
 N{American.g=M num=PL}*	ameʁikɛ̃	0	0
 N{Evening.g=M num=SG}*	swaʁ	0	0

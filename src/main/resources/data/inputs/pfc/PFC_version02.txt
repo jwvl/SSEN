@@ -88,13 +88,13 @@ les	aveyronnais	DET	NC	FALSE	FALSE		leaveʁɔnɛ	3	DET{The}	N{Aveyron.g=M num=PL
 ton	aveyron	DET	NPP	TRUE	FALSE	n	tɔnaveʁɔ̃	1	DET{Thy}	N{Aveyron.g=M num=SG}*
 un	bébé	DET	NC	FALSE	FALSE		ɛ̃bebe	2	DET{Ind}	N{Baby.g=M num=SG}*
 des	ours	DET	NC	TRUE	FALSE	z	dezuʁs	1	DET{Ind}	N{Bear.g=M num=PL}*
-les	débuts	DET	NC	FALSE	FALSE		ledeby	2	DET{The}	N{Beginning.g=M num=SG}*
+les	débuts	DET	NC	FALSE	FALSE		ledeby	2	DET{The}	N{Beginning.g=M num=PL}*
 des	bicyclettes	DET	NC	FALSE	FALSE		debisiklɛt	2	DET{Ind}	N{Bike.g=F num=PL}*
 un	bac	DET	NC	FALSE	FALSE		ɛ̃bak	2	DET{Ind}	N{Bin.g=M num=SG}*
 des	oiseaux	DET	NC	TRUE	FALSE	z	dezwazo	1	DET{Ind}	N{Bird.g=M num=PL}*
 les	oiseaux	DET	NC	TRUE	FALSE	z	lezwazo	2	DET{The}	N{Bird.g=M num=PL}*
 ses	oiseaux	DET	NC	TRUE	FALSE	z	sezwazo	1	DET{His}	N{Bird.g=M num=PL}*
-des	livres	DET	NC	FALSE	FALSE		delivʁ	2	DET{Ind}	N{Book.g=M num=SG}*
+des	livres	DET	NC	FALSE	FALSE		delivʁ	2	DET{Ind}	N{Book.g=M num=PL}*
 les	bords	DET	NC	FALSE	FALSE		lebɔʁ	20	DET{The}	N{Border.g=M num=PL}*
 un	fond	DET	NC	FALSE	FALSE		ɛ̃fɔ̃	2	DET{Ind}	N{Bottom.g=M num=SG}*
 une	bouloire	DET	NC	FALSE	FALSE		ynbulwaʁ	2	DET{Ind}	N{Bouloire.g=F num=SG}*
@@ -174,7 +174,7 @@ la	famille	DET	NC	FALSE	FALSE		lafamij	11	DET{The}	N{Family.g=F num=SG}*
 une	famille	DET	NC	FALSE	FALSE		ynfamij	3	DET{Ind}	N{Family.g=F num=SG}*
 votre	famille	DET	NC	FALSE	FALSE		vɔtʁfamij	3	DET{Your}	N{Family.g=F num=SG}*
 quelques	fanatiques	DET	NC	FALSE	FALSE		kɛlkfanatik	22	DET{Some}	N{Fanatic.g=M num=SG}*
-les	jeunes	DET	NC	FALSE	FALSE		leʒœn	5	DET{The}	N{Fast.g=M num=PL}*
+les	jeunes	DET	NC	FALSE	FALSE		leʒøn	5	DET{The}	N{Fast.g=M num=PL}*
 un	jeûne	DET	NC	FALSE	FALSE		ɛ̃ʒøn	23	DET{Ind}	N{Fast.g=M num=SG}*
 le	père	DET	NC	FALSE	FALSE		ləpɛʁ	5	DET{The}	N{Father.g=M num=SG}*
 mon	père	DET	NC	FALSE	FALSE		mɔ̃pɛʁ	20	DET{My}	N{Father.g=M num=SG}*
@@ -394,7 +394,7 @@ le	tour	DET	NC	FALSE	FALSE		lətuʁ	2	DET{The}	N{Turn.g=M num=SG}*
 la	télé	DET	NC	FALSE	FALSE		latele	3	DET{The}	N{TV.g=F num=SG}*
 des	espèces	DET	N	FALSE	FALSE		deɛspɛs	2	DET{Ind}	N{Type.g=F num=PL}*
 le	chômage	DET	NC	FALSE	FALSE		ləʃomaʒ	3	DET{The}	N{Unemployment.g=M num=SG}*
-des	légumes	DET	NC	FALSE	FALSE		deleɡym	2	DET{Ind}	N{Vegetable.g=M num=SG}*
+des	légumes	DET	NC	FALSE	FALSE		deleɡym	2	DET{Ind}	N{Vegetable.g=M num=PL}*
 le	verbe	DET	NC	FALSE	FALSE		ləvɛʁb	2	DET{The}	N{Verb.g=M num=SG}*
 des	vérifications	DET	NC	FALSE	FALSE		deveʁifikasjɔ̃	10	DET{Ind}	N{Verification.g=F num=PL}*
 la	version	DET	NC	FALSE	FALSE		lavɛʁsjɔ̃	2	DET{The}	N{Version.g=F num=SG}*

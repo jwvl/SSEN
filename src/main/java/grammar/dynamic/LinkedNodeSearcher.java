@@ -7,7 +7,7 @@ import forms.Form;
 import gen.mapping.FormMapping;
 import gen.mapping.PairMapping;
 import grammar.dynamic.node.LinkedNodeComparator;
-import grammar.dynamic.persistent.LinkedNode;
+import grammar.dynamic.node.LinkedNode;
 import grammar.levels.Level;
 import util.collections.FrequencyMap;
 

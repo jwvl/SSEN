@@ -57,13 +57,15 @@ public class RandomLearningTrajectory extends AbstractLearningTrajectory {
                     numCorrect++;
                     if (numCorrect > recordCorrect) {
                         recordCorrect = numCorrect;
+
+                        System.out.println("At try " + counter +", record correct is \t" + recordCorrect);
                     }
                 }
 
             }
             counter++;
             if (counter % ERROR_EVERY == 0) {
-                System.out.println(counter+"\t"+recordCorrect);
+                //System.out.println(counter+"\t"+recordCorrect);
             }
         }
         this.winningHierarchyFound = !errorEncountered;

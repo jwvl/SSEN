@@ -12,39 +12,37 @@ import grammar.levels.Level;
  * @date Jul 8, 2015
  */
 public abstract class FormMapping {
-    private final Form left;
-    private final Form right;
+    private final FormPair pair;
     private final static String arrow = " > ";
     private final int hashCode;
 
     public FormMapping(Form f, Form g) {
-        this.left = f;
-        this.right = g;
+        pair = FormPair.of(f,g);
         this.hashCode = computeHashCode();
     }
 
     public FormPair getFormPair() {
-        return FormPair.of(left, right);
+        return pair;
     }
 
     /**
      * @return
      */
     public Form left() {
-        return left;
+        return pair.left();
     }
 
     public Form right() {
-        return right;
+        return pair.right();
     }
 
     @Override
     public String toString() {
-        return left + arrow + right;
+        return left() + arrow + right();
     }
 
     public Level getLevel() {
-        return right.getLevel();
+        return right().getLevel();
     }
 
     @Override
@@ -54,8 +52,7 @@ public abstract class FormMapping {
 
         FormMapping that = (FormMapping) o;
 
-        if (left != null ? !left.equals(that.left) : that.left != null) return false;
-        return right != null ? right.equals(that.right) : that.right == null;
+        return (that.left().equals(left()) && that.right().equals(right()));
 
     }
 
@@ -66,8 +63,8 @@ public abstract class FormMapping {
 
 
     public int computeHashCode() {
-        int result = left != null ? left.hashCode() : 0;
-        result = 31 * result + (right != null ? right.hashCode() : 0);
+        int result = left() != null ? left().hashCode() : 0;
+        result = 31 * result + (right() != null ? right().hashCode() : 0);
         return result;
     }
 }

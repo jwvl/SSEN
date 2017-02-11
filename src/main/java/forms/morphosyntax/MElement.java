@@ -21,7 +21,7 @@ import java.util.Set;
  * @author jwvl
  * @date Dec 24, 2014
  */
-public class MElement implements Subform {
+public class MElement implements Subform, Comparable<MElement> {
     private static int SERIAL_COUNTER = 0;
     private static Table<AbstractMFeature, MFeatureType, MElement> cache = HashBasedTable.create();
     private final int serialNumber;
@@ -207,5 +207,14 @@ public class MElement implements Subform {
         }
         return result;
     }
+
+    @Override
+    public int compareTo(MElement o) {
+        int result = type.ordinal() - o.type.ordinal();
+        if (result == 0)
+            result = feature.toString().compareTo(o.feature.toString());
+        return result;
+    }
+
 
 }

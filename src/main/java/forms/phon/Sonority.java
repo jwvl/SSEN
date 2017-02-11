@@ -50,6 +50,11 @@ public enum Sonority {
     }
 
     public static Sonority of(byte c) {
+        Sonority value = map[c+127];
+        if (value.equals(X)) {
+            System.err.println("Sonority not found for phone " +Phone.decode(c));
+            System.err.println("!");
+        }
         return map[c + 127];
     }
 

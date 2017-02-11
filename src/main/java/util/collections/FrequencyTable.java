@@ -46,6 +46,10 @@ public class FrequencyTable<O extends Object, P extends Object> {
         return opCount / (double) columnCounts.getCount(o);
     }
 
+    public int getColumnCount(O o) {
+        return columnCounts.getCount(o);
+    }
+
     public Set<O> getColumnSet() {
         return columnCounts.contents.elementSet();
     }

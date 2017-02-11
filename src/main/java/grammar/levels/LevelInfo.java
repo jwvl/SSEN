@@ -30,7 +30,7 @@ public class LevelInfo {
     }
 
     public static LevelInfo createMFormForm() {
-        return new LevelInfo("MForm Form", "MfF", "⟨", "⟩");
+        return new LevelInfo("MForm Form", "MF", "⟨", "⟩");
     }
 
     public static LevelInfo createNameless() {

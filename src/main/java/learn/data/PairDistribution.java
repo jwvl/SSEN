@@ -8,10 +8,13 @@ import com.google.common.collect.Sets;
 import forms.Form;
 import forms.FormPair;
 import graph.Direction;
+import util.collections.Couple;
 import util.collections.Distribution;
+import util.collections.FrequencyTable;
 
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Random;
 import java.util.Set;
 
 /**
@@ -101,16 +104,74 @@ public class PairDistribution extends
     }
 
     public PairDistribution filter(Predicate<FormPair> predicate) {
-        PairDistribution result = new PairDistribution(this.getName()+"-filtered");
-        for (FormPair formPair: getKeys()) {
+        PairDistribution result = new PairDistribution(this.getName() + "-filtered");
+        for (FormPair formPair : getKeys()) {
             if (predicate.apply(formPair)) {
                 int frequency = getFrequency(formPair);
                 result.add(formPair, frequency);
-            }
-            else {
-                System.out.println("Removing formpair " +formPair);
+            } else {
+                System.out.println("Removing formpair " + formPair);
             }
         }
         return result;
+    }
+
+    public PairDistribution squareRoot() {
+        PairDistribution result = new PairDistribution(this.getName() + "-filtered");
+        for (FormPair formPair : getKeys()) {
+            int frequency = getFrequency(formPair);
+            int newFrequency = (int) (1 + Math.sqrt(frequency));
+            result.add(formPair, newFrequency);
+        }
+        return result;
+    }
+
+    public Couple<PairDistribution> splitToTestAndTraining(double testFraction) {
+        if (testFraction <= 0.0) {
+            return Couple.of(null, this);
+        }
+        Random random = new Random();
+        PairDistribution test = new PairDistribution(this.getName() + "-test");
+        PairDistribution train = new PairDistribution(this.getName() + "-train");
+        for (FormPair formPair: getKeys()) {
+            int frequency = getFrequency(formPair);
+            for (int i=0; i < frequency; i++) {
+                if (random.nextDouble() < testFraction) {
+                    test.addOne(formPair);
+                } else {
+                    train.addOne(formPair);
+                }
+            }
+        }
+        return Couple.of(test,train);
+    }
+
+    public FrequencyTable<Form, Form> toFrequencyTable() {
+        FrequencyTable<Form,Form> result = new FrequencyTable<>();
+        for (FormPair formPair: getKeys()) {
+            int frequency = getFrequency(formPair);
+            result.add(formPair.left(), formPair.right(), frequency);
+        }
+        return result;
+    }
+
+    public double calculateExpectedError() {
+        FrequencyTable<Form,Form> frequencyTable = toFrequencyTable();
+        int totalCount = 0;
+        int expectedCount = 0;
+        for (Form leftForm: frequencyTable.getColumnSet()) {
+            int leftTotal = frequencyTable.getColumnCount(leftForm);
+            totalCount += leftTotal;
+            int currMax = 0;
+            for (Form rightForm: frequencyTable.getRowsForColumn(leftForm)) {
+                int currCount = frequencyTable.getCount(leftForm,rightForm);
+                if (currCount > currMax) {
+                    currMax = currCount;
+                }
+
+            }
+            expectedCount+= currMax;
+        }
+        return 1-(expectedCount / ((double) totalCount));
     }
 }

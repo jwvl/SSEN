@@ -5,6 +5,7 @@ package simulate.french.sixlevel;
 
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
+import com.google.common.io.Resources;
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 import constraints.hierarchy.reimpl.Hierarchy;
@@ -42,8 +43,14 @@ import simulate.french.sixlevel.subgens.*;
 import util.collections.StringMultimap;
 import util.debug.Timer;
 import util.string.ngraph.ByteNGraphMap;
+import util.time.DateString;
 
+import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Collection;
 import java.util.Map;
 import java.util.Set;
@@ -64,8 +71,18 @@ public class SixLevelFrenchDynamic {
     private static int numRuns = config.getInt("learning.numRuns");
     private static boolean saveLexiconToFile = config.getBoolean("lexicon.saveToFile");
     private static boolean getLexiconFromFile = config.getBoolean("lexicon.constructFromFile");
+    private static String dateString = DateString.getShortDateString();
 
     public static void main(String[] args) throws IOException {
+
+        String outputPath = "outputs/"+dateString;
+        boolean couldCreateDir = new File(outputPath).mkdir();
+        if (!couldCreateDir) {
+            System.err.println("Couldn't create directory " +outputPath);
+            System.exit(0);
+        }
+        copyApplicationConf(outputPath);
+
 
         // 0 Read data.phones and properties
         Config config = ConfigFactory.load();
@@ -178,7 +195,7 @@ public class SixLevelFrenchDynamic {
         if (saveLexiconToFile) {
             String filename = dataFileName.replace(".txt",".lex");
             StringMultimap stringMultimap = repository.toStringMultimap();
-            stringMultimap.writeToFile("outputs/"+filename);
+            stringMultimap.writeToFile(outputPath+"/"+filename);
         }
         MFormToUF mf_uf_gen = new MFormToUF(repository);
         if (maxUnfoundNgraph > 0) {
@@ -198,14 +215,14 @@ public class SixLevelFrenchDynamic {
         grammar.addSubGen(sf_pf_gen);
 
         setCaching(grammar, mappingCacheSize);
+        pairDistribution = pairDistribution.filter(new SinglesFilter());
+        //pairDistribution = pairDistribution.squareRoot();
 
         if (ConfigFactory.load().getBoolean("grammar.useCandidateSpaces")) {
             System.out.println("Creating candidate spaces!");
             CandidateSpaces candidateSpaces = CandidateSpaces.fromDistribution(pairDistribution, grammar);
             grammar.addCandidateSpaces(candidateSpaces);
         }
-
-        pairDistribution = pairDistribution.filter(new SinglesFilter());
 
         Timer timer = new Timer();
         System.out.println("Testing grammar on learning data...");
@@ -231,7 +248,7 @@ public class SixLevelFrenchDynamic {
             // TODO Handle this better?
 
             TrajectoriesTester trajectoriesTester = new TrajectoriesTester(learningPropertyCombinations, grammar, pairDistribution);
-            trajectoriesTester.testAndWrite(dataFileName, numEvaluations, numRuns, numThreads);
+            trajectoriesTester.testAndWrite(dataFileName, numEvaluations, numRuns, numThreads, outputPath);
             Map<UUID,Hierarchy> successfulHierarchies = trajectoriesTester.getSuccessfulHierarchies();
 
         }
@@ -269,6 +286,16 @@ public class SixLevelFrenchDynamic {
         dr.readDistribution();
         dr.testReading();
         return dr.getPairDistribution();
+    }
+
+    private static void copyApplicationConf(String outputPath) {
+        try {
+            Path applicationConf = Paths.get(Resources.getResource("application.conf").toURI());
+            Path targetPath = Paths.get(outputPath+"/application.conf");
+            Files.copy(applicationConf,targetPath);
+        } catch (URISyntaxException | IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

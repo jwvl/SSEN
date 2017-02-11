@@ -2,10 +2,11 @@ package constraints;
 
 import candidates.Candidate;
 import com.google.common.collect.Ordering;
+import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
+import constraints.helper.ConstraintArrayList;
 import gen.mapping.FormMapping;
 import grammar.levels.Level;
-import constraints.helper.ConstraintArrayList;
 
 /**
  * A Constraint can be seen as a function mapping a Transgressor type object
@@ -18,10 +19,11 @@ import constraints.helper.ConstraintArrayList;
  */
 public abstract class Constraint {
     private final short id;
+    private static final Config config = ConfigFactory.load();
     protected static short idCounter = 0;
     private static int DEFAULT_STRATUM = 0;
     private int stratum;
-    private static Constraint[] map = new Constraint[ConfigFactory.load().getInt("implementation.expectedNumConstraints")];
+    private static Constraint[] map = new Constraint[config.getInt("implementation.expectedNumConstraints")];
     private final double initialBias;
     protected final Level rightLevel;
 
@@ -38,7 +40,11 @@ public abstract class Constraint {
     };
 
     protected Constraint(Level rightLevel, double initialBias) {
-        this.stratum = DEFAULT_STRATUM;
+        if (config.getBoolean("constraints.stratify")) {
+            this.stratum = config.getInt("constraints.strata."+rightLevel.getInfo().getAbbreviation());
+        } else {
+            this.stratum = DEFAULT_STRATUM;
+        }
         this.initialBias = initialBias;
         this.id = idCounter++;
         this.rightLevel = rightLevel;
@@ -58,6 +64,7 @@ public abstract class Constraint {
     public static int getNumberCreated() {
         return idCounter;
     }
+
 
     @Override
     public boolean equals(Object obj) {

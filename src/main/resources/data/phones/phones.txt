@@ -9,12 +9,14 @@ k,C,P,k
 b,C,P,b
 d,C,P,d
 g,C,P,g
+ɡ,C,P,g
 f,C,F,f
 s,C,F,s
 ʃ,C,F,ʃ
 v,C,F,v
 z,C,F,z
 ʒ,C,F,ʒ
+h,C,F,h
 l,C,L,l
 ʁ,C,L,ʁ
 j,C,J,j

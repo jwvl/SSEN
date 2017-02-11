@@ -101,7 +101,7 @@ public class MStructureFactory {
     private List<Set<MElement>> getPossibleRealisations(SyntacticWord l) {
         ArrayList<Set<MElement>> result = Lists.newArrayList();
         for (MElement mf : l.getAllNonConceptFeatures()) {
-            if (mf.getType() == MFeatureType.FIXED) {
+            if (mf.getType() != MFeatureType.CONTEXTUAL) {
                 result.add(Collections.singleton(mf));
             } else {
                 Set<MElement> resultingSet = Sets.newHashSet();

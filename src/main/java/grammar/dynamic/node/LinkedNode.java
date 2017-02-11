@@ -1,9 +1,8 @@
-package grammar.dynamic.persistent;
+package grammar.dynamic.node;
 
 import constraints.SparseViolationProfile;
 import forms.FormChain;
 import gen.mapping.FormMapping;
-import grammar.dynamic.node.AbstractCostNode;
 
 import java.util.ArrayList;
 import java.util.Collections;

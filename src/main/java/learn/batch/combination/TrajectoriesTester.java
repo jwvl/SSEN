@@ -2,6 +2,7 @@ package learn.batch.combination;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+import com.typesafe.config.ConfigFactory;
 import constraints.Constraint;
 import constraints.hierarchy.analysis.ConstraintOrderMap;
 import constraints.hierarchy.analysis.Poset;
@@ -14,16 +15,17 @@ import grammar.Grammar;
 import grammar.tools.GrammarTester;
 import graph.Direction;
 import io.riverplot.RiverPlotOutput;
-import learn.data.PairDistribution;
 import learn.batch.LearningProperties;
 import learn.batch.LearningTrajectory;
+import learn.data.DistributionErrorTable;
+import learn.data.PairDistribution;
 import learn.stats.results.ResultsTable;
 import simulate.analysis.CandidateMappingTable;
 import simulate.analysis.statistics.CandidateSetCollector;
 import simulate.analysis.statistics.HierarchyComparer;
 import simulate.analysis.visualize.GoogleSankey;
+import util.collections.Couple;
 import util.debug.Stopwatch;
-import util.time.DateString;
 
 import java.util.HashMap;
 import java.util.List;
@@ -36,39 +38,51 @@ import java.util.UUID;
 public class TrajectoriesTester {
     private final LearningPropertyCombinations combinations;
     private final Grammar grammar;
-    private final PairDistribution pairDistribution;
+    private final PairDistribution trainDistribution;
+    private final PairDistribution testDistribution;
     private final ResultsTable resultsTable;
     private final Map<UUID, Hierarchy> successfulHierarchies;
     private final Map<UUID, Hierarchy> failedHierarchies;
     private final static boolean printSankeyDiagrams = true;
     private final static boolean calculateSimilarities = false;
-    private final static boolean printCandidateSets = true;
+    private final static boolean printCandidateSets = false;
+    private final static boolean collectPairDistributions = true;
     private final static double successThreshold = 0.05;
 
     public TrajectoriesTester(LearningPropertyCombinations combinations, Grammar grammar, PairDistribution pairDistribution) {
         this.combinations = combinations;
         this.grammar = grammar;
-        this.pairDistribution = pairDistribution;
+        double testFraction = ConfigFactory.load().getDouble("learning.testDataFraction");
+        Couple<PairDistribution> testTrain = pairDistribution.splitToTestAndTraining(testFraction);
+        this.testDistribution = testTrain.getLeft();
+        this.trainDistribution = testTrain.getRight();
         resultsTable = new ResultsTable();
         successfulHierarchies = new HashMap<UUID, Hierarchy>();
         failedHierarchies = new HashMap<UUID, Hierarchy>();
     }
 
-    public void testAndWrite(String name, int numEvaluations, int numTests, int numThreads) {
+    public void testAndWrite(String name, int numEvaluations, int numTests, int numThreads, String outputPath) {
         AbstractSampler nearZeroSampler = GaussianXORSampler.createInstance(0.00000001);
-        String dateString = DateString.getShortDateString();
-
+        DistributionErrorTable errorTable = new DistributionErrorTable();
         for (LearningProperties learningProperties : combinations) {
             for (int i = 0; i < numTests; i++) {
-                LearningTrajectory trajectory = new LearningTrajectory(grammar, pairDistribution, numEvaluations);
+                LearningTrajectory trajectory = new LearningTrajectory(grammar, trainDistribution, numEvaluations);
                 trajectory.launch(numThreads);
-                Stopwatch.reportElapsedTime("Finished testing in ", true);
+                Stopwatch.reportElapsedTime("Finished training in ", true);
                 Map<Integer, Double> errorRates = trajectory.getErrorRates();
-                double error = GrammarTester.testGrammarOnLearningData(grammar, pairDistribution, 200, 1.0);
-                System.out.println("As pair distribution:");
-                PairDistribution resultingDistribution = GrammarTester.toPairDistribution(grammar, pairDistribution, 100, 1.0);
-                resultingDistribution.printAsList();
-
+                double error = GrammarTester.testGrammarOnLearningData(grammar, trainDistribution, trainDistribution.getNumPairs()*20, 1.0);
+                System.out.println("Total training error: " +error);
+                if (testDistribution != null) {
+                    double testError = GrammarTester.testGrammarOnLearningData(grammar, testDistribution, testDistribution.getNumPairs()*20, 1.0);
+                    System.out.println("Total test error: " +testError);
+                }
+                System.out.println("Min training error: " + trainDistribution.calculateExpectedError());
+                if (collectPairDistributions) {
+                    //System.out.println("As pair distribution:");
+                    PairDistribution resultingDistribution = GrammarTester.toPairDistribution(grammar, trainDistribution, 100, 1.0);
+                    errorTable.addLearner(trajectory.getUuid(),trainDistribution,resultingDistribution);
+                    //resultingDistribution.printAsList();
+                }
                 for (Integer iData : errorRates.keySet()) {
                     double iError = errorRates.get(iData);
                     resultsTable.appendRow();
@@ -96,21 +110,21 @@ public class TrajectoriesTester {
         }
         //printPoset();
         if (successfulHierarchies.size() > 2 && calculateSimilarities) {
-            HierarchyComparer comparer = HierarchyComparer.build(successfulHierarchies, grammar, pairDistribution, Direction.RIGHT);
-            comparer.writeToFile("outputs/hierarchyDistances-" + dateString + ".txt");
+            HierarchyComparer comparer = HierarchyComparer.build(successfulHierarchies, grammar, trainDistribution, Direction.RIGHT);
+            comparer.writeToFile(outputPath+"/hierarchyDistances.txt");
         }
 
-        resultsTable.saveToFile("outputs/simulationResults-" + dateString + ".txt");
+        resultsTable.saveToFile(outputPath+"/simulationResults.txt");
 
         if (printSankeyDiagrams) {
             //createSankeyDiagrams(grammar);
-            tablesToRiverplots(successfulHierarchies,"outputs/plots/"+dateString+"riverplot-s");
-            tablesToRiverplots(failedHierarchies,"outputs/plots/"+dateString+"riverplot-f");
+            tablesToRiverplots(successfulHierarchies,outputPath+"/riverplot-s");
+            tablesToRiverplots(failedHierarchies,outputPath+"/riverplot-f");
 
         }
 
         if (printCandidateSets) {
-            List<FormPair> formPairs = Lists.newArrayList(pairDistribution.getKeys());
+            List<FormPair> formPairs = Lists.newArrayList(trainDistribution.getKeys());
             CandidateSetCollector candidateSetCollector = new CandidateSetCollector(formPairs, Direction.RIGHT);
             for (Hierarchy hierarchy: successfulHierarchies.values()) {
                 grammar.setHierarchy(hierarchy);
@@ -118,6 +132,10 @@ public class TrajectoriesTester {
             }
             System.out.println("Collected results:");
             System.out.println(candidateSetCollector.getResults());
+        }
+
+        if (collectPairDistributions) {
+            System.out.println(errorTable.toTableString());
         }
     }
 
@@ -155,7 +173,7 @@ public class TrajectoriesTester {
 
     private Map<FormPair,CandidateMappingTable> hierarchiesToMap(Grammar grammar, Map<UUID,Hierarchy> uuidHierarchyMap) {
         Map<FormPair,CandidateMappingTable> tables = Maps.newHashMap();
-        List<FormPair> formPairs = Lists.newArrayList(pairDistribution.getForLearningDirection(Direction.RIGHT));
+        List<FormPair> formPairs = Lists.newArrayList(trainDistribution.getForLearningDirection(Direction.RIGHT));
         for (int i = 0; i < formPairs.size(); i++) {
             FormPair formPair = formPairs.get(i);
             CandidateMappingTable table = CandidateMappingTable.createNew();

@@ -46,6 +46,7 @@ public class LearningTrajectory extends AbstractLearningTrajectory {
                 new ExecutorCompletionService<UpdateAction>(executorService);
         int counter = 0;
         int epochSize = numEvaluations / getLearningProperties().getPlasticityEpochs();
+        // Add learning steps to service
         while (counter < numEvaluations && getData().hasNext()) {
             FormPair randomPair = getData().next();
             LearningStep learningStep = LearningStep.getInstance(getLearningProperties(), getGrammar(), randomPair, plasticity);
@@ -56,6 +57,7 @@ public class LearningTrajectory extends AbstractLearningTrajectory {
             counter++;
         }
 
+        // Start evaluating
         while (numEvaluated < numEvaluations) {
             try {
                 Future<UpdateAction> resultFuture = completionService.take();

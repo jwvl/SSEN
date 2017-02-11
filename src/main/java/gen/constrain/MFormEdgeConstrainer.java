@@ -33,9 +33,9 @@ public class MFormEdgeConstrainer implements GenConstrainer<MForm> {
         Side firstSide = sides[0];
         // Second check: all sides the same?
         for (int i =1; i < numMorphologicalWords; i++) {
-            if (sides[i] != firstSide) {
-                return false;
-            }
+//            if (sides[i] != firstSide) {
+//                return false;
+//            }
         }
         return true;
     }
