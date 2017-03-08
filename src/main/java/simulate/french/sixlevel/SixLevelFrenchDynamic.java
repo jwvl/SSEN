@@ -31,6 +31,7 @@ import grammar.subgraph.CandidateSpaces;
 import grammar.tools.GrammarTester;
 import graph.Direction;
 import io.MyStringTable;
+import io.candidates.CandidateSpacesToTables;
 import io.utils.PathUtils;
 import learn.batch.RandomLearnerTester;
 import learn.batch.combination.LearningPropertyCombinations;
@@ -103,7 +104,7 @@ public class SixLevelFrenchDynamic {
         // 1 Create grammar with levels.
         Level semF_level = BiPhonSix.getSemSynFormLevel();
         Level msf_level = BiPhonSix.getMstructureLevel();
-        Level mff_level = BiPhonSix.getMformLevel();
+        Level mf_level = BiPhonSix.getMformLevel();
         Level pF_level = BiPhonSix.getPhoneticLevel();
         // NetworkGen sixLevelNetwork =
         // NetworkGen.addNewToGrammar(liaisonGrammar);
@@ -129,7 +130,7 @@ public class SixLevelFrenchDynamic {
         // between MForms and PhoneticForms as well!
 
         SynToMStructure sem_morph_gen = new SynToMStructure(semF_level, msf_level);
-        MStructureToMForm ms_mf_gen = new MStructureToMForm(msf_level, mff_level);
+        MStructureToMForm ms_mf_gen = new MStructureToMForm(msf_level, mf_level);
 
         Set<FormMapping> semfMsMappings;
         for (FormPair gfp : pairDistribution.getKeySet()) {
@@ -149,7 +150,6 @@ public class SixLevelFrenchDynamic {
         }
 
         lcsData.init();
-
 
         // 4. Generate UFs from MFs with the help of longest-common substring
         // data (or, alternatively, read from file)
@@ -222,9 +222,13 @@ public class SixLevelFrenchDynamic {
             System.out.println("Creating candidate spaces!");
             CandidateSpaces candidateSpaces = CandidateSpaces.fromDistribution(pairDistribution, grammar);
             grammar.addCandidateSpaces(candidateSpaces);
+            if (ConfigFactory.load().getBoolean("grammar.writeCandidateSpaces")) {
+                CandidateSpacesToTables.writeToFile(candidateSpaces, outputPath+"/candidateSpaces");
+            }
         }
 
         Timer timer = new Timer();
+
         System.out.println("Testing grammar on learning data...");
         GrammarTester.testGrammarOnLearningData(grammar, pairDistribution, 100, 1.0);
         timer.reportElapsedTime("Did tests in ", false);
@@ -238,6 +242,8 @@ public class SixLevelFrenchDynamic {
                 randomLearner = true;
             }
         }
+
+        System.out.println("Expected error: " + pairDistribution.calculateExpectedError());
         if (randomLearner) {
             RandomLearnerTester randomLearnerTester = new RandomLearnerTester(grammar,pairDistribution, numEvaluations);
             randomLearnerTester.testAndPrint(numRuns);

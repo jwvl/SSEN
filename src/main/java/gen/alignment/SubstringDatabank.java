@@ -84,6 +84,9 @@ public class SubstringDatabank {
         allStrings.trimToSize();
         List<String> longest = LongestSubstring.find(allStrings);
         if (longest.get(0).length() < 1) {
+            if (m.toString().contains("The")) {
+                System.out.print("Huh?");
+            }
             System.out.println("No longest substring found for " + m + ";");
             longest.clear();
             longest.add("");

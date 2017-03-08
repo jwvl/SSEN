@@ -93,9 +93,11 @@ public class SFtoPF extends SubGen<SurfaceForm, PhoneticForm> implements
      */
     private static List<EdgeBasedRule> createSchwaRules() {
         List<EdgeBasedRule> result = Lists.newArrayList();
-        if (ConfigFactory.load().getBoolean("gen.schwaRulesOnSF")) {
+        if (ConfigFactory.load().getBoolean("gen.schwaDeletionOnSF")) {
             result.addAll(EdgeBasedRuleBuilder.fromString("ə. → ∅ / __", Edge.SYLLABLE));
-       //     result.addAll(EdgeBasedRuleBuilder.fromString("∅. → ə / __|C", Edge.SYLLABLE));
+        }
+        if (ConfigFactory.load().getBoolean("gen.schwaInsertionOnSF")) {
+             result.addAll(EdgeBasedRuleBuilder.fromString("∅. → ə / __|C", Edge.SYLLABLE));
         }
         return result;
     }

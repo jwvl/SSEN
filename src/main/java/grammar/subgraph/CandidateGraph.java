@@ -56,4 +56,7 @@ public class CandidateGraph {
     public FormPair getFormPair() {
         return formPair;
     }
+    public Map<Form,List<Form>> getMap() {
+        return myMap;
+    }
 }

@@ -28,15 +28,15 @@ public class LexicalHypothesisRepository implements Iterable<Morpheme> {
     private Set<LexicalMapping> minimalMappings;
 
     public void addAlignment(MorphemePhoneAlignment mpa) {
-        System.out.println("From alignment:");
-        System.out.println(mpa);
+       // System.out.println("From alignment:");
+       // System.out.println(mpa);
         Collection<LexicalMapping> subMappings = mpa.getLexicalSubmappings();
         for (LexicalMapping subMapping : subMappings) {
             Morpheme currentM = subMapping.left();
             PhoneSubForm currentP = subMapping.right();
             if (allowedAffixMapping(currentM, currentP)) {
-                System.out.printf("Adding mapping: %s --> %s%n", currentM,
-                        currentP);
+//                System.out.printf("Adding mapping: %s --> %s%n", currentM,
+//                        currentP);
 
                 addMapping(currentM, currentP);
             }

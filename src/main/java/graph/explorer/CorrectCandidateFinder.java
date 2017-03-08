@@ -45,7 +45,7 @@ public class CorrectCandidateFinder {
         finder.run();
         ListMultimap<Form, Form> result = finder.getGreenGraph();
         if (ConfigFactory.load().getBoolean("stats.showCandidateGraphs")) {
-            System.out.println("Drawubg fraph for formpair" + dataPair);
+            System.out.println("Drawing graph for formpair" + dataPair);
             SimpleDynamicGraph.showResult(result);
         }
         return result;

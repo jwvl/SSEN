@@ -2,6 +2,7 @@ package learn.batch.combination;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 import constraints.Constraint;
 import constraints.hierarchy.analysis.ConstraintOrderMap;
@@ -48,11 +49,14 @@ public class TrajectoriesTester {
     private final static boolean printCandidateSets = false;
     private final static boolean collectPairDistributions = true;
     private final static double successThreshold = 0.05;
+    private final int numDataToTest;
 
     public TrajectoriesTester(LearningPropertyCombinations combinations, Grammar grammar, PairDistribution pairDistribution) {
         this.combinations = combinations;
         this.grammar = grammar;
-        double testFraction = ConfigFactory.load().getDouble("learning.testDataFraction");
+        Config config = ConfigFactory.load();
+        double testFraction = config.getDouble("learning.testDataFraction");
+        numDataToTest = config.getInt("stats.numDataToTest");
         Couple<PairDistribution> testTrain = pairDistribution.splitToTestAndTraining(testFraction);
         this.testDistribution = testTrain.getLeft();
         this.trainDistribution = testTrain.getRight();
@@ -70,10 +74,10 @@ public class TrajectoriesTester {
                 trajectory.launch(numThreads);
                 Stopwatch.reportElapsedTime("Finished training in ", true);
                 Map<Integer, Double> errorRates = trajectory.getErrorRates();
-                double error = GrammarTester.testGrammarOnLearningData(grammar, trainDistribution, trainDistribution.getNumPairs()*20, 1.0);
+                double error = GrammarTester.testGrammarOnLearningData(grammar, trainDistribution, numDataToTest, 1.0);
                 System.out.println("Total training error: " +error);
                 if (testDistribution != null) {
-                    double testError = GrammarTester.testGrammarOnLearningData(grammar, testDistribution, testDistribution.getNumPairs()*20, 1.0);
+                    double testError = GrammarTester.testGrammarOnLearningData(grammar, testDistribution, numDataToTest, 1.0);
                     System.out.println("Total test error: " +testError);
                 }
                 System.out.println("Min training error: " + trainDistribution.calculateExpectedError());

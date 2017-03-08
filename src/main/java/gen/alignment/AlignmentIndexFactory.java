@@ -52,7 +52,7 @@ public class AlignmentIndexFactory {
             }
         } else {
             AlignmentIndex result = new AlignmentIndex(aligned, nGroups);
-            System.out.println("Found alignment: "+ result);
+            //System.out.println("Found alignment: "+ result);
             results.add(result);
         }
 

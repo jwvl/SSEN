@@ -53,4 +53,12 @@ public class CandidateSpaces {
         }
         return new CandidateSpaces(map);
     }
+
+    public Collection<FormPair> getPairs() {
+        return spaces.keySet();
+    }
+
+    public CandidateGraph getGraph(FormPair formPair) {
+        return spaces.get(formPair);
+    }
 }
