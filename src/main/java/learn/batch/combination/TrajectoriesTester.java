@@ -44,7 +44,7 @@ public class TrajectoriesTester {
     private final ResultsTable resultsTable;
     private final Map<UUID, Hierarchy> successfulHierarchies;
     private final Map<UUID, Hierarchy> failedHierarchies;
-    private final static boolean printSankeyDiagrams = true;
+    private final static boolean printSankeyDiagrams = false;
     private final static boolean calculateSimilarities = false;
     private final static boolean printCandidateSets = false;
     private final static boolean collectPairDistributions = true;

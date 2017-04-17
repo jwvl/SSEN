@@ -606,7 +606,7 @@ DET{The}, N{Offensive.g=F num=SG}*	lɔf&siv	1	0
 DET{The}, N{Oise.g=F num=SG}*	lwaz	3	0
 DET{The}, N{Shadow.g=F num=SG}*	lQbʁ	1	0
 DET{The}, N{Opera.g=M num=SG}*	lɔpeʁa	2	0
-DET{The}, N{Opinion.g=F num=SG}*	lɔpinjQ	1	0
+DET{The}, N{Opinion2.g=F num=SG}*	lɔpinjQ	1	0
 DET{The}, N{Opposition.g=F num=SG}*	lɔpozisjQ	25	0
 DET{The}, N{OralExam.g=M num=SG}*	lɔʁal	1	0
 DET{The}, N{Computer.g=M num=SG}*	lɔʁdinatœʁ	1	0
@@ -1200,7 +1200,7 @@ N{Offensive.g=F num=SG}*	ɔf&siv	0	0
 N{Oise.g=F num=SG}*	waz	0	0
 N{Shadow.g=F num=SG}*	Qbʁ	0	0
 N{Opera.g=M num=SG}*	ɔpeʁa	0	0
-N{Opinion.g=F num=SG}*	ɔpinjQ	0	0
+N{Opinion2.g=F num=SG}*	ɔpinjQ	0	0
 N{Opposition.g=F num=SG}*	ɔpozisjQ	0	0
 N{OralExam.g=M num=SG}*	ɔʁal	0	0
 N{Computer.g=M num=SG}*	ɔʁdinatœʁ	0	0

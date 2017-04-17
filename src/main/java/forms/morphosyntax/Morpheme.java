@@ -232,4 +232,7 @@ public class Morpheme implements Subform, ElementCollection<MElement> {
         return result;
     }
 
+    public SyntacticCategory getSyntacticCategory() {
+        return syntacticCategory;
+    }
 }

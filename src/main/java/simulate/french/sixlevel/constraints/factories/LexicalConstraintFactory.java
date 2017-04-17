@@ -6,6 +6,7 @@ package simulate.french.sixlevel.constraints.factories;
 import com.google.common.collect.Lists;
 import com.typesafe.config.ConfigFactory;
 import forms.morphosyntax.Morpheme;
+import forms.morphosyntax.SyntacticCategory;
 import forms.phon.LexicalMapping;
 import gen.mapping.FormMapping;
 import gen.mapping.specific.MfUfMapping;
@@ -45,7 +46,7 @@ public class LexicalConstraintFactory extends
      */
     @Override
     public LexicalConstraint createConstraint(LexicalMapping lexicalMapping) {
-        if (isMinimalMapping(lexicalMapping)) {
+        if (isMinimalMapping(lexicalMapping) && lexicalMapping.left().getSyntacticCategory() == SyntacticCategory.N) {
             return LexicalConstraint.createInstance(lexicalMapping, SHORTEST_FORM_BIAS);
         }
 

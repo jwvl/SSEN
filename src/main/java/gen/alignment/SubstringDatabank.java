@@ -79,7 +79,7 @@ public class SubstringDatabank {
         ArrayList<String> allStrings = new ArrayList<String>();
         for (PhoneticForm pf : pfsPerMorpheme.get(m)) {
             allStrings.add(pf.toString());
-            System.out.println("Adding " + pf.toString());
+            //System.out.println("Adding " + pf.toString());
         }
         allStrings.trimToSize();
         List<String> longest = LongestSubstring.find(allStrings);
@@ -87,11 +87,11 @@ public class SubstringDatabank {
             if (m.toString().contains("The")) {
                 System.out.print("Huh?");
             }
-            System.out.println("No longest substring found for " + m + ";");
+            //System.out.println("No longest substring found for " + m + ";");
             longest.clear();
             longest.add("");
         } else {
-            System.out.println("Longest substring found for " + m + " : " + longest.get(0));
+            //System.out.println("Longest substring found for " + m + " : " + longest.get(0));
         }
         return longest;
     }
