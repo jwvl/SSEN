@@ -34,9 +34,8 @@ public class Distribution<O extends Object> {
 
     public void setFrequency(O o, int freq) {
         Integer value = freq;
-        if (freq > 0) {
-            frequencies.put(o, value);
-        }
+        frequencies.put(o, value);
+
         probabilitiesOutdated = true;
     }
 

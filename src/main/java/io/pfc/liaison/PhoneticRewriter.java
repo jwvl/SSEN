@@ -14,10 +14,8 @@ public class PhoneticRewriter {
         this.transcriptionList = transcriptionList;
     }
 
-    public String rewrite(LiaisonOpportunity liaisonOpportunity) {
-        String firstOrth = liaisonOpportunity.getFirstWordOrth();
-        String secondOrth = liaisonOpportunity.getSecondWordOrth();
-        String firstPhon = transcriptionList.getTranscription(firstOrth);
+
+    public String rewrite(LiaisonOpportunity liaisonOpportunity, String firstPhon, String secondPhon) {
         String linkingConsonant = liaisonOpportunity.getLiaisonConsonant();
         if (linkingConsonant.contains("n")) {
             if (!liaisonOpportunity.nasalizesVowel()) {
@@ -25,8 +23,14 @@ public class PhoneticRewriter {
             }
             linkingConsonant = linkingConsonant.replace("VN","");
         }
-        String secondPhon = transcriptionList.getTranscription(secondOrth);
         return firstPhon+linkingConsonant+secondPhon;
+    }
+    public String rewrite(LiaisonOpportunity liaisonOpportunity) {
+        String firstOrth = liaisonOpportunity.getFirstWordOrth();
+        String secondOrth = liaisonOpportunity.getSecondWordOrth();
+        String firstPhon = transcriptionList.getTranscription(firstOrth);
+        String secondPhon = transcriptionList.getTranscription(secondOrth);
+        return rewrite(liaisonOpportunity, firstPhon, secondPhon);
     }
 
     public String rewriteSingle(String orthWord) {

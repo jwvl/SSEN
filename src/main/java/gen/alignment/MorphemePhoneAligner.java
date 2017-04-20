@@ -67,7 +67,7 @@ public class MorphemePhoneAligner {
                 startSearchAt = fillPrealignedPatterns(iGroup, startSearchAt, s);
             }
         }
-        printAlignmentArray();
+        //printAlignmentArray();
         result = myFactory.createAll(preAligned, mForm.recursiveSize());
         return result;
     }

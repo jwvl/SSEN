@@ -42,4 +42,8 @@ public class MetaData {
     public int hashCode() {
         return Objects.hash(region, speaker, textType);
     }
+
+    public String toString() {
+        return region+speaker+textType;
+    }
 }

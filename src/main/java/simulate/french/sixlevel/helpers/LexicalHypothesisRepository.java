@@ -22,12 +22,16 @@ import java.util.*;
 public class LexicalHypothesisRepository implements Iterable<Morpheme> {
     private final SubstringDatabank longestCommonSubstrings;
    // private int MAX_AFFIX_LENGTH = 1;
+    private int MIN_CONCEPT_LENGTH = 1;
     private int MAX_LCS_DIFFERENCE = ConfigFactory.load().getInt("lexicon.maxLcsDifference");
     private Table<Morpheme, PhoneSubForm, LexicalMapping> repository = HashBasedTable
             .create();
     private Set<LexicalMapping> minimalMappings;
 
     public void addAlignment(MorphemePhoneAlignment mpa) {
+        if (isIllegalAlignment(mpa)){
+            return;
+        }
        // System.out.println("From alignment:");
        // System.out.println(mpa);
         Collection<LexicalMapping> subMappings = mpa.getLexicalSubmappings();
@@ -40,8 +44,16 @@ public class LexicalHypothesisRepository implements Iterable<Morpheme> {
 
                 addMapping(currentM, currentP);
             }
-
         }
+    }
+
+    public boolean isIllegalAlignment(MorphemePhoneAlignment mpa) {
+        for (LexicalMapping lm: mpa.getLexicalSubmappings()) {
+            if (lm.left().hasConceptFeature() & lm.right().size() < MIN_CONCEPT_LENGTH) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void addFromString(Morpheme morpheme, String pString) {
@@ -65,12 +77,16 @@ public class LexicalHypothesisRepository implements Iterable<Morpheme> {
      * @return
      */
     private boolean allowedAffixMapping(Morpheme currentM, PhoneSubForm currentP) {
+        boolean isAllowed = true;
         int lcsLength = 0;
         List<String> substringList = longestCommonSubstrings.getLongestSubstrings(currentM);
         if (!substringList.isEmpty()) {
             lcsLength = substringList.get(0).length();
         }
-        return currentP.size() - lcsLength <= MAX_LCS_DIFFERENCE;
+        if (currentP.size() -lcsLength > MAX_LCS_DIFFERENCE) {
+            isAllowed= false;
+        }
+        return isAllowed;
         //return (currentM.hasConceptFeature() || currentP.size() <= MAX_AFFIX_LENGTH);
 
     }
@@ -149,6 +165,15 @@ public class LexicalHypothesisRepository implements Iterable<Morpheme> {
             }
         }
         return stringMultimap;
+    }
+
+    public void createAbstractForms() {
+        for (LexicalMapping mapping: minimalMappings) {
+            Morpheme morpheme = mapping.left();
+            PhoneSubForm minimal = mapping.right();
+            Set<PhoneSubForm> otherSubforms = repository.columnKeySet();
+            // TODO finish this
+        }
     }
 
 }
