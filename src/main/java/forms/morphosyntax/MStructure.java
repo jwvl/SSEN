@@ -95,17 +95,11 @@ public class MStructure extends LinearArrayForm<SyntacticWord> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         boolean superEquals = super.equals(o);
-//        if (!superEquals) {
-//            System.out.println(this + " does not equal " + o + "!");
-//        }
         if (!superEquals) return false;
 
         MStructure lexemes = (MStructure) o;
 
         boolean result = agreements != null ? agreements.equals(lexemes.agreements) : lexemes.agreements == null;
-//        if (!result) {
-//            System.out.println(this + " equals " + lexemes + "? " + result);
-//        }
         return result;
 
     }

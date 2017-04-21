@@ -4,6 +4,7 @@
 package simulate.french.sixlevel.helpers;
 
 import com.google.common.collect.HashBasedTable;
+import com.google.common.collect.Sets;
 import com.google.common.collect.Table;
 import com.typesafe.config.ConfigFactory;
 import forms.morphosyntax.Morpheme;
@@ -13,7 +14,10 @@ import gen.alignment.MorphemePhoneAlignment;
 import gen.alignment.SubstringDatabank;
 import util.collections.StringMultimap;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
 
 /**
  * @author jwvl
@@ -26,7 +30,6 @@ public class LexicalHypothesisRepository implements Iterable<Morpheme> {
     private int MAX_LCS_DIFFERENCE = ConfigFactory.load().getInt("lexicon.maxLcsDifference");
     private Table<Morpheme, PhoneSubForm, LexicalMapping> repository = HashBasedTable
             .create();
-    private Set<LexicalMapping> minimalMappings;
 
     public void addAlignment(MorphemePhoneAlignment mpa) {
         if (isIllegalAlignment(mpa)){
@@ -67,7 +70,6 @@ public class LexicalHypothesisRepository implements Iterable<Morpheme> {
      */
     public LexicalHypothesisRepository(SubstringDatabank longestCommonSubstrings) {
         this.longestCommonSubstrings = longestCommonSubstrings;
-        this.minimalMappings = new HashSet<LexicalMapping>();
     }
 
 
@@ -152,7 +154,15 @@ public class LexicalHypothesisRepository implements Iterable<Morpheme> {
      * @return the minimalMappings
      */
     public Set<LexicalMapping> getMinimalMappings() {
-        return minimalMappings;
+        Set<LexicalMapping> result = Sets.newHashSet();
+        for (Morpheme morpheme: this) {
+            PhoneSubForm shortest = getCandidates(morpheme).stream().min((s1,s2) -> Integer.compare(s1.size(),s2.size())).orElse(null);
+            if (shortest != null) {
+                result.add(LexicalMapping.of(morpheme,shortest));
+            }
+
+        }
+        return result;
     }
 
     public StringMultimap toStringMultimap() {
@@ -167,12 +177,30 @@ public class LexicalHypothesisRepository implements Iterable<Morpheme> {
         return stringMultimap;
     }
 
-    public void createAbstractForms() {
-        for (LexicalMapping mapping: minimalMappings) {
+    public void createAbstractForms(String nonZeroForm, String abstractPhone) {
+        Set<LexicalMapping> toAdd = Sets.newHashSet();
+        for (LexicalMapping mapping: getMinimalMappings()) {
             Morpheme morpheme = mapping.left();
             PhoneSubForm minimal = mapping.right();
             Set<PhoneSubForm> otherSubforms = repository.columnKeySet();
-            // TODO finish this
+            String leftAdded = nonZeroForm+minimal.contentsAsString();
+            String rightAdded = minimal.contentsAsString()+nonZeroForm;
+
+            for (PhoneSubForm phoneSubForm: otherSubforms) {
+                String asString = phoneSubForm.contentsAsString();
+                if (asString.equals(leftAdded)) {
+                    PhoneSubForm abstractLeft = PhoneSubForm.createFromString(abstractPhone+minimal.contentsAsString());
+                    System.out.println("Adding " + morpheme +" -- " + abstractLeft);
+                    toAdd.add(LexicalMapping.of(morpheme,abstractLeft));
+                } else if (asString.equals(rightAdded)) {
+                    PhoneSubForm abstractRight = PhoneSubForm.createFromString(minimal.contentsAsString()+abstractPhone);
+                    toAdd.add(LexicalMapping.of(morpheme,abstractRight));
+                    System.out.println("Adding " + morpheme +" -- " + abstractRight);
+                }
+            }
+        }
+        for (LexicalMapping mapping: toAdd) {
+            addMapping(mapping.left(), mapping.right());
         }
     }
 

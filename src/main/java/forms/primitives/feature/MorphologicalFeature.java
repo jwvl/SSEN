@@ -7,6 +7,7 @@ import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
 
 import java.util.Collection;
+import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -112,20 +113,13 @@ public class MorphologicalFeature extends AbstractMFeature {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-
         MorphologicalFeature that = (MorphologicalFeature) o;
-
-        if (isNull != that.isNull) return false;
-        return string != null ? string.equals(that.string) : that.string == null;
-
+        return isNull == that.isNull &&
+                Objects.equals(string, that.string);
     }
 
     @Override
     public int hashCode() {
-        int result = super.hashCode();
-        result = 31 * result + (string != null ? string.hashCode() : 0);
-        result = 31 * result + (isNull ? 1 : 0);
-        return result;
+        return Objects.hash(string, isNull);
     }
 }

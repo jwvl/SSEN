@@ -38,13 +38,12 @@ public class MStructureFactory {
         }
 
         if (result == null) {
-            System.out.println("Couldn't find head in " + syntacticWordTemplates);
-        }
-
-        // Impose head features unto dependent templates
-        for (SyntacticWord l : syntacticWordTemplates) {
-            if (!l.isHead())
-                result.imposeAllFeatures(l);
+            return;
+        } else {
+            for (SyntacticWord l : syntacticWordTemplates) {
+                if (!l.isHead())
+                    result.imposeAllFeatures(l);
+            }
         }
     }
 

@@ -115,7 +115,7 @@ public class DynamicNetworkEvaluation implements Evaluation {
             }
         }
         if (!winnerFound) {
-            System.err.println("No winner found for " + formPair.right());
+            System.err.println("No winner found for "+ formPair.left() +" -- "+ formPair.right());
             System.exit(0);
         }
 

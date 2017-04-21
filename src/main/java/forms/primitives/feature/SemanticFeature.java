@@ -18,7 +18,7 @@ public class SemanticFeature extends AbstractMFeature {
     private static HashMap<String, SemanticFeature> cache = Maps.newHashMap();
     private final static String ATTRIBUTE_CONSTANT = "CONCEPT";
     private final static String NULL_VALUE = "0";
-    private final static AbstractMFeature NULL_INSTANCE = new SemanticFeature(NULL_VALUE);
+    private final static AbstractMFeature NULL_CONCEPT = new SemanticFeature(NULL_VALUE);
 
     /**
      * @param v
@@ -35,6 +35,7 @@ public class SemanticFeature extends AbstractMFeature {
         }
         return result;
     }
+
 
 
     /*
@@ -83,7 +84,7 @@ public class SemanticFeature extends AbstractMFeature {
      */
     @Override
     public Feature<String> createNullValue() {
-        return NULL_INSTANCE;
+        return NULL_CONCEPT;
     }
 
     @Override
@@ -102,5 +103,7 @@ public class SemanticFeature extends AbstractMFeature {
             return false;
         return true;
     }
+
+
 
 }

@@ -62,7 +62,7 @@ public class MaxOnsetSyllabifier implements ISyllabifier{
         int[] nucleusIndices = findNuclei(asByteArray);
         int numNuclei = nucleusIndices.length;
         if (numNuclei < 1) {
-            System.out.println("Huh?");
+            System.out.println("Huh? No nuclei in " + psf.contentsAsString());
         }
         for (int i=0; i < numNuclei-1; i++) {
             int startSearch = nucleusIndices[i]+1;
@@ -80,6 +80,7 @@ public class MaxOnsetSyllabifier implements ISyllabifier{
     }
 
     private int findMaxOnset(int startSearch, int endSearch, byte[] asByteArray) {
+        //String fullString =PhoneSubForm.createFromByteArray(asByteArray).toString();
         for (int i=startSearch; i < endSearch; i++) {
             byte[] possibleOnset = ByteArrayUtils.getSubArray(asByteArray,i,endSearch);
             if (onsets.contains(possibleOnset)) {

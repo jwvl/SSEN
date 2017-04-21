@@ -30,6 +30,11 @@ public class ArticulatoryConstraintFactory extends
         return new ArticulatoryConstraintFactory(forbidden);
     }
 
+    public static ArticulatoryConstraintFactory createFromPhones(List<Phone> forbidden) {
+        Phone[] asArray = new Phone[forbidden.size()];
+        return new ArticulatoryConstraintFactory(forbidden.toArray(asArray));
+    }
+
     /*
      * (non-Javadoc)
      *

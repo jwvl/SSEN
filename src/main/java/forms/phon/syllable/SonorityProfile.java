@@ -93,7 +93,7 @@ public class SonorityProfile {
      * @return
      */
     public static SonorityProfile[] getAllowedProfiles() {
-        String[] allowed = {"V", "CV", "VC", "CVC", "CCVC", "CVCC", "CCVCC"};
+        String[] allowed = {"V", "VC", "VCC", "CV", "CVC", "CVCC", "CCV", "CCVC", "CCVCC","CCCV","CCCVC","CCCVCC"};
         SonorityProfile[] result = new SonorityProfile[allowed.length];
         for (int i = 0; i < result.length; i++) {
             result[i] = SonorityProfile.fromString(allowed[i]);

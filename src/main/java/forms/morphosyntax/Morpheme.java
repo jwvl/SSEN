@@ -65,9 +65,9 @@ public class Morpheme implements Subform, ElementCollection<MElement> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Morpheme morpheme = (Morpheme) o;
-        return Objects.equals(features, morpheme.features) &&
-                syntacticCategory == morpheme.syntacticCategory;
+        Morpheme mElements = (Morpheme) o;
+        return syntacticCategory == mElements.syntacticCategory &&
+                Objects.equals(features, mElements.features);
     }
 
     @Override
@@ -76,10 +76,10 @@ public class Morpheme implements Subform, ElementCollection<MElement> {
     }
 
     /*
-             * (non-Javadoc)
-             *
-             * @see forms.primitives.SubForm#isNullElement()
-             */
+                     * (non-Javadoc)
+                     *
+                     * @see forms.primitives.SubForm#isNullElement()
+                     */
     @Override
     public boolean isNull() {
         return this.equals(NULL_MORPHEME);

@@ -11,7 +11,7 @@ public class LexiqueEntry {
     private final String pos;
     private final char gender;
     private final char number;
-    private static String[] notNouns = {"l","la","non","nécessaire","avoir","juste","long","longues","avant","premier","première","nouveau","nouvelle","originale","principal","y","je","si","quatre","propre","propres","ça","a","tout","pour","on","tu","par","sur","une","ben","moi","est","petit","petite","plus","première","dire","grand","gros","bon","bonne","bien"};
+    private static String[] notNouns = {"l","la","non","sa","nécessaire","me","non","complètement","vers","pendant","avoir","juste","long","longues","avant","premier","première","nouveau","nouvelle","originale","principal","y","je","si","quatre","propre","propres","ça","a","tout","pour","on","tu","par","sur","une","ben","moi","est","petit","petite","plus","première","dire","grand","gros","bon","bonne","bien"};
 
     public LexiqueEntry(String phonString, String lemma, String pos, String gender, String number) {
         this.phonString = rewritePhonString(phonString);
@@ -131,6 +131,10 @@ public class LexiqueEntry {
 
     public String getLemma() {
         return lemma;
+    }
+
+    public char getNumber() {
+        return number;
     }
 }
 

@@ -20,9 +20,14 @@ public class PhoneticRewriter {
         if (linkingConsonant.contains("n")) {
             if (!liaisonOpportunity.nasalizesVowel()) {
                 firstPhon = oralizeNasal(firstPhon);
+                linkingConsonant = linkingConsonant.replace("VO","");
+            } else {
+                linkingConsonant = linkingConsonant.replace("VN","");
             }
-            linkingConsonant = linkingConsonant.replace("VN","");
         }
+        linkingConsonant = linkingConsonant.replace("-", "");
+        linkingConsonant = linkingConsonant.replace("C[a-z]+", "");
+        linkingConsonant = linkingConsonant.replace("r", "ʁ");
         return firstPhon+linkingConsonant+secondPhon;
     }
     public String rewrite(LiaisonOpportunity liaisonOpportunity) {

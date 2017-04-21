@@ -10,7 +10,6 @@ package gen.rule.edgebased;
 public class AnyEdgeRule extends EdgeBasedRule {
 
     /**
-     * @param edgeType
      * @param leftContext
      * @param rightContext
      * @param operation

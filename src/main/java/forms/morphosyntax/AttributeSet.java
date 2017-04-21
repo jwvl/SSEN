@@ -8,6 +8,7 @@ import util.string.CollectionPrinter;
 
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -23,29 +24,16 @@ public class AttributeSet {
     }
 
     @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result
-                + ((attributes == null) ? 0 : attributes.hashCode());
-        return result;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        AttributeSet that = (AttributeSet) o;
+        return Objects.equals(attributes, that.attributes);
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (!(obj instanceof AttributeSet))
-            return false;
-        AttributeSet other = (AttributeSet) obj;
-        if (attributes == null) {
-            if (other.attributes != null)
-                return false;
-        } else if (!attributes.equals(other.attributes))
-            return false;
-        return true;
+    public int hashCode() {
+        return Objects.hash(attributes);
     }
 
     @Override

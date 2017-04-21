@@ -6,6 +6,7 @@ import com.google.common.collect.Iterators;
 import forms.ElementCollection;
 import util.string.CollectionPrinter;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -118,4 +119,16 @@ public class MorphemeCollection implements ElementCollection<Morpheme> {
         return CollectionPrinter.collectionToString(elementsAsList(), separator);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MorphemeCollection morphemes = (MorphemeCollection) o;
+        return Arrays.equals(contents, morphemes.contents);
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(contents);
+    }
 }

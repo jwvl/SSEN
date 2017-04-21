@@ -4,6 +4,7 @@
 package forms.primitives.feature;
 
 import java.util.Collection;
+import java.util.Objects;
 
 /**
  * @author jwvl
@@ -14,7 +15,7 @@ public abstract class AbstractMFeature extends Feature<String> {
 
     /**
      * @param attribute
-     * @param v
+     * @param
      */
     protected AbstractMFeature(String attribute, String value) {
         super(attribute, value);
@@ -27,5 +28,17 @@ public abstract class AbstractMFeature extends Feature<String> {
 
     public abstract Collection<String> getValueSet(boolean includeNull);
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        AbstractMFeature that = (AbstractMFeature) o;
+        return Objects.equals(getAttribute(), that.getAttribute()) &&
+                Objects.equals(getValue(), that.getValue());
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(getAttribute(), getValue());
+    }
 }

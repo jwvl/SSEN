@@ -53,6 +53,8 @@ public class PredefinedLiaisonRules {
         }
         result.addAll(EdgeBasedRuleBuilder.fromString("Q# → ɔn / __|V", Edge.WORD));
         result.addAll(EdgeBasedRuleBuilder.fromString("ɔn# → Q / __|C", Edge.WORD));
+        result.addAll(EdgeBasedRuleBuilder.fromString("3# → ɛn / __|V", Edge.WORD));
+        result.addAll(EdgeBasedRuleBuilder.fromString("ɛn# → 3 / __|C", Edge.WORD));
 
         if (config.getBoolean("gen.schwaInsertionOnUF")) {
             result.addAll(EdgeBasedRuleBuilder.fromString("∅# → ə / |C__|C", Edge.MORPHEME));

@@ -8,6 +8,7 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
+import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 import forms.phon.flat.PhoneticForm;
 import forms.phon.flat.SurfaceForm;
@@ -47,11 +48,19 @@ public class SFtoPF extends SubGen<SurfaceForm, PhoneticForm> implements
 
     public SFtoPF(List<EdgeBasedRule> rules) {
         super(BiPhonSix.getSurfaceFormLevel(), BiPhonSix.getPhoneticLevel());
+        addAbstractRewrites(rules);
         this.transformer = EdgeRuleTransformer.createFromRules(rules);
         reverseMappings = HashMultimap.create();
+        List<Phone> cuePhones = Lists.newArrayList(Phone.getInstance('ə'));
+        addAbstractPhones(cuePhones);
         addConstraintFactory(new CueConstraintFactory());
-        addConstraintFactory(ArticulatoryConstraintFactory.createFromPhones(Phone.getInstance('ə')));
+        addConstraintFactory(ArticulatoryConstraintFactory.createFromPhones(cuePhones));
     }
+
+    private void addAbstractRewrites(List<EdgeBasedRule> rules) {
+
+    }
+
 
     /**
      *
@@ -123,6 +132,17 @@ public class SFtoPF extends SubGen<SurfaceForm, PhoneticForm> implements
         }
         reverseMappings.putAll(form, result);
         return result;
+    }
+
+    private void addAbstractPhones(List<Phone> cuePhones) {
+        Config config = ConfigFactory.load();
+        if (config.getBoolean("gen.abstractEnabled")) {
+            List<String> strings = config.getStringList("gen.abstractPhonemes");
+            for (String string: strings) {
+                String[] parts = string.split("~");
+                cuePhones.add(Phone.getInstance(parts[1].charAt(0)));
+            }
+        }
     }
 
 }

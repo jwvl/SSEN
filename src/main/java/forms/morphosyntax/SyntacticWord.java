@@ -116,6 +116,9 @@ public class SyntacticWord implements Subform, ElementCollection<MElement> {
      */
     private static MorphologicalFeature parseAttributeAndValue(String s) {
         List<String> contents = Splitter.on("=").splitToList(s);
+        if (contents.size() < 2) {
+            System.err.println("Cannot parse " + s);
+        }
         return MorphologicalFeature.getInstance(contents.get(0), contents.get(1));
     }
 

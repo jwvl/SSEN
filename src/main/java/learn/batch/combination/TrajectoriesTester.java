@@ -47,7 +47,7 @@ public class TrajectoriesTester {
     private final static boolean printSankeyDiagrams = false;
     private final static boolean calculateSimilarities = false;
     private final static boolean printCandidateSets = false;
-    private final static boolean collectPairDistributions = true;
+    private final static boolean collectPairDistributions = false;
     private final static double successThreshold = 0.05;
     private final int numDataToTest;
 
@@ -84,6 +84,7 @@ public class TrajectoriesTester {
                 if (collectPairDistributions) {
                     //System.out.println("As pair distribution:");
                     PairDistribution resultingDistribution = GrammarTester.toPairDistribution(grammar, trainDistribution, 100, 1.0);
+                    System.out.println("Created error distribution on training set");
                     errorTable.addLearner(trajectory.getUuid(),trainDistribution,resultingDistribution);
                     //resultingDistribution.printAsList();
                 }

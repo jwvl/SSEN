@@ -31,6 +31,7 @@ import grammar.subgraph.CandidateSpaces;
 import grammar.tools.GrammarTester;
 import graph.Direction;
 import io.MyStringTable;
+import io.candidates.CandidateSpacesToNodeLists;
 import io.candidates.CandidateSpacesToTables;
 import io.utils.PathUtils;
 import learn.batch.RandomLearnerTester;
@@ -52,10 +53,7 @@ import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Collection;
-import java.util.Map;
-import java.util.Set;
-import java.util.UUID;
+import java.util.*;
 
 /**
  * @author jwvl
@@ -166,6 +164,15 @@ public class SixLevelFrenchDynamic {
                         for (Morpheme morpheme: mWord) {
                             String mString = morpheme.toString();
                             Collection<String> pStrings = stringMultimap.get(mString);
+                            if (pStrings.isEmpty()) {
+                                System.err.println("No morphs found for " + mString);
+                                String altString = mString.replace(".num[SG]","");
+                                altString = altString.replace(".num[PL]","");
+                                pStrings = stringMultimap.get(altString);
+                                if (pStrings.isEmpty()) {
+                                    System.err.println("Still no morphs found for "+altString);
+                                }
+                            }
                             for (String pString: pStrings) {
                                 if (pString.equals("∅")) {
                                     repository.addFromString(morpheme, "");
@@ -188,6 +195,13 @@ public class SixLevelFrenchDynamic {
                         repository.addAlignment(alignment);
                     }
                 }
+            }
+        }
+        if (config.getBoolean("gen.abstractEnabled")) {
+            List<String> strings = config.getStringList("gen.abstractPhonemes");
+            for (String string: strings) {
+                String[] parts = string.split("~");
+                repository.createAbstractForms(parts[0],parts[1]);
             }
         }
 
@@ -222,6 +236,8 @@ public class SixLevelFrenchDynamic {
             System.out.println("Creating candidate spaces!");
             CandidateSpaces candidateSpaces = CandidateSpaces.fromDistribution(pairDistribution, grammar);
             grammar.addCandidateSpaces(candidateSpaces);
+            CandidateSpacesToNodeLists.writeToFile(grammar,candidateSpaces,outputPath+"/candidateNodes.txt");
+            System.exit(0);
             if (ConfigFactory.load().getBoolean("grammar.writeCandidateSpaces")) {
                 CandidateSpacesToTables.writeToFile(candidateSpaces, outputPath+"/candidateSpaces");
             }

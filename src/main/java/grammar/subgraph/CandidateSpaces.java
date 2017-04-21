@@ -9,15 +9,13 @@ import grammar.dynamic.DynamicNetworkGrammar;
 import graph.explorer.CorrectCandidateFinder;
 import learn.data.PairDistribution;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by janwillem on 30/03/16.
  */
 public class CandidateSpaces {
+    private static int stopAt = 20;
     private final Map<FormPair, CandidateGraph> spaces;
 
     public CandidateSpaces(Map<FormPair, CandidateGraph> spaces) {
@@ -46,10 +44,15 @@ public class CandidateSpaces {
 
         Collection<FormPair> allPairs = pairDistribution.getKeys();
         Map<FormPair, CandidateGraph> map = new HashMap<>();
-        for (FormPair fp : allPairs) {
+        int numToCreate = stopAt < 0 ? allPairs.size() : stopAt;
+        int count = 0;
+        Iterator<FormPair> pairIterator = allPairs.iterator();
+        while (pairIterator.hasNext() && count < numToCreate) {
+            FormPair fp = pairIterator.next();
             ListMultimap<Form, Form> greenMap = CorrectCandidateFinder.generateCandidateSpace(grammar, fp);
             CandidateGraph candidateGraph = new CandidateGraph(fp, greenMap);
             map.put(fp, candidateGraph);
+            count++;
         }
         return new CandidateSpaces(map);
     }

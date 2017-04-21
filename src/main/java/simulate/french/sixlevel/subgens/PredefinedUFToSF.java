@@ -38,7 +38,7 @@ public class PredefinedUFToSF extends SubGen<UnderlyingForm, SurfaceForm> {
 
     private ISyllabifier syllabifier;
     private EdgeRuleTransformer edgeRuleTransformer;
-    private final int MAX_CONSECUTIVE_C = 3;
+    private final int MAX_CONSECUTIVE_C = 5;
 
     public PredefinedUFToSF() {
 
