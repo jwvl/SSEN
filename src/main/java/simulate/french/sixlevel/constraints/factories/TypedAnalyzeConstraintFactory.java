@@ -45,7 +45,7 @@ public class TypedAnalyzeConstraintFactory extends FormConstraintFactory<MForm> 
             for (Morpheme morpheme: morphologicalWord) {
                 for (MElement mElement: morpheme) {
                     if (!mElement.isConcept()) {
-                        String attribute = mElement.getFeature().getAttribute();
+                        Attribute attribute = mElement.getFeature().attribute;
                         AffixType affixType = AffixType.createInstance(syntacticCategory,attribute);
                         if (!constraintCache.containsKey(affixType)) { //TODO dit kan niet
                             createConstraint(affixType);

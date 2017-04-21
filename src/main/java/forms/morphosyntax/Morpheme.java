@@ -36,9 +36,9 @@ public class Morpheme implements Subform, ElementCollection<MElement> {
      * @return
      */
     private AttributeSet getAttributeSet(ImmutableSortedSet<MElement> features) {
-        Set<String> attributes = Sets.newHashSet();
+        Set<Attribute> attributes = Sets.newHashSet();
         for (MElement mElement : features) {
-            attributes.add(mElement.getFeature().getAttribute());
+            attributes.add(mElement.getFeature().attribute);
         }
         return new AttributeSet(attributes);
     }
@@ -214,7 +214,7 @@ public class Morpheme implements Subform, ElementCollection<MElement> {
     public boolean containsAffixType(AffixType type) {
         if (type.getSyntacticCategory() == syntacticCategory) {
              for (MElement mElement: features) {
-                 if (mElement.getFeature().getAttribute().equals(type.getAttribute())) {
+                 if (mElement.getFeature().attribute.equals(type.getAttribute())) {
                      return true;
                  }
              }
@@ -227,7 +227,7 @@ public class Morpheme implements Subform, ElementCollection<MElement> {
         AffixType[] result = new AffixType[this.size()];
         int count = 0;
         for (MElement mElement: this) {
-            result[count++] = AffixType.createInstance(syntacticCategory,mElement.getFeature().getAttribute());
+            result[count++] = AffixType.createInstance(syntacticCategory,mElement.getFeature().attribute);
         }
         return result;
     }

@@ -9,7 +9,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import forms.ElementCollection;
 import forms.primitives.Subform;
-import forms.primitives.feature.MorphologicalFeature;
+import forms.primitives.feature.AbstractMFeature2;
 import util.string.CollectionPrinter;
 
 import java.util.*;
@@ -79,14 +79,14 @@ public class SyntacticWord implements Subform, ElementCollection<MElement> {
         String conceptString = firstElementContents.next();
         result.concept = MElement.createConcept(conceptString);
         while (firstElementContents.hasNext()) {
-            MorphologicalFeature parsed = parseAttributeAndValue(firstElementContents.next());
+            AbstractMFeature2 parsed = parseAttributeAndValue(firstElementContents.next());
             result.addElement(MElement.getInstance(parsed, MFeatureType.FIXED));
         }
 
         // Rest are selected features
         for (int i = 1; i < ingredients.size(); i++) {
             String currentFeature = ingredients.get(i);
-            MorphologicalFeature parsed = parseAttributeAndValue(currentFeature);
+            AbstractMFeature2 parsed = parseAttributeAndValue(currentFeature);
             result.addElement(MElement.getInstance(parsed, MFeatureType.SELECTED));
         }
 
@@ -114,12 +114,12 @@ public class SyntacticWord implements Subform, ElementCollection<MElement> {
      * @param s String to parse
      * @return The MFeature parsed from the string
      */
-    private static MorphologicalFeature parseAttributeAndValue(String s) {
+    private static AbstractMFeature2 parseAttributeAndValue(String s) {
         List<String> contents = Splitter.on("=").splitToList(s);
         if (contents.size() < 2) {
             System.err.println("Cannot parse " + s);
         }
-        return MorphologicalFeature.getInstance(contents.get(0), contents.get(1));
+        return AbstractMFeature2.getMorphologicalFeature(contents.get(0), contents.get(1));
     }
 
     /**
@@ -188,8 +188,8 @@ public class SyntacticWord implements Subform, ElementCollection<MElement> {
         List<MElement> result = Lists.newArrayList();
         result.add(concept);
         result.addAll(getAllExpressedFeatures());
-//		System.out.println("Returning non-null features in " + this);
-//		System.out.println(CollectionPrinter.collectionToString(result, " ~~ "));
+		System.out.println("Returning non-null features in " + this);
+		System.out.println(CollectionPrinter.collectionToString(result, " ~~ "));
         return result;
     }
 
@@ -199,9 +199,9 @@ public class SyntacticWord implements Subform, ElementCollection<MElement> {
 
     protected Set<MElement> getAllExpressedFeatures() {
         Set<MElement> result = new HashSet<MElement>(morphologicalElements.size());
-        for (MElement f : morphologicalElements) {
-            if (f.getFeature().expressesValue()) {
-                result.add(f);
+        for (MElement m : morphologicalElements) {
+            if (!m.getFeature().isNull()) {
+                result.add(m);
             }
         }
         return result;

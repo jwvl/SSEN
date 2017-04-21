@@ -7,12 +7,11 @@ import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Ordering;
 import com.google.common.collect.Table;
 import forms.primitives.Subform;
-import forms.primitives.feature.AbstractMFeature;
-import forms.primitives.feature.MorphologicalFeature;
-import forms.primitives.feature.SemanticFeature;
+import forms.primitives.feature.AbstractMFeature2;
 
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -23,9 +22,9 @@ import java.util.Set;
  */
 public class MElement implements Subform, Comparable<MElement> {
     private static int SERIAL_COUNTER = 0;
-    private static Table<AbstractMFeature, MFeatureType, MElement> cache = HashBasedTable.create();
+    private static Table<AbstractMFeature2, MFeatureType, MElement> cache = HashBasedTable.create();
     private final int serialNumber;
-    private final AbstractMFeature feature;
+    private final AbstractMFeature2 feature;
     private final MFeatureType type;
 
     public int getSerialNumber() {
@@ -37,7 +36,7 @@ public class MElement implements Subform, Comparable<MElement> {
      *
      * @param f Feature to wrap around
      */
-    private MElement(AbstractMFeature f, MFeatureType type) {
+    private MElement(AbstractMFeature2 f, MFeatureType type) {
         this.feature = f;
         this.serialNumber = SERIAL_COUNTER++;
         this.type = type;
@@ -49,7 +48,7 @@ public class MElement implements Subform, Comparable<MElement> {
      * @param f Feature to wrap around
      * @return
      */
-    public static MElement getInstance(AbstractMFeature f, MFeatureType t) {
+    public static MElement getInstance(AbstractMFeature2 f, MFeatureType t) {
         MElement result = cache.get(f, t);
         if (result == null) {
             result = new MElement(f, t);
@@ -82,7 +81,7 @@ public class MElement implements Subform, Comparable<MElement> {
      * @return true if this MElement represents a feature.
      */
     public boolean isConcept() {
-        return feature instanceof SemanticFeature;
+        return feature.isConcept();
     }
 
     /**
@@ -90,7 +89,7 @@ public class MElement implements Subform, Comparable<MElement> {
      *
      * @return the feature
      */
-    public AbstractMFeature getFeature() {
+    public AbstractMFeature2 getFeature() {
         return feature;
     }
 
@@ -128,23 +127,18 @@ public class MElement implements Subform, Comparable<MElement> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         MElement mElement = (MElement) o;
-
-        if (feature != null ? !feature.equals(mElement.feature) : mElement.feature != null) return false;
-        return type == mElement.type;
-
+        return Objects.equals(feature, mElement.feature) &&
+                type == mElement.type;
     }
 
     @Override
     public int hashCode() {
-        int result = feature != null ? feature.hashCode() : 0;
-        result = 31 * result + (type != null ? type.hashCode() : 0);
-        return result;
+        return Objects.hash(feature, type);
     }
 
     public boolean attributeEquals(MElement other) {
-        return (feature.attributeEquals(other.feature));
+        return (feature.attribute == other.feature.attribute);
     }
 
     /**
@@ -155,7 +149,7 @@ public class MElement implements Subform, Comparable<MElement> {
      */
     public static MElement createConcept(String concept) {
         System.out.println("Attempting to create Concept from string " + concept);
-        SemanticFeature sf = SemanticFeature.getInstance(concept);
+        AbstractMFeature2 sf = AbstractMFeature2.getSemanticFeature(concept);
         return getInstance(sf, MFeatureType.CONCEPT);
     }
 
@@ -168,7 +162,7 @@ public class MElement implements Subform, Comparable<MElement> {
      */
     public static MElement createFromStrings(String attribute, String value,
                                              MFeatureType type) {
-        MorphologicalFeature mf = MorphologicalFeature.getInstance(attribute,
+        AbstractMFeature2 mf = AbstractMFeature2.getInstance(attribute,
                 value);
         return getInstance(mf, type);
     }
@@ -188,22 +182,22 @@ public class MElement implements Subform, Comparable<MElement> {
      * @return
      */
     public boolean expressesValue() {
-        return feature.expressesValue();
+        return !feature.isNull();
+    }
+
+    public String getFeatureValue() {
+        return feature.value;
     }
 
     /**
      * @return
      */
     public Set<MElement> getRealizationSet() {
-        MorphologicalFeature thisOne = (MorphologicalFeature) feature;
-        boolean getNulls = (type != MFeatureType.FIXED);
-        Collection<MorphologicalFeature> asFeatures = thisOne.getExpressedSet();
+        boolean removeNulls = (type == MFeatureType.FIXED);
+        Collection<AbstractMFeature2> asFeatures = feature.getExpressedSet(removeNulls);
         Set<MElement> result = new HashSet<MElement>(asFeatures.size());
-        for (MorphologicalFeature mf : asFeatures) {
+        for (AbstractMFeature2 mf : asFeatures) {
             result.add(getInstance(mf, this.type));
-        }
-        if (getNulls) {
-            result.add(getInstance(thisOne.getNullInstance(), this.type));
         }
         return result;
     }

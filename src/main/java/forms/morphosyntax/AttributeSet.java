@@ -3,24 +3,23 @@
  */
 package forms.morphosyntax;
 
-import com.google.common.collect.ImmutableSet;
 import util.string.CollectionPrinter;
 
 import java.util.Collection;
 import java.util.Collections;
+import java.util.EnumSet;
 import java.util.Objects;
-import java.util.Set;
 
 /**
  * @author jwvl
  * @date Jul 31, 2015
  */
 public class AttributeSet {
-    private final Set<String> attributes;
+    private final EnumSet<Attribute> attributes;
     public final static AttributeSet STEM = createStemAttribute();
 
-    public AttributeSet(Collection<String> attributes) {
-        this.attributes = ImmutableSet.copyOf(attributes);
+    public AttributeSet(Collection<Attribute> attributes) {
+        this.attributes = EnumSet.copyOf(attributes);
     }
 
     @Override
@@ -45,8 +44,7 @@ public class AttributeSet {
      * @return
      */
     private static AttributeSet createStemAttribute() {
-        String attribute = "Stem";
-        return new AttributeSet(Collections.singleton(attribute));
+        return new AttributeSet(Collections.singleton(Attribute.CONCEPT));
     }
 
 }

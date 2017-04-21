@@ -15,18 +15,18 @@ import com.google.common.base.Objects;
  */
 public class AffixType {
     private final SyntacticCategory syntacticCategory;
-    private final String attribute;
+    private final Attribute attribute;
 
     /**
      * @param syntacticCategory
      * @param attribute
      */
-    private AffixType(SyntacticCategory syntacticCategory, String attribute) {
+    private AffixType(SyntacticCategory syntacticCategory, Attribute attribute) {
         this.syntacticCategory = syntacticCategory;
         this.attribute = attribute;
     }
 
-    public static AffixType createInstance(SyntacticCategory syntacticCategory, String attribute) {
+    public static AffixType createInstance(SyntacticCategory syntacticCategory, Attribute attribute) {
         return new AffixType(syntacticCategory, attribute);
     }
 
@@ -62,7 +62,7 @@ public class AffixType {
         return syntacticCategory;
     }
 
-    public String getAttribute() {
+    public Attribute getAttribute() {
         return attribute;
     }
 

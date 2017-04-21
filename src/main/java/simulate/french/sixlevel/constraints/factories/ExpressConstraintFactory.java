@@ -5,7 +5,7 @@ package simulate.french.sixlevel.constraints.factories;
 
 import com.google.common.collect.Sets;
 import forms.morphosyntax.*;
-import forms.primitives.feature.AbstractMFeature;
+import forms.primitives.feature.AbstractMFeature2;
 import simulate.french.sixlevel.constraints.ExpressConstraint;
 
 import java.util.Collection;
@@ -44,10 +44,10 @@ public class ExpressConstraintFactory extends
             for (MElement element : syntacticWord) {
                 // Only add constraints for non-concept features that do not express value
                 if (!element.isConcept()) {
-                    AbstractMFeature feature = element.getFeature();
-                    if (!feature.expressesValue()) {
+                    AbstractMFeature2 feature = element.getFeature();
+                    if (feature.isNull()) {
                         AffixType affixType = AffixType.createInstance(category,
-                                element.getFeature().getAttribute());
+                                element.getFeature().attribute);
                         result.add(affixType);
                     }
                 }

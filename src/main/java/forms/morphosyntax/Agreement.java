@@ -5,6 +5,8 @@ package forms.morphosyntax;
 
 import util.collections.Couple;
 
+import java.util.Objects;
+
 /**
  * An Agreement object stores a link between two M-features and can be
  * questioned w.r.t whether they correspond. values correspond decides whether
@@ -19,20 +21,20 @@ public class Agreement {
 
     private Agreement(Couple<MElement> features, Couple<SyntacticWord> lexemes) {
         SyntacticCategory dependentCat;
-        String attributeString = features.getLeft().getFeature().getAttribute();
+        Attribute attribute = features.getLeft().getFeature().attribute;
 
         String leftString, rightString;
         if (lexemes.getLeft().isHead()) {
             dependentCat = lexemes.getRight().getSyntacticCategory();
-            leftString = features.getLeft().getFeature().getValue();
-            rightString = features.getRight().getFeature().getValue();
+            leftString = features.getLeft().getFeatureValue();
+            rightString = features.getRight().getFeatureValue();
         } else {
             dependentCat = lexemes.getLeft().getSyntacticCategory();
-            rightString = features.getLeft().getFeature().getValue();
-            leftString = features.getRight().getFeature().getValue();
+            rightString = features.getLeft().getFeatureValue();
+            leftString = features.getRight().getFeatureValue();
         }
         featureValues = Couple.of(leftString, rightString);
-        affixType = AffixType.createInstance(dependentCat, attributeString);
+        affixType = AffixType.createInstance(dependentCat, attribute);
 
     }
 
@@ -65,19 +67,13 @@ public class Agreement {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         Agreement agreement = (Agreement) o;
-
-        if (featureValues != null ? !featureValues.equals(agreement.featureValues) : agreement.featureValues != null)
-            return false;
-        return affixType != null ? affixType.equals(agreement.affixType) : agreement.affixType == null;
-
+        return Objects.equals(featureValues, agreement.featureValues) &&
+                Objects.equals(affixType, agreement.affixType);
     }
 
     @Override
     public int hashCode() {
-        int result = featureValues != null ? featureValues.hashCode() : 0;
-        result = 31 * result + (affixType != null ? affixType.hashCode() : 0);
-        return result;
+        return Objects.hash(featureValues, affixType);
     }
 }

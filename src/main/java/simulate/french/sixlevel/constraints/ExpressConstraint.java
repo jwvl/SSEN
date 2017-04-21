@@ -3,11 +3,10 @@
  */
 package simulate.french.sixlevel.constraints;
 
-import forms.morphosyntax.*;
-import forms.primitives.feature.AbstractMFeature;
-import forms.primitives.feature.MorphologicalFeature;
-import grammar.levels.predefined.BiPhonSix;
 import constraints.FormConstraint;
+import forms.morphosyntax.*;
+import forms.primitives.feature.AbstractMFeature2;
+import grammar.levels.predefined.BiPhonSix;
 
 /**
  * @author jwvl
@@ -16,13 +15,13 @@ import constraints.FormConstraint;
 public class ExpressConstraint extends FormConstraint<MStructure> {
 
     private final SyntacticCategory syntacticCategory;
-    private final MorphologicalFeature prohibitedFeature;
+    private final AbstractMFeature2 prohibitedFeature;
 
     private ExpressConstraint(SyntacticCategory syntacticCategory,
-                              String attribute) {
+                              Attribute attribute) {
         super(BiPhonSix.getMstructureLevel());
         this.syntacticCategory = syntacticCategory;
-        this.prohibitedFeature = MorphologicalFeature.getNullInstance(attribute);
+        this.prohibitedFeature = AbstractMFeature2.getNullInstance(attribute);
     }
 
 
@@ -49,7 +48,7 @@ public class ExpressConstraint extends FormConstraint<MStructure> {
     private boolean containsTransgressiveFeature(SyntacticWord syntacticWord) {
         if (syntacticWord.getSyntacticCategory().equals(syntacticCategory)) {
             for (MElement element : syntacticWord) {
-                AbstractMFeature feature = element.getFeature();
+                AbstractMFeature2 feature = element.getFeature();
                 if (feature.equals(prohibitedFeature)) {
                     return true;
                 }
@@ -67,7 +66,7 @@ public class ExpressConstraint extends FormConstraint<MStructure> {
     public String toString() {
         StringBuilder result = new StringBuilder("Express ");
         result.append(syntacticCategory.toString()).append(" - ");
-        result.append(prohibitedFeature.getAttribute());
+        result.append(prohibitedFeature.attribute);
         return result.toString();
     }
 
