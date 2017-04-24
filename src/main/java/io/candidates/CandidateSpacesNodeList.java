@@ -3,7 +3,12 @@ package io.candidates;
 import com.google.common.base.Charsets;
 import com.google.common.collect.*;
 import com.google.common.io.Resources;
+
+import forms.Form;
+import forms.FormPair;
 import grammar.Grammar;
+import grammar.dynamic.DynamicNetworkGrammar;
+import grammar.subgraph.CandidateGraph;
 import grammar.subgraph.CandidateSpaces;
 import learn.data.PairDistribution;
 
@@ -12,6 +17,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Stack;
 
 /**
  * Created by janwillem on 21/04/2017.
@@ -60,6 +66,7 @@ public class CandidateSpacesNodeList {
         return formsPerLevel.get(formPairIndex,level).contains(form);
     }
 
+
     public boolean hasForm(String formPair, int level, String form) {
         return hasForm(formPairToInt.get(formPair),level,form);
     }
@@ -75,7 +82,23 @@ public class CandidateSpacesNodeList {
         return new CandidateSpacesNodeList(result);
     }
 
-    public CandidateSpaces toCandidateSpaces(PairDistribution pairDistribution, Grammar grammar) {
+    public CandidateSpaces toCandidateSpaces(PairDistribution pairDistribution, DynamicNetworkGrammar grammar) {
+        Map<FormPair,CandidateGraph> contents = Maps.newHashMap();
+        for (FormPair formPair: pairDistribution.getKeys()) {
+            CandidateGraph candidateGraph = getCandidateGraph(formPair, grammar);
+            contents.put(formPair, candidateGraph);
+        }
+        return new CandidateSpaces(contents);
+    }
 
+    private CandidateGraph getCandidateGraph(FormPair formPair, DynamicNetworkGrammar grammar) {
+        ListMultimap<Form,Form> mappings = ArrayListMultimap.create();
+        String formPairAsString = formPair.toString();
+        Set<Form> visited = Sets.newHashSet();
+        Stack<Form> toExpand = new Stack<>();
+        toExpand.add(formPair.left());
+        while (!toExpand.isEmpty()) {
+            List<Form> successors = grammar.getSuccessors(); // TODO afmaken
+        }
     }
 }
