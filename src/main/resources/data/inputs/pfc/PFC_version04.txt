@@ -519,7 +519,6 @@ DET{ArtDef}, N{armée.g=F num=SG}*	laʁme	1	0
 ADJ{armé}, N{américain.g=F num=SG}*	aʁmeameʁikɛn	1	0
 ADJ{tout}, N{heureux.g=M num=PL}*	tuøʁø	1	0
 DET{ArtInd}, N{soldat.g=M num=PL}*	desɔlda	1	0
-ADJ{arrivé}, N{derrière.g=M num=SG}*	aʁivedɛʁjɛʁ	1	0
 DET{Dem}, N{période.g=F num=SG}*	sɛtpeʁjɔd	1	0
 ADJ{grand}, N{ville.g=F num=SG}*	gʁ&dvil	1	0
 ADJ{petit}, N{détail.g=M num=SG}*	pətidetaj	1	0
@@ -1345,7 +1344,6 @@ DET{PossM}, N{père.g=M num=SG}*	mQpɛʁ	1	0
 DET{ArtDef}, N{turc.g=M num=SG}*	lətyʁk	1	0
 DET{ArtInd}, N{moment.g=M num=SG}*	3mom&	1	0
 DET{PossM}, N{balai.g=M num=SG}*	mQbalɛ	1	0
-ADJ{continue}, N{son.g=M num=SG}*	kQtinysQ	1	0
 DET{PossS}, N{histoire.g=F num=SG}*	sQistwaʁ	1	0
 DET{ArtDef}, N{turc.g=M num=SG}*	lətyʁk	1	0
 ADJ{même}, N{moment.g=M num=SG}*	mɛmmom&	1	0
@@ -1776,7 +1774,6 @@ DET{ArtDef}, N{opportunité.g=F num=PL}*	leopɔʁtynite	1	0
 DET{ArtDef}, N{opportunité.g=F num=PL}*	leopɔʁtynite	1	0
 DET{ArtInd}, N{appart.g=M num=SG}*	3napaʁt	1	1
 DET{ArtDef}, N{sujet.g=M num=SG}*	ləsyʒɛ	1	0
-ADJ{sujet}, N{tabou.g=M num=SG}*	syʒɛtabu	1	0
 DET{Dem}, N{moment.g=M num=SG}*	sømom&	1	0
 DET{ArtDef}, N{monde.g=M num=SG}*	ləmQd	1	0
 DET{ArtInd}, N{appart.g=M num=SG}*	3napaʁt	1	1
@@ -1836,7 +1833,6 @@ DET{ArtDef}, N{week-end.g=M num=SG}*	ləwikɛnd	1	0
 DET{ArtDef}, N{week-end.g=M num=SG}*	ləwikɛnd	1	0
 DET{ArtInd}, N{question.g=F num=SG}*	ynkɛstjQ	1	0
 DET{ArtInd}, N{champignon.g=M num=SG}*	3ʃ&piɲQ	1	0
-ADJ{non}, N{toxique.g=M num=SG}*	nQtɔksik	1	0
 DET{ArtInd}, N{question.g=F num=SG}*	ynkɛstjQ	1	0
 DET{ArtDef}, N{question.g=F num=SG}*	lakɛstjQ	1	0
 DET{ArtInd}, N{truc.g=M num=SG}*	3tʁyk	1	0
@@ -1976,7 +1972,6 @@ DET{ArtInd}, N{chose.g=F num=PL}*	deʃoz	1	0
 DET{ArtDef}, N{année.g=F num=SG}*	lane	1	0
 DET{PossV}, N{caractéristique.g=F num=PL}*	vokaʁakteʁistik	1	0
 DET{ArtInd}, N{caractéristique.g=F num=PL}*	dekaʁakteʁistik	1	0
-ADJ{caractéristique}, N{parisien.g=F num=PL}*	kaʁakteʁistikpaʁizjɛn	1	0
 DET{ArtInd}, N{caractéristique.g=F num=PL}*	dekaʁakteʁistik	1	0
 ADJ{autre}, N{chose.g=F num=SG}*	otʁʃoz	1	0
 DET{ArtInd}, N{peu.g=M num=SG}*	3pø	1	0
@@ -2227,7 +2222,6 @@ ADJ{premier}, N{année.g=F num=PL}*	pʁømjɛʁzane	1	1
 DET{ArtInd}, N{appart.g=M num=SG}*	3apaʁt	1	0
 ADJ{premier}, N{fois.g=F num=PL}*	pʁømjɛʁfwa	1	0
 DET{ArtDef}, N{étude.g=F num=PL}*	leetyd	1	0
-ADJ{juste}, N{venue.g=F num=SG}*	ʒystvəny	1	0
 ADJ{premier}, N{fois.g=F num=PL}*	pʁømjɛʁfwa	1	0
 ADJ{quelques}, N{année.g=F num=PL}*	kɛlkzane	1	1
 ADJ{quelques}, N{jour.g=M num=PL}*	kɛlkʒuʁ	1	0
@@ -2561,7 +2555,6 @@ DET{ArtInd}, N{raisin.g=M num=PL}*	deʁɛz3	1	0
 DET{ArtDef}, N{champagne.g=M num=SG}*	ləʃ&paɲ	1	0
 DET{ArtDef}, N{télévision.g=F num=SG}*	latelevizjQ	1	0
 DET{ArtDef}, N{télévision.g=F num=SG}*	latelevizjQ	1	0
-ADJ{national}, N{espagnol.g=F num=SG}*	nasjonalɛspaɲɔl	1	0
 DET{ArtDef}, N{bruit.g=M num=SG}*	ləbʁɥi	1	0
 DET{ArtInd}, N{cloche.g=F num=PL}*	deklɔʃ	1	0
 DET{ArtDef}, N{raisin.g=M num=PL}*	leʁɛz3	1	0
@@ -2628,7 +2621,6 @@ DET{ArtDef}, N{capitale.g=F num=SG}*	lakapital	1	0
 DET{ArtDef}, N{cinéma.g=M num=SG}*	ləsinema	1	0
 DET{ArtDef}, N{cinéma.g=M num=SG}*	ləsinema	1	0
 DET{ArtDef}, N{capitale.g=F num=SG}*	lakapital	1	0
-ADJ{capital}, N{mondiale.g=M num=PL}*	kapitalmQdjal	1	0
 DET{ArtDef}, N{cinéma.g=M num=SG}*	ləsinema	1	0
 DET{ArtDef}, N{occasion.g=F num=SG}*	lokazjQ	1	0
 DET{ArtInd}, N{pause.g=F num=SG}*	ynpoz	1	0
@@ -3109,9 +3101,7 @@ ADJ{chaque}, N{fois.g=F num=SG}*	ʃakfwa	1	0
 DET{ArtDef}, N{chambre.g=F num=PL}*	leʃ&bʁ	1	0
 DET{ArtDef}, N{université.g=F num=SG}*	lynivɛʁsite	1	0
 ADJ{grand}, N{ensemble.g=M num=SG}*	gʁ&&s&bl	1	0
-ADJ{cité}, N{international.g=F num=SG}*	site3tɛʁnasjonal	1	0
 DET{ArtDef}, N{cité.g=F num=SG}*	lasite	1	0
-ADJ{cité}, N{international.g=F num=SG}*	site3tɛʁnasjonal	1	0
 DET{ArtDef}, N{soir.g=M num=SG}*	ləswaʁ	1	0
 DET{ArtDef}, N{an.g=M num=PL}*	le&	1	0
 DET{ArtInd}, N{fête.g=F num=PL}*	defɛt	1	0
@@ -3392,7 +3382,6 @@ DET{ArtDef}, N{passeport.g=M num=SG}*	ləpaspɔʁ	1	0
 DET{ArtDef}, N{nom.g=M num=SG}*	lənQ	1	0
 DET{ArtInd}, N{fois.g=F num=PL}*	defwa	1	0
 DET{ArtInd}, N{exposé.g=M num=SG}*	3ɛkspoze	1	0
-ADJ{exposé}, N{ensemble.g=M num=SG}*	ɛkspoze&s&bl	1	0
 DET{ArtDef}, N{monde.g=M num=SG}*	ləmQd	1	0
 DET{ArtDef}, N{belote.g=F num=SG}*	labəlɔt	1	0
 DET{ArtDef}, N{droit.g=M num=SG}*	lədʁwa	1	0
@@ -3706,7 +3695,6 @@ DET{ArtDef}, N{son.g=M num=SG}*	ləsQ	1	0
 DET{ArtInd}, N{heure.g=F num=SG}*	ynœʁ	1	0
 NUM{onze}, N{heure.g=F num=PL}*	Qzœʁ	1	0
 DET{ArtDef}, N{conversation.g=F num=PL}*	lekQvɛʁsasjQ	1	0
-ADJ{battu}, N{machin.g=M num=SG}*	batymaʃ3	1	0
 DET{ArtDef}, N{armure.g=F num=SG}*	laʁmyʁ	1	0
 DET{ArtInd}, N{épisode.g=M num=PL}*	deepizɔd	1	0
 NUM{dix}, N{minute.g=F num=PL}*	disminyt	1	0
@@ -3744,7 +3732,6 @@ DET{ArtDef}, N{muscle.g=M num=PL}*	lemyskl	1	0
 DET{ArtDef}, N{version.g=F num=SG}*	lavɛʁsjQ	1	0
 DET{ArtDef}, N{mec.g=M num=SG}*	ləmɛk	1	0
 ADJ{tout}, N{noir.g=M num=SG}*	tunwaʁ	1	0
-ADJ{japonais}, N{initiale.g=F num=SG}*	ʒaponɛzinisjal	1	0
 DET{ArtInd}, N{peu.g=M num=SG}*	3pø	1	0
 DET{ArtInd}, N{dessin.g=M num=SG}*	3des3	1	0
 DET{ArtDef}, N{affaire.g=F num=SG}*	lafɛʁ	1	0
@@ -3752,7 +3739,6 @@ DET{ArtDef}, N{moustache.g=F num=PL}*	lemustaʃ	1	0
 ADJ{petit}, N{con.g=M num=SG}*	pətikQ	1	0
 DET{ArtDef}, N{version.g=F num=SG}*	lavɛʁsjQ	1	0
 DET{ArtDef}, N{version.g=F num=SG}*	lavɛʁsjQ	1	0
-ADJ{original}, N{japonais.g=F num=SG}*	oʁiʒinalʒaponɛz	1	0
 DET{ArtDef}, N{version.g=F num=SG}*	lavɛʁsjQ	1	0
 DET{ArtDef}, N{meuf.g=F num=SG}*	lemœf	1	0
 DET{ArtDef}, N{version.g=F num=SG}*	lavɛʁsjQ	1	0
@@ -4108,9 +4094,7 @@ DET{ArtDef}, N{minimum.g=M num=SG}*	ləminimɔm	1	0
 DET{ArtInd}, N{yaourt.g=M num=SG}*	3jauʁt	1	0
 DET{ArtInd}, N{pomme.g=F num=SG}*	ynpɔm	1	0
 NUM{trente-neuf}, N{franc.g=M num=PL}*	tʁ&tnœffʁ&	1	0
-ADJ{franc}, N{quatre-vingt.g=M num=PL}*	fʁ&katʁəv3	1	0
 DET{ArtDef}, N{différence.g=F num=SG}*	ladifeʁ&s	1	0
-ADJ{fin}, N{septembre.g=M num=PL}*	f3sɛpt&bʁ	1	0
 DET{ArtDef}, N{équipe.g=F num=SG}*	lekip	1	0
 DET{ArtDef}, N{prix.g=M num=PL}*	lepʁi	1	0
 ADJ{petit}, N{plat.g=M num=PL}*	pətipla	1	0
@@ -4511,7 +4495,6 @@ DET{ArtDef}, N{histoire.g=F num=SG}*	listwaʁ	1	0
 ADJ{même}, N{temps.g=M num=SG}*	mɛmt&	1	0
 DET{ArtDef}, N{histoire.g=F num=SG}*	listwaʁ	1	0
 DET{ArtDef}, N{turc.g=M num=SG}*	lətyʁk	1	0
-ADJ{continue}, N{son.g=M num=SG}*	kQtinysQ	1	0
 DET{PossS}, N{histoire.g=F num=SG}*	sQistwaʁ	1	0
 ADJ{même}, N{moment.g=M num=SG}*	mɛmmom&	1	0
 DET{PossM}, N{balai.g=M num=SG}*	mQbalɛ	1	0
@@ -4618,17 +4601,14 @@ DET{ArtDef}, N{choix.g=M num=SG}*	ləʃwa	1	0
 DET{ArtDef}, N{thèse.g=F num=SG}*	latɛz	1	0
 ADJ{bon}, N{revers.g=M num=SG}*	bQʁəvɛʁ	1	0
 DET{PossM}, N{parent.g=M num=PL}*	mepaʁ&	1	0
-ADJ{parent}, N{derrière.g=M num=SG}*	paʁ&dɛʁjɛʁ	1	0
 DET{PossM}, N{étude.g=F num=PL}*	mezetyd	1	1
 DET{PossM}, N{fille.g=F num=SG}*	mafij	1	0
 DET{ArtDef}, N{coiffure.g=F num=SG}*	lakwafyʁ	1	0
 DET{ArtInd}, N{étude.g=F num=PL}*	dezetyd	1	1
-ADJ{général}, N{possible.g=M num=PL}*	ʒeneʁalposibl	1	0
 DET{PossT}, N{frère.g=M num=SG}*	tQfʁɛʁ	1	0
 DET{ArtDef}, N{fait.g=M num=SG}*	ləfɛ	1	0
 NUM{deux}, N{an.g=M num=PL}*	døz&	1	1
 DET{ArtInd}, N{seconde.g=F num=SG}*	ynsəgQd	1	0
-ADJ{seconder}, N{général.g=F num=SG}*	səgQdʒeneʁal	1	0
 DET{ArtDef}, N{année.g=F num=SG}*	lane	1	0
 DET{ArtInd}, N{chaussure.g=F num=PL}*	deʃosyʁ	1	0
 DET{ArtDef}, N{chaussure.g=F num=PL}*	leʃosyʁ	1	0
@@ -4664,7 +4644,6 @@ DET{ArtDef}, N{revêtement.g=M num=SG}*	ləʁəvɛtəm&	1	0
 DET{ArtInd}, N{modèle.g=M num=SG}*	3modɛl	1	0
 DET{ArtDef}, N{talon.g=M num=SG}*	lətalQ	1	0
 DET{ArtDef}, N{revêtement.g=M num=SG}*	ləʁəvɛtəm&	1	0
-ADJ{rose}, N{noir.g=M num=SG}*	ʁoznwaʁ	1	0
 NUM{quinze}, N{euro.g=M num=PL}*	k3zøʁo	1	0
 ADJ{tout}, N{cuir.g=M num=SG}*	tukɥiʁ	1	0
 DET{ArtInd}, N{truc.g=M num=PL}*	detʁyk	1	0
@@ -4840,7 +4819,6 @@ NUM{quinze}, N{an.g=M num=PL}*	k3z&	1	0
 NUM{soixante}, N{électricien.g=M num=SG}*	swas&telɛktʁisj3	1	0
 DET{ArtDef}, N{représentation.g=F num=SG}*	laʁəpʁez&tasjQ	1	0
 DET{ArtDef}, N{représentation.g=F num=SG}*	laʁəpʁez&tasjQ	1	0
-ADJ{responsable}, N{régional.g=M num=SG}*	ʁɛspQsablʁeʒjonal	1	0
 DET{ArtDef}, N{matériel.g=M num=SG}*	ləmateʁjɛl	1	0
 ADJ{grand}, N{installation.g=F num=SG}*	gʁ&d3stalasjQ	1	0
 ADJ{gros}, N{produit.g=M num=SG}*	gʁopʁodɥi	1	0
@@ -4999,7 +4977,6 @@ DET{ArtDef}, N{étude.g=F num=PL}*	lezetyd	1	1
 DET{ArtInd}, N{brevet.g=M num=SG}*	3bʁøvɛ	1	0
 DET{ArtInd}, N{certificat.g=M num=SG}*	3sɛʁtifika	1	0
 DET{ArtInd}, N{langue.g=F num=PL}*	del&g	1	0
-ADJ{régional}, N{étranger.g=F num=PL}*	ʁeʒjonaletʁ&ʒɛʁ	1	0
 DET{ArtDef}, N{français.g=M num=SG}*	ləfʁ&sɛ	1	0
 DET{ArtInd}, N{s.g=M num=PL}*	deɛs	1	0
 DET{ArtInd}, N{frère.g=M num=PL}*	defʁɛʁ	1	0
@@ -5470,7 +5447,6 @@ DET{ArtInd}, N{congrès.g=M num=PL}*	dekQgʁɛ	1	0
 DET{ArtInd}, N{domaine.g=M num=SG}*	3domɛn	1	0
 DET{ArtInd}, N{peu.g=M num=SG}*	3pø	1	0
 DET{ArtDef}, N{liberté.g=F num=SG}*	lalibɛʁte	1	0
-ADJ{ultra}, N{libéralisme.g=M num=SG}*	yltʁalibeʁalizm	1	0
 DET{ArtDef}, N{recherche.g=F num=SG}*	laʁəʃɛʁʃ	1	0
 ADJ{certain}, N{domaine.g=M num=PL}*	sɛʁt3domɛn	1	0
 DET{ArtDef}, N{domaine.g=M num=PL}*	ledomɛn	1	0
@@ -5478,7 +5454,6 @@ DET{ArtInd}, N{domaine.g=M num=PL}*	dedomɛn	1	0
 DET{ArtDef}, N{produit.g=M num=SG}*	ləpʁodɥi	1	0
 DET{ArtDef}, N{recherche.g=F num=SG}*	laʁəʃɛʁʃ	1	0
 DET{ArtDef}, N{recherche.g=F num=SG}*	laʁəʃɛʁʃ	1	0
-ADJ{appliqué}, N{moins.g=M num=PL}*	aplikemw3	1	0
 DET{ArtDef}, N{recherche.g=F num=SG}*	laʁəʃɛʁʃ	1	0
 DET{ArtDef}, N{problème.g=M num=SG}*	ləpʁoblɛm	1	0
 ADJ{court}, N{terme.g=M num=SG}*	kuʁtɛʁm	1	0
@@ -5873,7 +5848,6 @@ DET{ArtDef}, N{étude.g=F num=PL}*	leetyd	1	0
 DET{ArtDef}, N{bac.g=M num=SG}*	ləbak	1	0
 DET{ArtDef}, N{bac.g=M num=SG}*	ləbak	1	0
 DET{ArtDef}, N{école.g=F num=SG}*	lekɔl	1	0
-ADJ{réussi}, N{son.g=M num=SG}*	ʁeysisQ	1	0
 DET{PossS}, N{diplôme.g=M num=SG}*	sQdiplom	1	0
 ADJ{troisième}, N{année.g=F num=SG}*	tʁwazjɛmane	1	0
 DET{PossS}, N{diplôme.g=M num=SG}*	sQdiplom	1	0
@@ -7331,7 +7305,6 @@ N{gré.g=M num=SG}*	gʁe	1	0
 N{habitude.g=F num=SG}*	abityd	1	0
 N{émoi.g=M num=SG}*	emwa	1	0
 N{père.g=M num=SG}*	pɛʁ	1	0
-ADJ{seconder}	səgQd	1	0
 ADJ{troisième}	tʁwazjɛm	1	0
 N{chimie.g=F num=SG}*	ʃimi	1	0
 N{transport.g=M num=PL}*	tʁ&spɔʁ	1	0
@@ -7652,7 +7625,6 @@ N{content.g=M num=SG}*	kQt&	1	0
 N{parole.g=F num=PL}*	paʁɔl	1	0
 N{vitre.g=F num=SG}*	vitʁ	1	0
 ADJ{vite}	vit	1	0
-ADJ{exposé}	ɛkspoze	1	0
 N{verbe.g=M num=SG}*	vɛʁb	1	0
 N{beau-père.g=F num=SG}*	bɛlmɛʁ	1	0
 N{but.g=M num=SG}*	by	1	0
@@ -7662,7 +7634,6 @@ N{utilisateur.g=M num=SG}*	ytilizatœʁ	1	0
 N{avis.g=M num=PL}*	avi	1	0
 N{maillot.g=M num=SG}*	majo	1	0
 N{banlieue.g=F num=SG}*	b&ljø	1	0
-ADJ{continue}	kQtiny	1	0
 N{os.g=M num=PL}*	ɔs	1	0
 N{dos.g=M num=PL}*	do	1	0
 N{photo.g=F num=SG}*	foto	1	0

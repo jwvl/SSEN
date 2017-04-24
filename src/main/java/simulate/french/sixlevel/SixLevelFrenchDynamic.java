@@ -165,7 +165,7 @@ public class SixLevelFrenchDynamic {
                             String mString = morpheme.toString();
                             Collection<String> pStrings = stringMultimap.get(mString);
                             if (pStrings.isEmpty()) {
-                                System.err.println("No morphs found for " + mString);
+                                //System.err.println("No morphs found for " + mString);
                                 String altString = mString.replace(".num[SG]","");
                                 altString = altString.replace(".num[PL]","");
                                 pStrings = stringMultimap.get(altString);
@@ -197,6 +197,7 @@ public class SixLevelFrenchDynamic {
                 }
             }
         }
+        System.exit(0);
         if (config.getBoolean("gen.abstractEnabled")) {
             List<String> strings = config.getStringList("gen.abstractPhonemes");
             for (String string: strings) {
@@ -237,11 +238,11 @@ public class SixLevelFrenchDynamic {
             CandidateSpaces candidateSpaces = CandidateSpaces.fromDistribution(pairDistribution, grammar);
             grammar.addCandidateSpaces(candidateSpaces);
             CandidateSpacesToNodeLists.writeToFile(grammar,candidateSpaces,outputPath+"/candidateNodes.txt");
-            System.exit(0);
             if (ConfigFactory.load().getBoolean("grammar.writeCandidateSpaces")) {
                 CandidateSpacesToTables.writeToFile(candidateSpaces, outputPath+"/candidateSpaces");
             }
         }
+        System.exit(0);
 
         Timer timer = new Timer();
 

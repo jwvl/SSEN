@@ -44,6 +44,7 @@ public class CandidateSpacesToNodeLists {
         for (Form form: allForms) {
             nodeStrings.add(i +"\t"+form.getLevelIndex()+"\t"+form.toString());
         }
+
     }
 
     public static void writeLines(List<String> lines, String fileName) {
@@ -63,5 +64,6 @@ public class CandidateSpacesToNodeLists {
         } catch(IOException e) {
             System.err.println("Could not write to " +fileName);
         }
+
     }
 }

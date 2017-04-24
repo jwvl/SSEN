@@ -3,6 +3,9 @@ package io.candidates;
 import com.google.common.base.Charsets;
 import com.google.common.collect.*;
 import com.google.common.io.Resources;
+import grammar.Grammar;
+import grammar.subgraph.CandidateSpaces;
+import learn.data.PairDistribution;
 
 import java.io.IOException;
 import java.net.URL;
@@ -13,11 +16,11 @@ import java.util.Set;
 /**
  * Created by janwillem on 21/04/2017.
  */
-public class CandidateSpacesTable {
+public class CandidateSpacesNodeList {
     private Map<String,Integer> formPairToInt;
     Table<Integer,Integer,Set<String>> formsPerLevel;
 
-    public CandidateSpacesTable(List<String> lines) {
+    public CandidateSpacesNodeList(List<String> lines) {
         this.formPairToInt = Maps.newHashMap();
         formsPerLevel = HashBasedTable.create();
         int maxLevels = Integer.parseInt(lines.get(0).split("\t")[2]);
@@ -61,7 +64,7 @@ public class CandidateSpacesTable {
         return hasForm(formPairToInt.get(formPair),level,form);
     }
 
-    public static CandidateSpacesTable readFromFile(String path) {
+    public static CandidateSpacesNodeList readFromFile(String path) {
         List<String> result = Lists.newArrayList();
         URL url = Resources.getResource(path);
         try {
@@ -69,6 +72,10 @@ public class CandidateSpacesTable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return new CandidateSpacesTable(result);
+        return new CandidateSpacesNodeList(result);
+    }
+
+    public CandidateSpaces toCandidateSpaces(PairDistribution pairDistribution, Grammar grammar) {
+
     }
 }

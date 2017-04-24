@@ -19,7 +19,11 @@ public class AttributeSet {
     public final static AttributeSet STEM = createStemAttribute();
 
     public AttributeSet(Collection<Attribute> attributes) {
-        this.attributes = EnumSet.copyOf(attributes);
+        if (!attributes.isEmpty()) {
+            this.attributes = EnumSet.copyOf(attributes);
+        } else {
+            this.attributes = EnumSet.noneOf(Attribute.class);
+        }
     }
 
     @Override
