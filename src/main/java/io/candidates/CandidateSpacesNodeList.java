@@ -92,13 +92,23 @@ public class CandidateSpacesNodeList {
     }
 
     private CandidateGraph getCandidateGraph(FormPair formPair, DynamicNetworkGrammar grammar) {
-        ListMultimap<Form,Form> mappings = ArrayListMultimap.create();
+        ListMultimap<Form, Form> mappings = ArrayListMultimap.create();
         String formPairAsString = formPair.toString();
         Set<Form> visited = Sets.newHashSet();
         Stack<Form> toExpand = new Stack<>();
         toExpand.add(formPair.left());
         while (!toExpand.isEmpty()) {
-            List<Form> successors = grammar.getSuccessors(); // TODO afmaken
+            Form next = toExpand.pop();
+            List<Form> successors = grammar.getSuccessors(next);
+            visited.add(next);
+            for (Form successor : successors) {
+                int level = successor.getLevelIndex();
+                if (!visited.contains(successor) && hasForm(formPairAsString, level, successor.toString())) {
+                    mappings.put(next, successor);
+                    toExpand.add(successor);
+                }
+            }
         }
+    return new CandidateGraph(formPair,mappings);
     }
 }

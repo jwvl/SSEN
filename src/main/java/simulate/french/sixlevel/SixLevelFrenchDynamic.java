@@ -31,6 +31,7 @@ import grammar.subgraph.CandidateSpaces;
 import grammar.tools.GrammarTester;
 import graph.Direction;
 import io.MyStringTable;
+import io.candidates.CandidateSpacesNodeList;
 import io.candidates.CandidateSpacesToNodeLists;
 import io.candidates.CandidateSpacesToTables;
 import io.utils.PathUtils;
@@ -197,7 +198,6 @@ public class SixLevelFrenchDynamic {
                 }
             }
         }
-        System.exit(0);
         if (config.getBoolean("gen.abstractEnabled")) {
             List<String> strings = config.getStringList("gen.abstractPhonemes");
             for (String string: strings) {
@@ -235,11 +235,19 @@ public class SixLevelFrenchDynamic {
 
         if (ConfigFactory.load().getBoolean("grammar.useCandidateSpaces")) {
             System.out.println("Creating candidate spaces!");
-            CandidateSpaces candidateSpaces = CandidateSpaces.fromDistribution(pairDistribution, grammar);
+            CandidateSpaces candidateSpaces;
+            if (!ConfigFactory.load().getBoolean("grammar.loadCandidateSpaces")) {
+                candidateSpaces = CandidateSpaces.fromDistribution(pairDistribution, grammar);
+
+            } else {
+                String nodesPath = dataFilePath.replace(".txt",".nodes");
+                CandidateSpacesNodeList candidateSpacesNodeList = CandidateSpacesNodeList.readFromFile(nodesPath);
+                candidateSpaces = candidateSpacesNodeList.toCandidateSpaces(pairDistribution,grammar);
+            }
             grammar.addCandidateSpaces(candidateSpaces);
-            CandidateSpacesToNodeLists.writeToFile(grammar,candidateSpaces,outputPath+"/candidateNodes.txt");
+            CandidateSpacesToNodeLists.writeToFile(grammar, candidateSpaces, outputPath + "/candidateNodes.txt");
             if (ConfigFactory.load().getBoolean("grammar.writeCandidateSpaces")) {
-                CandidateSpacesToTables.writeToFile(candidateSpaces, outputPath+"/candidateSpaces");
+                CandidateSpacesToTables.writeToFile(candidateSpaces, outputPath + "/candidateSpaces");
             }
         }
         System.exit(0);
