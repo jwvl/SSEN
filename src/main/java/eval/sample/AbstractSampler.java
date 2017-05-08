@@ -11,23 +11,8 @@ import eval.harmony.autosort.StratifiedDouble;
  * @date Dec 5, 2014
  */
 public abstract class AbstractSampler {
-    protected long counter = 0;
-    private boolean lazy = true;
-
-    public void incrementSampleCount() {
-        counter++;
-    }
 
     public abstract double sampleDouble();
-
-
-    public boolean isLazy() {
-        return lazy;
-    }
-
-    public void setLazy(boolean lazy) {
-        this.lazy = lazy;
-    }
 
     /**
      * @return

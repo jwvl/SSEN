@@ -21,6 +21,7 @@ public class Morpheme implements Subform, ElementCollection<MElement> {
     private final ImmutableSortedSet<MElement> features;
     private final AttributeSet attributes;
     private final SyntacticCategory syntacticCategory;
+    private final int hashcode;
     public final static Morpheme NULL_MORPHEME = new Morpheme();
 
     /*
@@ -30,6 +31,7 @@ public class Morpheme implements Subform, ElementCollection<MElement> {
         syntacticCategory = null;
         features = ImmutableSortedSet.of();
         attributes = getAttributeSet(features);
+        hashcode = Objects.hash(features, syntacticCategory);
     }
 
     /**
@@ -49,6 +51,7 @@ public class Morpheme implements Subform, ElementCollection<MElement> {
         this.syntacticCategory = syntacticCategory;
         // Assert input contained no duplicates
         assert (inputElements.size() == this.features.size());
+        hashcode = Objects.hash(features, syntacticCategory);
     }
 
     public static Morpheme createInstance(List<MElement> inputs, SyntacticCategory syntacticCategory) {
@@ -72,7 +75,7 @@ public class Morpheme implements Subform, ElementCollection<MElement> {
 
     @Override
     public int hashCode() {
-        return Objects.hash(features, syntacticCategory);
+        return hashcode;
     }
 
     /*

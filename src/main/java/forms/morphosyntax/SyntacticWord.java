@@ -28,6 +28,8 @@ public class SyntacticWord implements Subform, ElementCollection<MElement> {
     private AgreementType type;
     private MElement concept;
     private Set<MElement> morphologicalElements;
+    private String asString;
+    private int hashcode;
 
     /**
      * Private constructor.
@@ -35,6 +37,7 @@ public class SyntacticWord implements Subform, ElementCollection<MElement> {
     private SyntacticWord(SyntacticCategory category) {
         this.category = category;
         morphologicalElements = new HashSet<MElement>();
+        hashcode = 0;
     }
 
     /**
@@ -48,6 +51,7 @@ public class SyntacticWord implements Subform, ElementCollection<MElement> {
             MElement copiedElement = f.contextualCopy();
             receiver.morphologicalElements.add(copiedElement);
         }
+        hashcode = 0;
     }
 
     /**
@@ -129,6 +133,8 @@ public class SyntacticWord implements Subform, ElementCollection<MElement> {
      */
     protected void addElement(MElement feature) {
         morphologicalElements.add(feature);
+        asString = null;
+        hashcode = 0;
     }
 
     /*
@@ -151,18 +157,22 @@ public class SyntacticWord implements Subform, ElementCollection<MElement> {
         return 1 + morphologicalElements.size();
     }
 
-    /*
-     * (non-Javadoc)
-     *
-     * @see forms.primitives.SubForm#toString()
-     */
-    @Override
+
     public String toString() {
+        if (asString == null) {
+            asString = generateString();
+        }
+        return asString;
+    }
+
+    public String generateString() {
         StringBuffer result = new StringBuffer("");
         result.append(category);
         result.append('{');
         result.append(concept);
-        for (MElement mf : morphologicalElements) {
+        List<MElement> sorted = Lists.newArrayList(morphologicalElements);
+        Collections.sort(sorted);
+        for (MElement mf : sorted) {
             String appendString = "";
             if (mf.getType() == MFeatureType.FIXED) {
                 appendString = ".";
@@ -188,8 +198,6 @@ public class SyntacticWord implements Subform, ElementCollection<MElement> {
         List<MElement> result = Lists.newArrayList();
         result.add(concept);
         result.addAll(getAllExpressedFeatures());
-		System.out.println("Returning non-null features in " + this);
-		System.out.println(CollectionPrinter.collectionToString(result, " ~~ "));
         return result;
     }
 
@@ -238,6 +246,13 @@ public class SyntacticWord implements Subform, ElementCollection<MElement> {
 
     @Override
     public int hashCode() {
+        if (hashcode == 0) {
+            hashcode = calculateHashCode();
+        }
+        return hashcode;
+    }
+
+    public int calculateHashCode() {
         return Objects.hash(category, type, concept, morphologicalElements);
     }
 

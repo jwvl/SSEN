@@ -10,7 +10,7 @@ import constraints.hierarchy.reimpl.Hierarchy;
 import eval.Evaluation;
 import eval.harmony.CostFactory;
 import eval.harmony.CostType;
-import eval.sample.GaussianXORSampler;
+import eval.sample.XoroShiroSampler;
 import forms.Form;
 import forms.FormPair;
 import forms.GraphForm;
@@ -42,7 +42,7 @@ public class DynamicNetworkEvaluation implements Evaluation {
 
     public DynamicNetworkEvaluation(DynamicNetworkGrammar dynamicNetworkGrammar, double evaluationNoise) {
         this(dynamicNetworkGrammar,
-                dynamicNetworkGrammar.getHierarchy().sample(GaussianXORSampler.createInstance(evaluationNoise)));
+                dynamicNetworkGrammar.getHierarchy().sample(new XoroShiroSampler(evaluationNoise)));
     }
 
     public DynamicNetworkEvaluation(DynamicNetworkGrammar dynamicNetworkGrammar,

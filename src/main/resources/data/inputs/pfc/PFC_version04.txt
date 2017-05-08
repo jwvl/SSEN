@@ -14,7 +14,7 @@ ADJ{autre}, N{enfant.g=M num=PL}*	otʁz&f&	1	1
 DET{PossM}, N{beau-père.g=M num=SG}*	mQbopɛʁ	1	0
 DET{PossM}, N{beau-père.g=M num=SG}*	mQbopɛʁ	1	0
 DET{ArtInd}, N{femme.g=F num=SG}*	ynfam	1	0
-NUM{dix}, N{enfant.g=M num=PL}*	disz&f&	1	1
+NUM{dix}, N{enfant.g=M num=PL}*	diz&f&	1	1
 DET{ArtDef}, N{an.g=M num=PL}*	lez&	1	1
 DET{ArtDef}, N{an.g=M num=PL}*	lez&	1	1
 NUM{huit}, N{jour.g=M num=PL}*	ɥitʒuʁ	1	0
@@ -516,7 +516,6 @@ DET{ArtDef}, N{débrouille.g=F num=SG}*	ladebʁuj	1	0
 ADJ{premier}, N{élément.g=M num=PL}*	pʁømjeelem&	1	0
 ADJ{deuxième}, N{division.g=F num=SG}*	døzjɛmdivizjQ	1	0
 DET{ArtDef}, N{armée.g=F num=SG}*	laʁme	1	0
-ADJ{armé}, N{américain.g=F num=SG}*	aʁmeameʁikɛn	1	0
 ADJ{tout}, N{heureux.g=M num=PL}*	tuøʁø	1	0
 DET{ArtInd}, N{soldat.g=M num=PL}*	desɔlda	1	0
 DET{Dem}, N{période.g=F num=SG}*	sɛtpeʁjɔd	1	0
@@ -1026,8 +1025,8 @@ DET{PossM}, N{mari.g=M num=SG}*	mQmaʁi	1	0
 DET{ArtDef}, N{métro.g=M num=SG}*	ləmetʁo	1	0
 DET{ArtInd}, N{monsieur.g=M num=SG}*	3məsjø	1	0
 DET{ArtDef}, N{monde.g=M num=SG}*	ləmQd	1	0
-NUM{dix-huit}, N{an.g=M num=PL}*	dizɥitt&	1	1
-NUM{dix-neuf}, N{an.g=M num=PL}*	diznœfv&	1	1
+NUM{dix-huit}, N{an.g=M num=PL}*	dizɥit&	1	1
+NUM{dix-neuf}, N{an.g=M num=PL}*	diznœv&	1	1
 DET{ArtInd}, N{habitude.g=F num=SG}*	ynabityd	1	0
 ADJ{quelque}, N{temps.g=M num=SG}*	kɛlkt&	1	0
 DET{ArtDef}, N{autre.g=M num=PL}*	leotʁ	1	0
@@ -1188,7 +1187,7 @@ DET{ArtDef}, N{famille.g=F num=PL}*	lefamij	1	0
 ADJ{plusieurs}, N{personne.g=F num=PL}*	plyzjœʁpɛʁsɔn	1	0
 ADJ{plusieurs}, N{enfant.g=M num=PL}*	plyzjœʁz&f&	1	1
 DET{ArtDef}, N{ferme.g=F num=SG}*	lafɛʁm	1	0
-NUM{six}, N{enfant.g=M num=PL}*	sisz&f&	1	1
+NUM{six}, N{enfant.g=M num=PL}*	siz&f&	1	1
 DET{ArtDef}, N{raison.g=F num=PL}*	leʁɛzQ	1	0
 DET{ArtInd}, N{peu.g=M num=SG}*	3pø	1	0
 DET{ArtDef}, N{évolution.g=F num=SG}*	levolysjQ	1	0
@@ -1238,8 +1237,8 @@ NUM{cinquante}, N{an.g=M num=PL}*	s3k&t&	1	0
 DET{ArtDef}, N{époque.g=F num=SG}*	lepɔk	1	0
 DET{ArtDef}, N{vie.g=F num=SG}*	lavi	1	0
 DET{ArtDef}, N{village.g=M num=SG}*	ləvilaʒ	1	0
-NUM{dix-huit}, N{habitant.g=M num=PL}*	dizɥittabit&	1	1
-NUM{dix}, N{an.g=M num=PL}*	disz&	1	1
+NUM{dix-huit}, N{habitant.g=M num=PL}*	dizɥitabit&	1	1
+NUM{dix}, N{an.g=M num=PL}*	diz&	1	1
 DET{ArtDef}, N{soir.g=M num=SG}*	ləswaʁ	1	0
 DET{ArtInd}, N{belote.g=F num=SG}*	ynbəlɔt	1	0
 ADJ{quatrième}, N{personne.g=F num=SG}*	katʁijɛmpɛʁsɔn	1	0
@@ -2176,7 +2175,7 @@ DET{PossM}, N{étude.g=F num=PL}*	mezetyd	1	1
 DET{ArtInd}, N{licence.g=F num=SG}*	ynlis&s	1	0
 DET{ArtInd}, N{maîtrise.g=F num=SG}*	ynmetʁiz	1	0
 DET{ArtInd}, N{choix.g=M num=SG}*	3ʃwa	1	0
-NUM{six}, N{heure.g=F num=PL}*	siszœʁ	1	1
+NUM{six}, N{heure.g=F num=PL}*	sizœʁ	1	1
 NUM{cinq}, N{heure.g=F num=PL}*	s3kœʁ	1	0
 ADJ{neuf}, N{heure.g=F num=PL}*	nœfvœʁ	1	1
 DET{ArtDef}, N{avion.g=M num=SG}*	lavjQ	1	0
@@ -3520,7 +3519,7 @@ ADJ{même}, N{temps.g=M num=SG}*	mɛmt&	1	0
 DET{ArtInd}, N{peu.g=M num=SG}*	3pø	1	0
 DET{Dem}, N{étude.g=F num=PL}*	sezetyd	1	1
 DET{ArtDef}, N{danse.g=F num=SG}*	lad&s	1	0
-NUM{dix}, N{an.g=M num=PL}*	disz&	1	1
+NUM{dix}, N{an.g=M num=PL}*	diz&	1	1
 DET{ArtInd}, N{lien.g=M num=SG}*	3lj3	1	0
 DET{ArtDef}, N{esprit.g=M num=SG}*	lɛspʁi	1	0
 DET{ArtDef}, N{corps.g=M num=SG}*	ləkɔʁ	1	0
@@ -3790,7 +3789,7 @@ DET{ArtDef}, N{télévision.g=F num=SG}*	latelevizjQ	1	0
 DET{ArtInd}, N{million.g=M num=PL}*	demiljQ	1	0
 DET{ArtInd}, N{photo.g=F num=PL}*	defoto	1	0
 DET{ArtInd}, N{billet.g=M num=PL}*	debijɛ	1	0
-ADJ{faux}, N{idée.g=F num=PL}*	foszide	1	1
+ADJ{faux}, N{idée.g=F num=PL}*	fozide	1	1
 DET{ArtInd}, N{idée.g=F num=PL}*	deide	1	0
 DET{ArtDef}, N{baguette.g=F num=SG}*	labagɛt	1	0
 DET{ArtDef}, N{pain.g=M num=SG}*	ləp3	1	0
@@ -3822,7 +3821,7 @@ DET{ArtInd}, N{fois.g=F num=SG}*	ynfwa	1	0
 DET{ArtDef}, N{province.g=F num=SG}*	lapʁov3s	1	0
 DET{ArtDef}, N{plain.g=F num=PL}*	leplɛn	1	0
 DET{ArtDef}, N{famille.g=F num=SG}*	lafamij	1	0
-ADJ{vieil}, N{oncle.g=M num=SG}*	vjɛjQkl	1	0
+ADJ{vieux}, N{oncle.g=M num=SG}*	vjɛjQkl	1	0
 ADJ{grand}, N{montagne.g=F num=PL}*	gʁ&dmQtaɲ	1	0
 NUM{deux}, N{langue.g=F num=PL}*	døl&g	1	0
 DET{ArtDef}, N{montagne.g=F num=PL}*	lemQtaɲ	1	0
@@ -4268,7 +4267,7 @@ DET{ArtDef}, N{langue.g=F num=SG}*	lal&g	1	0
 DET{PossM}, N{père.g=M num=SG}*	mQpɛʁ	1	0
 DET{ArtDef}, N{langue.g=F num=SG}*	lal&g	1	0
 DET{ArtDef}, N{pépé.g=M num=SG}*	ləpepe	1	0
-DET{ArtDef}, N{autobus.g=M num=PL}*	lotobys	1	0
+DET{ArtDef}, N{autobus.g=M num=SG}*	lotobys	1	0
 DET{ArtDef}, N{mur.g=M num=SG}*	ləmyʁ	1	0
 DET{ArtInd}, N{mot.g=M num=SG}*	3mo	1	0
 DET{PossM}, N{père.g=M num=SG}*	mQpɛʁ	1	0
@@ -4615,7 +4614,7 @@ DET{ArtDef}, N{chaussure.g=F num=PL}*	leʃosyʁ	1	0
 DET{ArtInd}, N{chaussure.g=F num=PL}*	deʃosyʁ	1	0
 ADJ{petit}, N{talon.g=M num=PL}*	pətitalQ	1	0
 DET{ArtDef}, N{fête.g=F num=SG}*	lafɛt	1	0
-NUM{dix}, N{an.g=M num=PL}*	disz&	1	1
+NUM{dix}, N{an.g=M num=PL}*	diz&	1	1
 DET{PossT}, N{chaussure.g=F num=PL}*	teʃosyʁ	1	0
 DET{ArtInd}, N{chaussure.g=F num=PL}*	deʃosyʁ	1	0
 DET{ArtInd}, N{semelle.g=F num=SG}*	ynsəmɛl	1	0
@@ -4999,7 +4998,7 @@ DET{ArtDef}, N{coin.g=M num=SG}*	ləkw3	1	0
 DET{PossM}, N{mère.g=F num=SG}*	mamɛʁ	1	0
 NUM{trois}, N{s.g=M num=PL}*	tʁwaɛs	1	0
 ADJ{quel}, N{âge.g=M num=SG}*	kɛlaʒ	1	0
-NUM{six}, N{an.g=M num=PL}*	sisz&	1	1
+NUM{six}, N{an.g=M num=PL}*	siz&	1	1
 DET{ArtDef}, N{autre.g=M num=SG}*	lotʁ	1	0
 NUM{quatre}, N{an.g=M num=PL}*	katʁ&	1	0
 DET{ArtDef}, N{commerce.g=M num=SG}*	ləkomɛʁs	1	0
@@ -5466,7 +5465,7 @@ DET{PossS}, N{preuve.g=F num=PL}*	sepʁœv	1	0
 ADJ{tout}, N{doit.g=M num=SG}*	tudwa	1	0
 NUM{trois}, N{an.g=M num=PL}*	tʁwaz&	1	1
 NUM{trois}, N{an.g=M num=PL}*	tʁwaz&	1	1
-NUM{dix}, N{an.g=M num=PL}*	disz&	1	1
+NUM{dix}, N{an.g=M num=PL}*	diz&	1	1
 NUM{quinze}, N{an.g=M num=PL}*	k3z&	1	0
 DET{ArtDef}, N{recherche.g=F num=SG}*	laʁəʃɛʁʃ	1	0
 NUM{quinze}, N{an.g=M num=PL}*	k3z&	1	0
@@ -5584,8 +5583,8 @@ DET{ArtDef}, N{motivation.g=F num=SG}*	lamotivasjQ	1	0
 DET{ArtDef}, N{bac.g=M num=SG}*	ləbak	1	0
 DET{ArtInd}, N{formation.g=F num=SG}*	ynfɔʁmasjQ	1	0
 DET{ArtDef}, N{licence.g=F num=SG}*	lalis&s	1	0
-ADJ{tout}, N{horizon.g=M num=PL}*	tuszoʁizQ	1	1
-ADJ{tout}, N{horizon.g=M num=PL}*	tuszoʁizQ	1	1
+ADJ{tout}, N{horizon.g=M num=PL}*	tuzoʁizQ	1	1
+ADJ{tout}, N{horizon.g=M num=PL}*	tuzoʁizQ	1	1
 DET{ArtInd}, N{licence.g=F num=SG}*	ynlis&s	1	0
 DET{ArtInd}, N{licence.g=F num=SG}*	ynlis&s	1	0
 DET{ArtDef}, N{concours.g=M num=SG}*	ləkQkuʁ	1	0
@@ -5659,7 +5658,7 @@ DET{PossM}, N{voix.g=F num=SG}*	mavwa	1	0
 DET{ArtInd}, N{autre.g=M num=SG}*	3otʁ	1	0
 DET{ArtDef}, N{défi.g=M num=PL}*	ledefi	1	0
 DET{ArtDef}, N{voyage.g=M num=PL}*	levwajaʒ	1	0
-DET{Dem}, N{été.g=M num=SG}*	sɛttete	1	1
+DET{Dem}, N{été.g=M num=SG}*	sɛtete	1	1
 DET{PossM}, N{valise.g=F num=PL}*	mevaliz	1	0
 NUM{quatre}, N{fois.g=F num=PL}*	katʁfwa	1	0
 NUM{deux}, N{mois.g=M num=PL}*	dømwa	1	0
@@ -5668,7 +5667,7 @@ DET{ArtDef}, N{année.g=F num=SG}*	lane	1	0
 DET{PossM}, N{valise.g=F num=PL}*	mevaliz	1	0
 NUM{cinq}, N{fois.g=F num=PL}*	s3kfwa	1	0
 DET{ArtDef}, N{année.g=F num=SG}*	lane	1	0
-DET{Dem}, N{été.g=M num=SG}*	sɛttete	1	1
+DET{Dem}, N{été.g=M num=SG}*	sɛtete	1	1
 DET{ArtDef}, N{année.g=F num=SG}*	lane	1	0
 DET{ArtInd}, N{virée.g=F num=SG}*	ynviʁe	1	0
 ADJ{même}, N{chose.g=F num=SG}*	mɛmʃoz	1	0
@@ -5691,8 +5690,8 @@ DET{Dem}, N{cas.g=M num=PL}*	seka	1	0
 DET{ArtInd}, N{refuge.g=M num=PL}*	deʁəfyʒ	1	0
 ADJ{haut}, N{montagne.g=F num=SG}*	otmQtaɲ	1	0
 NUM{deux}, N{jour.g=M num=PL}*	døʒuʁ	1	0
-NUM{dix}, N{heure.g=F num=PL}*	diszœʁ	1	1
-NUM{dix}, N{heure.g=F num=PL}*	diszœʁ	1	1
+NUM{dix}, N{heure.g=F num=PL}*	dizœʁ	1	1
+NUM{dix}, N{heure.g=F num=PL}*	dizœʁ	1	1
 ADJ{neuf}, N{cent.g=M num=PL}*	nœfs&	1	0
 NUM{cent}, N{mètre.g=M num=PL}*	s&mɛtʁ	1	0
 ADJ{dénivelé}, N{positif.g=M num=SG}*	denivəlepozitif	1	0
@@ -6240,7 +6239,7 @@ DET{ArtDef}, N{monde.g=M num=SG}*	ləmQd	1	0
 ADJ{bon}, N{boîte.g=F num=SG}*	bɔnbwat	1	0
 ADJ{bon}, N{niveau.g=M num=SG}*	bQnivo	1	0
 ADJ{bon}, N{niveau.g=M num=SG}*	bQnivo	1	0
-NUM{six}, N{an.g=M num=PL}*	sisz&	1	1
+NUM{six}, N{an.g=M num=PL}*	siz&	1	1
 DET{PossS}, N{retraite.g=F num=SG}*	saʁətʁɛt	1	0
 DET{PossS}, N{retraite.g=F num=SG}*	saʁətʁɛt	1	0
 DET{PossV}, N{mère.g=F num=SG}*	vɔtʁmɛʁ	1	0
@@ -6836,7 +6835,6 @@ N{lave-vaisselle.g=M num=PL}*	lavvɛsɛl	1	0
 ADJ{arrivé}	aʁive	1	0
 N{dépassement.g=M num=SG}*	depasəm&	1	0
 N{zoom.g=M num=PL}*	zum	1	0
-ADJ{vieil}	vjɛj	1	0
 N{maths.g=F num=PL}*	mat	1	0
 N{éclairage.g=M num=PL}*	eklɛʁaʒ	1	0
 N{dépassement.g=M num=PL}*	depasəm&	1	0
@@ -7812,14 +7810,13 @@ N{résident.g=M num=PL}*	ʁezid&	1	0
 N{con.g=M num=SG}*	kQ	1	0
 N{garage.g=M num=SG}*	gaʁaʒ	1	0
 N{district.g=M num=SG}*	distʁikt	1	0
-N{autobus.g=M num=PL}*	otobys	1	0
+N{autobus.g=M num=SG}*	otobys	1	0
 N{sermon.g=M num=PL}*	sɛʁmQ	1	0
 N{piolet.g=M num=SG}*	pjolɛ	1	0
 N{occupation.g=F num=PL}*	okypasjQ	1	0
 N{maladie.g=F num=SG}*	maladi	1	0
 N{gouvernement.g=M num=SG}*	guvɛʁnəm&	1	0
 N{occupation.g=F num=SG}*	okypasjQ	1	0
-ADJ{armé}	aʁme	1	0
 N{mère.g=F num=SG}*	mɛʁ	1	0
 N{béotien.g=M num=PL}*	beosj3	1	0
 N{mère.g=F num=PL}*	mɛʁ	1	0

@@ -10,6 +10,11 @@ import java.util.Set;
  * Helper class to contain both PairDistribution and liaison information
  */
 public class PfcData {
-    private PairDistribution pairDistribution;
+    public final PairDistribution pairDistribution;
     private Set<FormPair> liaisonItems;
+
+    public PfcData(PairDistribution pairDistribution, Set<FormPair> liaisonItems) {
+        this.pairDistribution = pairDistribution;
+        this.liaisonItems = liaisonItems;
+    }
 }

@@ -15,7 +15,7 @@ public class Hierarchy implements Con {
     protected final double[] rankings;
     private final Hierarchy parentHierarchy;
     private final static double DEFAULT_RANKING_VALUE = 100.0;
-    private List<RankedConstraint> constraintList;
+    private List<RankedConstraint> rankedConstraints;
     private IndexedRanking indexedRanking;
     private int size;
     private boolean rankingChanged;
@@ -27,9 +27,18 @@ public class Hierarchy implements Con {
         updateRankingInfo();
     }
 
+    protected Hierarchy(double[] rankings, List<RankedConstraint> rankedConstraints, int size, Hierarchy parentHierarchy) {
+        this.rankings = rankings;
+        this.size = size;
+        this.parentHierarchy = parentHierarchy;
+        this.rankedConstraints = rankedConstraints;
+        this.indexedRanking = createIndexedRanking();
+        rankingChanged = false;
+    }
+
     // Updates both the list of RankedConstraints and the
     private void updateRankingInfo() {
-        constraintList = createRankedConstraintList();
+        rankedConstraints = createRankedConstraintList();
         indexedRanking = createIndexedRanking();
         rankingChanged = false;
     }
@@ -37,7 +46,12 @@ public class Hierarchy implements Con {
     private static Hierarchy createHierarchy(int expectedSize) {
         double[] rankings = new double[expectedSize];
         Arrays.fill(rankings, Double.NEGATIVE_INFINITY);
-        return new Hierarchy(rankings, 0,null);
+        Hierarchy result = new Hierarchy(rankings, 0, null);
+        for (int i=0; i < Constraint.getNumberCreated(); i++) {
+            Constraint constraint = Constraint.withIndex(i);
+            result.add(constraint);
+        }
+        return result;
     }
 
     public static Hierarchy createNew() {
@@ -48,14 +62,12 @@ public class Hierarchy implements Con {
         if (!contains(c)) {
             add(c);
         }
-        if (rankingChanged) {
-            updateRankingInfo();
-        }
         return rankings[c.getId()];
     }
 
     public void addConstraint(Constraint c, double value) {
         if (isSampled()) {
+            System.out.println("Trying to add new constraint to parent map -- " + c + "with value: " +value);
             parentHierarchy.addConstraint(c,value);
         }
         if (!contains(c)) {
@@ -107,40 +119,40 @@ public class Hierarchy implements Con {
         if (rankingChanged) {
             updateRankingInfo();
         }
-        return constraintList;
+        return rankedConstraints;
     }
 
     private List<RankedConstraint> createRankedConstraintList() {
-        List<RankedConstraint> rankedList = new ArrayList<>(size());
-        for (int i=0; i < Constraint.getNumberCreated(); i++) {
-            double value = rankings[i];
-            if (value != Double.NEGATIVE_INFINITY) {
-                Constraint instance = Constraint.withIndex(i);
-                rankedList.add(RankedConstraint.of(instance, value));
-            }
+        int size = Constraint.getNumberCreated();
+        List<RankedConstraint> rankedList = new ArrayList<>(size);
+        for (int i=0; i < size; i++) {
+            Constraint instance = Constraint.withIndex(i);
+            double value = getRanking(instance);
+            rankedList.add(RankedConstraint.of(instance, value));
+
         }
         Collections.sort(rankedList);
-        Collections.reverse(rankedList);
-        return Collections.synchronizedList(rankedList);
+        return rankedList;
     }
 
 
     public Hierarchy sample(AbstractSampler sampler) {
         double[] sampledRankings = new double[rankings.length];
+        List<RankedConstraint> rankedList = new ArrayList<>(size());
         Arrays.fill(sampledRankings,Double.NEGATIVE_INFINITY);
-        for (int i=0; i < Constraint.getNumberCreated(); i++) {
-            double value = rankings[i];
-            if (value != Double.NEGATIVE_INFINITY) {
-                sampledRankings[i] = sampler.sampleDouble(value);
-            }
+        for (int i=0; i < size(); i++) {
+            Constraint instance = Constraint.withIndex(i);
+            double value = getRanking(instance);
+            sampledRankings[i] = sampler.sampleDouble(value);
+            rankedList.add(RankedConstraint.of(instance, sampledRankings[i]));
         }
-        Hierarchy result = new Hierarchy(sampledRankings, this.size(),this);
- //       result.rankingChanged = true;
+        Collections.sort(rankedList);
+        Hierarchy result = new Hierarchy(sampledRankings, rankedList, this.size(),this);
         return result;
     }
 
     private IndexedRanking createIndexedRanking() {
-        return new IndexedRanking(constraintList);
+        return new IndexedRanking(rankedConstraints);
     }
 
     public IndexedRanking getIndexedRanking() {
@@ -159,7 +171,7 @@ public class Hierarchy implements Con {
         if (rankingChanged) {
             updateRankingInfo();
         }
-        Iterator<RankedConstraint> rankedConstraintIterator = constraintList.iterator();
+        Iterator<RankedConstraint> rankedConstraintIterator = rankedConstraints.iterator();
         return new Iterator<Constraint>() {
 
 
@@ -184,7 +196,7 @@ public class Hierarchy implements Con {
 
     public String printRankedConstraints() {
         StringBuilder stringBuilder = new StringBuilder();
-        for (RankedConstraint rankedConstraint: constraintList) {
+        for (RankedConstraint rankedConstraint: rankedConstraints) {
             stringBuilder.append(rankedConstraint).append("\n");
         }
         return stringBuilder.toString();

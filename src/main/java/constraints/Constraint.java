@@ -53,7 +53,9 @@ public abstract class Constraint {
             System.exit(0);
         }
         map[this.id] = this;
-        System.out.println("Created constraint #" + id);
+        if (id % 100 == 0) {
+            System.out.println("Created constraint #" + id);
+        }
 
     }
 

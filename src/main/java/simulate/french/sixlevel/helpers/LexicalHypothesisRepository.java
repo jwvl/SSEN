@@ -30,6 +30,7 @@ public class LexicalHypothesisRepository implements Iterable<Morpheme> {
     private int MAX_LCS_DIFFERENCE = ConfigFactory.load().getInt("lexicon.maxLcsDifference");
     private Table<Morpheme, PhoneSubForm, LexicalMapping> repository = HashBasedTable
             .create();
+    private Set<LexicalMapping> minimalMappings;
 
     public void addAlignment(MorphemePhoneAlignment mpa) {
         if (isIllegalAlignment(mpa)){
@@ -48,6 +49,7 @@ public class LexicalHypothesisRepository implements Iterable<Morpheme> {
                 addMapping(currentM, currentP);
             }
         }
+        minimalMappings.clear();
     }
 
     public boolean isIllegalAlignment(MorphemePhoneAlignment mpa) {
@@ -70,6 +72,7 @@ public class LexicalHypothesisRepository implements Iterable<Morpheme> {
      */
     public LexicalHypothesisRepository(SubstringDatabank longestCommonSubstrings) {
         this.longestCommonSubstrings = longestCommonSubstrings;
+        this.minimalMappings = Sets.newHashSet();
     }
 
 
@@ -154,6 +157,16 @@ public class LexicalHypothesisRepository implements Iterable<Morpheme> {
      * @return the minimalMappings
      */
     public Set<LexicalMapping> getMinimalMappings() {
+        if (minimalMappings.size() == 0) {
+            minimalMappings = createMinimalMappings();
+        }
+        return minimalMappings;
+    }
+
+    /**
+     * @return the minimalMappings
+     */
+    public Set<LexicalMapping> createMinimalMappings() {
         Set<LexicalMapping> result = Sets.newHashSet();
         for (Morpheme morpheme: this) {
             PhoneSubForm shortest = getCandidates(morpheme).stream().min((s1,s2) -> Integer.compare(s1.size(),s2.size())).orElse(null);

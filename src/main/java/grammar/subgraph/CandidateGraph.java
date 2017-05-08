@@ -25,8 +25,8 @@ public class CandidateGraph {
             count += list.size();
         }
         myMap = Collections.synchronizedMap(myMap);
-        //System.out.println("Built candidate space for" + formPair);
-        //System.out.println("Added items: " + count);
+        System.out.println("Built candidate space for" + formPair);
+        System.out.println("Added items: " + count);
     }
 
     public List<FormMapping> filter(Collection<FormMapping> toFilter) {

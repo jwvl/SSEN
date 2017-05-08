@@ -9,9 +9,11 @@ import java.util.Arrays;
  */
 public class BooleanEdgeIndex extends EdgeIndex {
     private final boolean[][] edgeIndices;
+    private int hashcode;
 
     public BooleanEdgeIndex(int size) {
         edgeIndices = new boolean[Edge.values().length][size];
+        hashcode = 0;
     }
 
     @Override
@@ -39,6 +41,7 @@ public class BooleanEdgeIndex extends EdgeIndex {
     @Override
     public void set(Edge edgeType, int index) {
         edgeIndices[edgeType.ordinal()][index] = true;
+        hashcode = 0;
     }
 
     @Override
@@ -82,15 +85,25 @@ public class BooleanEdgeIndex extends EdgeIndex {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         BooleanEdgeIndex that = (BooleanEdgeIndex) o;
-
-        return Arrays.deepEquals(edgeIndices, that.edgeIndices);
-
+        for (int i=0; i < edgeIndices.length; i++) {
+            if (!Arrays.equals(edgeIndices[i],that.edgeIndices[i])) {
+                return false;
+            }
+        }
+        return true;
+        //return Arrays.deepEquals(edgeIndices, that.edgeIndices);
     }
 
     @Override
     public int hashCode() {
+        if (hashcode == 0) {
+            hashcode = getHashCode();
+        }
+        return hashcode;
+    }
+
+    public int getHashCode() {
         return Arrays.deepHashCode(edgeIndices);
     }
 

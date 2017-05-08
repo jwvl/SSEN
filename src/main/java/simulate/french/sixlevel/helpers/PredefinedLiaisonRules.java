@@ -60,6 +60,25 @@ public class PredefinedLiaisonRules {
             result.addAll(EdgeBasedRuleBuilder.fromString("∅# → ə / |C__|C", Edge.MORPHEME));
         }
 
+        if (config.getBoolean("gen.abstractEnabled")) {
+            List<String> strings = config.getStringList("gen.abstractPhonemes");
+            for (String string: strings) {
+                String[] parts = string.split("~");
+                String realPhoneme = parts[0];
+                String archiPhoneme = parts[1];
+                String deletionRight = String.format("#%s → ∅ / __", archiPhoneme);
+                String deletionLeft = String.format("%s# → ∅ / __", archiPhoneme);
+                String realizationRight = String.format("#%s → %s / __", archiPhoneme, realPhoneme);
+                String realizationLeft = String.format("%s# → %s / __", archiPhoneme, realPhoneme);
+
+                result.addAll(EdgeBasedRuleBuilder.fromString(deletionLeft, Edge.WORD));
+                result.addAll(EdgeBasedRuleBuilder.fromString(deletionRight, Edge.WORD));
+                result.addAll(EdgeBasedRuleBuilder.fromString(realizationRight, Edge.WORD));
+                result.addAll(EdgeBasedRuleBuilder.fromString(realizationLeft, Edge.WORD));
+
+            }
+        }
+
         return result;
     }
 

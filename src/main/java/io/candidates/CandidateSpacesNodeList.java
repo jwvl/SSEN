@@ -3,10 +3,8 @@ package io.candidates;
 import com.google.common.base.Charsets;
 import com.google.common.collect.*;
 import com.google.common.io.Resources;
-
 import forms.Form;
 import forms.FormPair;
-import grammar.Grammar;
 import grammar.dynamic.DynamicNetworkGrammar;
 import grammar.subgraph.CandidateGraph;
 import grammar.subgraph.CandidateSpaces;
@@ -38,6 +36,7 @@ public class CandidateSpacesNodeList {
             String[] lineParts = line.split("\t");
             try {
                 atFormPair = Integer.parseInt(lineParts[1]);
+                maxLevels = Integer.parseInt(lineParts[2]);
                 String formPairName = lineParts[0];
                 for (int level=0; level < maxLevels; level++) {
                     formsPerLevel.put(atFormPair,level, Sets.newHashSet());
@@ -63,12 +62,21 @@ public class CandidateSpacesNodeList {
     }
 
     public boolean hasForm(int formPairIndex, int level, String form) {
-        return formsPerLevel.get(formPairIndex,level).contains(form);
+        Set<String> formsAsStrings = formsPerLevel.get(formPairIndex,level);
+        if (formsAsStrings == null) {
+            System.err.println("Nothing found for formpair #"+formPairIndex +" at level " +level);
+            return false;
+        }
+        return formsAsStrings.contains(form);
     }
 
 
     public boolean hasForm(String formPair, int level, String form) {
-        return hasForm(formPairToInt.get(formPair),level,form);
+        Integer asInteger = formPairToInt.get(formPair);
+        if (asInteger != null) {
+            return hasForm(asInteger, level, form);
+        }
+        return false;
     }
 
     public static CandidateSpacesNodeList readFromFile(String path) {
@@ -93,6 +101,7 @@ public class CandidateSpacesNodeList {
 
     private CandidateGraph getCandidateGraph(FormPair formPair, DynamicNetworkGrammar grammar) {
         ListMultimap<Form, Form> mappings = ArrayListMultimap.create();
+        int numLevels = grammar.getLevelSpace().getSize();
         String formPairAsString = formPair.toString();
         Set<Form> visited = Sets.newHashSet();
         Stack<Form> toExpand = new Stack<>();
@@ -103,7 +112,7 @@ public class CandidateSpacesNodeList {
             visited.add(next);
             for (Form successor : successors) {
                 int level = successor.getLevelIndex();
-                if (!visited.contains(successor) && hasForm(formPairAsString, level, successor.toString())) {
+                if (level < numLevels && !visited.contains(successor) && hasForm(formPairAsString, level, successor.toString())) {
                     mappings.put(next, successor);
                     toExpand.add(successor);
                 }

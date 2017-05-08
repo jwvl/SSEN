@@ -26,6 +26,7 @@ public class MElement implements Subform, Comparable<MElement> {
     private final int serialNumber;
     private final AbstractMFeature2 feature;
     private final MFeatureType type;
+    private final int hashcode;
 
     public int getSerialNumber() {
         return serialNumber;
@@ -40,6 +41,7 @@ public class MElement implements Subform, Comparable<MElement> {
         this.feature = f;
         this.serialNumber = SERIAL_COUNTER++;
         this.type = type;
+        this.hashcode = Objects.hash(feature, type);
     }
 
     /**
@@ -134,7 +136,7 @@ public class MElement implements Subform, Comparable<MElement> {
 
     @Override
     public int hashCode() {
-        return Objects.hash(feature, type);
+        return hashcode;
     }
 
     public boolean attributeEquals(MElement other) {

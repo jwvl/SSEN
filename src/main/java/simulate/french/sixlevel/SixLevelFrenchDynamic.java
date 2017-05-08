@@ -33,7 +33,6 @@ import graph.Direction;
 import io.MyStringTable;
 import io.candidates.CandidateSpacesNodeList;
 import io.candidates.CandidateSpacesToNodeLists;
-import io.candidates.CandidateSpacesToTables;
 import io.utils.PathUtils;
 import learn.batch.RandomLearnerTester;
 import learn.batch.combination.LearningPropertyCombinations;
@@ -171,7 +170,11 @@ public class SixLevelFrenchDynamic {
                                 altString = altString.replace(".num[PL]","");
                                 pStrings = stringMultimap.get(altString);
                                 if (pStrings.isEmpty()) {
-                                    System.err.println("Still no morphs found for "+altString);
+                                    altString = altString.replace(".g[M]","").replace(".g[F]","");
+                                    pStrings = stringMultimap.get(altString);
+                                    if (pStrings.isEmpty()) {
+                                        System.err.println("Still no morphs found for " +altString);
+                                    }
                                 }
                             }
                             for (String pString: pStrings) {
@@ -245,12 +248,11 @@ public class SixLevelFrenchDynamic {
                 candidateSpaces = candidateSpacesNodeList.toCandidateSpaces(pairDistribution,grammar);
             }
             grammar.addCandidateSpaces(candidateSpaces);
-            CandidateSpacesToNodeLists.writeToFile(grammar, candidateSpaces, outputPath + "/candidateNodes.txt");
             if (ConfigFactory.load().getBoolean("grammar.writeCandidateSpaces")) {
-                CandidateSpacesToTables.writeToFile(candidateSpaces, outputPath + "/candidateSpaces");
+                CandidateSpacesToNodeLists.writeToFile(grammar, candidateSpaces, outputPath + "/candidateNodes.txt");
+                //CandidateSpacesToTables.writeToFile(candidateSpaces, outputPath + "/candidateSpaces");
             }
         }
-        System.exit(0);
 
         Timer timer = new Timer();
 

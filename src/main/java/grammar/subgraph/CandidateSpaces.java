@@ -15,7 +15,7 @@ import java.util.*;
  * Created by janwillem on 30/03/16.
  */
 public class CandidateSpaces {
-    private static int stopAt = 20;
+    private static int stopAt = Integer.MAX_VALUE;
     private final Map<FormPair, CandidateGraph> spaces;
 
     public CandidateSpaces(Map<FormPair, CandidateGraph> spaces) {

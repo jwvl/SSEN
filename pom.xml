@@ -66,6 +66,11 @@
             <artifactId>junit</artifactId>
             <version>3.8.2</version>
         </dependency>
+        <dependency>
+            <groupId>it.unimi.dsi</groupId>
+            <artifactId>dsiutils</artifactId>
+            <version>2.3.6</version>
+        </dependency>
 
         <dependency>
             <groupId>com.typesafe</groupId>

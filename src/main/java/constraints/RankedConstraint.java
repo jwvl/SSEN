@@ -1,5 +1,7 @@
 package constraints;
 
+import com.typesafe.config.ConfigFactory;
+
 import java.util.Objects;
 
 /**
@@ -8,6 +10,7 @@ import java.util.Objects;
 public class RankedConstraint implements Comparable<RankedConstraint> {
     private final Constraint constraint;
     private final double ranking;
+    private final boolean USE_STRATA = ConfigFactory.load().getBoolean("constraints.stratify");
 
     private RankedConstraint(Constraint constraint, double ranking) {
         this.constraint = constraint;
@@ -20,13 +23,9 @@ public class RankedConstraint implements Comparable<RankedConstraint> {
 
     @Override
     public int compareTo(RankedConstraint o) {
-        if (constraint.getStratum() != o.constraint.getStratum())
-            return o.constraint.getStratum() - constraint.getStratum();
-        if (o.ranking < ranking)
-            return 1;
-        else if (o.ranking > ranking)
-            return -1;
-        return 0;
+        if (USE_STRATA && constraint.getStratum() != o.constraint.getStratum()) {
+            return o.constraint.getStratum() - constraint.getStratum();}
+        return Double.compare(o.ranking, ranking);
     }
 
     @Override

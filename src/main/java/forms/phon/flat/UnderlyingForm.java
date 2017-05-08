@@ -21,12 +21,14 @@ import java.util.Objects;
  * @date 20/02/2016
  */
 public class UnderlyingForm extends PhoneSequence {
+    private final int hashcode; // store it
 
     /**
      * @param boundaries
      */
     private UnderlyingForm(PhoneSubForm concatenatedContents, EdgeIndex boundaries) {
         super(concatenatedContents, boundaries);
+        hashcode = Objects.hash(super.hashCode(), getLevel());
     }
 
 
@@ -136,6 +138,6 @@ public class UnderlyingForm extends PhoneSequence {
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), getLevel());
+        return hashcode;
     }
 }

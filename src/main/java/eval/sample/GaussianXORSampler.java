@@ -17,6 +17,8 @@ import java.util.Random;
 public class GaussianXORSampler extends AbstractSampler {
     private GaussianGenerator gg;
     private static Random defaultRandom = new XORShiftRNG();
+    private static GaussianXORSampler lastSampler;
+    private static double lastDouble = 0;
 
     private GaussianXORSampler(double mu, double sigma, Random r) {
         this.gg = new GaussianGenerator(mu, sigma, r);
@@ -39,7 +41,11 @@ public class GaussianXORSampler extends AbstractSampler {
      * @return
      */
     public static AbstractSampler createInstance(double d) {
-        return new GaussianXORSampler(d);
+        if (d != lastDouble) {
+            lastSampler = new GaussianXORSampler(d);
+            lastDouble = d;
+        }
+        return lastSampler;
     }
 
 }

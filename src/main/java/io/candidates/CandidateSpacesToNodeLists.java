@@ -39,6 +39,7 @@ public class CandidateSpacesToNodeLists {
         Map<Form,List<Form>> formListMap = graph.getMap();
         Set<Form> allForms = Sets.newHashSet(formListMap.keySet());
         for (Form form:formListMap.keySet()) {
+            allForms.add(form);
             allForms.addAll(formListMap.get(form));
         }
         for (Form form: allForms) {
