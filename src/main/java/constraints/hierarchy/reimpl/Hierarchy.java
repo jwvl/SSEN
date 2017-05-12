@@ -67,7 +67,6 @@ public class Hierarchy implements Con {
 
     public void addConstraint(Constraint c, double value) {
         if (isSampled()) {
-            System.out.println("Trying to add new constraint to parent map -- " + c + "with value: " +value);
             parentHierarchy.addConstraint(c,value);
         }
         if (!contains(c)) {

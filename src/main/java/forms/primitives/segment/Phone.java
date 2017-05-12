@@ -28,7 +28,7 @@ public class Phone implements Subform, Comparable<Phone> {
     private final byte id;
     private final char contentAsChar;
     private String stringAlias;
-    private static final byte idOffset = 127;
+    private static final byte idOffset = 0;
     private static byte idCounter = 0 - idOffset;
     private static Phone[] byteMap = new Phone[256];
     private static Map<Character, Phone> charPhoneMap = new HashMap<Character, Phone>();

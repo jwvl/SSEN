@@ -103,7 +103,7 @@ public class ConsonantCluster {
         ConsonantCluster other = (ConsonantCluster) obj;
         if (side != other.side)
             return false;
-        return Arrays.equals(cluster, other.cluster);
+        return Arrays.deepEquals(cluster, other.cluster);
     }
 
     /**

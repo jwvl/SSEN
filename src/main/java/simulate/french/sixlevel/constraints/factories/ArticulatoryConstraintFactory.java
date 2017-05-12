@@ -5,7 +5,7 @@ package simulate.french.sixlevel.constraints.factories;
 
 import forms.phon.flat.PhoneticForm;
 import forms.primitives.segment.Phone;
-import simulate.french.sixlevel.constraints.ArticulatoryConstraint;
+import simulate.french.sixlevel.constraints.PhoneArticulatoryConstraint;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -43,8 +43,8 @@ public class ArticulatoryConstraintFactory extends
      * #createConstraint(java.lang.Object)
      */
     @Override
-    public ArticulatoryConstraint createConstraint(Phone offender) {
-        return new ArticulatoryConstraint(offender);
+    public PhoneArticulatoryConstraint createConstraint(Phone offender) {
+        return new PhoneArticulatoryConstraint(offender);
     }
 
     /*

@@ -98,7 +98,6 @@ public class SixLevelFrenchDynamic {
         String sonorityColumn = config.getString("implementation.sonorityType");
         Phone.getFromStringTable(phonesTable, "Phone", "String", sonorityColumn);
 
-
         // 1 Create grammar with levels.
         Level semF_level = BiPhonSix.getSemSynFormLevel();
         Level msf_level = BiPhonSix.getMstructureLevel();

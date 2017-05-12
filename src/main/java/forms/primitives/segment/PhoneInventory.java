@@ -29,4 +29,8 @@ public class PhoneInventory {
         return result;
     }
 
+    public int size() {
+        return allPhones.size();
+    }
+
 }

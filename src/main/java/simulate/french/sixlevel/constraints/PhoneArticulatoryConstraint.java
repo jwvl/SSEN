@@ -12,17 +12,17 @@ import constraints.SubformCountingConstraint;
  * @author jwvl
  * @date Aug 1, 2015
  */
-public class ArticulatoryConstraint extends SubformCountingConstraint<Phone> {
+public class PhoneArticulatoryConstraint extends SubformCountingConstraint<Phone> {
 
     /**
      * @param rightLevel
      * @param subform
      */
-    private ArticulatoryConstraint(Level rightLevel, Phone subform) {
+    private PhoneArticulatoryConstraint(Level rightLevel, Phone subform) {
         super(rightLevel, subform);
     }
 
-    public ArticulatoryConstraint(Phone phone) {
+    public PhoneArticulatoryConstraint(Phone phone) {
         super(BiPhonSix.getPhoneticLevel(), phone);
     }
 

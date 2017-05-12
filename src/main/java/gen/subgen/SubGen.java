@@ -172,7 +172,7 @@ public abstract class SubGen<F extends Form, G extends Form> {
                 return computeConstraints(formMapping);
             }
         };
-        constraintCache = CacheBuilder.newBuilder().maximumSize(maxSize).weakKeys().build(constraintLoader);
+        constraintCache = CacheBuilder.newBuilder().maximumSize(maxSize).build(constraintLoader);
     }
 
     /**
