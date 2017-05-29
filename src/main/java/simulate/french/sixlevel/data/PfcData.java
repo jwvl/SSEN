@@ -23,6 +23,8 @@ import java.util.Set;
 public class PfcData {
     public final PairDistribution pairDistribution;
     private Set<FormPair> liaisonItems;
+
+
     private final static Level LEFT_LEVEL= BiPhonSix.getSemSynFormLevel();
     private final static Level RIGHT_LEVEL = BiPhonSix.getPhoneticLevel();
 
@@ -60,4 +62,13 @@ public class PfcData {
         }
         return new PfcData(pairDistribution, liaisonItems);
     }
+
+    public PairDistribution getPairDistribution() {
+        return pairDistribution;
+    }
+
+    public Set<FormPair> getLiaisonItems() {
+        return liaisonItems;
+    }
+
 }
