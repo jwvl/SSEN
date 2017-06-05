@@ -39,6 +39,7 @@ import learn.batch.combination.LearningPropertyCombinations;
 import learn.batch.combination.TrajectoriesTester;
 import learn.data.PairDistribution;
 import learn.data.SinglesFilter;
+import simulate.french.sixlevel.data.PfcData;
 import simulate.french.sixlevel.helpers.LexicalHypothesisRepository;
 import simulate.french.sixlevel.helpers.SettingsMap;
 import simulate.french.sixlevel.subgens.*;
@@ -110,6 +111,7 @@ public class SixLevelFrenchDynamic {
         // to keep track of longest common substrings.
         PairDistribution pairDistribution = createPairDistribution(
                 dataFilePath, semF_level, pF_level);
+        PfcData pfcData = PfcData.readFromFile(dataFilePath);
 
         lcsData = SubstringDatabank.createInstance();
         int maxUnfoundNgraph = config.getInt("gen.constrainers.maxUnfoundNgraph");

@@ -22,15 +22,19 @@ import java.util.Set;
  */
 public class PfcData {
     public final PairDistribution pairDistribution;
-    private Set<FormPair> liaisonItems;
-
+    private Set<FormPair> liaisonPairs;
+    private final Set<SemSynForm> liaisonSsfs;
 
     private final static Level LEFT_LEVEL= BiPhonSix.getSemSynFormLevel();
     private final static Level RIGHT_LEVEL = BiPhonSix.getPhoneticLevel();
 
-    public PfcData(PairDistribution pairDistribution, Set<FormPair> liaisonItems) {
+    public PfcData(PairDistribution pairDistribution, Set<FormPair> liaisonPairs) {
         this.pairDistribution = pairDistribution;
-        this.liaisonItems = liaisonItems;
+        this.liaisonPairs = liaisonPairs;
+        this.liaisonSsfs = Sets.newHashSet();
+        for (FormPair formPair: liaisonPairs) {
+            liaisonSsfs.add((SemSynForm)formPair.left());
+        }
     }
 
     public static PfcData readFromFile(String filename) {
@@ -67,8 +71,14 @@ public class PfcData {
         return pairDistribution;
     }
 
-    public Set<FormPair> getLiaisonItems() {
-        return liaisonItems;
+    public Set<FormPair> getLiaisonPairs() {
+        return liaisonPairs;
     }
+
+
+    public Set<SemSynForm> getLiaisonSsfs() {
+        return liaisonSsfs;
+    }
+
 
 }
