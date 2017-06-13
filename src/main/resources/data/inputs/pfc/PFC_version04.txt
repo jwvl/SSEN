@@ -7316,8 +7316,8 @@ N{bruit.g=M num=SG}*	bʁɥi	1	0
 DET{PossN}	nɔtʁ	1	0
 N{ordre.g=M num=SG}*	ɔʁdʁ	1	0
 N{nationalité.g=F num=SG}*	nasjonalite	1	0
-N{place.g=F num=SG}*	plas	1	0
 N{nationalité.g=F num=PL}*	nasjonalite	1	0
+N{place.g=F num=SG}*	plas	1	0
 N{idée.g=F num=SG}*	ide	1	0
 ADJ{superbe}	sypɛʁb	1	0
 N{idée.g=F num=PL}*	ide	1	0

@@ -283,7 +283,7 @@ public class SixLevelFrenchDynamic {
 
             TrajectoriesTester trajectoriesTester = new TrajectoriesTester(learningPropertyCombinations, grammar, pairDistribution);
             trajectoriesTester.testAndWrite(dataFileName, numEvaluations, numRuns, numThreads, outputPath);
-            Map<UUID,Hierarchy> successfulHierarchies = trajectoriesTester.getSuccessfulHierarchies();
+            Map<UUID,Hierarchy> successfulHierarchies = trajectoriesTester.getSuccesfulHierarchies();
 
         }
 

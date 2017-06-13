@@ -42,8 +42,8 @@ public class TrajectoriesTester {
     private final PairDistribution trainDistribution;
     private final PairDistribution testDistribution;
     private final ResultsTable resultsTable;
-    private final Map<UUID, Hierarchy> successfulHierarchies;
-    private final Map<UUID, Hierarchy> failedHierarchies;
+    private final Map<UUID, Hierarchy> finalHierarchies;
+    private final Map<UUID, Double> errorRates;
     private final static boolean printSankeyDiagrams = false;
     private final static boolean calculateSimilarities = false;
     private final static boolean printCandidateSets = false;
@@ -61,8 +61,8 @@ public class TrajectoriesTester {
         this.testDistribution = testTrain.getLeft();
         this.trainDistribution = testTrain.getRight();
         resultsTable = new ResultsTable();
-        successfulHierarchies = new HashMap<UUID, Hierarchy>();
-        failedHierarchies = new HashMap<UUID, Hierarchy>();
+        finalHierarchies = new HashMap<>();
+        errorRates = new HashMap<>();
     }
 
     public void testAndWrite(String name, int numEvaluations, int numTests, int numThreads, String outputPath) {
@@ -103,35 +103,31 @@ public class TrajectoriesTester {
                     resultsTable.appendDatum("errorRate", "" + iError);
                 }
 
+                finalHierarchies.put(trajectory.getUuid(), grammar.getHierarchy().copy());
+                this.errorRates.put(trajectory.getUuid(), error);
 
-                if (error < successThreshold) {
-                    successfulHierarchies.put(trajectory.getUuid(), grammar.getHierarchy().copy());
-                } else {
-                    failedHierarchies.put(trajectory.getUuid(), grammar.getHierarchy().copy());
-                }
 
                 grammar.resetConstraints(100.0);
             }
         }
         //printPoset();
-        if (successfulHierarchies.size() > 2 && calculateSimilarities) {
-            HierarchyComparer comparer = HierarchyComparer.build(successfulHierarchies, grammar, trainDistribution, Direction.RIGHT);
+        if (finalHierarchies.size() > 2 && calculateSimilarities) {
+            HierarchyComparer comparer = HierarchyComparer.build(finalHierarchies, grammar, trainDistribution, Direction.RIGHT);
             comparer.writeToFile(outputPath+"/hierarchyDistances.txt");
         }
 
         resultsTable.saveToFile(outputPath+"/simulationResults.txt");
 
         if (printSankeyDiagrams) {
-            //createSankeyDiagrams(grammar);
-            tablesToRiverplots(successfulHierarchies,outputPath+"/riverplot-s");
-            tablesToRiverplots(failedHierarchies,outputPath+"/riverplot-f");
+            tablesToRiverplots(getSuccesfulHierarchies(),outputPath+"/riverplot-s");
+            tablesToRiverplots(getFailedHierarchies(),outputPath+"/riverplot-f");
 
         }
 
         if (printCandidateSets) {
             List<FormPair> formPairs = Lists.newArrayList(trainDistribution.getKeys());
             CandidateSetCollector candidateSetCollector = new CandidateSetCollector(formPairs, Direction.RIGHT);
-            for (Hierarchy hierarchy: successfulHierarchies.values()) {
+            for (Hierarchy hierarchy: finalHierarchies.values()) {
                 grammar.setHierarchy(hierarchy);
                 candidateSetCollector.addTests(grammar,1,0.0000001);
             }
@@ -156,19 +152,35 @@ public class TrajectoriesTester {
     }
 
     private void printPoset() {
-        if (successfulHierarchies.size() > 0) {
-            ConstraintOrderMap constraintOrderMap = new ConstraintOrderMap(successfulHierarchies.values());
-            Poset<Constraint> poset = PosetBuilder.buildPoset(successfulHierarchies.get(0), constraintOrderMap);
+        if (finalHierarchies.size() > 0) {
+            ConstraintOrderMap constraintOrderMap = new ConstraintOrderMap(finalHierarchies.values());
+            Poset<Constraint> poset = PosetBuilder.buildPoset(finalHierarchies.get(0), constraintOrderMap);
             System.out.println(poset);
         }
     }
 
-    public Map<UUID, Hierarchy> getSuccessfulHierarchies() {
-        return successfulHierarchies;
+    public Map<UUID, Hierarchy> getSuccesfulHierarchies() {
+        Map<UUID, Hierarchy> result = new HashMap<>();
+        for (UUID key: finalHierarchies.keySet()) {
+            if (errorRates.get(key) < successThreshold) {
+                result.put(key, finalHierarchies.get(key));
+            }
+        }
+        return result;
+    }
+
+    public Map<UUID, Hierarchy> getFailedHierarchies() {
+        Map<UUID, Hierarchy> result = new HashMap<>();
+        for (UUID key: finalHierarchies.keySet()) {
+            if (errorRates.get(key) > successThreshold) {
+                result.put(key, finalHierarchies.get(key));
+            }
+        }
+        return result;
     }
 
     private void createSankeyDiagrams(Grammar grammar) {
-        Map<FormPair,CandidateMappingTable> tables = hierarchiesToMap(grammar, successfulHierarchies);
+        Map<FormPair,CandidateMappingTable> tables = hierarchiesToMap(grammar, finalHierarchies);
         for (FormPair formPair: tables.keySet()) {
             System.out.println("Candidate mappings for pair " + formPair);
             System.out.println(GoogleSankey.toHtml(tables.get(formPair)));
