@@ -20,10 +20,11 @@ import grammar.levels.Level;
 public abstract class Constraint {
     private final short id;
     private static final Config config = ConfigFactory.load();
+    private static Constraint[] map = new Constraint[config.getInt("implementation.expectedNumConstraints")];
+    public static final boolean STRATIFY = config.getBoolean("constraints.stratify");
     protected static short idCounter = 0;
     private static int DEFAULT_STRATUM = 0;
     private int stratum;
-    private static Constraint[] map = new Constraint[config.getInt("implementation.expectedNumConstraints")];
     private final double initialBias;
     protected final Level rightLevel;
 
@@ -40,7 +41,7 @@ public abstract class Constraint {
     };
 
     protected Constraint(Level rightLevel, double initialBias) {
-        if (config.getBoolean("constraints.stratify")) {
+        if (STRATIFY) {
             this.stratum = config.getInt("constraints.strata."+rightLevel.getInfo().getAbbreviation());
         } else {
             this.stratum = DEFAULT_STRATUM;

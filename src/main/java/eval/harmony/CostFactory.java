@@ -15,7 +15,7 @@ import java.util.Collection;
 public class CostFactory {
     private final Hierarchy ranking;
     private final CostType costType;
-    private final static double stratumMultiplier = ConfigFactory.load().getDouble("system.stratumMultiplier");
+    private final static double STRATUM_MULTIPLIER = ConfigFactory.load().getDouble("system.stratumMultiplier");
 
     public CostFactory(Hierarchy ranking, CostType costType) {
         this.ranking = ranking;
@@ -48,7 +48,7 @@ public class CostFactory {
         for (Constraint c : constraints) {
             double rankingValue = ranking.getRanking(c);
             int stratum = c.getStratum();
-            double warpedRankingValue = rankingValue + (stratumMultiplier * stratum);
+            double warpedRankingValue = rankingValue + (STRATUM_MULTIPLIER * stratum);
             values[i++] = warpedRankingValue;
         }
         return new SimplestDoubleArray(values);
@@ -61,7 +61,7 @@ public class CostFactory {
         for (Constraint c : constraints) {
             double rankingValue = ranking.getRanking(c);
             int stratum = c.getStratum();
-            double warpedRankingValue = rankingValue + (stratumMultiplier * stratum);
+            double warpedRankingValue = rankingValue + (STRATUM_MULTIPLIER * stratum);
             values[i++] = warpedRankingValue;
         }
         Arrays.sort(values);

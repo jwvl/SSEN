@@ -29,6 +29,8 @@ import learn.ViolatedCandidateBuilder;
  * @date Aug 9, 2015
  */
 public class DynamicNetworkEvaluation implements Evaluation {
+    private static SearchMode SEARCH_MODE = SearchMode.valueOf(ConfigFactory.load().getString("implementation.nodeSearch"));
+    private static boolean useCandidateSpaces = ConfigFactory.load().getBoolean("grammar.useCandidateSpaces");
     private DynamicNetworkGrammar grammar;
     private long id;
     private static long idCounter = 0;
@@ -36,7 +38,6 @@ public class DynamicNetworkEvaluation implements Evaluation {
     private ViolatedCandidate winner;
     private Hierarchy sampledHierarchy;
     private boolean endFormIsSink = false;
-    private boolean useCandidateSpaces = ConfigFactory.load().getBoolean("grammar.useCandidateSpaces");
     private final CostFactory costFactory;
     private final AbstractNodeSearcher nodeSearcher;
 
@@ -52,10 +53,7 @@ public class DynamicNetworkEvaluation implements Evaluation {
         this.sampledHierarchy = sampledHierarchy;
         costFactory = new CostFactory(sampledHierarchy, CostType.SIMPLE_DOUBLES_OT);
 
-        String searchModeString = ConfigFactory.load().getString("implementation.nodeSearch");
-        SearchMode searchMode = SearchMode.valueOf(searchModeString);
-
-        switch (searchMode) {
+        switch (SEARCH_MODE) {
             case DYNAMIC:
                 nodeSearcher = new DynamicNodeSearcher(dynamicNetworkGrammar, costFactory);
                 break;

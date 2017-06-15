@@ -14,7 +14,7 @@ import gen.mapping.SubCandidateSet;
 import gen.subgen.SubGen;
 import grammar.levels.Level;
 import simulate.french.sixlevel.constraints.factories.AgreeConstraintFactory;
-import simulate.french.sixlevel.constraints.factories.ExpressConstraintFactory;
+import simulate.french.sixlevel.constraints.factories.ForbidExpressConstraintFactory;
 
 import java.util.Collection;
 import java.util.List;
@@ -30,7 +30,8 @@ public class SynToMStructure extends SubGen<SemSynForm, MStructure> {
     public SynToMStructure(Level leftLevel, Level rightLevel) {
         super(leftLevel, rightLevel);
         addConstraintFactory(AgreeConstraintFactory.createInstance());
-        addConstraintFactory(ExpressConstraintFactory.createInstance());
+        //addConstraintFactory(DemandExpressConstraintFactory.createInstance());
+        addConstraintFactory(ForbidExpressConstraintFactory.createInstance());
     }
 
     /*

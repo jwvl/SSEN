@@ -26,8 +26,8 @@ import java.util.Set;
 public class LexicalHypothesisRepository implements Iterable<Morpheme> {
     private final SubstringDatabank longestCommonSubstrings;
    // private int MAX_AFFIX_LENGTH = 1;
-    private int MIN_CONCEPT_LENGTH = 1;
-    private int MAX_LCS_DIFFERENCE = ConfigFactory.load().getInt("lexicon.maxLcsDifference");
+    private static final int MIN_CONCEPT_LENGTH = 1;
+    private static final int MAX_LCS_DIFFERENCE = ConfigFactory.load().getInt("lexicon.maxLcsDifference");
     private Table<Morpheme, PhoneSubForm, LexicalMapping> repository = HashBasedTable
             .create();
     private Set<LexicalMapping> minimalMappings;

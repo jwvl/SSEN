@@ -6,7 +6,7 @@ package simulate.french.sixlevel.constraints.factories;
 import com.google.common.collect.Sets;
 import forms.morphosyntax.*;
 import forms.primitives.feature.AbstractMFeature2;
-import simulate.french.sixlevel.constraints.ExpressConstraint;
+import simulate.french.sixlevel.constraints.ForbidExpressConstraint;
 
 import java.util.Collection;
 
@@ -14,7 +14,7 @@ import java.util.Collection;
  * @author jwvl
  * @date Aug 1, 2015
  */
-public class ExpressConstraintFactory extends
+public class ForbidExpressConstraintFactory extends
         SubformConstraintFactory<MStructure, AffixType> {
 
     /*
@@ -25,8 +25,8 @@ public class ExpressConstraintFactory extends
      * #createConstraint(java.lang.Object)
      */
     @Override
-    public ExpressConstraint createConstraint(AffixType offender) {
-        return ExpressConstraint.createFromAffixType(offender);
+    public ForbidExpressConstraint createConstraint(AffixType offender) {
+        return ForbidExpressConstraint.createFromAffixType(offender);
     }
 
     /*
@@ -59,8 +59,8 @@ public class ExpressConstraintFactory extends
     /**
      * @return
      */
-    public static ExpressConstraintFactory createInstance() {
-        return new ExpressConstraintFactory();
+    public static ForbidExpressConstraintFactory createInstance() {
+        return new ForbidExpressConstraintFactory();
     }
 
 }

@@ -8,7 +8,7 @@ import com.typesafe.config.ConfigFactory;
  */
 public class EdgeIndexBuilder {
 
-    private static IndexRepresentation representation = loadRepresentationFromConfig();
+    private final static IndexRepresentation representation = loadRepresentationFromConfig();
 
 
     public static EdgeIndex newBitsetIndex(int size) {

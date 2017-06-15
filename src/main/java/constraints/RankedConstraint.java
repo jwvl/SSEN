@@ -1,7 +1,5 @@
 package constraints;
 
-import com.typesafe.config.ConfigFactory;
-
 import java.util.Objects;
 
 /**
@@ -10,7 +8,7 @@ import java.util.Objects;
 public class RankedConstraint implements Comparable<RankedConstraint> {
     private final Constraint constraint;
     private final double ranking;
-    private final boolean USE_STRATA = ConfigFactory.load().getBoolean("constraints.stratify");
+    private final boolean USE_STRATA = Constraint.STRATIFY;
 
     private RankedConstraint(Constraint constraint, double ranking) {
         this.constraint = constraint;

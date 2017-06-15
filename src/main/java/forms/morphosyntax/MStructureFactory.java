@@ -19,8 +19,8 @@ import java.util.*;
  */
 public class MStructureFactory {
     private final ImmutableList<SyntacticWord> syntacticWordTemplates;
-    private final boolean addNullValues = ConfigFactory.load().getBoolean("gen.nullValuesMSF");
-    private final boolean addDisagreement = ConfigFactory.load().getBoolean("gen.disagreementMSF");
+    private final static boolean addNullValues = ConfigFactory.load().getBoolean("gen.nullValuesMSF");
+    private final static boolean addDisagreement = ConfigFactory.load().getBoolean("gen.disagreementMSF");
 
 
     private MStructureFactory(Collection<SyntacticWord> input) {

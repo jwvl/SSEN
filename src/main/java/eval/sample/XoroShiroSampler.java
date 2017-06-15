@@ -8,15 +8,21 @@ import it.unimi.dsi.util.XoRoShiRo128PlusRandom;
 public class XoroShiroSampler extends AbstractSampler {
     private final XoRoShiRo128PlusRandom random;
     private final double sigma;
+    private final boolean sigmaIsOne;
 
     public XoroShiroSampler(double sigma) {
         random = new XoRoShiRo128PlusRandom();
         this.sigma = sigma;
+        sigmaIsOne = sigma == 1.0;
     }
 
 
     @Override
     public double sampleDouble() {
-        return random.nextGaussian()*sigma;
+        if (sigmaIsOne) {
+            return random.nextGaussian();
+        } else {
+            return random.nextGaussian()*sigma;
+        }
     }
 }

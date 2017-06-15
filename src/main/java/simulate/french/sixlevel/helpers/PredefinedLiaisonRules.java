@@ -50,11 +50,15 @@ public class PredefinedLiaisonRules {
             result.addAll(EdgeBasedRuleBuilder.fromString("∅# → z / __|V", Edge.WORD));
             result.addAll(EdgeBasedRuleBuilder.fromString("#∅ → t / |V__", Edge.WORD));
             result.addAll(EdgeBasedRuleBuilder.fromString("∅# → t / __|V", Edge.WORD));
+            result.addAll(EdgeBasedRuleBuilder.fromString("Q# → ɔn / __", Edge.WORD));
+            result.addAll(EdgeBasedRuleBuilder.fromString("Qn# → Q / __", Edge.WORD));
+            result.addAll(EdgeBasedRuleBuilder.fromString("ɔn# → Q / __", Edge.WORD));
+            result.addAll(EdgeBasedRuleBuilder.fromString("3# → ɛn / __", Edge.WORD));
+            result.addAll(EdgeBasedRuleBuilder.fromString("ɛn# → 3 / __", Edge.WORD));
+            result.addAll(EdgeBasedRuleBuilder.fromString("3n →  3 / __", Edge.WORD));
+            result.addAll(EdgeBasedRuleBuilder.fromString("ɛn# → 3 / __", Edge.WORD));
         }
-        result.addAll(EdgeBasedRuleBuilder.fromString("Q# → ɔn / __", Edge.WORD));
-        result.addAll(EdgeBasedRuleBuilder.fromString("ɔn# → Q / __", Edge.WORD));
-        result.addAll(EdgeBasedRuleBuilder.fromString("3# → ɛn / __", Edge.WORD));
-        result.addAll(EdgeBasedRuleBuilder.fromString("ɛn# → 3 / __", Edge.WORD));
+
 
         if (config.getBoolean("gen.schwaInsertionOnUF")) {
             result.addAll(EdgeBasedRuleBuilder.fromString("∅# → ə / |C__|C", Edge.MORPHEME));

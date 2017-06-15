@@ -26,6 +26,7 @@ public class LearningTrajectory extends AbstractLearningTrajectory {
     private int numEvaluations;
     private static boolean TEST_RESULTS = false;
     private final int resetCounterEvery;
+    private final static double showStatsEvery = ConfigFactory.load().getDouble("stats.showErrorEvery");
     private UpdateAction lastUpdate = UpdateAction.NO_UPDATE;
 
 
@@ -111,7 +112,7 @@ public class LearningTrajectory extends AbstractLearningTrajectory {
     }
 
     private int calculateResetCounterEvery(int numEvaluations) {
-        double asNumber = ConfigFactory.load().getDouble("stats.showErrorEvery");
+        double asNumber = showStatsEvery;
         if (asNumber > 1) {
             return (int) asNumber;
         } else if (asNumber > 0) {

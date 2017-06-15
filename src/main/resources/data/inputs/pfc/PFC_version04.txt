@@ -103,7 +103,7 @@ ADJ{bon}, N{côté.g=M num=SG}*	bQkote	1	0
 ADJ{bon}, N{côté.g=M num=SG}*	bQkote	1	0
 ADJ{bon}, N{diplôme.g=M num=PL}*	bQdiplom	1	0
 ADJ{bon}, N{endroit.g=M num=PL}*	bQ&dʁwa	1	0
-ADJ{bon}, N{entraînement.g=M num=SG}*	bQ&tʁɛnəm&	1	0
+ADJ{bon}, N{entraînement.g=M num=SG}*	bQ&tʁɛnœm&	1	0
 ADJ{bon}, N{exemple.g=M num=SG}*	bQnɛgz&pl	1	1
 ADJ{bon}, N{femme.g=F num=SG}*	bɔnfam	1	0
 ADJ{bon}, N{heure.g=F num=SG}*	bɔnœʁ	1	0
@@ -117,14 +117,14 @@ ADJ{bon}, N{question.g=F num=SG}*	bɔnkɛstjQ	1	0
 ADJ{bon}, N{quinzaine.g=F num=SG}*	bɔnk3zɛn	1	0
 ADJ{bon}, N{relation.g=F num=PL}*	bɔnʁølasjQ	1	0
 ADJ{bon}, N{rendu.g=M num=SG}*	bQʁ&dy	1	0
-ADJ{bon}, N{repas.g=M num=SG}*	bQʁəpa	1	0
-ADJ{bon}, N{retraite.g=F num=SG}*	bɔnʁətʁɛt	1	0
-ADJ{bon}, N{revers.g=M num=SG}*	bQʁəvɛʁ	1	0
+ADJ{bon}, N{repas.g=M num=SG}*	bQʁœpa	1	0
+ADJ{bon}, N{retraite.g=F num=SG}*	bɔnʁœtʁɛt	1	0
+ADJ{bon}, N{revers.g=M num=SG}*	bQʁœvɛʁ	1	0
 ADJ{bon}, N{sens.g=M num=SG}*	bQs&s	1	0
 ADJ{bon}, N{sentiment.g=M num=PL}*	bQs&tim&	1	0
 ADJ{bon}, N{soirée.g=F num=SG}*	bɔnswaʁe	1	0
-ADJ{bon}, N{souvenir.g=M num=PL}*	bQsuvəniʁ	1	0
-ADJ{bon}, N{souvenir.g=M num=SG}*	bQsuvəniʁ	1	0
+ADJ{bon}, N{souvenir.g=M num=PL}*	bQsuvœniʁ	1	0
+ADJ{bon}, N{souvenir.g=M num=SG}*	bQsuvœniʁ	1	0
 ADJ{bon}, N{thé.g=M num=SG}*	bQte	1	0
 ADJ{bête}, N{amour.g=M num=SG}*	bɛtamuʁ	1	0
 ADJ{certaine}, N{réputation.g=F num=SG}*	sɛʁtɛnʁepytasjQ	1	0
@@ -184,7 +184,7 @@ ADJ{chaque}, N{fois.g=F num=SG}*	ʃakfwa	1	0
 ADJ{chaque}, N{jour.g=M num=SG}*	ʃakʒuʁ	1	0
 ADJ{chaque}, N{mois.g=M num=SG}*	ʃakmwa	1	0
 ADJ{chaque}, N{pays.g=M num=SG}*	ʃakpei	1	0
-ADJ{chaque}, N{registre.g=M num=SG}*	ʃakʁəʒistʁ	1	0
+ADJ{chaque}, N{registre.g=M num=SG}*	ʃakʁœʒistʁ	1	0
 ADJ{chaque}, N{voyage.g=M num=SG}*	ʃakvwajaʒ	1	0
 ADJ{chaque}, N{voyage.g=M num=SG}*	ʃakvwajaʒ	1	0
 ADJ{chaque}, N{voyage.g=M num=SG}*	ʃakvwajaʒ	1	0
@@ -246,15 +246,15 @@ ADJ{d'autres}, N{personne.g=F num=PL}*	dotʁpɛʁsɔn	1	0
 ADJ{d'autres}, N{province.g=F num=PL}*	dotʁpʁov3s	1	0
 ADJ{d'autres}, N{région.g=F num=PL}*	dotʁʁeʒjQ	1	0
 ADJ{d'autres}, N{sujet.g=M num=PL}*	dotʁsyʒɛ	1	0
-ADJ{demi}, N{douzaine.g=F num=SG}*	dəmiduzɛn	1	0
-ADJ{demi}, N{douzaine.g=F num=SG}*	dəmiduzɛn	1	0
-ADJ{demi}, N{point.g=M num=PL}*	dəmipw3	1	0
-ADJ{demi}, N{pointe.g=F num=SG}*	dəmipw3t	1	0
-ADJ{demi}, N{pointe.g=F num=SG}*	dəmipw3t	1	0
-ADJ{demi}, N{pointure.g=F num=PL}*	dəmipw3tyʁ	1	0
-ADJ{demi}, N{siècle.g=M num=SG}*	dəmisjɛkl	1	0
+ADJ{demi}, N{douzaine.g=F num=SG}*	dœmiduzɛn	1	0
+ADJ{demi}, N{douzaine.g=F num=SG}*	dœmiduzɛn	1	0
+ADJ{demi}, N{point.g=M num=PL}*	dœmipw3	1	0
+ADJ{demi}, N{pointe.g=F num=SG}*	dœmipw3t	1	0
+ADJ{demi}, N{pointe.g=F num=SG}*	dœmipw3t	1	0
+ADJ{demi}, N{pointure.g=F num=PL}*	dœmipw3tyʁ	1	0
+ADJ{demi}, N{siècle.g=M num=SG}*	dœmisjɛkl	1	0
 ADJ{dernier}, N{année.g=F num=PL}*	dɛʁnjɛʁzane	1	1
-ADJ{dernier}, N{degré.g=M num=SG}*	dɛʁnjedəgʁe	1	0
+ADJ{dernier}, N{degré.g=M num=SG}*	dɛʁnjedœgʁe	1	0
 ADJ{dernier}, N{mois.g=M num=PL}*	dɛʁnjemwa	1	0
 ADJ{dernier}, N{question.g=F num=SG}*	dɛʁnjɛʁkɛstjQ	1	0
 ADJ{dernier}, N{s.g=M num=PL}*	dɛʁnjɛʁɛs	1	0
@@ -274,8 +274,8 @@ ADJ{différent}, N{commune.g=F num=PL}*	difeʁ&tkomyn	1	0
 ADJ{double}, N{national.g=M num=SG}*	dublnasjonal	1	0
 ADJ{double}, N{nationalité.g=F num=SG}*	dublnasjonalite	1	0
 ADJ{double}, N{nationalité.g=F num=SG}*	dublnasjonalite	1	0
-ADJ{dénivelé}, N{négatif.g=M num=SG}*	denivəlenegatif	1	0
-ADJ{dénivelé}, N{positif.g=M num=SG}*	denivəlepozitif	1	0
+ADJ{dénivelé}, N{négatif.g=M num=SG}*	denivœlenegatif	1	0
+ADJ{dénivelé}, N{positif.g=M num=SG}*	denivœlepozitif	1	0
 ADJ{fait}, N{confiance.g=F num=SG}*	fɛtkQfj&s	1	0
 ADJ{fait}, N{historique.g=M num=PL}*	fɛistoʁik	1	0
 ADJ{fait}, N{partie.g=F num=SG}*	fɛtpaʁti	1	0
@@ -295,9 +295,9 @@ ADJ{grand}, N{chose.g=F num=SG}*	gʁ&ʃoz	1	0
 ADJ{grand}, N{commune.g=F num=PL}*	gʁ&dkomyn	1	0
 ADJ{grand}, N{commune.g=F num=PL}*	gʁ&dkomyn	1	0
 ADJ{grand}, N{différence.g=F num=SG}*	gʁ&ddifeʁ&s	1	0
-ADJ{grand}, N{détachement.g=M num=SG}*	gʁ&detaʃəm&	1	0
-ADJ{grand}, N{détachement.g=M num=SG}*	gʁ&detaʃəm&	1	0
-ADJ{grand}, N{détachement.g=M num=SG}*	gʁ&detaʃəm&	1	0
+ADJ{grand}, N{détachement.g=M num=SG}*	gʁ&detaʃœm&	1	0
+ADJ{grand}, N{détachement.g=M num=SG}*	gʁ&detaʃœm&	1	0
+ADJ{grand}, N{détachement.g=M num=SG}*	gʁ&detaʃœm&	1	0
 ADJ{grand}, N{ensemble.g=M num=SG}*	gʁ&&s&bl	1	0
 ADJ{grand}, N{famille.g=F num=SG}*	gʁ&dfamij	1	0
 ADJ{grand}, N{famille.g=F num=SG}*	gʁ&dfamij	1	0
@@ -382,25 +382,25 @@ ADJ{grave}, N{problème.g=M num=PL}*	gʁavpʁoblɛm	1	0
 ADJ{gros}, N{con.g=M num=SG}*	gʁokQ	1	0
 ADJ{gros}, N{différence.g=F num=SG}*	gʁosdifeʁ&s	1	0
 ADJ{gros}, N{discussion.g=F num=SG}*	gʁosdiskysjQ	1	0
-ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃəm&	1	0
-ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃəm&	1	0
-ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃəm&	1	0
-ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃəm&	1	0
-ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃəm&	1	0
-ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃəm&	1	0
-ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃəm&	1	0
-ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃəm&	1	0
-ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃəm&	1	0
-ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃəm&	1	0
-ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃəm&	1	0
-ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃəm&	1	0
-ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃəm&	1	0
-ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃəm&	1	0
-ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃəm&	1	0
-ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃəm&	1	0
-ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃəm&	1	0
-ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃəm&	1	0
-ADJ{gros}, N{entreprise.g=F num=SG}*	gʁos&tʁəpʁiz	1	0
+ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃœm&	1	0
+ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃœm&	1	0
+ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃœm&	1	0
+ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃœm&	1	0
+ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃœm&	1	0
+ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃœm&	1	0
+ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃœm&	1	0
+ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃœm&	1	0
+ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃœm&	1	0
+ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃœm&	1	0
+ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃœm&	1	0
+ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃœm&	1	0
+ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃœm&	1	0
+ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃœm&	1	0
+ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃœm&	1	0
+ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃœm&	1	0
+ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃœm&	1	0
+ADJ{gros}, N{détachement.g=M num=SG}*	gʁodetaʃœm&	1	0
+ADJ{gros}, N{entreprise.g=F num=SG}*	gʁos&tʁœpʁiz	1	0
 ADJ{gros}, N{informatique.g=F num=SG}*	gʁos3fɔʁmatik	1	0
 ADJ{gros}, N{lampe.g=F num=SG}*	gʁosl&p	1	0
 ADJ{gros}, N{larme.g=F num=PL}*	gʁoslaʁm	1	0
@@ -455,10 +455,10 @@ ADJ{mauvais}, N{touche.g=F num=SG}*	movɛztuʃ	1	0
 ADJ{mauvais}, N{état.g=M num=SG}*	movɛeta	1	0
 ADJ{meilleur}, N{moyen.g=M num=SG}*	mɛjœʁmwaj3	1	0
 ADJ{meilleur}, N{note.g=F num=PL}*	mɛjœʁnɔt	1	0
-ADJ{meilleur}, N{rendement.g=M num=SG}*	mɛjœʁʁ&dəm&	1	0
-ADJ{meilleur}, N{rendement.g=M num=SG}*	mɛjœʁʁ&dəm&	1	0
+ADJ{meilleur}, N{rendement.g=M num=SG}*	mɛjœʁʁ&dœm&	1	0
+ADJ{meilleur}, N{rendement.g=M num=SG}*	mɛjœʁʁ&dœm&	1	0
 ADJ{même}, N{bouffe.g=F num=SG}*	mɛmbuf	1	0
-ADJ{même}, N{chemin.g=M num=SG}*	mɛmʃəm3	1	0
+ADJ{même}, N{chemin.g=M num=SG}*	mɛmʃœm3	1	0
 ADJ{même}, N{chose.g=F num=PL}*	mɛmʃoz	1	0
 ADJ{même}, N{chose.g=F num=SG}*	mɛmʃoz	1	0
 ADJ{même}, N{chose.g=F num=SG}*	mɛmʃoz	1	0
@@ -645,158 +645,158 @@ ADJ{pendant}, N{cinquante.g=M num=PL}*	p&d&s3k&t	1	0
 ADJ{personnes}, N{handicapé.g=M num=PL}*	pɛʁsɔn&dikape	1	0
 ADJ{personne}, N{derrière.g=M num=SG}*	pɛʁsɔndɛʁjɛʁ	1	0
 ADJ{personne}, N{rien.g=M num=SG}*	pɛʁsɔnʁj3	1	0
-ADJ{petit}, N{agneau.g=M num=SG}*	pətiaɲo	1	0
-ADJ{petit}, N{ami.g=F num=PL}*	pətitzami	1	1
-ADJ{petit}, N{ami.g=F num=SG}*	pətitami	1	0
-ADJ{petit}, N{anecdote.g=F num=PL}*	pətitanɛkdɔt	1	0
-ADJ{petit}, N{anecdote.g=F num=SG}*	pətitanɛkdɔt	1	0
-ADJ{petit}, N{antenne.g=F num=SG}*	pətit&tɛn	1	0
-ADJ{petit}, N{banc.g=M num=SG}*	pətib&	1	0
-ADJ{petit}, N{bestiole.g=F num=PL}*	pətitbɛstjɔl	1	0
-ADJ{petit}, N{boule.g=F num=SG}*	pətitbul	1	0
-ADJ{petit}, N{boule.g=F num=SG}*	pətitbul	1	0
-ADJ{petit}, N{boule.g=F num=SG}*	pətitbul	1	0
-ADJ{petit}, N{bout.g=M num=SG}*	pətibu	1	0
-ADJ{petit}, N{bout.g=M num=SG}*	pətibu	1	0
-ADJ{petit}, N{bout.g=M num=SG}*	pətibu	1	0
-ADJ{petit}, N{bruit.g=M num=SG}*	pətibʁɥi	1	0
-ADJ{petit}, N{bébé.g=M num=PL}*	pətibebe	1	0
-ADJ{petit}, N{cadeau.g=M num=SG}*	pətikado	1	0
-ADJ{petit}, N{chambre.g=F num=SG}*	pətitʃ&bʁ	1	0
-ADJ{petit}, N{chorégraphie.g=F num=SG}*	pətitkoʁegʁafi	1	0
-ADJ{petit}, N{chose.g=F num=PL}*	pətitʃoz	1	0
-ADJ{petit}, N{chose.g=F num=PL}*	pətitʃoz	1	0
-ADJ{petit}, N{chose.g=F num=PL}*	pətitʃoz	1	0
-ADJ{petit}, N{commerce.g=M num=SG}*	pətikomɛʁs	1	0
-ADJ{petit}, N{commerce.g=M num=SG}*	pətikomɛʁs	1	0
-ADJ{petit}, N{con.g=M num=SG}*	pətikQ	1	0
-ADJ{petit}, N{conseil.g=M num=PL}*	pətikQsɛj	1	0
-ADJ{petit}, N{copain.g=F num=PL}*	pətitkopin	1	0
-ADJ{petit}, N{cousin.g=F num=PL}*	pətitkuzin	1	0
-ADJ{petit}, N{cousin.g=F num=SG}*	pətitkuzin	1	0
-ADJ{petit}, N{cuillère.g=F num=PL}*	pətitkɥijɛʁ	1	0
-ADJ{petit}, N{débordement.g=M num=PL}*	pətidebɔʁdəm&	1	0
-ADJ{petit}, N{défaillance.g=F num=SG}*	pətitdefaj&s	1	0
-ADJ{petit}, N{déjeuner.g=M num=SG}*	pətideʒœne	1	0
-ADJ{petit}, N{déjeuner.g=M num=SG}*	pətideʒœne	1	0
-ADJ{petit}, N{déjeuner.g=M num=SG}*	pətideʒœne	1	0
-ADJ{petit}, N{détail.g=M num=SG}*	pətidetaj	1	0
-ADJ{petit}, N{enfant.g=M num=PL}*	pəti&f&	1	0
-ADJ{petit}, N{enfant.g=M num=PL}*	pəti&f&	1	0
-ADJ{petit}, N{enfant.g=M num=PL}*	pəti&f&	1	0
-ADJ{petit}, N{femme.g=F num=SG}*	pətitfam	1	0
-ADJ{petit}, N{fille.g=F num=PL}*	pətitfij	1	0
-ADJ{petit}, N{fille.g=F num=SG}*	pətitfij	1	0
-ADJ{petit}, N{fille.g=F num=SG}*	pətitfij	1	0
-ADJ{petit}, N{fille.g=F num=SG}*	pətitfij	1	0
-ADJ{petit}, N{fille.g=F num=SG}*	pətitfij	1	0
-ADJ{petit}, N{fille.g=F num=SG}*	pətitfij	1	0
-ADJ{petit}, N{frère.g=M num=SG}*	pətifʁɛʁ	1	0
-ADJ{petit}, N{frère.g=M num=SG}*	pətifʁɛʁ	1	0
-ADJ{petit}, N{frère.g=M num=SG}*	pətifʁɛʁ	1	0
-ADJ{petit}, N{frère.g=M num=SG}*	pətifʁɛʁ	1	0
-ADJ{petit}, N{frère.g=M num=SG}*	pətifʁɛʁ	1	0
-ADJ{petit}, N{frère.g=M num=SG}*	pətifʁɛʁ	1	0
-ADJ{petit}, N{fête.g=F num=PL}*	pətitfɛt	1	0
-ADJ{petit}, N{garçon.g=M num=PL}*	pətigaʁsQ	1	0
-ADJ{petit}, N{hameau.g=M num=PL}*	pətiamo	1	0
-ADJ{petit}, N{histoire.g=F num=SG}*	pətitistwaʁ	1	0
-ADJ{petit}, N{lampe.g=F num=SG}*	pətitl&p	1	0
-ADJ{petit}, N{lampe.g=F num=SG}*	pətitl&p	1	0
-ADJ{petit}, N{lapin.g=M num=PL}*	pətilap3	1	0
-ADJ{petit}, N{maître.g=M num=PL}*	pətimɛtʁ	1	0
-ADJ{petit}, N{merde.g=F num=PL}*	pətitmɛʁd	1	0
-ADJ{petit}, N{milieu.g=M num=SG}*	pətimiljø	1	0
-ADJ{petit}, N{minorité.g=F num=SG}*	pətitminoʁite	1	0
-ADJ{petit}, N{moment.g=M num=SG}*	pətimom&	1	0
-ADJ{petit}, N{moment.g=M num=SG}*	pətimom&	1	0
-ADJ{petit}, N{monde.g=M num=SG}*	pətimQd	1	0
-ADJ{petit}, N{mot.g=M num=PL}*	pətimo	1	0
-ADJ{petit}, N{mot.g=M num=SG}*	pətimo	1	0
-ADJ{petit}, N{myopie.g=F num=SG}*	pətitmjopi	1	0
-ADJ{petit}, N{nièce.g=F num=SG}*	pətitnjɛs	1	0
-ADJ{petit}, N{occupation.g=F num=PL}*	pətitzokypasjQ	1	1
-ADJ{petit}, N{partie.g=F num=SG}*	pətitpaʁti	1	0
-ADJ{petit}, N{patron.g=M num=SG}*	pətipatʁQ	1	0
-ADJ{petit}, N{pause.g=F num=SG}*	pətitpoz	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=PL}*	pətipø	1	0
-ADJ{petit}, N{peu.g=M num=SG}*	pətipø	1	0
-ADJ{petit}, N{phrase.g=F num=SG}*	pətitfʁaz	1	0
-ADJ{petit}, N{plat.g=M num=PL}*	pətipla	1	0
-ADJ{petit}, N{poisson.g=M num=SG}*	pətipwasQ	1	0
-ADJ{petit}, N{pomme.g=F num=PL}*	pətitpɔm	1	0
-ADJ{petit}, N{problème.g=M num=PL}*	pətipʁoblɛm	1	0
-ADJ{petit}, N{question.g=F num=PL}*	pətitkɛstjQ	1	0
-ADJ{petit}, N{question.g=F num=SG}*	pətitkɛstjQ	1	0
-ADJ{petit}, N{rapprochement.g=M num=SG}*	pətiʁapʁɔʃəm&	1	0
-ADJ{petit}, N{repas.g=M num=SG}*	pətiʁəpa	1	0
-ADJ{petit}, N{rond.g=M num=SG}*	pətiʁQ	1	0
-ADJ{petit}, N{skieur.g=M num=PL}*	pətiskjœʁ	1	0
-ADJ{petit}, N{soeur.g=F num=SG}*	pətitsœʁ	1	0
-ADJ{petit}, N{sommet.g=M num=SG}*	pətisomɛ	1	0
-ADJ{petit}, N{station.g=F num=SG}*	pətitstasjQ	1	0
-ADJ{petit}, N{studio.g=M num=SG}*	pətistydjo	1	0
-ADJ{petit}, N{sélection.g=F num=SG}*	pətitselɛksjQ	1	0
-ADJ{petit}, N{talon.g=M num=PL}*	pətitalQ	1	0
-ADJ{petit}, N{trentaine.g=F num=SG}*	pətittʁ&tɛn	1	0
-ADJ{petit}, N{trognon.g=M num=PL}*	pətitʁoɲQ	1	0
-ADJ{petit}, N{truc.g=M num=SG}*	pətitʁyk	1	0
-ADJ{petit}, N{truc.g=M num=SG}*	pətitʁyk	1	0
-ADJ{petit}, N{vieux.g=F num=SG}*	pətitvjɛj	1	0
-ADJ{petit}, N{ville.g=F num=SG}*	pətitvil	1	0
-ADJ{petit}, N{ville.g=F num=SG}*	pətitvil	1	0
-ADJ{petit}, N{voyage.g=M num=PL}*	pətivwajaʒ	1	0
-ADJ{petit}, N{étude.g=F num=PL}*	pətitetyd	1	0
+ADJ{petit}, N{agneau.g=M num=SG}*	pœtiaɲo	1	0
+ADJ{petit}, N{ami.g=F num=PL}*	pœtitzami	1	1
+ADJ{petit}, N{ami.g=F num=SG}*	pœtitami	1	0
+ADJ{petit}, N{anecdote.g=F num=PL}*	pœtitanɛkdɔt	1	0
+ADJ{petit}, N{anecdote.g=F num=SG}*	pœtitanɛkdɔt	1	0
+ADJ{petit}, N{antenne.g=F num=SG}*	pœtit&tɛn	1	0
+ADJ{petit}, N{banc.g=M num=SG}*	pœtib&	1	0
+ADJ{petit}, N{bestiole.g=F num=PL}*	pœtitbɛstjɔl	1	0
+ADJ{petit}, N{boule.g=F num=SG}*	pœtitbul	1	0
+ADJ{petit}, N{boule.g=F num=SG}*	pœtitbul	1	0
+ADJ{petit}, N{boule.g=F num=SG}*	pœtitbul	1	0
+ADJ{petit}, N{bout.g=M num=SG}*	pœtibu	1	0
+ADJ{petit}, N{bout.g=M num=SG}*	pœtibu	1	0
+ADJ{petit}, N{bout.g=M num=SG}*	pœtibu	1	0
+ADJ{petit}, N{bruit.g=M num=SG}*	pœtibʁɥi	1	0
+ADJ{petit}, N{bébé.g=M num=PL}*	pœtibebe	1	0
+ADJ{petit}, N{cadeau.g=M num=SG}*	pœtikado	1	0
+ADJ{petit}, N{chambre.g=F num=SG}*	pœtitʃ&bʁ	1	0
+ADJ{petit}, N{chorégraphie.g=F num=SG}*	pœtitkoʁegʁafi	1	0
+ADJ{petit}, N{chose.g=F num=PL}*	pœtitʃoz	1	0
+ADJ{petit}, N{chose.g=F num=PL}*	pœtitʃoz	1	0
+ADJ{petit}, N{chose.g=F num=PL}*	pœtitʃoz	1	0
+ADJ{petit}, N{commerce.g=M num=SG}*	pœtikomɛʁs	1	0
+ADJ{petit}, N{commerce.g=M num=SG}*	pœtikomɛʁs	1	0
+ADJ{petit}, N{con.g=M num=SG}*	pœtikQ	1	0
+ADJ{petit}, N{conseil.g=M num=PL}*	pœtikQsɛj	1	0
+ADJ{petit}, N{copain.g=F num=PL}*	pœtitkopin	1	0
+ADJ{petit}, N{cousin.g=F num=PL}*	pœtitkuzin	1	0
+ADJ{petit}, N{cousin.g=F num=SG}*	pœtitkuzin	1	0
+ADJ{petit}, N{cuillère.g=F num=PL}*	pœtitkɥijɛʁ	1	0
+ADJ{petit}, N{débordement.g=M num=PL}*	pœtidebɔʁdœm&	1	0
+ADJ{petit}, N{défaillance.g=F num=SG}*	pœtitdefaj&s	1	0
+ADJ{petit}, N{déjeuner.g=M num=SG}*	pœtideʒœne	1	0
+ADJ{petit}, N{déjeuner.g=M num=SG}*	pœtideʒœne	1	0
+ADJ{petit}, N{déjeuner.g=M num=SG}*	pœtideʒœne	1	0
+ADJ{petit}, N{détail.g=M num=SG}*	pœtidetaj	1	0
+ADJ{petit}, N{enfant.g=M num=PL}*	pœti&f&	1	0
+ADJ{petit}, N{enfant.g=M num=PL}*	pœti&f&	1	0
+ADJ{petit}, N{enfant.g=M num=PL}*	pœti&f&	1	0
+ADJ{petit}, N{femme.g=F num=SG}*	pœtitfam	1	0
+ADJ{petit}, N{fille.g=F num=PL}*	pœtitfij	1	0
+ADJ{petit}, N{fille.g=F num=SG}*	pœtitfij	1	0
+ADJ{petit}, N{fille.g=F num=SG}*	pœtitfij	1	0
+ADJ{petit}, N{fille.g=F num=SG}*	pœtitfij	1	0
+ADJ{petit}, N{fille.g=F num=SG}*	pœtitfij	1	0
+ADJ{petit}, N{fille.g=F num=SG}*	pœtitfij	1	0
+ADJ{petit}, N{frère.g=M num=SG}*	pœtifʁɛʁ	1	0
+ADJ{petit}, N{frère.g=M num=SG}*	pœtifʁɛʁ	1	0
+ADJ{petit}, N{frère.g=M num=SG}*	pœtifʁɛʁ	1	0
+ADJ{petit}, N{frère.g=M num=SG}*	pœtifʁɛʁ	1	0
+ADJ{petit}, N{frère.g=M num=SG}*	pœtifʁɛʁ	1	0
+ADJ{petit}, N{frère.g=M num=SG}*	pœtifʁɛʁ	1	0
+ADJ{petit}, N{fête.g=F num=PL}*	pœtitfɛt	1	0
+ADJ{petit}, N{garçon.g=M num=PL}*	pœtigaʁsQ	1	0
+ADJ{petit}, N{hameau.g=M num=PL}*	pœtiamo	1	0
+ADJ{petit}, N{histoire.g=F num=SG}*	pœtitistwaʁ	1	0
+ADJ{petit}, N{lampe.g=F num=SG}*	pœtitl&p	1	0
+ADJ{petit}, N{lampe.g=F num=SG}*	pœtitl&p	1	0
+ADJ{petit}, N{lapin.g=M num=PL}*	pœtilap3	1	0
+ADJ{petit}, N{maître.g=M num=PL}*	pœtimɛtʁ	1	0
+ADJ{petit}, N{merde.g=F num=PL}*	pœtitmɛʁd	1	0
+ADJ{petit}, N{milieu.g=M num=SG}*	pœtimiljø	1	0
+ADJ{petit}, N{minorité.g=F num=SG}*	pœtitminoʁite	1	0
+ADJ{petit}, N{moment.g=M num=SG}*	pœtimom&	1	0
+ADJ{petit}, N{moment.g=M num=SG}*	pœtimom&	1	0
+ADJ{petit}, N{monde.g=M num=SG}*	pœtimQd	1	0
+ADJ{petit}, N{mot.g=M num=PL}*	pœtimo	1	0
+ADJ{petit}, N{mot.g=M num=SG}*	pœtimo	1	0
+ADJ{petit}, N{myopie.g=F num=SG}*	pœtitmjopi	1	0
+ADJ{petit}, N{nièce.g=F num=SG}*	pœtitnjɛs	1	0
+ADJ{petit}, N{occupation.g=F num=PL}*	pœtitzokypasjQ	1	1
+ADJ{petit}, N{partie.g=F num=SG}*	pœtitpaʁti	1	0
+ADJ{petit}, N{patron.g=M num=SG}*	pœtipatʁQ	1	0
+ADJ{petit}, N{pause.g=F num=SG}*	pœtitpoz	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=PL}*	pœtipø	1	0
+ADJ{petit}, N{peu.g=M num=SG}*	pœtipø	1	0
+ADJ{petit}, N{phrase.g=F num=SG}*	pœtitfʁaz	1	0
+ADJ{petit}, N{plat.g=M num=PL}*	pœtipla	1	0
+ADJ{petit}, N{poisson.g=M num=SG}*	pœtipwasQ	1	0
+ADJ{petit}, N{pomme.g=F num=PL}*	pœtitpɔm	1	0
+ADJ{petit}, N{problème.g=M num=PL}*	pœtipʁoblɛm	1	0
+ADJ{petit}, N{question.g=F num=PL}*	pœtitkɛstjQ	1	0
+ADJ{petit}, N{question.g=F num=SG}*	pœtitkɛstjQ	1	0
+ADJ{petit}, N{rapprochement.g=M num=SG}*	pœtiʁapʁɔʃœm&	1	0
+ADJ{petit}, N{repas.g=M num=SG}*	pœtiʁœpa	1	0
+ADJ{petit}, N{rond.g=M num=SG}*	pœtiʁQ	1	0
+ADJ{petit}, N{skieur.g=M num=PL}*	pœtiskjœʁ	1	0
+ADJ{petit}, N{soeur.g=F num=SG}*	pœtitsœʁ	1	0
+ADJ{petit}, N{sommet.g=M num=SG}*	pœtisomɛ	1	0
+ADJ{petit}, N{station.g=F num=SG}*	pœtitstasjQ	1	0
+ADJ{petit}, N{studio.g=M num=SG}*	pœtistydjo	1	0
+ADJ{petit}, N{sélection.g=F num=SG}*	pœtitselɛksjQ	1	0
+ADJ{petit}, N{talon.g=M num=PL}*	pœtitalQ	1	0
+ADJ{petit}, N{trentaine.g=F num=SG}*	pœtittʁ&tɛn	1	0
+ADJ{petit}, N{trognon.g=M num=PL}*	pœtitʁoɲQ	1	0
+ADJ{petit}, N{truc.g=M num=SG}*	pœtitʁyk	1	0
+ADJ{petit}, N{truc.g=M num=SG}*	pœtitʁyk	1	0
+ADJ{petit}, N{vieux.g=F num=SG}*	pœtitvjɛj	1	0
+ADJ{petit}, N{ville.g=F num=SG}*	pœtitvil	1	0
+ADJ{petit}, N{ville.g=F num=SG}*	pœtitvil	1	0
+ADJ{petit}, N{voyage.g=M num=PL}*	pœtivwajaʒ	1	0
+ADJ{petit}, N{étude.g=F num=PL}*	pœtitetyd	1	0
 ADJ{plein}, N{centre.g=M num=SG}*	pl3s&tʁ	1	0
 ADJ{plein}, N{crise.g=F num=SG}*	plɛnkʁiz	1	0
-ADJ{plein}, N{dedans.g=M num=PL}*	pl3dəd&	1	0
+ADJ{plein}, N{dedans.g=M num=PL}*	pl3dœd&	1	0
 ADJ{plusieurs}, N{carrière.g=F num=PL}*	plyzjœʁkaʁjɛʁ	1	0
 ADJ{plusieurs}, N{carrière.g=F num=PL}*	plyzjœʁkaʁjɛʁ	1	0
-ADJ{plusieurs}, N{département.g=M num=PL}*	plyzjœʁdepaʁtəm&	1	0
+ADJ{plusieurs}, N{département.g=M num=PL}*	plyzjœʁdepaʁtœm&	1	0
 ADJ{plusieurs}, N{enfant.g=M num=PL}*	plyzjœʁz&f&	1	1
 ADJ{plusieurs}, N{fois.g=F num=PL}*	plyzjœʁfwa	1	0
 ADJ{plusieurs}, N{fois.g=F num=PL}*	plyzjœʁfwa	1	0
@@ -816,10 +816,10 @@ ADJ{premier}, N{année.g=F num=SG}*	pʁømjɛʁane	1	0
 ADJ{premier}, N{année.g=F num=SG}*	pʁømjɛʁane	1	0
 ADJ{premier}, N{année.g=F num=SG}*	pʁømjɛʁane	1	0
 ADJ{premier}, N{année.g=F num=SG}*	pʁømjɛʁane	1	0
-ADJ{premier}, N{appartement.g=M num=SG}*	pʁømjeapaʁtəm&	1	0
+ADJ{premier}, N{appartement.g=M num=SG}*	pʁømjeapaʁtœm&	1	0
 ADJ{premier}, N{boulot.g=M num=SG}*	pʁømjebulo	1	0
 ADJ{premier}, N{chose.g=F num=SG}*	pʁømjɛʁʃoz	1	0
-ADJ{premier}, N{degré.g=M num=SG}*	pʁømjedəgʁe	1	0
+ADJ{premier}, N{degré.g=M num=SG}*	pʁømjedœgʁe	1	0
 ADJ{premier}, N{fois.g=F num=PL}*	pʁømjɛʁfwa	1	0
 ADJ{premier}, N{fois.g=F num=PL}*	pʁømjɛʁfwa	1	0
 ADJ{premier}, N{fois.g=F num=PL}*	pʁømjɛʁfwa	1	0
@@ -866,7 +866,7 @@ ADJ{quelle}, N{année.g=F num=SG}*	kɛlane	1	0
 ADJ{quelle}, N{année.g=F num=SG}*	kɛlane	1	0
 ADJ{quelle}, N{année.g=F num=SG}*	kɛlane	1	0
 ADJ{quelle}, N{année.g=F num=SG}*	kɛlane	1	0
-ADJ{quelle}, N{entreprise.g=F num=SG}*	kɛl&tʁəpʁiz	1	0
+ADJ{quelle}, N{entreprise.g=F num=SG}*	kɛl&tʁœpʁiz	1	0
 ADJ{quelle}, N{heure.g=F num=SG}*	kɛlœʁ	1	0
 ADJ{quelle}, N{saison.g=F num=SG}*	kɛlsɛzQ	1	0
 ADJ{quelle}, N{époque.g=F num=SG}*	kɛlepɔk	1	0
@@ -973,22 +973,22 @@ ADJ{quel}, N{âge.g=M num=SG}*	kɛlaʒ	1	0
 ADJ{quel}, N{âge.g=M num=SG}*	kɛlaʒ	1	0
 ADJ{quel}, N{âge.g=M num=SG}*	kɛlaʒ	1	0
 ADJ{quel}, N{âge.g=M num=SG}*	kɛlaʒ	1	0
-ADJ{quoi}, N{dessus.g=M num=PL}*	kwadəsy	1	0
+ADJ{quoi}, N{dessus.g=M num=PL}*	kwadœsy	1	0
 ADJ{quoi}, N{ligne.g=F num=SG}*	kwaliɲ	1	0
 ADJ{sacré}, N{responsabilité.g=F num=SG}*	sakʁeʁɛspQsabilite	1	0
 ADJ{scientifique}, N{bac.g=M num=SG}*	sj&tifikbak	1	0
-ADJ{septième}, N{arrondissement.g=M num=SG}*	sɛtjɛmaʁQdisəm&	1	0
+ADJ{septième}, N{arrondissement.g=M num=SG}*	sɛtjɛmaʁQdisœm&	1	0
 ADJ{seul}, N{bruit.g=M num=SG}*	sœlbʁɥi	1	0
 ADJ{seul}, N{chose.g=F num=SG}*	sœlʃoz	1	0
 ADJ{seul}, N{chose.g=F num=SG}*	sœlʃoz	1	0
 ADJ{seul}, N{coup.g=M num=SG}*	sœlku	1	0
 ADJ{seul}, N{coup.g=M num=SG}*	sœlku	1	0
 ADJ{seul}, N{face.g=F num=SG}*	sœlfas	1	0
-ADJ{seul}, N{fenêtre.g=F num=SG}*	sœlfənɛtʁ	1	0
+ADJ{seul}, N{fenêtre.g=F num=SG}*	sœlfœnɛtʁ	1	0
 ADJ{seul}, N{informaticien.g=M num=SG}*	sœl3fɔʁmatisj3	1	0
 ADJ{seul}, N{prépa.g=F num=SG}*	sœlpʁepa	1	0
 ADJ{seul}, N{prépa.g=F num=SG}*	sœlpʁepa	1	0
-ADJ{seul}, N{rassemblement.g=M num=PL}*	sœlʁas&bləm&	1	0
+ADJ{seul}, N{rassemblement.g=M num=PL}*	sœlʁas&blœm&	1	0
 ADJ{seul}, N{sorte.g=F num=SG}*	sœlsɔʁt	1	0
 ADJ{seul}, N{titre.g=M num=PL}*	sœltitʁ	1	0
 ADJ{seul}, N{titre.g=M num=PL}*	sœltitʁ	1	0
@@ -1120,7 +1120,7 @@ ADJ{vrai}, N{appareil.g=M num=SG}*	vʁɛapaʁɛj	1	0
 ADJ{vrai}, N{médiateur.g=M num=SG}*	vʁɛmedjatœʁ	1	0
 ADJ{vrai}, N{paire.g=F num=SG}*	vʁɛpɛʁ	1	0
 ADJ{vrai}, N{projet.g=M num=PL}*	vʁɛpʁoʒɛ	1	0
-ADJ{énorme}, N{entreprise.g=F num=SG}*	enɔʁm&tʁəpʁiz	1	0
+ADJ{énorme}, N{entreprise.g=F num=SG}*	enɔʁm&tʁœpʁiz	1	0
 DET{ArtDef}, N{abbé.g=M num=SG}*	labe	1	0
 DET{ArtDef}, N{abeille.g=F num=PL}*	leabɛj	1	0
 DET{ArtDef}, N{accent.g=M num=SG}*	laks&	1	0
@@ -1160,9 +1160,9 @@ DET{ArtDef}, N{aire.g=F num=SG}*	lɛʁ	1	0
 DET{ArtDef}, N{aise.g=F num=SG}*	lɛz	1	0
 DET{ArtDef}, N{alentour.g=M num=PL}*	lezal&tuʁ	1	1
 DET{ArtDef}, N{alimentation.g=F num=SG}*	lalim&tasjQ	1	0
-DET{ArtDef}, N{allemand.g=M num=SG}*	laləm&	1	0
-DET{ArtDef}, N{allemand.g=M num=SG}*	laləm&	1	0
-DET{ArtDef}, N{allemand.g=M num=SG}*	laləm&	1	0
+DET{ArtDef}, N{allemand.g=M num=SG}*	lalœm&	1	0
+DET{ArtDef}, N{allemand.g=M num=SG}*	lalœm&	1	0
+DET{ArtDef}, N{allemand.g=M num=SG}*	lalœm&	1	0
 DET{ArtDef}, N{allocation.g=F num=PL}*	lezalokasjQ	1	1
 DET{ArtDef}, N{allée.g=F num=PL}*	leale	1	0
 DET{ArtDef}, N{allée.g=F num=SG}*	lale	1	0
@@ -1247,9 +1247,9 @@ DET{ArtDef}, N{antenne.g=F num=SG}*	l&tɛn	1	0
 DET{ArtDef}, N{appareil.g=M num=PL}*	leapaʁɛj	1	0
 DET{ArtDef}, N{appareil.g=M num=SG}*	lapaʁɛj	1	0
 DET{ArtDef}, N{appart.g=M num=PL}*	leapaʁ	1	0
-DET{ArtDef}, N{appartement.g=M num=PL}*	leapaʁtəm&	1	0
-DET{ArtDef}, N{appartement.g=M num=SG}*	lapaʁtəm&	1	0
-DET{ArtDef}, N{appartement.g=M num=SG}*	lapaʁtəm&	1	0
+DET{ArtDef}, N{appartement.g=M num=PL}*	leapaʁtœm&	1	0
+DET{ArtDef}, N{appartement.g=M num=SG}*	lapaʁtœm&	1	0
+DET{ArtDef}, N{appartement.g=M num=SG}*	lapaʁtœm&	1	0
 DET{ArtDef}, N{apprentissage.g=M num=SG}*	lapʁ&tisaʒ	1	0
 DET{ArtDef}, N{apéritif.g=M num=SG}*	lapeʁitif	1	0
 DET{ArtDef}, N{aquavit.g=M num=SG}*	lakwavit	1	0
@@ -1370,7 +1370,7 @@ DET{ArtDef}, N{base.g=F num=SG}*	labaz	1	0
 DET{ArtDef}, N{base.g=F num=SG}*	labaz	1	0
 DET{ArtDef}, N{basse.g=F num=PL}*	lebas	1	0
 DET{ArtDef}, N{beauté.g=F num=SG}*	labote	1	0
-DET{ArtDef}, N{belote.g=F num=SG}*	labəlɔt	1	0
+DET{ArtDef}, N{belote.g=F num=SG}*	labœlɔt	1	0
 DET{ArtDef}, N{besoin.g=M num=SG}*	ləbøzw3	1	0
 DET{ArtDef}, N{biologie.g=F num=SG}*	labjoloʒi	1	0
 DET{ArtDef}, N{biologie.g=F num=SG}*	labjoloʒi	1	0
@@ -1401,15 +1401,15 @@ DET{ArtDef}, N{bord.g=M num=PL}*	lebɔʁ	1	0
 DET{ArtDef}, N{bord.g=M num=PL}*	lebɔʁ	1	0
 DET{ArtDef}, N{bord.g=M num=SG}*	ləbɔʁ	1	0
 DET{ArtDef}, N{bordel.g=M num=SG}*	ləbɔʁdɛl	1	0
-DET{ArtDef}, N{boucherie.g=F num=SG}*	labuʃəʁi	1	0
+DET{ArtDef}, N{boucherie.g=F num=SG}*	labuʃœʁi	1	0
 DET{ArtDef}, N{bouffe.g=F num=SG}*	labuf	1	0
 DET{ArtDef}, N{bouffe.g=F num=SG}*	labuf	1	0
 DET{ArtDef}, N{bougnat.g=M num=PL}*	lebuɲa	1	0
 DET{ArtDef}, N{boulanger.g=M num=SG}*	ləbul&ʒe	1	0
 DET{ArtDef}, N{boulanger.g=M num=SG}*	ləbul&ʒe	1	0
-DET{ArtDef}, N{boulangerie.g=F num=SG}*	labul&ʒəʁi	1	0
+DET{ArtDef}, N{boulangerie.g=F num=SG}*	labul&ʒœʁi	1	0
 DET{ArtDef}, N{boule.g=F num=PL}*	lebul	1	0
-DET{ArtDef}, N{boulevard.g=M num=PL}*	lebuləvaʁ	1	0
+DET{ArtDef}, N{boulevard.g=M num=PL}*	lebulœvaʁ	1	0
 DET{ArtDef}, N{boulot.g=M num=SG}*	ləbulo	1	0
 DET{ArtDef}, N{boulot.g=M num=SG}*	ləbulo	1	0
 DET{ArtDef}, N{boulot.g=M num=SG}*	ləbulo	1	0
@@ -1494,23 +1494,23 @@ DET{ArtDef}, N{champ.g=M num=SG}*	ləʃ&	1	0
 DET{ArtDef}, N{champagne.g=M num=SG}*	ləʃ&paɲ	1	0
 DET{ArtDef}, N{champignon.g=M num=PL}*	leʃ&piɲQ	1	0
 DET{ArtDef}, N{chanson.g=F num=PL}*	leʃ&sQ	1	0
-DET{ArtDef}, N{charcuterie.g=F num=SG}*	laʃaʁkytəʁi	1	0
+DET{ArtDef}, N{charcuterie.g=F num=SG}*	laʃaʁkytœʁi	1	0
 DET{ArtDef}, N{chat.g=M num=SG}*	ləʃa	1	0
 DET{ArtDef}, N{chaussure.g=F num=PL}*	leʃosyʁ	1	0
 DET{ArtDef}, N{chaussure.g=F num=PL}*	leʃosyʁ	1	0
 DET{ArtDef}, N{chaussure.g=F num=PL}*	leʃosyʁ	1	0
 DET{ArtDef}, N{chaîne.g=F num=SG}*	laʃɛn	1	0
-DET{ArtDef}, N{chemin.g=M num=SG}*	ləʃəm3	1	0
-DET{ArtDef}, N{chemin.g=M num=SG}*	ləʃəm3	1	0
-DET{ArtDef}, N{cheval.g=M num=SG}*	ləʃəval	1	0
-DET{ArtDef}, N{chevalier.g=M num=PL}*	leʃəvalje	1	0
-DET{ArtDef}, N{chevalier.g=M num=PL}*	leʃəvalje	1	0
-DET{ArtDef}, N{cheveu.g=M num=PL}*	leʃəvø	1	0
-DET{ArtDef}, N{cheveu.g=M num=PL}*	leʃəvø	1	0
-DET{ArtDef}, N{cheveu.g=M num=PL}*	leʃəvø	1	0
-DET{ArtDef}, N{cheveu.g=M num=PL}*	leʃəvø	1	0
-DET{ArtDef}, N{cheveu.g=M num=PL}*	leʃəvø	1	0
-DET{ArtDef}, N{cheveu.g=M num=PL}*	leʃəvø	1	0
+DET{ArtDef}, N{chemin.g=M num=SG}*	ləʃœm3	1	0
+DET{ArtDef}, N{chemin.g=M num=SG}*	ləʃœm3	1	0
+DET{ArtDef}, N{cheval.g=M num=SG}*	ləʃœval	1	0
+DET{ArtDef}, N{chevalier.g=M num=PL}*	leʃœvalje	1	0
+DET{ArtDef}, N{chevalier.g=M num=PL}*	leʃœvalje	1	0
+DET{ArtDef}, N{cheveu.g=M num=PL}*	leʃœvø	1	0
+DET{ArtDef}, N{cheveu.g=M num=PL}*	leʃœvø	1	0
+DET{ArtDef}, N{cheveu.g=M num=PL}*	leʃœvø	1	0
+DET{ArtDef}, N{cheveu.g=M num=PL}*	leʃœvø	1	0
+DET{ArtDef}, N{cheveu.g=M num=PL}*	leʃœvø	1	0
+DET{ArtDef}, N{cheveu.g=M num=PL}*	leʃœvø	1	0
 DET{ArtDef}, N{chien.g=M num=PL}*	leʃj3	1	0
 DET{ArtDef}, N{chimie.g=F num=SG}*	laʃimi	1	0
 DET{ArtDef}, N{choix.g=M num=SG}*	ləʃwa	1	0
@@ -1663,7 +1663,7 @@ DET{ArtDef}, N{côté.g=M num=SG}*	ləkote	1	0
 DET{ArtDef}, N{côté.g=M num=SG}*	ləkote	1	0
 DET{ArtDef}, N{côté.g=M num=SG}*	ləkote	1	0
 DET{ArtDef}, N{dame.g=F num=SG}*	ladam	1	0
-DET{ArtDef}, N{dangerosité.g=F num=SG}*	lad&ʒəʁozite	1	0
+DET{ArtDef}, N{dangerosité.g=F num=SG}*	lad&ʒœʁozite	1	0
 DET{ArtDef}, N{danse.g=F num=PL}*	led&s	1	0
 DET{ArtDef}, N{danse.g=F num=SG}*	lad&s	1	0
 DET{ArtDef}, N{danse.g=F num=SG}*	lad&s	1	0
@@ -1675,11 +1675,11 @@ DET{ArtDef}, N{danse.g=F num=SG}*	lad&s	1	0
 DET{ArtDef}, N{danse.g=F num=SG}*	lad&s	1	0
 DET{ArtDef}, N{date.g=F num=PL}*	ledat	1	0
 DET{ArtDef}, N{date.g=F num=PL}*	ledat	1	0
-DET{ArtDef}, N{demande.g=F num=SG}*	lədəm&d	1	0
-DET{ArtDef}, N{demande.g=F num=SG}*	lədəm&d	1	0
-DET{ArtDef}, N{demi.g=M num=PL}*	ledəmi	1	0
-DET{ArtDef}, N{demi.g=M num=SG}*	ladəmi	1	0
-DET{ArtDef}, N{demi.g=M num=SG}*	ledəmi	1	0
+DET{ArtDef}, N{demande.g=F num=SG}*	lədœm&d	1	0
+DET{ArtDef}, N{demande.g=F num=SG}*	lədœm&d	1	0
+DET{ArtDef}, N{demi.g=M num=PL}*	ledœmi	1	0
+DET{ArtDef}, N{demi.g=M num=SG}*	ladœmi	1	0
+DET{ArtDef}, N{demi.g=M num=SG}*	ledœmi	1	0
 DET{ArtDef}, N{densité.g=F num=SG}*	lad&site	1	0
 DET{ArtDef}, N{densité.g=F num=SG}*	lad&site	1	0
 DET{ArtDef}, N{dent.g=F num=PL}*	led&	1	0
@@ -1687,7 +1687,7 @@ DET{ArtDef}, N{dernier.g=F num=SG}*	ladɛʁnjɛʁ	1	0
 DET{ArtDef}, N{dernier.g=F num=SG}*	ladɛʁnjɛʁ	1	0
 DET{ArtDef}, N{dernier.g=M num=PL}*	ledɛʁnje	1	0
 DET{ArtDef}, N{dessert.g=M num=SG}*	lədesɛʁ	1	0
-DET{ArtDef}, N{dessus.g=M num=SG}*	lədəsy	1	0
+DET{ArtDef}, N{dessus.g=M num=SG}*	lədœsy	1	0
 DET{ArtDef}, N{destruction.g=F num=SG}*	ladestʁyksjQ	1	0
 DET{ArtDef}, N{dictionnaire.g=M num=SG}*	lədiksjonɛʁ	1	0
 DET{ArtDef}, N{dictionnaire.g=M num=SG}*	lədiksjonɛʁ	1	0
@@ -1771,14 +1771,14 @@ DET{ArtDef}, N{démarche.g=F num=PL}*	ledemaʁʃ	1	0
 DET{ArtDef}, N{démarche.g=F num=SG}*	lademaʁʃ	1	0
 DET{ArtDef}, N{démarche.g=F num=SG}*	lademaʁʃ	1	0
 DET{ArtDef}, N{démon.g=M num=SG}*	lədemQ	1	0
-DET{ArtDef}, N{dépassement.g=M num=SG}*	lədepasəm&	1	0
-DET{ArtDef}, N{déplacement.g=M num=SG}*	lədeplasəm&	1	0
+DET{ArtDef}, N{dépassement.g=M num=SG}*	lədepasœm&	1	0
+DET{ArtDef}, N{déplacement.g=M num=SG}*	lədeplasœm&	1	0
 DET{ArtDef}, N{dérivé.g=M num=PL}*	ledeʁive	1	0
 DET{ArtDef}, N{désert.g=M num=SG}*	lədezɛʁ	1	0
 DET{ArtDef}, N{désir.g=M num=SG}*	lədeziʁ	1	0
 DET{ArtDef}, N{détail.g=M num=PL}*	ledetaj	1	0
-DET{ArtDef}, N{eau-de-vie.g=F num=SG}*	lodəvi	1	0
-DET{ArtDef}, N{eau-de-vie.g=F num=SG}*	lodəvi	1	0
+DET{ArtDef}, N{eau-de-vie.g=F num=SG}*	lodœvi	1	0
+DET{ArtDef}, N{eau-de-vie.g=F num=SG}*	lodœvi	1	0
 DET{ArtDef}, N{eau.g=F num=SG}*	lo	1	0
 DET{ArtDef}, N{eau.g=F num=SG}*	lo	1	0
 DET{ArtDef}, N{eau.g=F num=SG}*	lo	1	0
@@ -1810,20 +1810,20 @@ DET{ArtDef}, N{enfant.g=M num=PL}*	lez&f&	1	1
 DET{ArtDef}, N{enfant.g=M num=PL}*	lez&f&	1	1
 DET{ArtDef}, N{enfant.g=M num=PL}*	lez&f&	1	1
 DET{ArtDef}, N{enseignant.g=M num=PL}*	le&sɛɲ&	1	0
-DET{ArtDef}, N{enseignement.g=M num=SG}*	l&sɛɲəm&	1	0
-DET{ArtDef}, N{enseignement.g=M num=SG}*	l&sɛɲəm&	1	0
-DET{ArtDef}, N{enseignement.g=M num=SG}*	l&sɛɲəm&	1	0
-DET{ArtDef}, N{enseignement.g=M num=SG}*	l&sɛɲəm&	1	0
-DET{ArtDef}, N{enseignement.g=M num=SG}*	l&sɛɲəm&	1	0
+DET{ArtDef}, N{enseignement.g=M num=SG}*	l&sɛɲœm&	1	0
+DET{ArtDef}, N{enseignement.g=M num=SG}*	l&sɛɲœm&	1	0
+DET{ArtDef}, N{enseignement.g=M num=SG}*	l&sɛɲœm&	1	0
+DET{ArtDef}, N{enseignement.g=M num=SG}*	l&sɛɲœm&	1	0
+DET{ArtDef}, N{enseignement.g=M num=SG}*	l&sɛɲœm&	1	0
 DET{ArtDef}, N{ensemble.g=M num=SG}*	l&s&bl	1	0
 DET{ArtDef}, N{ensemble.g=M num=SG}*	l&s&bl	1	0
-DET{ArtDef}, N{entreprise.g=F num=PL}*	le&tʁəpʁiz	1	0
-DET{ArtDef}, N{entretien.g=M num=SG}*	l&tʁətj3	1	0
+DET{ArtDef}, N{entreprise.g=F num=PL}*	le&tʁœpʁiz	1	0
+DET{ArtDef}, N{entretien.g=M num=SG}*	l&tʁœtj3	1	0
 DET{ArtDef}, N{entrée.g=F num=SG}*	l&tʁe	1	0
 DET{ArtDef}, N{entrée.g=F num=SG}*	l&tʁe	1	0
 DET{ArtDef}, N{envie.g=F num=SG}*	l&vi	1	0
-DET{ArtDef}, N{environnement.g=M num=SG}*	l&viʁɔnəm&	1	0
-DET{ArtDef}, N{environnement.g=M num=SG}*	l&viʁɔnəm&	1	0
+DET{ArtDef}, N{environnement.g=M num=SG}*	l&viʁɔnœm&	1	0
+DET{ArtDef}, N{environnement.g=M num=SG}*	l&viʁɔnœm&	1	0
 DET{ArtDef}, N{ergothérapie.g=F num=SG}*	lɛʁgoteʁapi	1	0
 DET{ArtDef}, N{ergothérapie.g=F num=SG}*	lɛʁgoteʁapi	1	0
 DET{ArtDef}, N{espagnol.g=M num=SG}*	lɛspaɲɔl	1	0
@@ -1897,9 +1897,9 @@ DET{ArtDef}, N{femme.g=F num=PL}*	lefam	1	0
 DET{ArtDef}, N{femme.g=F num=PL}*	lefam	1	0
 DET{ArtDef}, N{femme.g=F num=SG}*	lafam	1	0
 DET{ArtDef}, N{femme.g=F num=SG}*	lafam	1	0
-DET{ArtDef}, N{fenêtre.g=F num=SG}*	lafənɛtʁ	1	0
-DET{ArtDef}, N{fenêtre.g=F num=SG}*	lafənɛtʁ	1	0
-DET{ArtDef}, N{fenêtre.g=F num=SG}*	lafənɛtʁ	1	0
+DET{ArtDef}, N{fenêtre.g=F num=SG}*	lafœnɛtʁ	1	0
+DET{ArtDef}, N{fenêtre.g=F num=SG}*	lafœnɛtʁ	1	0
+DET{ArtDef}, N{fenêtre.g=F num=SG}*	lafœnɛtʁ	1	0
 DET{ArtDef}, N{ferme.g=F num=SG}*	lafɛʁm	1	0
 DET{ArtDef}, N{ferme.g=F num=SG}*	lafɛʁm	1	0
 DET{ArtDef}, N{ferme.g=F num=SG}*	lafɛʁm	1	0
@@ -1988,7 +1988,7 @@ DET{ArtDef}, N{gars.g=M num=SG}*	ləga	1	0
 DET{ArtDef}, N{gars.g=M num=SG}*	ləga	1	0
 DET{ArtDef}, N{garçon.g=M num=PL}*	legaʁsQ	1	0
 DET{ArtDef}, N{garçon.g=M num=PL}*	legaʁsQ	1	0
-DET{ArtDef}, N{gelée.g=F num=SG}*	ləʒəle	1	0
+DET{ArtDef}, N{gelée.g=F num=SG}*	ləʒœle	1	0
 DET{ArtDef}, N{genre.g=M num=PL}*	leʒ&ʁ	1	0
 DET{ArtDef}, N{genre.g=M num=PL}*	leʒ&ʁ	1	0
 DET{ArtDef}, N{gestion.g=F num=SG}*	laʒɛstjQ	1	0
@@ -1996,29 +1996,29 @@ DET{ArtDef}, N{geyser.g=M num=SG}*	leʒɛzɛʁ	1	0
 DET{ArtDef}, N{gibier.g=M num=SG}*	ləʒibje	1	0
 DET{ArtDef}, N{glace.g=F num=SG}*	laglas	1	0
 DET{ArtDef}, N{glace.g=F num=SG}*	laglas	1	0
-DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnəm&	1	0
-DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnəm&	1	0
-DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnəm&	1	0
-DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnəm&	1	0
-DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnəm&	1	0
-DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnəm&	1	0
-DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnəm&	1	0
-DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnəm&	1	0
-DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnəm&	1	0
-DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnəm&	1	0
-DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnəm&	1	0
-DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnəm&	1	0
-DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnəm&	1	0
-DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnəm&	1	0
-DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnəm&	1	0
-DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnəm&	1	0
-DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnəm&	1	0
-DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnəm&	1	0
-DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnəm&	1	0
-DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnəm&	1	0
-DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnəm&	1	0
-DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnəm&	1	0
-DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnəm&	1	0
+DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnœm&	1	0
+DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnœm&	1	0
+DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnœm&	1	0
+DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnœm&	1	0
+DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnœm&	1	0
+DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnœm&	1	0
+DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnœm&	1	0
+DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnœm&	1	0
+DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnœm&	1	0
+DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnœm&	1	0
+DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnœm&	1	0
+DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnœm&	1	0
+DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnœm&	1	0
+DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnœm&	1	0
+DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnœm&	1	0
+DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnœm&	1	0
+DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnœm&	1	0
+DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnœm&	1	0
+DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnœm&	1	0
+DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnœm&	1	0
+DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnœm&	1	0
+DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnœm&	1	0
+DET{ArtDef}, N{gouvernement.g=M num=SG}*	ləguvɛʁnœm&	1	0
 DET{ArtDef}, N{grain.g=M num=SG}*	ləgʁ3	1	0
 DET{ArtDef}, N{grammaire.g=F num=SG}*	lagʁamɛʁ	1	0
 DET{ArtDef}, N{grand-père.g=M num=SG}*	ləgʁ&pɛʁ	1	0
@@ -2259,10 +2259,10 @@ DET{ArtDef}, N{latin.g=M num=PL}*	lelat3	1	0
 DET{ArtDef}, N{lave-vaisselle.g=M num=SG}*	ləlavvɛsɛl	1	0
 DET{ArtDef}, N{lave.g=F num=SG}*	ləlav	1	0
 DET{ArtDef}, N{lecture.g=F num=SG}*	lalɛktyʁ	1	0
-DET{ArtDef}, N{lendemain.g=M num=SG}*	ləl&dəm3	1	0
-DET{ArtDef}, N{lendemain.g=M num=SG}*	ləl&dəm3	1	0
-DET{ArtDef}, N{lendemain.g=M num=SG}*	ləl&dəm3	1	0
-DET{ArtDef}, N{lever.g=M num=SG}*	lələve	1	0
+DET{ArtDef}, N{lendemain.g=M num=SG}*	ləl&dœm3	1	0
+DET{ArtDef}, N{lendemain.g=M num=SG}*	ləl&dœm3	1	0
+DET{ArtDef}, N{lendemain.g=M num=SG}*	ləl&dœm3	1	0
+DET{ArtDef}, N{lever.g=M num=SG}*	ləlœve	1	0
 DET{ArtDef}, N{liberté.g=F num=SG}*	lalibɛʁte	1	0
 DET{ArtDef}, N{libération.g=F num=SG}*	lalibeʁasjQ	1	0
 DET{ArtDef}, N{libération.g=F num=SG}*	lalibeʁasjQ	1	0
@@ -2281,7 +2281,7 @@ DET{ArtDef}, N{lis.g=M num=PL}*	lelis	1	0
 DET{ArtDef}, N{lis.g=M num=SG}*	ləlis	1	0
 DET{ArtDef}, N{lis.g=M num=SG}*	ləlis	1	0
 DET{ArtDef}, N{littérature.g=F num=SG}*	laliteʁatyʁ	1	0
-DET{ArtDef}, N{logement.g=M num=SG}*	ləlɔʒəm&	1	0
+DET{ArtDef}, N{logement.g=M num=SG}*	ləlɔʒœm&	1	0
 DET{ArtDef}, N{loi.g=F num=PL}*	lelwa	1	0
 DET{ArtDef}, N{loi.g=F num=SG}*	lalwa	1	0
 DET{ArtDef}, N{lundi.g=M num=SG}*	ləl3di	1	0
@@ -2360,7 +2360,7 @@ DET{ArtDef}, N{meilleur.g=M num=SG}*	ləmɛjœʁ	1	0
 DET{ArtDef}, N{meilleur.g=M num=SG}*	ləmɛjœʁ	1	0
 DET{ArtDef}, N{membre.g=M num=PL}*	lem&bʁ	1	0
 DET{ArtDef}, N{mentalité.g=F num=SG}*	lam&talite	1	0
-DET{ArtDef}, N{menuiserie.g=F num=SG}*	lamønɥizəʁi	1	0
+DET{ArtDef}, N{menuiserie.g=F num=SG}*	lamønɥizœʁi	1	0
 DET{ArtDef}, N{mer.g=F num=SG}*	lamɛʁ	1	0
 DET{ArtDef}, N{mer.g=F num=SG}*	lamɛʁ	1	0
 DET{ArtDef}, N{mer.g=F num=SG}*	lamɛʁ	1	0
@@ -2372,8 +2372,8 @@ DET{ArtDef}, N{mer.g=F num=SG}*	lamɛʁ	1	0
 DET{ArtDef}, N{mer.g=F num=SG}*	lamɛʁ	1	0
 DET{ArtDef}, N{mer.g=F num=SG}*	lamɛʁ	1	0
 DET{ArtDef}, N{mer.g=F num=SG}*	lamɛʁ	1	0
-DET{ArtDef}, N{mercredi.g=M num=SG}*	ləmɛʁkʁədi	1	0
-DET{ArtDef}, N{mercredi.g=M num=SG}*	ləmɛʁkʁədi	1	0
+DET{ArtDef}, N{mercredi.g=M num=SG}*	ləmɛʁkʁœdi	1	0
+DET{ArtDef}, N{mercredi.g=M num=SG}*	ləmɛʁkʁœdi	1	0
 DET{ArtDef}, N{merde.g=F num=SG}*	lamɛʁd	1	0
 DET{ArtDef}, N{messe.g=F num=SG}*	lamɛs	1	0
 DET{ArtDef}, N{messe.g=F num=SG}*	lamɛs	1	0
@@ -2494,7 +2494,7 @@ DET{ArtDef}, N{mère.g=F num=SG}*	lamɛʁ	1	0
 DET{ArtDef}, N{mère.g=F num=SG}*	lamɛʁ	1	0
 DET{ArtDef}, N{mère.g=F num=SG}*	lamɛʁ	1	0
 DET{ArtDef}, N{mécanique.g=F num=SG}*	lamekanik	1	0
-DET{ArtDef}, N{méchanceté.g=F num=SG}*	lameʃ&səte	1	0
+DET{ArtDef}, N{méchanceté.g=F num=SG}*	lameʃ&sœte	1	0
 DET{ArtDef}, N{médecin.g=M num=PL}*	lemɛds3	1	0
 DET{ArtDef}, N{médecin.g=M num=PL}*	lemɛds3	1	0
 DET{ArtDef}, N{médecin.g=M num=SG}*	lamɛds3	1	0
@@ -2646,12 +2646,12 @@ DET{ArtDef}, N{original.g=F num=SG}*	loʁiʒinal	1	0
 DET{ArtDef}, N{origine.g=F num=PL}*	lezoʁiʒin	1	1
 DET{ArtDef}, N{origine.g=F num=PL}*	lezoʁiʒin	1	1
 DET{ArtDef}, N{origine.g=F num=SG}*	loʁiʒin	1	0
-DET{ArtDef}, N{orphelinat.g=M num=PL}*	lezɔʁfəlina	1	1
-DET{ArtDef}, N{orphelinat.g=M num=PL}*	lezɔʁfəlina	1	1
-DET{ArtDef}, N{orphelinat.g=M num=SG}*	lɔʁfəlina	1	0
-DET{ArtDef}, N{orphelinat.g=M num=SG}*	lɔʁfəlina	1	0
-DET{ArtDef}, N{orphelinat.g=M num=SG}*	lɔʁfəlina	1	0
-DET{ArtDef}, N{orphelinat.g=M num=SG}*	lɔʁfəlina	1	0
+DET{ArtDef}, N{orphelinat.g=M num=PL}*	lezɔʁfœlina	1	1
+DET{ArtDef}, N{orphelinat.g=M num=PL}*	lezɔʁfœlina	1	1
+DET{ArtDef}, N{orphelinat.g=M num=SG}*	lɔʁfœlina	1	0
+DET{ArtDef}, N{orphelinat.g=M num=SG}*	lɔʁfœlina	1	0
+DET{ArtDef}, N{orphelinat.g=M num=SG}*	lɔʁfœlina	1	0
+DET{ArtDef}, N{orphelinat.g=M num=SG}*	lɔʁfœlina	1	0
 DET{ArtDef}, N{orthographe.g=F num=SG}*	lɔʁtogʁaf	1	0
 DET{ArtDef}, N{paiement.g=M num=PL}*	lepɛm&	1	0
 DET{ArtDef}, N{paille.g=F num=SG}*	lapaj	1	0
@@ -2723,7 +2723,7 @@ DET{ArtDef}, N{personne.g=F num=SG}*	lapɛʁsɔn	1	0
 DET{ArtDef}, N{personne.g=F num=SG}*	lapɛʁsɔn	1	0
 DET{ArtDef}, N{personne.g=F num=SG}*	lapɛʁsɔn	1	0
 DET{ArtDef}, N{personnel.g=M num=SG}*	ləpɛʁsonɛl	1	0
-DET{ArtDef}, N{petit-enfant.g=M num=PL}*	lepəti&f&	1	0
+DET{ArtDef}, N{petit-enfant.g=M num=PL}*	lepœti&f&	1	0
 DET{ArtDef}, N{peu.g=M num=SG}*	ləpø	1	0
 DET{ArtDef}, N{peuple.g=M num=PL}*	lepøpl	1	0
 DET{ArtDef}, N{peuple.g=M num=SG}*	ləpøpl	1	0
@@ -2745,8 +2745,8 @@ DET{ArtDef}, N{pied.g=M num=PL}*	lepje	1	0
 DET{ArtDef}, N{pied.g=M num=PL}*	lepje	1	0
 DET{ArtDef}, N{pied.g=M num=PL}*	lepje	1	0
 DET{ArtDef}, N{piolet.g=M num=SG}*	ləpjolɛ	1	0
-DET{ArtDef}, N{pipeline.g=M num=SG}*	ləpajpəlajn	1	0
-DET{ArtDef}, N{pipeline.g=M num=SG}*	ləpajpəlajn	1	0
+DET{ArtDef}, N{pipeline.g=M num=SG}*	ləpajpœlajn	1	0
+DET{ArtDef}, N{pipeline.g=M num=SG}*	ləpajpœlajn	1	0
 DET{ArtDef}, N{pire.g=M num=SG}*	ləpiʁ	1	0
 DET{ArtDef}, N{pire.g=M num=SG}*	ləpiʁ	1	0
 DET{ArtDef}, N{pire.g=M num=SG}*	ləpiʁ	1	0
@@ -2790,7 +2790,7 @@ DET{ArtDef}, N{population.g=F num=SG}*	lapopylasjQ	1	0
 DET{ArtDef}, N{population.g=F num=SG}*	lapopylasjQ	1	0
 DET{ArtDef}, N{population.g=F num=SG}*	lapopylasjQ	1	0
 DET{ArtDef}, N{population.g=F num=SG}*	lapopylasjQ	1	0
-DET{ArtDef}, N{porcelaine.g=F num=SG}*	lapɔʁsəlɛn	1	0
+DET{ArtDef}, N{porcelaine.g=F num=SG}*	lapɔʁsœlɛn	1	0
 DET{ArtDef}, N{porche.g=M num=SG}*	ləpɔʁʃ	1	0
 DET{ArtDef}, N{porche.g=M num=SG}*	ləpɔʁʃ	1	0
 DET{ArtDef}, N{porte.g=F num=PL}*	lepɔʁt	1	0
@@ -2850,7 +2850,7 @@ DET{ArtDef}, N{professorat.g=M num=SG}*	ləpʁofɛsoʁa	1	0
 DET{ArtDef}, N{programmation.g=F num=SG}*	lapʁogʁamasjQ	1	0
 DET{ArtDef}, N{progrès.g=M num=SG}*	ləpʁogʁɛ	1	0
 DET{ArtDef}, N{projet.g=M num=PL}*	lepʁoʒɛ	1	0
-DET{ArtDef}, N{propreté.g=F num=SG}*	lapʁɔpʁəte	1	0
+DET{ArtDef}, N{propreté.g=F num=SG}*	lapʁɔpʁœte	1	0
 DET{ArtDef}, N{prospection.g=F num=SG}*	lapʁɔspɛksjQ	1	0
 DET{ArtDef}, N{province.g=F num=SG}*	lapʁov3s	1	0
 DET{ArtDef}, N{province.g=F num=SG}*	lapʁov3s	1	0
@@ -2913,33 +2913,33 @@ DET{ArtDef}, N{race.g=F num=PL}*	leʁas	1	0
 DET{ArtDef}, N{raisin.g=M num=PL}*	leʁɛz3	1	0
 DET{ArtDef}, N{raison.g=F num=PL}*	leʁɛzQ	1	0
 DET{ArtDef}, N{randonnée.g=F num=PL}*	leʁ&done	1	0
-DET{ArtDef}, N{ravitaillement.g=M num=SG}*	ləʁavitajəm&	1	0
-DET{ArtDef}, N{recherche.g=F num=SG}*	laʁəʃɛʁʃ	1	0
-DET{ArtDef}, N{recherche.g=F num=SG}*	laʁəʃɛʁʃ	1	0
-DET{ArtDef}, N{recherche.g=F num=SG}*	laʁəʃɛʁʃ	1	0
-DET{ArtDef}, N{recherche.g=F num=SG}*	laʁəʃɛʁʃ	1	0
-DET{ArtDef}, N{recherche.g=F num=SG}*	laʁəʃɛʁʃ	1	0
-DET{ArtDef}, N{recherche.g=F num=SG}*	laʁəʃɛʁʃ	1	0
-DET{ArtDef}, N{recherche.g=F num=SG}*	laʁəʃɛʁʃ	1	0
-DET{ArtDef}, N{remarque.g=F num=SG}*	ləʁəmaʁk	1	0
-DET{ArtDef}, N{repartie.g=F num=SG}*	laʁəpaʁti	1	0
-DET{ArtDef}, N{repas.g=M num=PL}*	leʁəpa	1	0
-DET{ArtDef}, N{repas.g=M num=SG}*	ləʁəpa	1	0
-DET{ArtDef}, N{repas.g=M num=SG}*	ləʁəpa	1	0
-DET{ArtDef}, N{repassage.g=M num=SG}*	ləʁəpasaʒ	1	0
-DET{ArtDef}, N{représentation.g=F num=SG}*	laʁəpʁez&tasjQ	1	0
-DET{ArtDef}, N{représentation.g=F num=SG}*	laʁəpʁez&tasjQ	1	0
+DET{ArtDef}, N{ravitaillement.g=M num=SG}*	ləʁavitajœm&	1	0
+DET{ArtDef}, N{recherche.g=F num=SG}*	laʁœʃɛʁʃ	1	0
+DET{ArtDef}, N{recherche.g=F num=SG}*	laʁœʃɛʁʃ	1	0
+DET{ArtDef}, N{recherche.g=F num=SG}*	laʁœʃɛʁʃ	1	0
+DET{ArtDef}, N{recherche.g=F num=SG}*	laʁœʃɛʁʃ	1	0
+DET{ArtDef}, N{recherche.g=F num=SG}*	laʁœʃɛʁʃ	1	0
+DET{ArtDef}, N{recherche.g=F num=SG}*	laʁœʃɛʁʃ	1	0
+DET{ArtDef}, N{recherche.g=F num=SG}*	laʁœʃɛʁʃ	1	0
+DET{ArtDef}, N{remarque.g=F num=SG}*	ləʁœmaʁk	1	0
+DET{ArtDef}, N{repartie.g=F num=SG}*	laʁœpaʁti	1	0
+DET{ArtDef}, N{repas.g=M num=PL}*	leʁœpa	1	0
+DET{ArtDef}, N{repas.g=M num=SG}*	ləʁœpa	1	0
+DET{ArtDef}, N{repas.g=M num=SG}*	ləʁœpa	1	0
+DET{ArtDef}, N{repassage.g=M num=SG}*	ləʁœpasaʒ	1	0
+DET{ArtDef}, N{représentation.g=F num=SG}*	laʁœpʁez&tasjQ	1	0
+DET{ArtDef}, N{représentation.g=F num=SG}*	laʁœpʁez&tasjQ	1	0
 DET{ArtDef}, N{responsabilité.g=F num=PL}*	leʁɛspQsabilite	1	0
 DET{ArtDef}, N{responsabilité.g=F num=SG}*	laʁɛspQsabilite	1	0
 DET{ArtDef}, N{restauration.g=F num=SG}*	laʁɛstoʁasjQ	1	0
 DET{ArtDef}, N{restriction.g=F num=PL}*	leʁɛstʁiksjQ	1	0
-DET{ArtDef}, N{retraite.g=F num=SG}*	laʁətʁɛt	1	0
-DET{ArtDef}, N{retraite.g=F num=SG}*	laʁətʁɛt	1	0
-DET{ArtDef}, N{retraite.g=F num=SG}*	laʁətʁɛt	1	0
-DET{ArtDef}, N{retraite.g=F num=SG}*	laʁətʁɛt	1	0
-DET{ArtDef}, N{retraite.g=F num=SG}*	laʁətʁɛt	1	0
-DET{ArtDef}, N{revêtement.g=M num=SG}*	ləʁəvɛtəm&	1	0
-DET{ArtDef}, N{revêtement.g=M num=SG}*	ləʁəvɛtəm&	1	0
+DET{ArtDef}, N{retraite.g=F num=SG}*	laʁœtʁɛt	1	0
+DET{ArtDef}, N{retraite.g=F num=SG}*	laʁœtʁɛt	1	0
+DET{ArtDef}, N{retraite.g=F num=SG}*	laʁœtʁɛt	1	0
+DET{ArtDef}, N{retraite.g=F num=SG}*	laʁœtʁɛt	1	0
+DET{ArtDef}, N{retraite.g=F num=SG}*	laʁœtʁɛt	1	0
+DET{ArtDef}, N{revêtement.g=M num=SG}*	ləʁœvɛtœm&	1	0
+DET{ArtDef}, N{revêtement.g=M num=SG}*	ləʁœvɛtœm&	1	0
 DET{ArtDef}, N{richesse.g=F num=SG}*	laʁiʃɛs	1	0
 DET{ArtDef}, N{rue.g=F num=SG}*	laʁy	1	0
 DET{ArtDef}, N{rue.g=F num=SG}*	laʁy	1	0
@@ -2955,8 +2955,8 @@ DET{ArtDef}, N{rue.g=F num=SG}*	laʁy	1	0
 DET{ArtDef}, N{rural.g=M num=SG}*	ləʁyʁal	1	0
 DET{ArtDef}, N{rythme.g=M num=SG}*	ləʁitm	1	0
 DET{ArtDef}, N{règle.g=F num=PL}*	leʁɛgl	1	0
-DET{ArtDef}, N{règlement.g=M num=SG}*	ləʁɛgləm&	1	0
-DET{ArtDef}, N{règlement.g=M num=SG}*	ləʁɛgləm&	1	0
+DET{ArtDef}, N{règlement.g=M num=SG}*	ləʁɛglœm&	1	0
+DET{ArtDef}, N{règlement.g=M num=SG}*	ləʁɛglœm&	1	0
 DET{ArtDef}, N{réaction.g=F num=PL}*	leʁeaksjQ	1	0
 DET{ArtDef}, N{réaction.g=F num=PL}*	leʁeaksjQ	1	0
 DET{ArtDef}, N{réaction.g=F num=PL}*	leʁeaksjQ	1	0
@@ -3022,18 +3022,18 @@ DET{ArtDef}, N{sable.g=M num=SG}*	ləsabl	1	0
 DET{ArtDef}, N{salle.g=F num=SG}*	lasal	1	0
 DET{ArtDef}, N{salon.g=M num=PL}*	lesalQ	1	0
 DET{ArtDef}, N{salon.g=M num=PL}*	lesalQ	1	0
-DET{ArtDef}, N{samedi.g=M num=PL}*	lesamədi	1	0
-DET{ArtDef}, N{samedi.g=M num=PL}*	lesamədi	1	0
-DET{ArtDef}, N{samedi.g=M num=SG}*	ləsamədi	1	0
+DET{ArtDef}, N{samedi.g=M num=PL}*	lesamœdi	1	0
+DET{ArtDef}, N{samedi.g=M num=PL}*	lesamœdi	1	0
+DET{ArtDef}, N{samedi.g=M num=SG}*	ləsamœdi	1	0
 DET{ArtDef}, N{scolarisation.g=F num=SG}*	laskolaʁizasjQ	1	0
 DET{ArtDef}, N{seau.g=M num=SG}*	ləso	1	0
 DET{ArtDef}, N{secteur.g=M num=SG}*	ləsektœʁ	1	0
 DET{ArtDef}, N{sel.g=M num=SG}*	lesɛl	1	0
-DET{ArtDef}, N{semaine.g=F num=PL}*	lesəmɛn	1	0
-DET{ArtDef}, N{semaine.g=F num=SG}*	lasəmɛn	1	0
-DET{ArtDef}, N{semaine.g=F num=SG}*	lasəmɛn	1	0
-DET{ArtDef}, N{semelle.g=F num=SG}*	lasəmɛl	1	0
-DET{ArtDef}, N{semelle.g=F num=SG}*	lasəmɛl	1	0
+DET{ArtDef}, N{semaine.g=F num=PL}*	lesœmɛn	1	0
+DET{ArtDef}, N{semaine.g=F num=SG}*	lasœmɛn	1	0
+DET{ArtDef}, N{semaine.g=F num=SG}*	lasœmɛn	1	0
+DET{ArtDef}, N{semelle.g=F num=SG}*	lasœmɛl	1	0
+DET{ArtDef}, N{semelle.g=F num=SG}*	lasœmɛl	1	0
 DET{ArtDef}, N{sens.g=M num=SG}*	ləs&s	1	0
 DET{ArtDef}, N{sentiment.g=M num=SG}*	ləs&tim&	1	0
 DET{ArtDef}, N{sentiment.g=M num=SG}*	ləs&tim&	1	0
@@ -3154,7 +3154,7 @@ DET{ArtDef}, N{soutien.g=M num=SG}*	ləsutj3	1	0
 DET{ArtDef}, N{soutien.g=M num=SG}*	ləsutj3	1	0
 DET{ArtDef}, N{soutien.g=M num=SG}*	ləsutj3	1	0
 DET{ArtDef}, N{soutien.g=M num=SG}*	ləsutj3	1	0
-DET{ArtDef}, N{souvenir.g=M num=PL}*	lesuvəniʁ	1	0
+DET{ArtDef}, N{souvenir.g=M num=PL}*	lesuvœniʁ	1	0
 DET{ArtDef}, N{spécialité.g=F num=SG}*	laspesjalite	1	0
 DET{ArtDef}, N{stage.g=M num=PL}*	lestaʒ	1	0
 DET{ArtDef}, N{station.g=F num=PL}*	lestasjQ	1	0
@@ -3180,7 +3180,7 @@ DET{ArtDef}, N{supporter.g=M num=SG}*	ləsypoʁtœʁ	1	0
 DET{ArtDef}, N{syntaxe.g=F num=SG}*	las3taks	1	0
 DET{ArtDef}, N{système.g=M num=PL}*	lesistɛm	1	0
 DET{ArtDef}, N{système.g=M num=SG}*	ləsistɛm	1	0
-DET{ArtDef}, N{sécheresse.g=F num=SG}*	laseʃəʁɛs	1	0
+DET{ArtDef}, N{sécheresse.g=F num=SG}*	laseʃœʁɛs	1	0
 DET{ArtDef}, N{sécu.g=F num=SG}*	laseky	1	0
 DET{ArtDef}, N{sécu.g=F num=SG}*	laseky	1	0
 DET{ArtDef}, N{sécurité.g=F num=SG}*	lasekyʁite	1	0
@@ -3239,7 +3239,7 @@ DET{ArtDef}, N{temps.g=M num=SG}*	lət&	1	0
 DET{ArtDef}, N{temps.g=M num=SG}*	lət&	1	0
 DET{ArtDef}, N{temps.g=M num=SG}*	lət&	1	0
 DET{ArtDef}, N{tendresse.g=F num=SG}*	lat&dʁɛs	1	0
-DET{ArtDef}, N{tenue.g=F num=PL}*	letəny	1	0
+DET{ArtDef}, N{tenue.g=F num=PL}*	letœny	1	0
 DET{ArtDef}, N{terme.g=M num=SG}*	lətɛʁm	1	0
 DET{ArtDef}, N{terme.g=M num=SG}*	lətɛʁm	1	0
 DET{ArtDef}, N{terme.g=M num=SG}*	lətɛʁm	1	0
@@ -3393,7 +3393,7 @@ DET{ArtDef}, N{vaisselle.g=F num=SG}*	lavɛsɛl	1	0
 DET{ArtDef}, N{valeur.g=F num=SG}*	lavalœʁ	1	0
 DET{ArtDef}, N{vallée.g=F num=SG}*	lavale	1	0
 DET{ArtDef}, N{valse.g=F num=SG}*	lavals	1	0
-DET{ArtDef}, N{vannerie.g=F num=SG}*	lavanəʁi	1	0
+DET{ArtDef}, N{vannerie.g=F num=SG}*	lavanœʁi	1	0
 DET{ArtDef}, N{veille.g=F num=SG}*	lavɛj	1	0
 DET{ArtDef}, N{ventre.g=M num=SG}*	ləv&tʁ	1	0
 DET{ArtDef}, N{ventre.g=M num=SG}*	ləv&tʁ	1	0
@@ -3486,7 +3486,7 @@ DET{ArtDef}, N{âge.g=M num=SG}*	laʒ	1	0
 DET{ArtDef}, N{écart.g=M num=SG}*	lekaʁ	1	0
 DET{ArtDef}, N{écart.g=M num=SG}*	lekaʁ	1	0
 DET{ArtDef}, N{écart.g=M num=SG}*	lekaʁ	1	0
-DET{ArtDef}, N{échelon.g=M num=SG}*	leʃəlQ	1	0
+DET{ArtDef}, N{échelon.g=M num=SG}*	leʃœlQ	1	0
 DET{ArtDef}, N{éclairage.g=M num=PL}*	leeklɛʁaʒ	1	0
 DET{ArtDef}, N{école.g=F num=PL}*	leekɔl	1	0
 DET{ArtDef}, N{école.g=F num=PL}*	leekɔl	1	0
@@ -3735,10 +3735,10 @@ DET{ArtInd}, N{appart.g=M num=SG}*	3apaʁt	1	0
 DET{ArtInd}, N{appart.g=M num=SG}*	3napaʁt	1	1
 DET{ArtInd}, N{appart.g=M num=SG}*	3napaʁt	1	1
 DET{ArtInd}, N{appart.g=M num=SG}*	3napaʁt	1	1
-DET{ArtInd}, N{appartement.g=M num=PL}*	dezapaʁtəm&	1	1
-DET{ArtInd}, N{appartement.g=M num=SG}*	3napaʁtəm&	1	1
-DET{ArtInd}, N{appartement.g=M num=SG}*	3napaʁtəm&	1	1
-DET{ArtInd}, N{appartement.g=M num=SG}*	3napaʁtəm&	1	1
+DET{ArtInd}, N{appartement.g=M num=PL}*	dezapaʁtœm&	1	1
+DET{ArtInd}, N{appartement.g=M num=SG}*	3napaʁtœm&	1	1
+DET{ArtInd}, N{appartement.g=M num=SG}*	3napaʁtœm&	1	1
+DET{ArtInd}, N{appartement.g=M num=SG}*	3napaʁtœm&	1	1
 DET{ArtInd}, N{appel.g=M num=SG}*	3napɛl	1	1
 DET{ArtInd}, N{arbre.g=M num=SG}*	3aʁbʁ	1	0
 DET{ArtInd}, N{arbre.g=M num=SG}*	3naʁbʁ	1	1
@@ -3785,7 +3785,7 @@ DET{ArtInd}, N{autre.g=M num=SG}*	ynotʁ	1	0
 DET{ArtInd}, N{autre.g=M num=SG}*	ynotʁ	1	0
 DET{ArtInd}, N{avantage.g=M num=PL}*	deav&taʒ	1	0
 DET{ArtInd}, N{avantage.g=M num=SG}*	3av&taʒ	1	0
-DET{ArtInd}, N{avenir.g=M num=SG}*	3avəniʁ	1	0
+DET{ArtInd}, N{avenir.g=M num=SG}*	3avœniʁ	1	0
 DET{ArtInd}, N{bac.g=M num=SG}*	3bak	1	0
 DET{ArtInd}, N{bac.g=M num=SG}*	3bak	1	0
 DET{ArtInd}, N{bac.g=M num=SG}*	3bak	1	0
@@ -3836,7 +3836,7 @@ DET{ArtInd}, N{beau.g=M num=SG}*	3bo	1	0
 DET{ArtInd}, N{beau.g=M num=SG}*	3bo	1	0
 DET{ArtInd}, N{beau.g=M num=SG}*	3bo	1	0
 DET{ArtInd}, N{beau.g=M num=SG}*	3bo	1	0
-DET{ArtInd}, N{belote.g=F num=SG}*	ynbəlɔt	1	0
+DET{ArtInd}, N{belote.g=F num=SG}*	ynbœlɔt	1	0
 DET{ArtInd}, N{bicyclette.g=F num=PL}*	debisiklɛt	1	0
 DET{ArtInd}, N{bicyclette.g=F num=PL}*	debisiklɛt	1	0
 DET{ArtInd}, N{billet.g=M num=PL}*	debijɛ	1	0
@@ -3844,7 +3844,7 @@ DET{ArtInd}, N{biscuit.g=M num=PL}*	debiskɥi	1	0
 DET{ArtInd}, N{boisson.g=F num=PL}*	debwasQ	1	0
 DET{ArtInd}, N{bonbon.g=M num=SG}*	3bQbQ	1	0
 DET{ArtInd}, N{bonheur.g=M num=SG}*	3bonœʁ	1	0
-DET{ArtInd}, N{boucherie.g=F num=PL}*	debuʃəʁi	1	0
+DET{ArtInd}, N{boucherie.g=F num=PL}*	debuʃœʁi	1	0
 DET{ArtInd}, N{boudoir.g=M num=PL}*	debudwaʁ	1	0
 DET{ArtInd}, N{bougnat.g=M num=PL}*	debuɲa	1	0
 DET{ArtInd}, N{boulot.g=M num=SG}*	3bulo	1	0
@@ -3948,9 +3948,9 @@ DET{ArtInd}, N{chaussure.g=F num=PL}*	deʃosyʁ	1	0
 DET{ArtInd}, N{chercheur.g=M num=PL}*	deʃɛʁʃœʁ	1	0
 DET{ArtInd}, N{chercheur.g=M num=PL}*	deʃɛʁʃœʁ	1	0
 DET{ArtInd}, N{chercheur.g=M num=SG}*	3ʃɛʁʃœʁ	1	0
-DET{ArtInd}, N{chevalier.g=M num=PL}*	deʃəvalje	1	0
-DET{ArtInd}, N{cheveu.g=M num=PL}*	deʃəvø	1	0
-DET{ArtInd}, N{cheveu.g=M num=SG}*	3ʃəvø	1	0
+DET{ArtInd}, N{chevalier.g=M num=PL}*	deʃœvalje	1	0
+DET{ArtInd}, N{cheveu.g=M num=PL}*	deʃœvø	1	0
+DET{ArtInd}, N{cheveu.g=M num=SG}*	3ʃœvø	1	0
 DET{ArtInd}, N{chien.g=M num=PL}*	deʃj3	1	0
 DET{ArtInd}, N{chien.g=M num=SG}*	3ʃj3	1	0
 DET{ArtInd}, N{chinois.g=M num=SG}*	deʃinwa	1	0
@@ -4092,7 +4092,7 @@ DET{ArtInd}, N{cursus.g=M num=SG}*	3kyʁsys	1	0
 DET{ArtInd}, N{côté.g=M num=SG}*	3kote	1	0
 DET{ArtInd}, N{côté.g=M num=SG}*	3kote	1	0
 DET{ArtInd}, N{danse.g=F num=PL}*	ded&s	1	0
-DET{ArtInd}, N{demi.g=M num=SG}*	dedəmi	1	0
+DET{ArtInd}, N{demi.g=M num=SG}*	dedœmi	1	0
 DET{ArtInd}, N{dessin.g=M num=PL}*	dedes3	1	0
 DET{ArtInd}, N{dessin.g=M num=SG}*	3des3	1	0
 DET{ArtInd}, N{dessin.g=M num=SG}*	3des3	1	0
@@ -4112,7 +4112,7 @@ DET{ArtInd}, N{différence.g=F num=SG}*	yndifeʁ&s	1	0
 DET{ArtInd}, N{différence.g=F num=SG}*	yndifeʁ&s	1	0
 DET{ArtInd}, N{diplôme.g=M num=SG}*	3diplom	1	0
 DET{ArtInd}, N{directeur.g=F num=SG}*	yndiʁɛktʁis	1	0
-DET{ArtInd}, N{distillerie.g=F num=SG}*	yndistiləʁi	1	0
+DET{ArtInd}, N{distillerie.g=F num=SG}*	yndistilœʁi	1	0
 DET{ArtInd}, N{dizaine.g=F num=PL}*	dedizɛn	1	0
 DET{ArtInd}, N{dizaine.g=F num=PL}*	dedizɛn	1	0
 DET{ArtInd}, N{dizaine.g=F num=SG}*	yndizɛn	1	0
@@ -4129,7 +4129,7 @@ DET{ArtInd}, N{décalage.g=M num=SG}*	3dekalaʒ	1	0
 DET{ArtInd}, N{déclaration.g=F num=PL}*	dedeklaʁasjQ	1	0
 DET{ArtInd}, N{défaut.g=M num=SG}*	3defo	1	0
 DET{ArtInd}, N{démonstration.g=F num=PL}*	dedemQstʁasjQ	1	0
-DET{ArtInd}, N{dépassement.g=M num=PL}*	dedepasəm&	1	0
+DET{ArtInd}, N{dépassement.g=M num=PL}*	dedepasœm&	1	0
 DET{ArtInd}, N{dîner.g=M num=SG}*	3dine	1	0
 DET{ArtInd}, N{effort.g=M num=PL}*	deefɔʁ	1	0
 DET{ArtInd}, N{emploi.g=M num=SG}*	3&plwa	1	0
@@ -4151,11 +4151,11 @@ DET{ArtInd}, N{enfant.g=M num=PL}*	dez&f&	1	1
 DET{ArtInd}, N{enfant.g=M num=PL}*	dez&f&	1	1
 DET{ArtInd}, N{enfant.g=M num=PL}*	dez&f&	1	1
 DET{ArtInd}, N{enseignant.g=M num=PL}*	dez&sɛɲ&	1	1
-DET{ArtInd}, N{entreprise.g=F num=PL}*	de&tʁəpʁiz	1	0
-DET{ArtInd}, N{entreprise.g=F num=PL}*	dez&tʁəpʁiz	1	1
-DET{ArtInd}, N{entreprise.g=F num=SG}*	yn&tʁəpʁiz	1	0
-DET{ArtInd}, N{entreprise.g=F num=SG}*	yn&tʁəpʁiz	1	0
-DET{ArtInd}, N{entreprise.g=F num=SG}*	yn&tʁəpʁiz	1	0
+DET{ArtInd}, N{entreprise.g=F num=PL}*	de&tʁœpʁiz	1	0
+DET{ArtInd}, N{entreprise.g=F num=PL}*	dez&tʁœpʁiz	1	1
+DET{ArtInd}, N{entreprise.g=F num=SG}*	yn&tʁœpʁiz	1	0
+DET{ArtInd}, N{entreprise.g=F num=SG}*	yn&tʁœpʁiz	1	0
+DET{ArtInd}, N{entreprise.g=F num=SG}*	yn&tʁœpʁiz	1	0
 DET{ArtInd}, N{entrée.g=F num=SG}*	yn&tʁe	1	0
 DET{ArtInd}, N{entrée.g=F num=SG}*	yn&tʁe	1	0
 DET{ArtInd}, N{envie.g=F num=PL}*	de&vi	1	0
@@ -4321,7 +4321,7 @@ DET{ArtInd}, N{gare.g=F num=PL}*	degaʁ	1	0
 DET{ArtInd}, N{gars.g=M num=SG}*	3ga	1	0
 DET{ArtInd}, N{garçon.g=M num=SG}*	3gaʁsQ	1	0
 DET{ArtInd}, N{garçon.g=M num=SG}*	3gaʁsQ	1	0
-DET{ArtInd}, N{gelée.g=F num=SG}*	ynʒəle	1	0
+DET{ArtInd}, N{gelée.g=F num=SG}*	ynʒœle	1	0
 DET{ArtInd}, N{genre.g=M num=SG}*	3ʒ&ʁ	1	0
 DET{ArtInd}, N{geyser.g=M num=SG}*	deʒɛzɛʁ	1	0
 DET{ArtInd}, N{goût.g=M num=SG}*	3gu	1	0
@@ -4539,8 +4539,8 @@ DET{ArtInd}, N{membre.g=M num=SG}*	3m&bʁ	1	0
 DET{ArtInd}, N{membre.g=M num=SG}*	3m&bʁ	1	0
 DET{ArtInd}, N{mentalité.g=F num=SG}*	ynm&talite	1	0
 DET{ArtInd}, N{mention.g=F num=SG}*	ynm&sjQ	1	0
-DET{ArtInd}, N{mesquinerie.g=F num=PL}*	demɛskinəʁi	1	0
-DET{ArtInd}, N{mesquinerie.g=F num=PL}*	demɛskinəʁi	1	0
+DET{ArtInd}, N{mesquinerie.g=F num=PL}*	demɛskinœʁi	1	0
+DET{ArtInd}, N{mesquinerie.g=F num=PL}*	demɛskinœʁi	1	0
 DET{ArtInd}, N{milieu.g=M num=SG}*	3miljø	1	0
 DET{ArtInd}, N{milliard.g=M num=PL}*	demiljaʁ	1	0
 DET{ArtInd}, N{milliard.g=M num=PL}*	demiljaʁ	1	0
@@ -4599,10 +4599,10 @@ DET{ArtInd}, N{moment.g=M num=SG}*	3mom&	1	0
 DET{ArtInd}, N{moment.g=M num=SG}*	3mom&	1	0
 DET{ArtInd}, N{moment.g=M num=SG}*	3mom&	1	0
 DET{ArtInd}, N{moment.g=M num=SG}*	3mom&	1	0
-DET{ArtInd}, N{monsieur.g=M num=SG}*	3məsjø	1	0
-DET{ArtInd}, N{monsieur.g=M num=SG}*	3məsjø	1	0
-DET{ArtInd}, N{monsieur.g=M num=SG}*	3məsjø	1	0
-DET{ArtInd}, N{monsieur.g=M num=SG}*	3məsjø	1	0
+DET{ArtInd}, N{monsieur.g=M num=SG}*	3mœsjø	1	0
+DET{ArtInd}, N{monsieur.g=M num=SG}*	3mœsjø	1	0
+DET{ArtInd}, N{monsieur.g=M num=SG}*	3mœsjø	1	0
+DET{ArtInd}, N{monsieur.g=M num=SG}*	3mœsjø	1	0
 DET{ArtInd}, N{monstre.g=M num=PL}*	demQstʁ	1	0
 DET{ArtInd}, N{mot.g=M num=PL}*	demo	1	0
 DET{ArtInd}, N{mot.g=M num=PL}*	demo	1	0
@@ -4615,8 +4615,8 @@ DET{ArtInd}, N{mot.g=M num=SG}*	3mo	1	0
 DET{ArtInd}, N{mot.g=M num=SG}*	3mo	1	0
 DET{ArtInd}, N{mot.g=M num=SG}*	3mo	1	0
 DET{ArtInd}, N{mot.g=M num=SG}*	3mo	1	0
-DET{ArtInd}, N{mouvement.g=M num=PL}*	demuvəm&	1	0
-DET{ArtInd}, N{mouvement.g=M num=PL}*	demuvəm&	1	0
+DET{ArtInd}, N{mouvement.g=M num=PL}*	demuvœm&	1	0
+DET{ArtInd}, N{mouvement.g=M num=PL}*	demuvœm&	1	0
 DET{ArtInd}, N{moyen.g=M num=PL}*	demwaj3	1	0
 DET{ArtInd}, N{moyen.g=M num=PL}*	demwaj3	1	0
 DET{ArtInd}, N{moyen.g=M num=SG}*	3mwaj3	1	0
@@ -4878,7 +4878,7 @@ DET{ArtInd}, N{pied.g=M num=PL}*	depje	1	0
 DET{ArtInd}, N{pied.g=M num=PL}*	depje	1	0
 DET{ArtInd}, N{pigeon.g=M num=PL}*	depiʒQ	1	0
 DET{ArtInd}, N{pigeon.g=M num=PL}*	depiʒQ	1	0
-DET{ArtInd}, N{pipeline.g=M num=PL}*	depajpəlajn	1	0
+DET{ArtInd}, N{pipeline.g=M num=PL}*	depajpœlajn	1	0
 DET{ArtInd}, N{pizza.g=F num=SG}*	ynpidza	1	0
 DET{ArtInd}, N{place.g=F num=SG}*	ynplas	1	0
 DET{ArtInd}, N{plaque.g=F num=PL}*	deplak	1	0
@@ -4978,25 +4978,25 @@ DET{ArtInd}, N{raison.g=F num=PL}*	deʁɛzQ	1	0
 DET{ArtInd}, N{raison.g=F num=PL}*	deʁɛzQ	1	0
 DET{ArtInd}, N{raison.g=F num=SG}*	ynʁɛzQ	1	0
 DET{ArtInd}, N{rapport.g=M num=PL}*	deʁapɔʁ	1	0
-DET{ArtInd}, N{rassemblement.g=M num=PL}*	deʁas&bləm&	1	0
+DET{ArtInd}, N{rassemblement.g=M num=PL}*	deʁas&blœm&	1	0
 DET{ArtInd}, N{rat.g=M num=SG}*	3ʁa	1	0
 DET{ArtInd}, N{rayon.g=M num=SG}*	3ʁɛjQ	1	0
-DET{ArtInd}, N{refuge.g=M num=PL}*	deʁəfyʒ	1	0
-DET{ArtInd}, N{refuge.g=M num=SG}*	3ʁəfyʒ	1	0
+DET{ArtInd}, N{refuge.g=M num=PL}*	deʁœfyʒ	1	0
+DET{ArtInd}, N{refuge.g=M num=SG}*	3ʁœfyʒ	1	0
 DET{ArtInd}, N{renfort.g=M num=PL}*	deʁ&fɔʁ	1	0
-DET{ArtInd}, N{repas.g=M num=PL}*	deʁəpa	1	0
-DET{ArtInd}, N{repas.g=M num=PL}*	deʁəpa	1	0
-DET{ArtInd}, N{repas.g=M num=PL}*	deʁəpa	1	0
-DET{ArtInd}, N{repas.g=M num=SG}*	3ʁəpa	1	0
-DET{ArtInd}, N{report.g=M num=SG}*	3ʁəpɔʁ	1	0
-DET{ArtInd}, N{reportage.g=M num=PL}*	deʁəpɔʁtaʒ	1	0
-DET{ArtInd}, N{reportage.g=M num=SG}*	3ʁəpɔʁtaʒ	1	0
+DET{ArtInd}, N{repas.g=M num=PL}*	deʁœpa	1	0
+DET{ArtInd}, N{repas.g=M num=PL}*	deʁœpa	1	0
+DET{ArtInd}, N{repas.g=M num=PL}*	deʁœpa	1	0
+DET{ArtInd}, N{repas.g=M num=SG}*	3ʁœpa	1	0
+DET{ArtInd}, N{report.g=M num=SG}*	3ʁœpɔʁ	1	0
+DET{ArtInd}, N{reportage.g=M num=PL}*	deʁœpɔʁtaʒ	1	0
+DET{ArtInd}, N{reportage.g=M num=SG}*	3ʁœpɔʁtaʒ	1	0
 DET{ArtInd}, N{responsabilité.g=F num=PL}*	deʁɛspQsabilite	1	0
 DET{ArtInd}, N{responsabilité.g=F num=PL}*	deʁɛspQsabilite	1	0
 DET{ArtInd}, N{restaurant.g=M num=SG}*	3ʁɛstoʁ&	1	0
-DET{ArtInd}, N{retour.g=M num=PL}*	deʁətuʁ	1	0
-DET{ArtInd}, N{retour.g=M num=SG}*	3ʁətuʁ	1	0
-DET{ArtInd}, N{revue.g=F num=SG}*	ynʁəvy	1	0
+DET{ArtInd}, N{retour.g=M num=PL}*	deʁœtuʁ	1	0
+DET{ArtInd}, N{retour.g=M num=SG}*	3ʁœtuʁ	1	0
+DET{ArtInd}, N{revue.g=F num=SG}*	ynʁœvy	1	0
 DET{ArtInd}, N{rigueur.g=F num=SG}*	ynʁigœʁ	1	0
 DET{ArtInd}, N{robinet.g=M num=PL}*	deʁobinɛ	1	0
 DET{ArtInd}, N{robinet.g=M num=SG}*	3ʁobinɛ	1	0
@@ -5020,11 +5020,11 @@ DET{ArtInd}, N{salade.g=F num=SG}*	ynsalad	1	0
 DET{ArtInd}, N{salle.g=F num=PL}*	desal	1	0
 DET{ArtInd}, N{salle.g=F num=SG}*	ynsal	1	0
 DET{ArtInd}, N{science.g=F num=SG}*	ynsj&s	1	0
-DET{ArtInd}, N{seconde.g=F num=SG}*	ynsəgQd	1	0
-DET{ArtInd}, N{semaine.g=F num=SG}*	ynsəmɛn	1	0
-DET{ArtInd}, N{semelle.g=F num=SG}*	ynsəmɛl	1	0
-DET{ArtInd}, N{semelle.g=F num=SG}*	ynsəmɛl	1	0
-DET{ArtInd}, N{semestre.g=M num=SG}*	3səmɛstʁ	1	0
+DET{ArtInd}, N{seconde.g=F num=SG}*	ynsœgQd	1	0
+DET{ArtInd}, N{semaine.g=F num=SG}*	ynsœmɛn	1	0
+DET{ArtInd}, N{semelle.g=F num=SG}*	ynsœmɛl	1	0
+DET{ArtInd}, N{semelle.g=F num=SG}*	ynsœmɛl	1	0
+DET{ArtInd}, N{semestre.g=M num=SG}*	3sœmɛstʁ	1	0
 DET{ArtInd}, N{sept.g=F num=PL}*	desɛt	1	0
 DET{ArtInd}, N{sept.g=F num=PL}*	desɛt	1	0
 DET{ArtInd}, N{service.g=M num=PL}*	desɛʁvis	1	0
@@ -5058,10 +5058,10 @@ DET{ArtInd}, N{souci.g=M num=SG}*	3susi	1	0
 DET{ArtInd}, N{souffrance.g=F num=SG}*	ynsufʁ&s	1	0
 DET{ArtInd}, N{soupe.g=F num=PL}*	desup	1	0
 DET{ArtInd}, N{sourire.g=M num=SG}*	3suʁiʁ	1	0
-DET{ArtInd}, N{souvenir.g=M num=PL}*	desuvəniʁ	1	0
-DET{ArtInd}, N{souvenir.g=M num=PL}*	desuvəniʁ	1	0
-DET{ArtInd}, N{souvenir.g=M num=PL}*	desuvəniʁ	1	0
-DET{ArtInd}, N{souvenir.g=M num=PL}*	desuvəniʁ	1	0
+DET{ArtInd}, N{souvenir.g=M num=PL}*	desuvœniʁ	1	0
+DET{ArtInd}, N{souvenir.g=M num=PL}*	desuvœniʁ	1	0
+DET{ArtInd}, N{souvenir.g=M num=PL}*	desuvœniʁ	1	0
+DET{ArtInd}, N{souvenir.g=M num=PL}*	desuvœniʁ	1	0
 DET{ArtInd}, N{spectacle.g=M num=SG}*	3spɛktakl	1	0
 DET{ArtInd}, N{spectacle.g=M num=SG}*	3spɛktakl	1	0
 DET{ArtInd}, N{spectacle.g=M num=SG}*	3spɛktakl	1	0
@@ -5085,7 +5085,7 @@ DET{ArtInd}, N{système.g=M num=PL}*	desistɛm	1	0
 DET{ArtInd}, N{système.g=M num=PL}*	desistɛm	1	0
 DET{ArtInd}, N{tante.g=F num=PL}*	det&t	1	0
 DET{ArtInd}, N{tapis.g=M num=PL}*	detapi	1	0
-DET{ArtInd}, N{tapisserie.g=F num=PL}*	detapisəʁi	1	0
+DET{ArtInd}, N{tapisserie.g=F num=PL}*	detapisœʁi	1	0
 DET{ArtInd}, N{tarif.g=M num=PL}*	detaʁif	1	0
 DET{ArtInd}, N{tarif.g=M num=PL}*	detaʁif	1	0
 DET{ArtInd}, N{tarif.g=M num=PL}*	detaʁif	1	0
@@ -5115,9 +5115,9 @@ DET{ArtInd}, N{tradition.g=F num=PL}*	detʁadisjQ	1	0
 DET{ArtInd}, N{tradition.g=F num=PL}*	detʁadisjQ	1	0
 DET{ArtInd}, N{tradition.g=F num=SG}*	yntʁadisjQ	1	0
 DET{ArtInd}, N{tradition.g=F num=SG}*	yntʁadisjQ	1	0
-DET{ArtInd}, N{traitement.g=M num=SG}*	3tʁɛtəm&	1	0
-DET{ArtInd}, N{traitement.g=M num=SG}*	3tʁɛtəm&	1	0
-DET{ArtInd}, N{traitement.g=M num=SG}*	3tʁɛtəm&	1	0
+DET{ArtInd}, N{traitement.g=M num=SG}*	3tʁɛtœm&	1	0
+DET{ArtInd}, N{traitement.g=M num=SG}*	3tʁɛtœm&	1	0
+DET{ArtInd}, N{traitement.g=M num=SG}*	3tʁɛtœm&	1	0
 DET{ArtInd}, N{travail.g=M num=SG}*	3tʁavaj	1	0
 DET{ArtInd}, N{travail.g=M num=SG}*	3tʁavaj	1	0
 DET{ArtInd}, N{travail.g=M num=SG}*	3tʁavaj	1	0
@@ -5158,8 +5158,8 @@ DET{ArtInd}, N{téléphone.g=M num=PL}*	detelefɔn	1	0
 DET{ArtInd}, N{univers.g=M num=SG}*	3nynivɛʁ	1	1
 DET{ArtInd}, N{usine.g=F num=SG}*	ynyzin	1	0
 DET{ArtInd}, N{vacance.g=F num=PL}*	devak&s	1	0
-DET{ArtInd}, N{vacherie.g=F num=PL}*	devaʃəʁi	1	0
-DET{ArtInd}, N{vacherie.g=F num=PL}*	devaʃəʁi	1	0
+DET{ArtInd}, N{vacherie.g=F num=PL}*	devaʃœʁi	1	0
+DET{ArtInd}, N{vacherie.g=F num=PL}*	devaʃœʁi	1	0
 DET{ArtInd}, N{vertige.g=M num=PL}*	devɛʁtiʒ	1	0
 DET{ArtInd}, N{vie.g=F num=SG}*	ynvi	1	0
 DET{ArtInd}, N{vie.g=F num=SG}*	ynvi	1	0
@@ -5227,9 +5227,9 @@ DET{ArtInd}, N{vérification.g=F num=PL}*	deveʁifikasjQ	1	0
 DET{ArtInd}, N{vérification.g=F num=PL}*	deveʁifikasjQ	1	0
 DET{ArtInd}, N{vérification.g=F num=PL}*	deveʁifikasjQ	1	0
 DET{ArtInd}, N{vérification.g=F num=PL}*	deveʁifikasjQ	1	0
-DET{ArtInd}, N{vêtement.g=M num=PL}*	devɛtəm&	1	0
-DET{ArtInd}, N{vêtement.g=M num=PL}*	devɛtəm&	1	0
-DET{ArtInd}, N{vêtement.g=M num=PL}*	devɛtəm&	1	0
+DET{ArtInd}, N{vêtement.g=M num=PL}*	devɛtœm&	1	0
+DET{ArtInd}, N{vêtement.g=M num=PL}*	devɛtœm&	1	0
+DET{ArtInd}, N{vêtement.g=M num=PL}*	devɛtœm&	1	0
 DET{ArtInd}, N{yaourt.g=M num=PL}*	dejauʁt	1	0
 DET{ArtInd}, N{yaourt.g=M num=SG}*	3jauʁt	1	0
 DET{ArtInd}, N{yaourt.g=M num=SG}*	3jauʁt	1	0
@@ -5330,7 +5330,7 @@ DET{Dem}, N{année.g=F num=SG}*	sɛtane	1	0
 DET{Dem}, N{année.g=F num=SG}*	sɛtane	1	0
 DET{Dem}, N{année.g=F num=SG}*	sɛtane	1	0
 DET{Dem}, N{appareil.g=M num=PL}*	sezapaʁɛj	1	1
-DET{Dem}, N{appartement.g=M num=SG}*	sɛtapaʁtəm&	1	0
+DET{Dem}, N{appartement.g=M num=SG}*	sɛtapaʁtœm&	1	0
 DET{Dem}, N{approche.g=F num=SG}*	sɛtapʁɔʃ	1	0
 DET{Dem}, N{arbre.g=M num=PL}*	sezaʁbʁ	1	1
 DET{Dem}, N{association.g=F num=SG}*	sɛtasosjasjQ	1	0
@@ -5398,7 +5398,7 @@ DET{Dem}, N{génération.g=F num=SG}*	sɛtʒeneʁasjQ	1	0
 DET{Dem}, N{histoire.g=F num=SG}*	sɛtistwaʁ	1	0
 DET{Dem}, N{immeuble.g=M num=SG}*	sɛtimœbl	1	0
 DET{Dem}, N{impasse.g=F num=SG}*	sɛt3pas	1	0
-DET{Dem}, N{isolement.g=M num=SG}*	sɛtizɔləm&	1	0
+DET{Dem}, N{isolement.g=M num=SG}*	sɛtizɔlœm&	1	0
 DET{Dem}, N{jour.g=M num=PL}*	seʒuʁ	1	0
 DET{Dem}, N{jour.g=M num=SG}*	søʒuʁ	1	0
 DET{Dem}, N{labo.g=M num=PL}*	selabo	1	0
@@ -5444,7 +5444,7 @@ DET{Dem}, N{point.g=M num=SG}*	søpw3	1	0
 DET{Dem}, N{porte.g=F num=PL}*	sepɔʁt	1	0
 DET{Dem}, N{période.g=F num=PL}*	sepeʁjɔd	1	0
 DET{Dem}, N{période.g=F num=SG}*	sɛtpeʁjɔd	1	0
-DET{Dem}, N{recherche.g=F num=SG}*	sɛtʁəʃɛʁʃ	1	0
+DET{Dem}, N{recherche.g=F num=SG}*	sɛtʁœʃɛʁʃ	1	0
 DET{Dem}, N{restaurant.g=M num=SG}*	søʁɛstoʁ&	1	0
 DET{Dem}, N{roman.g=M num=SG}*	søʁom&	1	0
 DET{Dem}, N{roman.g=M num=SG}*	søʁom&	1	0
@@ -5478,7 +5478,7 @@ DET{Dem}, N{été.g=M num=SG}*	sɛtete	1	1
 DET{Dem}, N{été.g=M num=SG}*	sɛtete	1	1
 DET{PossL}, N{arme.g=F num=PL}*	lœʁaʁm	1	0
 DET{PossL}, N{besoin.g=M num=PL}*	lœʁbøzw3	1	0
-DET{PossL}, N{demande.g=F num=PL}*	lœʁdəm&d	1	0
+DET{PossL}, N{demande.g=F num=PL}*	lœʁdœm&d	1	0
 DET{PossL}, N{enfant.g=M num=PL}*	lœʁ&f&	1	0
 DET{PossL}, N{parent.g=M num=PL}*	lœʁpaʁ&	1	0
 DET{PossL}, N{voiture.g=F num=PL}*	lœʁvwatyʁ	1	0
@@ -5515,7 +5515,7 @@ DET{PossM}, N{beau.g=F num=SG}*	mabɛl	1	0
 DET{PossM}, N{billet.g=M num=SG}*	mQbijɛ	1	0
 DET{PossM}, N{boulot.g=M num=SG}*	mQbulo	1	0
 DET{PossM}, N{boîte.g=F num=SG}*	mabwat	1	0
-DET{PossM}, N{bulletin.g=M num=PL}*	mebylət3	1	0
+DET{PossM}, N{bulletin.g=M num=PL}*	mebylœt3	1	0
 DET{PossM}, N{cadeau.g=M num=SG}*	mQkado	1	0
 DET{PossM}, N{cas.g=M num=SG}*	mQka	1	0
 DET{PossM}, N{chambre.g=F num=SG}*	maʃ&bʁ	1	0
@@ -5538,7 +5538,7 @@ DET{PossM}, N{cousin.g=F num=SG}*	makuzin	1	0
 DET{PossM}, N{cousin.g=M num=PL}*	mekuz3	1	0
 DET{PossM}, N{cousin.g=M num=PL}*	mekuz3	1	0
 DET{PossM}, N{cousin.g=M num=PL}*	mekuz3	1	0
-DET{PossM}, N{devoir.g=M num=PL}*	medəvwaʁ	1	0
+DET{PossM}, N{devoir.g=M num=PL}*	medœvwaʁ	1	0
 DET{PossM}, N{diplôme.g=M num=SG}*	mQdiplom	1	0
 DET{PossM}, N{dossier.g=M num=SG}*	mQdosje	1	0
 DET{PossM}, N{enfant.g=M num=PL}*	me&f&	1	0
@@ -5599,7 +5599,7 @@ DET{PossM}, N{mari.g=M num=SG}*	mQmaʁi	1	0
 DET{PossM}, N{mari.g=M num=SG}*	mQmaʁi	1	0
 DET{PossM}, N{mari.g=M num=SG}*	mQmaʁi	1	0
 DET{PossM}, N{mariage.g=M num=SG}*	mQmaʁjaʒ	1	0
-DET{PossM}, N{menu.g=M num=PL}*	meməny	1	0
+DET{PossM}, N{menu.g=M num=PL}*	memœny	1	0
 DET{PossM}, N{moyen.g=M num=PL}*	memwaj3	1	0
 DET{PossM}, N{mère.g=F num=SG}*	mamɛʁ	1	0
 DET{PossM}, N{mère.g=F num=SG}*	mamɛʁ	1	0
@@ -5709,7 +5709,7 @@ DET{PossM}, N{père.g=M num=SG}*	mQpɛʁ	1	0
 DET{PossM}, N{père.g=M num=SG}*	mQpɛʁ	1	0
 DET{PossM}, N{père.g=M num=SG}*	mQpɛʁ	1	0
 DET{PossM}, N{père.g=M num=SG}*	mQpɛʁ	1	0
-DET{PossM}, N{repas.g=M num=SG}*	mQʁəpa	1	0
+DET{PossM}, N{repas.g=M num=SG}*	mQʁœpa	1	0
 DET{PossM}, N{région.g=F num=SG}*	maʁeʒjQ	1	0
 DET{PossM}, N{sabot.g=M num=PL}*	mesabo	1	0
 DET{PossM}, N{sac.g=M num=SG}*	mQsak	1	0
@@ -5804,8 +5804,8 @@ DET{PossN}, N{époque.g=F num=SG}*	nɔtʁepɔk	1	0
 DET{PossS}, N{ami.g=M num=SG}*	sQami	1	0
 DET{PossS}, N{anniversaire.g=M num=SG}*	sQnanivɛʁsɛʁ	1	1
 DET{PossS}, N{année.g=F num=SG}*	sQane	1	0
-DET{PossS}, N{appartement.g=M num=SG}*	sQapaʁtəm&	1	0
-DET{PossS}, N{atelier.g=M num=SG}*	sQatəlje	1	0
+DET{PossS}, N{appartement.g=M num=SG}*	sQapaʁtœm&	1	0
+DET{PossS}, N{atelier.g=M num=SG}*	sQatœlje	1	0
 DET{PossS}, N{autorité.g=F num=SG}*	sQnotoʁite	1	1
 DET{PossS}, N{bac.g=M num=SG}*	sQbak	1	0
 DET{PossS}, N{boutique.g=F num=SG}*	sabutik	1	0
@@ -5815,9 +5815,9 @@ DET{PossS}, N{caractère.g=M num=SG}*	sQkaʁaktɛʁ	1	0
 DET{PossS}, N{certificat.g=M num=PL}*	sesɛʁtifika	1	0
 DET{PossS}, N{chambre.g=F num=SG}*	saʃ&bʁ	1	0
 DET{PossS}, N{charge.g=F num=SG}*	saʃaʁʒ	1	0
-DET{PossS}, N{chemise.g=F num=PL}*	seʃəmiz	1	0
-DET{PossS}, N{chemise.g=F num=PL}*	seʃəmiz	1	0
-DET{PossS}, N{chemise.g=F num=PL}*	seʃəmiz	1	0
+DET{PossS}, N{chemise.g=F num=PL}*	seʃœmiz	1	0
+DET{PossS}, N{chemise.g=F num=PL}*	seʃœmiz	1	0
+DET{PossS}, N{chemise.g=F num=PL}*	seʃœmiz	1	0
 DET{PossS}, N{concours.g=M num=SG}*	sQkQkuʁ	1	0
 DET{PossS}, N{date.g=F num=SG}*	sadat	1	0
 DET{PossS}, N{dernier.g=F num=SG}*	sadɛʁnjɛʁ	1	0
@@ -5830,7 +5830,7 @@ DET{PossS}, N{enfant.g=M num=PL}*	se&f&	1	0
 DET{PossS}, N{enfant.g=M num=PL}*	sez&f&	1	1
 DET{PossS}, N{enfant.g=M num=PL}*	sez&f&	1	1
 DET{PossS}, N{femme.g=F num=SG}*	safam	1	0
-DET{PossS}, N{feuilleton.g=M num=SG}*	sQfœjətQ	1	0
+DET{PossS}, N{feuilleton.g=M num=SG}*	sQfœjœtQ	1	0
 DET{PossS}, N{fil.g=M num=SG}*	sQfil	1	0
 DET{PossS}, N{fille.g=F num=SG}*	safij	1	0
 DET{PossS}, N{film.g=M num=PL}*	sefilm	1	0
@@ -5854,7 +5854,7 @@ DET{PossS}, N{mère.g=F num=SG}*	samɛʁ	1	0
 DET{PossS}, N{mère.g=F num=SG}*	samɛʁ	1	0
 DET{PossS}, N{mère.g=F num=SG}*	samɛʁ	1	0
 DET{PossS}, N{métier.g=M num=SG}*	sQmetje	1	0
-DET{PossS}, N{neveux.g=M num=PL}*	senəvø	1	0
+DET{PossS}, N{neveux.g=M num=PL}*	senœvø	1	0
 DET{PossS}, N{nièce.g=F num=PL}*	senjɛs	1	0
 DET{PossS}, N{nom.g=M num=SG}*	sQnQ	1	0
 DET{PossS}, N{oiseau.g=M num=PL}*	sezwazo	1	1
@@ -5866,8 +5866,8 @@ DET{PossS}, N{preuve.g=F num=PL}*	sepʁœv	1	0
 DET{PossS}, N{profession.g=F num=SG}*	sapʁofɛsjQ	1	0
 DET{PossS}, N{père.g=M num=SG}*	sQpɛʁ	1	0
 DET{PossS}, N{père.g=M num=SG}*	sQpɛʁ	1	0
-DET{PossS}, N{retraite.g=F num=SG}*	saʁətʁɛt	1	0
-DET{PossS}, N{retraite.g=F num=SG}*	saʁətʁɛt	1	0
+DET{PossS}, N{retraite.g=F num=SG}*	saʁœtʁɛt	1	0
+DET{PossS}, N{retraite.g=F num=SG}*	saʁœtʁɛt	1	0
 DET{PossS}, N{sandwich.g=M num=PL}*	ses&dwitʃ	1	0
 DET{PossS}, N{service.g=M num=SG}*	sQsɛʁvis	1	0
 DET{PossS}, N{soeur.g=F num=SG}*	sasœʁ	1	0
@@ -6060,7 +6060,7 @@ DET{PossV}, N{parent.g=M num=PL}*	vopaʁ&	1	0
 DET{PossV}, N{parent.g=M num=PL}*	vopaʁ&	1	0
 DET{PossV}, N{parent.g=M num=PL}*	vopaʁ&	1	0
 DET{PossV}, N{patois.g=M num=SG}*	vɔtʁpatwa	1	0
-DET{PossV}, N{petit-enfant.g=M num=PL}*	vopəti&f&	1	0
+DET{PossV}, N{petit-enfant.g=M num=PL}*	vopœti&f&	1	0
 DET{PossV}, N{profession.g=F num=PL}*	vopʁofɛsjQ	1	0
 DET{PossV}, N{prénom.g=M num=SG}*	vɔtʁpʁenQ	1	0
 DET{PossV}, N{père.g=M num=SG}*	vɔtʁpɛʁ	1	0
@@ -6111,7 +6111,7 @@ NUM{cent}, N{quarante.g=M num=PL}*	s&kaʁ&t	1	0
 NUM{cent}, N{quarante.g=M num=PL}*	s&kaʁ&t	1	0
 NUM{cent}, N{quarante.g=M num=PL}*	s&kaʁ&t	1	0
 NUM{cent}, N{quarante.g=M num=PL}*	s&kaʁ&t	1	0
-NUM{cent}, N{quatre-vingt.g=M num=PL}*	s&katʁəv3	1	0
+NUM{cent}, N{quatre-vingt.g=M num=PL}*	s&katʁœv3	1	0
 NUM{cent}, N{soixante.g=M num=PL}*	s&swas&t	1	0
 NUM{cent}, N{soixante.g=M num=PL}*	s&swas&t	1	0
 NUM{cent}, N{soixante.g=M num=PL}*	s&swas&t	1	0
@@ -6196,7 +6196,7 @@ NUM{cinq}, N{mille.g=M num=PL}*	s3kmil	1	0
 NUM{cinq}, N{minute.g=F num=PL}*	s3kminyt	1	0
 NUM{cinq}, N{personne.g=F num=PL}*	s3kpɛʁsɔn	1	0
 NUM{cinq}, N{quarante.g=M num=PL}*	s3kkaʁ&t	1	0
-NUM{cinq}, N{repas.g=M num=PL}*	s3kʁəpa	1	0
+NUM{cinq}, N{repas.g=M num=PL}*	s3kʁœpa	1	0
 NUM{cinq}, N{station.g=F num=PL}*	s3kstasjQ	1	0
 NUM{deux}, N{aiguille.g=F num=PL}*	døzegɥij	1	1
 NUM{deux}, N{an.g=M num=PL}*	dø&	1	0
@@ -6392,8 +6392,8 @@ NUM{quatre}, N{mille.g=M num=PL}*	katʁmil	1	0
 NUM{quatre}, N{mille.g=M num=PL}*	katʁmil	1	0
 NUM{quatre}, N{mille.g=M num=PL}*	katʁmil	1	0
 NUM{quatre}, N{mois.g=M num=PL}*	katʁmwa	1	0
-NUM{quatre}, N{registre.g=M num=PL}*	katʁʁəʒistʁ	1	0
-NUM{quatre}, N{registre.g=M num=PL}*	katʁʁəʒistʁ	1	0
+NUM{quatre}, N{registre.g=M num=PL}*	katʁʁœʒistʁ	1	0
+NUM{quatre}, N{registre.g=M num=PL}*	katʁʁœʒistʁ	1	0
 NUM{quatre}, N{tome.g=M num=PL}*	katʁtɔm	1	0
 NUM{quatre}, N{voix.g=F num=PL}*	katʁvwa	1	0
 NUM{quinze}, N{an.g=M num=PL}*	k3z&	1	0
@@ -6404,8 +6404,8 @@ NUM{quinze}, N{an.g=M num=PL}*	k3z&	1	0
 NUM{quinze}, N{an.g=M num=PL}*	k3z&	1	0
 NUM{quinze}, N{an.g=M num=PL}*	k3z&	1	0
 NUM{quinze}, N{an.g=M num=PL}*	k3z&	1	0
-NUM{quinze}, N{degré.g=M num=PL}*	k3zdəgʁe	1	0
-NUM{quinze}, N{degré.g=M num=PL}*	k3zdəgʁe	1	0
+NUM{quinze}, N{degré.g=M num=PL}*	k3zdœgʁe	1	0
+NUM{quinze}, N{degré.g=M num=PL}*	k3zdœgʁe	1	0
 NUM{quinze}, N{euro.g=M num=PL}*	k3zøʁo	1	0
 NUM{quinze}, N{euro.g=M num=PL}*	k3zøʁo	1	0
 NUM{quinze}, N{franc.g=M num=PL}*	k3zfʁ&	1	0
@@ -6533,7 +6533,7 @@ NUM{trois}, N{personne.g=F num=PL}*	tʁwapɛʁsɔn	1	0
 NUM{trois}, N{quart.g=M num=PL}*	tʁwakaʁ	1	0
 NUM{trois}, N{s.g=M num=PL}*	tʁwaɛs	1	0
 NUM{trois}, N{s.g=M num=PL}*	tʁwaɛs	1	0
-NUM{trois}, N{semaine.g=F num=PL}*	tʁwasəmɛn	1	0
+NUM{trois}, N{semaine.g=F num=PL}*	tʁwasœmɛn	1	0
 NUM{trois}, N{truc.g=M num=PL}*	tʁwatʁyk	1	0
 NUM{trois}, N{étage.g=M num=PL}*	tʁwaetaʒ	1	0
 NUM{trois}, N{étage.g=M num=PL}*	tʁwaetaʒ	1	0
@@ -6572,8 +6572,8 @@ NUM{vingt}, N{minute.g=F num=PL}*	v3minyt	1	0
 N{sel.g=M num=SG}*	sɛl	1	0
 N{appart.g=M num=SG}*	apaʁt	1	0
 ADJ{vrai}	vʁɛ	1	0
-N{boucherie.g=F num=PL}*	buʃəʁi	1	0
-N{boucherie.g=F num=SG}*	buʃəʁi	1	0
+N{boucherie.g=F num=PL}*	buʃœʁi	1	0
+N{boucherie.g=F num=SG}*	buʃœʁi	1	0
 N{relation.g=F num=PL}*	ʁølasjQ	1	0
 N{cinquantaine.g=F num=SG}*	s3k&tɛn	1	0
 N{c.g=M num=PL}*	se	1	0
@@ -6592,12 +6592,12 @@ N{lien.g=M num=SG}*	lj3	1	0
 N{action.g=F num=PL}*	aksjQ	1	0
 N{beauté.g=F num=SG}*	bote	1	0
 N{volant.g=M num=SG}*	vol&	1	0
-N{rapprochement.g=M num=SG}*	ʁapʁɔʃəm&	1	0
+N{rapprochement.g=M num=SG}*	ʁapʁɔʃœm&	1	0
 N{professionnel.g=M num=PL}*	pʁofɛsjonɛl	1	0
 N{action.g=F num=SG}*	aksjQ	1	0
 N{douzaine.g=F num=SG}*	duzɛn	1	0
 N{informaticien.g=M num=SG}*	3fɔʁmatisj3	1	0
-N{débordement.g=M num=PL}*	debɔʁdəm&	1	0
+N{débordement.g=M num=PL}*	debɔʁdœm&	1	0
 N{convivialité.g=F num=SG}*	kQvivjalite	1	0
 DET{PossS}	sa	1	0
 N{côte.g=F num=SG}*	kot	1	0
@@ -6607,9 +6607,9 @@ N{seul.g=M num=SG}*	sœl	1	0
 N{fond.g=M num=SG}*	fQ	1	0
 N{seul.g=M num=PL}*	sœl	1	0
 N{crise.g=F num=SG}*	kʁiz	1	0
-N{samedi.g=M num=SG}*	samədi	1	0
+N{samedi.g=M num=SG}*	samœdi	1	0
 N{soeur.g=F num=SG}*	sœʁ	1	0
-N{samedi.g=M num=PL}*	samədi	1	0
+N{samedi.g=M num=PL}*	samœdi	1	0
 N{ambiance.g=F num=PL}*	&bj&s	1	0
 N{gueule.g=F num=SG}*	gœl	1	0
 N{banquet.g=M num=PL}*	b&kɛ	1	0
@@ -6644,7 +6644,7 @@ N{lait.g=M num=SG}*	lɛ	1	0
 ADJ{vieux}	vjø	1	0
 N{temps.g=M num=SG}*	t&	1	0
 N{temps.g=M num=PL}*	t&	1	0
-N{dessus.g=M num=PL}*	dəsy	1	0
+N{dessus.g=M num=PL}*	dœsy	1	0
 ADJ{non}	nQ	1	0
 N{mars.g=M num=PL}*	maʁs	1	0
 N{commune.g=F num=SG}*	komyn	1	0
@@ -6662,7 +6662,7 @@ N{objectif.g=M num=SG}*	ɔbʒɛktif	1	0
 N{quartier.g=M num=PL}*	kaʁtje	1	0
 N{dictée.g=F num=PL}*	dikte	1	0
 N{certificat.g=M num=PL}*	sɛʁtifika	1	0
-N{traitement.g=M num=SG}*	tʁɛtəm&	1	0
+N{traitement.g=M num=SG}*	tʁɛtœm&	1	0
 N{clavier.g=M num=SG}*	klavje	1	0
 N{dictée.g=F num=SG}*	dikte	1	0
 N{étiquette.g=F num=SG}*	etikɛt	1	0
@@ -6738,10 +6738,10 @@ ADJ{capital}	kapital	1	0
 N{éducation.g=F num=SG}*	edykasjQ	1	0
 N{éponge.g=F num=SG}*	epQʒ	1	0
 N{bourré.g=F num=SG}*	buʁe	1	0
-N{orphelinat.g=M num=SG}*	ɔʁfəlina	1	0
+N{orphelinat.g=M num=SG}*	ɔʁfœlina	1	0
 N{tri.g=M num=SG}*	tʁi	1	0
 N{bout.g=M num=SG}*	bu	1	0
-N{orphelinat.g=M num=PL}*	ɔʁfəlina	1	0
+N{orphelinat.g=M num=PL}*	ɔʁfœlina	1	0
 N{toxique.g=M num=SG}*	tɔksik	1	0
 DET{ArtInd}	yn	1	0
 N{fait.g=M num=PL}*	fɛ	1	0
@@ -6755,13 +6755,13 @@ N{ami.g=F num=SG}*	ami	1	0
 N{écrit.g=M num=PL}*	ekʁi	1	0
 N{ami.g=F num=PL}*	ami	1	0
 N{voiture.g=F num=PL}*	vwatyʁ	1	0
-N{dedans.g=M num=PL}*	dəd&	1	0
+N{dedans.g=M num=PL}*	dœd&	1	0
 N{époux.g=F num=SG}*	epuz	1	0
-N{échelon.g=M num=SG}*	eʃəlQ	1	0
+N{échelon.g=M num=SG}*	eʃœlQ	1	0
 N{race.g=F num=PL}*	ʁas	1	0
 N{soixante.g=M num=PL}*	swas&t	1	0
 N{chaud.g=F num=PL}*	ʃod	1	0
-N{boulevard.g=M num=PL}*	buləvaʁ	1	0
+N{boulevard.g=M num=PL}*	bulœvaʁ	1	0
 N{roman.g=M num=PL}*	ʁom&	1	0
 N{roman.g=M num=SG}*	ʁom&	1	0
 N{attraction.g=F num=SG}*	atʁaksjQ	1	0
@@ -6796,7 +6796,7 @@ N{février.g=M num=PL}*	fevʁije	1	0
 N{an.g=M num=PL}*	&	1	0
 N{langage.g=M num=SG}*	l&gaʒ	1	0
 N{gamin.g=F num=PL}*	gamin	1	0
-N{entraînement.g=M num=SG}*	&tʁɛnəm&	1	0
+N{entraînement.g=M num=SG}*	&tʁɛnœm&	1	0
 N{aventure.g=F num=SG}*	av&tyʁ	1	0
 N{voisin.g=F num=SG}*	vwazin	1	0
 N{voisin.g=F num=PL}*	vwazin	1	0
@@ -6806,12 +6806,12 @@ NUM{dix-neuf}	diznœf	1	0
 ADJ{pendant}	p&d&	1	0
 ADJ{certain}	sɛʁt3	1	0
 N{activité.g=F num=PL}*	aktivite	1	0
-N{vacherie.g=F num=PL}*	vaʃəʁi	1	0
+N{vacherie.g=F num=PL}*	vaʃœʁi	1	0
 N{précepteur.g=M num=PL}*	pʁesɛptœʁ	1	0
 N{coeur.g=M num=SG}*	kœʁ	1	0
 N{activité.g=F num=SG}*	aktivite	1	0
 N{zoom.g=M num=SG}*	zum	1	0
-N{allemand.g=M num=SG}*	aləm&	1	0
+N{allemand.g=M num=SG}*	alœm&	1	0
 ADJ{certain}	sɛʁt3	1	0
 N{région.g=F num=PL}*	ʁeʒjQ	1	0
 N{région.g=F num=SG}*	ʁeʒjQ	1	0
@@ -6821,16 +6821,16 @@ N{harmonie.g=F num=SG}*	aʁmoni	1	0
 N{démonstration.g=F num=PL}*	demQstʁasjQ	1	0
 N{lave-vaisselle.g=M num=PL}*	lavvɛsɛl	1	0
 ADJ{arrivé}	aʁive	1	0
-N{dépassement.g=M num=SG}*	depasəm&	1	0
+N{dépassement.g=M num=SG}*	depasœm&	1	0
 N{zoom.g=M num=PL}*	zum	1	0
 N{maths.g=F num=PL}*	mat	1	0
 N{éclairage.g=M num=PL}*	eklɛʁaʒ	1	0
-N{dépassement.g=M num=PL}*	depasəm&	1	0
+N{dépassement.g=M num=PL}*	depasœm&	1	0
 N{intermittence.g=F num=PL}*	3tɛʁmit&s	1	0
 N{lapin.g=M num=PL}*	lap3	1	0
 N{lapin.g=M num=SG}*	lap3	1	0
 N{touche.g=F num=SG}*	tuʃ	1	0
-N{chevalier.g=M num=PL}*	ʃəvalje	1	0
+N{chevalier.g=M num=PL}*	ʃœvalje	1	0
 ADJ{jeune}	ʒœn	1	0
 N{cata.g=F num=SG}*	kata	1	0
 ADJ{faux}	fos	1	0
@@ -6841,7 +6841,7 @@ N{général.g=M num=SG}*	ʒeneʁal	1	0
 N{tigre.g=M num=PL}*	tigʁ	1	0
 N{information.g=F num=PL}*	3fɔʁmasjQ	1	0
 N{cerne.g=M num=PL}*	sɛʁn	1	0
-N{chemise.g=F num=PL}*	ʃəmiz	1	0
+N{chemise.g=F num=PL}*	ʃœmiz	1	0
 N{intégration.g=F num=SG}*	3tegʁasjQ	1	0
 N{association.g=F num=SG}*	asosjasjQ	1	0
 N{naturel.g=M num=SG}*	natyʁɛl	1	0
@@ -6856,21 +6856,21 @@ N{ami.g=M num=SG}*	ami	1	0
 N{couleur.g=F num=PL}*	kulœʁ	1	0
 ADJ{beau}	bɛl	1	0
 N{ami.g=M num=PL}*	ami	1	0
-N{menuiserie.g=F num=SG}*	mønɥizəʁi	1	0
+N{menuiserie.g=F num=SG}*	mønɥizœʁi	1	0
 N{janvier.g=M num=PL}*	ʒ&vje	1	0
 ADJ{beau}	bɛl	1	0
 N{calife.g=M num=SG}*	kalif	1	0
 N{dernier.g=F num=SG}*	dɛʁnjɛʁ	1	0
 N{dernier.g=F num=PL}*	dɛʁnjɛʁ	1	0
 N{réunion.g=F num=PL}*	ʁeynjQ	1	0
-N{revêtement.g=M num=SG}*	ʁəvɛtəm&	1	0
+N{revêtement.g=M num=SG}*	ʁœvɛtœm&	1	0
 N{genre.g=M num=SG}*	ʒ&ʁ	1	0
 N{genre.g=M num=PL}*	ʒ&ʁ	1	0
 N{comédie.g=F num=PL}*	komedi	1	0
-N{appartement.g=M num=SG}*	apaʁtəm&	1	0
+N{appartement.g=M num=SG}*	apaʁtœm&	1	0
 N{avion.g=M num=SG}*	avjQ	1	0
 N{mauvais.g=M num=PL}*	movɛ	1	0
-N{appartement.g=M num=PL}*	apaʁtəm&	1	0
+N{appartement.g=M num=PL}*	apaʁtœm&	1	0
 N{campagne.g=F num=SG}*	k&paɲ	1	0
 N{rue.g=F num=SG}*	ʁy	1	0
 DET{PossS}	sQ	1	0
@@ -6889,7 +6889,7 @@ N{difficulté.g=F num=PL}*	difikylte	1	0
 N{jeudi.g=M num=SG}*	ʒødi	1	0
 N{liaison.g=F num=SG}*	ljɛzQ	1	0
 N{médecine.g=F num=SG}*	mɛdsin	1	0
-N{monsieur.g=M num=SG}*	məsjø	1	0
+N{monsieur.g=M num=SG}*	mœsjø	1	0
 N{numéro.g=M num=SG}*	nymeʁo	1	0
 N{charge.g=F num=SG}*	ʃaʁʒ	1	0
 N{chapeau.g=M num=SG}*	ʃapo	1	0
@@ -6898,7 +6898,7 @@ N{rien.g=M num=SG}*	ʁj3	1	0
 N{millier.g=M num=PL}*	milje	1	0
 N{parisien.g=M num=PL}*	paʁizj3	1	0
 N{état.g=M num=SG}*	eta	1	0
-ADJ{dénivelé}	denivəle	1	0
+ADJ{dénivelé}	denivœle	1	0
 ADJ{parent}	paʁ&	1	0
 N{sable.g=M num=SG}*	sabl	1	0
 N{solfège.g=M num=SG}*	solfɛʒ	1	0
@@ -6940,7 +6940,7 @@ N{attache.g=F num=PL}*	ataʃ	1	0
 N{sommet.g=M num=SG}*	somɛ	1	0
 N{boutique.g=F num=SG}*	butik	1	0
 N{édition.g=F num=SG}*	edisjQ	1	0
-N{venue.g=F num=SG}*	vəny	1	0
+N{venue.g=F num=SG}*	vœny	1	0
 ADJ{premier}	pʁømjɛʁ	1	0
 N{son.g=M num=SG}*	sQ	1	0
 ADJ{caractéristique}	kaʁakteʁistik	1	0
@@ -6950,7 +6950,7 @@ N{antenne.g=F num=SG}*	&tɛn	1	0
 ADJ{nouvel}	nuvɛl	1	0
 N{assurance.g=F num=SG}*	asyʁ&s	1	0
 N{hiver.g=M num=SG}*	ivɛʁ	1	0
-N{porcelaine.g=F num=SG}*	pɔʁsəlɛn	1	0
+N{porcelaine.g=F num=SG}*	pɔʁsœlɛn	1	0
 N{ticket.g=M num=SG}*	tikɛ	1	0
 N{grand-père.g=M num=SG}*	gʁ&pɛʁ	1	0
 N{occupant.g=M num=PL}*	okyp&	1	0
@@ -6986,18 +6986,18 @@ N{caisse.g=F num=SG}*	kɛs	1	0
 N{plume.g=F num=SG}*	plym	1	0
 N{canton.g=M num=SG}*	k&tQ	1	0
 N{lavabo.g=M num=SG}*	lavabo	1	0
-N{cheval.g=M num=SG}*	ʃəval	1	0
+N{cheval.g=M num=SG}*	ʃœval	1	0
 ADJ{ultra}	yltʁa	1	0
 N{jalousie.g=F num=PL}*	ʒaluzi	1	0
-N{revue.g=F num=SG}*	ʁəvy	1	0
+N{revue.g=F num=SG}*	ʁœvy	1	0
 N{travail.g=M num=PL}*	tʁavo	1	0
 ADJ{gros}	gʁos	1	0
 N{barrage.g=M num=PL}*	baʁaʒ	1	0
-N{demi.g=M num=PL}*	dəmi	1	0
+N{demi.g=M num=PL}*	dœmi	1	0
 N{mètre.g=M num=SG}*	mɛtʁ	1	0
 N{ses.g=F num=SG}*	se	1	0
 N{barrage.g=M num=SG}*	baʁaʒ	1	0
-N{demi.g=M num=SG}*	dəmi	1	0
+N{demi.g=M num=SG}*	dœmi	1	0
 N{plongée.g=F num=SG}*	plQʒe	1	0
 N{boule.g=F num=SG}*	bul	1	0
 DET{Dem}	sɛt	1	0
@@ -7007,7 +7007,7 @@ ADJ{pris}	pʁi	1	0
 N{mètre.g=M num=PL}*	mɛtʁ	1	0
 ADJ{gros}	gʁos	1	0
 N{beau-père.g=M num=SG}*	bopɛʁ	1	0
-N{environnement.g=M num=SG}*	&viʁɔnəm&	1	0
+N{environnement.g=M num=SG}*	&viʁɔnœm&	1	0
 N{occitan.g=M num=SG}*	ɔksit&	1	0
 N{issue.g=F num=SG}*	isy	1	0
 N{onze.g=M num=PL}*	Qz	1	0
@@ -7031,10 +7031,10 @@ N{fil.g=M num=SG}*	fil	1	0
 N{tradition.g=F num=SG}*	tʁadisjQ	1	0
 N{image.g=F num=SG}*	imaʒ	1	0
 N{tradition.g=F num=PL}*	tʁadisjQ	1	0
-N{demande.g=F num=SG}*	dəm&d	1	0
+N{demande.g=F num=SG}*	dœm&d	1	0
 N{pareil.g=M num=SG}*	paʁɛj	1	0
 N{topo.g=M num=SG}*	topo	1	0
-N{demande.g=F num=PL}*	dəm&d	1	0
+N{demande.g=F num=PL}*	dœm&d	1	0
 N{point.g=M num=SG}*	pw3	1	0
 N{équipe.g=F num=PL}*	ekip	1	0
 N{équipe.g=F num=SG}*	ekip	1	0
@@ -7042,7 +7042,7 @@ N{point.g=M num=PL}*	pw3	1	0
 N{métier.g=M num=SG}*	metje	1	0
 N{jour.g=M num=SG}*	ʒuʁ	1	0
 N{coordonnée.g=F num=PL}*	koɔʁdone	1	0
-N{seconde.g=F num=SG}*	səgQd	1	0
+N{seconde.g=F num=SG}*	sœgQd	1	0
 N{trou.g=M num=SG}*	tʁu	1	0
 N{jeunesse.g=F num=SG}*	ʒœnɛs	1	0
 N{trou.g=M num=PL}*	tʁu	1	0
@@ -7072,7 +7072,7 @@ N{meilleur.g=M num=SG}*	mɛjœʁ	1	0
 N{danse.g=F num=PL}*	d&s	1	0
 N{côté.g=M num=SG}*	kote	1	0
 N{danse.g=F num=SG}*	d&s	1	0
-N{quatre-vingt.g=M num=PL}*	katʁəv3	1	0
+N{quatre-vingt.g=M num=PL}*	katʁœv3	1	0
 N{gémeau.g=M num=PL}*	ʒemo	1	0
 N{échange.g=M num=PL}*	eʃ&ʒ	1	0
 DET{ArtInd}	de	1	0
@@ -7081,9 +7081,9 @@ N{problème.g=M num=SG}*	pʁoblɛm	1	0
 N{sud.g=M num=SG}*	syd	1	0
 N{installation.g=F num=SG}*	3stalasjQ	1	0
 N{lave.g=F num=SG}*	lav	1	0
-N{petit-enfant.g=M num=PL}*	pəti&f&	1	0
-ADJ{petit}	pətit	1	0
-ADJ{petit}	pətit	1	0
+N{petit-enfant.g=M num=PL}*	pœti&f&	1	0
+ADJ{petit}	pœtit	1	0
+ADJ{petit}	pœtit	1	0
 N{évolution.g=F num=SG}*	evolysjQ	1	0
 N{privé.g=M num=SG}*	pʁive	1	0
 N{poupée.g=F num=SG}*	pupe	1	0
@@ -7097,7 +7097,7 @@ N{fiche.g=F num=SG}*	fiʃ	1	0
 N{orthographe.g=F num=SG}*	ɔʁtogʁaf	1	0
 N{nourrice.g=F num=PL}*	nuʁis	1	0
 N{baffe.g=F num=SG}*	baf	1	0
-N{revers.g=M num=PL}*	ʁəvɛʁ	1	0
+N{revers.g=M num=PL}*	ʁœvɛʁ	1	0
 ADJ{nouveau}	nuvo	1	0
 N{distribution.g=F num=SG}*	distʁibysjQ	1	0
 ADJ{nouveau}	nuvo	1	0
@@ -7115,7 +7115,7 @@ N{oeuf.g=M num=SG}*	œf	1	0
 N{code.g=M num=SG}*	kɔd	1	0
 N{franc.g=M num=SG}*	fʁ&	1	0
 N{chorale.g=F num=SG}*	koʁal	1	0
-N{propreté.g=F num=SG}*	pʁɔpʁəte	1	0
+N{propreté.g=F num=SG}*	pʁɔpʁœte	1	0
 N{moins.g=M num=PL}*	mw3	1	0
 N{réforme.g=F num=PL}*	ʁefɔʁm	1	0
 N{champignon.g=M num=PL}*	ʃ&piɲQ	1	0
@@ -7130,12 +7130,12 @@ N{cadeau.g=M num=PL}*	kado	1	0
 N{stock.g=M num=SG}*	stɔk	1	0
 N{plaisir.g=M num=SG}*	pleziʁ	1	0
 N{cadeau.g=M num=SG}*	kado	1	0
-N{registre.g=M num=PL}*	ʁəʒistʁ	1	0
+N{registre.g=M num=PL}*	ʁœʒistʁ	1	0
 N{titi.g=M num=SG}*	titi	1	0
 N{coïncidence.g=F num=SG}*	ko3sid&s	1	0
 N{dizaine.g=F num=PL}*	dizɛn	1	0
 N{exposé.g=M num=SG}*	ɛkspoze	1	0
-N{registre.g=M num=SG}*	ʁəʒistʁ	1	0
+N{registre.g=M num=SG}*	ʁœʒistʁ	1	0
 N{dizaine.g=F num=SG}*	dizɛn	1	0
 N{écoute.g=F num=SG}*	ekut	1	0
 N{prospection.g=F num=SG}*	pʁɔspɛksjQ	1	0
@@ -7143,17 +7143,17 @@ N{briquette.g=F num=SG}*	bʁikɛt	1	0
 N{briquette.g=F num=PL}*	bʁikɛt	1	0
 N{canicule.g=F num=SG}*	kanikyl	1	0
 N{consultation.g=F num=SG}*	kQsyltasjQ	1	0
-N{distillerie.g=F num=SG}*	distiləʁi	1	0
+N{distillerie.g=F num=SG}*	distilœʁi	1	0
 N{complément.g=M num=SG}*	kQplem&	1	0
 N{addition.g=F num=SG}*	adisjQ	1	0
 N{salon.g=M num=PL}*	salQ	1	0
-N{semelle.g=F num=SG}*	səmɛl	1	0
+N{semelle.g=F num=SG}*	sœmɛl	1	0
 N{air.g=M num=SG}*	ɛʁ	1	0
 N{trafic.g=M num=SG}*	tʁafik	1	0
 N{failli.g=M num=SG}*	faji	1	0
-DET{ArtDef}	lə	1	0
+DET{ArtDef}	lœ	1	0
 NUM{vingt}	v3	1	0
-N{dangerosité.g=F num=SG}*	d&ʒəʁozite	1	0
+N{dangerosité.g=F num=SG}*	d&ʒœʁozite	1	0
 N{hasard.g=M num=SG}*	azaʁ	1	0
 N{note.g=F num=PL}*	nɔt	1	0
 N{kermesse.g=F num=SG}*	kɛʁmɛs	1	0
@@ -7161,19 +7161,19 @@ N{âge.g=M num=PL}*	aʒ	1	0
 N{immeuble.g=M num=PL}*	imœbl	1	0
 N{cuillère.g=F num=SG}*	kɥijɛʁ	1	0
 N{cuillère.g=F num=PL}*	kɥijɛʁ	1	0
-N{retraite.g=F num=SG}*	ʁətʁɛt	1	0
+N{retraite.g=F num=SG}*	ʁœtʁɛt	1	0
 N{grossesse.g=F num=PL}*	gʁosɛs	1	0
 N{immeuble.g=M num=SG}*	imœbl	1	0
 ADJ{neuf}	nœf	1	0
 NUM{douze}	duz	1	0
 N{chausson.g=M num=SG}*	ʃosQ	1	0
-N{rassemblement.g=M num=PL}*	ʁas&bləm&	1	0
+N{rassemblement.g=M num=PL}*	ʁas&blœm&	1	0
 N{conscience.g=F num=SG}*	kQsj&s	1	0
 N{souche.g=F num=SG}*	suʃ	1	0
 NUM{dix-huit}	dizɥit	1	0
 NUM{quinze}	k3z	1	0
 N{papa.g=M num=SG}*	papa	1	0
-N{tenue.g=F num=PL}*	təny	1	0
+N{tenue.g=F num=PL}*	tœny	1	0
 NUM{deux}	dø	1	0
 N{aquavit.g=M num=SG}*	akwavit	1	0
 N{étudiant.g=M num=PL}*	etydj&	1	0
@@ -7210,9 +7210,9 @@ N{car.g=M num=SG}*	kaʁ	1	0
 N{bébé.g=M num=PL}*	bebe	1	0
 N{opportunité.g=F num=SG}*	opɔʁtynite	1	0
 N{chèvre.g=F num=SG}*	ʃɛvʁ	1	0
-N{pipeline.g=M num=SG}*	pajpəlajn	1	0
+N{pipeline.g=M num=SG}*	pajpœlajn	1	0
 N{proportion.g=F num=SG}*	pʁopɔʁsjQ	1	0
-N{pipeline.g=M num=PL}*	pajpəlajn	1	0
+N{pipeline.g=M num=PL}*	pajpœlajn	1	0
 N{bébé.g=M num=SG}*	bebe	1	0
 N{meuf.g=F num=SG}*	mœf	1	0
 N{musulman.g=M num=PL}*	myzylm&	1	0
@@ -7224,7 +7224,7 @@ DET{Dem}	se	1	0
 N{ampoule.g=F num=PL}*	&pul	1	0
 N{ventre.g=M num=SG}*	v&tʁ	1	0
 N{taille.g=F num=SG}*	taj	1	0
-N{tapisserie.g=F num=PL}*	tapisəʁi	1	0
+N{tapisserie.g=F num=PL}*	tapisœʁi	1	0
 N{ciel.g=M num=SG}*	sjɛl	1	0
 N{sourire.g=M num=SG}*	suʁiʁ	1	0
 N{musée.g=M num=PL}*	myze	1	0
@@ -7234,7 +7234,7 @@ N{douche.g=F num=SG}*	duʃ	1	0
 N{meilleur.g=F num=SG}*	mɛjœʁ	1	0
 N{douche.g=F num=PL}*	duʃ	1	0
 N{instrument.g=M num=PL}*	3stʁym&	1	0
-N{avenir.g=M num=SG}*	avəniʁ	1	0
+N{avenir.g=M num=SG}*	avœniʁ	1	0
 N{vaisselle.g=F num=SG}*	vɛsɛl	1	0
 N{âge.g=M num=SG}*	aʒ	1	0
 N{chien.g=M num=PL}*	ʃj3	1	0
@@ -7246,7 +7246,7 @@ N{décalage.g=M num=SG}*	dekalaʒ	1	0
 N{chien.g=M num=SG}*	ʃj3	1	0
 N{doctorat.g=M num=PL}*	dɔktoʁa	1	0
 N{voyage.g=M num=PL}*	vwajaʒ	1	0
-N{neveux.g=M num=PL}*	nəvø	1	0
+N{neveux.g=M num=PL}*	nœvø	1	0
 N{bar.g=M num=SG}*	baʁ	1	0
 N{voyage.g=M num=SG}*	vwajaʒ	1	0
 DET{PossT}	ta	1	0
@@ -7256,7 +7256,7 @@ N{science.g=F num=SG}*	sj&s	1	0
 N{bestiole.g=F num=PL}*	bɛstjɔl	1	0
 N{légume.g=M num=PL}*	legym	1	0
 N{chat.g=M num=SG}*	ʃa	1	0
-N{feuilleton.g=M num=SG}*	fœjətQ	1	0
+N{feuilleton.g=M num=SG}*	fœjœtQ	1	0
 N{heure.g=F num=SG}*	œʁ	1	0
 N{eau.g=F num=SG}*	o	1	0
 N{cote.g=F num=SG}*	kɔt	1	0
@@ -7265,7 +7265,7 @@ N{heure.g=F num=PL}*	œʁ	1	0
 N{gibier.g=M num=SG}*	ʒibje	1	0
 N{musique.g=F num=PL}*	myzik	1	0
 N{conséquence.g=F num=PL}*	kQsek&s	1	0
-N{arrondissement.g=M num=SG}*	aʁQdisəm&	1	0
+N{arrondissement.g=M num=SG}*	aʁQdisœm&	1	0
 N{musique.g=F num=SG}*	myzik	1	0
 N{expo.g=F num=SG}*	ɛkspo	1	0
 N{réussite.g=F num=SG}*	ʁeysit	1	0
@@ -7300,7 +7300,7 @@ N{aura.g=F num=SG}*	oʁa	1	0
 N{baguette.g=F num=SG}*	bagɛt	1	0
 N{hiérarchie.g=F num=SG}*	jeʁaʁʃi	1	0
 N{possibilité.g=F num=SG}*	posibilite	1	0
-N{vannerie.g=F num=SG}*	vanəʁi	1	0
+N{vannerie.g=F num=SG}*	vanœʁi	1	0
 N{matière.g=F num=PL}*	matjɛʁ	1	0
 N{bain.g=M num=SG}*	b3	1	0
 N{histoire.g=F num=PL}*	istwaʁ	1	0
@@ -7322,14 +7322,14 @@ N{idée.g=F num=SG}*	ide	1	0
 ADJ{superbe}	sypɛʁb	1	0
 N{idée.g=F num=PL}*	ide	1	0
 N{économie.g=F num=SG}*	ekonomi	1	0
-N{lendemain.g=M num=SG}*	l&dəm3	1	0
+N{lendemain.g=M num=SG}*	l&dœm3	1	0
 ADJ{superbe}	sypɛʁb	1	0
 N{économie.g=F num=PL}*	ekonomi	1	0
 N{dessin.g=M num=PL}*	des3	1	0
 N{catalogue.g=M num=SG}*	katalɔg	1	0
 N{dessin.g=M num=SG}*	des3	1	0
 N{myopie.g=F num=SG}*	mjopi	1	0
-N{repas.g=M num=PL}*	ʁəpa	1	0
+N{repas.g=M num=PL}*	ʁœpa	1	0
 N{génération.g=F num=SG}*	ʒeneʁasjQ	1	0
 N{scolarisation.g=F num=SG}*	skolaʁizasjQ	1	0
 N{été.g=M num=PL}*	ete	1	0
@@ -7363,8 +7363,8 @@ NUM{trente-cinq}	tʁ&ts3k	1	0
 N{loi.g=F num=PL}*	lwa	1	0
 N{envie.g=F num=SG}*	&vi	1	0
 N{préfecture.g=F num=SG}*	pʁefɛktyʁ	1	0
-N{mouvement.g=M num=PL}*	muvəm&	1	0
-N{recherche.g=F num=SG}*	ʁəʃɛʁʃ	1	0
+N{mouvement.g=M num=PL}*	muvœm&	1	0
+N{recherche.g=F num=SG}*	ʁœʃɛʁʃ	1	0
 N{malade.g=F num=PL}*	malad	1	0
 N{langue.g=F num=PL}*	l&g	1	0
 N{loi.g=F num=SG}*	lwa	1	0
@@ -7381,9 +7381,9 @@ N{humanitaire.g=M num=SG}*	ymanitɛʁ	1	0
 N{article.g=M num=PL}*	aʁtikl	1	0
 N{turc.g=M num=SG}*	tyʁk	1	0
 ADJ{mauvais}	movɛz	1	0
-N{charcuterie.g=F num=SG}*	ʃaʁkytəʁi	1	0
+N{charcuterie.g=F num=SG}*	ʃaʁkytœʁi	1	0
 N{volume.g=M num=SG}*	volym	1	0
-N{gelée.g=F num=SG}*	ʒəle	1	0
+N{gelée.g=F num=SG}*	ʒœle	1	0
 N{astuce.g=F num=PL}*	astys	1	0
 ADJ{mauvais}	movɛz	1	0
 N{famille.g=F num=SG}*	famij	1	0
@@ -7392,8 +7392,8 @@ N{famille.g=F num=PL}*	famij	1	0
 N{cérémonie.g=F num=SG}*	seʁemoni	1	0
 N{liquette.g=F num=SG}*	likɛt	1	0
 ADJ{meilleur}	mɛjœʁ	1	0
-N{retour.g=M num=SG}*	ʁətuʁ	1	0
-N{retour.g=M num=PL}*	ʁətuʁ	1	0
+N{retour.g=M num=SG}*	ʁœtuʁ	1	0
+N{retour.g=M num=PL}*	ʁœtuʁ	1	0
 N{extrême.g=M num=PL}*	ɛkstʁɛm	1	0
 ADJ{certaine}	sɛʁtɛn	1	0
 N{nord.g=M num=PL}*	nɔʁ	1	0
@@ -7411,7 +7411,7 @@ N{type.g=M num=PL}*	tip	1	0
 N{médiateur.g=M num=SG}*	medjatœʁ	1	0
 N{implication.g=F num=PL}*	3plikasjQ	1	0
 N{solo.g=M num=PL}*	solo	1	0
-N{menu.g=M num=PL}*	məny	1	0
+N{menu.g=M num=PL}*	mœny	1	0
 N{coupure.g=F num=SG}*	kupyʁ	1	0
 N{colle.g=F num=PL}*	kɔl	1	0
 N{circuit.g=M num=PL}*	siʁkɥi	1	0
@@ -7454,18 +7454,18 @@ N{avantage.g=M num=SG}*	av&taʒ	1	0
 NUM{cents}	s&	1	0
 N{paire.g=F num=SG}*	pɛʁ	1	0
 N{gamin.g=M num=SG}*	gam3	1	0
-N{refuge.g=M num=SG}*	ʁəfyʒ	1	0
+N{refuge.g=M num=SG}*	ʁœfyʒ	1	0
 N{entrée.g=F num=SG}*	&tʁe	1	0
 N{procédure.g=F num=SG}*	pʁosedyʁ	1	0
 N{double.g=M num=SG}*	dubl	1	0
-N{département.g=M num=PL}*	depaʁtəm&	1	0
+N{département.g=M num=PL}*	depaʁtœm&	1	0
 N{gamin.g=M num=PL}*	gam3	1	0
 ADJ{français}	fʁ&sɛz	1	0
-N{refuge.g=M num=PL}*	ʁəfyʒ	1	0
+N{refuge.g=M num=PL}*	ʁœfyʒ	1	0
 N{animal.g=M num=PL}*	animo	1	0
-N{détachement.g=M num=SG}*	detaʃəm&	1	0
+N{détachement.g=M num=SG}*	detaʃœm&	1	0
 N{derrière.g=M num=SG}*	dɛʁjɛʁ	1	0
-N{mercredi.g=M num=SG}*	mɛʁkʁədi	1	0
+N{mercredi.g=M num=SG}*	mɛʁkʁœdi	1	0
 N{plain.g=F num=PL}*	plɛn	1	0
 NUM{quarante}	kaʁ&t	1	0
 N{course.g=F num=PL}*	kuʁs	1	0
@@ -7536,11 +7536,11 @@ ADJ{haut}	o	1	0
 N{cornichon.g=M num=PL}*	kɔʁniʃQ	1	0
 N{compromis.g=M num=PL}*	kQpʁomi	1	0
 N{thèse.g=F num=PL}*	tɛz	1	0
-ADJ{venu}	vəny	1	0
+ADJ{venu}	vœny	1	0
 N{thèse.g=F num=SG}*	tɛz	1	0
 N{mot.g=M num=PL}*	mo	1	0
-N{souvenir.g=M num=SG}*	suvəniʁ	1	0
-N{souvenir.g=M num=PL}*	suvəniʁ	1	0
+N{souvenir.g=M num=SG}*	suvœniʁ	1	0
+N{souvenir.g=M num=PL}*	suvœniʁ	1	0
 DET{ArtDef}	la	1	0
 N{tabou.g=M num=SG}*	tabu	1	0
 N{accueil.g=M num=SG}*	akœj	1	0
@@ -7574,7 +7574,7 @@ N{carrière.g=F num=PL}*	kaʁjɛʁ	1	0
 N{caractère.g=M num=SG}*	kaʁaktɛʁ	1	0
 N{quart.g=M num=PL}*	kaʁ	1	0
 N{caractère.g=M num=PL}*	kaʁaktɛʁ	1	0
-N{report.g=M num=SG}*	ʁəpɔʁ	1	0
+N{report.g=M num=SG}*	ʁœpɔʁ	1	0
 N{chronologie.g=F num=SG}*	kʁonoloʒi	1	0
 N{humidité.g=F num=SG}*	ymidite	1	0
 N{tarif.g=M num=PL}*	taʁif	1	0
@@ -7603,7 +7603,7 @@ N{vacance.g=F num=PL}*	vak&s	1	0
 N{quotidien.g=M num=SG}*	kotidj3	1	0
 N{extérieur.g=M num=SG}*	ɛksteʁjœʁ	1	0
 N{vieux.g=F num=SG}*	vjɛj	1	0
-N{boulangerie.g=F num=SG}*	bul&ʒəʁi	1	0
+N{boulangerie.g=F num=SG}*	bul&ʒœʁi	1	0
 N{vue.g=F num=SG}*	vy	1	0
 N{impression.g=F num=SG}*	3pʁesjQ	1	0
 N{content.g=M num=SG}*	kQt&	1	0
@@ -7638,7 +7638,7 @@ N{jeûne.g=M num=SG}*	ʒøn	1	0
 N{croupion.g=M num=SG}*	kʁupjQ	1	0
 N{professorat.g=M num=SG}*	pʁofɛsoʁa	1	0
 N{dialecte.g=M num=SG}*	djalɛkt	1	0
-ADJ{venu}	vəny	1	0
+ADJ{venu}	vœny	1	0
 DET{PossM}	ma	1	0
 N{chêne.g=M num=PL}*	ʃɛn	1	0
 N{mouchoir.g=M num=SG}*	muʃwaʁ	1	0
@@ -7656,7 +7656,7 @@ N{chambre.g=F num=SG}*	ʃ&bʁ	1	0
 N{arbre.g=M num=PL}*	aʁbʁ	1	0
 N{chambre.g=F num=PL}*	ʃ&bʁ	1	0
 N{table.g=F num=SG}*	tabl	1	0
-N{isolement.g=M num=SG}*	izɔləm&	1	0
+N{isolement.g=M num=SG}*	izɔlœm&	1	0
 N{village.g=M num=SG}*	vilaʒ	1	0
 N{village.g=M num=PL}*	vilaʒ	1	0
 N{panne.g=F num=PL}*	pan	1	0
@@ -7690,7 +7690,7 @@ N{abeille.g=F num=PL}*	abɛj	1	0
 N{train.g=M num=SG}*	tʁ3	1	0
 N{rythme.g=M num=SG}*	ʁitm	1	0
 N{poisson.g=M num=SG}*	pwasQ	1	0
-N{devoir.g=M num=PL}*	dəvwaʁ	1	0
+N{devoir.g=M num=PL}*	dœvwaʁ	1	0
 N{positif.g=M num=SG}*	pozitif	1	0
 N{service.g=M num=SG}*	sɛʁvis	1	0
 N{goût.g=M num=SG}*	gu	1	0
@@ -7702,14 +7702,14 @@ N{soir.g=M num=PL}*	swaʁ	1	0
 N{densité.g=F num=SG}*	d&site	1	0
 N{jazz.g=M num=PL}*	dʒaz	1	0
 N{théorème.g=M num=PL}*	teoʁɛm	1	0
-N{déplacement.g=M num=SG}*	deplasəm&	1	0
+N{déplacement.g=M num=SG}*	deplasœm&	1	0
 N{plaine.g=F num=SG}*	plɛn	1	0
 N{grand-mère.g=F num=SG}*	gʁ&mɛʁ	1	0
 N{mondanité.g=F num=PL}*	mQdanite	1	0
 N{grand-mère.g=F num=PL}*	gʁ&mɛʁ	1	0
 N{examen.g=M num=SG}*	ɛgzam3	1	0
 N{conservatoire.g=M num=PL}*	kQsɛʁvatwaʁ	1	0
-N{règlement.g=M num=SG}*	ʁɛgləm&	1	0
+N{règlement.g=M num=SG}*	ʁɛglœm&	1	0
 ADJ{pur}	pyʁ	1	0
 N{tête.g=F num=SG}*	tɛt	1	0
 N{explosion.g=F num=SG}*	ɛksplozjQ	1	0
@@ -7717,7 +7717,7 @@ N{zéro.g=M num=SG}*	zeʁo	1	0
 N{mari.g=M num=SG}*	maʁi	1	0
 N{tête.g=F num=PL}*	tɛt	1	0
 N{caméra.g=F num=SG}*	kameʁa	1	0
-N{bulletin.g=M num=PL}*	bylət3	1	0
+N{bulletin.g=M num=PL}*	bylœt3	1	0
 N{pays.g=M num=PL}*	pei	1	0
 N{hypocrisie.g=F num=SG}*	ipokʁizi	1	0
 N{honneur.g=M num=SG}*	onœʁ	1	0
@@ -7735,7 +7735,7 @@ N{particularité.g=F num=SG}*	paʁtikylaʁite	1	0
 N{droit.g=M num=PL}*	dʁwa	1	0
 N{passion.g=F num=SG}*	pasjQ	1	0
 ADJ{appliqué}	aplike	1	0
-N{repartie.g=F num=SG}*	ʁəpaʁti	1	0
+N{repartie.g=F num=SG}*	ʁœpaʁti	1	0
 N{pizza.g=F num=SG}*	pidza	1	0
 N{expérience.g=F num=SG}*	ɛkspeʁj&s	1	0
 N{facteur.g=M num=SG}*	faktœʁ	1	0
@@ -7744,25 +7744,25 @@ N{logique.g=F num=SG}*	loʒik	1	0
 N{cuisse.g=F num=PL}*	kɥis	1	0
 ADJ{premier}	pʁømje	1	0
 NUM{cent}	s&	1	0
-N{entretien.g=M num=SG}*	&tʁətj3	1	0
+N{entretien.g=M num=SG}*	&tʁœtj3	1	0
 N{lever.g=M num=SG}*	ləve	1	0
 N{prise.g=F num=SG}*	pʁiz	1	0
 N{syntaxe.g=F num=SG}*	s3taks	1	0
-N{représentation.g=F num=SG}*	ʁəpʁez&tasjQ	1	0
+N{représentation.g=F num=SG}*	ʁœpʁez&tasjQ	1	0
 N{grec.g=M num=SG}*	gʁɛk	1	0
 N{détail.g=M num=PL}*	detaj	1	0
 N{timbre.g=M num=SG}*	t3bʁ	1	0
-N{remarque.g=F num=PL}*	ʁəmaʁk	1	0
+N{remarque.g=F num=PL}*	ʁœmaʁk	1	0
 N{arrivée.g=F num=SG}*	aʁive	1	0
 N{détail.g=M num=SG}*	detaj	1	0
 N{français.g=M num=SG}*	fʁ&sɛ	1	0
-N{ravitaillement.g=M num=SG}*	ʁavitajəm&	1	0
+N{ravitaillement.g=M num=SG}*	ʁavitajœm&	1	0
 N{ie.g=M num=PL}*	i	1	0
-N{semaine.g=F num=PL}*	səmɛn	1	0
+N{semaine.g=F num=PL}*	sœmɛn	1	0
 N{armure.g=F num=SG}*	aʁmyʁ	1	0
 N{papier.g=M num=SG}*	papje	1	0
 N{papier.g=M num=PL}*	papje	1	0
-N{semaine.g=F num=SG}*	səmɛn	1	0
+N{semaine.g=F num=SG}*	sœmɛn	1	0
 N{pote.g=M num=PL}*	pɔt	1	0
 N{laboratoire.g=M num=SG}*	laboʁatwaʁ	1	0
 N{bouteur.g=M num=SG}*	butœʁ	1	0
@@ -7802,13 +7802,13 @@ N{sermon.g=M num=PL}*	sɛʁmQ	1	0
 N{piolet.g=M num=SG}*	pjolɛ	1	0
 N{occupation.g=F num=PL}*	okypasjQ	1	0
 N{maladie.g=F num=SG}*	maladi	1	0
-N{gouvernement.g=M num=SG}*	guvɛʁnəm&	1	0
+N{gouvernement.g=M num=SG}*	guvɛʁnœm&	1	0
 N{occupation.g=F num=SG}*	okypasjQ	1	0
 N{mère.g=F num=SG}*	mɛʁ	1	0
 N{béotien.g=M num=PL}*	beosj3	1	0
 N{mère.g=F num=PL}*	mɛʁ	1	0
 N{virée.g=F num=SG}*	viʁe	1	0
-N{atelier.g=M num=SG}*	atəlje	1	0
+N{atelier.g=M num=SG}*	atœlje	1	0
 N{lampe.g=F num=SG}*	l&p	1	0
 N{mets.g=M num=PL}*	mɛ	1	0
 ADJ{responsable}	ʁɛspQsabl	1	0
@@ -7827,7 +7827,7 @@ N{montagne.g=F num=PL}*	mQtaɲ	1	0
 N{montagne.g=F num=SG}*	mQtaɲ	1	0
 N{thé.g=M num=SG}*	te	1	0
 N{brevet.g=M num=SG}*	bʁøvɛ	1	0
-N{vêtement.g=M num=PL}*	vɛtəm&	1	0
+N{vêtement.g=M num=PL}*	vɛtœm&	1	0
 N{voisin.g=M num=PL}*	vwaz3	1	0
 N{spécialité.g=F num=SG}*	spesjalite	1	0
 N{impôt.g=M num=PL}*	3po	1	0
@@ -7873,7 +7873,7 @@ N{récupération.g=F num=SG}*	ʁekypeʁasjQ	1	0
 N{règle.g=F num=PL}*	ʁɛgl	1	0
 NUM{quatre}	katʁ	1	0
 N{pain.g=M num=SG}*	p3	1	0
-N{chemin.g=M num=SG}*	ʃəm3	1	0
+N{chemin.g=M num=SG}*	ʃœm3	1	0
 N{perte.g=F num=SG}*	pɛʁt	1	0
 ADJ{dernier}	dɛʁnje	1	0
 N{femme.g=F num=PL}*	fam	1	0
@@ -7895,12 +7895,12 @@ ADJ{dernier}	dɛʁnje	1	0
 DET{PossM}	me	1	0
 N{journée.g=F num=SG}*	ʒuʁne	1	0
 N{peuple.g=M num=PL}*	pøpl	1	0
-N{reportage.g=M num=SG}*	ʁəpɔʁtaʒ	1	0
+N{reportage.g=M num=SG}*	ʁœpɔʁtaʒ	1	0
 N{moyenne.g=F num=SG}*	mwajɛn	1	0
 N{dossier.g=M num=SG}*	dosje	1	0
 N{vertige.g=M num=PL}*	vɛʁtiʒ	1	0
 N{sous-directeur.g=M num=SG}*	sudiʁɛktœʁ	1	0
-N{reportage.g=M num=PL}*	ʁəpɔʁtaʒ	1	0
+N{reportage.g=M num=PL}*	ʁœpɔʁtaʒ	1	0
 N{peuple.g=M num=SG}*	pøpl	1	0
 N{journée.g=F num=PL}*	ʒuʁne	1	0
 N{raisin.g=M num=PL}*	ʁɛz3	1	0
@@ -7967,12 +7967,12 @@ ADJ{seul}	sœl	1	0
 N{cigarette.g=F num=PL}*	sigaʁɛt	1	0
 N{opposition.g=F num=SG}*	opozisjQ	1	0
 N{accent.g=M num=SG}*	aks&	1	0
-N{entreprise.g=F num=PL}*	&tʁəpʁiz	1	0
-N{entreprise.g=F num=SG}*	&tʁəpʁiz	1	0
+N{entreprise.g=F num=PL}*	&tʁœpʁiz	1	0
+N{entreprise.g=F num=SG}*	&tʁœpʁiz	1	0
 N{ferme.g=F num=SG}*	fɛʁm	1	0
-N{fenêtre.g=F num=SG}*	fənɛtʁ	1	0
+N{fenêtre.g=F num=SG}*	fœnɛtʁ	1	0
 N{travail.g=M num=SG}*	tʁavaj	1	0
-N{rendement.g=M num=SG}*	ʁ&dəm&	1	0
+N{rendement.g=M num=SG}*	ʁ&dœm&	1	0
 N{bouquin.g=M num=PL}*	buk3	1	0
 N{majorité.g=F num=SG}*	maʒoʁite	1	0
 N{tas.g=M num=PL}*	ta	1	0
@@ -8048,7 +8048,7 @@ ADJ{plusieurs}	plyzjœʁ	1	0
 N{quota.g=M num=SG}*	kota	1	0
 N{terrain.g=M num=PL}*	tɛʁ3	1	0
 N{skieur.g=M num=PL}*	skjœʁ	1	0
-N{eau-de-vie.g=F num=SG}*	odəvi	1	0
+N{eau-de-vie.g=F num=SG}*	odœvi	1	0
 N{centre.g=M num=SG}*	s&tʁ	1	0
 N{mariage.g=M num=SG}*	maʁjaʒ	1	0
 N{nerf.g=M num=SG}*	nɛʁ	1	0
@@ -8067,7 +8067,7 @@ ADJ{quelque}	kɛlk	1	0
 N{immensité.g=F num=SG}*	im&site	1	0
 N{cabriolet.g=M num=SG}*	kabʁijolɛ	1	0
 N{initiale.g=F num=SG}*	inisjal	1	0
-N{méchanceté.g=F num=SG}*	meʃ&səte	1	0
+N{méchanceté.g=F num=SG}*	meʃ&sœte	1	0
 N{fonction.g=F num=SG}*	fQksjQ	1	0
 N{animation.g=F num=PL}*	animasjQ	1	0
 ADJ{appris}	apʁi	1	0
@@ -8100,7 +8100,7 @@ ADJ{haut}	ot	1	0
 ADJ{personne}	pɛʁsɔn	1	0
 N{glace.g=F num=SG}*	glas	1	0
 N{viande.g=F num=SG}*	vj&d	1	0
-N{mesquinerie.g=F num=PL}*	mɛskinəʁi	1	0
+N{mesquinerie.g=F num=PL}*	mɛskinœʁi	1	0
 N{fiabilité.g=F num=SG}*	fjabilite	1	0
 N{fournisseur.g=M num=PL}*	fuʁnisœʁ	1	0
 N{moment.g=M num=SG}*	mom&	1	0
@@ -8137,7 +8137,7 @@ N{population.g=F num=SG}*	popylasjQ	1	0
 N{catégorie.g=F num=PL}*	kategoʁi	1	0
 N{population.g=F num=PL}*	popylasjQ	1	0
 N{mentalité.g=F num=SG}*	m&talite	1	0
-ADJ{petit}	pəti	1	0
+ADJ{petit}	pœti	1	0
 N{robinet.g=M num=PL}*	ʁobinɛ	1	0
 N{niveau.g=M num=PL}*	nivo	1	0
 N{niveau.g=M num=SG}*	nivo	1	0
@@ -8145,16 +8145,16 @@ DET{PossT}	tj3	1	0
 N{magazine.g=M num=SG}*	magazin	1	0
 N{maison.g=F num=PL}*	mɛzQ	1	0
 N{mutuel.g=F num=SG}*	mytɥɛl	1	0
-N{belote.g=F num=SG}*	bəlɔt	1	0
+N{belote.g=F num=SG}*	bœlɔt	1	0
 N{sujet.g=M num=SG}*	syʒɛ	1	0
 N{sujet.g=M num=PL}*	syʒɛ	1	0
 ADJ{commun}	komyn	1	0
 N{décoration.g=F num=SG}*	dekoʁasjQ	1	0
-ADJ{petit}	pəti	1	0
+ADJ{petit}	pœti	1	0
 N{forêt.g=F num=SG}*	foʁɛ	1	0
 N{sol.g=M num=SG}*	sɔl	1	0
 N{jus.g=M num=PL}*	ʒy	1	0
-N{logement.g=M num=SG}*	lɔʒəm&	1	0
+N{logement.g=M num=SG}*	lɔʒœm&	1	0
 N{prestation.g=F num=SG}*	pʁɛstasjQ	1	0
 N{tapis.g=M num=PL}*	tapi	1	0
 N{texte.g=M num=PL}*	tɛkst	1	0
@@ -8184,11 +8184,11 @@ N{autre.g=M num=PL}*	otʁ	1	0
 N{kilo.g=M num=SG}*	kilo	1	0
 N{prêtre.g=M num=SG}*	pʁɛtʁ	1	0
 NUM{quarante-cinq}	kaʁ&ts3k	1	0
-N{enseignement.g=M num=SG}*	&sɛɲəm&	1	0
+N{enseignement.g=M num=SG}*	&sɛɲœm&	1	0
 N{foule.g=F num=SG}*	ful	1	0
 N{école.g=F num=SG}*	ekɔl	1	0
 N{autre.g=M num=SG}*	otʁ	1	0
-ADJ{demi}	dəmi	1	0
+ADJ{demi}	dœmi	1	0
 N{maman.g=F num=SG}*	mam&	1	0
 N{chanson.g=F num=PL}*	ʃ&sQ	1	0
 N{maman.g=F num=PL}*	mam&	1	0
@@ -8205,7 +8205,7 @@ N{équipée.g=F num=PL}*	ekipe	1	0
 N{couloir.g=M num=SG}*	kulwaʁ	1	0
 N{mec.g=M num=SG}*	mɛk	1	0
 N{mec.g=M num=PL}*	mɛk	1	0
-N{repassage.g=M num=SG}*	ʁəpasaʒ	1	0
+N{repassage.g=M num=SG}*	ʁœpasaʒ	1	0
 N{réputation.g=F num=SG}*	ʁepytasjQ	1	0
 N{origine.g=F num=SG}*	oʁiʒin	1	0
 DET{PossV}	vo	1	0
@@ -8244,14 +8244,14 @@ N{beau.g=F num=SG}*	bɛl	1	0
 N{titre.g=M num=PL}*	titʁ	1	0
 N{plateau.g=M num=SG}*	plato	1	0
 N{beau.g=F num=PL}*	bɛl	1	0
-N{sécheresse.g=F num=SG}*	seʃəʁɛs	1	0
+N{sécheresse.g=F num=SG}*	seʃœʁɛs	1	0
 N{ancien.g=F num=SG}*	&sjɛn	1	0
 N{vérité.g=F num=SG}*	veʁite	1	0
-N{cheveu.g=M num=SG}*	ʃəvø	1	0
+N{cheveu.g=M num=SG}*	ʃœvø	1	0
 N{japonais.g=F num=SG}*	ʒaponɛz	1	0
 N{balance.g=F num=SG}*	bal&s	1	0
 N{nièce.g=F num=SG}*	njɛs	1	0
-N{cheveu.g=M num=PL}*	ʃəvø	1	0
+N{cheveu.g=M num=PL}*	ʃœvø	1	0
 N{nièce.g=F num=PL}*	njɛs	1	0
 N{vrai.g=M num=SG}*	vʁɛ	1	0
 N{talon.g=M num=PL}*	talQ	1	0
@@ -8264,7 +8264,7 @@ N{usine.g=F num=SG}*	yzin	1	0
 N{cinéma.g=M num=SG}*	sinema	1	0
 N{cinéma.g=M num=PL}*	sinema	1	0
 N{neurologie.g=F num=SG}*	nøʁoloʒi	1	0
-N{semestre.g=M num=SG}*	səmɛstʁ	1	0
+N{semestre.g=M num=SG}*	sœmɛstʁ	1	0
 N{camping.g=M num=SG}*	k&piŋ	1	0
 N{esquimau.g=M num=PL}*	ɛskimo	1	0
 N{alentour.g=M num=PL}*	al&tuʁ	1	0
@@ -8291,12 +8291,12 @@ N{notion.g=F num=SG}*	nosjQ	1	0
 N{seul.g=F num=SG}*	sœl	1	0
 N{anonymat.g=M num=SG}*	anonima	1	0
 N{dimension.g=F num=SG}*	dim&sjQ	1	0
-N{degré.g=M num=PL}*	dəgʁe	1	0
+N{degré.g=M num=PL}*	dœgʁe	1	0
 N{atmosphère.g=F num=SG}*	atmosfɛʁ	1	0
 N{plein.g=M num=SG}*	pl3	1	0
 N{système.g=M num=SG}*	sistɛm	1	0
 N{condition.g=F num=PL}*	kQdisjQ	1	0
-N{degré.g=M num=SG}*	dəgʁe	1	0
+N{degré.g=M num=SG}*	dœgʁe	1	0
 N{condition.g=F num=SG}*	kQdisjQ	1	0
 ADJ{juste}	ʒyst	1	0
 N{supérieur.g=M num=PL}*	sypeʁjœʁ	1	0

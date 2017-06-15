@@ -15,6 +15,7 @@ public class Hierarchy implements Con {
     protected final double[] rankings;
     private final Hierarchy parentHierarchy;
     private final static double DEFAULT_RANKING_VALUE = 100.0;
+    public final static int EXPECTED_NUM_CONSTRAINTS = ConfigFactory.load().getInt("implementation.expectedNumConstraints");
     private List<RankedConstraint> rankedConstraints;
     private IndexedRanking indexedRanking;
     private int size;
@@ -55,7 +56,7 @@ public class Hierarchy implements Con {
     }
 
     public static Hierarchy createNew() {
-        return createHierarchy(ConfigFactory.load().getInt("implementation.expectedNumConstraints"));
+        return createHierarchy(EXPECTED_NUM_CONSTRAINTS);
     }
 
     public double getRanking(Constraint c) {
@@ -138,12 +139,16 @@ public class Hierarchy implements Con {
     public Hierarchy sample(AbstractSampler sampler) {
         double[] sampledRankings = new double[rankings.length];
         List<RankedConstraint> rankedList = new ArrayList<>(size());
-        Arrays.fill(sampledRankings,Double.NEGATIVE_INFINITY);
         for (int i=0; i < size(); i++) {
             Constraint instance = Constraint.withIndex(i);
             double value = getRanking(instance);
-            sampledRankings[i] = sampler.sampleDouble(value);
-            rankedList.add(RankedConstraint.of(instance, sampledRankings[i]));
+            double sampledValue = sampler.sampleDouble(value);
+            sampledRankings[i] = sampledValue;
+            rankedList.add(RankedConstraint.of(instance, sampledValue));
+        }
+        // If there are any unleft rankings, fill them with nothing
+        for (int i = size(); i < rankings.length; i++) {
+            sampledRankings[i] = Double.NEGATIVE_INFINITY;
         }
         Collections.sort(rankedList);
         Hierarchy result = new Hierarchy(sampledRankings, rankedList, this.size(),this);
