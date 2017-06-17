@@ -4,6 +4,7 @@
 package grammar.dynamic;
 
 import candidates.FormInput;
+import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 import constraints.helper.ConstraintArrayList;
 import constraints.hierarchy.reimpl.Hierarchy;
@@ -29,6 +30,7 @@ import learn.ViolatedCandidateBuilder;
  * @date Aug 9, 2015
  */
 public class DynamicNetworkEvaluation implements Evaluation {
+    private static final Config config = ConfigFactory.load();
     private DynamicNetworkGrammar grammar;
     private long id;
     private static long idCounter = 0;
@@ -36,7 +38,7 @@ public class DynamicNetworkEvaluation implements Evaluation {
     private ViolatedCandidate winner;
     private Hierarchy sampledHierarchy;
     private boolean endFormIsSink = false;
-    private boolean useCandidateSpaces = ConfigFactory.load().getBoolean("grammar.useCandidateSpaces");
+    private boolean useCandidateSpaces = config.getBoolean("grammar.useCandidateSpaces");
     private final CostFactory costFactory;
     private final AbstractNodeSearcher nodeSearcher;
 
@@ -52,7 +54,7 @@ public class DynamicNetworkEvaluation implements Evaluation {
         this.sampledHierarchy = sampledHierarchy;
         costFactory = new CostFactory(sampledHierarchy, CostType.SIMPLE_DOUBLES_OT);
 
-        String searchModeString = ConfigFactory.load().getString("implementation.nodeSearch");
+        String searchModeString = config.getString("implementation.nodeSearch");
         SearchMode searchMode = SearchMode.valueOf(searchModeString);
 
         switch (searchMode) {

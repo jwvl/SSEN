@@ -22,8 +22,8 @@ public class WeightedAll implements UpdateAlgorithm {
     @Override
     public void update(Hierarchy con, Collection<ViolatedCandidate> violatedByL,
                        Collection<ViolatedCandidate> violatedByT, double delta) {
-        Multiset<Constraint> tPreferring = violatedByL.iterator().next().getConstraints();
-        Multiset<Constraint> lPreferring = violatedByT.iterator().next().getConstraints();
+        Multiset<Constraint> tPreferring = violatedByL.iterator().next().getViolated();
+        Multiset<Constraint> lPreferring = violatedByT.iterator().next().getViolated();
         double weightedPromotionDelta = delta / tPreferring.size();
         for (Constraint constraint : tPreferring) {
             con.changeConstraintRanking(constraint, weightedPromotionDelta);
@@ -41,8 +41,8 @@ public class WeightedAll implements UpdateAlgorithm {
     @Override
     public UpdateAction getUpdate(Hierarchy con, ViolatedCandidate lCandidate,
                                   ViolatedCandidate tCandidate, double delta) {
-        Multiset<Constraint> tPreferring = lCandidate.getConstraints();
-        Multiset<Constraint> lPreferring = tCandidate.getConstraints();
+        Multiset<Constraint> tPreferring = lCandidate.getViolated();
+        Multiset<Constraint> lPreferring = tCandidate.getViolated();
         UpdateAction updateAction = UpdateAction.create();
         UpdateUtils.multisetToUpdateAction(lPreferring, delta, updateAction);
         UpdateUtils.multisetToUpdateAction(tPreferring, -delta, updateAction);

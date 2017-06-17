@@ -8,9 +8,10 @@ import java.util.Objects;
  * Created by janwillem on 31/03/16.
  */
 public class RankedConstraint implements Comparable<RankedConstraint> {
+    private final static boolean USE_STRATA = ConfigFactory.load().getBoolean("constraints.stratify");
+
     private final Constraint constraint;
     private final double ranking;
-    private final boolean USE_STRATA = ConfigFactory.load().getBoolean("constraints.stratify");
 
     private RankedConstraint(Constraint constraint, double ranking) {
         this.constraint = constraint;

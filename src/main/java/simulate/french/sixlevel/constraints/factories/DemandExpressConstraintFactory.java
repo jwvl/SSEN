@@ -6,7 +6,7 @@ package simulate.french.sixlevel.constraints.factories;
 import com.google.common.collect.Sets;
 import forms.morphosyntax.*;
 import forms.primitives.feature.AbstractMFeature2;
-import simulate.french.sixlevel.constraints.ExpressConstraint;
+import simulate.french.sixlevel.constraints.DemandExpressConstraint;
 
 import java.util.Collection;
 
@@ -14,7 +14,7 @@ import java.util.Collection;
  * @author jwvl
  * @date Aug 1, 2015
  */
-public class ExpressConstraintFactory extends
+public class DemandExpressConstraintFactory extends
         SubformConstraintFactory<MStructure, AffixType> {
 
     /*
@@ -25,8 +25,8 @@ public class ExpressConstraintFactory extends
      * #createConstraint(java.lang.Object)
      */
     @Override
-    public ExpressConstraint createConstraint(AffixType offender) {
-        return ExpressConstraint.createFromAffixType(offender);
+    public DemandExpressConstraint createConstraint(AffixType offender) {
+        return DemandExpressConstraint.createFromAffixType(offender);
     }
 
     /*
@@ -42,8 +42,8 @@ public class ExpressConstraintFactory extends
         for (SyntacticWord syntacticWord : transgressor) {
             SyntacticCategory category = syntacticWord.getSyntacticCategory();
             for (MElement element : syntacticWord) {
-                // Only add constraints for non-concept features that do not express value
-                if (!element.isConcept()) {
+                // Only add constraints for non-inherent, non-concept features that do not express value
+                if (element.getType() != MFeatureType.FIXED && !element.isConcept()) {
                     AbstractMFeature2 feature = element.getFeature();
                     if (feature.isNull()) {
                         AffixType affixType = AffixType.createInstance(category,
@@ -59,8 +59,8 @@ public class ExpressConstraintFactory extends
     /**
      * @return
      */
-    public static ExpressConstraintFactory createInstance() {
-        return new ExpressConstraintFactory();
+    public static DemandExpressConstraintFactory createInstance() {
+        return new DemandExpressConstraintFactory();
     }
 
 }

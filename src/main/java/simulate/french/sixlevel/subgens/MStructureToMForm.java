@@ -28,6 +28,7 @@ import java.util.List;
  */
 public class MStructureToMForm extends SubGen<MStructure, MForm> {
 
+    private final static boolean stemAtEdgeConstrainer = ConfigFactory.load().getBoolean("gen.constrainers.stemAtEdgeConstrainer");
     private final boolean VERBOSE = false;
     private MFormFactory myFactory;
 
@@ -39,7 +40,7 @@ public class MStructureToMForm extends SubGen<MStructure, MForm> {
         //addConstraintFactory(new MorphemeConstraintFactory());
         addConstraintFactory(new MorphAlignConstraintFactory());
         addConstraintFactory(new TypedAnalyzeConstraintFactory());
-        if (ConfigFactory.load().getBoolean("gen.constrainers.stemAtEdgeConstrainer") == true) {
+        if (stemAtEdgeConstrainer) {
             addConstrainer(new MFormEdgeConstrainer());
         }
     }

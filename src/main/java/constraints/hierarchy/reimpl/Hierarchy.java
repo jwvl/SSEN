@@ -1,5 +1,6 @@
 package constraints.hierarchy.reimpl;
 
+import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 import constraints.Constraint;
 import constraints.RankedConstraint;
@@ -15,6 +16,7 @@ public class Hierarchy implements Con {
     protected final double[] rankings;
     private final Hierarchy parentHierarchy;
     private final static double DEFAULT_RANKING_VALUE = 100.0;
+    private final static Config config = ConfigFactory.load();
     private List<RankedConstraint> rankedConstraints;
     private IndexedRanking indexedRanking;
     private int size;
@@ -55,7 +57,7 @@ public class Hierarchy implements Con {
     }
 
     public static Hierarchy createNew() {
-        return createHierarchy(ConfigFactory.load().getInt("implementation.expectedNumConstraints"));
+        return createHierarchy(config.getInt("implementation.expectedNumConstraints"));
     }
 
     public double getRanking(Constraint c) {

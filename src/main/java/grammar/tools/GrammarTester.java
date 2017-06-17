@@ -93,9 +93,13 @@ public class GrammarTester {
 
     }
 
-    private static Candidate evaluateToCandidate(Grammar grammar, FormPair formPair, boolean resample, double evaluationNoise) {
+    private static ViolatedCandidate evaluateToViolatedCandidate(Grammar grammar, FormPair formPair, boolean resample, double evaluationNoise) {
         Evaluation evaluation = grammar.evaluate(formPair, resample, evaluationNoise);
         ViolatedCandidate violatedCandidate = evaluation.getWinner();
-        return violatedCandidate.getCandidate();
+        return violatedCandidate;
+    }
+
+    private static Candidate evaluateToCandidate(Grammar grammar, FormPair formPair, boolean resample, double evaluationNoise) {
+        return evaluateToViolatedCandidate( grammar,  formPair,  resample, evaluationNoise).getCandidate();
     }
 }

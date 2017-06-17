@@ -34,10 +34,9 @@ public class SimpleTableauBuilder {
     public void addViolatedCandidate(ViolatedCandidate violatedCandidate) {
         Candidate candidate = violatedCandidate.getCandidate();
         candidates.add(candidate);
-        for (Constraint c: violatedCandidate.getConstraints().elementSet()) {
+        for (Constraint c: violatedCandidate.getViolated()) {
             constraints.add(c);
-            int numViolations = violatedCandidate.getConstraints().count(candidate);
-            violations.add(candidate,c,numViolations);
+            violations.addOne(candidate, c);
         }
     }
 

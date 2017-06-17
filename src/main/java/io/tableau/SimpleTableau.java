@@ -8,6 +8,7 @@ import constraints.Constraint;
 import constraints.RankedConstraint;
 import util.collections.FrequencyTable;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -45,6 +46,7 @@ public class SimpleTableau implements Tableau {
      */
     @Override
     public String toSeparatedString(String separator) {
+        Collections.sort(constraints);
         StringBuilder result = new StringBuilder(candidates[0].getInput().toString());
         for (RankedConstraint rankedConstraint : constraints) {
             result.append(separator).append(rankedConstraint.getConstraint().toString());

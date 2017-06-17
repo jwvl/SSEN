@@ -29,7 +29,7 @@ public class ViolatedCandidate {
     /**
      * @return the Multiset of Constraints
      */
-    public Multiset<Constraint> getConstraints() {
+    public Multiset<Constraint> getViolated() {
         return violated;
     }
 

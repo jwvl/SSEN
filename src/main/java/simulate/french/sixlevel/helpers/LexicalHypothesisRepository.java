@@ -9,15 +9,14 @@ import com.google.common.collect.Table;
 import com.typesafe.config.ConfigFactory;
 import forms.morphosyntax.Morpheme;
 import forms.phon.LexicalMapping;
+import forms.phon.Sonority;
+import forms.primitives.segment.Phone;
 import forms.primitives.segment.PhoneSubForm;
 import gen.alignment.MorphemePhoneAlignment;
 import gen.alignment.SubstringDatabank;
 import util.collections.StringMultimap;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author jwvl
@@ -214,6 +213,28 @@ public class LexicalHypothesisRepository implements Iterable<Morpheme> {
         }
         for (LexicalMapping mapping: toAdd) {
             addMapping(mapping.left(), mapping.right());
+        }
+    }
+
+    public void appendPosteriorSchwas() {
+        byte[] schwa = Phone.encode("ə");
+        Set<LexicalMapping> toAdd = Sets.newHashSet();
+        for (LexicalMapping subMapping : repository.values()) {
+            Morpheme currentM = subMapping.left();
+            PhoneSubForm currentP = subMapping.right();
+            byte[] contents = currentP.getContents();
+            if (currentP.getContents().length > 1) {
+            Phone asPhone = Phone.getByCode(contents[contents.length-1]);
+            if (asPhone.getSonority() != Sonority.V) {
+                byte[] newContents = Arrays.copyOf(contents, contents.length + 1);
+                newContents[newContents.length - 1] = schwa[0];
+                PhoneSubForm newP = PhoneSubForm.createFromByteArray(newContents);
+                toAdd.add(LexicalMapping.of(currentM,newP));
+            }
+            }
+        }
+        for (LexicalMapping lexicalMapping: toAdd) {
+            repository.put(lexicalMapping.left(), lexicalMapping.right(), lexicalMapping);
         }
     }
 

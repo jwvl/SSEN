@@ -15,36 +15,32 @@ import java.util.List;
 /**
  * @author jwvl
  * @date 25/09/2015
- * Contains the predefined UF->SF phonological rules for the simulations of Chapter 5.
+ * Contains the predefined SF->PF phonological rules for the simulations of Chapter 5.
  */
-public class PredefinedLiaisonRules {
-    public static List<EdgeBasedRule> edgeRules = createEdgeRules();
-
+public class PredefinedArticulatoryRules {
+    public static List<EdgeBasedRule> nasalRules = createNasalRules();
+    public static final Config config = ConfigFactory.load();
     /**
      * @return
      */
-    private static List<EdgeBasedRule> createEdgeRules() {
+    private static List<EdgeBasedRule> createNasalRules() {
         Config config = ConfigFactory.load();
         List<EdgeBasedRule> result = new ArrayList<EdgeBasedRule>();
-        if (config.getBoolean("gen.deletionRulesOnUF")) {
-            result.addAll(EdgeBasedRuleBuilder.fromString("#z → ∅ / __", Edge.WORD));
-            result.addAll(EdgeBasedRuleBuilder.fromString("z# → ∅ / __", Edge.WORD));
-            result.addAll(EdgeBasedRuleBuilder.fromString("#n → ∅ / __", Edge.WORD));
-            result.addAll(EdgeBasedRuleBuilder.fromString("n# → ∅ / __", Edge.WORD));
-            result.addAll(EdgeBasedRuleBuilder.fromString("#t → ∅ / __", Edge.WORD));
-            result.addAll(EdgeBasedRuleBuilder.fromString("t# → ∅ / __", Edge.WORD));
-//            result.addAll(EdgeBasedRuleBuilder.fromString("#z → ∅ / |C__", Edge.WORD));
-//            result.addAll(EdgeBasedRuleBuilder.fromString("z# → ∅ / __|C", Edge.WORD));
-//            result.addAll(EdgeBasedRuleBuilder.fromString("#n → ∅ / |C__", Edge.WORD));
-//            result.addAll(EdgeBasedRuleBuilder.fromString("n# → ∅ / __|C", Edge.WORD));
-//            result.addAll(EdgeBasedRuleBuilder.fromString("#t → ∅ / |C__", Edge.WORD));
-//            result.addAll(EdgeBasedRuleBuilder.fromString("t# → ∅ / __|C", Edge.WORD));
-
+        if (config.getBoolean("gen.nasalRulesOnSF")) {
+            result.addAll(EdgeBasedRuleBuilder.fromString(".n → ∅ / __", Edge.SYLLABLE));
+            result.addAll(EdgeBasedRuleBuilder.fromString("n. → ∅ / __", Edge.SYLLABLE));
         }
+        return result;
+    }
 
-        if (config.getBoolean("gen.schwaDeletionOnUf")) {
-            result.addAll(EdgeBasedRuleBuilder.fromString("ə# → ∅ / __", Edge.WORD));
-            result.addAll(EdgeBasedRuleBuilder.fromString("#ə → ∅ / __", Edge.WORD));
+    private static List<EdgeBasedRule> createLiaisonRules()
+    {
+        List<EdgeBasedRule> result = new ArrayList<>();
+        if (config.getBoolean("gen.deleteliaisonsOnSF")) {
+            result.addAll(EdgeBasedRuleBuilder.fromString(".z → ∅ / __", Edge.SYLLABLE));
+            result.addAll(EdgeBasedRuleBuilder.fromString("z. → ∅ / __", Edge.SYLLABLE));
+            result.addAll(EdgeBasedRuleBuilder.fromString(".t → ∅ / __", Edge.SYLLABLE));
+            result.addAll(EdgeBasedRuleBuilder.fromString("t. → ∅ / __", Edge.SYLLABLE));
         }
         if (config.getBoolean("gen.insertionRulesOnUF")) {
             result.addAll(EdgeBasedRuleBuilder.fromString("#∅ → n / |V__", Edge.WORD));
@@ -62,10 +58,8 @@ public class PredefinedLiaisonRules {
         if (config.getBoolean("gen.schwaInsertionOnUF")) {
             result.addAll(EdgeBasedRuleBuilder.fromString("∅# → ə / |C__|C", Edge.MORPHEME));
         }
-
-
-
         return result;
+
     }
 
 }

@@ -41,7 +41,7 @@ public abstract class AbstractCostNode<C extends AbstractCostNode> {
 
     @Override
     public int hashCode() {
-        int result = parent != null ? parent.hashCode() : 0;
+        int result = parent != null ? parent.hashCode() : 1;
         result = 31 * result + (formMapping != null ? formMapping.hashCode() : 0);
         return result;
     }

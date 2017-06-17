@@ -46,7 +46,7 @@ public class LexicalConstraintFactory extends
      */
     @Override
     public LexicalConstraint createConstraint(LexicalMapping lexicalMapping) {
-        if (isMinimalMapping(lexicalMapping) && lexicalMapping.left().getSyntacticCategory() == SyntacticCategory.N) {
+        if (!isMinimalMapping(lexicalMapping) && lexicalMapping.left().getSyntacticCategory() == SyntacticCategory.N) {
             return LexicalConstraint.createInstance(lexicalMapping, SHORTEST_FORM_BIAS);
         }
 

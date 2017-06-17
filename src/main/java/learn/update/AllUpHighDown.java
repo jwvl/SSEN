@@ -75,12 +75,12 @@ public class AllUpHighDown implements UpdateAlgorithm {
         Multiset<Constraint> violatedByLearner = UpdateUtils
                 .getViolatedByLearner(lCandidate, tCandidate);
         Multiset<Constraint> violatedByTarget = UpdateUtils.getViolatedByTarget(lCandidate, tCandidate);
-        Multiset<Constraint> toPromote = violatedByLearner.isEmpty() ? lCandidate.getConstraints() : violatedByLearner;
+        Multiset<Constraint> toPromote = violatedByLearner.isEmpty() ? lCandidate.getViolated() : violatedByLearner;
         double promotionDelta = calculatePromotionDelta(delta, toPromote.size());
 
         UpdateUtils.multisetToUpdateAction(toPromote, promotionDelta, result);
 
-        Multiset<Constraint> toSearch = violatedByTarget.isEmpty() ? tCandidate.getConstraints() : violatedByTarget;
+        Multiset<Constraint> toSearch = violatedByTarget.isEmpty() ? tCandidate.getViolated() : violatedByTarget;
         Constraint maxViolatedByTarget = UpdateUtils.getMax(toSearch, con);
         if (maxViolatedByTarget == null) {
             System.err.println("How can this?");

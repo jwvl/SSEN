@@ -26,6 +26,7 @@ public abstract class Constraint {
     private static Constraint[] map = new Constraint[config.getInt("implementation.expectedNumConstraints")];
     private final double initialBias;
     protected final Level rightLevel;
+    private final int hashCode;
 
     private static Ordering<Constraint> levelOrdering = new Ordering<Constraint>() {
 
@@ -47,6 +48,7 @@ public abstract class Constraint {
         }
         this.initialBias = initialBias;
         this.id = idCounter++;
+        this.hashCode = hashCode();
         this.rightLevel = rightLevel;
         if (idCounter >= map.length) {
             System.err.println("Max number of expected constraints exceeded!");
@@ -96,12 +98,19 @@ public abstract class Constraint {
         list.addMultiple(this, getNumViolations(fm));
     }
 
-    @Override
-    public int hashCode() {
+
+    public int calculateHashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + getId();
+        result = prime * result + id;
         return result;
+    }
+
+
+
+    @Override
+    public int hashCode() {
+        return hashCode;
     }
 
 

@@ -20,7 +20,7 @@ public class SymmetricAll implements UpdateAlgorithm {
     public void update(Hierarchy con, Collection<ViolatedCandidate> lCandidates,
                        Collection<ViolatedCandidate> tCandidates, double delta) {
         for (ViolatedCandidate lCandidate : lCandidates) {
-            Multiset<Constraint> constraintMultiset = lCandidate.getConstraints();
+            Multiset<Constraint> constraintMultiset = lCandidate.getViolated();
 
             for (Constraint rc : constraintMultiset.elementSet()) {
                 double multipliedDelta = constraintMultiset.count(rc) * delta;
@@ -30,7 +30,7 @@ public class SymmetricAll implements UpdateAlgorithm {
         }
 
         for (ViolatedCandidate tCandidate : tCandidates) {
-            Multiset<Constraint> constraintMultiset = tCandidate.getConstraints();
+            Multiset<Constraint> constraintMultiset = tCandidate.getViolated();
             for (Constraint rc : constraintMultiset.elementSet()) {
                 double multipliedDelta = constraintMultiset.count(rc) * delta;
                 con.changeConstraintRanking(rc, -multipliedDelta);
@@ -44,12 +44,12 @@ public class SymmetricAll implements UpdateAlgorithm {
                                   ViolatedCandidate tCandidate, double delta) {
         UpdateAction updateAction = UpdateAction.create();
 
-        Multiset<Constraint> lConstraintMultiset = lCandidate.getConstraints();
+        Multiset<Constraint> lConstraintMultiset = lCandidate.getViolated();
         for (Constraint rc : lConstraintMultiset.elementSet()) {
             updateAction.add(rc, delta);
         }
 
-        Multiset<Constraint> tConstraintMultiset = tCandidate.getConstraints();
+        Multiset<Constraint> tConstraintMultiset = tCandidate.getViolated();
         for (Constraint rc : tConstraintMultiset.elementSet()) {
             updateAction.add(rc, -delta);
         }

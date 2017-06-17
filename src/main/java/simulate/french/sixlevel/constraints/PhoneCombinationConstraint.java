@@ -1,51 +1,71 @@
 package simulate.french.sixlevel.constraints;
 
 import constraints.FormConstraint;
+import forms.phon.Sonority;
 import forms.phon.flat.PhoneSequence;
 import forms.primitives.segment.Phone;
 import grammar.levels.Level;
 import grammar.levels.predefined.BiPhonSix;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by janwillem on 09/05/2017.
  */
 public class PhoneCombinationConstraint extends FormConstraint<PhoneSequence> {
 
-    private final byte[] offenders;
+    private final char[] offenders;
+
+    private final Pattern toSearch;
 
     protected PhoneCombinationConstraint(Level rightLevel, byte[] offenders) {
         super(rightLevel);
-        this.offenders = offenders;
+        this.offenders = Phone.decode(offenders).toCharArray();
         System.out.println("Created combination constraint *"+Phone.decode(offenders));
+        toSearch = buildPattern();
+    }
+
+    private Pattern buildPattern() {
+        String classes ="XCPFNLJV";
+        StringBuilder builder= new StringBuilder();
+        for (char c: offenders) {
+            int index = classes.indexOf(c) ;
+            if (index >=0) {
+                Sonority s = Sonority.valueOf(classes.charAt(index));
+                    builder.append(("["));
+                    builder.append(s.getAllPhones());
+                    builder.append("]");
+                } else {
+                    builder.append(c);
+                }
+            }
+        return Pattern.compile(builder.toString());
     }
 
     public PhoneCombinationConstraint(byte[] offenders) {
         this(BiPhonSix.getPhoneticLevel(), offenders);
     }
 
+    public PhoneCombinationConstraint(String offenders) {
+        this(BiPhonSix.getPhoneticLevel(), Phone.encode(offenders));
+    }
+
     @Override
     public int getNumViolations(PhoneSequence phones) {
+        String asString = phones.toString();
         int count = 0;
-        byte[] bytes = phones.getByteArray();
-        int stopat = (1+bytes.length) - offenders.length;
-        for (int i = -1; i <= stopat; i++) {
-            boolean found = true;
-            for (byte b: offenders) {
-                if (getByteAt(i, bytes) != b) {
-                    found = false;
-                    break;
-                }
-            }
-            if (found) {
-                count++;
-            }
+        Matcher matcher = toSearch.matcher(asString);
+        while (matcher.find()) {
+            count++;
         }
         return count;
     }
 
+
     @Override
     public String toString() {
-        return null;
+        return "*CUE"+offenders.toString();
     }
 
     @Override
@@ -53,12 +73,10 @@ public class PhoneCombinationConstraint extends FormConstraint<PhoneSequence> {
         return false;
     }
 
-    private byte getByteAt(int index, byte[] sequence) {
-        if (index < 0 || index >= sequence.length) {
-            return Phone.NULL.getId();
-        } else {
-            return sequence[index];
-        }
+
+    public String getOffenders() {
+        return offenders.toString();
     }
+
 
 }

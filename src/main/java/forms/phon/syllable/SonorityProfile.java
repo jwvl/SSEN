@@ -35,6 +35,10 @@ public class SonorityProfile {
         return getInstance(contents);
     }
 
+    public static SonorityProfile fromSonorities(Sonority[] contents) {
+        return new SonorityProfile(contents);
+    }
+
     public static SonorityProfile fromBytes(byte[] bytes) {
         int i = 0;
         Sonority[] contents = new Sonority[bytes.length];

@@ -80,4 +80,40 @@ public enum Sonority {
         return name();
     }
 
+    public Sonority toTwoClass() {
+        if (this == V)
+            return V;
+        else return (C);
+    }
+
+    public String getAllPhones() {
+        StringBuilder builder = new StringBuilder();
+        for (Phone p: getPhones()) {
+            builder.append(p.getCharValue());
+        }
+        return builder.toString();
+    }
+
+    public Sonority toFiveClass() {
+        switch (this) {
+            case X:
+                return X;
+            case C:
+                return P;
+            case P:
+                return P;
+            case F:
+                return P;
+            case N:
+                return N;
+            case L:
+                return L;
+            case J:
+                return J;
+            case V:
+                return V;
+        }
+        return X;
+    }
+
 }

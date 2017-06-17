@@ -16,13 +16,13 @@ import java.util.List;
 /**
  * Created by janwillem on 09/05/2017.
  */
-public class PhoneCombinationConstraintFactory extends FormConstraintFactory<PhoneticForm> {
+public class PhonePermutationFactory extends FormConstraintFactory<PhoneticForm> {
 
     private final PhoneCombinationConstraint[] constraints;
     private final int[] bases;
     private final int windowLength;
 
-    public PhoneCombinationConstraintFactory(int length) {
+    public PhonePermutationFactory(int length) {
         this.windowLength = length;
         bases = new int[length];
         int multiplier = Phone.getInventory().size();

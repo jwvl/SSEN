@@ -7,7 +7,7 @@ import constraints.Constraint;
 import constraints.hierarchy.reimpl.Hierarchy;
 
 import java.util.Collections;
-import java.util.IdentityHashMap;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -24,7 +24,7 @@ public class UpdateAction {
     }
 
     public static UpdateAction create() {
-        return new UpdateAction(new IdentityHashMap<>());
+        return new UpdateAction(new HashMap<>());
     }
 
     public void put(Constraint constraint, double value) {

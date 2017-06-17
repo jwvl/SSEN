@@ -33,7 +33,10 @@ import graph.Direction;
 import io.MyStringTable;
 import io.candidates.CandidateSpacesNodeList;
 import io.candidates.CandidateSpacesToNodeLists;
+import io.tableau.SimpleTableau;
+import io.tableau.SimpleTableauBuilder;
 import io.utils.PathUtils;
+import learn.ViolatedCandidate;
 import learn.batch.RandomLearnerTester;
 import learn.batch.combination.LearningPropertyCombinations;
 import learn.batch.combination.TrajectoriesTester;
@@ -54,7 +57,9 @@ import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.Collection;
+import java.util.List;
+import java.util.Set;
 
 /**
  * @author jwvl
@@ -98,6 +103,7 @@ public class SixLevelFrenchDynamic {
         MyStringTable phonesTable = MyStringTable.fromFile(phoneInfoFileName, true, ",");
         String sonorityColumn = config.getString("implementation.sonorityType");
         Phone.getFromStringTable(phonesTable, "Phone", "String", sonorityColumn);
+
 
         // 1 Create grammar with levels.
         Level semF_level = BiPhonSix.getSemSynFormLevel();
@@ -209,6 +215,9 @@ public class SixLevelFrenchDynamic {
                 repository.createAbstractForms(parts[0],parts[1]);
             }
         }
+        if (config.getBoolean("gen.automaticSchwaAppendage")) {
+                 repository.appendPosteriorSchwas();
+        }
 
         repository.printContents();
         if (saveLexiconToFile) {
@@ -237,10 +246,10 @@ public class SixLevelFrenchDynamic {
         pairDistribution = pairDistribution.filter(new SinglesFilter());
         //pairDistribution = pairDistribution.squareRoot();
 
-        if (ConfigFactory.load().getBoolean("grammar.useCandidateSpaces")) {
+        if (config.getBoolean("grammar.useCandidateSpaces")) {
             System.out.println("Creating candidate spaces!");
             CandidateSpaces candidateSpaces;
-            if (!ConfigFactory.load().getBoolean("grammar.loadCandidateSpaces")) {
+            if (!config.getBoolean("grammar.loadCandidateSpaces")) {
                 candidateSpaces = CandidateSpaces.fromDistribution(pairDistribution, grammar);
 
             } else {
@@ -249,7 +258,7 @@ public class SixLevelFrenchDynamic {
                 candidateSpaces = candidateSpacesNodeList.toCandidateSpaces(pairDistribution,grammar);
             }
             grammar.addCandidateSpaces(candidateSpaces);
-            if (ConfigFactory.load().getBoolean("grammar.writeCandidateSpaces")) {
+            if (config.getBoolean("grammar.writeCandidateSpaces")) {
                 CandidateSpacesToNodeLists.writeToFile(grammar, candidateSpaces, outputPath + "/candidateNodes.txt");
                 //CandidateSpacesToTables.writeToFile(candidateSpaces, outputPath + "/candidateSpaces");
             }
@@ -283,9 +292,26 @@ public class SixLevelFrenchDynamic {
 
             TrajectoriesTester trajectoriesTester = new TrajectoriesTester(learningPropertyCombinations, grammar, pairDistribution);
             trajectoriesTester.testAndWrite(dataFileName, numEvaluations, numRuns, numThreads, outputPath);
-            Map<UUID,Hierarchy> successfulHierarchies = trajectoriesTester.getSuccesfulHierarchies();
+//            Map<UUID,Hierarchy> successfulHierarchies = trajectoriesTester.getSuccesfulHierarchies();
+            Hierarchy best = trajectoriesTester.getBestHierarchy();
+
+
+            // For printing
+            SimpleTableauBuilder builder = new SimpleTableauBuilder(best);
+            int count = 0;
+            for (FormPair formPair: pairDistribution.getKeySet()) {
+                ViolatedCandidate winner = grammar.getWinner(formPair,false,0.0);
+                builder.addViolatedCandidate(winner);
+                count++;
+                if (count > 40) {
+                    break;
+                }
+            }
+            SimpleTableau tableau = builder.build();
+            System.out.println(tableau.toSeparatedString("\t"));
 
         }
+
 
 
     }

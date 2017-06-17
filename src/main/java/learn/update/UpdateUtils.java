@@ -24,11 +24,11 @@ public class UpdateUtils {
     }
 
     public static Multiset<Constraint> getViolatedByLearner(ViolatedCandidate learner, ViolatedCandidate target) {
-        return Multisets.difference(learner.getConstraints(), target.getConstraints());
+        return Multisets.difference(learner.getViolated(), target.getViolated());
     }
 
     public static Multiset<Constraint> getViolatedByTarget(ViolatedCandidate learner, ViolatedCandidate target) {
-        return Multisets.difference(target.getConstraints(), learner.getConstraints());
+        return Multisets.difference(target.getViolated(), learner.getViolated());
     }
 
     public static Constraint getMax(Multiset<Constraint> multiSet, Hierarchy con) {

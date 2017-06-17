@@ -2,6 +2,7 @@ package graph.explorer;
 
 import com.google.common.collect.ListMultimap;
 import com.google.common.collect.Multimap;
+import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 import forms.Form;
 import forms.FormPair;
@@ -18,6 +19,7 @@ import java.util.Collection;
  * When finished, it will return the "green graph", the subgraph containing all nodes that may connect SemF to AudF.
  */
 public class CorrectCandidateFinder {
+    private final static Config config = ConfigFactory.load();
     private final DynamicNetworkGrammar grammar;
     private final FormPair formsToSeek;
     private ListMultimap<Form, Form> greenGraph;
@@ -44,7 +46,7 @@ public class CorrectCandidateFinder {
         CorrectCandidateFinder finder = new CorrectCandidateFinder(grammar, dataPair);
         finder.run();
         ListMultimap<Form, Form> result = finder.getGreenGraph();
-        if (ConfigFactory.load().getBoolean("stats.showCandidateGraphs")) {
+        if (config.getBoolean("stats.showCandidateGraphs")) {
             System.out.println("Drawing graph for formpair" + dataPair);
             SimpleDynamicGraph.showResult(result);
         }

@@ -18,6 +18,7 @@ import java.util.Map;
  * @date 25/03/2016
  */
 public class LearningProperties {
+    private final static Config config = ConfigFactory.load();
     private final UpdateAlgorithm updateAlgorithm;
     private final double initialPlasticity;
     private final double plasticityDecay;
@@ -61,7 +62,7 @@ public class LearningProperties {
 
     public static LearningProperties fromConfigurationInField(String withString) {
         String prefix = "learning." + (Strings.isNullOrEmpty(withString) ? "" : ".") + withString;
-        Config config = ConfigFactory.load();
+
         Direction direction = Direction.valueOf(config.getString(prefix + "direction"));
         UpdateAlgorithm updateAlgorithm = UpdateAlgorithms.createFromString(config.getString(prefix + "updateAlgorithm"));
         double initialPlasticity = config.getDouble(prefix + "initialPlasticity");

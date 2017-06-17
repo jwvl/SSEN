@@ -62,6 +62,7 @@ public class StringMultimap {
         File file = new File(fileName);
         StringMultimap result = StringMultimap.createNew();
 
+        int lineCounter =0;
         try {
             BufferedReader reader = new BufferedReader(new FileReader(file));
             String firstLine = reader.readLine();
@@ -70,6 +71,7 @@ public class StringMultimap {
                 String[] next = nextLine.split("\t");
                 result.put(next[0],next[1]);
             }
+            System.out.println("Now at line " +lineCounter++);
         }
         catch (IOException e) {
             System.err.println("Couldn't find file " + fileName);

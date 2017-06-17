@@ -3,6 +3,7 @@
  */
 package learn.batch;
 
+import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 import constraints.hierarchy.reimpl.Hierarchy;
 import eval.Evaluation;
@@ -23,7 +24,9 @@ import java.util.concurrent.*;
  */
 public class LearningTrajectory extends AbstractLearningTrajectory {
 
+    private final static Config config = ConfigFactory.load();
     private int numEvaluations;
+    private final double showStatsEvery = config.getDouble("stats.showErrorEvery");
     private static boolean TEST_RESULTS = false;
     private final int resetCounterEvery;
     private UpdateAction lastUpdate = UpdateAction.NO_UPDATE;
@@ -111,11 +114,10 @@ public class LearningTrajectory extends AbstractLearningTrajectory {
     }
 
     private int calculateResetCounterEvery(int numEvaluations) {
-        double asNumber = ConfigFactory.load().getDouble("stats.showErrorEvery");
-        if (asNumber > 1) {
-            return (int) asNumber;
-        } else if (asNumber > 0) {
-            return (int) (asNumber * numEvaluations);
+        if (showStatsEvery > 1) {
+            return (int) showStatsEvery;
+        } else if (showStatsEvery > 0) {
+            return (int)(showStatsEvery * numEvaluations);
         } else {
             return numEvaluations+1;
         }

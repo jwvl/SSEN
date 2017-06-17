@@ -37,6 +37,7 @@ import java.util.UUID;
  * Created by janwillem on 31/07/16.
  */
 public class TrajectoriesTester {
+    private final Config config = ConfigFactory.load();
     private final LearningPropertyCombinations combinations;
     private final Grammar grammar;
     private final PairDistribution trainDistribution;
@@ -54,7 +55,7 @@ public class TrajectoriesTester {
     public TrajectoriesTester(LearningPropertyCombinations combinations, Grammar grammar, PairDistribution pairDistribution) {
         this.combinations = combinations;
         this.grammar = grammar;
-        Config config = ConfigFactory.load();
+
         double testFraction = config.getDouble("learning.testDataFraction");
         numDataToTest = config.getInt("stats.numDataToTest");
         Couple<PairDistribution> testTrain = pairDistribution.splitToTestAndTraining(testFraction);
@@ -167,6 +168,19 @@ public class TrajectoriesTester {
             }
         }
         return result;
+    }
+
+    public Hierarchy getBestHierarchy() {
+        double highest = 100;
+        Hierarchy best = null;
+        for (UUID key: errorRates.keySet()) {
+            double nextScore = errorRates.get(key);
+            if (errorRates.get(key) < highest) {
+                best = finalHierarchies.get(key);
+                highest = nextScore;
+            }
+        }
+        return best;
     }
 
     public Map<UUID, Hierarchy> getFailedHierarchies() {
