@@ -42,15 +42,20 @@ public class SimplePhoneCombinationConstraintFactory extends FormConstraintFacto
 
     public void addFromString(String... input) {
         for (String string: input) {
-            PhoneCombinationConstraint constraint = new PhoneCombinationConstraint(string);
-            constraintMap.put(string,constraint);
+            if (constraintMap.containsKey(string)) {
+
+            } else {
+                PhoneCombinationConstraint constraint = new PhoneCombinationConstraint(string);
+                constraintMap.put(string,constraint);
+            }
+
         }
     }
 
 
     @Override
     public void addForm(PhoneticForm phones) {
-        // does nothink
+
     }
 
     @Override

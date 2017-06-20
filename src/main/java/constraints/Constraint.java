@@ -55,8 +55,8 @@ public abstract class Constraint {
             System.exit(0);
         }
         map[this.id] = this;
-        if (id % 100 == 0) {
-            System.out.println("Created constraint #" + id);
+        if (id % 1000 == 0) {
+            System.out.println("Created constraint #" + id +"(rightlevel:)"+rightLevel);
         }
 
     }
@@ -98,19 +98,12 @@ public abstract class Constraint {
         list.addMultiple(this, getNumViolations(fm));
     }
 
-
-    public int calculateHashCode() {
+    @Override
+    public int hashCode() {
         final int prime = 31;
         int result = 1;
         result = prime * result + id;
         return result;
-    }
-
-
-
-    @Override
-    public int hashCode() {
-        return hashCode;
     }
 
 

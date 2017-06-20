@@ -649,6 +649,11 @@ num[SG]_NUM	∅
 “autre”.g[M]_N	notʁ
 “autre”.g[M]_N	otʁ
 “autre”.g[M]_N	zotʁ
+“autre”.g[F]_N	eotʁ
+“autre”.g[F]_N	ezotʁ
+“autre”.g[F]_N	notʁ
+“autre”.g[F]_N	otʁ
+“autre”.g[F]_N	zotʁ
 “autre”.num[PL]_ADJ	otʁ
 “autre”.num[PL]_ADJ	otʁz
 “autre”.num[SG]_ADJ	otʁ

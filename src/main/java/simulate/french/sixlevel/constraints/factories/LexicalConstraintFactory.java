@@ -23,6 +23,7 @@ import java.util.Collections;
 public class LexicalConstraintFactory extends
         SubmappingConstraintFactory<MfUfMapping, LexicalMapping> {
     public static double SHORTEST_FORM_BIAS = ConfigFactory.load().getDouble("constraints.shortestFormBias");
+    public static double ZERO_FORM_BIAS = ConfigFactory.load().getDouble("constraints.punishZeroMorphs");
     private LexicalHypothesisRepository lexicalHypotheses;
 
     public LexicalConstraintFactory(
@@ -46,8 +47,10 @@ public class LexicalConstraintFactory extends
      */
     @Override
     public LexicalConstraint createConstraint(LexicalMapping lexicalMapping) {
-        if (!isMinimalMapping(lexicalMapping) && lexicalMapping.left().getSyntacticCategory() == SyntacticCategory.N) {
+        if (isMinimalMapping(lexicalMapping) && lexicalMapping.left().getSyntacticCategory() == SyntacticCategory.N) {
             return LexicalConstraint.createInstance(lexicalMapping, SHORTEST_FORM_BIAS);
+        } else if (lexicalMapping.right().isNull()) {
+            return LexicalConstraint.createInstance(lexicalMapping, ZERO_FORM_BIAS);
         }
 
         return LexicalConstraint.createInstance(lexicalMapping);

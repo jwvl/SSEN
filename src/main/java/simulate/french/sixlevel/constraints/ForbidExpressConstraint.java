@@ -50,7 +50,7 @@ public class ForbidExpressConstraint extends FormConstraint<MStructure> {
         if (syntacticWord.getSyntacticCategory().equals(syntacticCategory)) {
             for (MElement element : syntacticWord) {
                 AbstractMFeature2 feature = element.getFeature();
-                if (feature.equals(nullFeature)) {
+                if (feature.isNull()) {
                     return true;
                 }
             }

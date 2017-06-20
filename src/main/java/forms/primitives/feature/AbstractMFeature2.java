@@ -76,7 +76,7 @@ public class AbstractMFeature2 {
     }
 
     public boolean isNull() {
-        return value == NULL_CHAR;
+        return value.equals(NULL_CHAR);
     }
 
     public boolean valueEquals(AbstractMFeature2 other) {
