@@ -29,7 +29,6 @@ public class SyntacticWord implements Subform, ElementCollection<MElement> {
     private MElement concept;
     private Set<MElement> morphologicalElements;
     private String asString;
-    private int hashcode;
 
     /**
      * Private constructor.
@@ -37,7 +36,6 @@ public class SyntacticWord implements Subform, ElementCollection<MElement> {
     private SyntacticWord(SyntacticCategory category) {
         this.category = category;
         morphologicalElements = new HashSet<MElement>();
-        hashcode = 0;
     }
 
     /**
@@ -51,7 +49,6 @@ public class SyntacticWord implements Subform, ElementCollection<MElement> {
             MElement copiedElement = f.contextualCopy();
             receiver.morphologicalElements.add(copiedElement);
         }
-        hashcode = 0;
     }
 
     /**
@@ -134,7 +131,6 @@ public class SyntacticWord implements Subform, ElementCollection<MElement> {
     protected void addElement(MElement feature) {
         morphologicalElements.add(feature);
         asString = null;
-        hashcode = 0;
     }
 
     /*
@@ -241,18 +237,11 @@ public class SyntacticWord implements Subform, ElementCollection<MElement> {
         return category == mElements.category &&
                 type == mElements.type &&
                 Objects.equals(concept, mElements.concept) &&
-                Objects.equals(morphologicalElements, mElements.morphologicalElements);
+                Objects.deepEquals(morphologicalElements, mElements.morphologicalElements);
     }
 
     @Override
     public int hashCode() {
-        if (hashcode == 0) {
-            hashcode = calculateHashCode();
-        }
-        return hashcode;
-    }
-
-    public int calculateHashCode() {
         return Objects.hash(category, type, concept, morphologicalElements);
     }
 

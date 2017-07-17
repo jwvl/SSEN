@@ -34,6 +34,10 @@ public class AttributeSet {
         return Objects.equals(attributes, that.attributes);
     }
 
+    public boolean contains(Attribute attribute) {
+        return attributes.contains(attribute);
+    }
+
     @Override
     public int hashCode() {
         return Objects.hash(attributes);

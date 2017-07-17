@@ -8,12 +8,14 @@ import com.google.common.collect.Sets;
 import com.google.common.collect.Table;
 import com.typesafe.config.ConfigFactory;
 import forms.morphosyntax.Morpheme;
+import forms.morphosyntax.SyntacticCategory;
 import forms.phon.LexicalMapping;
 import forms.phon.Sonority;
 import forms.primitives.segment.Phone;
 import forms.primitives.segment.PhoneSubForm;
 import gen.alignment.MorphemePhoneAlignment;
 import gen.alignment.SubstringDatabank;
+import gen.rule.string.Side;
 import util.collections.StringMultimap;
 
 import java.util.*;
@@ -193,21 +195,23 @@ public class LexicalHypothesisRepository implements Iterable<Morpheme> {
         Set<LexicalMapping> toAdd = Sets.newHashSet();
         for (LexicalMapping mapping: getMinimalMappings()) {
             Morpheme morpheme = mapping.left();
-            PhoneSubForm minimal = mapping.right();
-            Set<PhoneSubForm> otherSubforms = repository.columnKeySet();
-            String leftAdded = nonZeroForm+minimal.contentsAsString();
-            String rightAdded = minimal.contentsAsString()+nonZeroForm;
+            if (morpheme.getSyntacticCategory() != SyntacticCategory.N) {
+                PhoneSubForm minimal = mapping.right();
+                Set<PhoneSubForm> otherSubforms = repository.columnKeySet();
+                String leftAdded = nonZeroForm + minimal.contentsAsString();
+                String rightAdded = minimal.contentsAsString() + nonZeroForm;
 
-            for (PhoneSubForm phoneSubForm: otherSubforms) {
-                String asString = phoneSubForm.contentsAsString();
-                if (asString.equals(leftAdded)) {
-                    PhoneSubForm abstractLeft = PhoneSubForm.createFromString(abstractPhone+minimal.contentsAsString());
-                    System.out.println("Adding " + morpheme +" -- " + abstractLeft);
-                    toAdd.add(LexicalMapping.of(morpheme,abstractLeft));
-                } else if (asString.equals(rightAdded)) {
-                    PhoneSubForm abstractRight = PhoneSubForm.createFromString(minimal.contentsAsString()+abstractPhone);
-                    toAdd.add(LexicalMapping.of(morpheme,abstractRight));
-                    System.out.println("Adding " + morpheme +" -- " + abstractRight);
+                for (PhoneSubForm phoneSubForm : otherSubforms) {
+                    String asString = phoneSubForm.contentsAsString();
+                    if (asString.equals(leftAdded)) {
+                        PhoneSubForm abstractLeft = PhoneSubForm.createFromString(abstractPhone + minimal.contentsAsString());
+                        System.out.println("Adding " + morpheme + " -- " + abstractLeft);
+                        toAdd.add(LexicalMapping.of(morpheme, abstractLeft));
+                    } else if (asString.equals(rightAdded)) {
+                        PhoneSubForm abstractRight = PhoneSubForm.createFromString(minimal.contentsAsString() + abstractPhone);
+                        toAdd.add(LexicalMapping.of(morpheme, abstractRight));
+                        System.out.println("Adding " + morpheme + " -- " + abstractRight);
+                    }
                 }
             }
         }
@@ -218,22 +222,24 @@ public class LexicalHypothesisRepository implements Iterable<Morpheme> {
 
     public void appendPosteriorSchwas() {
         byte[] schwa = Phone.encode("ə");
-        Set<LexicalMapping> toAdd = Sets.newHashSet();
+        Set<LexicalMapping> newMappings = Sets.newHashSet();
         for (LexicalMapping subMapping : repository.values()) {
             Morpheme currentM = subMapping.left();
             PhoneSubForm currentP = subMapping.right();
             byte[] contents = currentP.getContents();
             if (currentP.getContents().length > 1) {
-            Phone asPhone = Phone.getByCode(contents[contents.length-1]);
-            if (asPhone.getSonority() != Sonority.V) {
+            Phone asPhone =currentP.getEdgemost(Side.RIGHT);
+                if (asPhone.getSonority() != Sonority.V && currentM.getSyntacticCategory() != SyntacticCategory.N) {
                 byte[] newContents = Arrays.copyOf(contents, contents.length + 1);
                 newContents[newContents.length - 1] = schwa[0];
                 PhoneSubForm newP = PhoneSubForm.createFromByteArray(newContents);
-                toAdd.add(LexicalMapping.of(currentM,newP));
+                LexicalMapping toAdd = LexicalMapping.of(currentM, newP);
+                System.out.println("Adding lexical mapping" + toAdd);
+                newMappings.add(toAdd);
             }
             }
         }
-        for (LexicalMapping lexicalMapping: toAdd) {
+        for (LexicalMapping lexicalMapping: newMappings) {
             repository.put(lexicalMapping.left(), lexicalMapping.right(), lexicalMapping);
         }
     }

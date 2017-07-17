@@ -18,13 +18,13 @@ import java.util.List;
  * Contains the predefined UF->SF phonological rules for the simulations of Chapter 5.
  */
 public class PredefinedLiaisonRules {
+    private static Config  config = ConfigFactory.load();
     public static List<EdgeBasedRule> edgeRules = createEdgeRules();
-
     /**
      * @return
      */
     private static List<EdgeBasedRule> createEdgeRules() {
-        Config config = ConfigFactory.load();
+
         List<EdgeBasedRule> result = new ArrayList<EdgeBasedRule>();
         if (config.getBoolean("gen.deletionRulesOnUF")) {
             result.addAll(EdgeBasedRuleBuilder.fromString("#z → ∅ / __", Edge.WORD));
@@ -43,8 +43,8 @@ public class PredefinedLiaisonRules {
         }
 
         if (config.getBoolean("gen.schwaDeletionOnUf")) {
-            result.addAll(EdgeBasedRuleBuilder.fromString("ə# → ∅ / __", Edge.WORD));
             result.addAll(EdgeBasedRuleBuilder.fromString("#ə → ∅ / __", Edge.WORD));
+                result.addAll(EdgeBasedRuleBuilder.fromString("#ə → ∅ / __", Edge.MORPHEME));
         }
         if (config.getBoolean("gen.insertionRulesOnUF")) {
             result.addAll(EdgeBasedRuleBuilder.fromString("#∅ → n / |V__", Edge.WORD));
@@ -63,8 +63,31 @@ public class PredefinedLiaisonRules {
             result.addAll(EdgeBasedRuleBuilder.fromString("∅# → ə / |C__|C", Edge.MORPHEME));
         }
 
+        result.addAll(getAbstractRewrites());
 
+        return result;
+    }
 
+    private static List<EdgeBasedRule> getAbstractRewrites() {
+        List<EdgeBasedRule> result = new ArrayList<>();
+        if (config.getBoolean("gen.abstractEnabled")) {
+            List<String> strings = config.getStringList("gen.abstractPhonemes");
+            for (String string : strings) {
+                String[] parts = string.split("~");
+                String realPhoneme = parts[0];
+                String archiPhoneme = parts[1];
+                String deletionRight = String.format("#%s → ∅ / __", archiPhoneme);
+                String deletionLeft = String.format("%s# → ∅ / __", archiPhoneme);
+                String realizationRight = String.format("#%s → %s / __", archiPhoneme, realPhoneme);
+                String realizationLeft = String.format("%s# → %s / __", archiPhoneme, realPhoneme);
+
+                result.addAll(EdgeBasedRuleBuilder.fromString(deletionLeft, Edge.WORD));
+                result.addAll(EdgeBasedRuleBuilder.fromString(deletionRight, Edge.WORD));
+                result.addAll(EdgeBasedRuleBuilder.fromString(realizationRight, Edge.WORD));
+                result.addAll(EdgeBasedRuleBuilder.fromString(realizationLeft, Edge.WORD));
+
+            }
+        }
         return result;
     }
 

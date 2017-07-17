@@ -28,7 +28,7 @@ public class UnderlyingForm extends PhoneSequence {
      */
     private UnderlyingForm(PhoneSubForm concatenatedContents, EdgeIndex boundaries) {
         super(concatenatedContents, boundaries);
-        hashcode = Objects.hash(super.hashCode(), getLevel());
+        hashcode = Objects.hash(concatenatedContents, boundaries);
     }
 
 
@@ -125,15 +125,6 @@ public class UnderlyingForm extends PhoneSequence {
         }
 
         return result;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        UnderlyingForm that = (UnderlyingForm) o;
-        return getLevel() == that.getLevel();
     }
 
     @Override

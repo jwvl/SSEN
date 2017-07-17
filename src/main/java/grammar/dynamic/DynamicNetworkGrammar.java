@@ -78,7 +78,7 @@ public class DynamicNetworkGrammar extends Grammar {
     public Evaluation evaluate(FormPair formPair, boolean resample, double evaluationNoise) {
         DynamicNetworkEvaluation result;
         if (resample) {
-            result = new DynamicNetworkEvaluation(this, evaluationNoise);
+            result = new DynamicNetworkEvaluation(this, evaluationNoise, formPair);
         } else {
             result = new DynamicNetworkEvaluation(this, lastSampledHierarchy);
         }

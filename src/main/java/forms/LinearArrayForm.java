@@ -5,10 +5,7 @@ import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Iterators;
 import forms.primitives.Subform;
 
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * A Form that is defined by an ordered collection of (generic) subforms.
@@ -119,25 +116,24 @@ public abstract class LinearArrayForm<S extends Subform> implements LinearForm<S
         return -1;
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         LinearArrayForm<?> that = (LinearArrayForm<?>) o;
-        return Arrays.equals(contents, that.contents);
+        return Arrays.deepEquals(contents, that.contents);
     }
 
     @Override
     public int hashCode() {
-        return Arrays.hashCode(contents);
+        return Arrays.deepHashCode(contents);
     }
 
     /*
-         * (non-Javadoc)
-         *
-         * @see java.lang.Iterable#iterator()
-         */
+             * (non-Javadoc)
+             *
+             * @see java.lang.Iterable#iterator()
+             */
     @Override
     public Iterator<S> iterator() {
         return Iterators.forArray(contents);

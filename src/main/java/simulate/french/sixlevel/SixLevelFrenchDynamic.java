@@ -3,18 +3,17 @@
  */
 package simulate.french.sixlevel;
 
+import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
+import com.google.common.collect.Table;
 import com.google.common.io.Resources;
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 import constraints.hierarchy.reimpl.Hierarchy;
 import forms.Form;
 import forms.FormPair;
-import forms.morphosyntax.MForm;
-import forms.morphosyntax.MStructure;
-import forms.morphosyntax.Morpheme;
-import forms.morphosyntax.MorphologicalWord;
+import forms.morphosyntax.*;
 import forms.phon.flat.PhoneticForm;
 import forms.primitives.segment.Phone;
 import gen.alignment.MorphemePhoneAligner;
@@ -32,7 +31,8 @@ import grammar.tools.GrammarTester;
 import graph.Direction;
 import io.MyStringTable;
 import io.candidates.CandidateSpacesNodeList;
-import io.candidates.CandidateSpacesToNodeLists;
+import io.candidates.CandidateSpacesToTables;
+import io.riverplot.RiverPlotOutput;
 import io.tableau.SimpleTableau;
 import io.tableau.SimpleTableauBuilder;
 import io.utils.PathUtils;
@@ -42,6 +42,7 @@ import learn.batch.combination.LearningPropertyCombinations;
 import learn.batch.combination.TrajectoriesTester;
 import learn.data.PairDistribution;
 import learn.data.SinglesFilter;
+import simulate.analysis.CandidateMappingTable;
 import simulate.french.sixlevel.data.PfcData;
 import simulate.french.sixlevel.helpers.LexicalHypothesisRepository;
 import simulate.french.sixlevel.helpers.SettingsMap;
@@ -60,6 +61,7 @@ import java.nio.file.Paths;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
+import java.util.UUID;
 
 /**
  * @author jwvl
@@ -115,9 +117,9 @@ public class SixLevelFrenchDynamic {
 
         // 2. Read in data pairs of SemFs and AudFs. Instantiate databank object
         // to keep track of longest common substrings.
-        PairDistribution pairDistribution = createPairDistribution(
-                dataFilePath, semF_level, pF_level);
+
         PfcData pfcData = PfcData.readFromFile(dataFilePath);
+        PairDistribution pairDistribution = pfcData.getPairDistribution();
 
         lcsData = SubstringDatabank.createInstance();
         int maxUnfoundNgraph = config.getInt("gen.constrainers.maxUnfoundNgraph");
@@ -164,7 +166,12 @@ public class SixLevelFrenchDynamic {
         LexicalHypothesisRepository repository = new LexicalHypothesisRepository(lcsData);
 
             if (getLexiconFromFile) {
-                String filename = dataFilePath.replace(".txt",".lex");
+                String filename;
+                if (config.hasPath("files.lexicon")) {
+                    filename = config.getString("files.lexicon");
+                } else {
+                    filename = dataFilePath.replace(".txt",".lex");
+                }
                 StringMultimap stringMultimap = StringMultimap.readFromFile(filename);
                 for (MForm mf : allMforms) {
                     for (MorphologicalWord mWord: mf) {
@@ -258,9 +265,15 @@ public class SixLevelFrenchDynamic {
                 candidateSpaces = candidateSpacesNodeList.toCandidateSpaces(pairDistribution,grammar);
             }
             grammar.addCandidateSpaces(candidateSpaces);
+
             if (config.getBoolean("grammar.writeCandidateSpaces")) {
-                CandidateSpacesToNodeLists.writeToFile(grammar, candidateSpaces, outputPath + "/candidateNodes.txt");
-                //CandidateSpacesToTables.writeToFile(candidateSpaces, outputPath + "/candidateSpaces");
+                String dirName = "/candidate_spaces";
+                String newDirPath = outputPath+dirName;
+                File newDir = new File(newDirPath);
+                boolean success = newDir.mkdir();
+                if (success) {
+                    CandidateSpacesToTables.writeToFile(candidateSpaces,newDirPath);
+                }
             }
         }
 
@@ -290,27 +303,53 @@ public class SixLevelFrenchDynamic {
 
             // TODO Handle this better?
 
-            TrajectoriesTester trajectoriesTester = new TrajectoriesTester(learningPropertyCombinations, grammar, pairDistribution);
+            TrajectoriesTester trajectoriesTester = new TrajectoriesTester(learningPropertyCombinations, grammar, pfcData);
             trajectoriesTester.testAndWrite(dataFileName, numEvaluations, numRuns, numThreads, outputPath);
 //            Map<UUID,Hierarchy> successfulHierarchies = trajectoriesTester.getSuccesfulHierarchies();
-            Hierarchy best = trajectoriesTester.getBestHierarchy();
+            Table<SemSynForm, UUID, CandidateMappingTable> liaisonCandidates = trajectoriesTester.getLiaisonCandidates();
+            if (!liaisonCandidates.isEmpty()) {
+                List<RiverPlotOutput> riverPlotOutputs = Lists.newArrayList();
 
+                for (SemSynForm ssf : liaisonCandidates.rowKeySet()) {
+                    Collection<CandidateMappingTable> allCandidateTables = liaisonCandidates.row(ssf).values();
+                    CandidateMappingTable merged = CandidateMappingTable.createFromCollection(allCandidateTables);
+                    RiverPlotOutput asPlot = new RiverPlotOutput(ssf, merged, 0.01);
+                    riverPlotOutputs.add(asPlot);
 
-            // For printing
-            SimpleTableauBuilder builder = new SimpleTableauBuilder(best);
-            int count = 0;
-            for (FormPair formPair: pairDistribution.getKeySet()) {
-                ViolatedCandidate winner = grammar.getWinner(formPair,false,0.0);
-                builder.addViolatedCandidate(winner);
-                count++;
-                if (count > 40) {
-                    break;
                 }
+                RiverPlotOutput.writeNodeAndEdgeFiles(outputPath + "/riverplot",riverPlotOutputs);
             }
-            SimpleTableau tableau = builder.build();
-            System.out.println(tableau.toSeparatedString("\t"));
 
-        }
+
+                // check this out later
+
+//            List<RiverPlotOutput> riverPlotOutputs = Lists.newArrayList();
+//
+//            for (int i = 1; i < 10; i++) {
+//                for (FormPair fp : liaisonPairs) {
+//                    CandidateMappingTable candidateMappingTable = CandidateMappingTable.createNew();
+//                    RiverPlotOutput riverplot = new RiverPlotOutput(fp.left(),candidateMappingTable,0.05);
+//                    Evaluation outcome = grammar.evaluate(fp, true, 1.0);
+//                    candidateMappingTable.addCandidate(outcome.getWinner().getCandidate(), 1);
+//                }
+//            }
+
+                // For printing
+                Hierarchy best = trajectoriesTester.getBestHierarchy();
+                SimpleTableauBuilder builder = new SimpleTableauBuilder(best);
+                int count = 0;
+                for (FormPair formPair : pairDistribution.getKeySet()) {
+                    ViolatedCandidate winner = grammar.getWinner(formPair, false, 1);
+                    builder.addViolatedCandidate(winner);
+                    count++;
+                    if (count > 40) {
+                        break;
+                    }
+                }
+                SimpleTableau tableau = builder.build();
+                System.out.println(tableau.toSeparatedString("\t"));
+
+            }
 
 
 
@@ -357,5 +396,7 @@ public class SixLevelFrenchDynamic {
             e.printStackTrace();
         }
     }
+
+
 
 }

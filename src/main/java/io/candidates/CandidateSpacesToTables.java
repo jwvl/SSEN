@@ -27,15 +27,17 @@ public class CandidateSpacesToTables {
         Map<Form,Integer> formsAndIndices = Maps.newHashMap();
         Collection<FormPair> formPairs = candidateSpaces.getPairs();
         nodeStrings.add("FormPair\tForm\tLabel\tLevel");
-        edgeStrings.add("FormPair\tIn-id\tOut-id");
+        edgeStrings.add("In-id\tOut-id");
+        int count = 1;
         for (FormPair formPair: formPairs) {
             CandidateGraph candidateGraph = candidateSpaces.getGraph(formPair);
             CandidateGraphWriter writer = new CandidateGraphWriter(candidateGraph);
-            nodeStrings.addAll(writer.writeNodes(formPair.toString()));
-            edgeStrings.addAll(writer.writeEdges(formPair.toString()));
+            nodeStrings.addAll(writer.writeNodes(String.valueOf(count)));
+            edgeStrings.addAll(writer.writeEdges(String.valueOf(count)));
+            count++;
         }
-        writeLines(nodeStrings, (path+"-nodes.txt"));
-        writeLines(edgeStrings, (path+"-edges.txt"));
+        writeLines(nodeStrings, (path+"/graph-nodes.txt"));
+        writeLines(edgeStrings, (path+"/graph-edges.txt"));
 
     }
 

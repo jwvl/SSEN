@@ -9,6 +9,7 @@ import grammar.levels.Level;
 import grammar.levels.predefined.BiPhonSix;
 import util.string.CollectionPrinter;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -19,6 +20,7 @@ import java.util.List;
  * @date Dec 10, 2014
  */
 public class MForm extends LinearArrayForm<MorphologicalWord> {
+    private final int hashCode;
 
     /**
      * Constructor with M-structure and list of Morphemes.
@@ -27,6 +29,16 @@ public class MForm extends LinearArrayForm<MorphologicalWord> {
      */
     MForm(MorphologicalWord[] linearizedMorphemes) {
         super(linearizedMorphemes);
+        this.hashCode = Arrays.deepHashCode(linearizedMorphemes);
+    }
+
+    public MForm readFromString(String input) {
+        String[] elements = input.split(" ");
+        List<MorphologicalWord> toRead = Lists.newArrayList();
+        for (String element: elements) {
+
+        }
+        return null;
     }
 
     public String toString() {
@@ -53,6 +65,20 @@ public class MForm extends LinearArrayForm<MorphologicalWord> {
         }
         return allMorphemes;
 
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        MForm that = (MForm) o;
+        return hashCode == that.hashCode;
+    }
+
+    @Override
+    public int hashCode() {
+        return hashCode;
     }
 
     /**

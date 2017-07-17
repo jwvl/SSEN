@@ -6,6 +6,8 @@ package io.tableau;
 import candidates.Candidate;
 import constraints.Constraint;
 import constraints.RankedConstraint;
+import forms.Form;
+import gen.rule.string.Side;
 import util.collections.FrequencyTable;
 
 import java.util.Collections;
@@ -38,14 +40,22 @@ public class SimpleTableau implements Tableau {
     }
 
 
+    /*
+ * (non-Javadoc)
+ *
+ * @see io.tableau.Tableau#toSeparatedString(java.lang.String)
+ */
+    @Override
+    public String toSeparatedString(String separator) {
+        return toSeparatedString(separator, false);
+    }
 
     /*
      * (non-Javadoc)
      *
      * @see io.tableau.Tableau#toSeparatedString(java.lang.String)
      */
-    @Override
-    public String toSeparatedString(String separator) {
+    public String toSeparatedString(String separator, boolean rightmostOnly) {
         Collections.sort(constraints);
         StringBuilder result = new StringBuilder(candidates[0].getInput().toString());
         for (RankedConstraint rankedConstraint : constraints) {
@@ -58,7 +68,14 @@ public class SimpleTableau implements Tableau {
         result.append("\n");
         for (int iCan = 0; iCan < candidates.length; iCan++) {
             Candidate can = candidates[iCan];
-            result.append(can.outputToBracketedString());
+            String toAppend;
+            if (rightmostOnly) {
+                Form formToAppend = can.getEndForm(Side.RIGHT, false);
+                toAppend = formToAppend.toBracketedString();
+            } else {
+                toAppend = can.outputToBracketedString();
+            }
+            result.append(toAppend);
             for (int iCon = 0; iCon < constraints.size(); iCon++) {
                 Constraint cons = constraints.get(iCon).getConstraint();
                 result.append(separator);

@@ -3,10 +3,10 @@
  */
 package simulate.french.sixlevel.constraints.factories;
 
+import constraints.factories.PhoneTransformConstraintFactory;
 import forms.phon.PhoneTransform;
 import gen.mapping.FormMapping;
 import gen.mapping.specific.SfPfMapping;
-import constraints.factories.PhoneTransformConstraintFactory;
 import simulate.french.sixlevel.constraints.CueConstraint;
 
 /**

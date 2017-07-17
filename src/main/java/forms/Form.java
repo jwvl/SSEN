@@ -66,5 +66,7 @@ public interface Form {
 
     int countSubform(Subform sf);
 
+   // Form readFromString(String s);
+
 
 }

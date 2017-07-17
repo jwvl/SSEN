@@ -125,6 +125,10 @@ public class MElement implements Subform, Comparable<MElement> {
         return feature.toString();
     }
 
+    public MElement readFromString(String input, MFeatureType type) {
+        return new MElement(AbstractMFeature2.readfromString(input),type);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -210,6 +214,10 @@ public class MElement implements Subform, Comparable<MElement> {
         if (result == 0)
             result = feature.toString().compareTo(o.feature.toString());
         return result;
+    }
+
+    public Attribute getAttribute() {
+        return feature.attribute;
     }
 
 

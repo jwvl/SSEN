@@ -20,6 +20,7 @@ import learn.batch.LearningProperties;
  */
 public abstract class Grammar {
 
+    private final ViolatingConstraintCache violatingConstraintCache;
     private final LevelSpace levelSpace;
     private final String name;
     private Hierarchy con;
@@ -38,6 +39,7 @@ public abstract class Grammar {
         this.name = name;
         this.con = con;
         this.defaultLearningProperties = learningProperties;
+        violatingConstraintCache = new ViolatingConstraintCache();
     }
 
 
@@ -109,7 +111,12 @@ public abstract class Grammar {
     public void resetConstraints(double value) {
         Hierarchy h = getHierarchy();
         for (Constraint c: getHierarchy()) {
-            h.putValue(c,value);
+            h.putValue(c,value+c.getInitialBias());
         }
     }
+
+    public ViolatingConstraintCache getViolatingConstraintCache() {
+        return violatingConstraintCache;
+    }
+
 }

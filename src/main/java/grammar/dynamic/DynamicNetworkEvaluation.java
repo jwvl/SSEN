@@ -11,6 +11,7 @@ import constraints.hierarchy.reimpl.Hierarchy;
 import eval.Evaluation;
 import eval.harmony.CostFactory;
 import eval.harmony.CostType;
+import eval.sample.AbstractSampler;
 import eval.sample.XoroShiroSampler;
 import forms.Form;
 import forms.FormPair;
@@ -34,6 +35,7 @@ public class DynamicNetworkEvaluation implements Evaluation {
     private DynamicNetworkGrammar grammar;
     private long id;
     private static long idCounter = 0;
+    private static boolean sampleLazy = config.getBoolean("implementation.lazySampling");
     private FormPair formPair;
     private ViolatedCandidate winner;
     private Hierarchy sampledHierarchy;
@@ -42,9 +44,9 @@ public class DynamicNetworkEvaluation implements Evaluation {
     private final CostFactory costFactory;
     private final AbstractNodeSearcher nodeSearcher;
 
-    public DynamicNetworkEvaluation(DynamicNetworkGrammar dynamicNetworkGrammar, double evaluationNoise) {
+    public DynamicNetworkEvaluation(DynamicNetworkGrammar dynamicNetworkGrammar, double evaluationNoise, FormPair input) {
         this(dynamicNetworkGrammar,
-                dynamicNetworkGrammar.getHierarchy().sample(new XoroShiroSampler(evaluationNoise)));
+                sampleHierarchyForInput(dynamicNetworkGrammar,input, evaluationNoise));
     }
 
     public DynamicNetworkEvaluation(DynamicNetworkGrammar dynamicNetworkGrammar,
@@ -201,6 +203,16 @@ public class DynamicNetworkEvaluation implements Evaluation {
      */
     public Hierarchy getSampledHierarchy() {
         return sampledHierarchy;
+    }
+
+    private static Hierarchy sampleHierarchyForInput(DynamicNetworkGrammar grammar, FormPair formPair, double evaluationNoise) {
+        Hierarchy hierarchy = grammar.getHierarchy();
+        AbstractSampler sampler = new XoroShiroSampler(evaluationNoise);
+        if (sampleLazy) {
+            return hierarchy.sampleLazy2(grammar.getViolatingConstraintCache(), sampler, formPair);
+        } else {
+            return hierarchy.sample(sampler);
+        }
     }
 
 }

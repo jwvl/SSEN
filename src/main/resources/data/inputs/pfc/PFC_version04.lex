@@ -483,9 +483,6 @@ num[SG]_NUM	∅
 “ArtInd”.g[F].num[PL]_DET	de
 “ArtInd”.g[F].num[PL]_DET	dez
 “ArtInd”.g[F].num[SG]_DET	yn
-“ArtInd”.g[F]_DET	d
-“ArtInd”.g[F]_DET	de
-“ArtInd”.g[F]_DET	dez
 “ArtInd”.g[F]_DET	yn
 “ArtInd”.g[M].num[PL]_DET	d
 “ArtInd”.g[M].num[PL]_DET	de
@@ -494,17 +491,11 @@ num[SG]_NUM	∅
 “ArtInd”.g[M].num[SG]_DET	3n
 “ArtInd”.g[M]_DET	3
 “ArtInd”.g[M]_DET	3n
-“ArtInd”.g[M]_DET	d
-“ArtInd”.g[M]_DET	de
-“ArtInd”.g[M]_DET	dez
 “ArtInd”.num[PL]_DET	d
 “ArtInd”.num[PL]_DET	de
 “ArtInd”.num[PL]_DET	dez
 “ArtInd”_DET	3
 “ArtInd”_DET	3n
-“ArtInd”_DET	d
-“ArtInd”_DET	de
-“ArtInd”_DET	dez
 “ArtInd”_DET	yn
 “art”.g[M].num[PL]_N	aʁ
 “art”.g[M].num[PL]_N	eaʁ

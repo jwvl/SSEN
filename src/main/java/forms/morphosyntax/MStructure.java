@@ -3,6 +3,7 @@
  */
 package forms.morphosyntax;
 
+import com.google.common.base.Splitter;
 import forms.LinearArrayForm;
 import grammar.levels.Level;
 import grammar.levels.predefined.BiPhonSix;
@@ -74,6 +75,16 @@ public class MStructure extends LinearArrayForm<SyntacticWord> {
         return concatElementsToString(" ");
     }
 
+    //@Override
+    public static MStructure readFromString(String input) {
+        List<String> lexemeStrings = Splitter.on(',').trimResults().omitEmptyStrings().splitToList(input);
+        SyntacticWord[] inputSyntacticWords = new SyntacticWord[lexemeStrings.size()];
+        for (int i = 0; i < lexemeStrings.size(); i++) {
+            inputSyntacticWords[i] = SyntacticWord.parseFromString(lexemeStrings.get(i));
+        }
+        return new MStructure(inputSyntacticWords);
+    }
+
 
     /**
      * @return
@@ -94,20 +105,17 @@ public class MStructure extends LinearArrayForm<SyntacticWord> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        boolean superEquals = super.equals(o);
-        if (!superEquals) return false;
 
-        MStructure lexemes = (MStructure) o;
+        MStructure that = (MStructure) o;
 
-        boolean result = agreements != null ? agreements.equals(lexemes.agreements) : lexemes.agreements == null;
-        return result;
-
+        if (getLevel() != that.getLevel() ) return false;
+        return Arrays.deepEquals(contents, that.contents);
     }
 
     @Override
     public int hashCode() {
-        int result = super.hashCode();
-        result = 31 * result + (agreements != null ? agreements.hashCode() : 0);
+        int result = 31 *  + Arrays.deepHashCode(contents);
+        result = 31 * result + getLevel().myIndex();
         return result;
     }
 }

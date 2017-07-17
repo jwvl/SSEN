@@ -1,12 +1,16 @@
 package constraints;
 
 import candidates.Candidate;
+import com.google.common.collect.Lists;
 import com.google.common.collect.Ordering;
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 import constraints.helper.ConstraintArrayList;
+import forms.FormPair;
 import gen.mapping.FormMapping;
 import grammar.levels.Level;
+
+import java.util.List;
 
 /**
  * A Constraint can be seen as a function mapping a Transgressor type object
@@ -67,6 +71,14 @@ public abstract class Constraint {
 
     public static int getNumberCreated() {
         return idCounter;
+    }
+
+    public static List<Constraint> getAllCreated() {
+        List<Constraint> result = Lists.newArrayListWithExpectedSize(getNumberCreated());
+        for (int i=0; i < getNumberCreated(); i++) {
+            result.add(Constraint.withIndex(i));
+        }
+        return result;
     }
 
 
@@ -143,5 +155,9 @@ public abstract class Constraint {
 
     public static Constraint withIndex(int index) {
         return map[index];
+    }
+
+    public boolean canViolatePair(FormPair mapping) {
+        return true;
     }
 }

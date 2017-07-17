@@ -48,43 +48,22 @@ public class SFtoPF extends SubGen<SurfaceForm, PhoneticForm> implements
 
     EdgeRuleTransformer transformer;
     private Multimap<PhoneticForm, SurfaceForm> reverseMappings;
+    private CueConstraintFactory cueConstraintFactory;
 
     public SFtoPF(List<EdgeBasedRule> rules) {
         super(BiPhonSix.getSurfaceFormLevel(), BiPhonSix.getPhoneticLevel());
-        rules.addAll(addAbstractRewrites());
         this.transformer = EdgeRuleTransformer.createFromRules(rules);
         reverseMappings = HashMultimap.create();
         List<Phone> cuePhones = Lists.newArrayList(Phone.getInstance('ə'));
-        addAbstractPhones(cuePhones);
-        addConstraintFactory(new CueConstraintFactory());
+        cueConstraintFactory = new CueConstraintFactory();
+        addConstraintFactory(cueConstraintFactory);
         addConstraintFactory(ArticulatoryConstraintFactory.createFromPhones(cuePhones));
         SimplePhoneCombinationConstraintFactory combinationConstraintFactory = new SimplePhoneCombinationConstraintFactory();
         combinationConstraintFactory.addFromString("VV","CC");
         addConstraintFactory(combinationConstraintFactory);
        // addConstraintFactory(new SonorityCombinationConstraintFactory(3));
-    }
 
-    private List<EdgeBasedRule> addAbstractRewrites() {
-        List<EdgeBasedRule> result = new ArrayList<>();
-        if (config.getBoolean("gen.abstractEnabled")) {
-            List<String> strings = config.getStringList("gen.abstractPhonemes");
-            for (String string: strings) {
-                String[] parts = string.split("~");
-                String realPhoneme = parts[0];
-                String archiPhoneme = parts[1];
-                String deletionRight = String.format(".%s → ∅ / __", archiPhoneme);
-                String deletionLeft = String.format("%s. → ∅ / __", archiPhoneme);
-                String realizationRight = String.format(".%s → %s / __", archiPhoneme, realPhoneme);
-                String realizationLeft = String.format("%s. → %s / __", archiPhoneme, realPhoneme);
 
-                result.addAll(EdgeBasedRuleBuilder.fromString(deletionLeft, Edge.SYLLABLE));
-                result.addAll(EdgeBasedRuleBuilder.fromString(deletionRight, Edge.SYLLABLE));
-                result.addAll(EdgeBasedRuleBuilder.fromString(realizationRight, Edge.SYLLABLE));
-                result.addAll(EdgeBasedRuleBuilder.fromString(realizationLeft, Edge.SYLLABLE));
-
-            }
-        }
-        return result;
     }
 
 
@@ -129,7 +108,8 @@ public class SFtoPF extends SubGen<SurfaceForm, PhoneticForm> implements
     private static List<EdgeBasedRule> createSchwaRules() {
         List<EdgeBasedRule> result = Lists.newArrayList();
         if (config.getBoolean("gen.schwaDeletionOnSF")) {
-            result.addAll(EdgeBasedRuleBuilder.fromString("ə. → ∅ / __", Edge.SYLLABLE));
+    //        result.addAll(EdgeBasedRuleBuilder.fromString("ə. → ∅ / __", Edge.SYLLABLE));
+    //        result.addAll(EdgeBasedRuleBuilder.fromString(".ə → ∅ / __", Edge.SYLLABLE));
         }
         if (config.getBoolean("gen.schwaInsertionOnSF")) {
              result.addAll(EdgeBasedRuleBuilder.fromString("∅. → ə / __|C", Edge.SYLLABLE));

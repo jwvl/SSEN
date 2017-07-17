@@ -65,8 +65,11 @@ public class SimplePhoneCombinationConstraintFactory extends FormConstraintFacto
 
     @Override
     protected void addViolatorsForForm(PhoneticForm right, ConstraintArrayList list) {
-        list.addAll(cache.get(right));
-
+        for (String string: constraintMap.keySet()) {
+            PhoneCombinationConstraint constraint = constraintMap.get(string);
+            int numViolations = constraint.getNumViolations(right);
+            list.addMultiple(constraint, numViolations);
+        }
     }
 }
 

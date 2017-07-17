@@ -83,10 +83,10 @@ public class MFormToUF extends SubGen<MForm, UnderlyingForm> {
 
             private int[] getWordBoundaries(MForm input) {
                 int[] result = new int[input.size() - 1];
-                MorphologicalWord[] mWords = input.elementsAsArray();
+                List<MorphologicalWord> mWords = input.elementsAsList();
                 int previous = 0;
                 for (int i = 0; i < result.length; i++) {
-                    result[i] = mWords[i].size() + previous;
+                    result[i] = mWords.get(i).size() + previous;
                     previous = result[i];
                 }
                 return result;

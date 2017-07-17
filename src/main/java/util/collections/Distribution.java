@@ -16,7 +16,7 @@ public class Distribution<O extends Object> {
 
     public Distribution(String name) {
         this.name = name;
-        frequencies = new HashMap<O, Integer>();
+        frequencies = new HashMap<>();
         probabilitiesOutdated = true;
         r = new Random();
     }
@@ -35,7 +35,6 @@ public class Distribution<O extends Object> {
     public void setFrequency(O o, int freq) {
         Integer value = freq;
         frequencies.put(o, value);
-
         probabilitiesOutdated = true;
     }
 
@@ -43,6 +42,14 @@ public class Distribution<O extends Object> {
         Integer toReturn = frequencies.get(o);
         return toReturn == null ? 0 : toReturn;
 
+    }
+
+    public void add(O o, int toAdd) {
+        int total = toAdd;
+        if (frequencies.keySet().contains(o)) {
+            total += frequencies.get(o);
+        }
+        setFrequency(o, total);
     }
 
     public void addOne(O o) {
@@ -58,12 +65,7 @@ public class Distribution<O extends Object> {
         return result;
     }
 
-    public void add(O o, int toAdd) {
-        int total = toAdd;
-        if (frequencies.containsKey(o))
-            total += frequencies.get(o);
-        setFrequency(o, total);
-    }
+
 
     public int getNumPairs() {
         return frequencies.size();

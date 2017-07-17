@@ -4,6 +4,7 @@ import candidates.Candidate;
 import forms.Form;
 import util.collections.FrequencyTable;
 
+import java.util.Collection;
 import java.util.Set;
 
 /**
@@ -73,5 +74,15 @@ public class CandidateMappingTable {
         mappings.addAll(this.getFrequencyTable());
         mappings.addAll(toMerge.getFrequencyTable());
         return new CandidateMappingTable(mappings, size+toMerge.size);
+    }
+
+    public static CandidateMappingTable createFromCollection(Collection<CandidateMappingTable> toMerge) {
+        int totalSize = 0;
+        FrequencyTable<Form,Form> mappings = new FrequencyTable<>();
+        for (CandidateMappingTable table: toMerge) {
+            mappings.addAll(table.getFrequencyTable());
+            totalSize += table.size;
+        }
+        return new CandidateMappingTable(mappings, totalSize);
     }
 }

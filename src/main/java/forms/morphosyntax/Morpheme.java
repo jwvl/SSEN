@@ -55,7 +55,8 @@ public class Morpheme implements Subform, ElementCollection<MElement> {
     }
 
     public static Morpheme createInstance(List<MElement> inputs, SyntacticCategory syntacticCategory) {
-        return new Morpheme(inputs, syntacticCategory);
+        Morpheme result = new Morpheme(inputs, syntacticCategory);
+        return result;
     }
 
     public static Morpheme createInstance(Set<MElement> inputs, SyntacticCategory syntacticCategory) {
@@ -70,7 +71,7 @@ public class Morpheme implements Subform, ElementCollection<MElement> {
         if (o == null || getClass() != o.getClass()) return false;
         Morpheme mElements = (Morpheme) o;
         return syntacticCategory == mElements.syntacticCategory &&
-                Objects.equals(features, mElements.features);
+                features.equals(((Morpheme) o).features);
     }
 
     @Override
@@ -110,6 +111,23 @@ public class Morpheme implements Subform, ElementCollection<MElement> {
         } else {
             return CollectionPrinter.collectionToString(features, ".") + "_" + syntacticCategory;
         }
+    }
+
+    public Morpheme fromString(String input) {
+        if (input.equals("∅")) {
+            return Morpheme.NULL_MORPHEME;
+        } else {
+            int underScoreIndex = input.indexOf("_");
+            String synCatString = input.substring(underScoreIndex);
+            SyntacticCategory syncat = SyntacticCategory.getInstance(synCatString);
+            String morphsString = input.substring(0,underScoreIndex);
+            String[] morphs = morphsString.split(".");
+            List<MElement> mElements = Lists.newArrayList();
+            for (String morph: morphs) {
+               // mElements.add(Me)
+            }
+        }
+        return null;
     }
 
     /*

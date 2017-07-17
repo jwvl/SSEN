@@ -138,6 +138,5 @@ public class MorphAlignConstraintFactory extends FormConstraintFactory<MForm> {
     @Override
     public void addFormMapping(FormMapping fm) {
         addForm((MForm) fm.right());
-
     }
 }

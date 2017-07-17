@@ -1,4 +1,4 @@
- /**
+   /**
  *
  */
 package simulate.french.sixlevel.subgens;
@@ -13,6 +13,9 @@ import forms.phon.flat.UnderlyingForm;
 import forms.phon.syllable.*;
 import forms.primitives.boundary.Edge;
 import forms.primitives.boundary.EdgeIndex;
+import forms.primitives.segment.Phone;
+import gen.constrain.GenConstrainer;
+import gen.constrain.SFAbstractConstrainer;
 import gen.mapping.FormMapping;
 import gen.mapping.SubCandidateSet;
 import gen.mapping.specific.UfSfMapping;
@@ -21,12 +24,13 @@ import gen.rule.edgebased.EdgeRuleTransformer;
 import gen.subgen.SubGen;
 import grammar.levels.predefined.BiPhonSix;
 import simulate.french.sixlevel.constraints.StructuralConstraintType;
-import simulate.french.sixlevel.constraints.factories.FaithfulnessConstraintFactory;
 import simulate.french.sixlevel.constraints.factories.ClusterConstraintFactory;
+import simulate.french.sixlevel.constraints.factories.FaithfulnessConstraintFactory;
 import simulate.french.sixlevel.constraints.factories.SyllableStructureConstraintFactory;
 import simulate.french.sixlevel.helpers.PredefinedLiaisonRules;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
@@ -38,13 +42,19 @@ public class PredefinedUFToSF extends SubGen<UnderlyingForm, SurfaceForm> {
 
     private ISyllabifier syllabifier;
     private EdgeRuleTransformer edgeRuleTransformer;
-    private final int MAX_CONSECUTIVE_C = 5;
+    private final static Config config = ConfigFactory.load();
+    int MAX_CONSECUTIVE_C = config.getInt("implementation.maxClusterSize");
 
     public PredefinedUFToSF() {
 
         super(BiPhonSix.getUnderlyingFormLevel(), BiPhonSix
                 .getSurfaceFormLevel());
-        edgeRuleTransformer = EdgeRuleTransformer.createFromRules(PredefinedLiaisonRules.edgeRules);
+        if (config.getBoolean("gen.applySfEdgeRules")) {
+            edgeRuleTransformer = EdgeRuleTransformer.createFromRules(PredefinedLiaisonRules.edgeRules);
+        }
+        else {
+            edgeRuleTransformer = EdgeRuleTransformer.createFromRules(Collections.emptyList());
+        }
         syllabifier = getSyllabifier();
         Config config = ConfigFactory.load();
         StructuralConstraintType structuralConstraintType = StructuralConstraintType.valueOf(config.getString("implementation.structuralConstraintType"));
@@ -58,6 +68,9 @@ public class PredefinedUFToSF extends SubGen<UnderlyingForm, SurfaceForm> {
         }
 
         addConstraintFactory(new FaithfulnessConstraintFactory());
+        if (config.getBoolean("gen.abstractEnabled")) {
+            addConstrainer(getAbstractConstrainer());
+        }
     }
 
     private static ISyllabifier getSyllabifier() {
@@ -119,7 +132,7 @@ public class PredefinedUFToSF extends SubGen<UnderlyingForm, SurfaceForm> {
             private boolean exceedsMaxConsecutiveC(byte[] result) {
                 int cCounter = 0;
                 for (byte b : result) {
-                    if (Sonority.of(b) == Sonority.C) {
+                    if (Sonority.of(b) != Sonority.V) {
                         cCounter++;
                     } else {
                         cCounter = 0;
@@ -150,4 +163,18 @@ public class PredefinedUFToSF extends SubGen<UnderlyingForm, SurfaceForm> {
         return result;
     }
 
+
+    public GenConstrainer<SurfaceForm> getAbstractConstrainer() {
+        List<String> strings = config.getStringList("gen.abstractPhonemes");
+        byte[] forbiddenBytes = new byte[strings.size()];
+        for (int i=0; i < strings.size(); i++) {
+            String string = strings.get(i);
+            String[] parts = string.split("~");
+            String realPhoneme = parts[0];
+            String archiPhoneme = parts[1];
+            Phone asPhone = Phone.getInstance(archiPhoneme.charAt(0));
+            forbiddenBytes[i] = asPhone.getId();
+        }
+        return new SFAbstractConstrainer(forbiddenBytes);
+    }
 }

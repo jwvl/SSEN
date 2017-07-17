@@ -2,6 +2,8 @@ package simulate.french.sixlevel.helpers;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
+import com.typesafe.config.Config;
+import com.typesafe.config.ConfigFactory;
 
 /**
  * Created by janwillem on 31/07/16.
@@ -9,11 +11,12 @@ import com.google.common.collect.Multimap;
  * (to avoid the hassle of file i/o for that purpose)
  */
 public class SettingsMap {
+    private static Config config = ConfigFactory.load();
     private final Multimap<String,String> settings;
 //    private static String[] updateAlgorithms = {"AllUpHighDown","WeightedUncancelled"};
 //    private static String[] initialPlasticities = {"2.0"};
 //    private static String[] plasticityDecays = {"0.5"};
-    private static String[] initialPlasticities = {"1.0"};
+    private static String[] initialPlasticities = {"1"};
     private static String[] plasticityDecays = {"0.5"};
       private static String[] updateAlgorithms = {"AllUpHighDown"};
 //    private static String[] initialPlasticities = {"2.0"};
@@ -21,6 +24,7 @@ public class SettingsMap {
 
     public SettingsMap() {
         settings = HashMultimap.create();
+
         for (String updateAlgorithm: updateAlgorithms) {
             settings.put("updateAlgorithm",updateAlgorithm);
         }

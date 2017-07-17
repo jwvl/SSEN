@@ -1,14 +1,20 @@
 package grammar.subgraph;
 
 import com.google.common.collect.ListMultimap;
+import com.google.common.collect.Lists;
 import forms.Form;
 import forms.FormPair;
 import gen.mapping.FormMapping;
 import gen.mapping.SubCandidateSet;
 import grammar.dynamic.DynamicNetworkGrammar;
 import graph.explorer.CorrectCandidateFinder;
+import io.candidates.CandidateGraphWriter;
+import io.candidates.CandidateSpacesToTables;
 import learn.data.PairDistribution;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 
 /**
@@ -28,6 +34,11 @@ public class CandidateSpaces {
 
     public void add(CandidateGraph space) {
         spaces.put(space.getFormPair(), space);
+        int id = spaces.size();
+        if (id % 100 == 0) {
+            CandidateGraphWriter writer = new CandidateGraphWriter(space);
+            CandidateSpacesToTables.writeToFile(this,"graph-"+id);
+        }
     }
 
     public List<FormMapping> filter(FormPair formPair, Collection<FormMapping> toFilter) {
@@ -63,5 +74,57 @@ public class CandidateSpaces {
 
     public CandidateGraph getGraph(FormPair formPair) {
         return spaces.get(formPair);
+    }
+
+    public void writeAllToFile(String path) {
+        List<CandidateGraph> graphsList = Lists.newArrayList(spaces.values());
+        for (int i=0; i < graphsList.size(); i++) {
+            String outputPath = path+"/graf-"+i+"";
+            CandidateGraph graph = graphsList.get(i);
+            CandidateGraphWriter writer = new CandidateGraphWriter(graph);
+            List<String> nodes = writer.writeNodes(outputPath);
+            List<String> edges = writer.writeEdges(outputPath);
+        }
+
+    }
+
+    private static void linesToFile(List<String> lines, String outputPath) {
+        BufferedWriter bw = null;
+        FileWriter fw = null;
+
+        try {
+
+
+            fw = new FileWriter(outputPath);
+            bw = new BufferedWriter(fw);
+            for (int i =0; i < lines.size(); i++) {
+                bw.write(lines.get(i));
+                if (i < lines.size()-1) {
+                    bw.newLine();
+                }
+            }
+
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+
+        } finally {
+
+            try {
+
+                if (bw != null)
+                    bw.close();
+
+                if (fw != null)
+                    fw.close();
+
+            } catch (IOException ex) {
+
+                ex.printStackTrace();
+
+            }
+
+        }
     }
 }

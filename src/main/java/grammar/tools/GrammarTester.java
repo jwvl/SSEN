@@ -7,9 +7,9 @@ import forms.Form;
 import forms.FormPair;
 import grammar.Grammar;
 import graph.Direction;
-import learn.data.PairDistribution;
 import learn.ViolatedCandidate;
 import learn.data.LearningData;
+import learn.data.PairDistribution;
 import learn.stats.ErrorCounter;
 import simulate.analysis.CandidateMappingTable;
 
@@ -40,10 +40,10 @@ public class GrammarTester {
             pairErrorCounter.increaseCount(!success);
             count++;
         }
-        System.out.printf("Total error after %d evaluations:%n", numTests);
-        for (FormPair formPair : errorsPerPair.keySet()) {
-            System.out.printf("%s :: %s pct%n", formPair, errorsPerPair.get(formPair).getErrorAsPercentage());
-        }
+//        System.out.printf("Total error after %d evaluations:%n", numTests);
+//        for (FormPair formPair : errorsPerPair.keySet()) {
+//            System.out.printf("%s :: %s pct%n", formPair, errorsPerPair.get(formPair).getErrorAsPercentage());
+//        }
         return totalCounter.getErrorRate();
     }
 
@@ -75,13 +75,22 @@ public class GrammarTester {
         return result;
     }
 
-    public static PairDistribution toPairDistribution(Grammar grammar, LearningData learningData, int testsPerInput, double evaluationNoise) {
-        Set<FormPair> unlabeledPairs = Sets.newHashSet();
-        PairDistribution result = new PairDistribution(UUID.randomUUID().toString());
-        for (FormPair labeled: learningData.getKeys()) {
-            unlabeledPairs.add(labeled.getUnlabeled(Direction.RIGHT));
+    public static void addToCandidateMappingTable(Grammar grammar, CandidateMappingTable result, FormPair formPair, int numTests, double evaluationNoise) {
+
+        int count = 0;
+        while (count < numTests) {
+            FormPair test = formPair;
+            Evaluation evaluation = grammar.evaluate(test.getUnlabeled(Direction.RIGHT), true, evaluationNoise);
+            ViolatedCandidate violatedCandidate = evaluation.getWinner();
+            Candidate candidate = violatedCandidate.getCandidate();
+            result.addCandidate(candidate,1);
+            count++;
         }
-        for (FormPair unlabeled: unlabeledPairs) {
+    }
+
+    public static PairDistribution toPairDistribution(Grammar grammar, Set<FormPair> formPairs, int testsPerInput, double evaluationNoise) {
+        PairDistribution result = new PairDistribution(UUID.randomUUID().toString());
+        for (FormPair unlabeled: formPairs) {
             for (int i = 0; i < testsPerInput; i++) {
                 Candidate winncandidate = evaluateToCandidate(grammar,unlabeled,true,evaluationNoise);
                 Form[] winningForms = winncandidate.getForms();
@@ -90,7 +99,23 @@ public class GrammarTester {
             }
         }
         return result;
+    }
 
+    public static PairDistribution toPairDistribution(Grammar grammar, LearningData learningData, int testsPerInput, double evaluationNoise) {
+        Set<FormPair> unlabeledPairs = Sets.newHashSet();
+        for (FormPair labeled: learningData.getKeys()) {
+            unlabeledPairs.add(labeled.getUnlabeled(Direction.RIGHT));
+        }
+       return toPairDistribution(grammar, unlabeledPairs, testsPerInput, evaluationNoise);
+    }
+
+    public static PairDistribution toPairDistribution(Grammar grammar, Set<Form> forms, Direction direction, int testsPerInput, double evaluationNoise) {
+        Set<FormPair> unlabeledPairs = Sets.newHashSet();
+        for (Form input: forms) {
+            FormPair fp = FormPair.createUnlabeled(input, direction);
+            unlabeledPairs.add(fp);
+        }
+        return toPairDistribution(grammar,unlabeledPairs,testsPerInput,evaluationNoise);
     }
 
     private static ViolatedCandidate evaluateToViolatedCandidate(Grammar grammar, FormPair formPair, boolean resample, double evaluationNoise) {

@@ -129,7 +129,7 @@ public class SurfaceForm extends PhoneSequence {
     private SonorityProfile[] createSonorityProfiles() {
         Edge edgeType = Edge.SYLLABLE;
         EdgeIndex edgeIndex = getBoundaries();
-        int numSubSequences = edgeIndex.getNumSubsequences(edgeType);
+        int numSubSequences = edgeIndex. getNumSubsequences(edgeType);
         int startAt = 0;
         int endAt = edgeIndex.nextSetBit(edgeType, 1);
 

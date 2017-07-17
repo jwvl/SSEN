@@ -11,11 +11,33 @@ import forms.primitives.segment.PhoneSubForm;
 import grammar.levels.Level;
 import grammar.levels.predefined.BiPhonSix;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 /**
  * @author jwvl
  * @date 20/02/2016
  */
 public class PhoneticForm extends PhoneSequence {
+    private int hashCode;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        PhoneticForm phones = (PhoneticForm) o;
+        return Arrays.equals(getByteArray(), phones.getByteArray());
+    }
+
+    @Override
+    public int hashCode() {
+        return hashCode;
+    }
+
+    public int computeHashCode() {
+        return Objects.hash(getLevel(), Arrays.hashCode(getByteArray()));
+    }
 
     /**
      * @param contents
@@ -23,6 +45,7 @@ public class PhoneticForm extends PhoneSequence {
      */
     private PhoneticForm(PhoneSubForm contents, EdgeIndex boundaries) {
         super(contents, boundaries);
+        hashCode = computeHashCode();
     }
 
     public PhoneticForm(PhoneSubForm contents) {
@@ -91,8 +114,6 @@ public class PhoneticForm extends PhoneSequence {
         return new PhoneticForm(contents);
     }
 
-    public static void main(String[] args) {
 
-    }
 
 }

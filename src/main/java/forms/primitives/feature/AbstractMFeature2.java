@@ -71,6 +71,18 @@ public class AbstractMFeature2 {
 
     }
 
+    public static AbstractMFeature2 readfromString(String string) {
+        if (string.startsWith("“")) {
+            String value = string.substring(1,string.length()-1);
+            return new AbstractMFeature2(Attribute.CONCEPT,value);
+        } else {
+            String[] parts = string.replace("]","").split("\\[");
+            String attribute = parts[0];
+            String value = parts[1];
+            return new AbstractMFeature2(Attribute.valueOf(attribute),value);
+        }
+    }
+
     public boolean isConcept() {
         return attribute == Attribute.CONCEPT;
     }
@@ -96,7 +108,7 @@ public class AbstractMFeature2 {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         AbstractMFeature2 that = (AbstractMFeature2) o;
-        return Objects.equals(attribute, that.attribute) &&
+        return attribute == that.attribute &&
                 Objects.equals(value, that.value);
     }
 

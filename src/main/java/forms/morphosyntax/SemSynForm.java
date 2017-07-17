@@ -8,7 +8,9 @@ import forms.LinearArrayForm;
 import grammar.levels.Level;
 import grammar.levels.predefined.BiPhonSix;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author jwvl
@@ -16,13 +18,18 @@ import java.util.List;
  */
 public class SemSynForm extends LinearArrayForm<SyntacticWord> {
     SyntacticCategory headCategory;
+    private String[] conceptStrings;
 
     /**
      * @param contents
      */
     private SemSynForm(SyntacticWord[] contents) {
         super(contents);
-        for (SyntacticWord l : contents) {
+        conceptStrings = new String[contents.length];
+
+        for (int i=0; i < contents.length; i++) {
+            SyntacticWord l = contents[i];
+            conceptStrings[i] = l.getConcept().getFeatureValue();
             if (l.isHead()) {
                 headCategory = l.getSyntacticCategory();
             }
@@ -37,6 +44,11 @@ public class SemSynForm extends LinearArrayForm<SyntacticWord> {
             inputSyntacticWords[i] = SyntacticWord.parseFromString(lexemeStrings.get(i));
         }
         return new SemSynForm(inputSyntacticWords);
+    }
+
+    public SemSynForm readFromString(String input) {
+        Level myLevel = BiPhonSix.getSemSynFormLevel();
+        return createFromString(input, myLevel);
     }
 
 
@@ -73,15 +85,14 @@ public class SemSynForm extends LinearArrayForm<SyntacticWord> {
         if (!super.equals(o)) return false;
 
         SemSynForm lexemes = (SemSynForm) o;
-
         return headCategory == lexemes.headCategory;
-
     }
 
-    @Override
     public int hashCode() {
-        int result = super.hashCode();
-        result = 31 * result + (headCategory != null ? headCategory.hashCode() : 0);
-        return result;
+        return Objects.hash(Arrays.deepHashCode(contents), headCategory);
+    }
+
+    public String[] getConceptStrings() {
+        return conceptStrings;
     }
 }

@@ -10,6 +10,7 @@ import forms.primitives.Subform;
 
 import java.util.Iterator;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -20,6 +21,7 @@ public class MorphologicalWord implements Subform, ElementCollection<Morpheme> {
 
     private final SyntacticCategory category;
     private final List<Morpheme> morphemes;
+    private final int hashCode;
 
     /**
      * @param category
@@ -29,6 +31,7 @@ public class MorphologicalWord implements Subform, ElementCollection<Morpheme> {
                              List<Morpheme> morphemes) {
         this.category = category;
         this.morphemes = ImmutableList.copyOf(morphemes);
+        this.hashCode = calculateHashCode();
     }
 
 	/* (non-Javadoc)
@@ -94,17 +97,19 @@ public class MorphologicalWord implements Subform, ElementCollection<Morpheme> {
         return morphemes != null ? morphemes.equals(morphemes1.morphemes) : morphemes1.morphemes == null;
 
     }
-
     @Override
     public int hashCode() {
-        int result = category != null ? category.hashCode() : 0;
-        result = 31 * result + (morphemes != null ? morphemes.hashCode() : 0);
-        return result;
+        return hashCode;
+    }
+
+
+    public int calculateHashCode() {
+        return Objects.hash(category, morphemes);
     }
 
     /* (non-Javadoc)
-         * @see forms.primitives.Subform#isNull()
-         */
+             * @see forms.primitives.Subform#isNull()
+             */
     @Override
     public boolean isNull() {
         return size() < 1;
@@ -124,6 +129,14 @@ public class MorphologicalWord implements Subform, ElementCollection<Morpheme> {
     @Override
     public String toString() {
         return concatElementsToString("+");
+    }
+
+    public MorphologicalWord readFromString(String input) {
+        String[] split = input.split("\\+");
+        for (String part: split) {
+        //    Morpheme morpheme = new Morpheme(§
+        }
+        return null;
     }
 
     public int getConceptMorphemeIndex() {

@@ -1,10 +1,14 @@
 package candidates;
 
+import com.google.common.collect.Lists;
 import com.google.common.collect.Ordering;
 import forms.Form;
 import forms.FormChain;
+import forms.GraphForm;
 import gen.mapping.FormMapping;
+import gen.rule.string.Side;
 
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -29,6 +33,12 @@ public class Candidate {
      */
     public static Candidate fromInputAndChain(AbstractInput i, FormChain o) {
         return new Candidate(i, o);
+    }
+
+    public static Candidate fromInputAndForms(AbstractInput i, Form... forms) {
+        List<Form> formList = Lists.newArrayList(forms);
+        FormChain chain = FormChain.fromFormstoSimpleMappings(formList);
+        return fromInputAndChain(i,chain);
     }
 
     /**
@@ -113,5 +123,22 @@ public class Candidate {
     @Override
     public int hashCode() {
         return Objects.hash(input, output);
+    }
+
+    public Form getEndForm(Side side, boolean keepGraphForms) {
+        Form[] contents = output.getContents();
+        if (side == Side.RIGHT) {
+            Form rightMost = contents[contents.length-1];
+            if (rightMost instanceof GraphForm) {
+                return contents[contents.length-2];
+            }
+            return rightMost;
+        } else if (side == Side.LEFT) {
+            Form leftMost = contents[0];
+            if (leftMost instanceof GraphForm) {
+                return contents[1];
+            }
+            return leftMost;
+        } else return null;
     }
 }

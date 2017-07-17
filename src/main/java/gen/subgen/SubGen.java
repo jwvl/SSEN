@@ -68,9 +68,10 @@ public abstract class SubGen<F extends Form, G extends Form> {
         if (cachesPairs()) {
             try {
                 return mappingCache.get(form);
-            } catch (ExecutionException e) {
+            } catch (ExecutionException  | ArrayIndexOutOfBoundsException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
+                System.err.println("Unable to generate right form from " + f.toBracketedString());
             }
         }
         SubCandidateSet result = getRightFunction().apply(form);
@@ -185,7 +186,6 @@ public abstract class SubGen<F extends Form, G extends Form> {
             System.out.printf("Size: %d%n", stats.loadCount());
             System.out.printf("Average load penalty: %.2f%n", stats.averageLoadPenalty());
         }
-
     }
 
 }

@@ -1854,7 +1854,7 @@ DET{ArtDef}, N{fac.g=F num=SG}*	lafak	1	0
 DET{ArtDef}, N{fac.g=F num=SG}*	lafak	1	0
 DET{ArtDef}, N{faculté.g=F num=SG}*	lafakylte	1	0
 DET{ArtDef}, N{fait.g=M num=PL}*	lefɛ	1	0
-DET{ArtDef}, N{fait.g=M num=SG}*	lafɛ	1	0
+DET{ArtDef}, N{fait.g=M num=SG}*	ləfɛ	1	0
 DET{ArtDef}, N{fait.g=M num=SG}*	ləfɛ	1	0
 DET{ArtDef}, N{fait.g=M num=SG}*	ləfɛ	1	0
 DET{ArtDef}, N{fait.g=M num=SG}*	ləfɛ	1	0

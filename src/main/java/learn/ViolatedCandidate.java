@@ -4,8 +4,10 @@
 package learn;
 
 import candidates.Candidate;
+import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 import constraints.Constraint;
+import constraints.helper.ConstraintArrayList;
 
 /**
  * @author jwvl
@@ -17,6 +19,14 @@ public class ViolatedCandidate {
 
     public ViolatedCandidate(Multiset<Constraint> violated, Candidate candidate) {
         this.violated = violated;
+        this.candidate = candidate;
+    }
+
+    public ViolatedCandidate(ConstraintArrayList constraints, Candidate candidate) {
+        this.violated = HashMultiset.create();
+        for (Constraint constraint: constraints) {
+            violated.add(constraint);
+        }
         this.candidate = candidate;
     }
 

@@ -1,5 +1,7 @@
 package forms.phon.syllable;
 
+import com.typesafe.config.Config;
+import com.typesafe.config.ConfigFactory;
 import forms.phon.Sonority;
 import forms.primitives.boundary.Edge;
 import forms.primitives.boundary.EdgeIndex;
@@ -14,6 +16,7 @@ import java.util.*;
  * Created by janwillem on 01/04/16.
  */
 public class MaxOnsetSyllabifier implements ISyllabifier{
+    private final static Config config = ConfigFactory.load();
     private final static Set<Sonority> defaultLegalNuclei = createDefaultLegalNuclei();
     private final Set<Sonority> legalNuclei;
     private final OnsetSet onsets;

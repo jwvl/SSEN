@@ -3,6 +3,7 @@
  */
 package util.arrays;
 
+import forms.primitives.segment.Phone;
 import forms.primitives.segment.PhoneSubForm;
 
 import java.util.Arrays;
@@ -17,10 +18,7 @@ public class ByteBuilder {
     private int currentIndex;
     private static int DEFAULT_CAPACITY = 40;
 
-    /**
-     * @param building
-     * @param currentIndex
-     */
+
     public ByteBuilder(int capacity) {
         this.building = new byte[capacity];
         this.currentIndex = 0;
@@ -103,8 +101,12 @@ public class ByteBuilder {
 
         int capacity = beforeBytes.length + (replacement.length - toReplaceLength);
         byte[] newArray = new byte[capacity];
-        System.arraycopy(beforeBytes, 0, newArray, 0, index);
-        System.arraycopy(replacement, 0, newArray, index, replacement.length);
+        try {
+            System.arraycopy(beforeBytes, 0, newArray, 0, index);
+            System.arraycopy(replacement, 0, newArray, index, replacement.length);
+        } catch (ArrayIndexOutOfBoundsException a) {
+            System.out.println("Cannot replace " +Phone.decode(replacement) + " at index " + index + "for bytestring " + Phone.decode(beforeBytes));
+        }
         int sourceIndex = index + toReplaceLength;
         int destIndex = index + replacement.length;
         int restSize = beforeBytes.length - sourceIndex;

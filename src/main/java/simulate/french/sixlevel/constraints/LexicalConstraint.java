@@ -3,14 +3,18 @@
  */
 package simulate.french.sixlevel.constraints;
 
+import constraints.MappingConstraint;
+import forms.FormPair;
+import forms.morphosyntax.MElement;
+import forms.morphosyntax.MFeatureType;
 import forms.morphosyntax.Morpheme;
+import forms.morphosyntax.SemSynForm;
 import forms.phon.LexicalMapping;
 import forms.primitives.segment.PhoneSubForm;
 import gen.mapping.FormMapping;
 import gen.mapping.specific.MfUfMapping;
 import grammar.levels.Level;
 import grammar.levels.predefined.BiPhonSix;
-import constraints.MappingConstraint;
 
 /**
  * @author jwvl
@@ -19,6 +23,8 @@ import constraints.MappingConstraint;
 public class LexicalConstraint extends MappingConstraint<MfUfMapping> {
 
     private final LexicalMapping mapping;
+    private final String conceptValue;
+    private final static String NULL_CONCEPT = "NULL CONCEPT";
 
     /**
      * @param leftLevel
@@ -26,6 +32,15 @@ public class LexicalConstraint extends MappingConstraint<MfUfMapping> {
      */
     protected LexicalConstraint(Level leftLevel, LexicalMapping mapping, double initialBias) {
         super(leftLevel, initialBias);
+        String eventualValue = "NULL CONCEPT";
+        for (MElement element: mapping.left()) {
+            if (element.getType() == MFeatureType.CONCEPT) {
+                eventualValue = element.getFeatureValue();
+                break;
+                }
+            }
+
+        this.conceptValue = eventualValue;
         this.mapping = mapping;
     }
 
@@ -110,4 +125,22 @@ public class LexicalConstraint extends MappingConstraint<MfUfMapping> {
         return result.toString();
     }
 
+    @Override
+    public boolean canViolatePair(FormPair pair) {
+        if (pair.left() instanceof SemSynForm) {
+            SemSynForm ssf = (SemSynForm) pair.left();
+            return canViolateSsf(ssf);
+        } else {
+            return false;
+        }
+    }
+
+    public boolean canViolateSsf(SemSynForm ssf) {
+        for (String value: ssf.getConceptStrings()) {
+            if (value.equals(conceptValue)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

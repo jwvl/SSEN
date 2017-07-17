@@ -34,7 +34,8 @@ public class PairDistribution extends
 
     public void add(Form f, Form g, int frequency) {
         FormPair toAdd = FormPair.of(f, g);
-        add(toAdd, frequency);
+        System.out.println("Adding formpair " + toAdd);
+        add(toAdd,frequency);
     }
 
     public void addOne(Form f, Form g) {

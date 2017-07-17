@@ -78,13 +78,12 @@ public class Visitor {
     }
 
     private VisitState markNodeRedOrGreen(List<Form> successors) {
-        VisitState stateToMark = VisitState.VISITED_RED;
         for (Form f : successors) {
             if (graph.getState(f) == VisitState.VISITED_GREEN) {
-                stateToMark = VisitState.VISITED_GREEN;
+                return VisitState.VISITED_GREEN;
             }
         }
-        return stateToMark;
+        return VisitState.VISITED_RED;
     }
 
     private void backtrack(VisitState markState) {

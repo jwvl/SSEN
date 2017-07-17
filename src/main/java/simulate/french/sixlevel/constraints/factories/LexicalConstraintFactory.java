@@ -53,6 +53,7 @@ public class LexicalConstraintFactory extends
             return LexicalConstraint.createInstance(lexicalMapping, ZERO_FORM_BIAS);
         }
 
+
         return LexicalConstraint.createInstance(lexicalMapping);
     }
 
@@ -90,6 +91,5 @@ public class LexicalConstraintFactory extends
         }
 
     }
-
 
 }

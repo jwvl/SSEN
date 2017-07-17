@@ -4,8 +4,13 @@ import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 import constraints.Constraint;
 import constraints.RankedConstraint;
+import constraints.helper.ConstraintArrayList;
 import constraints.hierarchy.Con;
 import eval.sample.AbstractSampler;
+import eval.sample.XoroShiroSampler;
+import forms.FormPair;
+import forms.morphosyntax.SemSynForm;
+import grammar.ViolatingConstraintCache;
 
 import java.util.*;
 
@@ -143,6 +148,9 @@ public class Hierarchy implements Con {
         Arrays.fill(sampledRankings,Double.NEGATIVE_INFINITY);
         for (int i=0; i < size(); i++) {
             Constraint instance = Constraint.withIndex(i);
+            if (instance == null) {
+                System.err.println("Constraint with index " + i +" not found!");
+            }
             double value = getRanking(instance);
             sampledRankings[i] = sampler.sampleDouble(value);
             rankedList.add(RankedConstraint.of(instance, sampledRankings[i]));
@@ -150,6 +158,60 @@ public class Hierarchy implements Con {
         Collections.sort(rankedList);
         Hierarchy result = new Hierarchy(sampledRankings, rankedList, this.size(),this);
         return result;
+    }
+
+    public Hierarchy sampleTinyNoise() {
+        AbstractSampler tinyNoiseSampler = new XoroShiroSampler(0.00001);
+        return sample(tinyNoiseSampler);
+    }
+
+    public Hierarchy sampleLazy(AbstractSampler sampler, FormPair input) {
+        double[] sampledRankings = new double[rankings.length];
+        List<RankedConstraint> rankedList = new ArrayList<>(size());
+        Arrays.fill(sampledRankings,Double.NEGATIVE_INFINITY);
+        for (int i=0; i < size(); i++) {
+            Constraint instance = Constraint.withIndex(i);
+            if (instance.canViolatePair(input)) {
+                if (instance == null) {
+                    System.err.println("Constraint with index " + i + " not found!");
+                }
+                double value = getRanking(instance);
+                sampledRankings[i] = sampler.sampleDouble(value);
+                rankedList.add(RankedConstraint.of(instance, sampledRankings[i]));
+            }
+        }
+        Collections.sort(rankedList);
+        Hierarchy result = new Hierarchy(sampledRankings, rankedList, this.size(),this);
+        return result;
+    }
+
+    public Hierarchy sampleLazy2(ViolatingConstraintCache cache, AbstractSampler sampler, FormPair input) {
+        double[] sampledRankings = new double[rankings.length];
+        List<RankedConstraint> rankedList = new ArrayList<>(size());
+        Arrays.fill(sampledRankings,Double.NEGATIVE_INFINITY);
+        if (input.left() instanceof SemSynForm) {
+            SemSynForm ssf = (SemSynForm) input.left();
+            ConstraintArrayList normalViolators = cache.getNormalViolators();
+            ConstraintArrayList ssfViolators = cache.getForSsf(ssf);
+            for (Constraint c: normalViolators) {
+                double value = getRanking(c);
+                int id = c.getId();
+                sampledRankings[id] = sampler.sampleDouble(value);
+                rankedList.add(RankedConstraint.of(c, sampledRankings[id]));
+            }
+            for (Constraint c: ssfViolators) {
+                double value = getRanking(c);
+                int id = c.getId();
+                sampledRankings[id] = sampler.sampleDouble(value);
+                rankedList.add(RankedConstraint.of(c, sampledRankings[id]));
+            }
+            Collections.sort(rankedList);
+            Hierarchy result = new Hierarchy(sampledRankings, rankedList, this.size(),this);
+            return result;
+        }
+        else {
+            return sampleLazy(sampler, input);
+        }
     }
 
     private IndexedRanking createIndexedRanking() {
@@ -205,7 +267,7 @@ public class Hierarchy implements Con {
 
     public Hierarchy copy() {
         double[] copiedRankings = Arrays.copyOf(rankings, rankings.length);
-        return new Hierarchy(copiedRankings,copiedRankings.length,parentHierarchy);
+        return new Hierarchy(copiedRankings,size,parentHierarchy);
     }
 
     public void normalize(double meanAt) {
@@ -224,5 +286,10 @@ public class Hierarchy implements Con {
             }
         }
     }
+
+    protected Hierarchy getParentHierarchy() {
+        return parentHierarchy;
+    }
+
 }
 
