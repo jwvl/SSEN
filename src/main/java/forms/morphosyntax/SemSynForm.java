@@ -46,9 +46,10 @@ public class SemSynForm extends LinearArrayForm<SyntacticWord> {
         return new SemSynForm(inputSyntacticWords);
     }
 
-    public SemSynForm readFromString(String input) {
+    public static SemSynForm readFromString(String input) {
         Level myLevel = BiPhonSix.getSemSynFormLevel();
-        return createFromString(input, myLevel);
+        SemSynForm result = createFromString(input, myLevel);
+        return result;
     }
 
 

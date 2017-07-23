@@ -110,6 +110,7 @@ public class PhoneticForm extends PhoneSequence {
      * @return
      */
     public static PhoneticForm createFromString(String rightString) {
+        rightString = rightString.replaceAll("\\[","").replaceAll("\\]","");
         PhoneSubForm contents = PhoneSubForm.createFromString(rightString);
         return new PhoneticForm(contents);
     }

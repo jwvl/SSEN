@@ -119,6 +119,7 @@ public class SixLevelFrenchDynamic {
         // to keep track of longest common substrings.
 
         PfcData pfcData = PfcData.readFromFile(dataFilePath);
+        //pfcData.outputToTable();
         PairDistribution pairDistribution = pfcData.getPairDistribution();
 
         lcsData = SubstringDatabank.createInstance();

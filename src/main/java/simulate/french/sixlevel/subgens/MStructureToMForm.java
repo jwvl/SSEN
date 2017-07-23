@@ -3,22 +3,22 @@
  */
 package simulate.french.sixlevel.subgens;
 
-import com.google.common.base.Function;
-import com.typesafe.config.ConfigFactory;
-import forms.morphosyntax.MForm;
-import forms.morphosyntax.MFormFactory;
-import forms.morphosyntax.MStructure;
-import gen.constrain.MFormEdgeConstrainer;
-import gen.mapping.FormMapping;
-import gen.mapping.PairMapping;
-import gen.mapping.SubCandidateSet;
-import gen.subgen.SubGen;
-import grammar.levels.Level;
-import simulate.french.sixlevel.constraints.factories.MorphOrderConstraintFactory;
-import simulate.french.sixlevel.constraints.factories.TypedAnalyzeConstraintFactory;
+ import com.google.common.base.Function;
+ import com.typesafe.config.ConfigFactory;
+ import forms.morphosyntax.MForm;
+ import forms.morphosyntax.MFormFactory;
+ import forms.morphosyntax.MStructure;
+ import gen.constrain.MFormEdgeConstrainer;
+ import gen.mapping.FormMapping;
+ import gen.mapping.PairMapping;
+ import gen.mapping.SubCandidateSet;
+ import gen.subgen.SubGen;
+ import grammar.levels.Level;
+ import simulate.french.sixlevel.constraints.factories.StemAlignConstraintFactory;
+ import simulate.french.sixlevel.constraints.factories.TypedAnalyzeConstraintFactory;
 
-import java.util.ArrayList;
-import java.util.List;
+ import java.util.ArrayList;
+ import java.util.List;
 
 /**
  * Custom class to build MStructure from SemSynForms.
@@ -35,8 +35,8 @@ public class MStructureToMForm extends SubGen<MStructure, MForm> {
     public MStructureToMForm(Level leftLevel, Level rightLevel) {
         super(leftLevel, rightLevel);
         myFactory = MFormFactory.createInstance();
-        addConstraintFactory(new MorphOrderConstraintFactory());
-        //addConstraintFactory(new StemAlignConstraintFactory());
+        //addConstraintFactory(new MorphOrderConstraintFactory());
+        addConstraintFactory(new StemAlignConstraintFactory());
         //addConstraintFactory(new AnalyzeConstraintFactory());
         //addConstraintFactory(new MorphemeConstraintFactory());
         //addConstraintFactory(new MorphAlignConstraintFactory());

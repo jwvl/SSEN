@@ -144,6 +144,10 @@ public class TrajectoriesTester {
                 System.out.println("Error on liaison distribution: " +errorOnLiaisons);
                 simpleResultsTable.addResult(("Grammar"+i),"LiaisonDistributionError",errorOnLiaisons);
                 double[] results = pfcData.testGrammar(grammar, 10000, evaluationNoise);
+                simpleResultsTable.addResult(("Grammar"+i),"Possible",results[0]);
+                simpleResultsTable.addResult(("Grammar"+i),"NotInData",results[1]);
+                simpleResultsTable.addResult(("Grammar"+i),"inData",results[2]);
+                simpleResultsTable.addResult(("Grammar"+i),"Liaising",results[3]);
                 grammar.resetConstraints(100.0);
 
             }

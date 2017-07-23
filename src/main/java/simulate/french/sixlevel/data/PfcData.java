@@ -2,6 +2,8 @@ package simulate.french.sixlevel.data;
 
 import candidates.Candidate;
 import com.google.common.base.Charsets;
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 import com.google.common.io.Resources;
 import forms.Form;
@@ -30,21 +32,24 @@ import java.util.Set;
  */
 public class PfcData {
     public final PairDistribution pairDistribution;
-    private Set<FormPair> liaisonPairs;
+    private Set<FormPair> liaisingPairs;
     private final Set<SemSynForm> liaisonSsfs;
     private final ConfusionMatrix liaisonConfusions;
+    private final PfcPossibleForms pfcPossibleForms;
 
     private final static Level LEFT_LEVEL= BiPhonSix.getSemSynFormLevel();
     private final static Level RIGHT_LEVEL = BiPhonSix.getPhoneticLevel();
 
-    public PfcData(PairDistribution pairDistribution, Set<FormPair> liaisonPairs) {
+    public PfcData(PairDistribution pairDistribution, Set<FormPair> liaisingPairs) {
         this.pairDistribution = pairDistribution;
-        this.liaisonPairs = liaisonPairs;
+        this.liaisingPairs = liaisingPairs;
         this.liaisonSsfs = Sets.newHashSet();
-        for (FormPair formPair: liaisonPairs) {
+        for (FormPair formPair: liaisingPairs) {
             liaisonSsfs.add((SemSynForm)formPair.left());
         }
         liaisonConfusions = createLiaisonConfusions();
+        pfcPossibleForms  = new PfcPossibleForms("data/inputs/pfc/PFC_pairs_inAndOutOfData.txt");
+
     }
 
     private ConfusionMatrix createLiaisonConfusions() {
@@ -92,8 +97,8 @@ public class PfcData {
         return pairDistribution;
     }
 
-    public Set<FormPair> getLiaisonPairs() {
-        return liaisonPairs;
+    public Set<FormPair> getLiaisingPairs() {
+        return liaisingPairs;
     }
 
 
@@ -122,9 +127,10 @@ public class PfcData {
     }
 
     public double[] testGrammar(Grammar grammar, int numItemsToDraw, double evaluationNoise) {
-        double[] result = new double[3];
+        double[] result = new double[4];
         int liaising = 0;
         int inData = 0;
+        int isPossible = 0;
         PairDistribution liaisonDistribution = getLiaisonDistribution().filter(new SinglesFilter());
         for (int i=0; i < numItemsToDraw; i++) {
             FormPair drawn = liaisonDistribution.drawFormPair();
@@ -134,25 +140,65 @@ public class PfcData {
             Form left = input.left();
             Form right = candidate.getEndForm(Side.RIGHT, false);
             FormPair asPair = FormPair.of(left,right);
-            if (pairDistribution.getKeySet().contains(asPair)) {
-                inData++;
-                if (liaisonPairs.contains(FormPair.of(left,right))) {
+            if (pfcPossibleForms.isPossible(asPair)) {
+                isPossible++;
+                if (pfcPossibleForms.isInData(asPair)) {
+                    inData++;
+                }
+                if (pfcPossibleForms.isLiaising(asPair)) {
                     liaising++;
                 }
             }
             else {
-                System.out.println(asPair +" not in data...");
+                //System.out.println(asPair +" not a possible form...");
             }
 
         }
         int notInData = numItemsToDraw - inData;
-        result[0] = notInData / (double) numItemsToDraw;
-        result[1] = inData / (double) numItemsToDraw;
-        result[2] = liaising / (double) numItemsToDraw;
+        result[0] = isPossible / (double) numItemsToDraw;
+        result[1] = notInData / (double) numItemsToDraw;
+        result[2] = inData / (double) numItemsToDraw;
+        result[3] = liaising / (double) numItemsToDraw;
 
         System.out.println("Finished testing on liaising items");
-        System.out.printf("Out of data: %2f, in data: %2f, liaising: %2f\n",result[0],result[1],result[2]);
+        System.out.printf("Possible forms: %2f, out of data: %2f, in data: %2f, liaising: %2f\n",result[0],result[1],result[2],result[3]);
         return result;
+    }
+
+    public void outputToTable() {
+        System.out.print("SSF\tPF\tLiaising\tInData");
+        Multimap<SemSynForm,PhoneticForm> liaising = HashMultimap.create();
+        Multimap<SemSynForm,PhoneticForm> nonLiaising = HashMultimap.create();
+        for (FormPair fp: pairDistribution.getKeySet()) {
+            SemSynForm ssf = (SemSynForm) fp.left();
+            PhoneticForm pf = (PhoneticForm) fp.right();
+            if (liaisingPairs.contains(fp)) {
+                liaising.put(ssf,pf);
+            } else {
+                nonLiaising.put(ssf,pf);
+            }
+        }
+        for (SemSynForm ssf: liaisonSsfs) {
+            String ssfString = ssf.toBracketedString();
+            if (liaising.containsKey(ssf)) {
+                for (PhoneticForm pf: liaising.get(ssf)) {
+                    String pfString = pf.toBracketedString();
+                    System.out.println(ssf+"\t"+pfString+"\t1\t1");
+                }
+            }
+            else {
+                System.out.println(ssf+"\t???\t1\t0");
+            }
+            if (nonLiaising.containsKey(ssf)) {
+                for (PhoneticForm pf: nonLiaising.get(ssf)) {
+                    String pfString = pf.toBracketedString();
+                    System.out.println(ssf+"\t"+pfString+"\t0\t1");
+                }
+            }
+            else {
+                System.out.println(ssf+"\t???\t0\t0");
+            }
+        }
     }
 
 

@@ -36,7 +36,7 @@ public class TestLiaisonData {
     }
 
     public void testFrequencyTable(FrequencyTable<Form, Form> freqTable) {
-        for (FormPair formPair: pfcData.getLiaisonPairs()) {
+        for (FormPair formPair: pfcData.getLiaisingPairs()) {
             double aCount = freqTable.getFraction(formPair.left(), formPair.right());
             double bCount = realDistribution.getFraction(formPair.left(), formPair.right());
             System.out.println("Liaison pair " +formPair);
