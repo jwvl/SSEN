@@ -14,7 +14,7 @@ package simulate.french.sixlevel.subgens;
  import gen.mapping.SubCandidateSet;
  import gen.subgen.SubGen;
  import grammar.levels.Level;
- import simulate.french.sixlevel.constraints.factories.StemAlignConstraintFactory;
+ import simulate.french.sixlevel.constraints.factories.MorphOrderConstraintFactory;
  import simulate.french.sixlevel.constraints.factories.TypedAnalyzeConstraintFactory;
 
  import java.util.ArrayList;
@@ -35,8 +35,8 @@ public class MStructureToMForm extends SubGen<MStructure, MForm> {
     public MStructureToMForm(Level leftLevel, Level rightLevel) {
         super(leftLevel, rightLevel);
         myFactory = MFormFactory.createInstance();
-        //addConstraintFactory(new MorphOrderConstraintFactory());
-        addConstraintFactory(new StemAlignConstraintFactory());
+        addConstraintFactory(new MorphOrderConstraintFactory());
+        //addConstraintFactory(new StemAlignConstraintFactory());
         //addConstraintFactory(new AnalyzeConstraintFactory());
         //addConstraintFactory(new MorphemeConstraintFactory());
         //addConstraintFactory(new MorphAlignConstraintFactory());
