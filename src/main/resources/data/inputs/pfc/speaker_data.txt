@@ -1,0 +1,5 @@
+Stad	Regio	Code
+Brecey	50
+Domfrontais	Normandie	61
+Ogéviller	Lorraine	54
+Brunoy	Île-de-France	91
