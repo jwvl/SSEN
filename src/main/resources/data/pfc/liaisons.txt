@@ -15,7 +15,7 @@
 75cab1lg,E : Et c'est comme ça que votre mari, il est né donc, euh, c'était à (X), c'est ça ?
 75cab1lg,AB : Non ça c'est mon père.
 75cab1lg,E : Ah ça c'était. Je confonds parce que je me disais <AB : Non non mon mari il est né (XXX) là> ah.
-75cab1lg,(XXX)
+75cab1lg,E : (XXX)
 75cab1lg,AB : Mais les11z autres21z enfants sont nés10 en (X). E : Hum hum. AB : Ouais.
 75cab1lg,E : Mais après il est toujours resté à Paris aussi votre euh <AB : Oui ah on11nVN allait toujours20 on11nVN allait toujours20 en (X) parce que>
 75cab1lg,AB : Le frère aîné de mon beau-père qui était polytechnicien comme mon beau-père <E : Hum hum> était charmant20 et il avait20 une femme très gentille très11z accueillante.
@@ -104,7 +104,7 @@
 75cab1lg,AB : Les chauffeurs de taxi neuf fois sur dix ils parlent politique et bien. E : Hum hum. AB : Et bien. E : Hum hum.
 75cab1lg,AB : Il y a/ il y a des pays où/ où il y a rien on monte dans le taxi on paie la course et voilà le/ le pauvre malheureux si on lui disait euh,
 75cab1lg,AB : alors que pensez-vous du président ? Je me serai affolée.
-75cab1lg,(rires) AB : Non peut-être pas craintif mais n'ayant rien à dire quoi. E : Oui.
+75cab1lg,AB : Non peut-être pas craintif mais n'ayant rien à dire quoi. E : Oui.
 75cab1lg,AB : Mais ça/ ça a. C'est peut-être un défaut mais.
 75cab1lg,AB : C'est/ c'est encore comme ça malgré la télévision. E : Oui. AB : Hum.
 75cab1lg,AB :  Malgré la télévision. E : Je pense que c'est une bonne chose les gens se parlent ils n'ont pas peur de.
@@ -229,7 +229,7 @@
 75ccm1gg,CM : Et je suis rentré en France parce que je voulais changer20 un peu de boulot.
 75ccm1gg,CM : J'ai commencé à chercher mais. Euh c'était20 à la fin de deux mille un c'était20 il y a trois11z ans.
 75ccm1gg,CM : Donc à l'époque tout ce qui était euh marchés financiers20 enfin même de manière générale c'était20 après le onze septembre enfin bon l'économie euh.
-75ccm1gg,(bruit) E : Donc euh.
+75ccm1gg,E : Donc euh.
 75ccm1gg,CM : Un peu plongé le marché de l'emploi était très mauvais, à Londres euh aussi d'ailleurs.
 75ccm1gg,CM : Ah je/ j'ai pas10 été viré en fait je suis parti moi-même mais10 euh je me préparais20 éventuellement20 à me faire virer parce qu'il y avait déjà.
 75ccm1gg,CM : Pas mal de gens qui s'étaient fait virer en deux mille un. (bruit d'un ongle sur verre)
@@ -357,7 +357,7 @@
 75cgn1lg,GN : Euh comme de bien entendu comme toujours dans ces périodes difficiles les11z hivers20 ont10 été durs ils11z ont10 été rudes on11nVN a eu des hivers froids.
 75cgn1lg,E : Hum hum. GN : Beaucoup plus que que maintenant. E : Hum hum. GN : C'était comme ça. Hein.
 75cgn1lg,GN : Avec un ravitaillement20 insuffisant euh dans/ dans les grandes villes comme Paris euh c'était pas drôle alors20 encore.
-75cgn1lg,GN : Que nous11z avions la chance. (bruit) Ayant20 une maison de campagne si vous voulez.
+75cgn1lg,GN : Que nous11z avions la chance. Ayant20 une maison de campagne si vous voulez.
 75cgn1lg,GN : De pouvoir nous faire envoyer des légumes. E : Hum hum.
 75cgn1lg,GN : Donc on11nVN avait déjà des légumes c'était déjà quelque chose et des pommes de terre plus que celles que donnait le ravitaillement. E : Hum hum. <FGN : Ben oui c'est aujourd'hui>
 75cgn1lg,GN : C'est11t aujourd'hui hein ? FGN : Oui est-ce que ça vous gêne si je me sauve ?
@@ -378,9 +378,9 @@
 75cgn1lg,E : Et bon le gelée c'est quelque chose de assez nouveau. GN : Ah ouais. E : Euh ouais ouais <GN : Gelée comme une confiture>
 75cgn1lg,E : Oui donc voilà c'est la confiture qui se mange <FGN : Ah c'est sympa> avec le gibier la charcuterie <GN : Ah d'accord ah ben oui> <FGN : Oui c'est ça> <GN : Parfait>
 75cgn1lg,FGN : Oui oui oui <GN : Avec la> ah c'est très sympa <GN : Ah c'est très gentil> et puis le pot est ravissant.
-75cgn1lg,(rires) E : Oui ça la décoration c'est typiquement <FGN : C'est très mignon hein> ouais typiquement <GN : Très mignon>
+75cgn1lg,E : Oui ça la décoration c'est typiquement <FGN : C'est très mignon hein> ouais typiquement <GN : Très mignon>
 75cgn1lg,FGN : Très très mignon. GN : Ben c'est gentil comme tout.
-75cgn1lg,(bruit) E : Ben non c'est normal de nouveau je vous remercie <GN : Ah il faut que tu signes20 un papier là> ah oui.
+75cgn1lg,E : Ben non c'est normal de nouveau je vous remercie <GN : Ah il faut que tu signes20 un papier là> ah oui.
 75cgn1lg,E : Oui avant de partir euh il vaudrait mieux oui.
 75cgn1lg,GN : Oui parce que si vos parents20 étaient20 en Norvège là pendant l'occupation pendant oui oui <E : Oui non mes/ mes grands-parents mes parents ouais> ben ils11z ont vécu certaines choses quoi.
 75cgn1lg,GN : Pas très/ pas très drôles <E : Oui mes parents sont nés juste a/ après la guerre> oui <FGN : Oui> <E : Et mes/ mes grands-parents étaient là>
@@ -414,7 +414,7 @@
 75cgn1lg,GN : Oui <FGN : De toutes façons il est toujours un peu en retard> d'acc/ oui oui <FGN : Et c'est pas très loin> E : Très bien.
 75cgn1lg,E : Au revoir madame <FGN : Excusez-moi hein> je vous en prie je vous en prie. (bruit)
 75cgn1lg,GN : Oui voilà ce que je peux ce que je peux vous dire.
-75cgn1lg,(bruit) E : Oui très bien.
+75cgn1lg,E : Oui très bien.
 75cgn1lg,E : Euh oui très bien non mais je vous ai posé ques/ la question <GN : Oui> parce que pour l'instant je n'ai pas <GN : Oui> encore eu l'occasion de rencontrer quelqu'un qui <GN : Oui c'est ça oui> qui ont(a) vraiment expériencé euh la guerre.
 75cgn1lg,GN : Alors en fait <E : Qui ont des souvenirs je veux dire> oui c'est ça oh ben des souvenirs on11nVN en11nVN a <E : Oui oui> oui.
 75cgn1lg,E : Mais mais à Paris pour les/ pour les lapins encore ça arrivait qu'on/ qu'on avait le lapin même dans les/ les appartements à Paris <GN : Ah non non non si vous voulez non non ah>
@@ -442,7 +442,7 @@
 75cgn1lg,E : Oh (rires) GN : (rires) Hi alors on fermait les portes et on les (X). E : Ouf.
 75cgn1lg,E : Ah mon avis aujourd'hui si on lui servait du pigeon il <GN : Non non> n'en mangerait pas <GN : Il n'aimerait il n'aimerait plus je pense qu'il n'aimerait plus>
 75cgn1lg,GN : Donc c'est vous dire qu'il y avait des astuces comme ça quoi à/ à l'époque <E : Non mais c'est vrai dans une situation comme ça il faut avoir un peu de fantaisie> la débrouille quoi <E : Ouais ouais ouais> voilà.
-75cgn1lg,(bruit) GN : C'était pas très facile hein. (bruit)
+75cgn1lg,GN : C'était pas très facile hein. (bruit)
 75cgn1lg,GN : Et puis euh (bruit)
 75cgn1lg,GN : Moi j'étais là j'étais à Paris au moment où vraiment les Allemands sont partis.
 75cgn1lg,E : Ah oui. GN : Et euh.
@@ -481,7 +481,7 @@
 75clh1gg,LH : Euh moi ben j'ai pff à part des stages j'étais toujours dans l'édition.
 75clh1gg,E : Hum hum. Euh la situation familiale ? LH : Voilà marié, deux11z enfants.
 75clh1gg,E : Et euh quels sont l'âge de vos enfants ?
-75clh1gg,(rires) E : Ben quel est <LH : Non trente/ trente/ trente-quatre non ?>
+75clh1gg,E : Ben quel est <LH : Non trente/ trente/ trente-quatre non ?>
 75clh1gg,LH : Trente-quatre et trente <FLH : Trente-cinq> trente-cinq et trente.
 75clh1gg,LH : Trente-et-un <FLH : (X) est trente-et-un> ça pousse tout ça (rires) E : Et <LH : Trente-cinq et trente-et-un>
 75clh1gg,E : Pour la scolarisation de vos enfants qu'est-ce qu'ils ont fait comme études ? LH : Eh ben ils11z ont fait euh.
@@ -538,7 +538,7 @@
 75clh1gg,LH : Euh il y a un fond10 un fond de, de gens qui sont très stables20 et puis10 il y a, des gens qui vont10 et qui viennent. E : Hum.
 75clh1gg,E : Euh donc euh pour.
 75clh1gg,E : D'autres informations éventuellement (Chien route) LH : Non j'ai pas de/ de/ d'influences particulières qui/ qui aur/ qui amèneraient20 à.
-75clh1gg,(rires) LH : Un langage euh ben.
+75clh1gg,LH : Un langage euh ben.
 75clh1gg,LH : Un patois20 ou un <E : Hum> ou un.
 75clh1gg,LH : Ou un dialecte particulier (rires) je dirai. E : Hum.
 75clh1gg,E : Evidemment <LH : Oui> ce que je voulais pour vous aussi c'est que vous êtes ling/ enfin vous avez fait des étu/ vous êtes germaniste donc euh <LH : Oui j'ai fait des11z études de lettres de lettres> (Chien qui aboit)
@@ -572,13 +572,13 @@
 75clh1gg,LH : Il faut sé/ il faut se signaler auprès de l'ambassade mais ils l'auront automatiquement si, enfin automatiquement si ils se/ se font identifier.
 75clh1gg,E : Hum. LH : Pff je veux dire ça a pas une importance <E : Hum>
 75clh1gg,LH : (X) <E : Comme ça ils peuvent choisir d'être euh dans l'Union ou en dehors de l'Union> c'est ça voilà <FLH : Exactement oui oui> enfin il faire attention de ne pas faire son service militaire.
-75clh1gg,(rires) E : Ah oui oui c'est pratique pour ça surtout.
+75clh1gg,E : Ah oui oui c'est pratique pour ça surtout.
 75clh1gg,FLH : Ah non pas du tout parce que euh en/ non non en Suisse le service militaire est obligatoire. E : Ah.
 75clh1gg,FLH : Et je me souviens que mon frère n'avait pas fait les démarches pour ne pas le faire parce que ça l'embêtait.
 75clh1gg,FLH : Et que il avait dû enfin ça avait été tangent.
 75clh1gg,FLH : Je me souviens d'un/ d'un drame familial.
 75clh1gg,FLH : (rires) Déjà il aimait pas les militaires mais alors là en plus il fallait y aller en Suisse.
-75clh1gg,(rires) LH : Parce qu'ils font des/ des services si tu veux.
+75clh1gg,LH : Parce qu'ils font des/ des services si tu veux.
 75clh1gg,LH : Un premier service et ensuite ils sont rappelés régulièrement.
 75clh1gg,LH : Tous les/ tous les deux ans je crois euh pour faire un sta/ un/ un une période assez longue <E : Et vous aviez (X)> et ils ont leurs armes chez eux.
 75clh1gg,A : Et c'est un service qui est assez long non ? < LH : Mo/ me on rigole pas avec ça>
@@ -634,7 +634,7 @@
 75xab1gg,E: Tu aimes pas la télé?
 75xab1gg,AB1: Ouais, j'ai pas la télé au foyer non. 
 75xab1gg,E: Non, mais tu peux la regarder en bas si tu veux absolument. 
-75xab1gg,AB1: Ouais, mais j'aime pas. En bas il fait froid. (rire) Et puis euh, bon euh, il y a, tu sais, tout le monde, il y a chaque, il y en a qui veulent regarder ça, toi ça.
+75xab1gg,AB1: Ouais, mais j'aime pas. En bas il fait froid.  Et puis euh, bon euh, il y a, tu sais, tout le monde, il y a chaque, il y en a qui veulent regarder ça, toi ça.
 75xab1gg,AB1: J'aime bien aller au cinéma tu sais quand il en passe le jeudi là. Là j'ai vu qu'il avait 'Le Temps des gitans' ouais, de Koustouritza  et Arizona Dream. 
 75xab1gg,AB1: Et là, ouais j'aime bien là, parce que souvent les films qui passent, ils sont pas trop mal. Et j'aime bien de temps en temps aller voir euh les films qui passent le jeudi ouais. <E: Ah d'accord.> Ça c'est sympa.
 75xab1gg,E: Et alors tu as, tu as lu des bouquins sur les talibans et tout ça?
@@ -727,7 +727,7 @@
 75xab1lg,AB1: Ah ben oui.
 75xab1lg,AB1: Ouh là, ouh là là (rires), ça fait peur. 
 75xab1lg,E: Non. 
-75xab1lg,AB1: Ah oui. Merde. Je suis désolé. Désolé. Excusez-moi. J'ai pas fait exprès. (rire) J'ai pas fait exprès.
+75xab1lg,AB1: Ah oui. Merde. Je suis désolé. Désolé. Excusez-moi. J'ai pas fait exprès.  J'ai pas fait exprès.
 75xab1lg,SB1: Donc euh.
 75xab1lg,AB1: Voilà quoi. 
 75xab1lg,SB1: Ben voilà. 
@@ -735,14 +735,14 @@
 75xab1lg,SB1: Tu es content de l'habiter tout seul? 
 75xab1lg,AB1: Très content. 
 75xab1lg,SB1: Qu'est-ce que tu feras? Ce serait quoi la première chose que tu feras?
-75xab1lg,(bruit) (rire)
+75xab1lg,
 75xab1lg,SB1: Tu va arrêter de frapper sur cette table?
 75xab1lg,AB1: Tu veux une baffe?
 75xab1lg,SB1: Quoi?
 75xab1lg,AB1: Tu veux une baffe?
 75xab1lg,SB1: Hé, tu as pas intérêt à me demander si (XX), moi je te ramène une. Assieds-toi là.
 75xab1lg,AB1: Non, je suis (XX). <SB1: Ou là.>
-75xab1lg,SB1: Là tu vas (X), tu vas voir (XX) <AB1: Là je frappe.> Si jamais, si jamais tu re/, tu refais un seul bruit sur la table, c'est moi qui te la mets, la baffe. (bruit) (rire)
+75xab1lg,SB1: Là tu vas (X), tu vas voir (XX) <AB1: Là je frappe.> Si jamais, si jamais tu re/, tu refais un seul bruit sur la table, c'est moi qui te la mets, la baffe. 
 75xab1lg,AB1: Oui mamie. 
 75xab1lg,SB1: Non mais. 
 75xab1lg,AB1: Bon. C'est sérieux là. C', c'est10 un test là. En train de se faire analyser, alors tu, tu arrêtes de, de déconner.
@@ -836,7 +836,7 @@
 75xab1lg,E: Mais c'est une ville riche. Non?
 75xab1lg,AB1: Non, ça a rien à voir. Je pense, c'est les villes qui sont un peu euh, un peu plus grosses que.
 75xab1lg,E: Mais Toulouse c'est beaucoup plus grand que Montpellier. <SB1: Oui.>
-75xab1lg,AB1: Oui mais tu es, tu es pas allée voir quinze mille médecins. (rire) 
+75xab1lg,AB1: Oui mais tu es, tu es pas allée voir quinze mille médecins.  
 75xab1lg,SB1: J'y suis quand-même restée cinq ans, donc euh, en tout cas j'en avais vu plus qu'à Paris, ça c'est sûr.
 75xab1lg,AB1: Oui. 
 75xab1lg,SB1: Et euh, non j'ai, j'ai jamais eu des dépassements d'horaires, d'honoraires. 
@@ -919,7 +919,7 @@
 75xad1gg,AD1: Je ne savais pas. Je ne savais pas. Euh. Un jour le hasard a fait que j'ai rencontré une amie avec qui j'avais été à l'école, à Aubin. Mais j'étais heureuse comme tout.		
 75xad1gg,AD1: Euh. Alors on a commencé un petit peu à se fréquenter, et puis elle s'est mariée et puis euh. Bon ben. On s'est perdu de vue après parce que,
 75xad1gg,AD1: pour des raisons qui, qui ont été euh bêtes, oui.
-75xad1gg,A: Alors, euh, que je peux pas dire là si c'est enregistré. (rire)
+75xad1gg,A: Alors, euh, que je peux pas dire là si c'est enregistré. 
 75xad1gg,AD1: Puis un jour, j'ai une euh, une fille qui est venue me v/, qui m'a écrit, qui était à l'orphelinat, une toute petite.
 75xad1gg,AD1: Qui était à l'orphelinat, et à qui on lui a raconté quelque chose qui s'était passé euh quand on était à l'orphelinat, quand elle était toute petite.
 75xad1gg,AD1: C'est-à-dire que elle avait reçu une correction parce qu'elle avait fait pipi par une soeur. Et moi euh, bon ben, j'ai pas pu le supporter et je lui ai dit:
@@ -1091,7 +1091,7 @@
 75xba1lg,BA1: Ah.
 75xba1lg,AD1: Parce qu'à un moment donné j'étais en train de balayer la maison. Et puis euh qu/, et ça devenait pathétique ce qui racontait, alors je m'arrête avec mon balai, et puis j'écoute.
 75xba1lg,AD1: Et puis il fait euh tou/, sans, sans changer de ton, rien du tout, il continue son histoire, et puis il lui dit, toujours en turc, il lui dit: 'Cette fille comprend le turc.'
-75xba1lg,AD1: Ah au même moment, j'ai, (rire), avec mon balai.
+75xba1lg,AD1: Ah au même moment, j'ai, , avec mon balai.
 75xba1lg,CR: (XX) c'est comme ça?
 75xba1lg,NV: Ah j'avais fait trois fois, ah non, il en manque cinq.
 75xba1lg,CR: (XXXX) trente-cinq apparemment, merci.
@@ -1211,7 +1211,7 @@
 75xba1tg,Beaulieu préfère être inconnue et tranquille plutôt que de se trouver20 au centre d'une bataille politique dont, par la télévision, seraient témoins des millions d'électeurs. 
 75xcm1gg,CM1: Mais, euh, pourquoi j'ai fait S, parce que ça m'ouvrait toutes les portes et que je savais pas trop ce que je voulais faire.
 75xcm1gg,E: Et tu étais plutôt <CM1: Je savais ce que je voulais pas faire.> bonne en maths ou en langues? Ou en sciences ou en langues? <CM1: J'étais bonne>
-75xcm1gg,CM1: partout donc, non je. (rire) La fille. Non, non, j'ai. J'ai cru que ça rentrait chez moi.
+75xcm1gg,CM1: partout donc, non je.  La fille. Non, non, j'ai. J'ai cru que ça rentrait chez moi.
 75xcm1gg,CM1: J'exagère, non, non, euh, pour aussi que j'étais la meilleure, j'étais la meilleure en ma/. Euh, non, là où j'étais la meilleure, c'était20 en maths.
 75xcm1gg,CM1: Et puis euh, j'aimais bien la soeur là, qui nous faisait les cours de maths, et donc euh, je sais pas, ça marchait bien. Physique aussi, en b/, ah oui en, en biologie, j'étais pas très bonne.
 75xcm1gg,CM1: Parce que, euh, enfin, je vais pas rentrer dans ces détails, mais tu vois il avait20 une façon de nous11z apprendre la biologie, le prof, que j'aimais pas du tout.
@@ -1243,7 +1243,7 @@
 75xcm1gg,E: C'est quoi l'E.N.S.?
 75xcm1gg,CM1: École Nationale Supérieure. <E: Oui, mais ça sert à quoi?>
 75xcm1gg,CM1: C'est des11z écoles pour former l'élite intellectuelle de notre pays, on va dire ça. Donc c'est des11z écoles qui sont sponsorisées par l'Etat, donc, si tu veux, des fonctionnaires. 
-75xcm1gg,CM1: Donc dès ton11n entrée euh à l'école, à la fin des deux11z années de prépa, tu es payé, par l'Etat français, donc. <E: C'est agréable.> C'est sympa. (rire)
+75xcm1gg,CM1: Donc dès ton11n entrée euh à l'école, à la fin des deux11z années de prépa, tu es payé, par l'Etat français, donc. <E: C'est agréable.> C'est sympa. 
 75xcm1gg,CM1: Et donc, en parallèle, tu donnes des cours, donc, si tu veux, la plupart des temps, c'est des chercheurs
 75xcm1gg,CM1: ou alors des professeurs de, euh, des, de troisième cycle, ou de, de deuxième cycle quoi, enfin, des profs d'université machin comme ça. Je pense que beaucoup euh,
 75xcm1gg,CM1: après, attends, je peux pas dire, je connais pas par coeur, je pense qu'il y en11n a un certain nombre qui doivent faire après des doctorats, des trucs comme ça, des thèses de doctorat. 
@@ -1314,7 +1314,7 @@
 75xcm1lg,E: Ah, j'adore. 
 75xcm1lg,SL1: Ah. (rires) Té. (XX) qu'est-ce que c'est cette impasse?
 75xcm1lg,CM1: Mais je sais pas, je trouve ça cucu. Ça manque de euh, il y a trop de bons sentiments, c'est tout. Quoi? Mais10 il faut parler.
-75xcm1lg,(rire) CM1: Mais, si tu chronomètres hein.
+75xcm1lg, CM1: Mais, si tu chronomètres hein.
 75xcm1lg,SL1: (XXX) tu veux pas refaire, on refait.
 75xcm1lg,E: Oui. Ça chronomètre, c'est sûr.
 75xcm1lg,CM1: Mais quoi, refaire quoi? 
@@ -1329,7 +1329,7 @@
 75xcm1lg,E: Attends.
 75xcm1lg,CM1: Attends. Ouf, putain. (rires)
 75xcm1lg,E: Non, pas beaucoup. 
-75xcm1lg,(rire)
+75xcm1lg,
 75xcm1lg,CM1: Bon, quel de (X).
 75xcm1lg,SL1: Tu as passé le réveillon avec qui?
 75xcm1lg,E: Non, mais c'est pas à moi de parler.
@@ -1375,7 +1375,7 @@
 75xcm1lg,CM1: Ouais non, mais c'est clair. <E: Non mais elle, elle (XX).>
 75xcm1lg,CM1: Non. Mais10 attends. Ça fait pas longtemps que je suis là. Mais je sais bien que, si je restais plus d'un11n an euh, puis ça serait légitime, je veux dire, j'ai.
 75xcm1lg,SL1: C'est vrai qu'on en avait parlé. <E: Parce que>
-75xcm1lg,E: Les gens qui font virer, ils trouvent très vite un appart. (rire)
+75xcm1lg,E: Les gens qui font virer, ils trouvent très vite un appart. 
 75xcm1lg,GG1: Ben non ouais.
 75xcm1lg,CM1: Pas tous. Non, non pas tous. <GG1: (XX) ils galèrent.>
 75xcm1lg,CM1: Non, non, attends, ils galèrent. Mais ceux, attends, attends, écoute-moi, ceux qui se permettent, la directrice qu'elle s'est permis de, pas de virer, mais presque, c'est des gens qui ont10 un11n emploi stable. Elle va, s'amuse pas à virer euh quelqu'un qui est euh.
@@ -1417,7 +1417,7 @@
 75xcm1lg,jeune homme: (XX) vous avez enregistré de moi?
 75xcm1lg,SL1: (X), ça promet. (rires)
 75xcm1lg,SL1: Alors, Sébastien, c'est un gros con. 
-75xcm1lg,(rires) 
+75xcm1lg,
 75xcm1lg,SL1: La porte. 
 75xcm1lg,CM1: (XXX)
 75xcm1lg,E: Moi, ce que je comprends pas trop <SL1: C'est tout à fait (XXX) de.>, que, que, que gens qui euh, <CM1: Tu comprends, moi j'aurais honte, mais vraiment.> qui, qui, non mais des gens qui gagnent bien, qui ont un emploi fixe,
@@ -1440,7 +1440,7 @@
 75xcm1lg,GG1: Burkina, c'était pour moi. <SL1: Non, non.>
 75xcm1lg,SL1: Parce que (X), c'est Toulouse. Con.
 75xcm1lg,CM1: Je m'en fou.
-75xcm1lg,(rire)
+75xcm1lg,
 75xcm1lg,SL1: D'ailleurs une question en passant. La (XXXXXXX) est un champignon non toxique? Vrai ou faux?
 75xcm1lg,CM1: Oh non, une question de merde. Hein, mets plutôt le Trivial. Il est pas? 
 75xcm1lg,SL1: Mais répondez à la question.
@@ -1483,7 +1483,7 @@
 75xcm1lg,CM1: Il a dit à un moment que euh, tu sais, à midi, tu as dit à un moment que je sais pas, peut-être que tu en acheterais une et tout. Du coup , je me suis dit: 'Stéphan en achète une, on va se retrouver avec deux.' Du coup je l'ai pas achetée. <SL1: Non moi j'ai pas (X).>  Et comme tu l'a pas acheté, j'aurais mieux fait de l'acheter. 
 75xcm1lg,SL1: Oui mais.
 75xcm1lg,CM1: Chez Paul, il y en avait, ils avaient l'air trop. <GG1: Ah ouais?>
-75xcm1lg,E: Ah, chez Paul. (rire)
+75xcm1lg,E: Ah, chez Paul. 
 75xcm1lg,SL1: Chez Paul. Je garde un bon souvenir de chez Paul, c'est vrai.
 75xcm1lg,CM1: Et je fais exprès pour vous chiner, mais en plus.
 75xcm1lg,GG1: Oui. Mais moi j'ai toujours pas goûté ses sandwichs de chez Paul quoi. L'autre fois, (XX).
@@ -1587,7 +1587,7 @@
 75xdl1gg,E: Mais l'hiver vous ne venez pas <D: Ah non.> à Toussaint? <DL1: Non, non, non, non, non.> Même à Pâques? 
 75xdl1gg,DL1: Non, non. Une fois. Une fois, mais nous y restons.
 75xdl1lg,DL1: Vous buvez pas de vin? 
-75xdl1lg,E: Non mais là, après, je vais aller à la fac euh, (rire) je vais marquer des bêtises.
+75xdl1lg,E: Non mais là, après, je vais aller à la fac euh,  je vais marquer des bêtises.
 75xdl1lg,JL1: C'est compliqué pour aller à la fac de chez vous? 
 75xdl1lg,E: Non. (mm) Il y a la S.N.C.F., il y a la gare Pont Cardinet. C'est juste après Saint Lazare. 
 75xdl1lg,JL1: Ah oui, oui, je connais, oui. 
@@ -1604,7 +1604,7 @@
 75xdl1lg,E: C'était toujours la dispute en famille. Tout le monde voulait les cuisses. 
 75xdl1lg,DL1: Ah bon. Ah non, mais moi c'est, c'est un truc, je prends jamais moi la cuisse. Vous savez ce que j'aime, moi? Mais on l'a pas mis sur la table parce que tu sais ce que j'aime, c'est le croupion, les carcasses. 
 75xdl1lg,E: Ah. 
-75xdl1lg,DL1: (rire)
+75xdl1lg,DL1: 
 75xdl1lg,E: On m'a expliqué, il paraît qu'il y a des régions en France où euh ça se met pas sur la table. 
 75xdl1lg,DL1: Non. <JL1: Non, non.> Non, non, non, non, on le met pas. C'est comme, vous savez ce que j'aime dans les lapins? C'est la tête. 
 75xdl1lg,E: Ah? 
@@ -1748,7 +1748,7 @@
 75xep1gg,E: Alors, pourquoi tu es à Paris?
 75xep1gg,EP1: Pour finir mes11z études.
 75xep1gg,E: Et euh, tu voulais pas le faire ailleurs? Tu voulais absolument venir à Paris, ou euh? 
-75xep1gg,EP1: Non euh, donc et j'ai fait un DEUG à Rodez, DEUG A.E.S., et une licence et une maîtrise (bruit) A.E.S. 
+75xep1gg,EP1: Non euh, donc et j'ai fait un DEUG à Rodez, DEUG A.E.S., et une licence et une maîtrise A.E.S. 
 75xep1gg,EP1: à Toulouse, et puis j'ai décidé de continuer dans les ressources20 humaines. Donc euh, j'ai postulé dans plusieurs20 écoles. Euh, les premières que j'ai postulé, c'est10 à Lyon et à Paris, j'ai commencé par deux.
 75xep1gg,EP1: Et j'étais prise aux deux. Donc il a fallu faire un choix entre Lyon et Paris. Et question de euh, pas de distance, mais de direct pour rentrer chez moi, puisque pour rentrer d' ici, il faut six11z heures à peu près, pour aller20 en Aveyron.
 75xep1gg,EP1: Et pour aller20 à Lyon, si j'avais20 été en voiture, il fallait que cinq heures, mais si j'étais20 en train, il fallait huit ou neuf11v heures. 
@@ -1917,11 +1917,11 @@
 75xep1lg,E: Ah mais c'est, c'est comme ca qu'ils sont devenus riches.
 75xep1lg,ST1: Ouais.
 75xep1lg,EP1: Ah ouais même et le pouvoir après. Non non mais. 
-75xep1lg,ST1: Il faut qu'on se révolte. (rire)
+75xep1lg,ST1: Il faut qu'on se révolte. 
 75xep1lg,EP1: On y peut pas grand chose, tu sais. 
 75xep1lg,ST1: (X). Malheureusement. À moins de prendre le pouvoir.
 75xep1lg,EP1: Et même si je te donne un pouvoir de la France. Si je te dis: 'Tiens tu l'a là, qu'est-ce que tu vas faire?'
-75xep1lg,(rire) ST1: Mais moi je ferai pas comme eux. (XXX) <EP1: (XXX)>
+75xep1lg, ST1: Mais moi je ferai pas comme eux. (XXX) <EP1: (XXX)>
 75xep1lg,EP1: Ouais, tu détourneras pas de l'argent, mais bon. Tu as, je suis sûre, une fois ou l'autre, tu as une envie d'en abuser. Par exemple tu fais un voyage, tu prends l'avion, tu dis: 'Té,
 75xep1lg,EP1: tu veux pas venir avec moi?' Alors que tu as pas le droit de faire sur des, des amis.
 75xep1lg,ST1: Ouais, mais ça c'est différent.
@@ -1984,7 +1984,7 @@
 75xep1lg,EP1: Oui, mais bon. Tu sais que ça, quand on te retire à la fin du mois ou à la fin de, ça te change pas grand chose, ils faut que tu (XXX) tes.
 75xep1lg,E: D'après ce que j'ai lu en Angleterre, c'est, c'est pas mieux, c'est euh, c'est unique/, uniquement pour les top models, c'est mieux.
 75xep1lg,EP1: Ah ouais?
-75xep1lg,E: Pour Laetitia Casta. (rire) Pour tous les autres, c'est pareil, comme ici.
+75xep1lg,E: Pour Laetitia Casta.  Pour tous les autres, c'est pareil, comme ici.
 75xep1tg,Le Premier Ministre ira-t-il à Beaulieu?
 75xep1tg,Le village de Beaulieu est11t en grand11t émoi. Le Premier Ministre a en11nVO effet décidé de faire étape dans cette commune au cours de sa tournée de la région en fin d'année. 
 75xep1tg,Jusqu'ici les seuls titres de gloire de Beaulieu étaient son vin blanc sec, ses chemises20 en soie, un champion local de course à pied (Louis Garret), 
@@ -2065,7 +2065,7 @@
 75xjo1gg,JO1: Oui. Déjà depuis, depuis petit, depuis très petit. 
 75xjo1gg,E: Et euh, alors cette année sabbatique à Madrid, qu'est-ce que tu as fait?
 75xjo1gg,JO1: Cette année sabbatique à Madrid. Et bien qu'est-ce que j'ai fait? Bon (XXX) sabbatique, j'y ai quand-même donné euh des petits cours de, quelques petits cours de français à des petits Espagnols.
-75xjo1gg,JO1: Je mouche. (rire) Je précise pour le petit bruit. Que personne ne s'inquiète. Ah. 
+75xjo1gg,JO1: Je mouche.  Je précise pour le petit bruit. Que personne ne s'inquiète. Ah. 
 75xjo1gg,JO1: Et euh, donc euh, j'avais pas beaucoup d'heures de toute façon, j'avais trois heures par jour, du lundi au vendredi, et ça encore seulement pendant les euh,
 75xjo1gg,JO1: les six derniers mois de l'année, les six premiers mois de l'année, j'ai rien fait du tout. Donc vraiment j'étais complètement oisif. Et donc en fait, ce que j'ai fait,
 75xjo1gg,JO1: c'est euh, mais, ce que font les Espagnols euh, c'est-à-dire sortir, danser, boire,
@@ -2073,11 +2073,11 @@
 75xjo1gg,JO1: des choses finalement (XXX) très simples. Euh, et euh, être avec euh des amis, j'ai connu énormément de gens, beaucoup, beaucoup de monde,
 75xjo1gg,JO1: des gens de, des Espagnols et des Français aussi, des gens qui viennent de, d'Amérique Latine. 
 75xjo1gg,E: Et la journée?
-75xjo1gg,JO1: Et la journée, ben parfois, ben j'ai un peu honte de le dire mais (rire), j'ai pas vraiment honte en fait, je fais comme si j'avais honte, mais j'ai pas vraiment honte en fait.
+75xjo1gg,JO1: Et la journée, ben parfois, ben j'ai un peu honte de le dire mais , j'ai pas vraiment honte en fait, je fais comme si j'avais honte, mais j'ai pas vraiment honte en fait.
 75xjo1gg,JO1: Ben souvent, je vivais la nuit. (bruit de portable) (XXX) mon problème. Je dormais le jour. Pas tout le temps, mais disons, on va dire que c'était du cinquante cinquante.
 75xjo1gg,E: D'accord.
 75xjo1gg,JO1: Et je, je n'exagère pas malheureusement, ou heureusement. Et je sortais énormément et, 
-75xjo1gg,JO1: et voilà. Et j'ai fait beaucoup d'abus d'alcool et d'autre chose, voilà (rire).
+75xjo1gg,JO1: et voilà. Et j'ai fait beaucoup d'abus d'alcool et d'autre chose, voilà .
 75xjo1gg,E: Et euh, c/, pourquoi tu as choisi Paris?
 75xjo1gg,JO1: Pourquoi on choisit Paris? C'est, c'est assez simple. Paris, c'est la capitale de la France, pour le cinéma, pour le cinéma que j'aime moi, c'est, c'est la capitale mondiale.
 75xjo1gg,JO1: Parce que moi j'aime le cinéma qu'on dit entre guillemets d'auteur. Donc cinéma peut-être plus personnel, je suis pas très attiré par ce qui est commercial. Là plutôt, on trouverait ça à Los Angeles ou
@@ -2096,7 +2096,7 @@
 75xjo1gg,JO1: ce qu'on appelle le champ lexical par exemple (bruit de portable), bon il y a quelque chose à peu près équivalent au cinéma, donc dans un film, (XX) à comprendre ce qu'a voulu exprimer un réalisateur par exemple, voilà. 
 75xjo1lg,E: Et alors à, à Paris tu fais pas pareil?
 75xjo1lg,JO1: Oh là là, oh là là là là. Non bof. Pas du tout. Paris, c'est tout le contraire. Mais11z ici, je suis rentré euh, je suis rentré au couvent on va dire, 
-75xjo1lg,JO1: ou rentré au monastère, si tu préfères. Voilà, on va dire que je suis passé d'une vie de délinquant à une vie de moine. (rire) Ah voilà. Je carricature un peu, mais10 en gros c'est ça. Donc j'ai une vie très calme ici. <FH1: Tu as pas trouvé des bons endroits pour sortir à Paris?>
+75xjo1lg,JO1: ou rentré au monastère, si tu préfères. Voilà, on va dire que je suis passé d'une vie de délinquant à une vie de moine.  Ah voilà. Je carricature un peu, mais10 en gros c'est ça. Donc j'ai une vie très calme ici. <FH1: Tu as pas trouvé des bons endroits pour sortir à Paris?>
 75xjo1lg,JO1: Mais10 attends. Mais10 ici, j'y ai pas de vie de, de, de, je vis pas la nuit du tout, attends, mes sorties, c'est les cinémas euh, le Centre Georges Pompidou. <FH1: Mais ça te manque pas de sortir un peu?>  
 75xjo1lg,JO1: Mais je sais pas, j'ai recommencé, j'ai beaucoup moins d'argent, donc déjà c'est difficile. (rires) Déjà c'est difficile parce que j'ai tout claqué. Et donc je suis dans11z une mauvaise passe, donc euh. 
 75xjo1lg,JO1: Et euh, et en plus, je sais pas, il m'est11t arrivé une ou deux fois de me promener, et puis je sais pas, j'ai l'impression qu' ici c'est pas pareil. Mais non, mais moi je veux bien sortir euh, bien évidemment hein. 
@@ -2126,7 +2126,7 @@
 75xjo1lg,JO1: elle euh lui servit de modèle donc euh. Donc (XXX).
 75xjo1lg,E: Ah bon?
 75xjo1lg,JO1: Oui euh. Il faisait des photos nues. Donc.
-75xjo1lg,E: Oui, oui, c'est ce que je me suis dit. (rire)
+75xjo1lg,E: Oui, oui, c'est ce que je me suis dit. 
 75xjo1lg,JO1: Des photos nues un peu spéciales d'ailleurs, mais10 enfin bon, parce que euh. (rires) Faut pas que je vous montre les photos, (XX) poubelle. Mais peut-être pas à l'heure de manger. Voilà. Bon. Euh. (rires)
 75xjo1lg,FH1: Il est artistique donc.
 75xjo1lg,JO1: Voilà. Un petit peu trash, on va dire. Il tenait un, un bar de nuit hein, dans lequel j'étais plusieurs fois, j'ai même failli y travailler, mais ce ne s'est pas fait.
@@ -2141,7 +2141,7 @@
 75xjo1lg,E: Des millieurs. 
 75xjo1lg,JO1: Des milliers?
 75xjo1lg,FH1: Ah mais c'est génial. Alors voilà, c'est comme ça la vie à Madrid. 
-75xjo1lg,JO1: Voilà. (XXX) apprends des choses hein. <FH1: Oui c'est un tiraille. (rire)>
+75xjo1lg,JO1: Voilà. (XXX) apprends des choses hein. <FH1: Oui c'est un tiraille. >
 75xjo1lg,E: Et là, là où tu vas, <JO1: Des détails crustillants.>  là où tu vas en Espagne, c'est pareil? 
 75xjo1lg,FH1: Non mais c'est, moi j'y vais que l'été, et c'est hyper touristique quoi. 
 75xjo1lg,JO1: Ça s'appelle comment? 
@@ -2159,13 +2159,13 @@
 75xjo1lg,JO1: qui faisaient la musique un peu kitsch et tout ça. Et, euh, et voilà et tout le monde était, euh, comme ça, avec un air très sérieux. Voilà, (XXX) très au sérieux et voilà. Mais c'était rigolo.
 75xjo1lg,JO1: Mais en même temps, tout le monde n'était pas sérieux, puisque tout le monde. 
 75xjo1lg,Fh1: Était (XX).
-75xjo1lg,JO1: Voilà, puisque tout le monde était complètement, on va dire, (rire)
+75xjo1lg,JO1: Voilà, puisque tout le monde était complètement, on va dire, 
 75xjo1lg,JO1: dans un état second, voilà. Mais tout le monde avait l'air sérieux en même temps. Voilà oui. État second, c'est bien ca le terme. Et voilà.
 75xjo1lg,JO1: C'est vrai que j'en ai sou/, j'en ai souvent terminé les soirées sur les canapés hein. Ah là là. Oui. Ah oui. C'est pas la peine de me regarder comme ça hein. Et pas que sur les canapés aussi hein. 
-75xjo1lg,JO1: Ah. Des fois dans des lits aussi d'autres personnes. (rire)
-75xjo1lg,JO1: Et parfois, on se rappelle pas de tout. Mais bon c'est comme ça. Qu'est ce que tu veux (XXX). (rire) Mais ça va, il y a pas eu de (XXX).
+75xjo1lg,JO1: Ah. Des fois dans des lits aussi d'autres personnes. 
+75xjo1lg,JO1: Et parfois, on se rappelle pas de tout. Mais bon c'est comme ça. Qu'est ce que tu veux (XXX).  Mais ça va, il y a pas eu de (XXX).
 75xjo1lg,FH1: C'est le principal.
-75xjo1lg,JO1: Voilà, c'est bon. J'ai eu des petites (XX) des fois, mais après (XXXXXX). (rire)
+75xjo1lg,JO1: Voilà, c'est bon. J'ai eu des petites (XX) des fois, mais après (XXXXXX). 
 75xjo1lg,E: Et alors, la vie de moine?
 75xjo1lg,JO1: La vie de moine, la vie de moine, ça veut dire, euh, ça veut dire rien du tout. Ça veut dire aucun excès. 
 75xjo1lg,E: C'est agréable ou pas?
@@ -2173,7 +2173,7 @@
 75xjo1lg,E: Comment? <JO1: J'ai pas> (XXX) <JO1: Oui (XXX)>
 75xjo1lg,FH1: Ça pose
 75xjo1lg,JO1: Ça pose, oui ça.
-75xjo1lg,FH1: Ça pose. (rire)
+75xjo1lg,FH1: Ça pose. 
 75xjo1lg,JO1: C'est une pause. C'est une pause dans ma vie. Voilà. J'ai le temps comme ça de .
 75xjo1lg,E: T'aimerais vivre comme ça à Madrid?
 75xjo1lg,FH1: Moi je, euh.
@@ -2191,7 +2191,7 @@
 75xjo1lg,FH1: Des espèces de bars, euh, bien (XX), euh, qui, qui font salon de. <E: Quoi?>
 75xjo1lg,JO1: (XX), c'est-à-dire un peu bizarre, un peu, un peu malsain même parfois.
 75xjo1lg,E: Et qui font salon de thé?
-75xjo1lg,FH1: Enfin non qui (rire), qui a une autre, qui a une autre, qui a une autre fonction la, la journée, tu vois. Ça peut être un truc, enfin le, le patron il décide de faire ça le (XXX). <JO1: Voilà.>
+75xjo1lg,FH1: Enfin non qui , qui a une autre, qui a une autre, qui a une autre fonction la, la journée, tu vois. Ça peut être un truc, enfin le, le patron il décide de faire ça le (XXX). <JO1: Voilà.>
 75xjo1lg,JO1: Ça peut être un espèce de café, on peut venir à boire par exemple un vin des choses commes ça. <E: Mais on boit des truc spéciaux?>
 75xjo1lg,E: Pour, euh, parce qu'on a quand-même.
 75xjo1lg,FH1: C'est, c'est toutes les, les épaves qui tiennent encore debout de la soirée qui viennent là quoi.
@@ -2202,7 +2202,7 @@
 75xjo1lg,FH1: Mais il y en a qui le faisaient, ouais il y en a qui le faisaient, surtout les gens qui travaillent de nuit, qui trvaillent dans des boîtes de nuit, ou enfin bon. <JO1: Voilà.>
 75xjo1lg,JO1: Parce que l'ambiance est quand-même agréable, les gens sont très décontractés.
 75xjo1lg,FH1: Mais ça doit faire drôle hein, quand tu te lèves, parce que tu vois les têtes des gens bien mortes <JO1: (XXX)> 
-75xjo1lg,FH1: Nous on a passé toute la soirée, on s'en rend pas compte, tu, on va dire (XXXX) <JO1: Avec les cernes et tout hein.> 'Attentds, et avec les cernes.' (rire)
+75xjo1lg,FH1: Nous on a passé toute la soirée, on s'en rend pas compte, tu, on va dire (XXXX) <JO1: Avec les cernes et tout hein.> 'Attentds, et avec les cernes.' 
 75xjo1lg,FH1: Voilà.
 75xjo1lg,E: Et ici, à Paris aussi, ça se fait beaucoup? <JO1: Oui, il y a des afters.>
 75xjo1lg,FH1: À Paris, ouais, mais je, je connais pas du tout moi encore Paris. Il y a des afters mais, mais faut payer. Le problème, c'est qu'il faut payer. 
@@ -2210,7 +2210,7 @@
 75xjo1lg,E: Ah.
 75xjo1lg,JO1: Mais c'est toujours pareil au milieu de la nuit hein. (XXX) même problème.
 75xjo1lg,FH1: Mais, mais il y a un after ouais. C'est-à-dire le dimanche matin de, de sept heures jusqu'à midi, euh, tu peux continuer à l'Enfer. Mais il faut repayer. 
-75xjo1tg,Le Premier Ministre ira-t-il à Beaulieu? point d'interrogation. (rire)
+75xjo1tg,Le Premier Ministre ira-t-il à Beaulieu? point d'interrogation. 
 75xjo1tg,Le village de Beaulieu est11t en grand11t émoi. Le Premier Ministre a en11nVN effet décidé de faire étape dans cette commune au cours de sa tournée de la région en fin d'année. 
 75xjo1tg,Jusqu'ici les seuls titres de gloire de Beaulieu étaient son vin blanc sec, ses chemises20 en soie, un champion local de course à pied (Louis Garret), 
 75xjo1tg,quatrième aux jeux11z olympiques de Berlin en mille neuf cent trente six, et plus récemment, son11nVN usine de pâtes20 italiennes. Qu'est-ce qui a donc valu à Beaulieu ce grand11t honneur? 
@@ -2592,8 +2592,8 @@
 75xmb1tg,Il s'est10, en désespoir de cause, décidé à écrire au Premier Ministre pour vérifier si son village était vraiment20 une étape nécessaire dans la tournée prévue. 
 75xmb1tg,Beaulieu préfère être inconnue et tranquille plutôt que de se trouver20 au centre d'une bataille politique dont, par la télévision, seraient témoins des millions d'électeurs. 
 75xmm1gg,E: Pourquoi tu as fait des études de psychomotricité?
-75xmm1gg,MM1: C'est11t une très bonne question. (rire) Pourquoi j'ai fait des11z études de psychomotricité. 
-75xmm1gg,MM1: Euh, je peux enchaîner ou euh? Ouais? (XX) au départ, je voulais faire de l'ergothérapie, (rire) tu sais ce que c'est, un11n ergothérapeute?
+75xmm1gg,MM1: C'est11t une très bonne question.  Pourquoi j'ai fait des11z études de psychomotricité. 
+75xmm1gg,MM1: Euh, je peux enchaîner ou euh? Ouais? (XX) au départ, je voulais faire de l'ergothérapie,  tu sais ce que c'est, un11n ergothérapeute?
 75xmm1gg,E: Pas trop.
 75xmm1gg,MM1: Un11n ergothérapeute, c'est10 un, euh, c'est10 encore une formation paramédiacale, et euh, c'est10 une personne
 75xmm1gg,MM1: qui aide les, les personnes euh, les personnes handicapés physique, et donc elle leur permet de retrouver les gestes qu'elles peuvent plus10 avoir avec euh,
@@ -2644,7 +2644,7 @@
 75xmm1gg,MM1: En fait, j'aime beaucoup ce qu'il y a à l'intérieur de quelque chose. Et peut-être plus physique que phychique (ire) également. Tu vois, j'aime, enfin là, c'est pas pareil, mais j'aime regarder des fleurs, à l'intérieur, voir comment c'est, j'aime
 75xmm1gg,MM1: j'aime voir comment les abeilles (XXXXX).
 75xmm1gg,E: Pourquoi tu as pas fait des études de biologie?
-75xmm1gg,MM1: Et ben, je me le demande (rire). C'est vrai. Euh, je, tu sais, c'est.<E: Parce que là, on fait que ça.>
+75xmm1gg,MM1: Et ben, je me le demande . C'est vrai. Euh, je, tu sais, c'est.<E: Parce que là, on fait que ça.>
 75xmm1gg,E: On regarde dedans, on regarde ce que c'est, les petits truc, les neurons, les fleurs. <MM1: Ouais, ouais.>
 75xmm1gg,MM1: Ouais, les fleurs, je trouve ça chouette, les fleurs. Mais ma mère, elle a une passion pour les fleurs euh. Elle construit son jardin, tu sais, elle fait vraiment une architecture du jardin quoi. Les formes, les couleurs euh,
 75xmm1gg,MM1: le volume, la densité, tout ça, elle, elle le travaille. Et depuis que je suis petite, je vois ça. Puis il y a tout le temps, dans les toilettes, il y a toujours des, tu sais euh, un magazine 'Maison, jardin, maison', je sais plus quoi. 
@@ -2654,7 +2654,7 @@
 75xmm1gg,MM1: et puis j'ai du mal aussi à me voir mariée donc, peut-être je me dis: 'Je vais être toute seule.' Tu vois euh, j'aurais deux gamins, enfin. Et je me dis euh: 'J', jai pas envie quoi euh, de, de bosser comme une tarée, me fatiguer, et euh.'
 75xmm1gg,MM1: Et puis peut-être, ouais, j'ai pas envie de reproduire ce que je, j'ai vécu, si tu veux. Donc, c'est aussi ça qui a fait que j'ai pas fait médecine.
 75xmm1gg,MM1: Et pourtant, je pense qu'après, avec la psychomotricité, j'irai vers la neurologie, j'irai vers des choses comme ça. Euh, j'aime tout ce qui hormanal, enfin, c'est vraiment, ouais, c'est de la bio quoi. Biologie humaine.
-75xmm1gg,MM1: Et euh, il y a un truc aussi que (rire), qui m'a incité à pas faire médecine, c'est que mon père il voulait que je fasse médecine. (rires)
+75xmm1gg,MM1: Et euh, il y a un truc aussi que , qui m'a incité à pas faire médecine, c'est que mon père il voulait que je fasse médecine. (rires)
 75xmm1gg,E: C'est une raison. (rires)
 75xmm1gg,MM1: Donc j'étais euh très dans l'opposition, je suis très dans l'opposition, moins maintenant avec lui, et euh, c'était une manière de, (XX) lui montrer que.
 75xmm1gg,MM1: Euh, on s'est, on s'est pas mal fritté pour ça euh, (XX) pas d'accord.
@@ -2697,17 +2697,17 @@
 75xmm1lg,E: Ah.
 75xmm1lg,MM1: Ouais. Mais j'ai rien contre les (X) hein, parce que, ils sont de ma famille. Mais oui.
 75xmm1lg,MM1: J'arrive à table, tu sais, et je vais m'installer euh, là il y avait une place devant lui, je commence à poser le plateau, il fait: 'Euh, non.' Je fais: 'Quoi?' 'Enfin, c'est réservé. C'est pas que je veux pas de toi hein.' J'étais là.
-75xmm1lg,MM1: D'accord, c'est vachement sympa. Il fait euh: 'Je te vois assez toutes les nuits.' 'Pardon?' Tu sais, tout le monde regarde. (rire) Bon, c'est en fait, si tu veux, il y a, il y a un (XX).
-75xmm1lg,(rire)
+75xmm1lg,MM1: D'accord, c'est vachement sympa. Il fait euh: 'Je te vois assez toutes les nuits.' 'Pardon?' Tu sais, tout le monde regarde.  Bon, c'est en fait, si tu veux, il y a, il y a un (XX).
+75xmm1lg,
 75xmm1lg,MM1: Ouais, j'étais là, ouais super. Donc je suis partie. Et euh, en fait, il y a deux jours, et il regardait les Chevaliers du Zodiaque, mais il en faisait profiter mais euh tout l'étage quoi. C'était20 onze heures, il avait même pas10 envie de dormir.
 75xmm1lg,SL1: Les Chevaliers du Zodiaque, tu vois ce que c'est?
 75xmm1lg,E: Non.
 75xmm1lg,MM1: Tu connais pas? <SL1: C'est un dessin animé.> C'est10 un dessin animé japonais que on voyait quand11t on11n était petit. <SL1: Fin des années quatre-vingt.> (XXXXX) et tout euh, tous les trucs (XXX). <E: (XXX) c'est un dessin animé japonais.>
 75xmm1lg,SL1: Non.
 75xmm1lg,MM1: Il y a le Pégase, le dragon euh, voilà. Il y a le cygne, le phénix euh. <SL1: Le cygne. Ouais. C'est pas beaucoup?> Enfin. Euh ouais non, mais ils11z étaient tous un peu (XXX), alors.
-75xmm1lg,SL1: Mais surtout (XX), qui était très fameux en temps de (XX). <MM1: Ouais, mais ça, tu m'as dit, j'y pensais alors. (rire)>
+75xmm1lg,SL1: Mais surtout (XX), qui était très fameux en temps de (XX). <MM1: Ouais, mais ça, tu m'as dit, j'y pensais alors. >
 75xmm1lg,SL1: (XXXX) moi j'ai, (XX). <MM1: Et euh, non ,ais si tu veux j')XX) un mot.>
-75xmm1lg,MM1: Ça me faisait euh au moins en profiter. Et puis euh. (rire)
+75xmm1lg,MM1: Ça me faisait euh au moins en profiter. Et puis euh. 
 75xmm1lg,SL1: (incompréhensible car trop de rires)
 75xmm1lg,MM1: Et (X) donc, attends, j'ai pas fini.
 75xmm1lg,MM1: Non je, je tape chez lui et tout, et puis10 il répond pas, puis je tape, mais10 encore plus fort. 'Ouais, fais chier, j'arrive.', tu sais. J'étais là. Puis10 il ouvre. Il me fait: 'Quoi?'
@@ -2719,7 +2719,7 @@
 75xmm1lg,MM1: 'Oh, mais euh, il a battu machin, mais comment a-t-il fait alors qu'il n'a plus l'armure.' (rires) 
 75xmm1lg,MM1: En plus, c'était (XX), j'entendais toutes.
 75xmm1lg,SL1: Surtout, je sais pas si tu te rappelles du Chevalier du Zodiaque (XX). C'était euh, des épisodes (XX) en deux, ils duraient dix minutes. Mais euh, (XX) tu avais des diffusions (XXX) rappeler des huit cent vingt-huit épisodes précédentes, 
-75xmm1lg,SL1: Et euh, (rire) ensuite, de (XXX), <MM1: Ça (XX) faut rire.>vraiment l'épisode du jour-là. Alors il se calquait, et euh, à l'avance c'était euh, notamment les chevaliers blancs, 
+75xmm1lg,SL1: Et euh,  ensuite, de (XXX), <MM1: Ça (XX) faut rire.>vraiment l'épisode du jour-là. Alors il se calquait, et euh, à l'avance c'était euh, notamment les chevaliers blancs, 
 75xmm1lg,SL1: c'était censé de durer douze heures. Et avec ça, ils ont fait à peu près, je sais pas, au moins deux ans <MM1: Trois ans.>, ouais deux ans ou trois ans, euh, donc à vingt minutes l'épisode. (XXX) les mecs, mais devant, c'est hallucinant, 
 75xmm1lg,SL1: ils ont sans censés se battre, se fighter, tu sais, il y a (X) qui est en train de crever en bas avec une flèche dans le coeur, et eux, donc. <MM1: (XXXX) Ah oui, c'est vrai.> C'était là, c'était une flèche dans le coeur. Et euh, donc en fait tu vois, c'est des chevaliers
 75xmm1lg,SL1: super forts et tout et euh, ils se fightent et tout, ils ont plusieurs euh, <MM1: Des étapes.> des étapes à passer, c'est alors douze, comme les douze signes du zodiaque, et euh, 
@@ -2747,7 +2747,7 @@
 75xmm1lg,SL1: Non c'est un dessin animé aussi japonais, tu vois. (XXX) dessin animé japonais, de Dorothé. (XXXXXXX)
 75xmm1lg,MM1: Arienne.<SL1: Arienne.> C'est l'affaire d'(XXX). 
 75xmm1lg,SL1: Les (XX), les moustaches.
-75xmm1lg,MM1: C'était un petit euh, un petit con (rire).
+75xmm1lg,MM1: C'était un petit euh, un petit con .
 75xmm1lg,SL1: Nick Larson, c'était un (XXXXX).
 75xmm1lg,MM1: (XXXXX)
 75xmm1lg,SL1: Et en fait euh, là c'est (X), tu as la version française et la version originale japonaise, la version française, où tu voyais qu'il était très porté cul sur les meuf, et tu voyais rien, 
@@ -2760,7 +2760,7 @@
 75xmm1tg,Le hasard, tout bêtement, car le Premier Ministre, lassé des circuits20 habituels qui tournaient toujours20 autour des mêmes villes, veut découvrir ce qu'il appelle 'la campagne profonde'.
 75xmm1tg,Le maire de Beaulieu - Marc Blanc - est11t en revanche très11z inquiet. La cote du Premier Ministre ne cesse de baisser depuis les11z élections. 
 75xmm1tg,Comment20, en plus, éviter les manifestations qui ont10 eu tendance à se multiplier lors des visites20 officielles ? La côte escarpée du Mont Saint-Pierre qui mène au village, qui mène au village  
-75xmm1tg,connaît des barrages chaque fois que les11z opposants de tous les bords man/, je crois j'ai mal lu la phrase (rire), manifestent leur colère. 
+75xmm1tg,connaît des barrages chaque fois que les11z opposants de tous les bords man/, je crois j'ai mal lu la phrase , manifestent leur colère. 
 75xmm1tg,D'un11nVN autre côté, à chaque voyage du Premier Ministre, le gouvernement prend contact avec la préfecture la plus proche et s'assure que tout11t est fait pour le protéger. 
 75xmm1tg,Or, un gros détachement de police, comme on11nVN en11nVN a vu à Jonquière, et des vérifications d'identité risquent de provoquer20 une explosion. 
 75xmm1tg,Un jeune membre de l'opposition avait déclaré: 
@@ -2921,12 +2921,12 @@
 75xpd1lg,VF1: Voilà c'est ça. <PD1: Il faut prévoir. Faut prévoir.>
 75xpd1lg,VF1: Le problème, c'est qu/, ici on n'a pas de frigo. <E: Oui, et après si il fait pas beau, (XXX) sur la fenêtre.>
 75xpd1lg,VF1: Comment veux-tu conserver ton lait, ton beurre?
-75xpd1lg,E: Ah mais lui, il a un frigo (rire). <VF1: Et en plus.>
+75xpd1lg,E: Ah mais lui, il a un frigo . <VF1: Et en plus.>
 75xpd1lg,VF1: Toi, tu mets sur le bord de la fenêtre? <PD1: Et ça marche bien hein.> <E: Oh, c'est. Tu as vu ça?>
-75xpd1lg,VF1: Ouais, mais moi c/. <E: C'est incroyable. (rire)> <PD1: Ah tu le remarques chaque fois que tu passes?>
+75xpd1lg,VF1: Ouais, mais moi c/. <E: C'est incroyable. > <PD1: Ah tu le remarques chaque fois que tu passes?>
 75xpd1lg,E: Comme tu m'as dis.
 75xpd1lg,VF1: Je crois que la seule fenêtre à être aussi bien chargée. <PD1: Ah bon.> Ouais.
-75xpd1lg,PD1: (rire) Non mais, il y a des poches vides. <E: Mais qu'est-ce que tu mets là?> Hein? Ah ben là, j'ai beaucoup de choses. <E: Une demi douzaine de jus, après.> Non, non.
+75xpd1lg,PD1:  Non mais, il y a des poches vides. <E: Mais qu'est-ce que tu mets là?> Hein? Ah ben là, j'ai beaucoup de choses. <E: Une demi douzaine de jus, après.> Non, non.
 75xpd1lg,PD1: Non, non, là, il y a pas de jus.
 75xpd1lg,E: Non? Mais si, j'ai vu du jus d'orange. <VF1: Moi, les jus de fruits, je les conserve pas sur la.>
 75xpd1lg,PD1: J'ai fini, je l'ai fini.
@@ -2970,7 +2970,7 @@
 75xpd1lg,VF1:  Moi je suis obligée de déjeuner. Je me sens pas très bien. <E: Non après je passe à la boulangerie.> Alors pour Noël <E: Je prends un chausson au pommes.> Ouais.
 75xpd1lg,PD1: Quand si tu déjeunes pas.
 75xpd1lg,E: Ouais non je déjeune pas. Je prends le thé, après quand je vais à la gare, je prend un chausson au pommes.
-75xpd1lg,VF1: Alors du résultat j'ai commandé au papa Noël euh une bouloire <PD1: Ah oui.>, ou un kettel comme tu dis. <E: Kettel. (rire)>  
+75xpd1lg,VF1: Alors du résultat j'ai commandé au papa Noël euh une bouloire <PD1: Ah oui.>, ou un kettel comme tu dis. <E: Kettel. >  
 75xpd1lg,PD1: Kettel. 
 75xpd1lg,VF1: J'ai dit à mes parents: 'Surtout vous n'oubliez pas, je veux ma bouloire.' (XX)
 75xpd1lg,PD1: C'est pratique mais c'est que pour l'eau, alors il faut du thé, du café. <VF1: Non mais.>
@@ -3211,7 +3211,7 @@
 75xrg1lg,RG1: S'ils parlaient de, d' (XX) pour moi. J'ai, j'ai vu l'exemple, je comprenais tout hein.
 75xrg1lg,RG1: Quand j'ai su que le Père Noël n'existait pas. Eh bien, ma mère avec sa soeur, elle, elle l'a dit, j'ai dit: 'Euh, le Père Noël il', parce qu'elles parlaient entre elles, je lui dit: 'Le Père Noël tiens.'
 75xrg1lg,RG1: Comme ça, c'est vous. C'est euh, c'est vous. Et ma mère dit à sa soeur, en, en langue d'oc donc, en patois, elle lui dit: 'Tiens lo sap.' Ça veut dire: 'Il le sait.'
-75xrg1lg,AD1: Il le sait. (rire)
+75xrg1lg,AD1: Il le sait. 
 75xrg1lg,RG1: Et voilà. Mais moi, quand, comme, <AD1: Tu as eu tort hein. Parce que ça a été fini (X) après.> comme je, comme je connais, comme je comprenais, j'ai compris que, qu'elle, qu'elle me donnait raison. Que lo sap. Alors après (XXX) et puis10 un jour, elle m'a dit. Mais il y en11n a qui le savent, mais qui étaient plus mâlins que moi, ils disaient pas.  
 75xrg1lg,RG1: Ils comprenaient, mais10 ils disaient pas. Et moi j'ai, j'ai dit: 'Té, lo sap.'  Alors elle me, elle m'a dit 'lo sap' et ben j'ai dit: 'Oui. C'est vous, c'est vous, le Père Noël, il n'existe pas.'
 75xrg1lg,RG1: Et alors. C'est pour ça que. Alors les parents, même mettons (XXX) auraient voulu parler de euh, de choses maintenant bon, on parle, mettons, pour employer qu'un mot l'amour.
@@ -3229,7 +3229,7 @@
 75xrg1lg,RG1: Oui.
 75xrg1lg,AD1: Quand il voit sa mère tous les jours, il voit pas qu'elle grossit.
 75xrg1lg,RG1: Ou alors il n'avait que, ou alors ils disaient qu'elle avait fait une indigestion, un machin comme ça.
-75xrg1lg,E: Une indigestion de neuf mois. (rire)
+75xrg1lg,E: Une indigestion de neuf mois. 
 75xrg1lg,RG1: Non mais, non mais, peut-être il réalisait pas tous les jours le gosse, il allait passer voir si le, si euh l'indig/, l'indigestion est passée. Une indigestion, bon, ça passe. Mais ça m'a, ça m'a été dit, ça m'a, moi je l'ai pas vu.
 75xrg1lg,AD1: Ah oui.
 75xrg1lg,RG1: Et puis c'est j'ai pas eu de soeurs, de frères, je p/, je peux pas juger s/, sur moi. Mais oui, il fallait bien raconter une salade, c'est (XXX) de dire, au gosse.
@@ -3238,8 +3238,8 @@
 75xrg1lg,AD1: je voyais des femmes qui étaient grosses et puis quelqu'un m'avait dit que c'était dans le ventre des mamans.
 75xrg1lg,AD1: Et alors je, je comprenais pas parce que quand on me disait, on me montrait une petite femme avec un fils qui était grand, une (XX) et tout,
 75xrg1lg,AD1: je disais: 'Mais comment elle a sorti un grand garçon comme ça de son ventre?' Bien sûr.  C'était vraiment, c/, c'était, ça m'inquiétait longtemps, ça m'a travaillé ça.
-75xrg1lg,AD1: Et même quand je me suis mariée, je savais pas encore comment ça sortait. (rire) C'est vrai. <RG1: Oui.>
-75xrg1lg,E: Après la grande surprise? (rire)
+75xrg1lg,AD1: Et même quand je me suis mariée, je savais pas encore comment ça sortait.  C'est vrai. <RG1: Oui.>
+75xrg1lg,E: Après la grande surprise? 
 75xrg1lg,AD1: Non. Puis un jour, j'ai quand-même posé la question. J'ai dit: 'Mais quand-même, comment que, comment que, qu'il va sortir ce bébé?'
 75xrg1lg,AD1: Et il m'a dit: 'Ben, par où il est rentré.' 'Oh', j'ai dit, 'mais c'est pas possible. C'est trop petit.' Alors euh. <RG1: Eh oui.>
 75xrg1lg,E: Et alors, c'est à partir de quelle époque qu'on, qu'on l'a raconté aux enfants? Ça fait longtemps ou ça fait pas longtemps?
@@ -3249,7 +3249,7 @@
 75xrg1lg,AD1: Et ils avaient sorti un film, qu'est-ce que c'était? Euh Maternité Clandestine. Ma fille elle savait lire, alors quand elle revenait de l'école, elle voyait des panneaux,
 75xrg1lg,AD1: et alors euh, elle ve/, des fois elle me disait: 'Maman, on ira au cinéma?' Et on y allait, euh, la veille des, des,
 75xrg1lg,AD1: autrefois c'était le jeudi, le jour de, <RG1: La veille du repos.> de repos. Alors on y allait le mercredi soir. Comme ça le jeudi matin, ils pouvaient dormir. Alors euh, quand elle est venue: 'Maman, on ira au cinéma?
-75xrg1lg,AD1: J'ai vu un film.' J'ai dit: 'Non, non, on ira pas, on ira pas.' 'Oh si, je voudrais qu'on aille voir jouer Maternité Clandestine.' Elle l'avait bien retenu. (rire)
+75xrg1lg,AD1: J'ai vu un film.' J'ai dit: 'Non, non, on ira pas, on ira pas.' 'Oh si, je voudrais qu'on aille voir jouer Maternité Clandestine.' Elle l'avait bien retenu. 
 75xrg1lg,AD1: Et alors euh, bon mais je sais plus ce qu'il y avait là-dedans comme histoire, c'était un film, il me semble que c'était ça le, le film. Et alors on montrait euh
 75xrg1lg,AD1: le bébé qui devait naître euh, qui devait sortir du ventre des mamans. Or moi j'avais fait, je lui avais fait croire que, euh, les enfants, les petites filles naissaient dans un, euh, 
 75xrg1lg,AD1: une rose et les petits garçons dans un chou. <RG1: Et oui.> Et elle, elle est sorti dans un chou parce que, euh, il y avait pas, il y avait pas de roses à ce moment-là, alors j'avais fait la photo, je l'avais mise comme ça bébé dans un chou,
@@ -3270,7 +3270,7 @@
 75xrg1lg,AD1:  'Pourquoi vous voulez qu'on rentre? Vous allez fabriquer le petit frère?' 
 75xrg1lg,AD1: 'Oui c'est ça, on va fabriquer le petit frère.' 
 75xrg1lg,AD1: Et elle dit: 'Est-ce que je pourrais voir?'
-75xrg1lg,(rire)
+75xrg1lg,
 75xrg1lg,AD1: (XXX) <RG1: Ça (XX).> Non. Elle dit.
 75xrg1lg,AD1: 'Je t'ai dis que, je t'ai tout expliqué, il, c'est la seule chose que tu ne verras pas.', qu'elle dit. (rires)
 75xrg1lg,RG1: (XX) Chez moi on m'a jamais parlé de ça hein. Jamais, jamais, jamais.
@@ -3280,7 +3280,7 @@
 75xrg1lg,E: C'est la même légende pour tous les petits enfants.
 75xrg1lg,RG1: Oui.
 75xrg1lg,AD1: Oui c'était ça. Les roses et les, <RG1: Les roses (XX).> et les choux. 
-75xrg1lg,RG1: Oui le chou pour un pauvre garçon les choux. (rire) Ils auraient plutôt, ils auraient pu (XX) une autre fleur. (rire) La rose de, la fleur de pissenlit par exemple mais.
+75xrg1lg,RG1: Oui le chou pour un pauvre garçon les choux.  Ils auraient plutôt, ils auraient pu (XX) une autre fleur.  La rose de, la fleur de pissenlit par exemple mais.
 75xrg1lg,AD1: Ah ben je peux te dire qu'elle est jolie comme tout ma, ma petite fille dans les choux-là, les choux bien pommés. Elle est dedans, elle est mignonne.
 75xrg1lg,E: Même la photo de preuve.
 75xrg1lg,AD1: (tousse) Ah ouais. Et alors quelle déception-là.
@@ -3434,7 +3434,7 @@
 91aal1gg,LA: Bah c'est ce qui fait qu'après (XX) <E: Tu savais ce que tu voulais pas faire donc c'est déjà ça.> oui.
 91aal1gg,LA: Et puis10 après c'est des11z études le plus générales possibles pour s'ouvrir le plus de voix possibles.
 91aal1gg,E: Ouais, ouais ouais ouais.
-91aal1gg, LA: Forcément.
+91aal1gg,LA: Forcément.
 91aal1gg,LA: Voilà.
 91aal1gg,E: Mais euh sinon ton frère enfin il a, il a du mal accepter euh quand même euh le fait de,
 91aal1gg,E: parce que là il est à (XX) ou il est encore à <LA: Il est10 à (XX).> ouais.
@@ -6274,7 +6274,7 @@
 91asl1lg,LS: Non bon moi mes11z activités sont malheureusement.
 91asl1lg,LS: Enfin bon jusque là je vais10 oser dire, j'ai eu la chance de, de travailler20 encore pour un peu mon patron.
 91asl1lg,LS: Mais ça il faut pas l'écrire.
-91asl1lg,(rires) E: Franchement, c'est pas notre (X) , mais de toute manière nous on (X).
+91asl1lg,E: Franchement, c'est pas notre (X) , mais de toute manière nous on (X).
 91asl1lg,LS: Donc j'ai continué quand même mon métier de comptable,
 91asl1lg,LS: jusqu'à, jusqu'au mois de s/ d'aôut là les là  de cette année.
 91asl1lg,LS: Bon ben maintenant bah je vaque à mes petites21z occupations.

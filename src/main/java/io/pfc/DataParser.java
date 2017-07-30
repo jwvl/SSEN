@@ -36,7 +36,7 @@ public class DataParser {
             while ((nextLine = reader.readLine()) != null && parseCount < stopAtDatum) {
                 parseCount++;
                 if (!nextLine.isEmpty()) {
-                    SentenceDatum nextDatum = SentenceDatum.parseFromLine(nextLine, ",", tagger);
+                    SentenceDatum nextDatum = SentenceDatum.parseFromLine(nextLine, ":", tagger);
                     sentenceData.add(nextDatum);
                     List<LiaisonOpportunity> liaisons = nextDatum.getLiaisonOpportunities();
                     for (LiaisonOpportunity liaisonOpportunity : liaisons) {

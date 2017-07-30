@@ -9,6 +9,7 @@ import com.google.common.io.Resources;
 import forms.Form;
 import forms.FormPair;
 import forms.morphosyntax.SemSynForm;
+import forms.morphosyntax.SyntacticWord;
 import forms.phon.flat.PhoneticForm;
 import gen.rule.string.Side;
 import grammar.Grammar;
@@ -19,6 +20,7 @@ import learn.ViolatedCandidate;
 import learn.data.PairDistribution;
 import learn.data.SinglesFilter;
 import util.collections.ConfusionMatrix;
+import util.collections.FrequencyTable;
 
 import java.io.IOException;
 import java.net.URL;
@@ -199,6 +201,21 @@ public class PfcData {
                 System.out.println(ssf+"\t???\t0\t0");
             }
         }
+    }
+
+    public FrequencyTable<SyntacticWord,SyntacticWord> getWordCombinations() {
+        FrequencyTable<SyntacticWord,SyntacticWord> result = new FrequencyTable<>();
+        Set<FormPair> allPairs = pairDistribution.getKeySet();
+        for (FormPair pair: allPairs) {
+            int count = pairDistribution.getFrequency(pair);
+            SemSynForm ssf = (SemSynForm) pair.left();
+            if (ssf.size() > 1) {
+                SyntacticWord leftWord = ssf.elementsAsArray()[0];
+                SyntacticWord rightWord = ssf.elementsAsArray()[1];
+                result.add(leftWord,rightWord,count);
+            }
+        }
+        return result;
     }
 
 

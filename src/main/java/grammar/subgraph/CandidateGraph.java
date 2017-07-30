@@ -59,4 +59,15 @@ public class CandidateGraph {
     public Map<Form,List<Form>> getMap() {
         return myMap;
     }
+
+    public List<String> edgesToStrings() {
+        List<String> result = new ArrayList<>();
+        for (Form left: myMap.keySet()) {
+            List<Form> rightForms = myMap.get(left);
+            for (Form right: rightForms) {
+                result.add(formPair+"\t"+left.toBracketedString()+"\t"+right.toBracketedString());
+            }
+        }
+        return result;
+    }
 }

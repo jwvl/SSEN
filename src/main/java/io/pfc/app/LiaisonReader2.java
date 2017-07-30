@@ -1,8 +1,10 @@
 package io.pfc.app;
 
+import com.google.common.base.Charsets;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
+import com.google.common.io.Resources;
 import io.pfc.SimplerSentenceDatum;
 import io.pfc.lemma.LexiqueEntry;
 import io.pfc.lemma.LexiqueReader;
@@ -10,6 +12,8 @@ import io.pfc.liaison.LiaisonOpportunity;
 import io.pfc.liaison.PhoneticRewriter;
 import io.pfc.preprocess.StringsToSentenceData;
 
+import java.io.IOException;
+import java.net.URL;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
@@ -21,6 +25,9 @@ import java.util.stream.Collectors;
  */
 public class LiaisonReader2 {
 
+    public static String interviewersToIgnore = "data/pfc/speakersToIgnore.txt";
+    private static boolean printSingleWords = false;
+
     public static void main(String[] args) {
         int count = 0;
         int liaisonCount = 0;
@@ -29,6 +36,7 @@ public class LiaisonReader2 {
         PhoneticRewriter rewriter = new PhoneticRewriter(null);
         Multimap<String,LexiqueEntry> lexiqueMap = lexiqueReader.readMap();
         Set<LexiqueEntry> uniqueLemmas = Sets.newHashSet();
+        Set<String> toIgnore = getLinesAsSet(interviewersToIgnore);
         for (SimplerSentenceDatum datum: data) {
             String[] tokens = datum.getTokens();
             List<List<LexiqueEntry>> lexiqueEntryList = getLexiqueEntries(tokens, lexiqueMap);
@@ -47,22 +55,28 @@ public class LiaisonReader2 {
                     uniqueLemmas.add(pairOfInterest[1]);
                     String phonString = rewriter.rewrite(opportunity, phon1, phon2);
                     String ssfString =pairOfInterest[0].getBiphonSsf()+", "+pairOfInterest[1].getBiphonSsf();
+                    String speakerString = datum.getMetaData().getSpeaker();
+                    String codeString = datum.getMetaData().getFullCode();
                     //System.out.print(datum.getMetaData()+"\t"+ token1 +" "+ token2+"\t"+ssfString+"\t"+phonString+"\t1\t");
-                    System.out.print(ssfString+"\t"+phonString+"\t1\t");
-
-                    count++;
-                    if (opportunity.hasLiaison()) {
-                        liaisonCount++;
-                        System.out.println("1");
-                    } else {
-                        System.out.println("0");
+                    if (toIgnore.contains(codeString)) {
+                        System.out.print(ssfString + "\t" + phonString + "\t1\t");
+                        count++;
+                        if (opportunity.hasLiaison()) {
+                            liaisonCount++;
+                            System.out.println("1");
+                        } else {
+                            System.out.println("0");
+                        }
                     }
+
                 }
             }
         }
-        for (LexiqueEntry lexiqueEntry: uniqueLemmas) {
-            //System.out.println("--------\t"+ lexiqueEntry.getLemma()+"\t"+lexiqueEntry.getBiphonSsf()+"\t"+lexiqueEntry.getPhonString()+"\t0\t0");
-            System.out.println(lexiqueEntry.getBiphonSsf()+"\t"+lexiqueEntry.getPhonString()+"\t1\t0");
+        if (printSingleWords) {
+            for (LexiqueEntry lexiqueEntry : uniqueLemmas) {
+                //System.out.println("--------\t"+ lexiqueEntry.getLemma()+"\t"+lexiqueEntry.getBiphonSsf()+"\t"+lexiqueEntry.getPhonString()+"\t0\t0");
+                System.out.println(lexiqueEntry.getBiphonSsf() + "\t" + lexiqueEntry.getPhonString() + "\t1\t0");
+            }
         }
         //System.out.println(count +" items, liaison: "+liaisonCount);
 
@@ -116,6 +130,17 @@ public class LiaisonReader2 {
             result.add(currentList);
         }
         return result;
+    }
+
+    private static Set<String> getLinesAsSet(String resource) {
+        List<String> result = Lists.newArrayList();
+        URL url = Resources.getResource(resource);
+        try {
+            result = Resources.readLines(url, Charsets.UTF_8);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return Sets.newHashSet(result);
     }
 
 }

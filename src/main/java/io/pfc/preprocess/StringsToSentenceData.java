@@ -30,9 +30,10 @@ public class StringsToSentenceData {
             e.printStackTrace();
         }
         for (String line: lines) {
-            String[] parts = line.split(",",2);
+            String[] parts = line.split(":",2);
             MetaData metaData = MetaData.parseFromString(parts[0]);
-            List<String> sentences = getSentences(parts[1]);
+            String sentencesString = line.split(",",2)[1];
+            List<String> sentences = getSentences(sentencesString);
             for (String sentence: sentences) {
                 String tokenized = sentence.replaceAll(","," ,").replaceAll("\\."," .").replaceAll("\\?"," ?").replaceAll("\\!"," !");
                 tokenized = tokenized.replaceAll("l'","l' ");

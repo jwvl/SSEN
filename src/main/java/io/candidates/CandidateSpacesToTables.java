@@ -23,6 +23,7 @@ public class CandidateSpacesToTables {
     public static void writeToFile(CandidateSpaces candidateSpaces, String path) {
         List<String> nodeStrings = Lists.newArrayList();
         List<String> edgeStrings = Lists.newArrayList();
+        List<String> simpleEdgeStrings = Lists.newArrayList();
         int nodeCounter = 0;
         Map<Form,Integer> formsAndIndices = Maps.newHashMap();
         Collection<FormPair> formPairs = candidateSpaces.getPairs();
@@ -34,10 +35,12 @@ public class CandidateSpacesToTables {
             CandidateGraphWriter writer = new CandidateGraphWriter(candidateGraph);
             nodeStrings.addAll(writer.writeNodes(String.valueOf(count)));
             edgeStrings.addAll(writer.writeEdges(String.valueOf(count)));
+            simpleEdgeStrings.addAll(candidateGraph.edgesToStrings());
             count++;
         }
         writeLines(nodeStrings, (path+"/graph-nodes.txt"));
         writeLines(edgeStrings, (path+"/graph-edges.txt"));
+        writeLines(simpleEdgeStrings, path+"/graph-simple-edges.txt");
 
     }
 
