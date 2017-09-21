@@ -124,7 +124,7 @@ public class DynamicNetworkEvaluation implements Evaluation {
         }
 
         ViolatedCandidate backtrackedCandidate = backTrackCandidate(winnerNode);
-        if (backtrackedCandidate.getCandidate().getForms().length < 5) {
+        if (backtrackedCandidate.getCandidate().getForms().length < grammar.getLevelSpace().getSize()) {
             System.out.println(backtrackedCandidate);
             System.err.println("This should not happen!");
             System.exit(0);

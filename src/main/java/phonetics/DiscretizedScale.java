@@ -10,7 +10,7 @@ import forms.primitives.feature.ScaleFeature;
  * @author jwvl
  * @date 04/10/2015
  */
-public class DiscretizedScale {
+public class DiscretizedScale implements Comparable<DiscretizedScale> {
     private final Measure measure;
     private final double minValue;
     private final double maxValue;
@@ -18,6 +18,8 @@ public class DiscretizedScale {
     private final double scaleLength;
     private final int numSteps;
     private final ScaleFeature[] values;
+    private final int count;
+    private static int counter = 0;
 
 
     /**
@@ -35,7 +37,25 @@ public class DiscretizedScale {
         for (int i=0; i < numSteps; i++) {
             values[i] = ScaleFeature.createInstance(this,i);
         }
+        count = counter++;
+    }
 
+    /**
+     * @param minValue
+
+     */
+    public DiscretizedScale(Measure measure, double minValue, double maxValue, double stepSize) {
+        this.measure = measure;
+        this.minValue = minValue;
+        this.stepSize = stepSize;
+        this.maxValue = maxValue;
+        this.scaleLength = maxValue - minValue;
+        this.numSteps = 1 + ((int) (scaleLength / stepSize));
+        this.values = new ScaleFeature[numSteps];
+        for (int i=0; i < numSteps; i++) {
+            values[i] = ScaleFeature.createInstance(this,i);
+        }
+        count = counter++;
     }
 
     public double getValue(int stepNumber) {
@@ -78,5 +98,20 @@ public class DiscretizedScale {
         return values;
     }
 
+    @Override
+    public int compareTo(DiscretizedScale o) {
+        return count - o.count;
+    }
 
+    public double getStepSize() {
+        return stepSize;
+    }
+
+    public ScaleFeature getForValue(double value) {
+        int stepNumber = getStepIndex(value);
+        if (stepNumber >= values.length) {
+            System.err.println("Huh?");
+        }
+        return getFeatureForValue(stepNumber);
+    }
 }

@@ -16,7 +16,7 @@ public class SettingsMap {
 //    private static String[] updateAlgorithms = {"AllUpHighDown","WeightedUncancelled"};
 //    private static String[] initialPlasticities = {"2.0"};
 //    private static String[] plasticityDecays = {"0.5"};
-    private static String[] initialPlasticities = {"2"};
+    private static String[] initialPlasticities = {"1"};
     private static String[] plasticityDecays = {"0.5"};
       private static String[] updateAlgorithms = {"AllUpHighDown"};
 //    private static String[] initialPlasticities = {"2.0"};

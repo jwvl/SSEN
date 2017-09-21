@@ -11,6 +11,7 @@ import com.google.common.io.Resources;
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 import constraints.hierarchy.reimpl.Hierarchy;
+import eval.Evaluation;
 import forms.Form;
 import forms.FormPair;
 import forms.morphosyntax.*;
@@ -43,6 +44,7 @@ import learn.batch.combination.TrajectoriesTester;
 import learn.data.PairDistribution;
 import learn.data.SinglesFilter;
 import simulate.analysis.CandidateMappingTable;
+import simulate.french.sixlevel.data.PfcCooccurrences;
 import simulate.french.sixlevel.data.PfcData;
 import simulate.french.sixlevel.helpers.LexicalHypothesisRepository;
 import simulate.french.sixlevel.helpers.SettingsMap;
@@ -294,6 +296,8 @@ public class SixLevelFrenchDynamic {
             }
         }
 
+        PfcCooccurrences cooccurrences = pfcData.getCooccurrences();
+
         System.out.println("Expected error: " + pairDistribution.calculateExpectedError());
         if (randomLearner) {
             RandomLearnerTester randomLearnerTester = new RandomLearnerTester(grammar,pairDistribution, numEvaluations);
@@ -320,6 +324,7 @@ public class SixLevelFrenchDynamic {
                 }
                 RiverPlotOutput.writeNodeAndEdgeFiles(outputPath + "/riverplot",riverPlotOutputs);
             }
+
 
 
                 // check this out later
@@ -349,6 +354,17 @@ public class SixLevelFrenchDynamic {
                 }
                 SimpleTableau tableau = builder.build();
                 System.out.println(tableau.toSeparatedString("\t"));
+
+            List<SemSynForm> ssfs = Lists.newArrayList();
+            for (int i=0; i < 10; i++) {
+                ssfs.add(cooccurrences.getUnattestedSsf());
+            }
+            for (SemSynForm ssf: ssfs) {
+                Evaluation evaluation = grammar.evaluate(FormPair.createUnlabeled(ssf, Direction.RIGHT), false, 1.0);
+                ViolatedCandidate winner = evaluation.getWinner();
+                System.out.println(winner.getCandidate());
+            }
+
 
             }
 

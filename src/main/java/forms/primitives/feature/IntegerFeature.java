@@ -53,4 +53,8 @@ public class IntegerFeature extends Feature<Integer> {
         return !isNull();
     }
 
+    public int intValue() {
+        return getValue();
+    }
+
 }

@@ -5,12 +5,13 @@ package forms.primitives.feature;
 
 import forms.phon.numerical.PhoneticElement;
 import phonetics.DiscretizedScale;
+import phonetics.Measure;
 
 /**
  * @author jwvl
  * @date 04/10/2015
  */
-public class ScaleFeature extends IntegerFeature implements PhoneticElement {
+public class ScaleFeature extends RangeFeature implements PhoneticElement, Comparable<ScaleFeature> {
     private final DiscretizedScale scale;
 
     /**
@@ -46,4 +47,17 @@ public class ScaleFeature extends IntegerFeature implements PhoneticElement {
         return result.toString();
     }
 
+    @Override
+    public double getRelativeValue() {
+        return intValue() / (double) (scale.getNumSteps()-1);
+    }
+
+    public Measure getMeasure() {
+        return scale.getMeasure();
+    }
+
+    @Override
+    public int compareTo(ScaleFeature o) {
+        return scale.compareTo(o.scale);
+    }
 }

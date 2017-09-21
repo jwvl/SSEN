@@ -36,6 +36,10 @@ public class SemSynForm extends LinearArrayForm<SyntacticWord> {
         }
     }
 
+    public static SemSynForm fromPair(SyntacticWord left, SyntacticWord right) {
+        return new SemSynForm(new SyntacticWord[]{left,right});
+    }
+
     public static SemSynForm createFromString(String input, Level myLevel) {
         System.out.println("Creating from input: " + input);
         List<String> lexemeStrings = Splitter.on(',').trimResults().omitEmptyStrings().splitToList(input);

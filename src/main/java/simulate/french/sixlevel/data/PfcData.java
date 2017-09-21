@@ -20,7 +20,6 @@ import learn.ViolatedCandidate;
 import learn.data.PairDistribution;
 import learn.data.SinglesFilter;
 import util.collections.ConfusionMatrix;
-import util.collections.FrequencyTable;
 
 import java.io.IOException;
 import java.net.URL;
@@ -203,8 +202,8 @@ public class PfcData {
         }
     }
 
-    public FrequencyTable<SyntacticWord,SyntacticWord> getWordCombinations() {
-        FrequencyTable<SyntacticWord,SyntacticWord> result = new FrequencyTable<>();
+    public PfcCooccurrences getCooccurrences() {
+        PfcCooccurrences result = new PfcCooccurrences();
         Set<FormPair> allPairs = pairDistribution.getKeySet();
         for (FormPair pair: allPairs) {
             int count = pairDistribution.getFrequency(pair);
@@ -212,7 +211,7 @@ public class PfcData {
             if (ssf.size() > 1) {
                 SyntacticWord leftWord = ssf.elementsAsArray()[0];
                 SyntacticWord rightWord = ssf.elementsAsArray()[1];
-                result.add(leftWord,rightWord,count);
+                result.addPair(leftWord,rightWord);
             }
         }
         return result;

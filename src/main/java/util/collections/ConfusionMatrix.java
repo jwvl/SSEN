@@ -24,9 +24,6 @@ public class ConfusionMatrix {
 
     public void addMapping(Form from, Form to, int count) {
         int oldCount = getCount(from,to);
-        if (oldCount > 0) {
-            System.out.println("Aha!");
-        }
         int newCount = oldCount+count;
         table.put(from,to,newCount);
         columnCounts.add(from,count);
@@ -114,10 +111,10 @@ public class ConfusionMatrix {
         }
     }
 
-    public static ConfusionMatrix fromPairDistribution(PairDistribution liaisonDistribution) {
+    public static ConfusionMatrix fromPairDistribution(PairDistribution pairDistribution) {
         ConfusionMatrix result = new ConfusionMatrix();
-        for (FormPair fp: liaisonDistribution.getKeys()) {
-            int count = liaisonDistribution.getFrequency(fp);
+        for (FormPair fp: pairDistribution.getKeys()) {
+            int count = pairDistribution.getFrequency(fp);
             result.addFormPair(fp,count);
         }
         return result;
